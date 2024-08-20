@@ -9,3 +9,4 @@ Alias:   $ObsStatus = http://hl7.org/fhir/observation-status
 
 // TW Core
 Alias:  $TWCorePatient = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore
+Alias: $TWCorePractitioner = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Practitioner-twcore

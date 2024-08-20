@@ -22,9 +22,9 @@
 <p><strong>Normative（規範）</strong> 此規範文件已被認定為穩定。</p>
 
 <p>TW LTC IG 中所有Profiles的FMM等級如下：
-
-
-<li>0.0.1 版本的所有 Profiles 均為 FMM0</li>
+  <ol>
+    <li>0.0.1 版本的所有 Profiles 均為 FMM0</li>
+  </ol>
 </p>
 </div>
 
@@ -33,7 +33,7 @@
 <div  style="padding-left: 10px;">
 <p> TW LTC IG 之網站架構圖如下圖所示。各功能說明如下：</p>
 
-<img class="figure-img img-responsive img-rounded center-block" src="index/structure.jpg" alt="IG架構圖" style="display: block;margin-left: auto;margin-right: auto;width: 70%;"/>
+<img class="figure-img img-responsive img-rounded center-block" src="index_structure.png" alt="IG架構圖" style="display: block;margin-left: auto;margin-right: auto;width: 70%;"/>
 <div style="clear:both;"></div>
 
 <ul>
