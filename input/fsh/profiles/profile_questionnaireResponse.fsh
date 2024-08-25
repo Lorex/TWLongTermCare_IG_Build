@@ -6,7 +6,7 @@ Id: LTCQuestionnaireResponse
 Title: "TW Long Term Care QuestionnaireResponse"
 Description: "問卷回覆，用以表述長期照顧情境中涉及之問卷或量表回覆內容。"
 
-* questionnaire 1..1 MS
+* questionnaire 0..1 MS
 * questionnaire ^short = "這個問卷回覆所回答的問卷。[應填入問卷的 URL]"
 * questionnaire only Canonical(LTCQuestionnaire)
 * status 1..1 MS

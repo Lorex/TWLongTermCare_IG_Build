@@ -14,6 +14,7 @@ Description: "長期照護管理中心個案服務初篩表/轉介單文件架�
 * subject only Reference(LTCPatient)
 * subject.reference 1..1 MS
 * subject.reference ^short = "轉介單描述的個案。[應輸入 Patient Resource ID]"
+* section 16..16 MS
 * section ^slicing.discriminator.type = #value
 * section ^slicing.discriminator.path = "title"
 * section ^slicing.rules = #open
@@ -70,15 +71,25 @@ Description: "長期照護管理中心個案服務初篩表/轉介單文件架�
 * section[condition-need].entry ^short = "案主(家)主要問題及需求"
 * section[condition-need].entry only Reference($TWCoreCondition)
 * section[careplan] ^short = "欲申請服務之種類"
-* section[careplan].entry 1..1 MS
+* section[careplan].entry 1..* MS
+* section[careplan].entry ^short = "欲申請服務之種類"
+* section[careplan].entry only Reference(LTCCarePlanReferral)
 * section[questionnaire-adl] ^short = "ADL 失能項目評估"
 * section[questionnaire-adl].entry 1..1 MS
+* section[questionnaire-adl].entry ^short = "ADL 失能項目評估"
+* section[questionnaire-adl].entry only Reference(LTCQuestionnaireResponseReferralADL)
 * section[questionnaire-iadl] ^short = "IADL 失能項目評估"
 * section[questionnaire-iadl].entry 1..1 MS
+* section[questionnaire-iadl].entry ^short = "IADL 失能項目評估"
+* section[questionnaire-iadl].entry only Reference(LTCQuestionnaireResponseReferralIADL)
 * section[questionnaire-sof] ^short = "長者衰弱評估"
 * section[questionnaire-sof].entry 1..1 MS
+* section[questionnaire-sof].entry ^short = "長者衰弱評估"
+* section[questionnaire-sof].entry only Reference(LTCQuestionnaireResponseReferralSOF)
 * section[questionnaire-caregiver] ^short = "照顧者評估"
 * section[questionnaire-caregiver].entry 1..1 MS
+* section[questionnaire-caregiver].entry ^short = "照顧者評估"
+* section[questionnaire-caregiver].entry only Reference(LTCQuestionnaireResponseReferralCaregiver)
 * section[encounter] ^short = "出入院情形"
 * section[encounter].entry 1..1 MS
 * section[encounter].entry ^short = "個案的出入院情形，若個案在住院中，則填入該次就診資料。"
