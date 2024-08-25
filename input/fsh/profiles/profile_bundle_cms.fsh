@@ -1,10 +1,7 @@
-Alias: $TWBundle = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Bundle-document-twcore
-Alias: $TWCoreBundle = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Bundle-twcore
-
 Profile: LTCBundle_CMS
 Parent: $TWCoreBundle
 Id: Bundle-cms-twltc
-Title: "CMS Form Bundle"
+Title: "TW Long Term Care Bundle CMS"
 Description: "長期照顧藥物處方內容"
 
 * type = #document

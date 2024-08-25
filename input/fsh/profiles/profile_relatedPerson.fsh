@@ -5,7 +5,7 @@ Profile: LTCRelatedPerson
 Parent: $RelatedPerson
 Id: LTCRelatedPerson
 Title: "TW Long Term Care RelatedPerson"
-Description: "住民的關係人，包含家屬、照護者、法定代理人等與住民有關的人員資料。"
+Description: "住民的關係人，包含家屬、照顧者、法定代理人等與住民有關的人員資料。"
 
 * active 1..1 MS
 * active ^short = "是否為生效中的關係人"
