@@ -17,7 +17,7 @@ Description: "長照機構住民的壓傷資料"
 * code.coding.code 1..1 MS
 * code.coding.code ^short = "個案是否有壓傷？如果代碼為 crush，則需填寫備註以描述壓傷狀況"
 * note 0..1 MS
-* note ^short = "管路裝設狀況與類別備註，應填寫部位、等級與大小(cm^2)"
+* note ^short = "壓傷狀況與類別備註，應填寫部位、等級與大小(cm^2)"
 
 Invariant: LTCConditionCrush-1
 Description: "The Condition.note SHALL be present if the Condition.code is 'http://ltc-ig.fhir.tw/ValueSet/ReferralConditionCrushVS-TWLTC|crush'."

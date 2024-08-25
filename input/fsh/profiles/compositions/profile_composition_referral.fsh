@@ -1,3 +1,8 @@
+Alias: $TWCoreEncounter = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Encounter-twcore
+Alias: $TWCoreOrganization = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Organization-twcore
+Alias: $TWCorePractitioner = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Practitioner-twcore
+Alias: $TWCoreCondition = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Condition-twcore
+
 Profile: LTCCompositionReferral
 Parent: $TWCoreComposition
 Id: LTCCompositionReferral
@@ -46,16 +51,24 @@ Description: "長期照護管理中心個案服務初篩表/轉介單文件架�
 * section[condition-tube].entry only Reference(LTCConditionTube)
 * section[condition-crush] ^short = "壓傷"
 * section[condition-crush].entry 1..1 MS
-* section[condition-crush].entry ^short = "壓傷的內容，至少應填寫是否有壓傷，如有壓傷，則續填壓傷部位、等級與大小"
+* section[condition-crush].entry ^short = "壓傷的內容，至少應填寫是否有壓傷，如有壓傷，則續填壓傷部位、等級與大小。"
 * section[condition-crush].entry only Reference(LTCConditionCrush)
 * section[condition-residence] ^short = "居住狀況"
 * section[condition-residence].entry 1..1 MS
+* section[condition-residence].entry ^short = "居住狀況的內容，應填寫個案獨居狀態。"
+* section[condition-residence].entry only Reference(LTCConditionResidence)
 * section[condition-caregiver] ^short = "看護"
 * section[condition-caregiver].entry 1..1 MS
+* section[condition-caregiver].entry ^short = "看護的內容，至少應填寫個案是否有看護，如有看護，則續填本國／外國籍看護人力配置狀況。"
+* section[condition-caregiver].entry only Reference(LTCConditionCaregiver)
 * section[condition-problem] ^short = "疾病狀況"
 * section[condition-problem].entry 1..1 MS
+* section[condition-problem].entry ^short = "案主(家)主要疾病"
+* section[condition-problem].entry only Reference($TWCoreCondition)
 * section[condition-need] ^short = "案主(家)主要問題及需求"
 * section[condition-need].entry 1..1 MS
+* section[condition-need].entry ^short = "案主(家)主要問題及需求"
+* section[condition-need].entry only Reference($TWCoreCondition)
 * section[careplan] ^short = "欲申請服務之種類"
 * section[careplan].entry 1..1 MS
 * section[questionnaire-adl] ^short = "ADL 失能項目評估"
@@ -68,7 +81,13 @@ Description: "長期照護管理中心個案服務初篩表/轉介單文件架�
 * section[questionnaire-caregiver].entry 1..1 MS
 * section[encounter] ^short = "出入院情形"
 * section[encounter].entry 1..1 MS
+* section[encounter].entry ^short = "個案的出入院情形，若個案在住院中，則填入該次就診資料。"
+* section[encounter].entry only Reference($TWCoreEncounter)
 * section[practitioner] ^short = "填表者/轉介者資訊及簽名欄"
 * section[practitioner].entry 1..1 MS
+* section[practitioner].entry ^short = "填表者/轉介者資訊及簽名欄"
+* section[practitioner].entry only Reference(LTCPractitioner or $TWCorePractitioner)
 * section[organization] ^short = "填表單位資訊"
 * section[organization].entry 1..1 MS
+* section[organization].entry ^short = "填表單位資訊"
+* section[organization].entry only Reference(LTCOrganization or $TWCoreOrganization)
