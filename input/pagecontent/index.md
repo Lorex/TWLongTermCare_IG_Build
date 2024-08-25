@@ -79,7 +79,7 @@
 		<tr class="header">
 			<th style="width:10%; vertical-align: middle;">角色</th>
       <th style="width:10%; vertical-align: middle;">貢獻版次</th>
-			<th style="width:25%; vertical-align: middle;">機構名稱</th>
+			<!-- <th style="width:25%; vertical-align: middle;">機構名稱</th> -->
 			<th style="width:15%; vertical-align: middle;">姓名</th>
 			<th style="width:30%; vertical-align: middle;">所屬單位</th>
 			<th style="vertical-align: middle;">聯絡方式</th>
@@ -89,8 +89,8 @@
 			<tr>
         <td style="vertical-align: middle;">作者</td>
             <td style="vertical-align: middle;">v0.0.1</td>
-        <td rowspan="2" style="vertical-align: middle;">MI-TW 臺灣醫學資訊聯測松<br />
-        （Medical Informatics Taiwan Connectathon, MI-TW Connectathon）</td>
+        <!-- <td rowspan="4" style="vertical-align: middle;">MI-TW 臺灣醫學資訊聯測松<br />
+        （Medical Informatics Taiwan Connectathon, MI-TW Connectathon）</td> -->
         <td style="vertical-align: middle;">楊宇凡（Yu-Fan Yang）</td>
         <td style="vertical-align: middle;">矽塔資訊服務有限公司<br />
         （Sitatech Information Services Co., Ltd）</td>
@@ -101,8 +101,24 @@
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
             <td style="vertical-align: middle;">v0.0.1</td>
-        <!-- <td rowspan="2" style="vertical-align: middle;">MI-TW 臺灣醫學資訊聯測松<br />
-        （Medical Informatics Taiwan Connectathon,MI-TW Connectathon）</td> -->
+        <td style="vertical-align: middle;">李修安（Hsiu-An Lee）</td>
+        <td style="vertical-align: middle;">國家衛生研究院 - 癌症研究所<br >（National Health Research Institutes - The National Institute of Cancer Research）</td>
+        <td style="vertical-align: middle;">
+          <a href="mailto:billy72325@gmail.com">billy72325@gmail.com</a>
+        </td>
+			</tr>
+      <tr>
+        <td style="vertical-align: middle;">貢獻者</td>
+            <td style="vertical-align: middle;">v0.0.1</td>
+        <td style="vertical-align: middle;">李祥豪（Siang-Hao Lee）</td>
+        <td style="vertical-align: middle;">九日生行動健康科技公司<br >（9Rise International Mobile Health Technology Co., Ltd.）</td>
+        <td style="vertical-align: middle;">
+          <a href="mailto:billy72325@gmail.com">shvoidlee@gmail.com</a>
+        </td>
+			</tr>
+      <tr>
+        <td style="vertical-align: middle;">貢獻者</td>
+            <td style="vertical-align: middle;">v0.0.1</td>
         <td style="vertical-align: middle;">黃薰慧（Hsun-Hui Huang）</td>
         <td style="vertical-align: middle;">財團法人資訊工業策進會 - 數位轉型研究院<br >（Institute for Information Industry - Digital Transformation Research Institute）</td>
         <td style="vertical-align: middle;">
