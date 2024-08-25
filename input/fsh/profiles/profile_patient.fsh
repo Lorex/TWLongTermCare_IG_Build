@@ -1,5 +1,6 @@
 Alias:  $TWCorePatient = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore
-Alias: $address-use-twltc = http://ltc-ig.fhir.tw/ValueSet/AddressUseVS-TWLTC
+Alias: $AddressUseVS = http://ltc-ig.fhir.tw/ValueSet/AddressUseVS-TWLTC
+Alias: $EconomyStatusExt = http://ltc-ig.fhir.tw/StructureDefinition/EconomyStatusExt-TWLTC
 
 Profile: LTCPatient
 Title: "TW Long Term Care Patient"
@@ -38,7 +39,7 @@ Description: "長照機構住民基本資料，用以表述長照機構住民的
 * address[residential].text 1..1 MS
 * address[residential].text ^short = "住民的戶籍地址。[應輸入完整地址]"
 * address.use ^short = "住民地址的用途"
-* address.use from $address-use-twltc
+* address.use from $AddressUseVS
 * contact 1..* MS
 * contact ^short = "住民的緊急聯絡人"
 * contact.relationship 1..1 MS
@@ -54,6 +55,10 @@ Description: "長照機構住民基本資料，用以表述長照機構住民的
 * managingOrganization.reference 1..1 MS
 * managingOrganization.reference ^short = "住民所屬的長照機構。[應輸入 Organization Resource ID]"
 * managingOrganization only Reference(LTCOrganization)
+* extension contains $EconomyStatusExt named economyStatus 0..1 MS
+* extension[economyStatus] ^short = "住民的經濟狀況"
+* extension[economyStatus].valueCodeableConcept 1..1 MS
+* extension[economyStatus].valueCodeableConcept ^short = "住民的經濟狀況代碼"
 
 // * extension contains http://hl7.org/fhir/StructureDefinition/patient-birthPlace named birthPlace 0..1 MS
 // * generalPractitioner only Reference(OSAPractitioner)
