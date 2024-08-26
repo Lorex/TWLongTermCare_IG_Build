@@ -1,7 +1,7 @@
 CodeSystem: ReferralConditionCaregiverCSTWLTC
 Id: ReferralConditionCaregiverCSTWLTC
-Title: "轉介單壓傷狀況代碼"
-Description: "用於表述個案的壓傷狀況。"
+Title: "轉介單看護狀況代碼"
+Description: "用於表述個案雇用看護的狀況。"
 
 * ^url = "http://ltc-ig.fhir.tw/Codesystem/ReferralConditionCaregiverCS-TWLTC"
 * ^status = #active

@@ -1,7 +1,7 @@
 ValueSet: ReferralConditionCaregiverVSTWLTC
 Id: ReferralConditionCaregiverVSTWLTC
-Title: "壓傷狀況值集"
-Description: "個案壓傷的狀況"
+Title: "看護狀況值集"
+Description: "個案雇用看護的狀況"
 
 * ^url = "http://ltc-ig.fhir.tw/ValueSet/ReferralConditionCaregiverVS-TWLTC"
 * ^version = "2024-08-25"
