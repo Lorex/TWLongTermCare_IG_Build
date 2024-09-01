@@ -1,5 +1,5 @@
 Alias:  $TWCorePatient = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore
-Alias: $AddressUseVS = http://ltc-ig.fhir.tw/ValueSet/AddressUseVS-TWLTC
+Alias: $AddressUseVSTWLTC = http://ltc-ig.fhir.tw/ValueSet/AddressUseVS-TWLTC
 Alias: $EconomyStatusExt = http://ltc-ig.fhir.tw/StructureDefinition/EconomyStatusExt-TWLTC
 
 Profile: LTCPatientReferral
