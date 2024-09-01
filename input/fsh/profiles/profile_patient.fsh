@@ -55,10 +55,6 @@ Description: "長照機構住民基本資料，用以表述長照機構住民的
 * managingOrganization.reference 1..1 MS
 * managingOrganization.reference ^short = "住民所屬的長照機構。[應輸入 Organization Resource ID]"
 * managingOrganization only Reference(LTCOrganization)
-* extension contains $EconomyStatusExt named economyStatus 0..1 MS
-* extension[economyStatus] ^short = "住民的經濟狀況"
-* extension[economyStatus].valueCodeableConcept 1..1 MS
-* extension[economyStatus].valueCodeableConcept ^short = "住民的經濟狀況代碼"
 
 // * extension contains http://hl7.org/fhir/StructureDefinition/patient-birthPlace named birthPlace 0..1 MS
 // * generalPractitioner only Reference(OSAPractitioner)
