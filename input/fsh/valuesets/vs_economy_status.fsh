@@ -1,5 +1,5 @@
-ValueSet: EconomyStatusVS
-Id: EconomyStatusVS
+ValueSet: EconomyStatusVSTWLTC
+Id: EconomyStatusVSTWLTC
 Title: "個案經濟狀況值集"
 Description: "用以表述個案經濟狀況之值集，包含個案經濟狀況之描述內容。"
 

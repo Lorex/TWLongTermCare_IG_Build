@@ -10,7 +10,7 @@ Description: "照顧目標，用以表述長期照顧情境中涉及之照顧目
 * lifecycleStatus ^short = "照顧目標的生命週期狀態。[應填入 proposed / planned / accepted / active / on-hold / completed / cancelled / entered-in-error / rejected]"
 * description 1..1 MS
 * description ^short = "照顧目標的描述"
-* description from GoalDescriptionVS (extensible)
+* description from GoalDescriptionVSTWLTC (extensible)
 * description.coding 1..1 MS
 * description.coding ^short = "照顧目標的描述代碼"
 * description.coding.system 1..1 MS

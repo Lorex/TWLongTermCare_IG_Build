@@ -1,5 +1,5 @@
-ValueSet: AddressUseVS
-Id: AddressUseVS
+ValueSet: AddressUseVSTWLTC
+Id: AddressUseVSTWLTC
 Title: "地址用途擴展值集"
 Description: "地址的用途，新增戶籍地與現居地等代碼"
 

@@ -1,6 +1,6 @@
 Alias: $TWCoreCondition = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Condition-twcore
 Alias: $ReferralConditionDisabilityTypeVS = http://ltc-ig.fhir.tw/ValueSet/ReferralConditionDisabilityTypeVS-TWLTC
-Alias: $ConditionSeverityVS = http://ltc-ig.fhir.tw/ValueSet/ConditionSeverityVS-TWLTC
+Alias: $ConditionSeverityVSTWLTC = http://ltc-ig.fhir.tw/ValueSet/ConditionSeverityVS-TWLTC
 
 Profile: LTCConditionDisabilityType
 Parent: LTCCondition
@@ -19,4 +19,4 @@ Description: "長照機構住民的身心障礙手冊資料"
 * code.coding.code ^short = "身心障礙類別代碼"
 * severity 0..1 MS
 * severity ^short = "障礙程度"
-* severity from $ConditionSeverityVS (required)
+* severity from $ConditionSeverityVSTWLTC (required)
