@@ -6,7 +6,7 @@ Id: LTCQuestionnaireResponseReferralSOF
 Title: "TW Long Term Care QuestionnaireResponse Referral SOF"
 Description: "轉介單的長者衰弱評估問卷回復"
 
-* item 10..10 MS
+* item 3..3 MS
 * item ^short = "問卷回覆的內容"
 * item.text 1..1 MS
 * item.text ^short = "問題或量表項目的內容描述。[應填入以下問題之一：體重減輕 / 下肢功能 / 精力降低]"
