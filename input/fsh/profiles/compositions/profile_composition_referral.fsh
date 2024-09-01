@@ -39,7 +39,7 @@ Description: "長期照護管理中心個案服務初篩表/轉介單文件架�
 * section[patient] ^short = "個案基本資料"
 * section[patient].entry 1..1 MS
 * section[patient].entry ^short = "個案基本資料的內容"
-* section[patient].entry only Reference(LTCPatient)
+* section[patient].entry only Reference(LTCPatientReferral)
 * section[patient].entry.reference 1..1 MS
 * section[patient].entry.reference ^short = "個案基本資料的內容。[應輸入 Patient Resource ID]"
 * section[condition-disability] ^short = "身心障礙手冊"
