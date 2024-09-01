@@ -1,6 +1,5 @@
-Alias:  $TWCorePatient = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore
-Alias: $AddressUseVSTWLTC = http://ltc-ig.fhir.tw/ValueSet/AddressUseVS-TWLTC
-Alias: $EducationStatusVSTWLTC = http://ltc-ig.fhir.tw/ValueSet/EducationStatusVS-TWLTC
+Alias: $EducationStatusExt = http://ltc-ig.fhir.tw/StructureDefinition/EducationStatusExt-TWLTC
+Alias: $PatientIdentityExt = http://ltc-ig.fhir.tw/StructureDefinition/PatientIdentityExt-TWLTC
 
 Profile: LTCPatientCMS
 Title: "TW Long Term Care Patient for CMS Form"
@@ -10,16 +9,15 @@ Description: "適用於照顧管理工量表的長照機構住民基本資料，
 * maritalStatus 1..1 MS
 * maritalStatus ^short = "A1. 個案婚姻狀況"
 
-* extension contains $EducationStatusVSTWLTC named educationStatus 0..1 MS
+* extension contains $EducationStatusExt named educationStatus 1..1 MS
 * extension[educationStatus] ^short = "A2. 個案教育程度"
 * extension[educationStatus].valueCodeableConcept 1..1 MS
 * extension[educationStatus].valueCodeableConcept ^short = "個案的教育程度代碼"
-* extension[educationStatus].valueCodeableConcept from $EducationStatusVSTWLTC
+* extension[educationStatus].valueCodeableConcept from $EducationStatusExt
 
-// * extension contains $EconomyStatusExt named economyStatus 0..1 MS
-// * extension[economyStatus] ^short = "住民的經濟狀況"
-// * extension[economyStatus].valueCodeableConcept 1..1 MS
-// * extension[economyStatus].valueCodeableConcept ^short = "住民的經濟狀況代碼"
-
-// * extension contains http://hl7.org/fhir/StructureDefinition/patient-birthPlace named birthPlace 0..1 MS
-// * generalPractitioner only Reference(OSAPractitioner)
+* extension contains $PatientIdentityExt named identity 1..1 MS
+* extension[identity] ^short = "A3. 個案身分別"
+* extension[identity].valueCodeableConcept 1..1 MS
+* extension[identity].valueCodeableConcept ^short = "個案的身分別代碼"
+* extension[identity].valueCodeableConcept from $PatientIdentityExt
+ 
