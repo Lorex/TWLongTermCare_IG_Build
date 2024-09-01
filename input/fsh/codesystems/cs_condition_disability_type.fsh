@@ -1,12 +1,12 @@
-CodeSystem: ReferralConditionDisabilityTypeCSTWLTC
-Id: ReferralConditionDisabilityTypeCSTWLTC
-Title: "轉介單身心障礙類型代碼"
-Description: "用於表述轉介單的身心障礙類型（障別）代碼。"
+CodeSystem: ConditionDisabilityTypeCSTWLTC
+Id: ConditionDisabilityTypeCSTWLTC
+Title: "個案身心障礙類型代碼（新制）"
+Description: "用於表述個案的身心障礙類型代碼（新制）。"
 
-* ^url = "http://ltc-ig.fhir.tw/Codesystem/ReferralConditionDisabilityTypeCS-TWLTC"
+* ^url = "http://ltc-ig.fhir.tw/Codesystem/ConditionDisabilityTypeaCS-TWLTC"
 * ^status = #active
 * ^experimental = false
-* ^date = "2024-08-25"
+* ^date = "2024-09-02"
 
 * #01 "第一類" "神經系統構造及精神、心智功能"
 * #02 "第二類" "眼、耳及相關構造與感官功能及疼痛"
@@ -16,3 +16,6 @@ Description: "用於表述轉介單的身心障礙類型（障別）代碼。"
 * #06 "第六類" "泌尿與生殖系統相關構造及其功能"
 * #07 "第七類" "神經、肌肉、骨骼之移動相關構造及其功能"
 * #08 "第八類" "皮膚與相關構造及其功能"
+* #09 "第九類" "罕見疾病"
+* #10 "第十類" "其他類"
+* #11 "第十一類" "發展遲緩類"

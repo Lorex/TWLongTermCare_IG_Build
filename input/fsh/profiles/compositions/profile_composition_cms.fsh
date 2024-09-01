@@ -14,7 +14,7 @@ Description: "照顧管理評估量表文件架構，用以表述照顧管理評
 * subject only Reference(LTCPatientCMS)
 * subject.reference 1..1 MS
 * subject.reference ^short = "照顧管理評估量表描述的個案。[應輸入 Patient Resource ID]"
-* section 16..16 MS
+* section 11..11 MS
 * section ^slicing.discriminator.type = #value
 * section ^slicing.discriminator.path = "title"
 * section ^slicing.rules = #open
@@ -33,11 +33,11 @@ Description: "照顧管理評估量表文件架構，用以表述照顧管理評
 * section[patient] ^short = "A. 個案基本資料"
 * section[patient].title 1..1 MS
 * section[patient].title ^short = "A. 個案基本資料"
-* section[patient].entry 1..1 MS
+* section[patient].entry 1..* MS
 * section[patient].entry ^short = "個案基本資料的內容"
-* section[patient].entry only Reference(LTCPatientCMS)
+* section[patient].entry only Reference(LTCPatientCMS or LTCConditionDisability or LTCConditionDisabilityType or $TWCoreCondition)
 * section[patient].entry.reference 1..1 MS
-* section[patient].entry.reference ^short = "個案基本資料的內容。[應輸入 Patient Resource ID]"
+* section[patient].entry.reference ^short = "個案基本資料的內容，含身心障礙手冊資料。身心障礙手冊的內容至少應填寫是否領有身心障礙手冊，如有領有身心障礙手冊，則續填身障類別與疾病代碼 (ICD-10)，如有多個身障疾病則可放入多個 Condition。[應輸入 Patient 與 Condition Resource ID]"
 * section[related-person] ^short = "B. 照顧者基本資料"
 * section[related-person].title 1..1 MS
 * section[related-person].title ^short = "B. 照顧者基本資料"
