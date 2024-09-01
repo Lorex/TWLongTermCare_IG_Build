@@ -10,7 +10,7 @@
 - [疾病嚴重度擴展值集](ValueSet-ConditionSeverityExtVS.html)
 - [管路狀況值集](ValueSet-ConditionTubeVS.html)
 - [身心障礙手冊持有狀況值集](ValueSet-ConditionDisabilityVS.html)
-- [身心障礙類別值集](ValueSet-ConditionDisabilityTypeVS.html)
+- [身心障礙類型值集](ValueSet-ConditionDisabilityTypeVS.html)
 - [轉介單申請服務種類值集](ValueSet-ReferralCareplanVS.html)
 
 ### 代碼系統 (CodeSystems)
