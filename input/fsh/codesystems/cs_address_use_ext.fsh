@@ -1,5 +1,5 @@
 CodeSystem: AddressUseCSTWLTC
-Id: AddressUseVSTWLTCTWLTC
+Id: AddressUseVSTWLTC
 Title: "地址用途擴展識別碼"
 Description: "地址用途的擴展識別碼，新增戶籍地與現居地等代碼"
 
