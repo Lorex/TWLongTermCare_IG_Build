@@ -11,7 +11,7 @@ Description: "長期照護管理中心個案服務初篩表/轉介單文件架�
 
 * subject 1..1 MS
 * subject ^short = "轉介單描述的個案"
-* subject only Reference(LTCPatient)
+* subject only Reference(LTCPatientReferral)
 * subject.reference 1..1 MS
 * subject.reference ^short = "轉介單描述的個案。[應輸入 Patient Resource ID]"
 * section 16..16 MS
