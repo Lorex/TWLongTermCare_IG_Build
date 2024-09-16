@@ -5,7 +5,7 @@ Alias: $ConditionSeverityVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet/ConditionSeve
 Profile: LTCConditionDisabilityType
 Parent: LTCCondition
 Id: LTCConditionDisabilityType
-Title: "TW Long Term Care Condition Disability Type"
+Title: "TWLTC Condition Disability Type"
 Description: "長照機構住民的身心障礙類型資料"
 
 * code 1..1 MS

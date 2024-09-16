@@ -3,7 +3,7 @@ Alias: $TWCoreCondition = https://twcore.mohw.gov.tw/ig/twcore/StructureDefiniti
 Profile: LTCCondition
 Parent: $TWCoreCondition
 Id: LTCCondition
-Title: "TW Long Term Care Condition"
+Title: "TWLTC Condition"
 Description: "長照機構住民的病情、問題或診斷資料，用以表述發生在長照機構住民的診斷，或需要特別注意或處理的健康問題與病情。"
 
 * code 1..1 MS

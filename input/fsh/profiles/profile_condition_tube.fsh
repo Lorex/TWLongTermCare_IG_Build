@@ -4,7 +4,7 @@ Alias: $ReferralConditionTubeVS = http://ltc-ig.fhir.tw/ValueSet/ReferralConditi
 Profile: LTCConditionTube
 Parent: $TWCoreCondition
 Id: LTCConditionTube
-Title: "TW Long Term Care Condition Tube"
+Title: "TWLTC Condition Tube"
 Description: "長照機構住民的管路資料"
 
 * code 1..1 MS

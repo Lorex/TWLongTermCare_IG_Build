@@ -4,7 +4,7 @@ Alias: $MedicationAdministration = http://hl7.org/fhir/StructureDefinition/Medic
 Profile: LTCMedicationAdministration
 Parent: $MedicationAdministration
 Id: LTCMedicationAdministration
-Title: "TW Long Term Care Medication Administration"
+Title: "TWLTC Medication Administration"
 Description: "長照機構住民的用藥資料"
 
 * status 1..1 MS

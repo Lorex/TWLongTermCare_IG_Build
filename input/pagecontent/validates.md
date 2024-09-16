@@ -20,7 +20,7 @@ body{font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !impor
 
 <p><b>Step 2：使用你的病人實例 JSON 檔或者下載範例JSON檔</b></p> 
 <p style="color:red">注意：請確認範例檔之編碼格式為 UTF-8，否則無法驗證。</p>
-<p>以 Patient Profile 的實作為例，如果你的手邊已經有一個依據 TW LTC IG 實作的 JSON 檔，你可以使用你的實例檔案，如果你沒有這樣的檔案，則可以下載如下圖所示的 TW LTC IG的「病人基本資料」範例。如下圖所示，請於 TW LTC IG 網站上，找到範例檔頁面中的「<a href="Patient-pat-example.json">病人基本資料</a>」。</p> 
+<p>以 Patient Profile 的實作為例，如果你的手邊已經有一個依據 TW LTC IG 實作的 JSON 檔，你可以使用你的實例檔案，如果你沒有這樣的檔案，則可以下載如下圖所示的 TW LTC IG的「病人基本資料」範例。如下圖所示，請於 TW LTC IG 網站上，找到範例檔頁面中的「病人基本資料」。</p> 
 <img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-2.jpg" alt="病人基本資料" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
 <div style="clear:both;"></div>
 <img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-3.jpg" alt="病人基本資料JSON檔" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/> 
@@ -79,7 +79,7 @@ body{font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !impor
 <div style="clear:both;"></div>
 
 <p><b>Step 2：使用你的病人實例JSON檔或者下載範例JSON檔</b></p> 
-<p>以Patient Profile的實作為例，如果你的手邊已經有一個依據TW LTC IG實作的JSON檔，你可以使用你的實例檔案，如果你沒有這樣的檔案，則可以下載如下圖所示的TW LTC IG的「病人基本資料」範例。如下圖所示，請於TW LTC IG網站上，找到範例檔頁面中的「<a href="Patient-pat-example.json">病人基本資料</a>」。</p> 
+<p>以Patient Profile的實作為例，如果你的手邊已經有一個依據TW LTC IG實作的JSON檔，你可以使用你的實例檔案，如果你沒有這樣的檔案，則可以下載如下圖所示的TW LTC IG的「病人基本資料」範例。如下圖所示，請於TW LTC IG網站上，找到範例檔頁面中的「病人基本資料」。</p> 
 <img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-2.jpg" alt="病人基本資料" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
 <div style="clear:both;"></div>
 <img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-3.jpg" alt="病人基本資料JSON檔" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/> 

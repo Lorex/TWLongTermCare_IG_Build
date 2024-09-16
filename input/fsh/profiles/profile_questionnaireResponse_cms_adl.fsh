@@ -1,7 +1,7 @@
 Profile: LTCQuestionnaireResponseCMSIADL
 Parent: LTCQuestionnaireResponse
 Id: LTCQuestionnaireResponseCMSIADL
-Title: "TW Long Term Care QuestionnaireResponse CMS IADL"
+Title: "TWLTC QuestionnaireResponse CMS IADL"
 Description: "照顧管理評估量表－個案獨立生活能力問卷回覆"
 * item 8..8 MS
 * item ^short = "E. 個案日常活動功能量表"

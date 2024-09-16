@@ -5,7 +5,7 @@ Alias: $VSParticipantRole = http://hl7.org/fhir/ValueSet/participant-role
 Profile: LTCCareTeam
 Parent: $CareTeam
 Id: LTCCareTeam
-Title: "TW Long Term Care CareTeam"
+Title: "TWLTC CareTeam"
 Description: "照顧團隊，用以表述長期照護情境中涉及之照顧團隊資訊。"
 
 * status 1..1 MS

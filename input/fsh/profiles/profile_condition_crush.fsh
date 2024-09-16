@@ -4,7 +4,7 @@ Alias: $ReferralConditionCrushVS = http://ltc-ig.fhir.tw/ValueSet/ReferralCondit
 Profile: LTCConditionCrush
 Parent: $TWCoreCondition
 Id: LTCConditionCrush
-Title: "TW Long Term Care Condition Crush"
+Title: "TWLTC Condition Crush"
 Description: "長照機構住民的壓傷資料"
 
 * code 1..1 MS

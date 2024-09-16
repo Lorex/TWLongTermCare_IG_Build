@@ -1,7 +1,7 @@
 Profile: LTCQuestionnaireResponseCMSADL
 Parent: LTCQuestionnaireResponse
 Id: LTCQuestionnaireResponseCMSADL
-Title: "TW Long Term Care QuestionnaireResponse CMS ADL"
+Title: "TWLTC QuestionnaireResponse CMS ADL"
 Description: "照顧管理評估量表－個案日常生活能力問卷回覆"
 * item 11..11 MS
 * item ^short = "E. 個案日常活動功能量表"

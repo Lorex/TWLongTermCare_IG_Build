@@ -4,7 +4,7 @@ Alias: $ConditionDisabilityVS = http://ltc-ig.fhir.tw/ValueSet/ConditionDisabili
 Profile: LTCConditionDisability
 Parent: LTCCondition
 Id: LTCConditionDisability
-Title: "TW Long Term Care Condition Disability"
+Title: "TWLTC Condition Disability"
 Description: "長照機構住民的身心障礙手冊資料"
 
 * code 1..1 MS

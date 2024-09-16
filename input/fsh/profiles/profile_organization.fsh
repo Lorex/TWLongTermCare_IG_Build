@@ -3,7 +3,7 @@ Alias: $TWCoreOrganization = https://twcore.mohw.gov.tw/ig/twcore/StructureDefin
 Profile: LTCOrganization
 Parent: $TWCoreOrganization
 Id: Organization-twltc
-Title: "TW Long Term Care Organization"
+Title: "TWLTC Organization"
 Description: "長期照顧機構資料，包含長照機構的名稱、地址、聯絡方式等資訊。"
 
 * . ^short = "長期照顧服務機構的資訊"

@@ -5,9 +5,9 @@ Alias: $PatientIdentityVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet/PatientIdentity
 
 
 Profile: LTCPatientCMS
-Title: "TW Long Term Care Patient for CMS Form"
+Title: "TWLTC Patient for CMS Form"
 Parent: LTCPatient
-Description: "適用於照顧管理功能量表的長照機構住民基本資料，本 Profile 繼承自 TW Long Term Care Patient，並增加照顧管理評估量表所需的欄位。"
+Description: "適用於照顧管理功能量表的長照機構住民基本資料，本 Profile 繼承自 TWLTC Patient，並增加照顧管理評估量表所需的欄位。"
 
 * maritalStatus 1..1 MS
 * maritalStatus ^short = "A1. 個案婚姻狀況"

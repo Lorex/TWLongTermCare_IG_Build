@@ -3,7 +3,7 @@ Alias: $QuestionnaireResponse = http://hl7.org/fhir/StructureDefinition/Question
 Profile: LTCQuestionnaireResponseCMSCommunication
 Parent: LTCQuestionnaireResponse
 Id: LTCQuestionnaireResponseCMSCommunication
-Title: "TW Long Term Care QuestionnaireResponse CMS Communication"
+Title: "TWLTC QuestionnaireResponse CMS Communication"
 Description: "照顧管理評估量表－個案溝通能力問卷回覆"
 
 * item 5..6 MS

@@ -1,7 +1,7 @@
 Profile: LTCQuestionnaireResponseCMSMental
 Parent: LTCQuestionnaireResponse
 Id: LTCQuestionnaireResponseCMSMental
-Title: "TW Long Term Care QuestionnaireResponse CMS Mental"
+Title: "TWLTC QuestionnaireResponse CMS Mental"
 Description: "照顧管理評估量表－情緒及行為型態問卷回覆"
 
 * item 14..14 MS

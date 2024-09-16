@@ -6,7 +6,7 @@ Alias: $TWCoreCondition = https://twcore.mohw.gov.tw/ig/twcore/StructureDefiniti
 Profile: LTCBundleReferral
 Parent: $TWCoreBundleDocument
 Id: LTCBundleReferral
-Title: "TW Long Term Care Bundle Referral"
+Title: "TWLTC Bundle Referral"
 Description: "長期照顧管理中心個案服務初篩表/轉介單
 
 本轉介單以臺北市長期照顧管理中心個案服務初篩表/轉介單為基礎，用以表述長期照顧管理中心個案服務初篩表/轉介單內容。
