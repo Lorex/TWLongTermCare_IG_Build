@@ -1,4 +1,4 @@
-Alias: $EducationStatusVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet-EducationStatusVS-TWLTC
+Alias: $EducationStatusVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet/EducationStatusVS-TWLTC
 
 Extension:  ExtensionPatientEducationStatusTWLTC
 Id: ExtensionPatientEducationStatus-TWLTC
@@ -21,6 +21,6 @@ Context: Patient
 * valueCodeableConcept.coding ^short = "個案的教育程度代碼"
 * valueCodeableConcept.coding.system 1..1 MS
 * valueCodeableConcept.coding.system ^short = "個案的教育程度代碼系統。[應填入教育程度代碼系統的 URL]"
-* valueCodeableConcept.coding.system = "http://ltc-ig.fhir.tw/Codesystem-EducationStatusCS-TWLTC"
+* valueCodeableConcept.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC"
 * valueCodeableConcept.coding.code 1..1 MS
 * valueCodeableConcept.coding.code ^short = "個案的教育程度代碼。[應填入 illiterate / literate / elementary / junior / senior / special-elementary / special-junior / special-senior / vocational / college / postgraduate / other]"

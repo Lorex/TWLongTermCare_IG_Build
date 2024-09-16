@@ -3,8 +3,9 @@ Id: ReferralConditionTubeCS-TWLTC
 Title: "轉介單管路狀況代碼"
 Description: "用於表述轉介單的狀況代碼，包含身心障礙手冊、管路、壓傷、居住狀況、看護、主要問題及需求等。"
 
-//* ^url = "http://ltc-ig.fhir.tw/Codesystem-ReferralConditionTubeCS-TWLTC"
+//* ^url = "http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionTubeCS-TWLTC"
 * ^status = #active
+* ^caseSensitive = true
 * ^experimental = false
 * ^date = "2024-08-25"
 

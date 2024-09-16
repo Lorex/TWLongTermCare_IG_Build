@@ -4,7 +4,7 @@ Alias: $TWCoreEncounter = https://twcore.mohw.gov.tw/ig/twcore/StructureDefiniti
 Alias: $TWCoreOrganization = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Organization-twcore
 Alias: $TWCoreOrganizationHospital = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Organization-hosp-twcore
 Alias: $TWCoreMedicationRequest = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/MedicationRequest-twcore
-Alias: $ReferralCarePlanVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet-ReferralCarePlanVS-TWLTC
+Alias: $ReferralCarePlanVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet/ReferralCarePlanVS-TWLTC
 
 
 Profile: LTCCarePlanReferral

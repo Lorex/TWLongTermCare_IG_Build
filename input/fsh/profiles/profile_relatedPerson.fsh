@@ -1,6 +1,6 @@
 Alias: $RelatedPerson = http://hl7.org/fhir/StructureDefinition/RelatedPerson
-Alias: $RelationshipTypeVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet-RelationshipTypeVS-TWLTC
-Alias: $ExtensionRelatedPersonIsPrimary = http://ltc-ig.fhir.tw/StructureDefinition-ExtensionRelatedPersonIsPrimary-TWLTC
+Alias: $RelationshipTypeVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet/RelationshipTypeVS-TWLTC
+Alias: $ExtensionRelatedPersonIsPrimary = http://ltc-ig.fhir.tw/StructureDefinition/ExtRelatedPersonIsPrimary-TWLTC
 
 Profile: LTCRelatedPerson
 Parent: $RelatedPerson

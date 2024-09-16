@@ -222,6 +222,7 @@ Description: "照顧管理評估量表－個案特殊照護問卷回覆"
 * item[item-G4e].answer.value[x] 1..1 MS
 * item[item-G4e].answer.value[x] only string
 * item[item-G4e].answer.valueString 1..1 MS
+* item[item-G4e].answer ^example.label = "Value"
 * item[item-G4e].answer ^example.valueString = "否 | 是，高血壓，目前正在治療、目前使用藥物"
 * item[item-G4f] ^short = "G4f. 個案尋求必要醫療時，是否需要服務介入協助？"
 * item[item-G4f].linkId 1..1 MS
