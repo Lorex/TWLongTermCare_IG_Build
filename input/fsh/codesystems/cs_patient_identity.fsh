@@ -3,6 +3,11 @@ Id: PatientIdentityCS-TWLTC
 Title: "個案身分別代碼"
 Description: "個案身分別代碼"
 
+* ^status = #active
+* ^caseSensitive = true
+* ^experimental = false
+* ^date = "2024-09-02"
+
 * #1 "一般戶" "一般戶"
 * #2a-1 "社會救助法低收入戶" "社會救助法低收入戶（未達 1 倍）"
 * #2a-2 "長照低收" "長照低收（1-1.5 倍）"

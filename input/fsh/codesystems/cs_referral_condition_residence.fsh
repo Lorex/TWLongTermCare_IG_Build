@@ -3,8 +3,9 @@ Id: ReferralConditionResidenceCS-TWLTC
 Title: "轉介單居住狀況代碼"
 Description: "用於表述個案的居住狀況"
 
-//* ^url = "http://ltc-ig.fhir.tw/Codesystem-ReferralConditionResidenceCS-TWLTC"
+//* ^url = "http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionResidenceCS-TWLTC"
 * ^status = #active
+* ^caseSensitive = true
 * ^experimental = false
 * ^date = "2024-08-25"
 

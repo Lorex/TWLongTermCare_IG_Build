@@ -3,8 +3,9 @@ Id: EducationStatusCS-TWLTC
 Title: "教育程度代碼"
 Description: "用於表述個案的教育程度，在長照機構住民教育程度 Extension 中使用。"
 
-//* ^url = "http://ltc-ig.fhir.tw/Codesystem-EducationStatusCS-TWLTC"
+//* ^url = "http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC"
 * ^status = #active
+* ^caseSensitive = true
 * ^experimental = false
 * ^date = "2024-09-02"
 

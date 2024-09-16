@@ -1,4 +1,4 @@
-Alias: $EconomyStatusVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet-EconomyStatusVS-TWLTC
+Alias: $EconomyStatusVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet/EconomyStatusVS-TWLTC
 
 Extension:  ExtensionPatientEconomyStatusTWLTC
 Id: ExtensionPatientEconomyStatus-TWLTC
@@ -21,6 +21,6 @@ Context: Patient
 * valueCodeableConcept.coding ^short = "個案的經濟狀況代碼"
 * valueCodeableConcept.coding.system 1..1 MS
 * valueCodeableConcept.coding.system ^short = "個案的經濟狀況代碼系統。[應填入經濟狀況代碼系統的 URL]"
-* valueCodeableConcept.coding.system = "http://ltc-ig.fhir.tw/Codesystem-EconomyStatusCS-TWLTC"
+* valueCodeableConcept.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/EconomyStatusCS-TWLTC"
 * valueCodeableConcept.coding.code 1..1 MS
 * valueCodeableConcept.coding.code ^short = "個案的經濟狀況代碼。[應填入 poor / barely-maintain / well-off / middle-class / wealthy]"

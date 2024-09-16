@@ -4,8 +4,9 @@ Title:  "經濟狀況代碼"
 Description: "用於表述個案的經濟狀況，在長照機構住民經濟狀況 Extension 中使用。
 此代碼比照警政署偵查筆錄制式格式之選項進行設計。"
 
-//* ^url = "http://ltc-ig.fhir.tw/Codesystem-EconomyStatusCS-TWLTC"
+//* ^url = "http://ltc-ig.fhir.tw/CodeSystem/EconomyStatusCS-TWLTC"
 * ^status = #active
+* ^caseSensitive = true
 * ^experimental = false
 * ^date = "2024-08-25"
 

@@ -3,8 +3,9 @@ Id: ReferralCarePlanCS-TWLTC
 Title: "轉介單申請服務種類代碼"
 Description: "用於表述個案欲申請的服務項目。"
 
-//* ^url = "http://ltc-ig.fhir.tw/Codesystem-ReferralCarePlanCS-TWLTC"
+//* ^url = "http://ltc-ig.fhir.tw/CodeSystem/ReferralCarePlanCS-TWLTC"
 * ^status = #active
+* ^caseSensitive = true
 * ^experimental = false
 * ^date = "2024-08-25"
 
