@@ -28,11 +28,23 @@ Description: "長照機構住民基本資料，用以表述長照機構住民的
 * telecom.value ^short = "實際的聯絡方式之細節。[應輸入聯絡電話]"
 * birthDate 1..1 MS
 * birthDate ^short = "住民的出生年月日"
-* address only $LTCAddress
 * address 1..2 MS
-* address ^short = "使用郵政規範表達住民的現居地址"
-* address.text 1..1 MS
-* address.text ^short = "住民的現居地址。[應輸入完整地址]"
+* address ^slicing.discriminator.type = #value
+* address ^slicing.discriminator.path = "use"
+* address ^slicing.rules = #open
+* address ^slicing.description = "Slice based on address.use"
+* address ^short = "使用郵政規範表達住民的地址"
+* address contains
+    home 0..1 MS and
+    billing 0..1 MS
+* address[home].use = #home
+* address[home] ^short = "住民的現居地址"
+* address[home].text 1..1 MS
+* address[home].text ^short = "住民的現居地址。[應輸入完整地址]"
+* address[billing].use = #billing
+* address[billing] ^short = "住民的戶籍地址"
+* address[billing].text 1..1 MS
+* address[billing].text ^short = "住民的戶籍地址。[應輸入完整地址]"
 * contact 1..* MS
 * contact ^short = "住民的緊急聯絡人"
 * contact.relationship 1..1 MS
