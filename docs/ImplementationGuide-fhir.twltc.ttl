@@ -1,0 +1,1484 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/ImplementationGuide/fhir.twltc> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "fhir.twltc"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide fhir.twltc</b></p><a name=\"fhir.twltc\"> </a><a name=\"hcfhir.twltc\"> </a><a name=\"fhir.twltc-en-US\"> </a><h2>TaiwanLongTermCareFHIRImplementationGuide</h2><p>The official URL for this implementation guide is: </p><pre>http://ltc-ig.fhir.tw/ImplementationGuide/fhir.twltc</pre></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://ltc-ig.fhir.tw/ImplementationGuide/fhir.twltc"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.1"] ; # 
+  fhir:name [ fhir:v "TaiwanLongTermCareFHIRImplementationGuide"] ; # 
+  fhir:title [ fhir:v "臺灣長期照顧實作指引 (Taiwan Long-Term Care FHIR Implementation Guide)"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2024-09-16T23:20:15+08:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "MI-TW"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MI-TW" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://mitw.dicom.org.tw/" ]
+     ] )
+  ] ) ; # 
+  fhir:packageId [ fhir:v "fhir.twltc"] ; # 
+  fhir:license [ fhir:v "CC0-1.0"] ; # 
+  fhir:fhirVersion ( [ fhir:v "4.0.1"] ) ; # 
+  fhir:dependsOn ( [
+     fhir:id [ fhir:v "hl7tx" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"^^xsd:anyURI ;
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
+     fhir:version [ fhir:v "6.0.2" ]
+  ] [
+     fhir:id [ fhir:v "hl7ext" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
+     fhir:version [ fhir:v "5.1.0" ]
+  ] [
+     fhir:id [ fhir:v "tw_gov_mohw_twcore" ] ;
+     fhir:uri [
+       fhir:v "https://twcore.mohw.gov.tw/ig/twcore/ImplementationGuide/tw.gov.mohw.twcore"^^xsd:anyURI ;
+       fhir:link <https://twcore.mohw.gov.tw/ig/twcore/ImplementationGuide/tw.gov.mohw.twcore>
+     ] ;
+     fhir:packageId [ fhir:v "tw.gov.mohw.twcore" ] ;
+     fhir:version [ fhir:v "0.2.2" ]
+  ] ) ; # 
+  fhir:definition [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "copyrightyear" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "2024+" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "releaselabel" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ci-build" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "autoload-resources" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-qa" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/qa" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-temp" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/pages" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-output" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "output" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-suppressed-warnings" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-history" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://ltc-ig.fhir.tw/history.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-html" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-md" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page-md.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-contact" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-context" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-copyright" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-jurisdiction" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-license" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-publisher" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-version" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-wg" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "active-tables" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "fmm-definition" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "propagate-status" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "excludelogbinaryformat" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "tabbed-snapshots" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "hl7.fhir.uv.tools#0.2.0" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "copyrightyear" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "2024+" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "releaselabel" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ci-build" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "autoload-resources" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-qa" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/qa" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-temp" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/pages" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-output" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "output" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-suppressed-warnings" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-history" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://ltc-ig.fhir.tw/history.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-html" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-md" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page-md.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-contact" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-context" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-copyright" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-jurisdiction" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-license" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-publisher" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-version" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-wg" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "active-tables" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "fmm-definition" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "propagate-status" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "excludelogbinaryformat" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "tabbed-snapshots" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] ) ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleCMS> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCBundleCMS" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Bundle CMS" ] ;
+       fhir:description [ fhir:v "照顧管理評估量表\n\n本 Bundle 以衛生福利部長期照顧管理中心照顧管理評估量表為基礎，用以表述照顧管理評估量表的文件結構。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleReferral> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCBundleReferral" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Bundle Referral" ] ;
+       fhir:description [ fhir:v "長期照顧管理中心個案服務初篩表/轉介單\n\n本轉介單以臺北市長期照顧管理中心個案服務初篩表/轉介單為基礎，用以表述長期照顧管理中心個案服務初篩表/轉介單內容。\n\n請注意：各縣市轉介單格式可能有所不同，此 Profile 將於後續版本逐步納入各縣市初篩表/轉介單格式並進行整合。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCCarePlan> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCCarePlan" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC CarePlan" ] ;
+       fhir:description [ fhir:v "照顧計畫，用以表述長期照顧情境中涉及之照顧計畫內容。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCCarePlanReferral> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCCarePlanReferral" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC CarePlan Referral" ] ;
+       fhir:description [ fhir:v "轉診單中欲申請之服務種類。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCCareTeam> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCCareTeam" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC CareTeam" ] ;
+       fhir:description [ fhir:v "照顧團隊，用以表述長期照護情境中涉及之照顧團隊資訊。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionCMS> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCCompositionCMS" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Composition CMS" ] ;
+       fhir:description [ fhir:v "照顧管理評估量表文件架構，用以表述照顧管理評估量表的文件結構。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionReferral> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCCompositionReferral" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Composition Referral" ] ;
+       fhir:description [ fhir:v "長期照護管理中心個案服務初篩表/轉介單文件架構，用以表述長期照護管理中心個案服務初篩表/轉介單的文件結構。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCCondition> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCCondition" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Condition" ] ;
+       fhir:description [ fhir:v "長照機構住民的病情、問題或診斷資料，用以表述發生在長照機構住民的診斷，或需要特別注意或處理的健康問題與病情。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCaregiver> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCConditionCaregiver" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Condition Caregiver" ] ;
+       fhir:description [ fhir:v "長照機構住民的看護狀況資料" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCrush> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCConditionCrush" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Condition Crush" ] ;
+       fhir:description [ fhir:v "長照機構住民的壓傷資料" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisability> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCConditionDisability" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Condition Disability" ] ;
+       fhir:description [ fhir:v "長照機構住民的身心障礙手冊資料" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisabilityType> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCConditionDisabilityType" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Condition Disability Type" ] ;
+       fhir:description [ fhir:v "長照機構住民的身心障礙類型資料" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionResidence> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCConditionResidence" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Condition Residence" ] ;
+       fhir:description [ fhir:v "長照機構住民的居住狀況資料" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionTube> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCConditionTube" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Condition Tube" ] ;
+       fhir:description [ fhir:v "長照機構住民的管路資料" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCGoal> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCGoal" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Goal" ] ;
+       fhir:description [ fhir:v "照顧目標，用以表述長期照顧情境中涉及之照顧目標內容。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCMedicationAdministration> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCMedicationAdministration" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Medication Administration" ] ;
+       fhir:description [ fhir:v "長照機構住民的用藥資料" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationVitalSigns> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCObservationVitalSigns" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Observation Vital Signs" ] ;
+       fhir:description [ fhir:v "長照機構住民的生命徵象資料" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/Organization-twltc> ;
+         fhir:reference [ fhir:v "StructureDefinition/Organization-twltc" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Organization" ] ;
+       fhir:description [ fhir:v "長期照顧機構資料，包含長照機構的名稱、地址、聯絡方式等資訊。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCPatient> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCPatient" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Patient" ] ;
+       fhir:description [ fhir:v "長照機構住民基本資料，用以表述長照機構住民的基本資料。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientCMS> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCPatientCMS" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Patient for CMS Form" ] ;
+       fhir:description [ fhir:v "適用於照顧管理功能量表的長照機構住民基本資料，本 Profile 繼承自 TWLTC Patient，並增加照顧管理評估量表所需的欄位。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientReferral> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCPatientReferral" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Patient for Referral Form" ] ;
+       fhir:description [ fhir:v "適用於長期照護管理中心個案服務初篩表/轉介單的長照機構住民基本資料，本 Profile 繼承自 TWLTC Patient，並增加轉介單所需的欄位。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCPractitioner" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Practitioner" ] ;
+       fhir:description [ fhir:v "長期照顧服務人員資料，包含醫師、護理師、藥師、照顧服務員等實際參與長照服務的人員資料。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitionerRole> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCPractitionerRole" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC PractitionerRole" ] ;
+       fhir:description [ fhir:v "長期照顧服務人員角色資料，包含醫師、護理師、藥師、照顧服務員等實際參與長照服務的人員角色資料。有關 PractitionerRole 與 Practitioner 的差異及相關解釋，請參照 [TW Core IG](https://build.fhir.org/ig/cctwFHIRterm/MOHW_TWCoreIG_Build/StructureDefinition-PractitionerRole-twcore.html) 中的說明。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaire" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC Questionnaire" ] ;
+       fhir:description [ fhir:v "問卷，用以表述長期照顧情境中涉及之問卷或量表內容。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponse" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC QuestionnaireResponse" ] ;
+       fhir:description [ fhir:v "問卷回覆，用以表述長期照顧情境中涉及之問卷或量表回覆內容。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSADL> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseCMSADL" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC QuestionnaireResponse CMS ADL" ] ;
+       fhir:description [ fhir:v "照顧管理評估量表－個案日常生活能力問卷回覆" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverLoad> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseCMSCaregiverLoad" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC QuestionnaireResponse CMS Caregiver Load" ] ;
+       fhir:description [ fhir:v "照顧管理評估量表－主要照顧者負荷問卷回覆" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverSupport> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseCMSCaregiverSupport" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC QuestionnaireResponse CMS Caregiver Support" ] ;
+       fhir:description [ fhir:v "照顧管理評估量表－主要照顧者工作與支持" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCommunication> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseCMSCommunication" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC QuestionnaireResponse CMS Communication" ] ;
+       fhir:description [ fhir:v "照顧管理評估量表－個案溝通能力問卷回覆" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSIADL> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseCMSIADL" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC QuestionnaireResponse CMS IADL" ] ;
+       fhir:description [ fhir:v "照顧管理評估量表－個案獨立生活能力問卷回覆" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMemory> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseCMSMemory" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC QuestionnaireResponse CMS Memory" ] ;
+       fhir:description [ fhir:v "照顧管理評估量表－個案短期記憶力問卷回覆" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMental> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseCMSMental" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC QuestionnaireResponse CMS Mental" ] ;
+       fhir:description [ fhir:v "照顧管理評估量表－情緒及行為型態問卷回覆" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSociety> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseCMSSociety" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC QuestionnaireResponse CMS Society" ] ;
+       fhir:description [ fhir:v "照顧管理評估量表－居家環境與社會參與" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSpecialCare> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseCMSSpecialCare" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC QuestionnaireResponse CMS Special Care" ] ;
+       fhir:description [ fhir:v "照顧管理評估量表－個案特殊照護問卷回覆" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralADL> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseReferralADL" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC QuestionnaireResponse Referral ADL" ] ;
+       fhir:description [ fhir:v "轉介單的 ADL 失能項目評估問卷回覆" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralCaregiver> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseReferralCaregiver" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC QuestionnaireResponse Referral Caregiver" ] ;
+       fhir:description [ fhir:v "轉介單的照顧者問卷回覆" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralIADL> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseReferralIADL" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC QuestionnaireResponse Referral IADL" ] ;
+       fhir:description [ fhir:v "轉介單的 IADL 失能項目評估問卷回覆" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralSOF> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseReferralSOF" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC QuestionnaireResponse Referral SOF" ] ;
+       fhir:description [ fhir:v "轉介單的長者衰弱評估問卷回覆" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCRelatedPerson" ]
+       ] ;
+       fhir:name [ fhir:v "TWLTC RelatedPerson" ] ;
+       fhir:description [ fhir:v "住民的關係人，包含家屬、照顧者、法定代理人等與住民有關的人員資料。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/ValueSet/EconomyStatusVS-TWLTC> ;
+         fhir:reference [ fhir:v "ValueSet/EconomyStatusVS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "個案經濟狀況值集" ] ;
+       fhir:description [ fhir:v "用以表述個案經濟狀況之值集，包含個案經濟狀況之描述內容。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientIdentity-TWLTC> ;
+         fhir:reference [ fhir:v "StructureDefinition/ExtPatientIdentity-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "個案身分別" ] ;
+       fhir:description [ fhir:v "此 Extension 用以表述個案的身分別。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/CodeSystem/PatientIdentityCS-TWLTC> ;
+         fhir:reference [ fhir:v "CodeSystem/PatientIdentityCS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "個案身分別代碼" ] ;
+       fhir:description [ fhir:v "個案身分別代碼" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/ValueSet/PatientIdentityVS-TWLTC> ;
+         fhir:reference [ fhir:v "ValueSet/PatientIdentityVS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "個案身分別值集" ] ;
+       fhir:description [ fhir:v "個案身分別的值集" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityCS-TWLTC> ;
+         fhir:reference [ fhir:v "CodeSystem/ConditionDisabilityCS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "個案身心障礙手冊持有狀態代碼" ] ;
+       fhir:description [ fhir:v "用於表述個案的身心障礙手冊持有狀態代碼。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityTypeCS-TWLTC> ;
+         fhir:reference [ fhir:v "CodeSystem/ConditionDisabilityTypeCS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "個案身心障礙類型代碼（新制）" ] ;
+       fhir:description [ fhir:v "用於表述個案的身心障礙類型代碼（新制）。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityLegacyTypeCS-TWLTC> ;
+         fhir:reference [ fhir:v "CodeSystem/ConditionDisabilityLegacyTypeCS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "個案身心障礙類型代碼（舊制）" ] ;
+       fhir:description [ fhir:v "用於表述個案的身心障礙類型代碼（舊制）。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/ValueSet/AddressUseVS-TWLTC> ;
+         fhir:reference [ fhir:v "ValueSet/AddressUseVS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "地址用途擴展值集" ] ;
+       fhir:description [ fhir:v "地址的用途，新增戶籍地與現居地等代碼" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/CodeSystem/AddressUseCS-TWLTC> ;
+         fhir:reference [ fhir:v "CodeSystem/AddressUseCS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "地址用途擴展識別碼" ] ;
+       fhir:description [ fhir:v "地址用途的擴展識別碼，新增戶籍地與現居地等代碼" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/ValueSet/ReferralConditionCrushVS-TWLTC> ;
+         fhir:reference [ fhir:v "ValueSet/ReferralConditionCrushVS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "壓傷狀況值集" ] ;
+       fhir:description [ fhir:v "個案壓傷的狀況" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/ValueSet/ReferralConditionResidenceVS-TWLTC> ;
+         fhir:reference [ fhir:v "ValueSet/ReferralConditionResidenceVS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "居住狀況值集" ] ;
+       fhir:description [ fhir:v "個案的居住狀況" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC> ;
+         fhir:reference [ fhir:v "CodeSystem/EducationStatusCS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "教育程度代碼" ] ;
+       fhir:description [ fhir:v "用於表述個案的教育程度，在長照機構住民教育程度 Extension 中使用。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/ValueSet/EducationStatusVS-TWLTC> ;
+         fhir:reference [ fhir:v "ValueSet/EducationStatusVS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "教育程度值集" ] ;
+       fhir:description [ fhir:v "用以表述教育程度之值集，包含教育程度之描述內容。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/ExtRelatedPersonIsPrimary-TWLTC> ;
+         fhir:reference [ fhir:v "StructureDefinition/ExtRelatedPersonIsPrimary-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "是否為主要照顧者" ] ;
+       fhir:description [ fhir:v "此 Extension 用以表述關係人是否為主要照顧者。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/ValueSet/GoalDescriptionVS-TWLTC> ;
+         fhir:reference [ fhir:v "ValueSet/GoalDescriptionVS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "照顧目標描述值集" ] ;
+       fhir:description [ fhir:v "照顧目標的描述值集，用以表述長期照顧情境中涉及之照顧目標描述內容。本值集比照 US Core Goal Profile 中的 description 元素定義，引用 SNOMED CT 與 LOINC 等術語系統。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/ValueSet/ConditionSeverityVS-TWLTC> ;
+         fhir:reference [ fhir:v "ValueSet/ConditionSeverityVS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "疾病嚴重度擴展值集" ] ;
+       fhir:description [ fhir:v "用以表述疾病嚴重度之擴展值集，包含疾病嚴重度之描述內容。配合身心障礙手冊障礙程度分級，包含輕度、中度、重度、極重度等代碼。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/ValueSet/ReferralConditionCaregiverVS-TWLTC> ;
+         fhir:reference [ fhir:v "ValueSet/ReferralConditionCaregiverVS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "看護狀況值集" ] ;
+       fhir:description [ fhir:v "個案雇用看護的狀況" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/ValueSet/ReferralConditionTubeVS-TWLTC> ;
+         fhir:reference [ fhir:v "ValueSet/ReferralConditionTubeVS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "管路狀況值集" ] ;
+       fhir:description [ fhir:v "個案持有管路的狀況" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/CodeSystem/EconomyStatusCS-TWLTC> ;
+         fhir:reference [ fhir:v "CodeSystem/EconomyStatusCS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "經濟狀況代碼" ] ;
+       fhir:description [ fhir:v "用於表述個案的經濟狀況，在長照機構住民經濟狀況 Extension 中使用。\n此代碼比照警政署偵查筆錄制式格式之選項進行設計。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/ValueSet/ConditionDisabilityVS-TWLTC> ;
+         fhir:reference [ fhir:v "ValueSet/ConditionDisabilityVS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "身心障礙手冊持有狀況值集" ] ;
+       fhir:description [ fhir:v "個案持有身心障礙手冊的狀況" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/ValueSet/ConditionDisabilityTypeVS-TWLTC> ;
+         fhir:reference [ fhir:v "ValueSet/ConditionDisabilityTypeVS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "身心障礙類型值集" ] ;
+       fhir:description [ fhir:v "個案身心障礙類型" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionCrushCS-TWLTC> ;
+         fhir:reference [ fhir:v "CodeSystem/ReferralConditionCrushCS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "轉介單壓傷狀況代碼" ] ;
+       fhir:description [ fhir:v "用於表述個案的壓傷狀況。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionResidenceCS-TWLTC> ;
+         fhir:reference [ fhir:v "CodeSystem/ReferralConditionResidenceCS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "轉介單居住狀況代碼" ] ;
+       fhir:description [ fhir:v "用於表述個案的居住狀況" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/CodeSystem/ReferralCarePlanCS-TWLTC> ;
+         fhir:reference [ fhir:v "CodeSystem/ReferralCarePlanCS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "轉介單申請服務種類代碼" ] ;
+       fhir:description [ fhir:v "用於表述個案欲申請的服務項目。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/ValueSet/ReferralCarePlanVS-TWLTC> ;
+         fhir:reference [ fhir:v "ValueSet/ReferralCarePlanVS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "轉介單申請服務種類值集" ] ;
+       fhir:description [ fhir:v "轉介單申請服務種類的值集" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionCaregiverCS-TWLTC> ;
+         fhir:reference [ fhir:v "CodeSystem/ReferralConditionCaregiverCS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "轉介單看護狀況代碼" ] ;
+       fhir:description [ fhir:v "用於表述個案雇用看護的狀況。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionTubeCS-TWLTC> ;
+         fhir:reference [ fhir:v "CodeSystem/ReferralConditionTubeCS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "轉介單管路狀況代碼" ] ;
+       fhir:description [ fhir:v "用於表述轉介單的狀況代碼，包含身心障礙手冊、管路、壓傷、居住狀況、看護、主要問題及需求等。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEducationStatus-TWLTC> ;
+         fhir:reference [ fhir:v "StructureDefinition/ExtPatientEducationStatus-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "長照機構住民教育程度" ] ;
+       fhir:description [ fhir:v "此 Extension 用以表述長照機構住民的教育程度。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEconomyStatus-TWLTC> ;
+         fhir:reference [ fhir:v "StructureDefinition/ExtPatientEconomyStatus-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "長照機構住民經濟狀況" ] ;
+       fhir:description [ fhir:v "此 Extension 用以表述長照機構住民的經濟狀況。" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/CodeSystem/RelationshipTypeCS-TWLTC> ;
+         fhir:reference [ fhir:v "CodeSystem/RelationshipTypeCS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "關係類型擴展代碼" ] ;
+       fhir:description [ fhir:v "關係人與個案的關係類型擴展代碼，新增孫媳婦、孫女婿、聘用看護-本國籍、聘用看護-外國籍等代碼" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/ValueSet/RelationshipTypeVS-TWLTC> ;
+         fhir:reference [ fhir:v "ValueSet/RelationshipTypeVS-TWLTC" ]
+       ] ;
+       fhir:name [ fhir:v "關係類型擴展值集" ] ;
+       fhir:description [ fhir:v "關係人與個案的關係類型擴展代碼值集，新增孫媳婦、孫女婿、聘用看護-本國籍、聘用看護-外國籍等代碼" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] ) ;
+     fhir:page [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "toc.html"^^xsd:anyURI ]
+       ] ) ;
+       fhir:name [ fhir:v "toc.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Table of Contents" ] ;
+       fhir:generation [ fhir:v "html" ] ;
+       fhir:page ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "index.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Home" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "connectathon.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "connectathon.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Connectathon" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "downloads.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "downloads.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Downloads" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "ImplementationGuide-fhir.twltc.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "ImplementationGuide-fhir.twltc.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Implementation Guide Fhir Twltc" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "profiles-and-extensions.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "profiles-and-extensions.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Profiles and Extensions" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "security.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "security.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Security" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "terminologies.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "terminologies.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Terminologies" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "validates.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "validates.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Validates" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] )
+     ] ;
+     fhir:parameter ( [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/capabilities" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/examples" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/extensions" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/models" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/operations" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/profiles" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/resources" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/vocabulary" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/maps" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/testing" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/history" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "fsh-generated/resources" ]
+     ] [
+       fhir:code [ fhir:v "path-pages" ] ;
+       fhir:value [ fhir:v "template/config" ]
+     ] [
+       fhir:code [ fhir:v "path-pages" ] ;
+       fhir:value [ fhir:v "input/images" ]
+     ] [
+       fhir:code [ fhir:v "path-tx-cache" ] ;
+       fhir:value [ fhir:v "input-cache/txcache" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

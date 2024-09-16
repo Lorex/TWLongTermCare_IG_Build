@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Connectathon - 臺灣長期照顧實作指引 (Taiwan Long-Term Care FHIR Implementation Guide) v0.1.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引 (Taiwan Long-Term Care FHIR Implementation Guide)</span>
+            <br/>
+            <span style="display:inline-block;">0.1.1 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">應用說明</a></li>
+  <li><a href="toc.html">目錄</a></li>
+	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<!-- <li>
+				<a href="capabilitystatements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters-and-operation.html">查詢參數及操作定義</a>
+			</li>
+			<li>
+				<a href="models.html">邏輯模型</a>
+			</li> -->
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles及Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+  <!-- <li><a href="examples.html">範例</a></li> -->
+  <li><a href="downloads.html">結構定義與範例檔下載</a></li>
+  <li><a href="security.html">安全性</a></li>
+  <li><a href="validates.html">驗證教學</a></li>
+  <li><a href="connectathon.html">MI-TW 2024 聯測松</a></li>
+</ul>      
+
+<style>
+.dropdown-menu li:hover .sub-menu {visibility: visible;}
+.dropdown:hover .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 992px) {
+  table.colsi {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  table.rwd-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  p, a {
+    word-break: break-all;
+  }
+}
+</style>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Connectathon</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care FHIR Implementation Guide) - Local Development build (v0.1.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://ltc-ig.fhir.tw/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Connectathon</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#賽道資訊-information" id="markdown-toc-賽道資訊-information">賽道資訊 (Information)</a></li>
+  <li><a href="#賽道簡介-summary" id="markdown-toc-賽道簡介-summary">賽道簡介 (Summary)</a></li>
+  <li><a href="#應用情境-scenarios" id="markdown-toc-應用情境-scenarios">應用情境 (Scenarios)</a></li>
+  <li><a href="#效益-benefits" id="markdown-toc-效益-benefits">效益 (Benefits)</a></li>
+  <li><a href="#詳細資訊-details" id="markdown-toc-詳細資訊-details">詳細資訊 (Details)</a></li>
+  <li><a href="#涉及系統-systems-affected" id="markdown-toc-涉及系統-systems-affected">涉及系統 (Systems Affected)</a></li>
+  <li><a href="#規格-specification" id="markdown-toc-規格-specification">規格 (Specification)</a></li>
+</ul>
+
+</div>
+<h3 id="賽道資訊-information">賽道資訊 (Information)</h3>
+
+<p>聯測年度與名稱：2024 年度臺灣醫學資訊聯測松 (MI-TW Connectathon 2024)</p>
+
+<p>賽道：#11 長期照顧賽道 (Long-term Care Track)</p>
+
+<h3 id="賽道簡介-summary">賽道簡介 (Summary)</h3>
+
+<p>長期照護（長照）資料用於記錄長照使用者的照護計畫、照護過程與相關醫療數據，以協助護理與長照作業人員提供照護服務並協助機構行政管理與統計分析。 然而目前臺灣長照機構格式不一致且缺乏標準化，使得不同系統角色間難以管理與整合長照使用者之健康照護記錄。</p>
+
+<p>經濟部產業發展署於今年 (2024) 推動銀光科技智慧照顧驗證推動計畫，整合國內長照機構與資通訊服務廠商，建立統一的資料交換標準，以促進長照資料的互通。 故本工作小組於本次聯測預計新增長期照護相關情境主題，預計機構式照護服務為主，發展長照 FHIR 互通標準，後續擴大應用至社區式照護服務、居家式照護服務等長照資料之全面性涵蓋。</p>
+
+<h3 id="應用情境-scenarios">應用情境 (Scenarios)</h3>
+
+<ul>
+  <li>Scenario 0：OAuth2 Access Token 存取認證（與大會 OAuth 動態 Token 驗證整合）</li>
+  <li>Scenario 1：照護管理評估量表(CMS 量表)</li>
+  <li>Scenario 2：長期照顧服務轉介</li>
+  <li>Scenario 3：長照機構入住作業 <strong>(注意：今年本情境取消。)</strong></li>
+  <li>Scenario 4：長照用藥管理作業</li>
+  <li>Scenario 5：長照生理量測管理作業</li>
+  <li>Scenario 6：照護計畫管理作業 <strong>(注意：今年本情境取消。)</strong></li>
+</ul>
+
+<h3 id="效益-benefits">效益 (Benefits)</h3>
+
+<p>以經濟部產業發展署銀光科技智慧照顧驗證推動計畫為基礎，將住宿型機構常照服務的資訊處理流程初步規劃， 並設計以 FHIR 標準呈現長照機構作業流程中的資訊欄位與資訊交易，提供台灣產業發展長照服務時的資料標準化參考依據。</p>
+
+<p>本標準參考美國 eLTSS 長照規範，並繼承自 TW Core IG 台灣核心規範，可提供與醫院相關資訊系統、廠商相關長照系統與長照機構端的相關平台進行實作與界接，促進醫療端到長照端的互通性整合。</p>
+
+<h3 id="詳細資訊-details">詳細資訊 (Details)</h3>
+<p>以下為各應用情境與對應的 Profile：</p>
+
+<ul>
+  <li>Scenario 0 OAuth2 Access Token 存取認證: <code class="language-plaintext highlighter-rouge">無 Profile，請依照大會 OAuth 動態 Token 驗證整合</code></li>
+  <li>Scenario 1 照護管理評估量表(CMS 量表): <code class="language-plaintext highlighter-rouge">LTCBundleCMS</code></li>
+  <li>Scenario 2 長期照顧服務轉介: <code class="language-plaintext highlighter-rouge">LTCBundleReferral</code></li>
+  <li>Scenario 4 長照用藥管理作業: <code class="language-plaintext highlighter-rouge">LTCMedicationAdministration</code></li>
+  <li>Scenario 5 長照生理量測管理作業: <code class="language-plaintext highlighter-rouge">LTCObservationVitalSigns</code></li>
+</ul>
+
+<h3 id="涉及系統-systems-affected">涉及系統 (Systems Affected)</h3>
+
+<p>本規範涉及的系統有：</p>
+<ul>
+  <li>長照個管系統（照護協調端）</li>
+  <li>長照機構資訊系統（長照機構端）</li>
+  <li>長照科技服務提供商</li>
+  <li>長照資料交換中心</li>
+</ul>
+
+<h3 id="規格-specification">規格 (Specification)</h3>
+<h4 id="角色-actors">角色 (Actors)</h4>
+<p>台灣長期照護(LTC)角色整理</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keyword</th>
+      <th>名稱</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LTC_MANAGEMENT</td>
+      <td>LTC Management</td>
+      <td>長照資料維護端</td>
+    </tr>
+    <tr>
+      <td>LTC_CONSUMER</td>
+      <td>LTC Consumer</td>
+      <td>長照資料需求端</td>
+    </tr>
+    <tr>
+      <td>LTC_REPOSITORY</td>
+      <td>LTC Repository</td>
+      <td>長照服務儲存庫</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="交易-transactions">交易 (Transactions)</h4>
+<p>台灣長期照護(LTC)交易整理</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>編號</th>
+      <th>名稱</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MITW-1</td>
+      <td>Patient Management</td>
+      <td>住民基本資料維護</td>
+    </tr>
+    <tr>
+      <td>MITW-2</td>
+      <td>Query/Retrieve Patient</td>
+      <td>查詢與調閱住民基本資料</td>
+    </tr>
+    <tr>
+      <td>MITW-81</td>
+      <td>Create CMS Form</td>
+      <td>產生照護管理評估量表</td>
+    </tr>
+    <tr>
+      <td>MITW-82</td>
+      <td>Query/Retrieve CMS Form</td>
+      <td>查詢與調閱照護管理評估量表</td>
+    </tr>
+    <tr>
+      <td>MITW-83</td>
+      <td>Create Referral Form</td>
+      <td>產生轉介資料</td>
+    </tr>
+    <tr>
+      <td>MITW-84</td>
+      <td>Query/Retrieve Referral Form</td>
+      <td>查詢轉介資料</td>
+    </tr>
+    <tr>
+      <td>MITW-85</td>
+      <td>Create Observation</td>
+      <td>新增檢驗檢查</td>
+    </tr>
+    <tr>
+      <td>MITW-86</td>
+      <td>Query/Retrieve Observation</td>
+      <td>查詢與調閱檢驗檢查</td>
+    </tr>
+    <tr>
+      <td>MITW-87</td>
+      <td>Create MedicationAdministration</td>
+      <td>新增用藥紀錄資料</td>
+    </tr>
+    <tr>
+      <td>MITW-88</td>
+      <td>Query/Retrieve MedicationAdministration</td>
+      <td>查詢與調閱用藥紀錄資料</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://mitw.dicom.org.tw/">MI-TW</a>.  Package fhir.twltc#0.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 16, 2024 23:20+0800">2024-09-16</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

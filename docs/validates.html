@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Validates - 臺灣長期照顧實作指引 (Taiwan Long-Term Care FHIR Implementation Guide) v0.1.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引 (Taiwan Long-Term Care FHIR Implementation Guide)</span>
+            <br/>
+            <span style="display:inline-block;">0.1.1 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">應用說明</a></li>
+  <li><a href="toc.html">目錄</a></li>
+	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<!-- <li>
+				<a href="capabilitystatements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters-and-operation.html">查詢參數及操作定義</a>
+			</li>
+			<li>
+				<a href="models.html">邏輯模型</a>
+			</li> -->
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles及Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+  <!-- <li><a href="examples.html">範例</a></li> -->
+  <li><a href="downloads.html">結構定義與範例檔下載</a></li>
+  <li><a href="security.html">安全性</a></li>
+  <li><a href="validates.html">驗證教學</a></li>
+  <li><a href="connectathon.html">MI-TW 2024 聯測松</a></li>
+</ul>      
+
+<style>
+.dropdown-menu li:hover .sub-menu {visibility: visible;}
+.dropdown:hover .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 992px) {
+  table.colsi {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  table.rwd-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  p, a {
+    word-break: break-all;
+  }
+}
+</style>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Validates</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care FHIR Implementation Guide) - Local Development build (v0.1.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://ltc-ig.fhir.tw/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Validates</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#使用國際-hl7-提供的公開免費驗證器-validator_clijar-檔以命令提示字元測試驗證" id="markdown-toc-使用國際-hl7-提供的公開免費驗證器-validator_clijar-檔以命令提示字元測試驗證">使用國際 HL7 提供的公開免費驗證器 validator_cli.jar 檔，以命令提示字元測試驗證。</a></li>
+</ul>
+
+</div>
+<style>
+body{font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !important;}
+</style>
+
+<p>本頁將說明如何驗證實作檔是否符合TW LTC IG規範。</p>
+
+<h3 id="使用國際-hl7-提供的公開免費驗證器-validator_clijar-檔以命令提示字元測試驗證">使用國際 HL7 提供的公開免費驗證器 validator_cli.jar 檔，以命令提示字元測試驗證。</h3>
+
+<video width="80%" controls="">
+  <source src="validates.mp4" type="video/mp4" />
+  Your browser does not support HTML video.
+</video>
+
+<h4 id="mac-作業系統">Mac 作業系統</h4>
+<div style="padding-left: 10px;"> 
+<p><b>Step 1：下載 validator_cli.jar 檔</b></p> 
+<p>請至 HL7 驗證說明網站下載 jar 檔：<a href="https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator#UsingtheFHIRValidator-Runningthevalidator">Confluence Pages of Health Level 7 (HL7) International</a>。進入 HL7 驗證說明官網後，如下圖所示請尋找「Downloading the Validator」項目，下載 「<a href="https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar">validator_cli.jar</a>」檔。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-1.jpg" alt="Downloading the Validator" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" />
+<div style="clear:both;"></div>
+
+<p><b>Step 2：使用你的病人實例 JSON 檔或者下載範例JSON檔</b></p> 
+<p style="color:red">注意：請確認範例檔之編碼格式為 UTF-8，否則無法驗證。</p>
+<p>以 Patient Profile 的實作為例，如果你的手邊已經有一個依據 TW LTC IG 實作的 JSON 檔，你可以使用你的實例檔案，如果你沒有這樣的檔案，則可以下載如下圖所示的 TW LTC IG的「病人基本資料」範例。如下圖所示，請於 TW LTC IG 網站上，找到範例檔頁面中的「病人基本資料」。</p> 
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-2.jpg" alt="病人基本資料" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" />
+<div style="clear:both;"></div>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-3.jpg" alt="病人基本資料JSON檔" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" /> 
+<div style="clear:both;"></div>
+
+
+<p><b>Step 3：放置 validator_cli.jar 檔與範例檔</b></p> 
+<p>如下圖所示，請創建一個新資料夾，並命名為「TW LTC IG」，將資料夾放於桌面。</p>
+
+<div style="text-align:center"><img class="figure-img img-responsive img-rounded" src="validates/1-1-4.jpg" alt="創建新資料夾" style="display: inline-block;margin-left: auto;margin-right: auto;width: 16%;" />
+<img class="figure-img img-responsive img-rounded" src="validates/1-1-5.jpg" alt="TW LTC IG" style="display: inline-block;margin-left: auto;margin-right: auto;width: 10%;" /></div>
+<div style="clear:both;"></div>
+
+<p>如下圖所示，將 Step 1 下載之 jar 檔，及 Step 2 下載之 JSON 檔，放置於所創之 TW LTC IG 資料夾中。<br />
+<i>這邊只是為了方便驗證時簡化語法及避免太複雜的說明，而將上述兩個檔案放在相同目錄，使用者/實作者可視情況放在不同的目錄或可連線的網址，但後續語法也要自行做相對應的調整。 </i> </p>  
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-6.jpg" alt="放置於TW LTC IG資料夾" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" />
+<div style="clear:both;"></div>
+
+<p><b>Step 4：驗證檔案是否符合 TW LTC IG 網站之 Patient Profiles 格式</b></p>   
+<p>如下圖所示，請於「TW LTC IG 資料夾」按滑鼠右鍵，點選「新增位於檔案夾位置的終端機視窗」。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-7.jpg" alt="新增位於檔案夾位置的終端機視窗" style="display: block;margin-left: auto;margin-right: auto;width: 27%;" />
+<div style="clear:both;"></div>
+
+<div style="padding-left: 15px;"> 
+<p>＊無「新增位於檔案夾位置的終端機視窗」：若於資料夾按滑鼠右鍵後，找不到「新增位於檔案夾位置的終端機視窗」，可開啟系統偏好設定，選擇鍵盤並切換置快速鍵，並於左方選擇服務，並在服務內找到「新增位於檔案夾位置的終端機視窗」且打勾其選項。</p>
+
+<div style="text-align:center"><img class="figure-img img-responsive img-rounded" src="validates/1-1-8.jpg" alt="鍵盤" style="display: inline-block;margin-left: auto;margin-right: auto;width: 40%;" />
+<img class="figure-img img-responsive img-rounded" src="validates/1-1-9.jpg" alt="新增位於檔案夾位置的終端機視窗" style="display: inline-block;margin-left: auto;margin-right: auto;width: 38%;" /></div>
+<div style="clear:both;"></div>
+
+</div>
+
+<p>成功新增檔案位置於終端機時，會如下圖所示，其終端機會指向「TW LTC IG 資料」。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-10.jpg" alt="終端機視窗" style="display: block;margin-left: auto;margin-right: auto;width: 55%;" />
+<div style="clear:both;"></div>
+
+<p>如下圖所示，請於「終端機」輸入 FHIR 提供的驗證程式－<span style="font-weight:bold; color:#ff0000">紅色1</span>『<b><i>java -jar validator_cli.jar</i></b>』、要驗證的Profile實例-<span style="font-weight:bold; color:#0000ff">藍色2</span>『<b><i>Patient-pat-example.json</i></b>』，以及驗證的規格依據-<span style="font-weight:bold; color:#fa8072">橘色3</span> 『<b><i>-version 4.0 -ig fhir.twltc</i></b>』，「Enter鍵入」，即可查看驗證結果。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-11.jpg" alt="java -jar validator_cli.jar Patient-pat-example.json -version 4.0 -ig tw.gov.mohw.twcore" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" />
+<div style="clear:both;"></div>
+<p>若驗證「通過」，如下圖所示，可看到「Success: 0 errors, 0 warnings, 1 notes」。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-12.jpg" alt="通過" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" />
+<div style="clear:both;"></div>
+
+<p>若驗證「不通過」，如下圖所示，可看到「*FAILURE*: 2 errors, 0 warnings, 0 notes」，可看出 Patient 裡的 contact 有錯誤，位置於第 106 行及第 108 行。再依據錯誤訊息修改實例後重新驗證，直到驗證成功為止，即表示實例符合 Profile 定義。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-13.jpg" alt="不通過" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" />
+<div style="clear:both;"></div>
+</div>
+
+<h4 id="windows作業系統">Windows作業系統</h4>
+
+<div style="padding-left: 10px;"> 
+<p><b>Step 1：下載validator_cli.jar檔</b></p> 
+<p>請至HL7驗證說明網站下載jar檔：<a href="https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator#UsingtheFHIRValidator-Runningthevalidator">Confluence Pages of Health Level 7 (HL7) International</a>。進入HL7驗證說明官網後，如下圖所示請尋找「Downloading the Validator」項目，下載「<a href="https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar">validator_cli.jar</a>」檔。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-1.jpg" alt="Downloading the Validator" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" />
+<div style="clear:both;"></div>
+
+<p><b>Step 2：使用你的病人實例JSON檔或者下載範例JSON檔</b></p> 
+<p>以Patient Profile的實作為例，如果你的手邊已經有一個依據TW LTC IG實作的JSON檔，你可以使用你的實例檔案，如果你沒有這樣的檔案，則可以下載如下圖所示的TW LTC IG的「病人基本資料」範例。如下圖所示，請於TW LTC IG網站上，找到範例檔頁面中的「病人基本資料」。</p> 
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-2.jpg" alt="病人基本資料" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" />
+<div style="clear:both;"></div>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-3.jpg" alt="病人基本資料JSON檔" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" /> 
+<div style="clear:both;"></div>
+
+<p><b>Step 3：放置validator_cli.jar檔與範例檔</b></p>   
+<p>如下圖所示，請創建一個新資料夾，並命名為「TW LTC IG」，將資料夾放於Ｃ槽。</p>
+<div style="text-align:center"><img class="figure-img img-responsive img-rounded" src="validates/1-2-4.jpg" alt="新資料夾" style="display: inline-block;margin-left: auto;margin-right: auto;width: 30%;" />
+<img class="figure-img img-responsive img-rounded" src="validates/1-2-5.jpg" alt="TW LTC IG" style="display: inline-block;margin-left: auto;margin-right: auto;width: 11%;" /></div>
+<div style="clear:both;"></div>
+
+<p>如下圖所示，將Step 1下載之jar檔，及Step 2下載之JSON檔，放置於所創之TW LTC IG 資料夾中。<br />
+<i>這邊只是為了方便驗證時簡化語法及避免太複雜的說明，而將上述兩個檔案放在相同目錄，使用者/實作者可視情況放在不同的目錄或可連線的網址，但後續語法也要自行做相對應的調整。</i></p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-2-6.jpg" alt="TW LTC IG 資料夾" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" />
+<div style="clear:both;"></div>
+
+<p><b>Step 4：驗證檔案是否符合TW LTC IG網站之Patient Profiles格式</b></p>
+<p>如下圖所示，請使用「Windoes鍵 + R鍵」 開啟「執行」對話框，輸入『<b><i>cmd</i></b>』，開啟「命令列提示字元」。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-2-7.jpg" alt="命令列提示字元" style="display: block;margin-left: auto;margin-right: auto;width: 40%;" />
+<div style="clear:both;"></div>
+
+如下圖所示，請輸入 『<b><i>cd＋ [TW LTC IG 資料夾存放位址]</i></b>』。
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-2-8.jpg" alt="cd TW LTC IG" style="display: block;margin-left: auto;margin-right: auto;width: 40%;" />
+<div style="clear:both;"></div>
+
+如下圖所示，可看到命令列環境指向TW LTC IG資料夾。
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-2-9.jpg" alt="命令列環境" style="display: block;margin-left: auto;margin-right: auto;width: 40%;" />
+<div style="clear:both;"></div>
+
+<p>如下圖所示，請於指向TW LTC IG資料夾命令列環境，輸入FHIR提供的驗證程式－<span style="font-weight:bold; color:#ff0000">紅色1</span>『 <b><i>java -jar validator_cli.jar</i></b>』 、所要驗證之Profile-<span style="font-weight:bold; color:#0000ff">藍色2</span>『<b><i>Patient-pat-example.json</i></b>』，以及所要驗證之依據-<span style="font-weight:bold; color:#fa8072">橘色3</span>  『<b><i>-version 4.0 -ig fhir.twltc</i></b>』，「Enter鍵入」。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-2-10.jpg" alt="命令列語法" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" />
+<div style="clear:both;"></div>
+
+<p>如下圖若驗證「通過」，可看到「Success: 0 errors, 0 warnings, 1 notes」。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-2-11.jpg" alt="通過" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" />
+<div style="clear:both;"></div>
+
+<p>若驗證「不通過」，如下圖所示，可看到「*FAILURE*: 2 errors, 0 warnings, 0 notes」，可看出Patient裡的contact有錯誤，位置於第106行及第108行。再依據錯誤訊息修改實例後重新驗證，直到驗證成功為止，即表示實例符合Profile定義。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-2-12.jpg" alt="不通過" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" />
+<div style="clear:both;"></div>
+</div>
+
+<h4 id="補充說明-本機端驗證">補充說明-本機端驗證</h4>
+
+<div style="padding-left: 10px;"> 
+<p><b>手動下載IG Package</b></p>
+<p>可於<a href="downloads.html">結構定義與範例檔下載頁</a>下載整個IG的<a href="package.tgz">Package</a>。Package Cache檔案路徑如下：</p>
+<li>Windows：c:\users\&lt;username&gt;\.fhir\packages</li>
+<li>Unix/Linux：/~/.fhir/packages</li>
+<p>可試跑語法確認Package Cache路徑與所設定路徑一致。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-2-130.jpg" alt="package" style="display: block;margin-left: auto;margin-right: auto;width: 75%;" />
+<div style="clear:both;"></div>
+<p>在.fhir\packages路徑下創建一個資料夾並命名為<code>tw.gov.mohw.twcore#0.1.1</code>，將package.tgz解壓縮的package資料夾放置於此。（此處以0.1.1版為例，請根據實際所需的版本更改內容）</p>
+<p>本機端驗證可減省validator程式抓取IG Package number資訊的時間，兩種方式皆可驗證，使用者可自行選擇。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-2-13.jpg" alt="package" style="display: block;margin-left: auto;margin-right: auto;width: 55%;" />
+<div style="clear:both;"></div>
+</div>
+
+<!-- 
+
+### 驗證方法(二)：透過帶有驗證功能的FHIR Server(以http://hapi.fhir.org/baseR4為例)，於網址列提供profile連結，以「Postman」測試驗證。
+<div style="padding-left: 10px;"> 
+<p><b>Step 1：安裝Postman(<a href="https://www.postman.com/downloads/">Download Postman | Get Started for Free</a>)後執行POST</b></p>
+<p>如下圖所示，開啟「Postman」，請找到Workspaces，點選進入。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/2-1.jpg" alt="Workspaces" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+<p>進入Workspaces後，如下圖所示，請找到「+」號，新增一個Request。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/2-2.jpg" alt="新增一個Request" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+<p>如下圖所示，請將Request改為「POST」。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/2-3.jpg" alt="POST" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+
+<p><b>Step 2：輸入驗證語法</b></p>
+<p>以臺灣核心-病人(TW LTC Patient)為例，如下圖所示，點選「FHIR Profiles及Extensions」中的「<a href="StructureDefinition-Patient-twcore.html">臺灣核心-病人(TW LTC Patient)</a>」。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/2-4.jpg" alt="TW LTC Patient" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+<p>請於「臺灣核心-病人(TW LTC Patient)」Profiles中，尋找official URL，此即為Profiles的Defining URL。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/2-5.jpg" alt="Defining URL" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+<p>＊驗證語法：<code>[FHIR Server base]</code>/<code>[所要驗之resource type]</code>/$validate?profile=<code>[所要驗之profile的Defining URL]</code></p>
+<p>輸入驗證語法：<br/>
+<code>[FHIR Server base]</code> ＝ https://hapi.fhir.org/baseR4<br/>
+<code>[所要驗之resource type]</code> ＝ Patient<br/>
+<code>[所要驗之profile的Defining URL]</code> ＝https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore</p>
+<p>如下圖所示，請於Postman中的「Enter request URL」，輸入要驗證之語法：『<b><i>https://hapi.fhir.org/baseR4/Patient/$validate?profile=https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore</i></b>』</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/2-5-1.jpg" alt="驗證之語法" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+
+<p><b>Step 3：輸入所要驗證之JSON檔案</b></p>
+<p>如果你的手邊已經有一個依據臺灣核心-病人(TW LTC Patient) Profile實作的JSON檔，你可以使用你的實例檔案，如果你沒有這樣的檔案，則可以下載如下圖所示的TW LTC IG的「病人基本資料」範例。如下圖所示，請於TW LTC IG網站上，找到範例檔頁面中的「<a href="Patient-pat-example.json">病人基本資料</a>」。</p> 
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-2.jpg" alt="病人基本資料" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-3.jpg" alt="病人基本資料JSON檔" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/> 
+<div style="clear:both;"></div>
+<p>如下圖所示，請於Postman中選擇body，並選擇raw，將實作之JSON檔複製於body中。</p> 
+<img class="figure-img img-responsive img-rounded center-block" src="validates/2-7.jpg" alt="body" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/> 
+<div style="clear:both;"></div>
+<p>若驗證「通過」，如下圖所示，可看到「issue」中顯示「No issue detected during validation」。</p> 
+<img class="figure-img img-responsive img-rounded center-block" src="validates/2-8.jpg" alt="通過" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/> 
+<div style="clear:both;"></div>
+<p>若驗證「不通過」，如下圖所示可看到「issue」中顯示錯誤之問題，可看出Patient裡的gender中有錯誤。再依據錯誤訊息修改實例後重新驗證，直到驗證成功為止，即表示實例符合Profile定義。</p> 
+<img class="figure-img img-responsive img-rounded center-block" src="validates/2-9.jpg" alt="不通過" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/> 
+<div style="clear:both;"></div>
+</div>
+
+### 驗證方法(三)：透過帶有驗證功能的FHIR Server(以http://hapi.fhir.org/baseR4為例)，於meta提供profile連結，以「Postman」測試驗證。
+<div style="padding-left: 10px;"> 
+<p><b>Step 1：安裝Postman(<a href="https://www.postman.com/downloads/">Download Postman | Get Started for Free</a>)後執行POST</b></p>
+<p>如下圖所示，開啟「Postman」，請找到Workspaces，點選進入。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/2-1.jpg" alt="Workspaces" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+<p>進入Workspaces後，如下圖所示，請找到「+」號，新增一個Request。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/2-2.jpg" alt="新增一個Request" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+<p>如下圖所示，請將Request改為「POST」。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/2-3.jpg" alt="POST" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+
+<p><b>Step 2：輸入驗證語法</b></p>
+<p>以臺灣核心-病人(TW LTC Patient)為例，如下圖所示，點選「FHIR Profiles及Extensions」中的「<a href="StructureDefinition-Patient-twcore.html">臺灣核心-病人(TW LTC Patient)</a>」。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/2-4.jpg" alt="TW LTC Patient" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+<p>請於「臺灣核心-病人(TW LTC Patient)」Profiles中，尋找official URL，此即為Profiles的Defining URL。</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/2-5.jpg" alt="Defining URL" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+<p>＊驗證語法：<code>[FHIR Server base]</code>/<code>[所要驗之resource type]</code></p>
+<p>輸入驗證語法：<br/>
+<code>[FHIR Server base]</code> ＝ https://hapi.fhir.org/baseR4<br/>
+<code>[所要驗之resource type]</code> ＝ Patient</p>
+<p>如下圖所示，請於Postman中的「Enter request URL」，輸入要驗證之語法：『<b><i>https://hapi.fhir.org/baseR4/Patient</i></b>』</p>
+<img class="figure-img img-responsive img-rounded center-block" src="validates/3-6.jpg" alt="驗證之語法" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+
+<p><b>Step 3：輸入所要驗證之JSON檔案</b></p>
+<p>如果你的手邊已經有一個依據臺灣核心-病人(TW LTC Patient) Profile實作的JSON檔，你可以使用你的實例檔案，如果你沒有這樣的檔案，則可以下載如下圖所示的TW LTC IG的「病人基本資料」範例。如下圖所示，請於TW LTC IG網站上，找到範例檔頁面中的「<a href="Patient-pat-example.json">病人基本資料</a>」。</p> 
+<img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-2.jpg" alt="病人基本資料" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+<p>請確保要驗證之JSON檔中包含meta.profile，並指向要驗證之Profile的Defining URL。</p> 
+<img class="figure-img img-responsive img-rounded center-block" src="validates/3-8.jpg" alt="Defining URL" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+<p>如下圖所示，請於Postman中選擇body，並選擇raw，將實作之JSON檔複製於body中。</p> 
+<img class="figure-img img-responsive img-rounded center-block" src="validates/3-9.jpg" alt="body" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+<p>若驗證「通過」，如下圖所示，代表實例成功存進FHIR Server中，可透過回傳的邏輯性ID存取實例。</p> 
+<img class="figure-img img-responsive img-rounded center-block" src="validates/3-10.jpg" alt="通過" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+<p>若驗證「不通過」，如下圖所示可看到「issue」中顯示錯誤之問題，可看出Patient裡的gender中有錯誤。再依據錯誤訊息修改實例後重新驗證，直到驗證成功為止，即表示實例符合Profile定義。</p> 
+<img class="figure-img img-responsive img-rounded center-block" src="validates/3-11.jpg" alt="不通過" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
+<div style="clear:both;"></div>
+</div>
+-->
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://mitw.dicom.org.tw/">MI-TW</a>.  Package fhir.twltc#0.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 16, 2024 23:20+0800">2024-09-16</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
