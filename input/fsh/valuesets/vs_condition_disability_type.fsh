@@ -9,5 +9,5 @@ Description: "個案身心障礙類型"
 * ^experimental = false
 * ^date = "2024-08-25"
 
-* include codes from system http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityTypeaCS-TWLTC
+* include codes from system http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityTypeCS-TWLTC
 * include codes from system http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityLegacyTypeCS-TWLTC
