@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/ValueSet/ConditionSeverityVS-TWLTC> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ConditionSeverityVS-TWLTC"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ConditionSeverityVS-TWLTC</b></p><a name=\"ConditionSeverityVS-TWLTC\"> </a><a name=\"hcConditionSeverityVS-TWLTC\"> </a><a name=\"ConditionSeverityVS-TWLTC-en-US\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"http://hl7.org/fhir/R4/valueset-condition-severity.html\">Condition/Diagnosis Severity</a></li><li>Include these codes as defined in <code>http://snomed.info/sct/901000000000207008/version/20240901</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>444821000124100</td><td/></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://ltc-ig.fhir.tw/ValueSet/ConditionSeverityVS-TWLTC"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.1"] ; # 
+  fhir:name [ fhir:v "ConditionSeverityVSTWLTC"] ; # 
+  fhir:title [ fhir:v "疾病嚴重度擴展值集"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-08-25"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "MI-TW"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MI-TW" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://mitw.dicom.org.tw/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "用以表述疾病嚴重度之擴展值集，包含疾病嚴重度之描述內容。配合身心障礙手冊障礙程度分級，包含輕度、中度、重度、極重度等代碼。"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:valueSet ( [
+         fhir:v "http://hl7.org/fhir/ValueSet/condition-severity"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/ValueSet/condition-severity>
+       ] )
+     ] [
+       fhir:system [ fhir:v "http://snomed.info/sct/901000000000207008/version/20240901"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "444821000124100" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

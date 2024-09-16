@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="RelationshipTypeVS-TWLTC"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet RelationshipTypeVS-TWLTC</b></p><a name="RelationshipTypeVS-TWLTC"> </a><a name="hcRelationshipTypeVS-TWLTC"> </a><a name="RelationshipTypeVS-TWLTC-en-US"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href="http://terminology.hl7.org/5.0.0/CodeSystem-v2-0131.html"><code>http://terminology.hl7.org/CodeSystem/v2-0131</code></a></li><li>Include codes from<a href="http://terminology.hl7.org/5.5.0/CodeSystem-v3-RoleCode.html"><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></a> where concept  is-a <a href="http://terminology.hl7.org/5.5.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-_PersonalRelationshipRoleType">_PersonalRelationshipRoleType</a></li><li>Include all codes defined in <a href="CodeSystem-RelationshipTypeCS-TWLTC.html"><code>http://ltc-ig.fhir.tw/CodeSystem/RelationshipTypeCS-TWLTC</code></a></li></ul></div>
+  </text>
+  <url value="http://ltc-ig.fhir.tw/ValueSet/RelationshipTypeVS-TWLTC"/>
+  <version value="0.1.1"/>
+  <name value="RelationshipTypeVSTWLTC"/>
+  <title value="關係類型擴展值集"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-09-02"/>
+  <publisher value="MI-TW"/>
+  <contact>
+    <name value="MI-TW"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://mitw.dicom.org.tw/"/>
+    </telecom>
+  </contact>
+  <description value="關係人與個案的關係類型擴展代碼值集，新增孫媳婦、孫女婿、聘用看護-本國籍、聘用看護-外國籍等代碼"/>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
+    </include>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="_PersonalRelationshipRoleType"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://ltc-ig.fhir.tw/CodeSystem/RelationshipTypeCS-TWLTC"/>
+    </include>
+  </compose>
+</ValueSet>

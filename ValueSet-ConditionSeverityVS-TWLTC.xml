@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="ConditionSeverityVS-TWLTC"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet ConditionSeverityVS-TWLTC</b></p><a name="ConditionSeverityVS-TWLTC"> </a><a name="hcConditionSeverityVS-TWLTC"> </a><a name="ConditionSeverityVS-TWLTC-en-US"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href="http://hl7.org/fhir/R4/valueset-condition-severity.html">Condition/Diagnosis Severity</a></li><li>Include these codes as defined in <code>http://snomed.info/sct/901000000000207008/version/20240901</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>444821000124100</td><td/></tr></table></li></ul></div>
+  </text>
+  <url value="http://ltc-ig.fhir.tw/ValueSet/ConditionSeverityVS-TWLTC"/>
+  <version value="0.1.1"/>
+  <name value="ConditionSeverityVSTWLTC"/>
+  <title value="疾病嚴重度擴展值集"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-08-25"/>
+  <publisher value="MI-TW"/>
+  <contact>
+    <name value="MI-TW"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://mitw.dicom.org.tw/"/>
+    </telecom>
+  </contact>
+  <description value="用以表述疾病嚴重度之擴展值集，包含疾病嚴重度之描述內容。配合身心障礙手冊障礙程度分級，包含輕度、中度、重度、極重度等代碼。"/>
+  <compose>
+    <include>
+      <valueSet value="http://hl7.org/fhir/ValueSet/condition-severity"/>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct/901000000000207008/version/20240901"/>
+      <concept>
+        <code value="444821000124100"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>
