@@ -1,9 +1,9 @@
 CodeSystem: ConditionDisabilityTypeCSTWLTC
-Id: ConditionDisabilityTypeCSTWLTC
+Id: ConditionDisabilityTypeCS-TWLTC
 Title: "個案身心障礙類型代碼（新制）"
 Description: "用於表述個案的身心障礙類型代碼（新制）。"
 
-* ^url = "http://ltc-ig.fhir.tw/Codesystem/ConditionDisabilityTypeaCS-TWLTC"
+//* ^url = "http://ltc-ig.fhir.tw/Codesystem-ConditionDisabilityTypeaCS-TWLTC"
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-09-02"

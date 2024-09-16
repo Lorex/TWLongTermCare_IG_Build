@@ -1,12 +1,12 @@
 ValueSet: ReferralConditionCaregiverVSTWLTC
-Id: ReferralConditionCaregiverVSTWLTC
+Id: ReferralConditionCaregiverVS-TWLTC
 Title: "看護狀況值集"
 Description: "個案雇用看護的狀況"
 
-* ^url = "http://ltc-ig.fhir.tw/ValueSet/ReferralConditionCaregiverVS-TWLTC"
+//* ^url = "http://ltc-ig.fhir.tw/ValueSet-ReferralConditionCaregiverVS-TWLTC"
 * ^version = "2024-08-25"
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-08-25"
 
-* include codes from system http://ltc-ig.fhir.tw/Codesystem/ReferralConditionCaregiverCS-TWLTC
+* include codes from system http://ltc-ig.fhir.tw/Codesystem-ReferralConditionCaregiverCS-TWLTC

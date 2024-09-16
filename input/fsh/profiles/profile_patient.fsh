@@ -1,6 +1,6 @@
 Alias: $TWCorePatient = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore
-Alias: $AddressUseVSTWLTC = http://ltc-ig.fhir.tw/ValueSet/AddressUseVS-TWLTC
-Alias: $EconomyStatusExt = http://ltc-ig.fhir.tw/StructureDefinition/EconomyStatusExt-TWLTC
+Alias: $AddressUseVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet-AddressUseVS-TWLTC
+Alias: $EconomyStatusExt = http://ltc-ig.fhir.tw/StructureDefinition-ExtensionPatientEconomyStatus-TWLTC
 
 Profile: LTCPatient
 Title: "TW Long Term Care Patient"
@@ -39,7 +39,7 @@ Description: "長照機構住民基本資料，用以表述長照機構住民的
 * address[residential].text 1..1 MS
 * address[residential].text ^short = "住民的戶籍地址。[應輸入完整地址]"
 * address.use ^short = "住民地址的用途"
-* address.use from $AddressUseVSTWLTC
+* address.use from $AddressUseVS-TWLTC
 * contact 1..* MS
 * contact ^short = "住民的緊急聯絡人"
 * contact.relationship 1..1 MS

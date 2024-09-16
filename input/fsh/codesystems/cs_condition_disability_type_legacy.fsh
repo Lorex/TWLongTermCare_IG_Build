@@ -1,9 +1,9 @@
 CodeSystem: ConditionDisabilityLegacyTypeCSTWLTC
-Id: ConditionDisabilityLegacyTypeCSTWLTC
+Id: ConditionDisabilityLegacyTypeCS-TWLTC
 Title: "個案身心障礙類型代碼（舊制）"
 Description: "用於表述個案的身心障礙類型代碼（舊制）。"
 
-* ^url = "http://ltc-ig.fhir.tw/Codesystem/ConditionDisabilityLegacyTypeCS-TWLTC"
+//* ^url = "http://ltc-ig.fhir.tw/Codesystem-ConditionDisabilityLegacyTypeCS-TWLTC"
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-09-02"

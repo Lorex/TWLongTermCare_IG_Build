@@ -1,6 +1,6 @@
 Alias:  $TWCorePatient = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore
-Alias: $AddressUseVSTWLTC = http://ltc-ig.fhir.tw/ValueSet/AddressUseVS-TWLTC
-Alias: $EconomyStatusExt = http://ltc-ig.fhir.tw/StructureDefinition/EconomyStatusExt-TWLTC
+Alias: $AddressUseVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet-AddressUseVS-TWLTC
+Alias: $EconomyStatusExt = http://ltc-ig.fhir.tw/StructureDefinition-ExtensionPatientEconomyStatus-TWLTC
 
 Profile: LTCPatientReferral
 Title: "TW Long Term Care Patient for Referral Form"

@@ -1,5 +1,5 @@
-Alias: $EducationStatusExt = http://ltc-ig.fhir.tw/StructureDefinition/EducationStatusExt-TWLTC
-Alias: $PatientIdentityExt = http://ltc-ig.fhir.tw/StructureDefinition/PatientIdentityExt-TWLTC
+Alias: $EducationStatusExt = http://ltc-ig.fhir.tw/StructureDefinition-ExtensionPatientEducationStatus-TWLTC
+Alias: $PatientIdentityExt = http://ltc-ig.fhir.tw/StructureDefinition-ExtensionPatientIdentity-TWLTC
 
 Profile: LTCPatientCMS
 Title: "TW Long Term Care Patient for CMS Form"
