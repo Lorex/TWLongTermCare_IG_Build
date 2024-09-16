@@ -1,6 +1,6 @@
 Alias: $RelatedPerson = http://hl7.org/fhir/StructureDefinition/RelatedPerson
-Alias: $RelationshipTypeVSTWLTC = http://ltc-ig.fhir.tw/ValueSet/RelationshipTypeVS-TWLTC
-Alias: $ExtensionRelatedPersonIsPrimary = http://ltc-ig.fhir.tw/StructureDefinition/RelatedPersonIsPrimaryExt-TWLTC
+Alias: $RelationshipTypeVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet-RelationshipTypeVS-TWLTC
+Alias: $ExtensionRelatedPersonIsPrimary = http://ltc-ig.fhir.tw/StructureDefinition-ExtensionRelatedPersonIsPrimary-TWLTC
 
 Profile: LTCRelatedPerson
 Parent: $RelatedPerson
@@ -17,7 +17,7 @@ Description: "住民的關係人，包含家屬、照顧者、法定代理人等
 * patient.reference ^short = "關聯的住民。[應輸入 Patient Resource ID]"
 * relationship 1..1 MS
 * relationship ^short = "關係人與住民的關係"
-* relationship from $RelationshipTypeVSTWLTC
+* relationship from $RelationshipTypeVS-TWLTC
 * name 1..1 MS
 * name ^short = "關係人姓名"
 * name.text 1..1 MS

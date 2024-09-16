@@ -1,5 +1,5 @@
 CodeSystem: PatientIdentityCSTWLTC
-Id: PatientIdentityCSTWLTC
+Id: PatientIdentityCS-TWLTC
 Title: "個案身分別代碼"
 Description: "個案身分別代碼"
 

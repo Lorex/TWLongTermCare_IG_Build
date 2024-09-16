@@ -1,10 +1,10 @@
-Extension: ExtensionRelatedPersonIsPrimary
-Id: ExtensionRelatedPersonIsPrimary
+Extension:  ExtensionRelatedPersonIsPrimaryTWLTC
+Id: ExtensionRelatedPersonIsPrimary-TWLTC
 Title: "是否為主要照顧者"
 Description: "此 Extension 用以表述關係人是否為主要照顧者。"
 Context: RelatedPerson
 
-* ^url = "http://ltc-ig.fhir.tw/StructureDefinition/RelatedPersonIsPrimaryExt-TWLTC"
+//* ^url = "http://ltc-ig.fhir.tw/StructureDefinition-ExtensionRelatedPersonIsPrimary-TWLTC"
 * ^version = "2024-09-02"
 * ^status = #active
 * ^context.type = #element

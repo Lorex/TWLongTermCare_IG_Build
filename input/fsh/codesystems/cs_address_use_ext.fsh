@@ -1,9 +1,9 @@
 CodeSystem: AddressUseCSTWLTC
-Id: AddressUseVSTWLTC
+Id: AddressUseCS-TWLTC
 Title: "地址用途擴展識別碼"
 Description: "地址用途的擴展識別碼，新增戶籍地與現居地等代碼"
 
-* ^url = "http://ltc-ig.fhir.tw/Codesystem/AddressUseCS-TWLTC"
+//* ^url = "http://ltc-ig.fhir.tw/Codesystem-AddressUseCS-TWLTC"
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-08-22"

@@ -1,9 +1,9 @@
 CodeSystem: ConditionDisabilityCSTWLTC
-Id: ConditionDisabilityCSTWLTC
+Id: ConditionDisabilityCS-TWLTC
 Title: "個案身心障礙手冊持有狀態代碼"
 Description: "用於表述個案的身心障礙手冊持有狀態代碼。"
 
-* ^url = "http://ltc-ig.fhir.tw/Codesystem/ConditionDisabilityCS-TWLTC"
+//* ^url = "http://ltc-ig.fhir.tw/Codesystem-ConditionDisabilityCS-TWLTC"
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-08-25"
