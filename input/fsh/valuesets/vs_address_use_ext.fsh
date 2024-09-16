@@ -9,5 +9,5 @@ Description: "地址的用途，新增戶籍地與現居地等代碼"
 * ^experimental = false
 * ^date = "2024-08-22"
 
-* include codes from system http://hl7.org/fhir/address-use
+// * include codes from system http://hl7.org/fhir/address-use
 * include codes from system http://ltc-ig.fhir.tw/CodeSystem/AddressUseCS-TWLTC
