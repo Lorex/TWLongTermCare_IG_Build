@@ -3,7 +3,7 @@ Alias: $TWCoreObsercationVitalSigns = https://twcore.mohw.gov.tw/ig/twcore/Struc
 Profile: LTCObservationVitalSigns
 Parent: $TWCoreObsercationVitalSigns
 Id: LTCObservationVitalSigns
-Title: "TW Long Term Care Observation Vital Signs"
+Title: "TWLTC Observation Vital Signs"
 Description: "長照機構住民的生命徵象資料"
 
 * code ^short = "量測的生命徵象項目"

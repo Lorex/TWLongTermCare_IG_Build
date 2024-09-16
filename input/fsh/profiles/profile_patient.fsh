@@ -1,19 +1,26 @@
 Alias: $TWCorePatient = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore
 Alias: $AddressUseVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet/AddressUseVS-TWLTC
-Alias: $EconomyStatusExt = http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEconomyStatus-TWLTC
 
 Profile: LTCPatient
-Title: "TW Long Term Care Patient"
+Title: "TWLTC Patient"
 Parent: $TWCorePatient
 Description: "長照機構住民基本資料，用以表述長照機構住民的基本資料。"
 * identifier 1..4 MS
 * identifier.value 1..1 MS
 * identifier.value ^short = "住民唯一識別碼。[應擇一填入身分證字號／護照號碼／居留證號碼／長照機構住民代號]"
-* name 1..* MS
-* name ^short = "住民姓名"
-* name.text 1..1 MS
-* name.text ^short = "住民的全名"
-* name.text ^definition = "住民的完整姓名，包括姓氏和名字。"
+* name 1..2 MS
+* name[official].use MS
+* name[official].use = #official
+* name[official] ^short = "住民英文姓名"
+* name[official].text 1..1 MS
+* name[official].text ^short = "住民的英文全名"
+* name[official].text ^definition = "住民的完整姓名，包括姓氏和名字。"
+* name[usual].use MS
+* name[usual].use = #usual
+* name[usual] ^short = "住民中文姓名"
+* name[usual].text 1..1 MS
+* name[usual].text ^short = "住民的中文全名"
+* name[usual].text ^definition = "住民的完整姓名，包括姓氏和名字。"
 * telecom 1..* MS
 * telecom ^short = "住民聯絡方式"
 * telecom.value 1..1 MS

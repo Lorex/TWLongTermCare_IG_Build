@@ -4,7 +4,7 @@ Alias: $ReferralConditionResidenceVS = http://ltc-ig.fhir.tw/ValueSet/ReferralCo
 Profile: LTCConditionResidence
 Parent: $TWCoreCondition
 Id: LTCConditionResidence
-Title: "TW Long Term Care Condition Residence"
+Title: "TWLTC Condition Residence"
 Description: "長照機構住民的居住狀況資料"
 
 * code 1..1 MS

@@ -3,7 +3,7 @@ Alias: $Goal = http://hl7.org/fhir/StructureDefinition/Goal
 Profile: LTCGoal
 Parent: $Goal
 Id: LTCGoal
-Title: "TW Long Term Care Goal"
+Title: "TWLTC Goal"
 Description: "照顧目標，用以表述長期照顧情境中涉及之照顧目標內容。"
 
 * lifecycleStatus 1..1 MS

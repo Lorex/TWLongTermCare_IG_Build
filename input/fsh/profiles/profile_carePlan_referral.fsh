@@ -10,7 +10,7 @@ Alias: $ReferralCarePlanVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet/ReferralCarePl
 Profile: LTCCarePlanReferral
 Parent: LTCCarePlan
 Id: LTCCarePlanReferral
-Title: "TW Long Term Care CarePlan Referral"
+Title: "TWLTC CarePlan Referral"
 Description: "轉診單中欲申請之服務種類。"
 
 

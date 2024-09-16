@@ -3,7 +3,7 @@ Alias: $QuestionnaireResponse = http://hl7.org/fhir/StructureDefinition/Question
 Profile: LTCQuestionnaireResponse
 Parent: $QuestionnaireResponse
 Id: LTCQuestionnaireResponse
-Title: "TW Long Term Care QuestionnaireResponse"
+Title: "TWLTC QuestionnaireResponse"
 Description: "問卷回覆，用以表述長期照顧情境中涉及之問卷或量表回覆內容。"
 
 * questionnaire 0..1 MS

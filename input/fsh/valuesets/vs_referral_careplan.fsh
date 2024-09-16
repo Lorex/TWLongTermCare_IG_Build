@@ -1,5 +1,5 @@
 ValueSet: ReferralCarePlanVSTWLTC
-Id: ReferralnCarePlanVS-TWLTC
+Id: ReferralCarePlanVS-TWLTC
 Title: "轉介單申請服務種類值集"
 Description: "轉介單申請服務種類的值集"
 

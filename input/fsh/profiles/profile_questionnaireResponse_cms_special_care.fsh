@@ -1,7 +1,7 @@
 Profile: LTCQuestionnaireResponseCMSSpecialCare
 Parent: LTCQuestionnaireResponse
 Id: LTCQuestionnaireResponseCMSSpecialCare
-Title: "TW Long Term Care QuestionnaireResponse CMS Special Care"
+Title: "TWLTC QuestionnaireResponse CMS Special Care"
 Description: "照顧管理評估量表－個案特殊照護問卷回覆"
 
 * item 19..30 MS

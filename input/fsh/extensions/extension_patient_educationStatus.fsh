@@ -1,7 +1,7 @@
 Alias: $EducationStatusVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet/EducationStatusVS-TWLTC
 
-Extension:  ExtensionPatientEducationStatusTWLTC
-Id: ExtensionPatientEducationStatus-TWLTC
+Extension:  ExtPatientEducationStatusTWLTC
+Id: ExtPatientEducationStatus-TWLTC
 Title: "長照機構住民教育程度"
 Description: "此 Extension 用以表述長照機構住民的教育程度。"
 Context: Patient

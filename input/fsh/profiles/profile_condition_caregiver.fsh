@@ -4,7 +4,7 @@ Alias: $ReferralConditionCaregiverVS = http://ltc-ig.fhir.tw/ValueSet/ReferralCo
 Profile: LTCConditionCaregiver
 Parent: $TWCoreCondition
 Id: LTCConditionCaregiver
-Title: "TW Long Term Care Condition Caregiver"
+Title: "TWLTC Condition Caregiver"
 Description: "長照機構住民的看護狀況資料"
 
 * code 1..1 MS

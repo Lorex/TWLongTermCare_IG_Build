@@ -3,6 +3,7 @@ Alias:   $ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
 Alias:   $IdType = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   $ObsStatus = http://hl7.org/fhir/observation-status
 Alias:   $SNOMEDCT = http://snomed.info/sct
+Alias:   $SNOMEDCT20240901 = http://snomed.info/sct/901000000000207008/version/20240901
 
 // TW Core Profiles
 Alias: $TWCoreBundle = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Bundle-twcore

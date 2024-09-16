@@ -4,9 +4,9 @@ Alias: $EconomyStatusExt = http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientE
 Alias: $EconomyStatusVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet/EconomyStatusVS-TWLTC
 
 Profile: LTCPatientReferral
-Title: "TW Long Term Care Patient for Referral Form"
+Title: "TWLTC Patient for Referral Form"
 Parent: LTCPatient
-Description: "適用於長期照護管理中心個案服務初篩表/轉介單的長照機構住民基本資料，本 Profile 繼承自 TW Long Term Care Patient，並增加轉介單所需的欄位。"
+Description: "適用於長期照護管理中心個案服務初篩表/轉介單的長照機構住民基本資料，本 Profile 繼承自 TWLTC Patient，並增加轉介單所需的欄位。"
 * extension contains $EconomyStatusExt named economyStatus 1..1 MS
 * extension[economyStatus] ^short = "住民的經濟狀況"
 * extension[economyStatus].valueCodeableConcept 1..1 MS

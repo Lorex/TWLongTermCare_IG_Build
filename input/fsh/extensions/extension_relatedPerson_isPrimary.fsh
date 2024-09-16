@@ -1,5 +1,5 @@
-Extension:  ExtensionRelatedPersonIsPrimaryTWLTC
-Id: ExtensionRelatedPersonIsPrimary-TWLTC
+Extension:  ExtRelatedPersonIsPrimaryTWLTC
+Id: ExtRelatedPersonIsPrimary-TWLTC
 Title: "是否為主要照顧者"
 Description: "此 Extension 用以表述關係人是否為主要照顧者。"
 Context: RelatedPerson

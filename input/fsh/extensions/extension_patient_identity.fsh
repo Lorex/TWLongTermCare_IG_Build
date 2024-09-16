@@ -1,7 +1,7 @@
 Alias: $PatientIdentityVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet/PatientIdentityVS-TWLTC
 
-Extension:  ExtensionPatientIdentityTWLTC
-Id: ExtensionPatientIdentity-TWLTC
+Extension:  ExtPatientIdentityTWLTC
+Id: ExtPatientIdentity-TWLTC
 Title: "個案身分別"
 Description: "此 Extension 用以表述個案的身分別。"
 Context: Patient

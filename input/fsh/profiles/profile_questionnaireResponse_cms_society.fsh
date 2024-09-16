@@ -1,7 +1,7 @@
 Profile: LTCQuestionnaireResponseCMSSociety
 Parent: LTCQuestionnaireResponse
 Id: LTCQuestionnaireResponseCMSSociety
-Title: "TW Long Term Care QuestionnaireResponse CMS Society"
+Title: "TWLTC QuestionnaireResponse CMS Society"
 Description: "照顧管理評估量表－居家環境與社會參與"
 
 * item 4..11 MS

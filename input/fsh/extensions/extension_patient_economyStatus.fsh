@@ -1,7 +1,7 @@
 Alias: $EconomyStatusVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet/EconomyStatusVS-TWLTC
 
-Extension:  ExtensionPatientEconomyStatusTWLTC
-Id: ExtensionPatientEconomyStatus-TWLTC
+Extension:  ExtPatientEconomyStatusTWLTC
+Id: ExtPatientEconomyStatus-TWLTC
 Title: "長照機構住民經濟狀況"
 Description: "此 Extension 用以表述長照機構住民的經濟狀況。"
 Context: Patient

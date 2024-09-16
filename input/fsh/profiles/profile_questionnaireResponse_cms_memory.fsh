@@ -1,7 +1,7 @@
 Profile: LTCQuestionnaireResponseCMSMemory
 Parent: LTCQuestionnaireResponse
 Id: LTCQuestionnaireResponseCMSMemory
-Title: "TW Long Term Care QuestionnaireResponse CMS Memory"
+Title: "TWLTC QuestionnaireResponse CMS Memory"
 Description: "照顧管理評估量表－個案短期記憶力問卷回覆"
 
 * item 1..5 MS
