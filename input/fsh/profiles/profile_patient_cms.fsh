@@ -3,7 +3,6 @@ Alias: $PatientIdentityExt = http://ltc-ig.fhir.tw/StructureDefinition/ExtPatien
 Alias: $EducationStatusVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet/EducationStatusVS-TWLTC
 Alias: $PatientIdentityVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet/PatientIdentityVS-TWLTC
 
-
 Profile: LTCPatientCMS
 Title: "TWLTC Patient for CMS Form"
 Parent: LTCPatient

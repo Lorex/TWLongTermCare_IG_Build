@@ -1,5 +1,6 @@
 Alias: $TWCorePatient = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore
-Alias: $AddressUseVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet/AddressUseVS-TWLTC
+Alias: $LTCAddress = http://ltc-ig.fhir.tw/StructureDefinition/Address-TWLTC
+
 
 Profile: LTCPatient
 Title: "TWLTC Patient"
@@ -27,27 +28,11 @@ Description: "長照機構住民基本資料，用以表述長照機構住民的
 * telecom.value ^short = "實際的聯絡方式之細節。[應輸入聯絡電話]"
 * birthDate 1..1 MS
 * birthDate ^short = "住民的出生年月日"
+* address only $LTCAddress
 * address 1..2 MS
-* address ^slicing.discriminator.type = #value
-* address ^slicing.discriminator.path = "use"
-* address ^slicing.rules = #open
-* address contains
-    current 0..1 MS and
-    residential 0..1 MS
-* address[current] 0..1 MS
-* address[current] ^short = "使用郵政規範表達住民的現居地址"
-* address[current].use 1..1 MS
-* address[current].use = #current
-* address[current].text 1..1 MS
-* address[current].text ^short = "住民的現居地址。[應輸入完整地址]"
-* address[residential] 0..1 MS 
-* address[residential] ^short = "使用郵政規範表達住民的戶籍地址"
-* address[residential].use 1..1 MS
-* address[residential].use = #residential
-* address[residential].text 1..1 MS
-* address[residential].text ^short = "住民的戶籍地址。[應輸入完整地址]"
-* address.use ^short = "住民地址的用途"
-* address.use from $AddressUseVS-TWLTC
+* address ^short = "使用郵政規範表達住民的現居地址"
+* address.text 1..1 MS
+* address.text ^short = "住民的現居地址。[應輸入完整地址]"
 * contact 1..* MS
 * contact ^short = "住民的緊急聯絡人"
 * contact.relationship 1..1 MS
