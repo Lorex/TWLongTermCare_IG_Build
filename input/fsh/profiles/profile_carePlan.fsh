@@ -1,4 +1,4 @@
-Alias: $CarePlan = http://hl7.org/fhir/StructureDefinition/CarePlan
+Alias: $TWCoreCarePlan = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CarePlan-twcore
 
 Alias: $TWCoreEncounter = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Encounter-twcore
 Alias: $TWCoreOrganization = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Organization-twcore
@@ -7,7 +7,7 @@ Alias: $TWCoreMedicationRequest = https://twcore.mohw.gov.tw/ig/twcore/Structure
 
 
 Profile: LTCCarePlan
-Parent: $CarePlan
+Parent: $TWCoreCarePlan
 Id: LTCCarePlan
 Title: "TWLTC CarePlan"
 Description: "照顧計畫，用以表述長期照顧情境中涉及之照顧計畫內容。"

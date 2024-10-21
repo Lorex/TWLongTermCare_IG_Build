@@ -5,22 +5,26 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: fhir.twltc
 canonical: http://ltc-ig.fhir.tw
-name: Taiwan Long-Term Care FHIR Implementation Guide
-title: 臺灣長期照顧實作指引 (Taiwan Long-Term Care FHIR Implementation Guide)
+name: Taiwan Long-Term Care Implementation Guide
+title: 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)
 # description: Example Implementation Guide for getting started with SUSHI
-status: draft # draft | active | retired | unknown
-version: 0.1.1
+status: active # draft | active | retired | unknown
+version: 0.2.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-dependencies:
-  tw.gov.mohw.twcore: 0.2.2
 copyrightYear: 2024+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
-license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+releaseLabel: ci-build+trial-use # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+# license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
   name: MI-TW
   url: https://mitw.dicom.org.tw/
   # email: test@example.org
+
+dependencies:
+  tw.gov.mohw.twcore: 0.3.0
+  # fhir.SportsData:
+  #   version: 0.1.0
+  #   uri: /home/lorex/.fhir/packages/fhir.sportsdata#0.1.0
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
@@ -53,6 +57,9 @@ publisher:
 #     title: Examples Overview
 #     simpleExamples.xml:
 #     complexExamples.xml:
+#   version-history.md:
+#     title: 版本歷史
+#     generation: markdown
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -62,11 +69,15 @@ publisher:
 # partial list of allowed parameters see:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #
-# parameters:
+parameters:
+    generate: example-narratives
+    generate-version: r4
+    version-comparison: none
+
 #   excludexml: true
-#   generate-version-comparison: false
+  # generate-version-comparison: true
 #
-# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# ╭────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
 # │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │
 # │ The IG publisher currently only supports one level deep on sub-menus. To provide a             │
@@ -84,7 +95,7 @@ publisher:
 #   MI-TW 2024 聯測松: connectathon.html
 
 
-# ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
+# ╭─────────��─────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
 # │  resource. These properties are less commonly needed than those above.                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯

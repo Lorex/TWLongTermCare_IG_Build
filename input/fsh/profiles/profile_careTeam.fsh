@@ -1,9 +1,9 @@
-Alias: $CareTeam = http://hl7.org/fhir/StructureDefinition/CareTeam
+Alias: $TWCoreCareTeam = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CareTeam-twcore
 Alias: $VSCareTeamStatus = http://hl7.org/fhir/ValueSet/care-team-status
 Alias: $VSParticipantRole = http://hl7.org/fhir/ValueSet/participant-role
 
 Profile: LTCCareTeam
-Parent: $CareTeam
+Parent: $TWCoreCareTeam
 Id: LTCCareTeam
 Title: "TWLTC CareTeam"
 Description: "照顧團隊，用以表述長期照護情境中涉及之照顧團隊資訊。"
@@ -18,7 +18,7 @@ Description: "照顧團隊，用以表述長期照護情境中涉及之照顧團
 * subject.reference ^short = "照顧團隊的適用主體。[應輸入 Patient Resource ID]"
 * participant 1..* MS
 * participant ^short = "照顧團隊的參與者，即這個照顧團隊是由哪些人參與的？"
-* participant.role 0..1 MS
+* participant.role 1..1 MS
 * participant.role ^short = "照顧團隊參與者的角色"
 * participant.role from $VSParticipantRole
 * participant.member 1..1 MS
