@@ -102,7 +102,7 @@
     },
     {
       "url" : "http://ltc-ig.fhir.tw/ValueSet/AddressUseVS-TWLTC",
-      "version" : "0.1.1",
+      "version" : "0.2.0",
       "status" : "active",
       "name" : "AddressUseVSTWLTC",
       "title" : "地址用途擴展值集",
@@ -111,7 +111,7 @@
     },
     {
       "url" : "http://ltc-ig.fhir.tw/ValueSet/ConditionDisabilityTypeVS-TWLTC",
-      "version" : "0.1.1",
+      "version" : "0.2.0",
       "status" : "active",
       "name" : "ConditionDisabilityTypeVSTWLTC",
       "title" : "身心障礙類型值集",
@@ -126,7 +126,7 @@
     },
     {
       "url" : "http://ltc-ig.fhir.tw/ValueSet/ConditionDisabilityVS-TWLTC",
-      "version" : "0.1.1",
+      "version" : "0.2.0",
       "status" : "active",
       "name" : "ConditionDisabilityVSTWLTC",
       "title" : "身心障礙手冊持有狀況值集",
@@ -140,7 +140,7 @@
     },
     {
       "url" : "http://ltc-ig.fhir.tw/ValueSet/ConditionSeverityVS-TWLTC",
-      "version" : "0.1.1",
+      "version" : "0.2.0",
       "status" : "active",
       "name" : "ConditionSeverityVSTWLTC",
       "title" : "疾病嚴重度擴展值集",
@@ -155,7 +155,7 @@
     },
     {
       "url" : "http://ltc-ig.fhir.tw/ValueSet/EconomyStatusVS-TWLTC",
-      "version" : "0.1.1",
+      "version" : "0.2.0",
       "status" : "active",
       "name" : "EconomyStatusVSTWLTC",
       "title" : "個案經濟狀況值集",
@@ -167,7 +167,7 @@
     },
     {
       "url" : "http://ltc-ig.fhir.tw/ValueSet/EducationStatusVS-TWLTC",
-      "version" : "0.1.1",
+      "version" : "0.2.0",
       "status" : "active",
       "name" : "EducationStatusVSTWLTC",
       "title" : "教育程度值集",
@@ -178,8 +178,47 @@
       "StructureDefinition-ExtPatientEducationStatus-TWLTC.html" : "長照機構住民教育程度"
     },
     {
+      "url" : "http://ltc-ig.fhir.tw/ValueSet/ExerciseHistoryVS-Sports",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "ExerciseHistoryVSSports",
+      "title" : "身體活動量測-最近(目前)運動史值集",
+      "description" : "最近(目前)運動史。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
+      "systems" : ["http://snomed.info/sct/901000000000207008/version/20240901"]
+    },
+    {
+      "url" : "http://ltc-ig.fhir.tw/ValueSet/FallHistoryResultVS-TWLTC",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "FallHistoryResultVSTWLTC",
+      "title" : "跌倒紀錄結果值集",
+      "description" : "紀錄住民跌倒的偵測結果。",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-LTCObservationFallingHistory.html" : "TWLTC Observation Falling History"
+    },
+    {
+      "url" : "http://ltc-ig.fhir.tw/ValueSet/GaitCycleVS-Sports",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "GaitCycleVSSports",
+      "title" : "身體活動量測-步態週期值集",
+      "description" : "一個步伐的完整過程，從一隻腳接觸地面開始到同一隻腳再次接觸地面結束。這個過程可以分為兩個主要階段：支撐期（stance phase）和擺動期（swing phase）。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
+      "systems" : ["http://ltc-ig.fhir.tw/CodeSystem/GaitCycleCS-Sports"]
+    },
+    {
+      "url" : "http://ltc-ig.fhir.tw/ValueSet/GaitTypeVS-Sports",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "GaitTypeVSSports",
+      "title" : "身體活動量測-步態分析值集",
+      "description" : "用於描述步態（walking gait）時腳的着地位置和運動模式。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
+      "systems" : ["http://snomed.info/sct/901000000000207008/version/20240901"]
+    },
+    {
       "url" : "http://ltc-ig.fhir.tw/ValueSet/GoalDescriptionVS-TWLTC",
-      "version" : "0.1.1",
+      "version" : "0.2.0",
       "status" : "active",
       "name" : "GoalDescriptionVSTWLTC",
       "title" : "照顧目標描述值集",
@@ -190,8 +229,20 @@
       "StructureDefinition-LTCGoal.html" : "TWLTC Goal"
     },
     {
+      "url" : "http://ltc-ig.fhir.tw/ValueSet/ICD-10-PCS-2023-TW-F-VS",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "ICD10PCS2023TWFVS",
+      "title" : "臺灣 2023 年中文版 ICD-10-PCS-F 值集",
+      "description" : "臺灣 2023 年中文版 ICD-10-PCS 復健及診斷性聽力學(Physical Rehabilitation and Diagnostic Audiology)，章節數值為「F」。 包括：復健、診斷性聽力學。 代碼出版日期：2023-11-10；資料所屬單位：衛生福利部中央健康保險署。 因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
+      "systems" : ["http://ltc-ig.fhir.tw/CodeSystem/ICD-10-PCS-2023-TW-F-CS"],
+      "uses" : {
+      },
+      "StructureDefinition-PASportsServiceRequest.html" : "運動處方－服務請求"
+    },
+    {
       "url" : "http://ltc-ig.fhir.tw/ValueSet/PatientIdentityVS-TWLTC",
-      "version" : "0.1.1",
+      "version" : "0.2.0",
       "status" : "active",
       "name" : "PatientIdentityVSTWLTC",
       "title" : "個案身分別值集",
@@ -203,7 +254,7 @@
     },
     {
       "url" : "http://ltc-ig.fhir.tw/ValueSet/ReferralCarePlanVS-TWLTC",
-      "version" : "0.1.1",
+      "version" : "0.2.0",
       "status" : "active",
       "name" : "ReferralCarePlanVSTWLTC",
       "title" : "轉介單申請服務種類值集",
@@ -215,7 +266,7 @@
     },
     {
       "url" : "http://ltc-ig.fhir.tw/ValueSet/ReferralConditionCaregiverVS-TWLTC",
-      "version" : "0.1.1",
+      "version" : "0.2.0",
       "status" : "active",
       "name" : "ReferralConditionCaregiverVSTWLTC",
       "title" : "看護狀況值集",
@@ -229,7 +280,7 @@
     },
     {
       "url" : "http://ltc-ig.fhir.tw/ValueSet/ReferralConditionCrushVS-TWLTC",
-      "version" : "0.1.1",
+      "version" : "0.2.0",
       "status" : "active",
       "name" : "ReferralConditionCrushVSTWLTC",
       "title" : "壓傷狀況值集",
@@ -243,7 +294,7 @@
     },
     {
       "url" : "http://ltc-ig.fhir.tw/ValueSet/ReferralConditionResidenceVS-TWLTC",
-      "version" : "0.1.1",
+      "version" : "0.2.0",
       "status" : "active",
       "name" : "ReferralConditionResidenceVSTWLTC",
       "title" : "居住狀況值集",
@@ -257,7 +308,7 @@
     },
     {
       "url" : "http://ltc-ig.fhir.tw/ValueSet/ReferralConditionTubeVS-TWLTC",
-      "version" : "0.1.1",
+      "version" : "0.2.0",
       "status" : "active",
       "name" : "ReferralConditionTubeVSTWLTC",
       "title" : "管路狀況值集",
@@ -271,7 +322,7 @@
     },
     {
       "url" : "http://ltc-ig.fhir.tw/ValueSet/RelationshipTypeVS-TWLTC",
-      "version" : "0.1.1",
+      "version" : "0.2.0",
       "status" : "active",
       "name" : "RelationshipTypeVSTWLTC",
       "title" : "關係類型擴展值集",
@@ -284,6 +335,63 @@
       "uses" : {
       },
       "StructureDefinition-LTCRelatedPerson.html" : "TWLTC RelatedPerson"
+    },
+    {
+      "url" : "http://ltc-ig.fhir.tw/ValueSet/ServiceRequestPAVS-Sports",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "ServiceRequestPAVSSports",
+      "title" : "身體活動量測-適用運動處方之服務請求代碼值集",
+      "description" : "適用運動處方之服務請求代碼。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
+      "systems" : ["http://snomed.info/sct/901000000000207008/version/20240901"],
+      "uses" : {
+      },
+      "StructureDefinition-PASportsServiceRequest.html" : "運動處方－服務請求"
+    },
+    {
+      "url" : "http://ltc-ig.fhir.tw/ValueSet/SportTrainingVS-Sports",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "SportTrainingVSSports",
+      "title" : "身體活動量測-重量訓練代碼值集",
+      "description" : "定義重量訓練各個方面的代碼，包括使用的重量、執行的組數以及每組的重複次數。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
+      "systems" : ["http://ltc-ig.fhir.tw/CodeSystem/SportTrainingCS-Sports"]
+    },
+    {
+      "url" : "http://ltc-ig.fhir.tw/ValueSet/TempCodeVS-Sports",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "TempCodeVSSports",
+      "title" : "身體活動量測-暫用代碼值集",
+      "description" : "身體活動量測暫時使用的代碼，目前無官方代碼。本 ValueSet 繼承自身體活動量測 IG，後續將配合官方代碼更新。",
+      "systems" : ["http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sports"],
+      "uses" : {
+      },
+      "StructureDefinition-PASportsConditionExerciseHistory.html" : "運動處方－運動史"
+    },
+    {
+      "url" : "http://ltc-ig.fhir.tw/ValueSet/TreadmillTypeVS-Sports",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "TreadmillTypeVSSports",
+      "title" : "身體活動量測-跑步機類型值集",
+      "description" : "用於描述跑步機的類型。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
+      "systems" : ["http://snomed.info/sct/901000000000207008/version/20240901"]
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/category-code-tw",
+      "version" : "0.3.0",
+      "status" : "active",
+      "name" : "TWCategoryCode",
+      "title" : "臺灣衛福部資訊處類型代碼值集",
+      "description" : "臺灣衛福部資訊處類型代碼值集",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/category-code-tw",
+        "http://terminology.hl7.org/CodeSystem/observation-category"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-LTCObservationFallingHistory.html" : "TWLTC Observation Falling History"
     }
   ]
 }

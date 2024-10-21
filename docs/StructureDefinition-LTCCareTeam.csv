@@ -75,7 +75,7 @@ Reference is intended to point to a structure that can potentially be expressed 
 "CareTeam.subject.display","CareTeam.subject.display","","","",0,1,"","","Y","string {[]} {[]}
 ","Text alternative for the resource","Plain text narrative that identifies the resource in addition to the resource reference.","This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.","","","","","","","","",,,,,"",,,,"Reference.display",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A"
-"CareTeam.encounter","CareTeam.encounter","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Encounter]]}
+"CareTeam.encounter","CareTeam.encounter","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Encounter-twcore]]}
 ","Encounter created as part of","The Encounter during which this CareTeam was created or to which the creation of this record is tightly associated.","This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.","","","","","","","","",,,,,"",,,,"CareTeam.encounter",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.context"
 "CareTeam.period","CareTeam.period","","","",0,1,"","","Y","Period {[]} {[]}
@@ -97,7 +97,7 @@ user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
-"CareTeam.participant.role","CareTeam.participant.role","","","",0,1,"Y","","Y","CodeableConcept {[]} {[]}
+"CareTeam.participant.role","CareTeam.participant.role","","","",1,1,"Y","","Y","CodeableConcept {[]} {[]}
 ","照顧團隊參與者的角色","Indicates specific responsibility of an individual within the care team, such as ""Primary care physician"", ""Trained social worker counselor"", ""Caregiver"", etc.","Roles may sometimes be inferred by type of Practitioner.  These are relationships that hold only within the context of the care team.  General relationships should be handled as properties of the Patient resource directly.","","","","","","","","",,"required","","http://hl7.org/fhir/ValueSet/participant-role","",,,,"CareTeam.participant.role",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","REL.2 (or PRT-4?)",".functionCode"
 "CareTeam.participant.member","CareTeam.participant.member","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner], CanonicalType[http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson], CanonicalType[http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitionerRole]]}
@@ -133,7 +133,7 @@ Reference is intended to point to a structure that can potentially be expressed 
 "CareTeam.participant.member.display","CareTeam.participant.member.display","","","",0,1,"","","Y","string {[]} {[]}
 ","Text alternative for the resource","Plain text narrative that identifies the resource in addition to the resource reference.","This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.","","","","","","","","",,,,,"",,,,"Reference.display",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A"
-"CareTeam.participant.onBehalfOf","CareTeam.participant.onBehalfOf","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"CareTeam.participant.onBehalfOf","CareTeam.participant.onBehalfOf","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Organization-twcore]]}
 ","Organization of the practitioner","The organization of the practitioner.","","Practitioners can be associated with multiple organizations.  This element indicates which organization they were acting on behalf of.","","","","","","","",,,,,"",,,,"CareTeam.participant.onBehalfOf",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "CareTeam.participant.period","CareTeam.participant.period","","","",0,1,"","","","Period {[]} {[]}
@@ -142,10 +142,10 @@ Reference is intended to point to a structure that can potentially be expressed 
 "CareTeam.reasonCode","CareTeam.reasonCode","","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","Why the care team exists","Describes why the care team exists.","","","","","","","","","",,"example","Indicates the reason for the care team.","http://hl7.org/fhir/ValueSet/clinical-findings","",,,,"CareTeam.reasonCode",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.why[x]"
-"CareTeam.reasonReference","CareTeam.reasonReference","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Condition]]}
+"CareTeam.reasonReference","CareTeam.reasonReference","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Condition-twcore]]}
 ","Why the care team exists","Condition(s) that this care team addresses.","","","","","","","","","",,,,,"",,,,"CareTeam.reasonReference",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.why[x]"
-"CareTeam.managingOrganization","CareTeam.managingOrganization","","","",0,*,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"CareTeam.managingOrganization","CareTeam.managingOrganization","","","",0,*,"","","Y","Reference {[]} {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Organization-twcore]]}
 ","Organization responsible for the care team","The organization responsible for the care team.","","Allows for multiple organizations to collaboratively manage cross-organizational, longitudinal care plan.","","","","","","","",,,,,"",,,,"CareTeam.managingOrganization",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "CareTeam.telecom","CareTeam.telecom","","","",0,*,"","","","ContactPoint {[]} {[]}

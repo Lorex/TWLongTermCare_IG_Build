@@ -1,6 +1,6 @@
 {
   "package": "fhir.twltc",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "fhirVersion": "4.0.1",
   "extensions": [
     {
@@ -104,32 +104,12 @@
     ],
     "Condition": [
       {
-        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCCondition",
-        "title": "TWLTC Condition"
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportsConditionExerciseHistory",
+        "title": "運動處方－運動史"
       },
       {
-        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCaregiver",
-        "title": "TWLTC Condition Caregiver"
-      },
-      {
-        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCrush",
-        "title": "TWLTC Condition Crush"
-      },
-      {
-        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisability",
-        "title": "TWLTC Condition Disability"
-      },
-      {
-        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisabilityType",
-        "title": "TWLTC Condition Disability Type"
-      },
-      {
-        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionResidence",
-        "title": "TWLTC Condition Residence"
-      },
-      {
-        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionTube",
-        "title": "TWLTC Condition Tube"
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportsConditionMedicalHistory",
+        "title": "運動處方－病史"
       }
     ],
     "Goal": [
@@ -145,6 +125,10 @@
       }
     ],
     "Observation": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationFallingHistory",
+        "title": "TWLTC Observation Falling History"
+      },
       {
         "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationVitalSigns",
         "title": "TWLTC Observation Vital Signs"
@@ -251,6 +235,12 @@
         "url": "http://ltc-ig.fhir.tw/StructureDefinition/Organization-twltc",
         "title": "TWLTC Organization"
       }
+    ],
+    "ServiceRequest": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportsServiceRequest",
+        "title": "運動處方－服務請求"
+      }
     ]
   },
   "usage": {
@@ -273,7 +263,10 @@
       "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support": [
-      "StructureDefinition.snapshot.element.type"
+      "StructureDefinition.differential.element.type",
+      "StructureDefinition.differential.element.type.targetProfile",
+      "StructureDefinition.snapshot.element.type",
+      "StructureDefinition.snapshot.element.type.targetProfile"
     ],
     "http://hl7.org/fhir/StructureDefinition/patient-nationality": [
       "Patient"

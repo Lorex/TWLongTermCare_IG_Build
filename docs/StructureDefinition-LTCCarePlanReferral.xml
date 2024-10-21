@@ -10,11 +10,11 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://ltc-ig.fhir.tw/StructureDefinition/LTCCarePlanReferral"/>
-  <version value="0.1.1"/>
+  <version value="0.2.0"/>
   <name value="LTCCarePlanReferral"/>
   <title value="TWLTC CarePlan Referral"/>
-  <status value="draft"/>
-  <date value="2024-09-16T23:20:15+08:00"/>
+  <status value="active"/>
+  <date value="2024-10-22T01:35:37+08:00"/>
   <publisher value="MI-TW"/>
   <contact>
     <name value="MI-TW"/>
@@ -236,7 +236,7 @@
     </element>
     <element id="CarePlan.text">
       <path value="CarePlan.text"/>
-      <short value="Text summary of the resource, for human interpretation"/>
+      <short value="CarePlan Resource之內容摘要以供人閱讀"/>
       <definition value="A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
       <comment value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a &quot;text blob&quot; or where text is additionally entered raw or narrated and encoded information is added later."/>
       <alias value="narrative"/>
@@ -261,11 +261,167 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
       <mapping>
         <identity value="rim"/>
         <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element id="CarePlan.text.id">
+      <path value="CarePlan.text.id"/>
+      <representation value="xmlAttr"/>
+      <short value="Unique id for inter-element referencing"/>
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String"/>
+      </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="CarePlan.text.extension">
+      <path value="CarePlan.text.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="CarePlan.text.status">
+      <path value="CarePlan.text.status"/>
+      <short value="generated | additional"/>
+      <definition value="The status of the narrative - whether it's entirely generated (from just the defined data or the extensions too), or whether a human authored it and it may contain additional data."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Narrative.status"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <description value="Constrained value set of narrative statuses."/>
+        <valueSet value="https://twcore.mohw.gov.tw/ig/twcore/ValueSet/narrative-status"/>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element id="CarePlan.text.div">
+      <path value="CarePlan.text.div"/>
+      <short value="Limited xhtml content"/>
+      <definition value="The actual narrative content, a stripped down version of XHTML."/>
+      <comment value="The contents of the html element are an XHTML fragment containing only the basic html formatting elements described in chapters 7-11 and 15 of the HTML 4.0 standard, &lt;a&gt; elements (either name or href), images and internally contained stylesheets. The XHTML content SHALL NOT contain a head, a body, external stylesheet references, scripts, forms, base/link/xlink, frames, iframes and objects."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Narrative.div"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="xhtml"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="txt-1"/>
+        <severity value="error"/>
+        <human value="The narrative SHALL contain only the basic html formatting elements and attributes described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, &lt;a&gt; elements (either name or href), images and internally contained style attributes"/>
+        <expression value="htmlChecks()"/>
+        <xpath value="not(descendant-or-self::*[not(local-name(.)=('a', 'abbr', 'acronym', 'b', 'big', 'blockquote', 'br', 'caption', 'cite', 'code', 'col', 'colgroup', 'dd', 'dfn', 'div', 'dl', 'dt', 'em', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr', 'i', 'img', 'li', 'ol', 'p', 'pre', 'q', 'samp', 'small', 'span', 'strong', 'sub', 'sup', 'table', 'tbody', 'td', 'tfoot', 'th', 'thead', 'tr', 'tt', 'ul', 'var'))]) and not(descendant-or-self::*/@*[not(name(.)=('abbr', 'accesskey', 'align', 'alt', 'axis', 'bgcolor', 'border', 'cellhalign', 'cellpadding', 'cellspacing', 'cellvalign', 'char', 'charoff', 'charset', 'cite', 'class', 'colspan', 'compact', 'coords', 'dir', 'frame', 'headers', 'height', 'href', 'hreflang', 'hspace', 'id', 'lang', 'longdesc', 'name', 'nowrap', 'rel', 'rev', 'rowspan', 'rules', 'scope', 'shape', 'span', 'src', 'start', 'style', 'summary', 'tabindex', 'title', 'type', 'valign', 'value', 'vspace', 'width'))])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/CarePlan"/>
+      </constraint>
+      <constraint>
+        <key value="txt-2"/>
+        <severity value="error"/>
+        <human value="The narrative SHALL have some non-whitespace content"/>
+        <expression value="htmlChecks()"/>
+        <xpath value="descendant::text()[normalize-space(.)!=''] or descendant::h:img[@src]"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/CarePlan"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
       </mapping>
     </element>
     <element id="CarePlan.contained">
@@ -1213,7 +1369,7 @@
       <short value="draft | active | on-hold | revoked | completed | entered-in-error | unknown"/>
       <definition value="Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record."/>
       <comment value="The unknown code is not to be used to convey other statuses.  The unknown code should be used when one of the statuses applies, but the authoring system doesn't know the current state of the care plan.&#xA;&#xA;This element is labeled as a modifier because the status contains the code entered-in-error that marks the plan as not currently valid."/>
-      <requirements value="Allows clinicians to determine whether the plan is actionable or not."/>
+      <requirements value="Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record."/>
       <min value="1"/>
       <max value="1"/>
       <base>
@@ -1232,16 +1388,14 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="true"/>
       <isModifierReason value="This element is labeled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid"/>
       <isSummary value="true"/>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CarePlanStatus"/>
-        </extension>
         <strength value="required"/>
         <description value="Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/request-status|4.0.1"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/request-status"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -1284,16 +1438,14 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="true"/>
       <isModifierReason value="This element changes the interpretation of all descriptive attributes. For example &quot;the time the request is recommended to occur&quot; vs. &quot;the time the request is authorized to occur&quot; or &quot;who is recommended to perform the request&quot; vs. &quot;who is authorized to perform the request&quot;"/>
       <isSummary value="true"/>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CarePlanIntent"/>
-        </extension>
         <strength value="required"/>
-        <description value="Codes indicating the degree of authority/intentionality associated with a care plan."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/care-plan-intent|4.0.1"/>
+        <description value="Codes indicating the degree of authority/intentionality associated with a care plan"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/care-plan-intent"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -1302,11 +1454,18 @@
     </element>
     <element id="CarePlan.category">
       <path value="CarePlan.category"/>
+      <slicing>
+        <discriminator>
+          <type value="pattern"/>
+          <path value="$this"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
       <short value="Type of plan"/>
-      <definition value="Identifies what &quot;kind&quot; of plan this is to support differentiation between multiple co-existing plans; e.g. &quot;Home health&quot;, &quot;psychiatric&quot;, &quot;asthma&quot;, &quot;disease management&quot;, &quot;wellness plan&quot;, etc."/>
+      <definition value="Type of plan."/>
       <comment value="There may be multiple axes of categorization and one plan may serve multiple purposes.  In some cases, this may be redundant with references to CarePlan.concern."/>
-      <requirements value="Used for filtering what plan(s) are retrieved and displayed to different types of users."/>
-      <min value="0"/>
+      <requirements value="Identifies what &quot;kind&quot; of plan this is to support differentiation between multiple co-existing plans; e.g., &quot;Home health&quot;, &quot;psychiatric&quot;, &quot;asthma&quot;, &quot;disease management&quot;, &quot;wellness plan&quot;, etc."/>
+      <min value="1"/>
       <max value="*"/>
       <base>
         <path value="CarePlan.category"/>
@@ -1324,6 +1483,54 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="CarePlanCategory"/>
+        </extension>
+        <strength value="example"/>
+        <description value="Identifies what &quot;kind&quot; of plan this is to support differentiation between multiple co-existing plans; e.g. &quot;Home health&quot;, &quot;psychiatric&quot;, &quot;asthma&quot;, &quot;disease management&quot;, etc."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/care-plan-category"/>
+      </binding>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.class"/>
+      </mapping>
+    </element>
+    <element id="CarePlan.category:AssessPlan">
+      <path value="CarePlan.category"/>
+      <sliceName value="AssessPlan"/>
+      <short value="Type of plan"/>
+      <definition value="Identifies what &quot;kind&quot; of plan this is to support differentiation between multiple co-existing plans; e.g. &quot;Home health&quot;, &quot;psychiatric&quot;, &quot;asthma&quot;, &quot;disease management&quot;, &quot;wellness plan&quot;, etc."/>
+      <comment value="There may be multiple axes of categorization and one plan may serve multiple purposes.  In some cases, this may be redundant with references to CarePlan.concern."/>
+      <requirements value="Used for filtering what plan(s) are retrieved and displayed to different types of users."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="CarePlan.category"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw"/>
+          <code value="assess-plan"/>
+        </coding>
+      </patternCodeableConcept>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="true"/>
       <binding>
@@ -1397,7 +1604,8 @@
     <element id="CarePlan.subject">
       <path value="CarePlan.subject"/>
       <short value="照顧計畫的適用主體，即這個照顧計畫的適用對象是誰？"/>
-      <definition value="Identifies the patient or group whose intended care is described by the plan."/>
+      <definition value="Who care plan is for."/>
+      <requirements value="Identifies the patient or group whose intended care is described by the plan."/>
       <alias value="patient"/>
       <min value="1"/>
       <max value="1"/>
@@ -2629,7 +2837,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam"/>
+        <targetProfile value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CareTeam-twcore"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -3451,7 +3659,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Appointment"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CommunicationRequest"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DeviceRequest"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
+        <targetProfile value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/MedicationRequest-twcore"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionOrder"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Task"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
@@ -3827,10 +4035,10 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+        <targetProfile value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Condition-twcore"/>
+        <targetProfile value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Observation-clinical-result-twcore"/>
+        <targetProfile value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/DiagnosticReport-twcore"/>
+        <targetProfile value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/DocumentReference-twcore"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -4052,7 +4260,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
+        <targetProfile value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Location-twcore"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -4088,14 +4296,14 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam"/>
+        <targetProfile value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Practitioner-twcore"/>
+        <targetProfile value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/PractitionerRole-twcore"/>
+        <targetProfile value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Organization-twcore"/>
+        <targetProfile value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/RelatedPerson-twcore"/>
+        <targetProfile value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore"/>
+        <targetProfile value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CareTeam-twcore"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+        <targetProfile value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Device-twcore"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -4122,6 +4330,14 @@
     </element>
     <element id="CarePlan.activity.detail.product[x]">
       <path value="CarePlan.activity.detail.product[x]"/>
+      <slicing>
+        <discriminator>
+          <type value="type"/>
+          <path value="$this"/>
+        </discriminator>
+        <ordered value="false"/>
+        <rules value="open"/>
+      </slicing>
       <short value="What is to be administered/supplied"/>
       <definition value="Identifies the food, drug or other product to be consumed or supplied in the activity."/>
       <min value="0"/>
@@ -4157,6 +4373,42 @@
         <description value="A product supplied or administered as part of a care plan activity."/>
         <valueSet value="http://hl7.org/fhir/ValueSet/medication-codes"/>
       </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXE-2 / RXO-1 / RXD-2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=PRD].role"/>
+      </mapping>
+    </element>
+    <element id="CarePlan.activity.detail.product[x]:productReference">
+      <path value="CarePlan.activity.detail.product[x]"/>
+      <sliceName value="productReference"/>
+      <short value="What is to be administered/supplied"/>
+      <definition value="Identifies the food, drug or other product to be consumed or supplied in the activity."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="CarePlan.activity.detail.product[x]"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Medication-twcore"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
       <mapping>
         <identity value="v2"/>
         <map value="RXE-2 / RXO-1 / RXD-2"/>

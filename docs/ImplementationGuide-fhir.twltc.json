@@ -3,14 +3,14 @@
   "id" : "fhir.twltc",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide fhir.twltc</b></p><a name=\"fhir.twltc\"> </a><a name=\"hcfhir.twltc\"> </a><a name=\"fhir.twltc-en-US\"> </a><h2>TaiwanLongTermCareFHIRImplementationGuide</h2><p>The official URL for this implementation guide is: </p><pre>http://ltc-ig.fhir.tw/ImplementationGuide/fhir.twltc</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide fhir.twltc</b></p><a name=\"fhir.twltc\"> </a><a name=\"hcfhir.twltc\"> </a><a name=\"fhir.twltc-en-US\"> </a><h2>TaiwanLongTermCareImplementationGuide</h2><p>The official URL for this implementation guide is: </p><pre>http://ltc-ig.fhir.tw/ImplementationGuide/fhir.twltc</pre></div>"
   },
   "url" : "http://ltc-ig.fhir.tw/ImplementationGuide/fhir.twltc",
-  "version" : "0.1.1",
-  "name" : "TaiwanLongTermCareFHIRImplementationGuide",
-  "title" : "臺灣長期照顧實作指引 (Taiwan Long-Term Care FHIR Implementation Guide)",
-  "status" : "draft",
-  "date" : "2024-09-16T23:20:15+08:00",
+  "version" : "0.2.0",
+  "name" : "TaiwanLongTermCareImplementationGuide",
+  "title" : "臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)",
+  "status" : "active",
+  "date" : "2024-10-22T01:35:37+08:00",
   "publisher" : "MI-TW",
   "contact" : [{
     "name" : "MI-TW",
@@ -46,7 +46,7 @@
     "id" : "tw_gov_mohw_twcore",
     "uri" : "https://twcore.mohw.gov.tw/ig/twcore/ImplementationGuide/tw.gov.mohw.twcore",
     "packageId" : "tw.gov.mohw.twcore",
-    "version" : "0.2.2"
+    "version" : "0.3.0"
   }],
   "definition" : {
     "extension" : [{
@@ -67,7 +67,40 @@
       },
       {
         "url" : "value",
-        "valueString" : "ci-build"
+        "valueString" : "ci-build+trial-use"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "generate"
+      },
+      {
+        "url" : "value",
+        "valueString" : "example-narratives"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "generate-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "r4"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "version-comparison"
+      },
+      {
+        "url" : "value",
+        "valueString" : "none"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -346,7 +379,40 @@
       },
       {
         "url" : "value",
-        "valueString" : "ci-build"
+        "valueString" : "ci-build+trial-use"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "generate"
+      },
+      {
+        "url" : "value",
+        "valueString" : "example-narratives"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "generate-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "r4"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "version-comparison"
+      },
+      {
+        "url" : "value",
+        "valueString" : "none"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -793,6 +859,18 @@
       },
       "name" : "TWLTC Medication Administration",
       "description" : "長照機構住民的用藥資料",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/LTCObservationFallingHistory"
+      },
+      "name" : "TWLTC Observation Falling History",
+      "description" : "長照機構住民跌倒紀錄",
       "exampleBoolean" : false
     },
     {
@@ -1305,6 +1383,42 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
+        "reference" : "ValueSet/ICD-10-PCS-2023-TW-F-VS"
+      },
+      "name" : "臺灣 2023 年中文版 ICD-10-PCS-F 值集",
+      "description" : "臺灣 2023 年中文版 ICD-10-PCS 復健及診斷性聽力學(Physical Rehabilitation and Diagnostic Audiology)，章節數值為「F」。 包括：復健、診斷性聽力學。 代碼出版日期：2023-11-10；資料所屬單位：衛生福利部中央健康保險署。 因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/ICD-10-PCS-2023-TW-F-CS"
+      },
+      "name" : "臺灣 2023 年中文版 ICD-10-PCS-F-復健及診斷性聽力學",
+      "description" : "臺灣 2023 年中文版 ICD-10-PCS 復健及診斷性聽力學(Physical Rehabilitation and Diagnostic Audiology)，章節數值為「F」。 包括：復健、診斷性聽力學。 代碼出版日期：2023-11-10；資料所屬單位：衛生福利部中央健康保險署。 因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。本 CodeSystem 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/FallHistoryResultVS-TWLTC"
+      },
+      "name" : "跌倒紀錄結果值集",
+      "description" : "紀錄住民跌倒的偵測結果。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
         "reference" : "ValueSet/ConditionDisabilityVS-TWLTC"
       },
       "name" : "身心障礙手冊持有狀況值集",
@@ -1321,6 +1435,126 @@
       },
       "name" : "身心障礙類型值集",
       "description" : "個案身心障礙類型",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/TempCodeCS-Sports"
+      },
+      "name" : "身體活動量測-暫用代碼",
+      "description" : "身體活動量測暫時使用的代碼，目前無官方代碼。本 CodeSystem 繼承自身體活動量測 IG，後續將配合官方代碼更新。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/TempCodeVS-Sports"
+      },
+      "name" : "身體活動量測-暫用代碼值集",
+      "description" : "身體活動量測暫時使用的代碼，目前無官方代碼。本 ValueSet 繼承自身體活動量測 IG，後續將配合官方代碼更新。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ExerciseHistoryVS-Sports"
+      },
+      "name" : "身體活動量測-最近(目前)運動史值集",
+      "description" : "最近(目前)運動史。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/GaitTypeVS-Sports"
+      },
+      "name" : "身體活動量測-步態分析值集",
+      "description" : "用於描述步態（walking gait）時腳的着地位置和運動模式。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/GaitCycleCS-Sports"
+      },
+      "name" : "身體活動量測-步態週期",
+      "description" : "一個步伐的完整過程，從一隻腳接觸地面開始到同一隻腳再次接觸地面結束。這個過程可以分為兩個主要階段：支撐期（stance phase）和擺動期（swing phase）。本 CodeSystem 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/GaitCycleVS-Sports"
+      },
+      "name" : "身體活動量測-步態週期值集",
+      "description" : "一個步伐的完整過程，從一隻腳接觸地面開始到同一隻腳再次接觸地面結束。這個過程可以分為兩個主要階段：支撐期（stance phase）和擺動期（swing phase）。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/TreadmillTypeVS-Sports"
+      },
+      "name" : "身體活動量測-跑步機類型值集",
+      "description" : "用於描述跑步機的類型。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ServiceRequestPAVS-Sports"
+      },
+      "name" : "身體活動量測-適用運動處方之服務請求代碼值集",
+      "description" : "適用運動處方之服務請求代碼。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/SportTrainingVS-Sports"
+      },
+      "name" : "身體活動量測-重量訓練代碼值集",
+      "description" : "定義重量訓練各個方面的代碼，包括使用的重量、執行的組數以及每組的重複次數。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/SportTrainingCS-Sports"
+      },
+      "name" : "身體活動量測-重量訓練代碼系統",
+      "description" : "此代碼系統定義重量訓練各個方面的代碼，包括使用的重量、執行的組數以及每組的重複次數。本 CodeSystem 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
       "exampleBoolean" : false
     },
     {
@@ -1393,6 +1627,42 @@
       },
       "name" : "轉介單管路狀況代碼",
       "description" : "用於表述轉介單的狀況代碼，包含身心障礙手冊、管路、壓傷、居住狀況、看護、主要問題及需求等。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/PASportsServiceRequest"
+      },
+      "name" : "運動處方－服務請求",
+      "description" : "長照機構住民運動處方的服務請求資料，本 Profile 繼承自身體活動量測 (Physical Activity Measure) 的 Sport Data ServiceRequest Profile。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/PASportsConditionMedicalHistory"
+      },
+      "name" : "運動處方－病史",
+      "description" : "長照機構住民運動處方的病史資料，本 Profile 繼承自身體活動量測 (Physical Activity Measure) 的 Sport Data Condition Profile。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/PASportsConditionExerciseHistory"
+      },
+      "name" : "運動處方－運動史",
+      "description" : "長照機構住民運動處方的運動史資料，本 Profile 繼承自身體活動量測 (Physical Activity Measure) 的 Sport Data Condition Profile。",
       "exampleBoolean" : false
     },
     {

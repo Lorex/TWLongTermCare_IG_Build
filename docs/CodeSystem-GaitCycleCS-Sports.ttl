@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CodeSystem/GaitCycleCS-Sports> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "GaitCycleCS-Sports"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem GaitCycleCS-Sports</b></p><a name=\"GaitCycleCS-Sports\"> </a><a name=\"hcGaitCycleCS-Sports\"> </a><a name=\"GaitCycleCS-Sports-en-US\"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>updateDate</td><td>updateDate</td><td>http://ltc-ig.fhir.tw/fhir/StructureDefinition/updateDate</td><td>string</td><td>異動日期</td></tr><tr><td>event</td><td>event</td><td>http://ltc-ig.fhir.tw/fhir/StructureDefinition/event</td><td>string</td><td>異動方式</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/GaitCycleCS-Sports</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"GaitCycleCS-Sports-1\"> </a></td><td>支撐期(stance phase)</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"GaitCycleCS-Sports-2\"> </a></td><td>擺動期(swing phase)</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://ltc-ig.fhir.tw/CodeSystem/GaitCycleCS-Sports"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
+  fhir:name [ fhir:v "GaitCycleCSSports"] ; # 
+  fhir:title [ fhir:v "身體活動量測-步態週期"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-06-04"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "MI-TW"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MI-TW" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://mitw.dicom.org.tw/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "一個步伐的完整過程，從一隻腳接觸地面開始到同一隻腳再次接觸地面結束。這個過程可以分為兩個主要階段：支撐期（stance phase）和擺動期（swing phase）。本 CodeSystem 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。"] ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "2"^^xsd:nonNegativeInteger] ; # 
+  fhir:property ( [
+     fhir:code [ fhir:v "updateDate" ] ;
+     fhir:uri [ fhir:v "http://ltc-ig.fhir.tw/fhir/StructureDefinition/updateDate"^^xsd:anyURI ] ;
+     fhir:description [ fhir:v "異動日期" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:code [ fhir:v "event" ] ;
+     fhir:uri [ fhir:v "http://ltc-ig.fhir.tw/fhir/StructureDefinition/event"^^xsd:anyURI ] ;
+     fhir:description [ fhir:v "異動方式" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] ) ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "1" ] ;
+     fhir:display [ fhir:v "支撐期(stance phase)" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "updateDate" ] ;
+       fhir:value [ fhir:v "2024-06" ]
+     ] [
+       fhir:code [ fhir:v "event" ] ;
+       fhir:value [ fhir:v "新增" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "2" ] ;
+     fhir:display [ fhir:v "擺動期(swing phase)" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "updateDate" ] ;
+       fhir:value [ fhir:v "2024-06" ]
+     ] [
+       fhir:code [ fhir:v "event" ] ;
+       fhir:value [ fhir:v "新增" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

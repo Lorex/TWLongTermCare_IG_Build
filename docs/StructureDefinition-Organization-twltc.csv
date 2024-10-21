@@ -19,15 +19,18 @@ htmlxhtmldisplay","",0,1,"","","","Narrative {[]} {[]}
 ","Act.text?"
 "Organization.contained","Organization.contained","","inline resources
 anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
-","內嵌的（contained）、行內的Resources","這些resource內嵌（contains）的resource不會另外存於任何FHIR伺服器，意即它們無法在任何FHIR伺服器中被找到，也無法有自己獨立的資料異動／交易（transaction）範圍。","當內容可以從任何FHIR伺服器找到時，不應該以內嵌（contained）resource的方式呈現，因為一旦失去識別，再次恢復它是非常困難的（並且取決於情境）。內嵌（contained）的resource可在它們的meta資料項目中表述profiles和tag，但不應該有安全標號（security labels）。","","","","","","","","",,,,,"",,,,"DomainResource.contained",0,*,"","","N/A"
-"Organization.extension","Organization.extension","","","",0,*,"","","","Extension {[]} {[]}
-","擴充的資料項目","可用於表示不屬於此resource基本定義的額外資訊。為了擴充的使用安全和可管理，對擴充的定義和使用有一套嚴格的管理。儘管任何實作者都可以定義一個擴充，但作為擴充定義的一部分，**必須（SHALL）** 滿足一系列要求。","任何應用程式、專案或標準使用擴充時，都不應該帶有任何負面的聯想。使用擴充是允許FHIR規範為每個人保留一個核心的簡易性。","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Organization.modifierExtension","Organization.modifierExtension","","","",0,*,"","Y","","Extension {[]} {[]}
-","此擴充的資料項目可能會完全修正或改變其他資料項目的意涵，需特別留意。","可以用來表示不屬於此resource的基本定義的額外資訊，並修改包含它所內嵌（contained）的資料項目的理解和/或對包含資料項目之後續使用的理解。通常修飾用的資料項目提供否定或限定的資訊。為了使擴充的使用安全和可管理，對擴充的定義和使用有一套嚴格的管理。雖然任何實作者都可以定義一個擴充，但在定義擴充時 **必須（SHALL）** 滿足一組要求。處理resource的應用程式需要檢查修飾用的擴充資料項目。  
-修飾用的擴充資料項目 **必須沒有（SHALL NOT）** 改變resource或DomainResource上任何資料項目的含義（包括不能改變modifierExtension本身的含義）。","任何應用程式、專案或標準使用擴充時，都不應該帶有任何負面的聯想。使用擴充是允許FHIR規範為每個人保留一個核心的簡易性。","修飾用的資料項目擴充允許將不能安全地忽略的擴充，與絕大多數可以安全地忽略的擴充明確區分開來。這樣做有助於促進可互操作性，因為無需禁止實作者使用擴充，想要瞭解更多資訊，請參見[修飾用的資料項目擴充之定義]（http://hl7.org/fhir/R4/extensibility.html#modifierExtension）。","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Organization.identifier","Organization.identifier","","","",1,*,"Y","","Y","Identifier {[]} {[]}
+","Contained, inline Resources","These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.","This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.","","","","","","","","",,,,,"",,,,"DomainResource.contained",0,*,"","","N/A"
+"Organization.extension","Organization.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
+"Organization.modifierExtension","Organization.modifierExtension","","extensions
+user content","",0,*,"","Y","","Extension {[]} {[]}
+","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
+"Organization.identifier","Organization.identifier","","","",0,*,"Y","","Y","Identifier {[]} {[]}
 ","跨多個系統中識別此機構","用於指明跨多個不同系統的機構識別碼","","Organizations通常有多種識別碼。有些機構保有數個，而大多數機構收集識別碼用於跟其他機構交流有關此機構的資訊。","","","","","","","",,,,,"",,,,"Organization.identifier",0,*,"org-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XON.10 / XON.3",".scopes[Role](classCode=IDENT)","./Identifiers","FiveWs.identifier"
@@ -45,7 +48,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","CE/CNE/CWE","n/a","CD"
 "Organization.identifier.system","Organization.identifier.system","","","",0,1,"Y","","Y","uri {[]} {[]}
-","機構識別碼（identifier）的命名空間（namespace），可至[twTerminology](https://twcore.mohw.gov.tw/ts/namingsystem.jsp?status=active&amp;type=0)申請或查詢命名系統。","建立值的命名空間－即一個描述一組值的唯一URL","Identifier.system總是區分大小寫","有許多識別碼的集合。為了進行兩個識別碼的對應，我們需要知道我們處理的是哪一組。系統指明了一個特定的唯一識別碼集。","","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://www.acme.com/identifiers/patient""/>","","",,,,,"",,,,"Identifier.system",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","機構識別碼（identifier）的命名空間（namespace），可至[twTerminology](https://fhir.mohw.gov.tw/ts/namingsystem.jsp?status=active&amp;type=0)申請或查詢命名系統。","建立值的命名空間－即一個描述一組值的唯一URL","Identifier.system總是區分大小寫","有許多識別碼的集合。為了進行兩個識別碼的對應，我們需要知道我們處理的是哪一組。系統指明了一個特定的唯一識別碼集。","","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://www.acme.com/identifiers/patient""/>","","",,,,,"",,,,"Identifier.system",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","CX.4 / EI-2-4","II.root or Role.id.root","./IdentifierType"
 "Organization.identifier.value","Organization.identifier.value","","","",1,1,"Y","","Y","string {[]} {[]}
 ","唯一值。[應填入機構代碼]","識別碼中通常與使用者有關的部分，在系統情境內是唯一的。","如果此值是一個完整的URI，那麼此系統 **必須（SHALL）** 是urn:ietf:rfc:3986。此值的主要目的是為了可運算的對應。因此，為了比較的目的，它可能會被正規化（例如：去除不重要的空白、破折號等）。一個為人顯示的格式化的值可以使用[Rendered Value](http://hl7.org/fhir/R4/extension-rendered-value.html)擴充來傳達。除非對Identifier.system的了解使處理者確信不區分大小寫的處理是安全的，否則Identifier.value應被視為區分大小寫。","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""123456""/>","","",,,,,"",,,,"Identifier.value",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -104,7 +107,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Organization.telecom.period","Organization.telecom.period","","","",0,1,"","","Y","Period {[]} {[]}
 ","此聯絡方式的使用效期","此聯絡方式的使用效期","","","","","","","","","",,,,,"",,,,"ContactPoint.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A","./usablePeriod[type=""IVL<TS>""]","./StartDate and ./EndDate"
-"Organization.address","Organization.address","","","",1,1,"Y","","","Address {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Address-twcore]]} {[]}
+"Organization.address","Organization.address","","","",1,1,"Y","","","Address {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Address-tw]]} {[]}
 ","機構所在地址。","此機構的地址","機構可能有多個地址，有不同的用途或適用期。不使用代碼「home」。","為了聯絡、計費或通報要求而可能需要追踪機構的地址","","","","","","","",,,,,"",,,,"Organization.address",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 org-2:An address of an organization can never be of use 'home' {where(use = 'home').empty()}","XAD","n/a","AD","Address"
@@ -156,15 +159,15 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","XAD.1 + XAD.2 (note: XAD.1 and XAD.2 have different meanings for a company address than for a person address)","AD.part[parttype = AL]","./StreetAddress (newline delimitted)"
 "Organization.address.city","Organization.address.city","","Municpality
 鄉鎮市區","",0,1,"Y","","Y","string {[]} {[]}
-","鄉/鎮/市/區","市、鄉、鎮、村或其他社區或配送中心的名稱。","","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""Erewhon""/>","","",,,,,"",,,,"Address.city",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","鄉/鎮/市/區，定義上與國際的等級一致。原文為：Name of city, town etc.。","市、鄉、鎮、村或其他社區或配送中心的名稱。","","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""Erewhon""/>","","",,,,,"",,,,"Address.city",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XAD.3","AD.part[parttype = CTY]","./Jurisdiction"
 "Organization.address.district","Organization.address.district","","County
 市","",0,1,"Y","","Y","string {[]} {[]}
-","縣/市","行政區域（縣）的名稱","區（district）有時被稱為縣（country），但在一些區域（regions），「縣（country）」被用來代替市（直轄市），所以縣名應該用市名來代替傳達。","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""Madison""/>","","",,,,,"",,,,"Address.district",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","縣/市，定義上與國際的等級一致。原文為：District name (aka county)。","行政區域（縣）的名稱","區（district）有時被稱為縣（country），但在一些區域（regions），「縣（country）」被用來代替市（直轄市），所以縣名應該用市名來代替傳達。","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""Madison""/>","","",,,,,"",,,,"Address.district",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XAD.9","AD.part[parttype = CNT | CPA]"
 "Organization.address.state","Organization.address.state","","Province
 Territory","",0,1,"","","Y","string {[]} {[]}
-","國家的子單位（縮寫也可以）","一個國家的子單位，在聯邦組織的國家中擁有有限的主權。如果代碼被普遍使用，可使用代碼（例如：美國2個字母的州代碼）。","","","","","","","","","",,,,,"",,,,"Address.state",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","國家的子單位（縮寫也可以）。原文為：Sub-unit of country (abbreviations ok)。","一個國家的子單位，在聯邦組織的國家中擁有有限的主權。如果代碼被普遍使用，可使用代碼（例如：美國2個字母的州代碼）。","","","","","","","","","",,,,,"",,,,"Address.state",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XAD.4","AD.part[parttype = STA]","./Region"
 "Organization.address.postalCode","Organization.address.postalCode","","Zip
 ","",0,1,"Y","","Y","string {[]} {[]}
@@ -318,7 +321,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Organization.contact.telecom","Organization.contact.telecom","","","",0,*,"","","","ContactPoint {[]} {[]}
 ","聯絡人的詳細聯絡方式（例如：電話、電子郵件等）。","可與此人聯絡的詳細聯絡方式（如電話或電子郵件地址等）","","人們有（主要）方式與他們聯絡，如電話、電子郵件。","","","","","","","",,,,,"",,,,"Organization.contact.telecom",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","PID-13, PID-14","./telecom"
-"Organization.contact.address","Organization.contact.address","","","",0,1,"","","","Address {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Address-twcore]]} {[]}
+"Organization.contact.address","Organization.contact.address","","","",0,1,"","","","Address {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Address-tw]]} {[]}
 ","聯絡人的到訪或郵政地址","可到訪及郵寄聯絡人的地址","注意：地址的目的是描述用於管理目的之郵政地址，而不是描述絕對的地理座標。郵政地址經常被用作實體位置的代表（亦可見[Location](http://hl7.org/fhir/R4/location.html#)resource）。","為了聯絡、計費或通報要求而可能需要追踪機構的地址","","","","","","","",,,,,"",,,,"Organization.contact.address",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XAD","n/a","AD","Address"
