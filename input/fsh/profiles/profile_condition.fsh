@@ -12,7 +12,7 @@ Description: "長照機構住民的病情、問題或診斷資料，用以表述
 * subject only Reference(LTCPatient)
 * subject.reference 1..1 MS
 * subject.reference ^short = "擁有此病情、問題或診斷的住民。[應輸入 Patient Resource ID]"
-* recorder 1..1 MS
+* recorder 0..1 MS
 * recorder only Reference(LTCPractitioner or LTCPractitionerRole or LTCPatient or LTCRelatedPerson)
 * recorder.reference 1..1 MS
 * recorder.reference ^short = "記錄此病情、問題或診斷的人員。[應輸入 Practitioner/PractitionerRole/Patient/RelatedPerson Resource ID]"

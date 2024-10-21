@@ -1,9 +1,9 @@
-Alias: $RelatedPerson = http://hl7.org/fhir/StructureDefinition/RelatedPerson
+Alias: $TWCoreRelatedPerson = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/RelatedPerson-twcore
 Alias: $RelationshipTypeVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet/RelationshipTypeVS-TWLTC
 Alias: $ExtensionRelatedPersonIsPrimary = http://ltc-ig.fhir.tw/StructureDefinition/ExtRelatedPersonIsPrimary-TWLTC
 
 Profile: LTCRelatedPerson
-Parent: $RelatedPerson
+Parent: $TWCoreRelatedPerson
 Id: LTCRelatedPerson
 Title: "TWLTC RelatedPerson"
 Description: "住民的關係人，包含家屬、照顧者、法定代理人等與住民有關的人員資料。"
