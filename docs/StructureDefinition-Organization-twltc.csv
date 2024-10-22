@@ -1,6 +1,6 @@
 "Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: HL7 v2 Mapping","Mapping: RIM Mapping","Mapping: ServD","Mapping: FiveWs Pattern Mapping"
 "Organization","Organization","","","",0,*,"","","","null {[]} {[]}
-","長期照顧服務機構的資訊","為實現某種形式的集體行動而形成的正式或非正式認可的一群人或機構的團體。包括公司、機構、企業、部門、社群團體、健康照護實務團體、付款人／保險公司等。","","","","","","","","","",,,,,"",,,,"Organization",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
+","機構的資訊","為實現某種形式的集體行動而形成的正式或非正式認可的一群人或機構的團體。包括公司、機構、企業、部門、社群團體、健康照護實務團體、付款人／保險公司等。","","","","","","","","","",,,,,"",,,,"Organization",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
 dom-3:If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource {contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()}dom-4:If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated {contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()}dom-5:If a resource is contained in another resource, it SHALL NOT have a security label {contained.meta.security.empty()}dom-6:A resource should have narrative for robust management {text.`div`.exists()}org-1:The organization SHALL at least have a name or an identifier, and possibly more than one {(identifier.count() + name.count()) > 0}","(also see master files messages)","Entity. Role, or Act","Organization(classCode=ORG, determinerCode=INST)","Organization"
 "Organization.id","Organization.id","","","",0,1,"","","Y","id {[]} {[]}
 ","不重複的ID用以識別儲存在特定FHIR Server中的Organization紀錄，通常又稱為邏輯性ID。","resource的邏輯ID，在resource的URL中使用。一旦指定，這個值永遠不會改變。","一個resource使用新增操作（create operation）提交給伺服器時，此resource沒有id，它的id在resource被創建後由伺器分配/指定。","","","","","","","","",,,,,"",,,,"Resource.id",0,1,"",""
@@ -64,8 +64,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 
 這個資料項目被標記為修飾語／修飾用，因為它可用來標記resource是錯誤建立的。","需要一個標記表明此記錄不再被使用，一般來說應會在使用者界面中隱藏此資料項目。","","This resource is generally assumed to be active if no value is provided for the active element","","","","","",,,,,"",,,,"Organization.active",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","No equivalent in HL7 v2",".status","./Status (however this concept in ServD more covers why the organization is active or not, could be delisted, deregistered, not operational yet) this could alternatively be derived from ./StartDate and ./EndDate and given a context date.","FiveWs.status"
-"Organization.type","Organization.type","","","",0,1,"Y","","","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
-","機構的型別","機構的型別","機構可以是公司、病房、科室、臨床團隊、政府部門等。請注意，代碼通常是機構型別的分類；在許多應用程式中，若代碼是用來指明一個特定機構（例如：病房），而不是另一個相同型別的機構，那麼這些算是識別碼代碼，而不是型別代碼。
+"Organization.type","Organization.type","","","",1,1,"Y","","","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
+","機構類型","機構的型別","機構可以是公司、病房、科室、臨床團隊、政府部門等。請注意，代碼通常是機構型別的分類；在許多應用程式中，若代碼是用來指明一個特定機構（例如：病房），而不是另一個相同型別的機構，那麼這些算是識別碼代碼，而不是型別代碼。
 
 當考慮多個型別是否合適時，你應該評估子機構是否是一個更合適的概念使用，因為不同的型別可能在不同子區域的機構。這最有可能用於型別值不相關（orthogonal values）的地方，像是一個宗教的、學術的和醫學中心。
 
@@ -81,7 +81,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 
 對於查詢而言，了解此機構以前的名稱是非常有用的。","","","","","","","",,,,,"",,,,"Organization.alias",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".name"
-"Organization.telecom","Organization.telecom","","","",1,*,"Y","","","ContactPoint {[]} {[]}
+"Organization.telecom","Organization.telecom","","","",0,*,"Y","","","ContactPoint {[]} {[]}
 ","機構聯絡方式。","此機構的詳細聯絡方式","不能使用代碼 「home」。請注意，這些聯絡人不是指受僱於此機構或代表此機構的人的詳細聯絡方式，而是此機構本身的官方聯絡人。","此機構的聯絡人","","","","","","","",,,,,"",,,,"Organization.telecom",0,*,"org-3
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 org-3:The telecom of an organization can never be of use 'home' {where(use = 'home').empty()}","ORC-22?",".telecom","./ContactPoints"
@@ -95,7 +95,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","phone | fax | email | pager | url | sms | other","聯絡方式的通訊形式－需要什麼通訊系統進行聯絡","","","","","","","","","",,"required","應填入所綁定值集中的其中一個代碼。","http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1","",,,,"ContactPoint.system",0,1,"cpt-2
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XTN.3","./scheme","./ContactPointType"
-"Organization.telecom.value","Organization.telecom.value","","","",1,1,"Y","","Y","string {[]} {[]}
+"Organization.telecom.value","Organization.telecom.value","","","",0,1,"Y","","Y","string {[]} {[]}
 ","實際的聯絡方式之細節。[應填入機構電話]","實際的聯絡方式之細節，針對指定的通訊系統提供有意義的形式（電話號碼或是電子郵件位址）。","額外的文字資料，例如電話分機號碼、或關於聯絡人的說明，有時也包括於此值。","需支援非嚴格格式控制之舊有號碼","","","","","","","",,,,,"",,,,"ContactPoint.value",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XTN.1 (or XTN.12)","./url","./Value"
 "Organization.telecom.use","Organization.telecom.use","","","",0,1,"","Y","Y","code {[]} {[]}
@@ -107,7 +107,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Organization.telecom.period","Organization.telecom.period","","","",0,1,"","","Y","Period {[]} {[]}
 ","此聯絡方式的使用效期","此聯絡方式的使用效期","","","","","","","","","",,,,,"",,,,"ContactPoint.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A","./usablePeriod[type=""IVL<TS>""]","./StartDate and ./EndDate"
-"Organization.address","Organization.address","","","",1,1,"Y","","","Address {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Address-tw]]} {[]}
+"Organization.address","Organization.address","","","",0,1,"Y","","","Address {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Address-tw]]} {[]}
 ","機構所在地址。","此機構的地址","機構可能有多個地址，有不同的用途或適用期。不使用代碼「home」。","為了聯絡、計費或通報要求而可能需要追踪機構的地址","","","","","","","",,,,,"",,,,"Organization.address",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 org-2:An address of an organization can never be of use 'home' {where(use = 'home').empty()}","XAD","n/a","AD","Address"
@@ -150,7 +150,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Organization.address.type","Organization.address.type","","","",0,1,"Y","","Y","code {[]} {[]}
 ","postal ｜ physical ｜ both","區分實際地址（你可以拜訪的地址）和郵寄地址（如郵政信箱和轉遞地址），大多數地址都是這兩種。","地址的定義指出「地址旨在描述郵政地址，而不是實體位置」。但許多應用程式追蹤一個地址是否具有雙重目的，既是一個可以拜訪的地點，亦是一個有效的投遞目的地，郵政地址經常被用作實體位置的代表（亦可見[Location](http://hl7.org/fhir/R4/location.html#)resource）。","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""both""/>","","",,"required","應填入AddressType值集中的其中一個代碼","http://hl7.org/fhir/ValueSet/address-type|4.0.1","",,,,"Address.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XAD.18","unique(./use)"
-"Organization.address.text","Organization.address.text","","","",1,1,"","","Y","string {[]} {[]}
+"Organization.address.text","Organization.address.text","","","",0,1,"","","Y","string {[]} {[]}
 ","地址的文字表述。[應填入機構地址]","具體說明整個地址，因為它應該顯示在郵政標籤上，這可替代或與特定的部分一起提供。","可以同時提供文字表述和各部分的地址資料項目內容。更新地址的應用程式 **必須（SHALL）** 確保當文字表述和各部分的地址資料項目內容都存在時，文字表述不包括各部分的地址資料項目內容中沒有的內容，意即兩者內容會一致。","一個可呈現的、未編碼的形式。","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""137 Nowhere Street, Erewhon 9132""/>","","",,,,,"",,,,"Address.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XAD.1 + XAD.2 + XAD.3 + XAD.4 + XAD.5 + XAD.6","./formatted"
 "Organization.address.line","Organization.address.line","","路

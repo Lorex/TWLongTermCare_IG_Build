@@ -8,9 +8,9 @@
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCCarePlanReferral",
   "version" : "0.2.0",
   "name" : "LTCCarePlanReferral",
-  "title" : "TWLTC CarePlan Referral",
+  "title" : "轉介單－服務種類",
   "status" : "active",
-  "date" : "2024-10-22T01:35:37+08:00",
+  "date" : "2024-10-23T00:37:08+08:00",
   "publisher" : "MI-TW",
   "contact" : [{
     "name" : "MI-TW",
@@ -19,7 +19,7 @@
       "value" : "https://mitw.dicom.org.tw/"
     }]
   }],
-  "description" : "轉診單中欲申請之服務種類。",
+  "description" : "此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現轉診單中欲申請之服務種類。",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "workflow",
@@ -1418,7 +1418,7 @@
     {
       "id" : "CarePlan.status",
       "path" : "CarePlan.status",
-      "short" : "draft | active | on-hold | revoked | completed | entered-in-error | unknown",
+      "short" : "照顧計畫的狀態。[應填入以下字串之一：active | on-hold | completed | cancelled | entered-in-error | unknown]",
       "definition" : "Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.",
       "comment" : "The unknown code is not to be used to convey other statuses.  The unknown code should be used when one of the statuses applies, but the authoring system doesn't know the current state of the care plan.\n\nThis element is labeled as a modifier because the status contains the code entered-in-error that marks the plan as not currently valid.",
       "requirements" : "Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.",
@@ -1469,7 +1469,7 @@
     {
       "id" : "CarePlan.intent",
       "path" : "CarePlan.intent",
-      "short" : "proposal | plan | order | option",
+      "short" : "照顧計畫的意圖。[應填入以下字串之一：proposal | plan | order | option]",
       "definition" : "Indicates the level of authority/intentionality associated with the care plan and where the care plan fits into the workflow chain.",
       "comment" : "This element is labeled as a modifier because the intent alters when and how the resource is actually applicable.",
       "requirements" : "Proposals/recommendations, plans and orders all use the same structure and can exist in the same fulfillment chain.",

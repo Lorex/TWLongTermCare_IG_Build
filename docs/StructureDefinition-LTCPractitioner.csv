@@ -30,37 +30,10 @@ user content","",0,*,"","Y","","Extension {[]} {[]}
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
-"Practitioner.identifier","Practitioner.identifier","","","",0,*,"Y","","Y","Identifier {[]} {[]}
-","此照護服務提供人員的識別碼","此人員於此角色的識別碼","","通常此人員會被指定特定識別碼","","","","","","","",,,,,"","value:type.coding.code}
+"Practitioner.identifier","Practitioner.identifier","","","",1,*,"Y","","Y","Identifier {[]} {[]}
+","照顧服務提供者的身分識別碼","此人員於此角色的識別碼","","通常此人員會被指定特定識別碼","","","","","","","",,,,,"","value:type.coding.code}
 value:type.coding.system}","",,"open","Practitioner.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","PRD-7 (or XCN.1)","./id","./Identifiers","FiveWs.identifier"
-"Practitioner.identifier.id","Practitioner.identifier.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"Practitioner.identifier.extension","Practitioner.identifier.extension","","extensions
-user content","",0,*,"","","","Extension {[]} {[]}
-","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
-"Practitioner.identifier.use","Practitioner.identifier.use","","","",0,1,"","Y","Y","code {[]} {[]}
-","usual ｜ official ｜ temp ｜ secondary ｜ old （如果知道）","這個唯一識別碼（identifier）的用途","應用程式可以假定一個識別碼是永久的，除非它明確說它是暫時的。","允許從一組識別碼中為特定的使用情境選擇適當的識別碼","","","","","","","",,"required","識別碼的型別，用於決定特定目的所適用的識別碼；應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","http://hl7.org/fhir/ValueSet/identifier-use|4.0.1","",,,,"Identifier.use",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","N/A","Role.code or implied by context"
-"Practitioner.identifier.type","Practitioner.identifier.type","","","",0,1,"","","","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
-","照護服務提供人員的識別碼（identifier）的型別說明","識別碼的代碼型別，用於決定特定目適用的識別碼。","這個資料項目只涉及識別碼的一般類別。它 **必須沒有（SHALL NOT）** 被用於與Identifier.system 1..1對應的代碼。一些識別碼可能由於常見的用法而屬於多個類別。在系統是已知的情況下，型別是不必要的，因為型別總是系統定義的一部分。然而，系統經常需要處理系統不為人知的識別碼。型別和系統之間不是1:1的關係，因為許多不同的系統有相同的型別。","允許使用者在不知道識別碼系統的情況下利用識別碼","","","","","","","",,"extensible","應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","http://hl7.org/fhir/ValueSet/identifier-type","",,,,"Identifier.type",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE","n/a","CD"
-"Practitioner.identifier.system","Practitioner.identifier.system","","","",1,1,"","","Y","uri {[]} {[]}
-","照護服務提供人員識別碼（identifier）的命名空間（namespace）","建立值的命名空間－即一個描述一組值的唯一URL","Identifier.system總是區分大小寫","有許多識別碼的集合。為了進行兩個識別碼的對應，我們需要知道我們處理的是哪一組。系統指明了一個特定的唯一識別碼集。","","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://www.acme.com/identifiers/patient""/>","","",,,,,"",,,,"Identifier.system",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CX.4 / EI-2-4","II.root or Role.id.root","./IdentifierType"
-"Practitioner.identifier.value","Practitioner.identifier.value","","","",1,1,"","","Y","string {[]} {[]}
-","唯一值。
-例如：照護服務提供人員之員工編號為KP00017","識別碼中通常與使用者有關的部分，在系統情境內是唯一的。","如果此值是一個完整的URI，那麼此系統 **必須（SHALL）** 是urn:ietf:rfc:3986。此值的主要目的是為了可運算的對應。因此，為了比較的目的，它可能會被正規化（例如：去除不重要的空白、破折號等）。一個為人顯示的格式化的值可以使用[Rendered Value](http://hl7.org/fhir/R4/extension-rendered-value.html)擴充來傳達。除非對Identifier.system的了解使處理者確信不區分大小寫的處理是安全的，否則Identifier.value應被視為區分大小寫。","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""123456""/>","","",,,,,"",,,,"Identifier.value",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CX.1 / EI.1","II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)","./Value"
-"Practitioner.identifier.period","Practitioner.identifier.period","","","",0,1,"","","Y","Period {[]} {[]}
-","此身份識別碼（identifier）的使用效期","識別碼有效／曾經有效使用的時段或期間","","","","","","","","","",,,,,"",,,,"Identifier.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CX.7 + CX.8","Role.effectiveTime or implied by context","./StartDate and ./EndDate"
-"Practitioner.identifier.assigner","Practitioner.identifier.assigner","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
-","簽發identifier的機構（可以只是文字表述）","簽發／管理識別碼的機構","Identifier.assigner可以省略.reference資料項目，只包含一個.display資料項目，反映指定機構的名稱或其他文字表述資訊。","","","","","","","","",,,,,"",,,,"Identifier.assigner",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CX.4 / (CX.4,CX.9,CX.10)","II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper","./IdentifierIssuingAuthority"
 "Practitioner.identifier:idCardNumber","Practitioner.identifier","idCardNumber","","",0,1,"Y","","Y","Identifier {[]} {[]}
 ","適用身分證字號","適用於身分證字號","","通常此人員總是被指定一個特定的數值型的唯一識別碼（identifier）","","","","","","","",,,,,"",,,,"Practitioner.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 id-card-number:身分證號共十碼，首碼以英文字母代表直轄市、縣（市）別，第二碼至第十碼為數字碼。 {value.matches('^[A-Za-z][0-9]{9}$')}","PRD-7 (or XCN.1)","./id","./Identifiers","FiveWs.identifier"
@@ -336,7 +309,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","此照護服務提供人員的紀錄是否在使用中","此照護服務提供人員的紀錄是否在使用中","如果機構未使用此照護服務提供人員紀錄，那麼應該在PractitonerRole上標註結束日期（即使他們是使用中的），因為他們可能以另一種角色存在。","由於照護服務提供人員的紀錄被錯誤建立，需能將其紀錄標註為非使用中。","","This resource is generally assumed to be active if no value is provided for the active element","","","","","",,,,,"",,,,"Practitioner.active",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./statusCode","FiveWs.status"
 "Practitioner.name","Practitioner.name","","","",1,*,"Y","","Y","HumanName {[]} {[]}
-","長期照顧服務提供人員姓名","照護服務提供人員的姓名","使用屬性的選擇應確保有一個指定的常用名稱，其他名稱應根據需要使用暱稱（別名）、舊名或其他值。
+","照顧服務提供者的姓名","照護服務提供人員的姓名","使用屬性的選擇應確保有一個指定的常用名稱，其他名稱應根據需要使用暱稱（別名）、舊名或其他值。
  
 一般來說，根據以下條件決定要在ResourceReference.display中使用的值：
  

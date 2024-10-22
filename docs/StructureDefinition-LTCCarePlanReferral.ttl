@@ -15,9 +15,9 @@
   fhir:url [ fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCCarePlanReferral"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.2.0"] ; # 
   fhir:name [ fhir:v "LTCCarePlanReferral"] ; # 
-  fhir:title [ fhir:v "TWLTC CarePlan Referral"] ; # 
+  fhir:title [ fhir:v "轉介單－服務種類"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-10-22T01:35:37+08:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-10-23T00:37:08+08:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "MI-TW"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "MI-TW" ] ;
@@ -26,7 +26,7 @@
        fhir:value [ fhir:v "https://mitw.dicom.org.tw/" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "轉診單中欲申請之服務種類。"] ; # 
+  fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現轉診單中欲申請之服務種類。"] ; # 
   fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
   fhir:mapping ( [
      fhir:identity [ fhir:v "workflow" ] ;
@@ -1523,7 +1523,7 @@
      ] [
        fhir:id [ fhir:v "CarePlan.status" ] ;
        fhir:path [ fhir:v "CarePlan.status" ] ;
-       fhir:short [ fhir:v "draft | active | on-hold | revoked | completed | entered-in-error | unknown" ] ;
+       fhir:short [ fhir:v "照顧計畫的狀態。[應填入以下字串之一：active | on-hold | completed | cancelled | entered-in-error | unknown]" ] ;
        fhir:definition [ fhir:v "Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record." ] ;
        fhir:comment [ fhir:v "The unknown code is not to be used to convey other statuses.  The unknown code should be used when one of the statuses applies, but the authoring system doesn't know the current state of the care plan.\n\nThis element is labeled as a modifier because the status contains the code entered-in-error that marks the plan as not currently valid." ] ;
        fhir:requirements [ fhir:v "Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record." ] ;
@@ -1576,7 +1576,7 @@
      ] [
        fhir:id [ fhir:v "CarePlan.intent" ] ;
        fhir:path [ fhir:v "CarePlan.intent" ] ;
-       fhir:short [ fhir:v "proposal | plan | order | option" ] ;
+       fhir:short [ fhir:v "照顧計畫的意圖。[應填入以下字串之一：proposal | plan | order | option]" ] ;
        fhir:definition [ fhir:v "Indicates the level of authority/intentionality associated with the care plan and where the care plan fits into the workflow chain." ] ;
        fhir:comment [ fhir:v "This element is labeled as a modifier because the intent alters when and how the resource is actually applicable." ] ;
        fhir:requirements [ fhir:v "Proposals/recommendations, plans and orders all use the same structure and can exist in the same fulfillment chain." ] ;

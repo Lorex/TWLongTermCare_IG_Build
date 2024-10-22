@@ -12,9 +12,9 @@
   <url value="http://ltc-ig.fhir.tw/StructureDefinition/LTCCarePlanReferral"/>
   <version value="0.2.0"/>
   <name value="LTCCarePlanReferral"/>
-  <title value="TWLTC CarePlan Referral"/>
+  <title value="轉介單－服務種類"/>
   <status value="active"/>
-  <date value="2024-10-22T01:35:37+08:00"/>
+  <date value="2024-10-23T00:37:08+08:00"/>
   <publisher value="MI-TW"/>
   <contact>
     <name value="MI-TW"/>
@@ -23,7 +23,7 @@
       <value value="https://mitw.dicom.org.tw/"/>
     </telecom>
   </contact>
-  <description value="轉診單中欲申請之服務種類。"/>
+  <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現轉診單中欲申請之服務種類。"/>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="workflow"/>
@@ -1366,7 +1366,7 @@
     </element>
     <element id="CarePlan.status">
       <path value="CarePlan.status"/>
-      <short value="draft | active | on-hold | revoked | completed | entered-in-error | unknown"/>
+      <short value="照顧計畫的狀態。[應填入以下字串之一：active | on-hold | completed | cancelled | entered-in-error | unknown]"/>
       <definition value="Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record."/>
       <comment value="The unknown code is not to be used to convey other statuses.  The unknown code should be used when one of the statuses applies, but the authoring system doesn't know the current state of the care plan.&#xA;&#xA;This element is labeled as a modifier because the status contains the code entered-in-error that marks the plan as not currently valid."/>
       <requirements value="Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record."/>
@@ -1416,7 +1416,7 @@
     </element>
     <element id="CarePlan.intent">
       <path value="CarePlan.intent"/>
-      <short value="proposal | plan | order | option"/>
+      <short value="照顧計畫的意圖。[應填入以下字串之一：proposal | plan | order | option]"/>
       <definition value="Indicates the level of authority/intentionality associated with the care plan and where the care plan fits into the workflow chain."/>
       <comment value="This element is labeled as a modifier because the intent alters when and how the resource is actually applicable."/>
       <requirements value="Proposals/recommendations, plans and orders all use the same structure and can exist in the same fulfillment chain."/>

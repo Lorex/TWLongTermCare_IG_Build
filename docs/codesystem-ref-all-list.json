@@ -265,6 +265,18 @@
       "http://hl7.org/fhir/R5/valueset-publication-status.html" : "PublicationStatus"
     },
     {
+      "url" : "http://hl7.org/fhir/quantity-comparator",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "QuantityComparator",
+      "title" : "QuantityComparator",
+      "description" : "How the Quantity should be understood and represented.",
+      "oids" : ["2.16.840.1.113883.4.642.4.60"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-quantity-comparator.html" : "QuantityComparator"
+    },
+    {
       "url" : "http://hl7.org/fhir/questionnaire-answers-status",
       "version" : "4.0.1",
       "status" : "draft",
@@ -346,8 +358,8 @@
       "description" : "One of the resource types defined as part of this version of FHIR.",
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-resource-types.html" : "ResourceType",
-      "http://hl7.org/fhir/R4/valueset-care-plan-activity-kind.html" : "Care Plan Activity Kind"
+      "http://hl7.org/fhir/R4/valueset-care-plan-activity-kind.html" : "Care Plan Activity Kind",
+      "http://hl7.org/fhir/R4/valueset-resource-types.html" : "ResourceType"
     },
     {
       "url" : "http://hl7.org/fhir/search-entry-mode",
@@ -382,15 +394,16 @@
       "oids" : ["2.16.840.1.113883.6.1"],
       "uses" : {
       },
-      "https://twcore.mohw.gov.tw/ig/twcore/0.3.0/ValueSet-vital-signs-tw.html" : "生命體徵值集",
-      "http://hl7.org/fhir/R4/valueset-questionnaire-questions.html" : "Questionnaire Question Codes",
-      "ValueSet-GoalDescriptionVS-TWLTC.html" : "照顧目標描述值集",
-      "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
-      "http://hl7.org/fhir/R4/valueset-care-team-category.html" : "Care Team category",
-      "ValueSet-FallHistoryResultVS-TWLTC.html" : "跌倒紀錄結果值集",
       "https://twcore.mohw.gov.tw/ig/twcore/0.3.0/ValueSet-loinc-document-classcodes.html" : "LOINC Document Class值集",
+      "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
+      "ValueSet-GoalDescriptionVS-TWLTC.html" : "照顧目標描述值集",
+      "ValueSet-FallHistoryResultVS-TWLTC.html" : "跌倒紀錄結果值集",
+      "https://twcore.mohw.gov.tw/ig/twcore/0.3.0/ValueSet-loinc-type-doc-code.html" : "LOINC Code Document Type值集",
       "https://twcore.mohw.gov.tw/ig/twcore/0.3.0/ValueSet-loinc-doc-section-code.html" : "LOINC Code Document Section值集",
-      "https://twcore.mohw.gov.tw/ig/twcore/0.3.0/ValueSet-loinc-type-doc-code.html" : "LOINC Code Document Type值集"
+      "http://hl7.org/fhir/R4/valueset-questionnaire-questions.html" : "Questionnaire Question Codes",
+      "http://hl7.org/fhir/R4/valueset-care-team-category.html" : "Care Team category",
+      "https://twcore.mohw.gov.tw/ig/twcore/0.3.0/ValueSet-vital-signs-tw.html" : "生命體徵值集",
+      "http://hl7.org/fhir/R4/valueset-observation-vitalsignresult.html" : "Vital Signs"
     },
     {
       "url" : "http://ltc-ig.fhir.tw/CodeSystem/AddressUseCS-TWLTC",
@@ -459,15 +472,15 @@
       "ValueSet-EducationStatusVS-TWLTC.html" : "教育程度值集"
     },
     {
-      "url" : "http://ltc-ig.fhir.tw/CodeSystem/GaitCycleCS-Sports",
+      "url" : "http://ltc-ig.fhir.tw/CodeSystem/GaitCycleCS-Sport",
       "version" : "0.2.0",
       "status" : "active",
-      "name" : "GaitCycleCSSports",
+      "name" : "GaitCycleCSSport",
       "title" : "身體活動量測-步態週期",
       "description" : "一個步伐的完整過程，從一隻腳接觸地面開始到同一隻腳再次接觸地面結束。這個過程可以分為兩個主要階段：支撐期（stance phase）和擺動期（swing phase）。本 CodeSystem 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
       "uses" : {
       },
-      "ValueSet-GaitCycleVS-Sports.html" : "身體活動量測-步態週期值集"
+      "ValueSet-GaitCycleVS-Sport.html" : "身體活動量測-步態週期值集"
     },
     {
       "url" : "http://ltc-ig.fhir.tw/CodeSystem/ICD-10-PCS-2023-TW-F-CS",
@@ -558,7 +571,7 @@
       "ValueSet-RelationshipTypeVS-TWLTC.html" : "關係類型擴展值集"
     },
     {
-      "url" : "http://ltc-ig.fhir.tw/CodeSystem/SportTrainingCS-Sports",
+      "url" : "http://ltc-ig.fhir.tw/CodeSystem/SportTrainingCS-Sport",
       "version" : "0.2.0",
       "status" : "active",
       "name" : "SportTrainingCS",
@@ -566,18 +579,18 @@
       "description" : "此代碼系統定義重量訓練各個方面的代碼，包括使用的重量、執行的組數以及每組的重複次數。本 CodeSystem 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。",
       "uses" : {
       },
-      "ValueSet-SportTrainingVS-Sports.html" : "身體活動量測-重量訓練代碼值集"
+      "ValueSet-SportTrainingVS-Sport.html" : "身體活動量測-重量訓練代碼值集"
     },
     {
-      "url" : "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sports",
+      "url" : "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport",
       "version" : "0.2.0",
       "status" : "active",
-      "name" : "TempCodeCSSports",
+      "name" : "TempCodeCSSport",
       "title" : "身體活動量測-暫用代碼",
       "description" : "身體活動量測暫時使用的代碼，目前無官方代碼。本 CodeSystem 繼承自身體活動量測 IG，後續將配合官方代碼更新。",
       "uses" : {
       },
-      "ValueSet-TempCodeVS-Sports.html" : "身體活動量測-暫用代碼值集"
+      "ValueSet-TempCodeVS-Sport.html" : "身體活動量測-暫用代碼值集"
     },
     {
       "url" : "http://snomed.info/sct",
@@ -589,35 +602,35 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "https://twcore.mohw.gov.tw/ig/twcore/0.3.0/ValueSet-health-professional-sct-tw.html" : "SNOMED CT + 臺灣醫事司醫事人員類別值集",
       "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
-      "ValueSet-GoalDescriptionVS-TWLTC.html" : "照顧目標描述值集",
-      "http://hl7.org/fhir/R4/valueset-servicerequest-category.html" : "Service Request Category Codes",
-      "http://hl7.org/fhir/R4/valueset-reason-medication-not-given-codes.html" : "SNOMED CT Reason Medication Not Given Codes",
-      "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
-      "http://hl7.org/fhir/R4/valueset-condition-stage.html" : "Condition Stage",
-      "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
       "http://hl7.org/fhir/R4/valueset-goal-start-event.html" : "Goal start event",
-      "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes",
-      "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
-      "http://hl7.org/fhir/R4/valueset-questionnaire-answers.html" : "Questionnaire Answer Codes",
-      "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
-      "http://hl7.org/fhir/R4/valueset-participant-role.html" : "Participant Roles",
-      "https://twcore.mohw.gov.tw/ig/twcore/0.3.0/ValueSet-medical-department-sct-tw.html" : "對應至 SNOMED CT之就醫科別 + 診療科別值集",
-      "https://twcore.mohw.gov.tw/ig/twcore/0.3.0/ValueSet-serviceRequest-category.html" : "臺灣衛福部資訊處ServiceRequest類型值集",
+      "http://hl7.org/fhir/R4/valueset-condition-stage.html" : "Condition Stage",
       "http://hl7.org/fhir/R4/valueset-approach-site-codes.html" : "SNOMED CT Anatomical Structure for Administration Site Codes",
-      "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
-      "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity",
-      "https://twcore.mohw.gov.tw/ig/twcore/0.3.0/ValueSet-condition-code-sct-tw.html" : "SNOMED CT診斷代碼值集",
-      "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
-      "http://hl7.org/fhir/R4/valueset-route-codes.html" : "SNOMED CT Route Codes",
+      "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
+      "http://hl7.org/fhir/R4/valueset-administration-method-codes.html" : "SNOMED CT Administration Method Codes",
       "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
+      "http://hl7.org/fhir/R4/valueset-servicerequest-category.html" : "Service Request Category Codes",
+      "http://hl7.org/fhir/R4/valueset-participant-role.html" : "Participant Roles",
+      "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
       "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
       "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
-      "http://hl7.org/fhir/R4/valueset-administration-method-codes.html" : "SNOMED CT Administration Method Codes",
-      "http://hl7.org/fhir/R4/valueset-condition-stage-type.html" : "Condition Stage Type",
+      "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
       "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
-      "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes"
+      "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
+      "http://hl7.org/fhir/R4/valueset-condition-stage-type.html" : "Condition Stage Type",
+      "https://twcore.mohw.gov.tw/ig/twcore/0.3.0/ValueSet-health-professional-sct-tw.html" : "SNOMED CT + 臺灣醫事司醫事人員類別值集",
+      "http://hl7.org/fhir/R4/valueset-route-codes.html" : "SNOMED CT Route Codes",
+      "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
+      "http://hl7.org/fhir/R4/valueset-reason-medication-not-given-codes.html" : "SNOMED CT Reason Medication Not Given Codes",
+      "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
+      "ValueSet-GoalDescriptionVS-TWLTC.html" : "照顧目標描述值集",
+      "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
+      "https://twcore.mohw.gov.tw/ig/twcore/0.3.0/ValueSet-medical-department-sct-tw.html" : "對應至 SNOMED CT之就醫科別 + 診療科別值集",
+      "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes",
+      "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity",
+      "https://twcore.mohw.gov.tw/ig/twcore/0.3.0/ValueSet-condition-code-sct-tw.html" : "SNOMED CT診斷代碼值集",
+      "http://hl7.org/fhir/R4/valueset-questionnaire-answers.html" : "Questionnaire Answer Codes",
+      "https://twcore.mohw.gov.tw/ig/twcore/0.3.0/ValueSet-serviceRequest-category.html" : "臺灣衛福部資訊處ServiceRequest類型值集"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/condition-category",
@@ -785,8 +798,8 @@
       "oids" : ["2.16.840.1.113883.4.642.1.1125"],
       "uses" : {
       },
-      "https://twcore.mohw.gov.tw/ig/twcore/0.3.0/ValueSet-category-code-tw.html" : "臺灣衛福部資訊處類型代碼值集",
-      "http://hl7.org/fhir/R4/valueset-observation-category.html" : "Observation Category Codes"
+      "http://hl7.org/fhir/R4/valueset-observation-category.html" : "Observation Category Codes",
+      "https://twcore.mohw.gov.tw/ig/twcore/0.3.0/ValueSet-category-code-tw.html" : "臺灣衛福部資訊處類型代碼值集"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/organization-type",
@@ -834,8 +847,8 @@
       "oids" : ["2.16.840.1.113883.18.58"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html" : "Patient relationship type",
-      "ValueSet-RelationshipTypeVS-TWLTC.html" : "關係類型擴展值集"
+      "ValueSet-RelationshipTypeVS-TWLTC.html" : "關係類型擴展值集",
+      "http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html" : "Patient relationship type"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v2-0203",
@@ -921,8 +934,8 @@
       "uses" : {
       },
       "http://terminology.hl7.org/6.0.2/ValueSet-v3-ServiceDeliveryLocationRoleType.html" : "ServiceDeliveryLocationRoleType",
-      "http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html" : "Patient relationship type",
-      "ValueSet-RelationshipTypeVS-TWLTC.html" : "關係類型擴展值集"
+      "ValueSet-RelationshipTypeVS-TWLTC.html" : "關係類型擴展值集",
+      "http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html" : "Patient relationship type"
     },
     {
       "url" : "http://unitsofmeasure.org",
