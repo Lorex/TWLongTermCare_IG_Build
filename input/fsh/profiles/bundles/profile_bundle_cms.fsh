@@ -1,11 +1,8 @@
 Profile: LTCBundleCMS
 Parent: $TWCoreBundleDocument
 Id: LTCBundleCMS
-Title: "TWLTC Bundle CMS"
-Description: "照顧管理評估量表
-
-本 Bundle 以衛生福利部長期照顧管理中心照顧管理評估量表為基礎，用以表述照顧管理評估量表的文件結構。"
-
+Title: "照顧管理評估量表文件打包"
+Description: "此 Bundle 以衛生福利部長期照顧管理中心照顧管理評估量表為基礎，用以表述照顧管理評估量表的文件打包結構。"
 
 * type 1..1 MS
 * type ^short = "Bundle 的類型"

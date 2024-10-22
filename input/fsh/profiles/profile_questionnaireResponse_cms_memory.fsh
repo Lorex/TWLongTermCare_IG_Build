@@ -1,8 +1,8 @@
 Profile: LTCQuestionnaireResponseCMSMemory
 Parent: LTCQuestionnaireResponse
 Id: LTCQuestionnaireResponseCMSMemory
-Title: "TWLTC QuestionnaireResponse CMS Memory"
-Description: "照顧管理評估量表－個案短期記憶力問卷回覆"
+Title: "照顧管理評估量表－個案短期記憶力問卷回覆"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－個案短期記憶力問卷的回覆資料。"
 
 * item 1..5 MS
 * item ^short = "問卷回覆的內容"

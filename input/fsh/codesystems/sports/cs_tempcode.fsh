@@ -1,5 +1,5 @@
-CodeSystem: TempCodeCSSports
-Id: TempCodeCS-Sports
+CodeSystem: TempCodeCSSport
+Id: TempCodeCS-Sport
 Title: "身體活動量測-暫用代碼"
 Description: "身體活動量測暫時使用的代碼，目前無官方代碼。本 CodeSystem 繼承自身體活動量測 IG，後續將配合官方代碼更新。"
 

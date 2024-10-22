@@ -1,5 +1,5 @@
-ValueSet: ServiceRequestPAVSSports
-Id: ServiceRequestPAVS-Sports
+ValueSet: ServiceRequestPAVSSport
+Id: ServiceRequestPAVS-Sport
 Title: "身體活動量測-適用運動處方之服務請求代碼值集"
 Description: "適用運動處方之服務請求代碼。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。"
 

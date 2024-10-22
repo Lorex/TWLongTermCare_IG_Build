@@ -4,8 +4,8 @@ Alias: $VSPublicationStatus = http://hl7.org/fhir/ValueSet/publication-status
 Profile: LTCQuestionnaire
 Parent: $Questionnaire
 Id: LTCQuestionnaire
-Title: "TWLTC Questionnaire"
-Description: "問卷，用以表述長期照顧情境中涉及之問卷或量表內容。"
+Title: "長期照顧－問卷"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Questionnaire Resource，以呈現長期照顧情境中涉及之問卷或量表內容。"
 
 * url 0..1 MS
 * url ^short = "問卷的網址"

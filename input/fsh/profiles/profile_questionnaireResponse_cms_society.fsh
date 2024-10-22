@@ -1,8 +1,8 @@
 Profile: LTCQuestionnaireResponseCMSSociety
 Parent: LTCQuestionnaireResponse
 Id: LTCQuestionnaireResponseCMSSociety
-Title: "TWLTC QuestionnaireResponse CMS Society"
-Description: "照顧管理評估量表－居家環境與社會參與"
+Title: "照顧管理評估量表－居家環境與社會參與問卷回覆"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－居家環境與社會參與問卷的回覆資料。"
 
 * item 4..11 MS
 * item ^slicing.discriminator.type = #value

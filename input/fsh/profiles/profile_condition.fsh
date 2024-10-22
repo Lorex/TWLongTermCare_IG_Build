@@ -3,8 +3,8 @@ Alias: $TWCoreCondition = https://twcore.mohw.gov.tw/ig/twcore/StructureDefiniti
 Profile: LTCCondition
 Parent: $TWCoreCondition
 Id: LTCCondition
-Title: "TWLTC Condition"
-Description: "長照機構住民的病情、問題或診斷資料，用以表述發生在長照機構住民的診斷，或需要特別注意或處理的健康問題與病情。"
+Title: "長期照顧－病情、問題或診斷"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的病情、問題或診斷資料。"
 
 * code 1..1 MS
 * code ^short = "病情、問題或診斷的識別"

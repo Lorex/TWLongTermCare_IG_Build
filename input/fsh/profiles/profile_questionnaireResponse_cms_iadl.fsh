@@ -1,143 +1,107 @@
-Profile: LTCQuestionnaireResponseCMSADL
+Profile: LTCQuestionnaireResponseCMSIADL
 Parent: LTCQuestionnaireResponse
-Id: LTCQuestionnaireResponseCMSADL
-Title: "TWLTC QuestionnaireResponse CMS ADL"
-Description: "照顧管理評估量表－個案日常生活能力問卷回覆"
-* item 11..11 MS
+Id: LTCQuestionnaireResponseCMSIADL
+Title: "照顧管理評估量表－個案獨立生活能力問卷回覆"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－個案獨立生活能力問卷 (IADLs) 的回覆資料。"
+* item 8..8 MS
 * item ^short = "E. 個案日常活動功能量表"
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
 * item ^slicing.rules = #open
 * item contains
-    item-E1 1..1 MS and
-    item-E2 1..1 MS and
-    item-E3 1..1 MS and
-    item-E4 1..1 MS and
-    item-E5 1..1 MS and
-    item-E6 1..1 MS and
-    item-E7 1..1 MS and
-    item-E8 1..1 MS and
-    item-E9 1..1 MS and
-    item-E10 1..1 MS and
-    item-E11 1..1 MS
-* item[item-E1] ^short = "E1. 吃飯"
-* item[item-E1].linkId 1..1 MS
-* item[item-E1].linkId = "E1"
-* item[item-E1].text 1..1 MS
-* item[item-E1].text = "吃飯"
-* item[item-E1].answer 1..1 MS
-* item[item-E1].answer ^short = "吃飯的回覆"
-* item[item-E1].answer.value[x] 1..1 MS
-* item[item-E1].answer.value[x] only string
-* item[item-E1].answer.valueString 1..1 MS
-* item[item-E1].answer.valueString ^short = "吃飯的回覆。[應填入以下字串之一：在合理時間（一小時）內，自行或用輔具進食餐盤食物 | 需要一些協助 | 需完全協助（完全依賴）]"
-* item[item-E2] ^short = "E2. 洗澡"
-* item[item-E2].linkId 1..1 MS
-* item[item-E2].linkId = "E2"
-* item[item-E2].text 1..1 MS
-* item[item-E2].text = "洗澡"
-* item[item-E2].answer 1..1 MS
-* item[item-E2].answer ^short = "洗澡的回覆"
-* item[item-E2].answer.value[x] 1..1 MS
-* item[item-E2].answer.value[x] only string
-* item[item-E2].answer.valueString 1..1 MS
-* item[item-E2].answer.valueString ^short = "洗澡的回覆。[應填入以下字串之一：能自行完成 | 協助下完成]"
-* item[item-E3] ^short = "E3. 個人修飾"
-* item[item-E3].linkId 1..1 MS
-* item[item-E3].linkId = "E3"
-* item[item-E3].text 1..1 MS
-* item[item-E3].text = "個人修飾"
-* item[item-E3].answer 1..1 MS
-* item[item-E3].answer ^short = "個人修飾的回覆"
-* item[item-E3].answer.value[x] 1..1 MS
-* item[item-E3].answer.value[x] only string
-* item[item-E3].answer.valueString 1..1 MS
-* item[item-E3].answer.valueString ^short = "個人修飾的回覆。[應填入以下字串之一：可自行洗臉、洗手、刷牙、梳頭、刮鬍子修飾 | 需協助]"
-* item[item-E4] ^short = "E4. 穿脫衣物"
-* item[item-E4].linkId 1..1 MS
-* item[item-E4].linkId = "E4"
-* item[item-E4].text 1..1 MS
-* item[item-E4].text = "穿脫衣物"
-* item[item-E4].answer 1..1 MS
-* item[item-E4].answer ^short = "穿脫衣物的回覆"
-* item[item-E4].answer.value[x] 1..1 MS
-* item[item-E4].answer.value[x] only string
-* item[item-E4].answer.valueString 1..1 MS
-* item[item-E4].answer.valueString ^short = "穿脫衣物的回覆。[應填入以下字串之一：自行穿脫衣褲及鞋襪 | 需協助 | 需完全協助（完全依賴）]"
-* item[item-E5] ^short = "E5. 大便控制"
-* item[item-E5].linkId 1..1 MS
-* item[item-E5].linkId = "E5"
-* item[item-E5].text 1..1 MS
-* item[item-E5].text = "大便控制"
-* item[item-E5].answer 1..1 MS
-* item[item-E5].answer ^short = "大便控制的回覆"
-* item[item-E5].answer.value[x] 1..1 MS
-* item[item-E5].answer.value[x] only string
-* item[item-E5].answer.valueString 1..1 MS
-* item[item-E5].answer.valueString ^short = "大便控制的回覆。[應填入以下字串之一：無失禁（控），或當便秘時，能自行用塞劑、甘油球 | 偶爾失禁（控），或當便秘時需協助用塞劑 | 需完全協助（完全依賴）]"
-* item[item-E6] ^short = "E6. 小便控制"
-* item[item-E6].linkId 1..1 MS
-* item[item-E6].linkId = "E6"
-* item[item-E6].text 1..1 MS
-* item[item-E6].text = "小便控制"
-* item[item-E6].answer 1..1 MS
-* item[item-E6].answer ^short = "小便控制的回覆"
-* item[item-E6].answer.value[x] 1..1 MS
-* item[item-E6].answer.value[x] only string
-* item[item-E6].answer.valueString 1..1 MS
-* item[item-E6].answer.valueString ^short = "小便控制的回覆。[應填入以下字串之一：無失禁（控） | 偶爾失禁（控） | 需完全協助（完全依賴）]"
-* item[item-E7] ^short = "E7. 上廁所"
-* item[item-E7].linkId 1..1 MS
-* item[item-E7].linkId = "E7"
-* item[item-E7].text 1..1 MS
-* item[item-E7].text = "上廁所"
-* item[item-E7].answer 1..1 MS
-* item[item-E7].answer ^short = "上廁所的回覆"
-* item[item-E7].answer.value[x] 1..1 MS
-* item[item-E7].answer.value[x] only string
-* item[item-E7].answer.valueString 1..1 MS 
-* item[item-E7].answer.valueString ^short = "上廁所的回覆。[應填入以下字串之一：可自行上下馬桶、整理衣褲、使用衛生紙、沖馬桶或清理便盆（尿壺） | 需協助整理衣物或使用衛生紙或需協助清理便盆（尿壺） | 需完全協助（完全依賴）]"
-* item[item-E8] ^short = "E8. 移位"
-* item[item-E8].linkId 1..1 MS
-* item[item-E8].linkId = "E8"
-* item[item-E8].text 1..1 MS
-* item[item-E8].text = "移位"
-* item[item-E8].answer 1..1 MS
-* item[item-E8].answer ^short = "移位的回覆"
-* item[item-E8].answer.value[x] 1..1 MS
-* item[item-E8].answer.value[x] only string
-* item[item-E8].answer.valueString 1..1 MS
-* item[item-E8].answer.valueString ^short = "移位的回覆。[應填入以下字串之一：可自行維持坐姿平衡，移至椅子或用輪椅 | 移位時需少部分協助或提醒 | 可自行維持坐姿平衡，離床需大部分協助 | 需完全協助（完全依賴）]"
-* item[item-E9] ^short = "E9. 走路"
-* item[item-E9].linkId 1..1 MS
-* item[item-E9].linkId = "E9"
-* item[item-E9].text 1..1 MS
-* item[item-E9].text = "走路"
-* item[item-E9].answer 1..1 MS
-* item[item-E9].answer ^short = "走路的回覆"
-* item[item-E9].answer.value[x] 1..1 MS
-* item[item-E9].answer.value[x] only string
-* item[item-E9].answer.valueString 1..1 MS
-* item[item-E9].answer.valueString ^short = "走路的回覆。[應填入以下字串之一：獨立走 50 公尺以上（可用輔具） | 需協助扶持走 50 公尺以上 | 不能步行 50 公尺，但能操縱輪椅 50 公尺 | 不能步行 50 公尺，且無法操縱輪椅]"
-* item[item-E10] ^short = "E10. 上下樓梯"
-* item[item-E10].linkId 1..1 MS
-* item[item-E10].linkId = "E10"
-* item[item-E10].text 1..1 MS
-* item[item-E10].text = "上下樓梯"
-* item[item-E10].answer 1..1 MS
-* item[item-E10].answer ^short = "上下樓梯的回覆"
-* item[item-E10].answer.value[x] 1..1 MS
-* item[item-E10].answer.value[x] only string
-* item[item-E10].answer.valueString 1..1 MS
-* item[item-E10].answer.valueString ^short = "上下樓梯的回覆。[應填入以下字串之一：安全上下樓梯，可用扶手、拐杖 | 需協助、監督或持續敦促 | 無法上下樓]"
-* item[item-E11] ^short = "E11. 行動能力"
-* item[item-E11].linkId 1..1 MS
-* item[item-E11].linkId = "E11"
-* item[item-E11].text 1..1 MS
-* item[item-E11].text = "請問您目前行動能力如何？"
-* item[item-E11].answer 1..1 MS
-* item[item-E11].answer ^short = "行動能力的回覆"
-* item[item-E11].answer.value[x] 1..1 MS
-* item[item-E11].answer.value[x] only string
-* item[item-E11].answer.valueString 1..1 MS
-* item[item-E11].answer.valueString ^short = "行動能力的回覆。[應填入以下字串之一：可以在平坦地面上跑跳 | 可在平坦地面上輕鬆行走，但在不平坦地面上行走相當吃力 | 自己行走需扶持穩定物或需透過他人扶持才能行走 | 無法跨步行走，坐在一般靠背高度有扶手的椅子上可保持坐姿穩定與平衡 | 坐在一般靠背高度有扶手的椅子上無法維持坐姿]"
+    item-F1 1..1 MS and
+    item-F2 1..1 MS and
+    item-F3 1..1 MS and
+    item-F4 1..1 MS and
+    item-F5 1..1 MS and
+    item-F6 1..1 MS and
+    item-F7 1..1 MS and
+    item-F8 1..1 MS
+* item[item-F1] ^short = "F1. 使用電話"
+* item[item-F1].linkId 1..1 MS
+* item[item-F1].linkId = "F1"
+* item[item-F1].text 1..1 MS
+* item[item-F1].text = "使用電話"
+* item[item-F1].answer 1..1 MS
+* item[item-F1].answer ^short = "使用電話的回覆"
+* item[item-F1].answer.value[x] 1..1 MS
+* item[item-F1].answer.value[x] only string
+* item[item-F1].answer.valueString 1..1 MS
+* item[item-F1].answer.valueString ^short = "使用電話的回覆。[應填入以下字串之一：能獨立使用電話，含查電話簿、撥號等 | 僅能撥熟悉的電話號碼 | 僅能接電話，但不能撥電話 | 完全不能使用電話]"
+* item[item-F2] ^short = "F2. 購物"
+* item[item-F2].linkId 1..1 MS
+* item[item-F2].linkId = "F2"
+* item[item-F2].text 1..1 MS
+* item[item-F2].text = "購物"
+* item[item-F2].answer 1..1 MS
+* item[item-F2].answer ^short = "購物的回覆"
+* item[item-F2].answer.value[x] 1..1 MS
+* item[item-F2].answer.value[x] only string
+* item[item-F2].answer.valueString 1..1 MS
+* item[item-F2].answer.valueString ^short = "購物的回覆。[應填入以下字串之一：能獨立完成所有購物需求 | 只能獨立購買日常生活用品 | 每一次購物都需要有人陪 | 完全不能獨自購物]"
+* item[item-F3] ^short = "F3. 備餐"
+* item[item-F3].linkId 1..1 MS
+* item[item-F3].linkId = "F3"
+* item[item-F3].text 1..1 MS
+* item[item-F3].text = "備餐"
+* item[item-F3].answer 1..1 MS
+* item[item-F3].answer ^short = "備餐的回覆"
+* item[item-F3].answer.value[x] 1..1 MS
+* item[item-F3].answer.value[x] only string
+* item[item-F3].answer.valueString 1..1 MS
+* item[item-F3].answer.valueString ^short = "備餐的回覆。[應填入以下字串之一：能獨立計畫、準備食材及佐料、烹煮和擺設一頓飯菜 | 如果準備好一切食材及佐料，能做一頓飯菜 | 能將已做好的飯菜加熱 | 需要別人把飯菜煮好、擺好]"
+* item[item-F4] ^short = "F4. 處理家務"
+* item[item-F4].linkId 1..1 MS
+* item[item-F4].linkId = "F4"
+* item[item-F4].text 1..1 MS
+* item[item-F4].text = "處理家務"
+* item[item-F4].answer 1..1 MS
+* item[item-F4].answer ^short = "處理家務的回覆"
+* item[item-F4].answer.value[x] 1..1 MS
+* item[item-F4].answer.value[x] only string
+* item[item-F4].answer.valueString 1..1 MS
+* item[item-F4].answer.valueString ^short = "處理家務的回覆。[應填入以下字串之一：能單獨處理家事，或偶爾需要協助較繁重的家事 | 能做較簡單的家事，如洗碗、擦桌子 | 能做較簡單的家事，但不能達到可接受的清潔程度 | 所有的家事都需要別人協助方能完成 | 完全不能做家事]"
+* item[item-F5] ^short = "F5. 洗衣服"
+* item[item-F5].linkId 1..1 MS
+* item[item-F5].linkId = "F5"
+* item[item-F5].text 1..1 MS
+* item[item-F5].text = "洗衣服"
+* item[item-F5].answer 1..1 MS
+* item[item-F5].answer ^short = "洗衣服的回覆"
+* item[item-F5].answer.value[x] 1..1 MS
+* item[item-F5].answer.value[x] only string
+* item[item-F5].answer.valueString 1..1 MS
+* item[item-F5].answer.valueString ^short = "洗衣服的回覆。[應填入以下字串之一：自己清洗所有衣物 | 需部份協助 | 需完全協助]"
+* item[item-F6] ^short = "F6. 外出"
+* item[item-F6].linkId 1..1 MS
+* item[item-F6].linkId = "F6"
+* item[item-F6].text 1..1 MS
+* item[item-F6].text = "外出"
+* item[item-F6].answer 1..1 MS
+* item[item-F6].answer ^short = "外出的回覆"
+* item[item-F6].answer.value[x] 1..1 MS
+* item[item-F6].answer.value[x] only string
+* item[item-F6].answer.valueString 1..1 MS
+* item[item-F6].answer.valueString ^short = "外出的回覆。[應填入以下字串之一：能夠自己開車、騎車或自己搭乘大眾運輸工具 | 能夠自己搭乘計程車，但不能搭乘大眾運輸工具 | 當有人陪同時，可搭乘大眾運輸工具 | 只能在有人協助或陪同時，可搭乘計程車或自用車 | 完全不能出門]"
+* item[item-F7] ^short = "F7. 服用藥物"
+* item[item-F7].linkId 1..1 MS
+* item[item-F7].linkId = "F7"
+* item[item-F7].text 1..1 MS
+* item[item-F7].text = "服用藥物"
+* item[item-F7].answer 1..1 MS
+* item[item-F7].answer ^short = "服用藥物的回覆"
+* item[item-F7].answer.value[x] 1..1 MS
+* item[item-F7].answer.value[x] only string
+* item[item-F7].answer.valueString 1..1 MS
+* item[item-F7].answer.valueString ^short = "服用藥物的回覆。[應填入以下字串之一：能自己負責在正確的時間用正確的藥物 | 如果事先準備好服用的藥物份量，可自行服用 | 完全不能自己服用藥物]"
+* item[item-F8] ^short = "F8. 處理財務的能力"
+* item[item-F8].linkId 1..1 MS
+* item[item-F8].linkId = "F8"
+* item[item-F8].text 1..1 MS
+* item[item-F8].text = "處理財務的能力"
+* item[item-F8].answer 1..1 MS
+* item[item-F8].answer ^short = "處理財務的能力的回覆"
+* item[item-F8].answer.value[x] 1..1 MS
+* item[item-F8].answer.value[x] only string
+* item[item-F8].answer.valueString 1..1 MS
+* item[item-F8].answer.valueString ^short = "處理財務的能力的回覆。[應填入以下字串之一：可以獨立處理財務 | 可以處理日常的購買，但需別人協助與銀行往來或大宗買賣 | 完全不能處理錢財]"

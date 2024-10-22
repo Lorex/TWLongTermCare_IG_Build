@@ -1,13 +1,13 @@
 Alias: $TWCoreServiceRequest = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/ServiceRequest-twcore
-Alias: $TempCodeVS = http://ltc-ig.fhir.tw/ValueSet/TempCodeVS-Sports
-Alias: $TempCodeCS = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sports
+Alias: $TempCodeVS = http://ltc-ig.fhir.tw/ValueSet/TempCodeVS-Sport
+Alias: $TempCodeCS = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport
 Alias: $ICD10PCS2023TWFCS = http://ltc-ig.fhir.tw/CodeSystem/ICD-10-PCS-2023-TW-F-CS
 Alias: $ICD10PCS2023TWFVS = http://ltc-ig.fhir.tw/ValueSet/ICD-10-PCS-2023-TW-F-VS
-Alias: $ServiceRequestPAVSSports = http://ltc-ig.fhir.tw/ValueSet/ServiceRequestPAVS-Sports
+Alias: $ServiceRequestPAVSSport = http://ltc-ig.fhir.tw/ValueSet/ServiceRequestPAVS-Sport
 
-Profile: PASportsServiceRequest
+Profile: PASportServiceRequest
 Parent: $TWCoreServiceRequest
-Id: PASportsServiceRequest
+Id: PASportServiceRequest
 Title: "運動處方－服務請求"
 Description: "長照機構住民運動處方的服務請求資料，本 Profile 繼承自身體活動量測 (Physical Activity Measure) 的 Sport Data ServiceRequest Profile。"
 
@@ -38,7 +38,7 @@ Description: "長照機構住民運動處方的服務請求資料，本 Profile 
 * code.coding[ICD10PCSF].system 1..1 MS
 * code.coding[ICD10PCSF].system = "http://ltc-ig.fhir.tw/CodeSystem/ICD-10-PCS-2023-TW-F-CS"
 * code.coding[ICD10PCSF].code 1..1 MS
-* code.coding[PA] from $ServiceRequestPAVSSports (required)
+* code.coding[PA] from $ServiceRequestPAVSSport (required)
 * code.coding[PA].system 1..1 MS
 * code.coding[PA].system = "http://snomed.info/sct"
 * code.coding[PA].code 1..1 MS

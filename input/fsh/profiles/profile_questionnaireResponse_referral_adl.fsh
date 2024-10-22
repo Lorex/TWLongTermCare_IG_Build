@@ -3,8 +3,8 @@ Alias: $QuestionnaireResponse = http://hl7.org/fhir/StructureDefinition/Question
 Profile: LTCQuestionnaireResponseReferralADL
 Parent: LTCQuestionnaireResponse
 Id: LTCQuestionnaireResponseReferralADL
-Title: "TWLTC QuestionnaireResponse Referral ADL"
-Description: "轉介單的 ADL 失能項目評估問卷回覆"
+Title: "轉介單－ADL 失能項目評估問卷回覆"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現轉介單－ADL 失能項目評估問卷的回覆資料。"
 
 * item 10..10 MS
 * item ^short = "問卷回覆的內容"

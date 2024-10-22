@@ -4,8 +4,8 @@ Alias: $ConditionDisabilityVS = http://ltc-ig.fhir.tw/ValueSet/ConditionDisabili
 Profile: LTCConditionDisability
 Parent: LTCCondition
 Id: LTCConditionDisability
-Title: "TWLTC Condition Disability"
-Description: "長照機構住民的身心障礙手冊資料"
+Title: "長期照顧－身心障礙手冊持有狀態"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的身心障礙手冊持有狀態。"
 
 * code 1..1 MS
 * code ^short = "問題類別"

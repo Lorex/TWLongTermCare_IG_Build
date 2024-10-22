@@ -1,9 +1,9 @@
-Alias: $TempCodeCS = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sports
-Alias: $ExerciseHistoryVS = http://ltc-ig.fhir.tw/ValueSet/TempCodeVS-Sports
+Alias: $TempCodeCS = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport
+Alias: $ExerciseHistoryVS = http://ltc-ig.fhir.tw/ValueSet/TempCodeVS-Sport
 
-Profile: PASportsConditionExerciseHistory
+Profile: PASportConditionExerciseHistory
 Parent: LTCCondition
-Id: PASportsConditionExerciseHistory
+Id: PASportConditionExerciseHistory
 Title: "運動處方－運動史"
 Description: "長照機構住民運動處方的運動史資料，本 Profile 繼承自身體活動量測 (Physical Activity Measure) 的 Sport Data Condition Profile。"
 
@@ -13,7 +13,6 @@ Description: "長照機構住民運動處方的運動史資料，本 Profile 繼
 * category.coding.system = $TempCodeCS
 * category.coding.code 1..1 MS
 * category.coding.code = #PhysicalActivity
-* code 1..1 MS
 * code 1..1 MS
 * code ^short = "病情、問題或診斷的識別"
 * code.coding 1..* MS

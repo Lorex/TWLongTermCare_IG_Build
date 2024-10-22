@@ -1,5 +1,5 @@
 CodeSystem: SportTrainingCS
-Id: SportTrainingCS-Sports
+Id: SportTrainingCS-Sport
 Title: "身體活動量測-重量訓練代碼系統"
 Description: "此代碼系統定義重量訓練各個方面的代碼，包括使用的重量、執行的組數以及每組的重複次數。本 CodeSystem 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。"
 

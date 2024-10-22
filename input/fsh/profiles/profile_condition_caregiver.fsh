@@ -4,8 +4,8 @@ Alias: $ReferralConditionCaregiverVS = http://ltc-ig.fhir.tw/ValueSet/ReferralCo
 Profile: LTCConditionCaregiver
 Parent: $TWCoreCondition
 Id: LTCConditionCaregiver
-Title: "TWLTC Condition Caregiver"
-Description: "長照機構住民的看護狀況資料"
+Title: "長期照顧－看護狀況"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長期照顧情境中住民的看護狀況資料。"
 
 * code 1..1 MS
 * code ^short = "看護狀況"

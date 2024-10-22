@@ -4,8 +4,8 @@ Alias: $MedicationAdministration = http://hl7.org/fhir/StructureDefinition/Medic
 Profile: LTCMedicationAdministration
 Parent: $MedicationAdministration
 Id: LTCMedicationAdministration
-Title: "TWLTC Medication Administration"
-Description: "長照機構住民的用藥資料"
+Title: "長期照顧－用藥資料"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 MedicationAdministration Resource，以呈現長照機構住民的用藥資料。"
 
 * status 1..1 MS
 * status ^short = "用藥狀態。[應填入：in-progress / not-done / on-hold / completed / entered-in-error / stopped / unknown]"

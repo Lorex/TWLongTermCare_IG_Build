@@ -1,8 +1,8 @@
 Profile: LTCQuestionnaireResponseCMSMental
 Parent: LTCQuestionnaireResponse
 Id: LTCQuestionnaireResponseCMSMental
-Title: "TWLTC QuestionnaireResponse CMS Mental"
-Description: "照顧管理評估量表－情緒及行為型態問卷回覆"
+Title: "照顧管理評估量表－情緒及行為型態問卷回覆"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－情緒及行為型態問卷的回覆資料。"
 
 * item 14..14 MS
 * item ^slicing.discriminator.type = #value

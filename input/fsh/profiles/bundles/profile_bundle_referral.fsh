@@ -6,12 +6,10 @@ Alias: $TWCoreCondition = https://twcore.mohw.gov.tw/ig/twcore/StructureDefiniti
 Profile: LTCBundleReferral
 Parent: $TWCoreBundleDocument
 Id: LTCBundleReferral
-Title: "TWLTC Bundle Referral"
-Description: "長期照顧管理中心個案服務初篩表/轉介單
+Title: "長期照顧管理中心個案服務初篩表/轉介單文件打包"
+Description: "此 Bundle 以臺北市長期照顧管理中心個案服務初篩表/轉介單為基礎，用以表述長期照顧管理中心個案服務初篩表/轉介單的文件打包結構。
 
-本轉介單以臺北市長期照顧管理中心個案服務初篩表/轉介單為基礎，用以表述長期照顧管理中心個案服務初篩表/轉介單內容。
-
-請注意：各縣市轉介單格式可能有所不同，此 Profile 將於後續版本逐步納入各縣市初篩表/轉介單格式並進行整合。"
+注意：各縣市轉介單格式可能有所不同，此 Profile 將於後續版本逐步納入各縣市初篩表/轉介單格式並進行整合。"
 
 * type 1..1 MS
 * type ^short = "Bundle 的類型"
