@@ -5,8 +5,8 @@ Alias: $ConditionSeverityVS-TWLTC = http://ltc-ig.fhir.tw/ValueSet/ConditionSeve
 Profile: LTCConditionDisabilityType
 Parent: LTCCondition
 Id: LTCConditionDisabilityType
-Title: "TWLTC Condition Disability Type"
-Description: "長照機構住民的身心障礙類型資料"
+Title: "長期照顧－身心障礙類型"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的身心障礙類型。"
 
 * code 1..1 MS
 * code ^short = "障礙類別"

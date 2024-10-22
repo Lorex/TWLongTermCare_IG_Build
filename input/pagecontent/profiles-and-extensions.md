@@ -31,7 +31,7 @@
 - [長照機構住民的用藥資料（LTC Medication Administration）](StructureDefinition-LTCMedicationAdministration.html)
 
 #### Observation
-- [長照機構住民的生命徵象資料（LTC Observation Vital Signs）](StructureDefinition-LTCObservationVitalSigns.html)
+- [長照機構住民的生命體徵資料（LTC Observation Vital Signs）](StructureDefinition-LTCObservationVitalSigns.html)
 
 #### Organization
 - [長期照顧機構資料（LTC Organization）](StructureDefinition-Organization-twltc.html)

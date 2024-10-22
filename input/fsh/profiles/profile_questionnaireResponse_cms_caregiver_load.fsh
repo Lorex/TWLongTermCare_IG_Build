@@ -1,8 +1,8 @@
 Profile: LTCQuestionnaireResponseCMSCaregiverLoad
 Parent: LTCQuestionnaireResponse
 Id: LTCQuestionnaireResponseCMSCaregiverLoad
-Title: "TWLTC QuestionnaireResponse CMS Caregiver Load"
-Description: "照顧管理評估量表－主要照顧者負荷問卷回覆"
+Title: "照顧管理評估量表－主要照顧者負荷問卷回覆"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－主要照顧者負荷問卷的回覆資料。"
 
 * item 5..5 MS
 * item ^short = "問卷回覆的內容"

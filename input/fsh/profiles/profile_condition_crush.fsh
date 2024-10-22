@@ -4,8 +4,8 @@ Alias: $ReferralConditionCrushVS = http://ltc-ig.fhir.tw/ValueSet/ReferralCondit
 Profile: LTCConditionCrush
 Parent: $TWCoreCondition
 Id: LTCConditionCrush
-Title: "TWLTC Condition Crush"
-Description: "長照機構住民的壓傷資料"
+Title: "長期照顧－壓傷狀況"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的壓傷狀況。"
 
 * code 1..1 MS
 * code ^short = "壓傷狀況"

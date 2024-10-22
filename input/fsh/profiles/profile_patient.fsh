@@ -3,12 +3,29 @@ Alias: $LTCAddress = http://ltc-ig.fhir.tw/StructureDefinition/Address-TWLTC
 
 
 Profile: LTCPatient
-Title: "TWLTC Patient"
+Title: "長期照顧－住民基本資料"
 Parent: $TWCorePatient
-Description: "長照機構住民基本資料，用以表述長照機構住民的基本資料。"
-* identifier 1..4 MS
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Patient Resource，以呈現長照機構住民的基本資料。"
+* identifier 1..* MS
 * identifier.value 1..1 MS
 * identifier.value ^short = "住民唯一識別碼。[應擇一填入身分證字號／護照號碼／居留證號碼／長照機構住民代號]"
+* identifier contains
+    member 1..1 MS
+* identifier[member] ^short = "住民在機構中的身分識別碼"
+* identifier[member].use 0..1 MS
+* identifier[member].use = #official
+* identifier[member].type 1..1 MS
+* identifier[member].type.coding 1..1 MS
+* identifier[member].type.coding.system 1..1 MS
+* identifier[member].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[member].type.coding.code 1..1 MS
+* identifier[member].type.coding.code = #PRN
+* identifier[member].type.coding.display 0..1 MS
+* identifier[member].type.text 0..1 MS
+* identifier[member].system 1..1 MS
+* identifier[member].system ^short = "住民在機構中的身分識別碼的系統。[應填入機構網址]"
+* identifier[member].value 1..1 MS
+* identifier[member].value ^short = "住民在機構中的身分識別碼。[應填入機構住民代號]"
 * name 1..2 MS
 * name[official].use MS
 * name[official].use = #official

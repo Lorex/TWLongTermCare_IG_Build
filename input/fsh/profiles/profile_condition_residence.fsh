@@ -4,8 +4,8 @@ Alias: $ReferralConditionResidenceVS = http://ltc-ig.fhir.tw/ValueSet/ReferralCo
 Profile: LTCConditionResidence
 Parent: $TWCoreCondition
 Id: LTCConditionResidence
-Title: "TWLTC Condition Residence"
-Description: "長照機構住民的居住狀況資料"
+Title: "長期照顧－居住狀況"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的居住狀況。"
 
 * code 1..1 MS
 * code ^short = "居住狀況"

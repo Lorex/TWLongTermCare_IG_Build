@@ -9,9 +9,13 @@ Alias: $TWCoreMedicationRequest = https://twcore.mohw.gov.tw/ig/twcore/Structure
 Profile: LTCCarePlan
 Parent: $TWCoreCarePlan
 Id: LTCCarePlan
-Title: "TWLTC CarePlan"
-Description: "照顧計畫，用以表述長期照顧情境中涉及之照顧計畫內容。"
+Title: "長期照顧－照顧計畫"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現長期照顧情境中涉及之照顧計畫內容。"
 
+* status 1..1 MS
+* status ^short = "照顧計畫的狀態。[應填入以下字串之一：active | on-hold | completed | cancelled | entered-in-error | unknown]"
+* intent 1..1 MS
+* intent ^short = "照顧計畫的意圖。[應填入以下字串之一：proposal | plan | order | option]"
 * basedOn 0..*
 * basedOn ^short = "照顧計畫的來源，即這項照顧計畫是基於哪個照顧計畫？"
 * basedOn only Reference(LTCCarePlan)

@@ -4,8 +4,9 @@ Alias: $ReferralConditionTubeVS = http://ltc-ig.fhir.tw/ValueSet/ReferralConditi
 Profile: LTCConditionTube
 Parent: $TWCoreCondition
 Id: LTCConditionTube
-Title: "TWLTC Condition Tube"
-Description: "長照機構住民的管路資料"
+Title: "長期照顧－管路裝設狀況"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的管路裝設狀況與類別。"
+
 
 * code 1..1 MS
 * code ^short = "管路裝設狀況與類別"

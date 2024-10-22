@@ -5,8 +5,8 @@ Alias: $ExtensionRelatedPersonIsPrimary = http://ltc-ig.fhir.tw/StructureDefinit
 Profile: LTCRelatedPerson
 Parent: $TWCoreRelatedPerson
 Id: LTCRelatedPerson
-Title: "TWLTC RelatedPerson"
-Description: "住民的關係人，包含家屬、照顧者、法定代理人等與住民有關的人員資料。"
+Title: "長期照顧－關係人"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 RelatedPerson Resource，以呈現住民的關係人，包含家屬、照顧者、法定代理人等與住民有關的人員資料。"
 
 * active 1..1 MS
 * active ^short = "是否為生效中的關係人"

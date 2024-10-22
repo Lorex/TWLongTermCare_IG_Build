@@ -3,8 +3,8 @@ Alias: $QuestionnaireResponse = http://hl7.org/fhir/StructureDefinition/Question
 Profile: LTCQuestionnaireResponseCMSCommunication
 Parent: LTCQuestionnaireResponse
 Id: LTCQuestionnaireResponseCMSCommunication
-Title: "TWLTC QuestionnaireResponse CMS Communication"
-Description: "照顧管理評估量表－個案溝通能力問卷回覆"
+Title: "照顧管理評估量表－個案溝通能力問卷回覆"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－個案溝通能力問卷的回覆資料。"
 
 * item 5..6 MS
 * item ^short = "問卷回覆的內容"

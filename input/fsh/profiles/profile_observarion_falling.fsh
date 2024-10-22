@@ -7,8 +7,8 @@ Alias: $FallHistoryResultVSTWLTC = http://ltc-ig.fhir.tw/ValueSet/FallHistoryRes
 Profile: LTCObservationFallingHistory
 Parent: $TWCoreSimpleObservation
 Id: LTCObservationFallingHistory
-Title: "TWLTC Observation Falling History"
-Description: "長照機構住民跌倒紀錄"
+Title: "安全防護－跌倒紀錄"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現長照機構住民的跌倒紀錄。"
 
 * code ^short = "跌倒紀錄的類型"
 * subject ^short = "跌倒紀錄的對象"

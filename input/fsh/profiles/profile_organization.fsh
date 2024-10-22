@@ -3,16 +3,19 @@ Alias: $TWCoreOrganization = https://twcore.mohw.gov.tw/ig/twcore/StructureDefin
 Profile: LTCOrganization
 Parent: $TWCoreOrganization
 Id: Organization-twltc
-Title: "TWLTC Organization"
-Description: "長期照顧機構資料，包含長照機構的名稱、地址、聯絡方式等資訊。"
+Title: "長期照顧－機構"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Organization Resource，以呈現機構的資料。這裡的機構包含但不限於醫院、診所、長照機構、社區服務單位等。"
 
-* . ^short = "長期照顧服務機構的資訊"
+* . ^short = "機構的資訊"
 * identifier.value 1..1 MS
+* type 1..1 MS
+* type ^short = "機構類型"
 * name 1..1 MS
-* telecom 1..* MS
-* telecom.value 1..1
-* address 1..1 MS
-* address.text 1..1
+* name ^short = "機構名稱"
+* telecom 0..* MS
+* telecom.value 0..1
+* address 0..1 MS
+* address.text 0..1
 * contact 0..* MS
 
 * identifier.value ^short = "唯一值。[應填入機構代碼]"

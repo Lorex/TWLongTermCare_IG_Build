@@ -3,8 +3,8 @@ Alias: $Goal = http://hl7.org/fhir/StructureDefinition/Goal
 Profile: LTCGoal
 Parent: $Goal
 Id: LTCGoal
-Title: "TWLTC Goal"
-Description: "照顧目標，用以表述長期照顧情境中涉及之照顧目標內容。"
+Title: "長期照顧－照顧目標"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Goal Resource，以呈現長期照顧情境中涉及之照顧目標內容。"
 
 * lifecycleStatus 1..1 MS
 * lifecycleStatus ^short = "照顧目標的生命週期狀態。[應填入 proposed / planned / accepted / active / on-hold / completed / cancelled / entered-in-error / rejected]"

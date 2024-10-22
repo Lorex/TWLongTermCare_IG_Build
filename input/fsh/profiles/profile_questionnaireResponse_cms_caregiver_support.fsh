@@ -1,8 +1,8 @@
 Profile: LTCQuestionnaireResponseCMSCaregiverSupport
 Parent: LTCQuestionnaireResponse
 Id: LTCQuestionnaireResponseCMSCaregiverSupport
-Title: "TWLTC QuestionnaireResponse CMS Caregiver Support"
-Description: "照顧管理評估量表－主要照顧者工作與支持"
+Title: "照顧管理評估量表－主要照顧者工作與支持"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－主要照顧者工作與支持的回覆資料。"
 
 * item 8..13 MS
 * item ^slicing.discriminator.type = #value

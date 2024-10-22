@@ -5,8 +5,8 @@ Alias: $VSParticipantRole = http://hl7.org/fhir/ValueSet/participant-role
 Profile: LTCCareTeam
 Parent: $TWCoreCareTeam
 Id: LTCCareTeam
-Title: "TWLTC CareTeam"
-Description: "照顧團隊，用以表述長期照護情境中涉及之照顧團隊資訊。"
+Title: "長期照顧－照顧團隊"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 CareTeam Resource，以呈現長期照顧情境中涉及之照顧團隊資訊。"
 
 * status 1..1 MS
 * status ^short = "照顧團隊的狀態。[應填入 proposed / active / suspended / inactive / entered-in-error]"

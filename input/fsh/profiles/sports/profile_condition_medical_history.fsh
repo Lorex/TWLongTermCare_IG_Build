@@ -1,6 +1,6 @@
-Profile: PASportsConditionMedicalHistory
+Profile: PASportConditionMedicalHistory
 Parent: LTCCondition
-Id: PASportsConditionMedicalHistory
+Id: PASportConditionMedicalHistory
 Title: "運動處方－病史"
 Description: "長照機構住民運動處方的病史資料，本 Profile 繼承自身體活動量測 (Physical Activity Measure) 的 Sport Data Condition Profile。"
 
