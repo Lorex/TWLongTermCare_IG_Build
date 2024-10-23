@@ -79,7 +79,7 @@
 - [蛋白質重（PA Sport Observation Protein Weight）](StructureDefinition-PASportObservationProteinWeight.html)
 - [礦物質重（PA Sport Observation Mineral Weight）](StructureDefinition-PASportObservationMineralWeight.html)
 - [體脂肪重（PA Sport Observation Body Fat Weight）](StructureDefinition-PASportObservationBodyFatWeight.html)
-- [體重（PA Sport Observation Body Weight）](StructureDefinition-PASportObservationBodyWeight.html)
+- [體重（PA Sport Observation Weight）](StructureDefinition-PASportObservationWeight.html)
 - [身高（PA Sport Observation Height）](StructureDefinition-PASportObservationHeight.html)
 - [骼骨肌重（PA Sport Observation Skeletal Muscle Weight）](StructureDefinition-PASportObservationSkeletalMuscleWeight.html)
 - [肌肉質量指數（PA Sport Observation Muscle Mass Index）](StructureDefinition-PASportObservationMuscleMassIndex.html)
