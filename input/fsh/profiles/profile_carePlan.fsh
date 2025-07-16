@@ -16,6 +16,8 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan R
 * status ^short = "照顧計畫的狀態。[應填入以下字串之一：active | on-hold | completed | cancelled | entered-in-error | unknown]"
 * intent 1..1 MS
 * intent ^short = "照顧計畫的意圖。[應填入以下字串之一：proposal | plan | order | option]"
+* category 1..* MS
+* category ^short = "照顧計畫的分類。"
 * basedOn 0..*
 * basedOn ^short = "照顧計畫的來源，即這項照顧計畫是基於哪個照顧計畫？"
 * basedOn only Reference(LTCCarePlan)
