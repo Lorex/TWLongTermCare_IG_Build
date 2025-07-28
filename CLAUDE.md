@@ -14,7 +14,7 @@
 - **FHIR 版本**: 4.0.1
 
 ### 依賴關係
-- **TW Core IG**: 0.3.0 - 臺灣核心實作指引，提供基礎的 FHIR Profile 定義
+- **TW Core IG**: 0.3.2 - 臺灣核心實作指引，提供基礎的 FHIR Profile 定義
 
 ## 應用情境
 
@@ -219,6 +219,7 @@ TWLongTermCare_IG_Build/
 ## 版本管理
 
 ### 版本歷史
+- **0.2.1** (開發中): 升級至 TW Core IG 0.3.2，確保所有 Profiles 相容性
 - **0.2.0** (2024-09-02): 新增跌倒紀錄、升級至 TW Core IG 0.3.0
 - **0.1.1** (2024-09-02): 新增 Bundle、Composition、問卷相關資源
 - **0.1.0** (2024-08-25): 初始版本，定義基本 Profile
@@ -252,6 +253,28 @@ TWLongTermCare_IG_Build/
 2. **隱私保護**：遵循台灣個人資料保護法規定
 3. **資料最小化**：僅交換必要的健康資訊
 4. **向下相容**：新版本應盡可能維持向下相容性
+
+## TW Core 0.3.2 升級注意事項
+
+### 升級後的相容性確認
+1. **依賴版本更新**：
+   - sushi-config.yaml 中的 tw.gov.mohw.twcore 已更新至 0.3.2
+   - 所有 FSH 檔案中的 TW Core Profile 參照均使用別名，無需手動更新 URL
+
+2. **Profile 相容性**：
+   - 所有現有 LTC Profiles 均繼承自對應的 TW Core Profiles
+   - SUSHI 編譯測試通過，無錯誤或警告
+   - TW Core 0.3.2 主要更新了依賴套件版本，Profile 結構保持向下相容
+
+3. **必填欄位確認**：
+   - Patient Profile: identifier、gender、birthDate 保持必填
+   - Bundle Document: identifier、timestamp、type 保持必填
+   - 第一個 entry 必須是 Composition 的規則保持不變
+
+4. **無需修改的項目**：
+   - 現有的 CodeSystems 和 ValueSets 不受影響
+   - Extensions 定義保持不變
+   - 查詢參數和操作定義不需更新
 
 ## 聯絡資訊
 
