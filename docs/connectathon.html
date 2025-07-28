@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -44,6 +45,7 @@
     h3,h4,h5,h6{--heading-prefix:"2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
 
@@ -167,7 +169,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://ltc-ig.fhir.tw/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Connectathon</h2>
   
 
@@ -185,162 +187,170 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#賽道資訊-information" id="markdown-toc-賽道資訊-information">賽道資訊 (Information)</a></li>
-  <li><a href="#賽道簡介-summary" id="markdown-toc-賽道簡介-summary">賽道簡介 (Summary)</a></li>
-  <li><a href="#應用情境-scenarios" id="markdown-toc-應用情境-scenarios">應用情境 (Scenarios)</a></li>
-  <li><a href="#效益-benefits" id="markdown-toc-效益-benefits">效益 (Benefits)</a></li>
-  <li><a href="#詳細資訊-details" id="markdown-toc-詳細資訊-details">詳細資訊 (Details)</a></li>
-  <li><a href="#涉及系統-systems-affected" id="markdown-toc-涉及系統-systems-affected">涉及系統 (Systems Affected)</a></li>
-  <li><a href="#規格-specification" id="markdown-toc-規格-specification">規格 (Specification)</a></li>
+  <li><a href="#活動資訊-event-information" id="markdown-toc-活動資訊-event-information">活動資訊 (Event Information)</a></li>
+  <li><a href="#賽道-tracks" id="markdown-toc-賽道-tracks">賽道 (Tracks)</a></li>
+  <li><a href="#參與單位與角色-participants--roles" id="markdown-toc-參與單位與角色-participants--roles">參與單位與角色 (Participants &amp; Roles)</a></li>
+  <li><a href="#聯測活動資訊-connectathon-event-information" id="markdown-toc-聯測活動資訊-connectathon-event-information">聯測活動資訊 (Connectathon Event Information)</a></li>
 </ul>
 
 </div>
-<h3 id="賽道資訊-information">賽道資訊 (Information)</h3>
+<h3 id="活動資訊-event-information">活動資訊 (Event Information)</h3>
 
-<p>聯測年度與名稱：2024 年度臺灣醫學資訊聯測松 (MI-TW Connectathon 2024)</p>
+<p><strong>活動名稱：</strong> 2025 臺灣長期照顧 FHIR 專案聯測松 (2025 TW LTC FHIR Projectathon)</p>
 
-<p>賽道：#11 長期照顧賽道 (Long-term Care Track)</p>
+<p><strong>活動簡介：</strong>
+隨著臺灣邁入超高齡社會，長期照護（長照）的數位轉型與資料整合成為提升照護品質的關鍵。然而，長照機構、醫療院所與科技服務商之間，普遍存在資料格式不一、系統難以互通的困境，形成資訊孤島，不僅加重第一線人員的行政負擔，也阻礙了服務的連續性。</p>
 
-<h3 id="賽道簡介-summary">賽道簡介 (Summary)</h3>
+<p>為應對此挑戰，經濟部產業發展署自2024年起推動「銀光科技智慧照顧驗證推動計畫」，旨在建立全國統一的長照資料交換標準。延續去年成果，本年度 (2025) 的專案聯測松將聚焦於三大核心賽道：「日間照護服務」、「失智症照護監測」與「服務計畫與紀錄 (醫院與長照機構轉銜)」。我們將以 FHIR 標準為基礎，發展更貼近實務需求的在地化實作指引，串連日照中心、失智症照護、醫院出院準備等關鍵流程，促進跨機構、跨系統的資料互通，實現以個案為中心的無縫照護。</p>
 
-<p>長期照護（長照）資料用於記錄長照使用者的照護計畫、照護過程與相關醫療數據，以協助護理與長照作業人員提供照護服務並協助機構行政管理與統計分析。 然而目前臺灣長照機構格式不一致且缺乏標準化，使得不同系統角色間難以管理與整合長照使用者之健康照護記錄。</p>
-
-<p>經濟部產業發展署於今年 (2024) 推動銀光科技智慧照顧驗證推動計畫，整合國內長照機構與資通訊服務廠商，建立統一的資料交換標準，以促進長照資料的互通。 故本工作小組於本次聯測預計新增長期照護相關情境主題，預計機構式照護服務為主，發展長照 FHIR 互通標準，後續擴大應用至社區式照護服務、居家式照護服務等長照資料之全面性涵蓋。</p>
-
-<h3 id="應用情境-scenarios">應用情境 (Scenarios)</h3>
+<h3 id="賽道-tracks">賽道 (Tracks)</h3>
 
 <ul>
-  <li>Scenario 0：OAuth2 Access Token 存取認證（與大會 OAuth 動態 Token 驗證整合）</li>
-  <li>Scenario 1：照護管理評估量表(CMS 量表)</li>
-  <li>Scenario 2：長期照顧服務轉介</li>
-  <li>Scenario 3：長照機構入住作業 <strong>(注意：今年本情境取消。)</strong></li>
-  <li>Scenario 4：長照用藥管理作業</li>
-  <li>Scenario 5：長照生理量測管理作業</li>
-  <li>Scenario 6：照護計畫管理作業 <strong>(注意：今年本情境取消。)</strong></li>
+  <li><strong>Track 0：OAuth2 存取認證</strong>
+    <ul>
+      <li>與大會的 OAuth 動態 Token 驗證機制整合，確保所有資料交換的安全性。</li>
+    </ul>
+  </li>
+  <li><strong>Track 1：日間照護服務資料交換</strong>
+    <ul>
+      <li><strong>說明：</strong> 模擬日照中心紀錄個案的生理數據、活動參與和用藥狀況，並讓家屬能透過 App 即時查詢。</li>
+    </ul>
+  </li>
+  <li><strong>Track 2：失智症照護監測</strong>
+    <ul>
+      <li><strong>說明：</strong> 模擬失智症個案的評估、追蹤與安全監測，包含評估結果交換、定位追蹤與異常事件警報。</li>
+    </ul>
+  </li>
+  <li><strong>Track 3：機構間轉銜服務 (醫院與長照機構)</strong>
+    <ul>
+      <li><strong>說明：</strong> 模擬病患從醫院出院時，醫院系統將其病歷摘要與轉介單，安全地傳送給長照機構，以利機構快速接收個案。</li>
+    </ul>
+  </li>
 </ul>
 
-<h3 id="效益-benefits">效益 (Benefits)</h3>
+<h3 id="參與單位與角色-participants--roles">參與單位與角色 (Participants &amp; Roles)</h3>
 
-<p>以經濟部產業發展署銀光科技智慧照顧驗證推動計畫為基礎，將住宿型機構常照服務的資訊處理流程初步規劃， 並設計以 FHIR 標準呈現長照機構作業流程中的資訊欄位與資訊交易，提供台灣產業發展長照服務時的資料標準化參考依據。</p>
-
-<p>本標準參考美國 eLTSS 長照規範，並繼承自 TW Core IG 台灣核心規範，可提供與醫院相關資訊系統、廠商相關長照系統與長照機構端的相關平台進行實作與界接，促進醫療端到長照端的互通性整合。</p>
-
-<h3 id="詳細資訊-details">詳細資訊 (Details)</h3>
-<p>以下為各應用情境與對應的 Profile：</p>
+<p>本次專案聯測松歡迎來自不同領域的單位共同參與，主要涵蓋以下幾種類型：</p>
 
 <ul>
-  <li>Scenario 0 OAuth2 Access Token 存取認證: <code class="language-plaintext highlighter-rouge">無 Profile，請依照大會 OAuth 動態 Token 驗證整合</code></li>
-  <li>Scenario 1 照護管理評估量表(CMS 量表): <code class="language-plaintext highlighter-rouge">LTCBundleCMS</code></li>
-  <li>Scenario 2 長期照顧服務轉介: <code class="language-plaintext highlighter-rouge">LTCBundleReferral</code></li>
-  <li>Scenario 4 長照用藥管理作業: <code class="language-plaintext highlighter-rouge">LTCMedicationAdministration</code></li>
-  <li>Scenario 5 長照生理量測管理作業: <code class="language-plaintext highlighter-rouge">LTCObservationVitalSigns</code></li>
+  <li><strong>醫療服務提供者：</strong> 如醫院、診所，其資訊系統 (HIS) 在<strong>賽道三</strong>中扮演關鍵的資料來源角色。</li>
+  <li><strong>長期照護服務機構：</strong> 如日間照護中心、住宿式機構、A單位等，其管理系統是本次所有賽道的核心參與者。</li>
+  <li><strong>科技與資訊服務商：</strong> 開發或提供生理量測、定位偵測、AI分析、電子病歷或個案管理軟體的廠商。</li>
+  <li><strong>個案與家庭照顧者：</strong> 透過行動應用程式 (App) 接收或查詢照護資訊的使用者。</li>
 </ul>
 
-<h3 id="涉及系統-systems-affected">涉及系統 (Systems Affected)</h3>
+<p>在各賽道中，參測廠商系統將會扮演特定的<strong>角色 (Actor)</strong>，與其他系統進行指定的<strong>資料交換 (Transaction)</strong>。詳細的技術規格與角色定義，請參閱各賽道的說明。</p>
 
-<p>本規範涉及的系統有：</p>
-<ul>
-  <li>長照個管系統（照護協調端）</li>
-  <li>長照機構資訊系統（長照機構端）</li>
-  <li>長照科技服務提供商</li>
-  <li>長照資料交換中心</li>
-</ul>
+<h4 id="資料交換-transactions">資料交換 (Transactions)</h4>
 
-<h3 id="規格-specification">規格 (Specification)</h3>
-<h4 id="角色-actors">角色 (Actors)</h4>
-<p>台灣長期照護(LTC)角色整理</p>
+<p><strong>賽道一：日間照護服務</strong></p>
 
 <table>
   <thead>
     <tr>
-      <th>Keyword</th>
-      <th>名稱</th>
-      <th>描述</th>
+      <th>測試步驟</th>
+      <th>說明</th>
+      <th>發送方 (From)</th>
+      <th>接收方 (To)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>LTC_MANAGEMENT</td>
-      <td>LTC Management</td>
-      <td>長照資料維護端</td>
+      <td>1-1</td>
+      <td>記錄生理量測數據</td>
+      <td>生理量測設備</td>
+      <td>日照中心系統</td>
     </tr>
     <tr>
-      <td>LTC_CONSUMER</td>
-      <td>LTC Consumer</td>
-      <td>長照資料需求端</td>
+      <td>1-2</td>
+      <td>記錄個案日常活動</td>
+      <td>照護人員工作站</td>
+      <td>日照中心系統</td>
     </tr>
     <tr>
-      <td>LTC_REPOSITORY</td>
-      <td>LTC Repository</td>
-      <td>長照服務儲存庫</td>
+      <td>1-3</td>
+      <td>家屬查詢當日紀錄</td>
+      <td>家屬行動 App</td>
+      <td>日照中心系統</td>
     </tr>
   </tbody>
 </table>
 
-<h4 id="交易-transactions">交易 (Transactions)</h4>
-<p>台灣長期照護(LTC)交易整理</p>
+<p><strong>賽道二：失智症照護監測</strong></p>
 
 <table>
   <thead>
     <tr>
-      <th>編號</th>
-      <th>名稱</th>
-      <th>描述</th>
+      <th>測試步驟</th>
+      <th>說明</th>
+      <th>發送方 (From)</th>
+      <th>接收方 (To)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>MITW-1</td>
-      <td>Patient Management</td>
-      <td>住民基本資料維護</td>
+      <td>2-1</td>
+      <td>提交失智評估結果</td>
+      <td>失智症評估系統</td>
+      <td>照護決策平台</td>
     </tr>
     <tr>
-      <td>MITW-2</td>
-      <td>Query/Retrieve Patient</td>
-      <td>查詢與調閱住民基本資料</td>
+      <td>2-2</td>
+      <td>回報個案即時位置</td>
+      <td>行動警示裝置</td>
+      <td>定位監測系統</td>
     </tr>
     <tr>
-      <td>MITW-81</td>
-      <td>Create CMS Form</td>
-      <td>產生照護管理評估量表</td>
-    </tr>
-    <tr>
-      <td>MITW-82</td>
-      <td>Query/Retrieve CMS Form</td>
-      <td>查詢與調閱照護管理評估量表</td>
-    </tr>
-    <tr>
-      <td>MITW-83</td>
-      <td>Create Referral Form</td>
-      <td>產生轉介資料</td>
-    </tr>
-    <tr>
-      <td>MITW-84</td>
-      <td>Query/Retrieve Referral Form</td>
-      <td>查詢轉介資料</td>
-    </tr>
-    <tr>
-      <td>MITW-85</td>
-      <td>Create Observation</td>
-      <td>新增檢驗檢查</td>
-    </tr>
-    <tr>
-      <td>MITW-86</td>
-      <td>Query/Retrieve Observation</td>
-      <td>查詢與調閱檢驗檢查</td>
-    </tr>
-    <tr>
-      <td>MITW-87</td>
-      <td>Create MedicationAdministration</td>
-      <td>新增用藥紀錄資料</td>
-    </tr>
-    <tr>
-      <td>MITW-88</td>
-      <td>Query/Retrieve MedicationAdministration</td>
-      <td>查詢與調閱用藥紀錄資料</td>
+      <td>2-3</td>
+      <td>發送異常事件警報</td>
+      <td>定位監測系統</td>
+      <td>警報通知系統</td>
     </tr>
   </tbody>
 </table>
+
+<p><strong>賽道三：機構間轉銜服務 (醫院與長照機構)</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>測試步驟</th>
+      <th>說明</th>
+      <th>發送方 (From)</th>
+      <th>接收方 (To)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3-1</td>
+      <td>發送出院病摘與轉介單</td>
+      <td>醫院資訊系統</td>
+      <td>長照機構系統</td>
+    </tr>
+    <tr>
+      <td>3-2</td>
+      <td>回覆是否同意收案</td>
+      <td>長照機構系統</td>
+      <td>醫院資訊系統</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="聯測活動資訊-connectathon-event-information">聯測活動資訊 (Connectathon Event Information)</h3>
+
+<p><strong>時間：</strong> 擬訂於 09/22~09/26（辦理 2 天，詳細日期與廠商協調後確認）</p>
+
+<p><strong>地點：</strong> 待定</p>
+
+<p><strong>進行模式：</strong></p>
+<ul>
+  <li>聯測總共辦理 2 日，規劃 IG 中每個情境為一獨立賽道，參測廠商可自行決定參測賽道與角色。</li>
+  <li>每個賽道都有指定完成步驟與檢核項目，參測廠商須完成所有檢核項目即為通過該賽道。</li>
+  <li>大會（主辦單位）將會提前 3 至 4 周公布賽道檢核內容，並提供 FHIR 伺服器供測試。</li>
+  <li>同時成立 LINE 群組供廠商進行先行測試，測試過程中如有問題，亦可回報大會進行 IG 或規則修正。</li>
+  <li>聯測將配置督察員，用以檢核廠商的產品是否符合規範，並於完成聯測後，將測驗結果公告於 IG 網站中。</li>
+</ul>
+
 
 
 
@@ -360,7 +370,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://mitw.dicom.org.tw/">MI-TW</a>.  Package fhir.twltc#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 23, 2024 02:33+0800">2024-10-23</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://mitw.dicom.org.tw/">MI-TW</a>.  Package fhir.twltc#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 28, 2025 13:17+0800">2025-07-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -65,7 +65,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Patient.identifier.period","Patient.identifier.period","","","",0,1,"","","Y","Period {[]} {[]}
 ","Time period when id is/was valid for use","Time period during which identifier is/was valid for use.","","","","","","","","","",,,,,"",,,,"Identifier.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Role.effectiveTime or implied by context","CX.7 + CX.8"
-"Patient.identifier.assigner","Patient.identifier.assigner","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"Patient.identifier.assigner","Patient.identifier.assigner","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Organization-twcore]]}
 ","Organization that issued id (may be just text)","Organization that issued/manages the identifier.","The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization.","","","","","","","","",,,,,"",,,,"Identifier.assigner",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper","CX.4 / (CX.4,CX.9,CX.10)"
 "Patient.identifier:idCardNumber","Patient.identifier","idCardNumber","","",0,1,"Y","","Y","Identifier {[]} {[]}
@@ -597,7 +597,7 @@ dateTime {[]} {[]}","病人是否過世","表示此人是否過世","如果實�
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a","AD","XAD"
 "Patient.address:home","Patient.address","home","","",0,1,"Y","","","Address {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Address-tw]]} {[]}
-","住民的現居地址","使用郵政規範表達的地址（相對於GPS或其他位置定義格式）。這種data type可用於傳達投遞郵件的位址，以及用於訪問可能對郵件投遞無效的位置，這世界定義了各種郵政地址格式。","注意：地址的目的是描述用於管理目的之郵政地址，而不是描述絕對的地理座標。郵政地址經常被用作實體位置的代表（亦可見[Location](http://hl7.org/fhir/R4/location.html#)resource）。","可能需要記錄病人的地址，以便聯繫、結算或報告的要求，也有助於識別身份。","","","","","","","",,,,,"",,,,"Patient.address",0,*,"ele-1
+","住民的現居地址","此人的地址","病人可能有多個地址，有不同的用途或適用期。","可能需要記錄病人的地址，以便聯繫、結算或報告的要求，也有助於識別身份。","","","","","","","",,,,,"",,,,"Patient.address",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a","AD","XAD"
 "Patient.address:home.id","Patient.address.id","","","",0,1,"","","","string {[]} {[]}
@@ -785,7 +785,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 </valuePeriod>","","",,,,,"",,,,"Address.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./usablePeriod[type=""IVL<TS>""]","XAD.12 / XAD.13 + XAD.14"
 "Patient.address:billing","Patient.address","billing","","",0,1,"Y","","","Address {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Address-tw]]} {[]}
-","住民的戶籍地址","使用郵政規範表達的地址（相對於GPS或其他位置定義格式）。這種data type可用於傳達投遞郵件的位址，以及用於訪問可能對郵件投遞無效的位置，這世界定義了各種郵政地址格式。","注意：地址的目的是描述用於管理目的之郵政地址，而不是描述絕對的地理座標。郵政地址經常被用作實體位置的代表（亦可見[Location](http://hl7.org/fhir/R4/location.html#)resource）。","可能需要記錄病人的地址，以便聯繫、結算或報告的要求，也有助於識別身份。","","","","","","","",,,,,"",,,,"Patient.address",0,*,"ele-1
+","住民的戶籍地址","此人的地址","病人可能有多個地址，有不同的用途或適用期。","可能需要記錄病人的地址，以便聯繫、結算或報告的要求，也有助於識別身份。","","","","","","","",,,,,"",,,,"Patient.address",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a","AD","XAD"
 "Patient.address:billing.id","Patient.address.id","","","",0,1,"","","","string {[]} {[]}

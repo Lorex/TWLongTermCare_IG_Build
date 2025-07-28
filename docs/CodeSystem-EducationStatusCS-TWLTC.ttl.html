@@ -20,6 +20,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -46,6 +47,7 @@
     h3,h4,h5,h6{--heading-prefix:"9.115"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
 
@@ -162,7 +164,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 9" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://ltc-ig.fhir.tw/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -236,6 +238,7 @@
   <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
@@ -246,14 +249,14 @@
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;EducationStatusCS-TWLTC&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: CodeSystem EducationStatusCS-TWLTC&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;EducationStatusCS-TWLTC\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcEducationStatusCS-TWLTC\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;EducationStatusCS-TWLTC-en-US\&quot;&gt; &lt;/a&gt;&lt;p&gt;This case-sensitive code system &lt;code&gt;http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC&lt;/code&gt; defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;illiterate&lt;a name=\&quot;EducationStatusCS-TWLTC-illiterate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;不識字&lt;/td&gt;&lt;td&gt;個案教育程度為不識字。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;literate&lt;a name=\&quot;EducationStatusCS-TWLTC-literate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;識字&lt;/td&gt;&lt;td&gt;個案教育程度為識字，但未受正規教育（含私塾）。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;elementary&lt;a name=\&quot;EducationStatusCS-TWLTC-elementary\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;國小&lt;/td&gt;&lt;td&gt;個案教育程度為國小。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;junior&lt;a name=\&quot;EducationStatusCS-TWLTC-junior\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;國中&lt;/td&gt;&lt;td&gt;個案教育程度為國中。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;senior&lt;a name=\&quot;EducationStatusCS-TWLTC-senior\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;高中（職）&lt;/td&gt;&lt;td&gt;個案教育程度為高中（職）。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;special-elementary&lt;a name=\&quot;EducationStatusCS-TWLTC-special-elementary\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;特教班-國小&lt;/td&gt;&lt;td&gt;個案教育程度為特教班-國小。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;special-junior&lt;a name=\&quot;EducationStatusCS-TWLTC-special-junior\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;特教班-國中&lt;/td&gt;&lt;td&gt;個案教育程度為特教班-國中。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;special-senior&lt;a name=\&quot;EducationStatusCS-TWLTC-special-senior\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;特教班-高中職&lt;/td&gt;&lt;td&gt;個案教育程度為特教班-高中職。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;vocational&lt;a name=\&quot;EducationStatusCS-TWLTC-vocational\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;五專&lt;/td&gt;&lt;td&gt;個案教育程度為五專。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;college&lt;a name=\&quot;EducationStatusCS-TWLTC-college\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;大學（二三專）&lt;/td&gt;&lt;td&gt;個案教育程度為大學（二三專）。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;postgraduate&lt;a name=\&quot;EducationStatusCS-TWLTC-postgraduate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;研究所以上&lt;/td&gt;&lt;td&gt;個案教育程度為研究所以上。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;other&lt;a name=\&quot;EducationStatusCS-TWLTC-other\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;其他&lt;/td&gt;&lt;td&gt;個案教育程度為其他。&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: CodeSystem EducationStatusCS-TWLTC&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;EducationStatusCS-TWLTC\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcEducationStatusCS-TWLTC\&quot;&gt; &lt;/a&gt;&lt;p&gt;This case-sensitive code system &lt;code&gt;http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC&lt;/code&gt; defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;illiterate&lt;a name=\&quot;EducationStatusCS-TWLTC-illiterate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;不識字&lt;/td&gt;&lt;td&gt;個案教育程度為不識字。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;literate&lt;a name=\&quot;EducationStatusCS-TWLTC-literate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;識字&lt;/td&gt;&lt;td&gt;個案教育程度為識字，但未受正規教育（含私塾）。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;elementary&lt;a name=\&quot;EducationStatusCS-TWLTC-elementary\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;國小&lt;/td&gt;&lt;td&gt;個案教育程度為國小。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;junior&lt;a name=\&quot;EducationStatusCS-TWLTC-junior\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;國中&lt;/td&gt;&lt;td&gt;個案教育程度為國中。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;senior&lt;a name=\&quot;EducationStatusCS-TWLTC-senior\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;高中（職）&lt;/td&gt;&lt;td&gt;個案教育程度為高中（職）。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;special-elementary&lt;a name=\&quot;EducationStatusCS-TWLTC-special-elementary\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;特教班-國小&lt;/td&gt;&lt;td&gt;個案教育程度為特教班-國小。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;special-junior&lt;a name=\&quot;EducationStatusCS-TWLTC-special-junior\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;特教班-國中&lt;/td&gt;&lt;td&gt;個案教育程度為特教班-國中。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;special-senior&lt;a name=\&quot;EducationStatusCS-TWLTC-special-senior\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;特教班-高中職&lt;/td&gt;&lt;td&gt;個案教育程度為特教班-高中職。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;vocational&lt;a name=\&quot;EducationStatusCS-TWLTC-vocational\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;五專&lt;/td&gt;&lt;td&gt;個案教育程度為五專。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;college&lt;a name=\&quot;EducationStatusCS-TWLTC-college\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;大學（二三專）&lt;/td&gt;&lt;td&gt;個案教育程度為大學（二三專）。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;postgraduate&lt;a name=\&quot;EducationStatusCS-TWLTC-postgraduate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;研究所以上&lt;/td&gt;&lt;td&gt;個案教育程度為研究所以上。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;other&lt;a name=\&quot;EducationStatusCS-TWLTC-other\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;其他&lt;/td&gt;&lt;td&gt;個案教育程度為其他。&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
   ] ; # 
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC&quot;^^xsd:anyURI] ; # 
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">fhir:version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;0.2.0&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;EducationStatusCSTWLTC&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;教育程度代碼&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;active&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.experimental">fhir:experimental</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> &quot;false&quot;^^xsd:boolean] ; # 
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.experimental">fhir:experimental</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false] ; # 
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2024-09-02&quot;^^xsd:date] ; # 
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.publisher">fhir:publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;MI-TW&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.contact">fhir:contact</a> ( [
@@ -263,7 +266,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
 <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;https://mitw.dicom.org.tw/&quot; ]     ] )
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:v</a> &quot;用於表述個案的教育程度，在長照機構住民教育程度 Extension 中使用。&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.caseSensitive">fhir:caseSensitive</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> &quot;true&quot;^^xsd:boolean] ; # 
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.caseSensitive">fhir:caseSensitive</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> true] ; # 
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.content">fhir:content</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;complete&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.count">fhir:count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:v</a> &quot;12&quot;^^xsd:nonNegativeInteger] ; # 
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">fhir:concept</a> ( [
@@ -341,7 +344,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://mitw.dicom.org.tw/">MI-TW</a>.  Package fhir.twltc#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 23, 2024 02:33+0800">2024-10-23</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://mitw.dicom.org.tw/">MI-TW</a>.  Package fhir.twltc#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 28, 2025 13:17+0800">2025-07-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

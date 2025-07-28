@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -10,14 +11,14 @@
   fhir:id [ fhir:v "SportTrainingCS-Sport"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem SportTrainingCS-Sport</b></p><a name=\"SportTrainingCS-Sport\"> </a><a name=\"hcSportTrainingCS-Sport\"> </a><a name=\"SportTrainingCS-Sport-en-US\"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>updateDate</td><td>updateDate</td><td>http://ltc-ig.fhir.tw/fhir/StructureDefinition/updateDate</td><td>string</td><td>異動日期</td></tr><tr><td>event</td><td>event</td><td>http://ltc-ig.fhir.tw/fhir/StructureDefinition/event</td><td>string</td><td>異動方式</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/SportTrainingCS-Sport</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">training-wt<a name=\"SportTrainingCS-Sport-training-wt\"> </a></td><td>訓練重量</td></tr><tr><td style=\"white-space:nowrap\">sets<a name=\"SportTrainingCS-Sport-sets\"> </a></td><td>訓練組數</td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem SportTrainingCS-Sport</b></p><a name=\"SportTrainingCS-Sport\"> </a><a name=\"hcSportTrainingCS-Sport\"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>updateDate</td><td>updateDate</td><td>http://ltc-ig.fhir.tw/fhir/StructureDefinition/updateDate</td><td>string</td><td>異動日期</td></tr><tr><td>event</td><td>event</td><td>http://ltc-ig.fhir.tw/fhir/StructureDefinition/event</td><td>string</td><td>異動方式</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/SportTrainingCS-Sport</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>updateDate</b></td><td><b>event</b></td></tr><tr><td style=\"white-space:nowrap\">training-wt<a name=\"SportTrainingCS-Sport-training-wt\"> </a></td><td>訓練重量</td><td>2024-06</td><td>新增</td></tr><tr><td style=\"white-space:nowrap\">sets<a name=\"SportTrainingCS-Sport-sets\"> </a></td><td>訓練組數</td><td>2024-06</td><td>新增</td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "http://ltc-ig.fhir.tw/CodeSystem/SportTrainingCS-Sport"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.2.0"] ; # 
   fhir:name [ fhir:v "SportTrainingCS"] ; # 
   fhir:title [ fhir:v "身體活動量測-重量訓練代碼系統"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:experimental [ fhir:v false] ; # 
   fhir:date [ fhir:v "2024-06-04"^^xsd:date] ; # 
   fhir:publisher [ fhir:v "MI-TW"] ; # 
   fhir:contact ( [
@@ -28,7 +29,7 @@
      ] )
   ] ) ; # 
   fhir:description [ fhir:v "此代碼系統定義重量訓練各個方面的代碼，包括使用的重量、執行的組數以及每組的重複次數。本 CodeSystem 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。"] ; # 
-  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
   fhir:content [ fhir:v "complete"] ; # 
   fhir:count [ fhir:v "2"^^xsd:nonNegativeInteger] ; # 
   fhir:property ( [
@@ -47,20 +48,32 @@
      fhir:display [ fhir:v "訓練重量" ] ;
      fhir:property ( [
        fhir:code [ fhir:v "updateDate" ] ;
-       fhir:value [ fhir:v "2024-06" ]
+       fhir:value [
+         a fhir:string ;
+         fhir:v "2024-06"
+       ]
      ] [
        fhir:code [ fhir:v "event" ] ;
-       fhir:value [ fhir:v "新增" ]
+       fhir:value [
+         a fhir:string ;
+         fhir:v "新增"
+       ]
      ] )
   ] [
      fhir:code [ fhir:v "sets" ] ;
      fhir:display [ fhir:v "訓練組數" ] ;
      fhir:property ( [
        fhir:code [ fhir:v "updateDate" ] ;
-       fhir:value [ fhir:v "2024-06" ]
+       fhir:value [
+         a fhir:string ;
+         fhir:v "2024-06"
+       ]
      ] [
        fhir:code [ fhir:v "event" ] ;
-       fhir:value [ fhir:v "新增" ]
+       fhir:value [
+         a fhir:string ;
+         fhir:v "新增"
+       ]
      ] )
   ] ) . # 
 
