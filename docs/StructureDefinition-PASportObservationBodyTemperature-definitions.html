@@ -7,7 +7,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>基礎生理量測－體溫 - Definitions - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.2.0</title>
+    <title>基礎生理量測－體溫 - Definitions - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.3.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -34,10 +34,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -45,8 +45,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"9.11"}
-    h3,h4,h5,h6{--heading-prefix:"9.11"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.11"}
+    h3,h4,h5,h6{--heading-prefix:"14.11"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -56,7 +56,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - ci-build+trial-use
+            <span style="display:inline-block;">0.3.0 - ci-build+trial-use
 
 
             </span>
@@ -109,7 +109,16 @@
   <li><a href="downloads.html">結構定義與範例檔下載</a></li>
   <li><a href="security.html">安全性</a></li>
   <li><a href="validates.html">驗證教學</a></li>
-  <li><a href="connectathon.html">2025 專案聯測松</a></li>
+  <li class="dropdown">
+    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+    </ul>
+  </li>
   <!-- <li><a href="history.html">版本歷程</a></li> -->
 </ul>      
 
@@ -166,7 +175,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 4" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -239,7 +248,7 @@
         
           Active
           
-            as of 2025-07-28
+            as of 2025-08-20
           
         
       </td>
@@ -590,8 +599,7 @@
 <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Observation.language">  </a><span style="color: grey">8</span><b>. Observation.language</b><a href="#Observation.language" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">編寫此resource的語言</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td>用以表述Observation Resource內容的語言。</td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="font-size: 11px">提供語言是為了支援索引和可存取性（通常，文字表述轉語音等服務使用此語言標籤）。html lanuage tag適用於此敘述。resource上的語言標籤可用於指定從resource中的資料所產成的其他表述之語言。不是所有的內容都必須使用此語言。不應該假定Resource.language自動適用於敘述。如果指定語言，它也應該被指定在html中的div資料項目（關於xml:lang和html lang屬性之間的關係，見HTML5中的規則）。</p>
 </td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/terminologies.html">Binding</a></td><td><span>The codes SHOULD be taken from  <a href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a><br/>(<a href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a> to <span class="copy-text-inline"><code>http://hl7.org/fhir/ValueSet/languages</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages" title="Click to Copy URL" class="btn-copy"></button></span>)</span><br/><p>人類語言；鼓勵使用CommonLanguages代碼表中的代碼，但不強制一定要使用此代碼表，你也可使用其他代碼表的代碼或單純以文字表示。</p>
-<table class="grid"><tr><td style="font-size: 11px"><b>Additional Bindings</b></td><td style="font-size: 11px">Purpose</td></tr><tr><td style="font-size: 11px"><a href="http://hl7.org/fhir/R4/valueset-all-languages.html" title="http://hl7.org/fhir/ValueSet/all-languages">AllLanguages</a></td><td style="font-size: 11px"><a href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html" title="A required binding, for use when the binding strength is 'extensible' or 'preferred'">Max Binding</a></td></tr></table></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#ismodifier">Is Modifier</a></td><td>false</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/elementdefinition.html#primitives">Primitive Value</a></td><td>This primitive element may be present, or absent, or replaced by an extension</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/search.html#summary">Summary</a></td><td>false</td></tr><tr><td style="white-space: nowrap">Example</td><td>&lt;br/&gt;&lt;b&gt;Value&lt;/b&gt;:zh-TW
-</td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (<code>hasValue() or (children().count() &gt; id.count())</code>)</td></tr>
+<table class="grid"><tr><td style="font-size: 11px"><b>Additional Bindings</b></td><td style="font-size: 11px">Purpose</td></tr><tr><td style="font-size: 11px"><a href="http://hl7.org/fhir/R4/valueset-all-languages.html" title="http://hl7.org/fhir/ValueSet/all-languages">AllLanguages</a></td><td style="font-size: 11px"><a href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html" title="A required binding, for use when the binding strength is 'extensible' or 'preferred'">Max Binding</a></td></tr></table></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#ismodifier">Is Modifier</a></td><td>false</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/elementdefinition.html#primitives">Primitive Value</a></td><td>This primitive element may be present, or absent, or replaced by an extension</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/search.html#summary">Summary</a></td><td>false</td></tr><tr><td style="white-space: nowrap">Example</td><td><b>Value: </b>zh-TW</td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (<code>hasValue() or (children().count() &gt; id.count())</code>)</td></tr>
 
 <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Observation.text">  </a><span style="color: grey">10</span><b>. Observation.text</b><a href="#Observation.text" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">人可讀的敘述，包含resource的摘要，可用於向人表述resource的內容。敘述不需要對所有的結構化資料進行編碼，但需要包含足夠的細節使人在閱讀敘述時理解「臨床安全性」。resource定義有哪些內容應該在敘述中表示，以確保臨床安全。</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td>Observation Resource之內容摘要以供人閱讀</td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="font-size: 11px">內嵌（contained）的resource沒有敘述，非內嵌（contained）的resource則 <strong>建議應該（SHOULD）</strong> 有敘述。有時resource可能只有文字表述，很少或沒有額外的結構化資料（只要滿足所有minOccurs=1的資料項目）。這可能出現在舊系統的資料，當資訊以 「文字表述區塊（text blob） 」的形式被取得，或者文字表述是原始輸入或說明，而編碼資訊稍後再添加。</p>
@@ -1039,7 +1047,7 @@ obs-3：必須至少有低、高或文字表述。</td></tr><tr><td style="white
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://mitw.dicom.org.tw/">MI-TW</a>.  Package fhir.twltc#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 28, 2025 14:54+0800">2025-07-28</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package fhir.twltc#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 20, 2025 12:48+0800">2025-08-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

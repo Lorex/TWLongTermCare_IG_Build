@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Track 2 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"10"}
+    h3,h4,h5,h6{--heading-prefix:"10"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)</span>
+            <br/>
+            <span style="display:inline-block;">0.3.0 - ci-build+trial-use
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">應用說明</a></li>
+  <li><a href="toc.html">目錄</a></li>
+	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<!-- <li>
+				<a href="capabilitystatements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters-and-operation.html">查詢參數及操作定義</a>
+			</li>
+			<li>
+				<a href="models.html">邏輯模型</a>
+			</li> -->
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles 及 Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+  <!-- <li><a href="examples.html">範例</a></li> -->
+  <li><a href="downloads.html">結構定義與範例檔下載</a></li>
+  <li><a href="security.html">安全性</a></li>
+  <li><a href="validates.html">驗證教學</a></li>
+  <li class="dropdown">
+    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+    </ul>
+  </li>
+  <!-- <li><a href="history.html">版本歷程</a></li> -->
+</ul>      
+
+<style>
+.dropdown-menu li:hover .sub-menu {visibility: visible;}
+.dropdown:hover .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 992px) {
+  table.colsi {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  table.rwd-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  p, a {
+    word-break: break-all;
+  }
+}
+</style>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Track 2</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Track 2</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#賽道-2失智症照護監測" id="markdown-toc-賽道-2失智症照護監測">賽道 2：失智症照護監測</a>    <ul>
+      <li><a href="#說明" id="markdown-toc-說明">說明</a></li>
+      <li><a href="#檢核項目" id="markdown-toc-檢核項目">檢核項目</a></li>
+      <li><a href="#各系統角色於本賽道之作用" id="markdown-toc-各系統角色於本賽道之作用">各系統角色於本賽道之作用</a></li>
+      <li><a href="#通過條件" id="markdown-toc-通過條件">通過條件</a></li>
+      <li><a href="#情境-scenarios" id="markdown-toc-情境-scenarios">情境 (Scenarios)</a></li>
+      <li><a href="#交易-transactions" id="markdown-toc-交易-transactions">交易 (Transactions)</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h2 id="賽道-2失智症照護監測">賽道 2：失智症照護監測</h2>
+
+<h3 id="說明">說明</h3>
+
+<p>失智症照護監測主要針對失智症個案進行認知功能評估、行為監測、位置追蹤和異常事件警報等服務。參測單位應依照上述需求分別實作相關功能，並提供應用系統以滿足失智症照護的資料交換需求。</p>
+
+<h3 id="檢核項目">檢核項目</h3>
+
+<ul>
+  <li>參測單位應實作失智症認知評估功能（情境 1）</li>
+  <li>參測單位應實作個案位置監測功能（情境 2）</li>
+  <li>參測單位應實作異常事件警報功能（情境 3）</li>
+</ul>
+
+<h3 id="各系統角色於本賽道之作用">各系統角色於本賽道之作用</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keyword</th>
+      <th>名稱</th>
+      <th>說明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LTC_MANAGEMENT</td>
+      <td>LTC Management System</td>
+      <td>負責接收失智症認知評估結果、個案位置資訊、異常事件警報等資料，並提供資料管理與上傳功能。</td>
+    </tr>
+    <tr>
+      <td>LTC_CONSUMER</td>
+      <td>LTC Consumer</td>
+      <td>負責向 LTC Repository 查詢失智症認知評估結果、個案位置資訊、異常事件警報等資料。</td>
+    </tr>
+    <tr>
+      <td>LTC_REPOSITORY</td>
+      <td>LTC Repository</td>
+      <td>負責提供資料交換與儲存功能，包括失智症認知評估結果、個案位置資訊、異常事件警報等資料的交換、儲存與管理。</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="通過條件">通過條件</h3>
+
+<ul>
+  <li>參測單位 <strong>必須</strong> 通過情境 1、2、3 其中任一情境的所有要求項目，才算通過本賽道。</li>
+</ul>
+
+<h3 id="情境-scenarios">情境 (Scenarios)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>情境 ID</th>
+      <th>說明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SC1</td>
+      <td>失智症認知評估管理</td>
+    </tr>
+    <tr>
+      <td>SC2</td>
+      <td>個案位置監測管理</td>
+    </tr>
+    <tr>
+      <td>SC3</td>
+      <td>異常事件警報管理</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="情境-1失智症認知評估管理">情境 1：失智症認知評估管理</h4>
+
+<p>失智症認知評估管理情境模擬醫事機構對失智症個案進行認知功能評估的流程。在此情境中，醫事人員會透過標準化的評估工具對個案進行認知功能評估並出具評估結果，後續透過標準化的資料交換機制上傳至日照中心管理系統。本情境因應台灣實際使用狀況，採用 MMSE、CDR 兩種標準化評估量表，未來可擴增至其他評估量表（例如 AD8 等），若參測單位有其他評估量表需求，也可與大會聯繫並提供量表內容，大會將協助參測單位進行量表驗證。</p>
+
+<p>本情境會使用到 QuestionnaireResponse 資源，各系統角色應具備以下核心功能：</p>
+
+<h4 id="資料儲存管理功能ltc_repository-角色">資料儲存、管理功能（LTC_REPOSITORY 角色）</h4>
+
+<ul>
+  <li>能夠接收來自醫事機構的失智症認知評估結果，包括但不限於 MMSE、CDR 等標準化評估工具的結果。</li>
+  <li>支援即時或批次上傳／查詢模式，確保資料傳輸的穩定性與完整性。
+    <ul>
+      <li>必須支援以 POST 方式上傳資料。</li>
+      <li>必須支援以 GET 方式查詢資料。</li>
+      <li>必須支援以 PUT 方式更新／上傳資料。</li>
+      <li>選擇性支援以 POST Bundle 方式上傳資料。</li>
+    </ul>
+  </li>
+  <li>遵循 FHIR R4 QuestionnaireResponse 資源格式，將失智症認知評估結果儲存至 FHIR Server 中，並提供查詢功能。</li>
+</ul>
+
+<h4 id="資料上傳功能ltc_management-角色">資料上傳功能（LTC_MANAGEMENT 角色）</h4>
+
+<ul>
+  <li>必須能以 POST 方式上傳單筆或批次失智症認知評估結果。</li>
+  <li>必須提供介面，讓醫事人員輸入評估結果後進行資料上傳，並提供一個可驗證的介面，讓使用者確認上傳的資訊。</li>
+  <li>必須支援以下評估量表：</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>量表名稱</th>
+      <th>類型</th>
+      <th>說明</th>
+      <th>備註</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MMSE</td>
+      <td>QuestionnaireResponse</td>
+      <td>Mini-Mental State Examination</td>
+      <td>簡短智能測驗量表</td>
+    </tr>
+    <tr>
+      <td>CDR</td>
+      <td>QuestionnaireResponse</td>
+      <td>Clinical Dementia Rating</td>
+      <td>臨床失智評估量表</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="資料查詢功能ltc_consumer-角色">資料查詢功能（LTC_CONSUMER 角色）</h4>
+
+<ul>
+  <li>必須能以 GET 方式調閱失智症認知評估結果。</li>
+  <li>必須提供查詢介面，支援以多種條件調閱評估結果，並支援以 _history 參數調閱歷史資料。</li>
+  <li>必須支援以下調閱條件：
+    <ul>
+      <li>依據個案編號查詢</li>
+      <li>依據評估工具類型查詢</li>
+      <li>依據評估時間查詢</li>
+      <li>依據評估結果分數範圍查詢</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="情境-2個案位置監測管理">情境 2：個案位置監測管理</h4>
+
+<p>個案位置監測管理情境模擬定位監測系統對失智症個案進行即時位置追蹤的流程。在此情境中，定位監測系統會透過 GPS、WiFi、藍牙等技術對個案進行位置追蹤，並透過標準化的資料交換機制上傳至日照中心管理系統。</p>
+
+<p>本情境會使用到 Location 資源，各系統角色應具備以下核心功能：</p>
+
+<h4 id="資料儲存管理功能ltc_repository-角色-1">資料儲存、管理功能（LTC_REPOSITORY 角色）</h4>
+
+<ul>
+  <li>能夠接收來自定位監測系統的個案位置資訊，包括但不限於所在地名稱、經緯度座標等。</li>
+  <li>支援即時或批次上傳／查詢模式，確保資料傳輸的穩定性與完整性。
+    <ul>
+      <li>必須支援以 POST 方式上傳資料。</li>
+      <li>必須支援以 GET 方式查詢資料。</li>
+      <li>必須支援以 PUT 方式更新／上傳資料。</li>
+      <li>選擇性支援以 POST Bundle 方式上傳資料。</li>
+    </ul>
+  </li>
+  <li>遵循 FHIR R4 Location 資源格式，將個案位置資訊儲存至 FHIR Server 中，並提供查詢功能。</li>
+</ul>
+
+<h4 id="資料上傳功能ltc_management-角色-1">資料上傳功能（LTC_MANAGEMENT 角色）</h4>
+
+<ul>
+  <li>必須能以 POST 方式上傳單筆或批次個案位置資訊。</li>
+  <li>必須提供介面，讓定位監測系統自動上傳位置資訊，並提供一個可驗證的介面，讓使用者確認上傳的資訊。</li>
+  <li>必須支援以下位置資訊項目：</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>項目</th>
+      <th>類型</th>
+      <th>說明</th>
+      <th>備註</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>所在地名稱</td>
+      <td>Location</td>
+      <td>個案所在的地點名稱</td>
+      <td>例如：日照中心、家裡、公園等</td>
+    </tr>
+    <tr>
+      <td>經緯度座標</td>
+      <td>Location</td>
+      <td>GPS 座標資訊</td>
+      <td>十進位度數格式</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="資料查詢功能ltc_consumer-角色-1">資料查詢功能（LTC_CONSUMER 角色）</h4>
+
+<ul>
+  <li>必須能以 GET 方式查詢個案位置資訊。</li>
+  <li>必須提供查詢介面，支援以多種條件查詢位置資訊，並支援以 _history 參數查詢歷史資料。</li>
+  <li>必須支援以下查詢條件：
+    <ul>
+      <li>依據個案編號查詢</li>
+      <li>依據時間範圍查詢</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="情境-3異常事件警報管理">情境 3：異常事件警報管理</h4>
+
+<p>異常事件警報管理情境模擬定位監測系統對失智症個案異常行為或事件進行偵測與警報的流程。在此情境中，定位監測系統會透過各種感測器或演算法偵測異常事件（如離開安全區域、異常移動模式、跌倒等），並透過標準化的資料交換機制上傳至日照中心管理系統。</p>
+
+<p>本情境會使用到 AdverseEvent 資源，各系統角色應具備以下核心功能：</p>
+
+<h4 id="資料儲存管理功能ltc_repository-角色-2">資料儲存、管理功能（LTC_REPOSITORY 角色）</h4>
+
+<ul>
+  <li>能夠接收來自定位監測系統的異常事件警報，包括但不限於事件類型、嚴重程度、發生時間、位置等。</li>
+  <li>支援即時或批次上傳／查詢模式，確保資料傳輸的穩定性與完整性。
+    <ul>
+      <li>必須支援以 POST 方式上傳資料。</li>
+      <li>必須支援以 GET 方式查詢資料。</li>
+      <li>必須支援以 PUT 方式更新／上傳資料。</li>
+      <li>選擇性支援以 POST Bundle 方式上傳資料。</li>
+    </ul>
+  </li>
+  <li>遵循 FHIR R4 AdverseEvent 資源格式，將異常事件警報儲存至 FHIR Server 中，並提供查詢功能。</li>
+</ul>
+
+<h4 id="資料上傳功能ltc_management-角色-2">資料上傳功能（LTC_MANAGEMENT 角色）</h4>
+
+<ul>
+  <li>必須能以 POST 方式上傳單筆或批次異常事件警報。</li>
+  <li>必須提供介面，讓定位監測系統自動上傳警報資訊，並提供一個可驗證的介面，讓使用者確認上傳的資訊。</li>
+  <li>必須支援以下異常事件類型：</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>項目</th>
+      <th>類型</th>
+      <th>Code system</th>
+      <th>Code</th>
+      <th>Display</th>
+      <th>備註</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>離開安全區域</td>
+      <td>AdverseEvent</td>
+      <td>SNOMED CT</td>
+      <td> </td>
+      <td> </td>
+      <td>嚴重程度：高</td>
+    </tr>
+    <tr>
+      <td>異常移動模式</td>
+      <td>AdverseEvent</td>
+      <td>SNOMED CT</td>
+      <td> </td>
+      <td> </td>
+      <td>嚴重程度：中</td>
+    </tr>
+    <tr>
+      <td>跌倒偵測</td>
+      <td>AdverseEvent</td>
+      <td>SNOMED CT</td>
+      <td> </td>
+      <td> </td>
+      <td>嚴重程度：高</td>
+    </tr>
+    <tr>
+      <td>長時間靜止</td>
+      <td>AdverseEvent</td>
+      <td>SNOMED CT</td>
+      <td> </td>
+      <td> </td>
+      <td>嚴重程度：中</td>
+    </tr>
+    <tr>
+      <td>異常生命徵象</td>
+      <td>AdverseEvent</td>
+      <td>SNOMED CT</td>
+      <td> </td>
+      <td> </td>
+      <td>嚴重程度：高</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>注意：</strong> 上述異常事件類型在 SNOMED CT 中可能沒有完全對應的代碼，參測單位可根據實際需求選擇適當的 SNOMED CT 代碼或使用自定義代碼。</p>
+
+<h4 id="資料查詢功能ltc_consumer-角色-2">資料查詢功能（LTC_CONSUMER 角色）</h4>
+
+<ul>
+  <li>必須能以 GET 方式查詢異常事件警報。</li>
+  <li>必須提供查詢介面，支援以多種條件查詢警報資訊，並支援以 _history 參數查詢歷史資料。</li>
+  <li>必須支援以下查詢條件：
+    <ul>
+      <li>依據個案編號查詢</li>
+      <li>依據事件類型查詢</li>
+      <li>依據嚴重程度查詢</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="交易-transactions">交易 (Transactions)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>交易 ID</th>
+      <th>說明</th>
+      <th>發送方 (From)</th>
+      <th>接收方 (To)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LTC-211</td>
+      <td>上傳 MMSE 失智評估結果</td>
+      <td>醫事機構系統</td>
+      <td>日照中心系統</td>
+    </tr>
+    <tr>
+      <td>LTC-212</td>
+      <td>上傳 CDR 失智評估結果</td>
+      <td>醫事機構系統</td>
+      <td>日照中心系統</td>
+    </tr>
+    <tr>
+      <td>LTC-213</td>
+      <td>查詢失智症評估結果</td>
+      <td>日照中心系統</td>
+      <td>家屬行動 App</td>
+    </tr>
+    <tr>
+      <td>LTC-221</td>
+      <td>上傳個案即時位置</td>
+      <td>定位監測系統</td>
+      <td>日照中心系統</td>
+    </tr>
+    <tr>
+      <td>LTC-222</td>
+      <td>查詢個案位置資訊</td>
+      <td>日照中心系統</td>
+      <td>家屬行動 App</td>
+    </tr>
+    <tr>
+      <td>LTC-231</td>
+      <td>上傳異常事件警報</td>
+      <td>定位監測系統</td>
+      <td>日照中心系統</td>
+    </tr>
+    <tr>
+      <td>LTC-232</td>
+      <td>查詢異常事件警報</td>
+      <td>日照中心系統</td>
+      <td>家屬行動 App</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package fhir.twltc#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 20, 2025 12:48+0800">2025-08-20</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

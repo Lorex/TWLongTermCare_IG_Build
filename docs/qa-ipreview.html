@@ -152,7 +152,7 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
     <ul>
       <li>
 
-          IG &copy; 2024+ MI-TW.  Package fhir.twltc#0.2.0 based on FHIR 4.0.1. Generated 2025-07-28 
+          IG &copy; 2024+ 經濟部產業發展署.  Package fhir.twltc#0.3.0 based on FHIR 4.0.1. Generated 2025-08-20 
           
           
                       Links: Table of Contents |
@@ -169,6 +169,38 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
              
                 CC0
          (        <a href="searchform.html">src</a>
+)
+      </li>
+      <li>
+ +----------+
+ | Resource |
+ |   Owner  |
+ |          |
+ +----------+
+      ^
+      |
+     (B)
+ +----|-----+          Client Identifier      +---------------+
+ |         -+----(A)-- &amp; Redirection URI ----&gt;|               |
+ |  User-   |                                 | Authorization |
+ |  Agent  -+----(B)-- User authenticates ---&gt;|     Server    |
+ |          |                                 |               |
+ |         -+----(C)-- Authorization Code ---&lt;|               |
+ +-|----|---+                                 +---------------+
+   |    |                                         ^      v
+  (A)  (C)                                        |      |
+   |    |                                         |      |
+   ^    v                                         |      |
+ +---------+                                      |      |
+ |         |&gt;---(D)-- Authorization Code ---------'      |
+ |  Client |          &amp; Redirection URI                  |
+ |         |                                             |
+ |         |&lt;---(E)----- Access Token -------------------'
+ +---------+       (w/ Optional Refresh Token)
+
+Note: The lines illustrating steps (A), (B), and (C) are broken into
+two parts as they pass through the user-agent.
+ (        <a href="track0.html">src</a>
 )
       </li>
       <li>
@@ -198,7 +230,7 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
 )
       </li>
       <li>
-臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.2.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the Directory of published versions (        <a href="validates.html">src</a>
+臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.3.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the Directory of published versions (        <a href="validates.html">src</a>
 )
       </li>
       <li>
@@ -224,13 +256,13 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
           <a href="CodeSystem-AddressUseCS-TWLTC-testing.html">web</a>
         </td>
         <td>
-          <a href="https://mitw.dicom.org.tw/">mitw.dicom.org.tw</a>
+          <a href="https://www.ida.gov.tw/">www.ida.gov.tw</a>
         </td>
         <td>
 
-          IG &copy; 2024+           <a style="color:var(--footer-hyperlink-text-color)" href="https://mitw.dicom.org.tw/">MI-TW</a>
-.  Package fhir.twltc#0.2.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Mon, Jul 28, 2025 14:54+0800">2025-07-28</span>
+          IG &copy; 2024+           <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>
+.  Package fhir.twltc#0.3.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
+. Generated           <span title="Wed, Aug 20, 2025 12:48+0800">2025-08-20</span>
 
                     <br/>
 
@@ -261,6 +293,18 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
             <button data-clipboard-text="http://hl7.org/fhir/ValueSet/questionnaire-answers" title="Click to copy URL" class="btn-copy"></button>
           </div>
           <div>From the FHIR Standard</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="connectathon.html">web</a>
+        </td>
+        <td>
+          <a href="https://maps.app.goo.gl/qvDsPK9TP26FVPjx6">maps.app.goo.gl</a>
+        </td>
+        <td>
+          <strong>地點：</strong>
+ 高雄軟體科技園區 A 棟 401 號會議室 (高雄市前鎮區復興四路 12 號)           <a href="https://maps.app.goo.gl/qvDsPK9TP26FVPjx6">地圖連結</a>
         </td>
       </tr>
       <tr>

@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Home - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.2.0</title>
+    <title>Home - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.3.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -30,10 +30,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -52,7 +52,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - ci-build+trial-use
+            <span style="display:inline-block;">0.3.0 - ci-build+trial-use
 
 
             </span>
@@ -105,7 +105,16 @@
   <li><a href="downloads.html">結構定義與範例檔下載</a></li>
   <li><a href="security.html">安全性</a></li>
   <li><a href="validates.html">驗證教學</a></li>
-  <li><a href="connectathon.html">2025 專案聯測松</a></li>
+  <li class="dropdown">
+    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+    </ul>
+  </li>
   <!-- <li><a href="history.html">版本歷程</a></li> -->
 </ul>      
 
@@ -169,7 +178,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Home</h2>
   
 
@@ -184,7 +193,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://ltc-ig.fhir.tw/ImplementationGuide/fhir.twltc<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://ltc-ig.fhir.tw/ImplementationGuide/fhir.twltc"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.2.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://ltc-ig.fhir.tw/ImplementationGuide/fhir.twltc|0.2.0"/></span>
+      <span class="copy-text">0.3.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://ltc-ig.fhir.tw/ImplementationGuide/fhir.twltc|0.3.0"/></span>
       </td>
     </tr>
 
@@ -200,7 +209,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Active
           
-            as of 2025-07-28
+            as of 2025-08-20
           
         
       </td>
@@ -258,7 +267,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>TW LTC IG 中所有Profiles的FMM等級如下：
   <ol>
-    <li>0.0.1 版本的所有 Profiles 均為 FMM0</li>
+    <li>0.3.0 版本的所有 Profiles 均為 FMM0</li>
   </ol>
 </p>
 </div>
@@ -296,14 +305,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <!-- <li><strong><a href="terminologies.html">專門術語</a>
       </strong>：TW LTC IG網站所使用的專門術語，包括代碼系統（Code Systems）及值集（Value Sets），內容主要依據全國專門術語服務平臺（TW terminology services）與長期照顧情境使用之術語建置。
     </li> -->
-  &lt;/ul&gt;
+  <!-- </ul> -->
   </li>
   <!-- <li><strong><a href="examples.html">範例</a></strong>：遵從 TW LTC IG 所定義 Profiles 之範例。</li> -->
   <li><strong><a href="downloads.html">結構定義與範例檔下載</a></strong>：實作者若不偏好使用 FHIR RESTful API 驗證資料是否遵從 Profiles，可直接下載所需的格式驗證檔，包括 XML、JSON 及 Turtle 三種格式，亦可於此下載完整範例。</li>
   <li><strong><a href="security.html">安全性</a></strong>：主要說明採用 TW LTC IG 網站進行實作時，有關資料存取授權的作法。</li>
   <li><strong><a href="validates.html">驗證教學</a></strong>：如何驗證實作檔是否遵從 TW LTC IG 規範。</li>
   <li><strong><a href="connectathon.html">
-    MI-TW 2024 聯測松</a></strong>：本規範與 MI-TW Connectathon 2024 臺灣醫學資訊聯測松的賽道整合資訊。</li>
+    2025 專案聯測松</a></strong>：本規範與 2025 專案聯測松的賽道整合資訊。</li>
   <!-- <li><strong><a href="https://twcore.mohw.gov.tw/ig/twcore/history.html">版本異動</a></strong>：若 TW LTC IG 網站的版本有所異動，皆可透過<a href="https://twcore.mohw.gov.tw/ig/twcore/history.html">異動說明頁</a>得以瞭解版本間的異動差異。</li> -->
 </ul>
 </div>
@@ -315,7 +324,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 		<tr class="header">
 			<th style="width:10%; vertical-align: middle;">角色</th>
       <th style="width:10%; vertical-align: middle;">貢獻版次</th>
-			<!-- <th style="width:25%; vertical-align: middle;">機構名稱</th> -->
+			<th style="width:25%; vertical-align: middle;">機構名稱</th>
 			<th style="width:15%; vertical-align: middle;">姓名</th>
 			<th style="width:30%; vertical-align: middle;">所屬單位</th>
 			<th style="vertical-align: middle;">聯絡方式</th>
@@ -324,9 +333,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 	<tbody>
 			<tr>
         <td style="vertical-align: middle;">作者</td>
-            <td style="vertical-align: middle;">v0.0.1</td>
-        <!-- <td rowspan="4" style="vertical-align: middle;">MI-TW 臺灣醫學資訊聯測松<br />
-        （Medical Informatics Taiwan Connectathon, MI-TW Connectathon）</td> -->
+            <td style="vertical-align: middle;">v0.0.1 ~ v0.3.0</td>
+        <td rowspan="7" style="vertical-align: middle;">經濟部產業發展署<br />
+        （Industrial Development Administration, Ministry of Economic Affairs）</td>
         <td style="vertical-align: middle;">楊宇凡（Yu-Fan Yang）</td>
         <td style="vertical-align: middle;">矽塔資訊服務有限公司<br />
         （Sitatech Information Services Co., Ltd）</td>
@@ -336,7 +345,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 			</tr>
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
-            <td style="vertical-align: middle;">v0.0.1</td>
+            <td style="vertical-align: middle;">v0.3.0</td>
+        <td style="vertical-align: middle;">曹軒寧（Hsuan-Ning Tsao）</td>
+        <td style="vertical-align: middle;">矽塔資訊服務有限公司<br />（Sitatech Information Services Co., Ltd）</td>
+        <td style="vertical-align: middle;">
+          <a href="mailto:shannontsao@sita.tech">shannontsao@sita.tech</a>
+        </td>
+			</tr>
+      <tr>
+        <td style="vertical-align: middle;">貢獻者</td>
+            <td style="vertical-align: middle;">v0.0.1 ~ v0.2.1</td>
         <td style="vertical-align: middle;">李修安（Hsiu-An Lee）</td>
         <td style="vertical-align: middle;">國家衛生研究院 - 癌症研究所<br />（National Health Research Institutes - The National Institute of Cancer Research）</td>
         <td style="vertical-align: middle;">
@@ -345,20 +363,47 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 			</tr>
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
-            <td style="vertical-align: middle;">v0.0.1</td>
+            <td style="vertical-align: middle;">v0.0.1 ~ v0.3.0</td>
         <td style="vertical-align: middle;">李祥豪（Siang-Hao Lee）</td>
         <td style="vertical-align: middle;">九日生行動健康科技公司<br />（9Rise International Mobile Health Technology Co., Ltd.）</td>
         <td style="vertical-align: middle;">
-          <a href="mailto:billy72325@gmail.com">shvoidlee@gmail.com</a>
+          <a href="mailto:shvoidlee@gmail.com">shvoidlee@gmail.com</a>
         </td>
 			</tr>
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
-            <td style="vertical-align: middle;">v0.0.1</td>
+            <td style="vertical-align: middle;">v0.3.0</td>
+        <td style="vertical-align: middle;">楊宗翰（Chung-Han Yang）</td>
+        <td style="vertical-align: middle;">九日生行動健康科技公司<br />（9Rise International Mobile Health Technology Co., Ltd.）</td>
+        <td style="vertical-align: middle;">
+          <a href="mailto:#"></a>
+        </td>
+			</tr>
+      <tr>
+        <td style="vertical-align: middle;">貢獻者</td>
+            <td style="vertical-align: middle;">v0.0.1 ~ v0.3.0</td>
         <td style="vertical-align: middle;">黃薰慧（Hsun-Hui Huang）</td>
         <td style="vertical-align: middle;">財團法人資訊工業策進會 - 數位轉型研究院<br />（Institute for Information Industry - Digital Transformation Research Institute）</td>
         <td style="vertical-align: middle;">
           <a href="mailto:beatrice@iii.org.tw">beatrice@iii.org.tw</a>
+        </td>
+			</tr>
+      <tr>
+        <td style="vertical-align: middle;">貢獻者</td>
+            <td style="vertical-align: middle;">v0.3.0</td>
+        <td style="vertical-align: middle;">張鈞亮 (Chun-Liang Chang)</td>
+        <td style="vertical-align: middle;">財團法人資訊工業策進會 - 數位轉型研究院<br />（Institute for Information Industry - Digital Transformation Research Institute）</td>
+        <td style="vertical-align: middle;">
+          <a href="mailto:liangglchang@iii.org.tw">liangglchang@iii.org.tw</a>
+        </td>
+			</tr>
+      <tr>
+        <td style="vertical-align: middle;">貢獻者</td>
+            <td style="vertical-align: middle;">v0.3.0</td>
+        <td style="vertical-align: middle;">崔智萱 (Nicole Tsui)</td>
+        <td style="vertical-align: middle;">財團法人資訊工業策進會 - 數位轉型研究院<br />（Institute for Information Industry - Digital Transformation Research Institute）</td>
+        <td style="vertical-align: middle;">
+          <a href="mailto:nicolechtsui@iii.org.tw">nicolechtsui@iii.org.tw</a>
         </td>
 			</tr>
 	</tbody>
@@ -383,7 +428,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://mitw.dicom.org.tw/">MI-TW</a>.  Package fhir.twltc#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 28, 2025 14:54+0800">2025-07-28</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package fhir.twltc#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 20, 2025 12:48+0800">2025-08-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -11,7 +11,7 @@
 - **專案 ID**: `fhir.twltc`
 - **正式 URL (Canonical)**: `http://ltc-ig.fhir.tw`
 - **FHIR 版本**: `4.0.1`
-- **核心依賴**: `tw.gov.mohw.twcore: 0.3.0` (臺灣核心實作指引)
+- **核心依賴**: `tw.gov.mohw.twcore: 0.3.2` (臺灣核心實作指引)
 - **發布者**: MI-TW (臺灣醫學資訊聯測松)
 
 ## 2. 核心應用場景 (Core Application Scenarios)

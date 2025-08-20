@@ -8,9 +8,9 @@
 - **專案名稱**: Taiwan Long-Term Care Implementation Guide
 - **專案 ID**: fhir.twltc
 - **正式 URL**: http://ltc-ig.fhir.tw
-- **版本**: 0.2.0
+- **版本**: 0.3.0
 - **狀態**: active
-- **發布者**: MI-TW (https://mitw.dicom.org.tw/)
+- **發布者**: 楊宇凡 (ceo@sita.tech)
 - **FHIR 版本**: 4.0.1
 
 ### 依賴關係
@@ -219,7 +219,7 @@ TWLongTermCare_IG_Build/
 ## 版本管理
 
 ### 版本歷史
-- **0.2.1** (開發中): 升級至 TW Core IG 0.3.2，確保所有 Profiles 相容性
+- **0.3.0** (2025-06-20): 升級至 TW Core IG 0.3.2，確保所有 Profiles 相容性
 - **0.2.0** (2024-09-02): 新增跌倒紀錄、升級至 TW Core IG 0.3.0
 - **0.1.1** (2024-09-02): 新增 Bundle、Composition、問卷相關資源
 - **0.1.0** (2024-08-25): 初始版本，定義基本 Profile

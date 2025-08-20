@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Connectathon - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.2.0</title>
+    <title>Connectathon - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.3.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -30,10 +30,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -52,7 +52,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - ci-build+trial-use
+            <span style="display:inline-block;">0.3.0 - ci-build+trial-use
 
 
             </span>
@@ -105,7 +105,16 @@
   <li><a href="downloads.html">結構定義與範例檔下載</a></li>
   <li><a href="security.html">安全性</a></li>
   <li><a href="validates.html">驗證教學</a></li>
-  <li><a href="connectathon.html">2025 專案聯測松</a></li>
+  <li class="dropdown">
+    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+    </ul>
+  </li>
   <!-- <li><a href="history.html">版本歷程</a></li> -->
 </ul>      
 
@@ -169,7 +178,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Connectathon</h2>
   
 
@@ -188,9 +197,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#活動資訊-event-information" id="markdown-toc-活動資訊-event-information">活動資訊 (Event Information)</a></li>
+  <li><a href="#活動簡介-introduction" id="markdown-toc-活動簡介-introduction">活動簡介 (Introduction)</a></li>
+  <li><a href="#運作機制說明-operation-mechanism" id="markdown-toc-運作機制說明-operation-mechanism">運作機制說明 (Operation Mechanism)</a></li>
   <li><a href="#賽道-tracks" id="markdown-toc-賽道-tracks">賽道 (Tracks)</a></li>
   <li><a href="#參與單位與角色-participants--roles" id="markdown-toc-參與單位與角色-participants--roles">參與單位與角色 (Participants &amp; Roles)</a></li>
-  <li><a href="#聯測活動資訊-connectathon-event-information" id="markdown-toc-聯測活動資訊-connectathon-event-information">聯測活動資訊 (Connectathon Event Information)</a></li>
+  <li><a href="#涉及系統-system-affected" id="markdown-toc-涉及系統-system-affected">涉及系統 (System Affected)</a></li>
+  <li><a href="#系統角色-system-actors" id="markdown-toc-系統角色-system-actors">系統角色 (System Actors)</a></li>
 </ul>
 
 </div>
@@ -198,10 +210,55 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>活動名稱：</strong> 2025 臺灣長期照顧 FHIR 專案聯測松 (2025 TW LTC FHIR Projectathon)</p>
 
-<p><strong>活動簡介：</strong>
-隨著臺灣邁入超高齡社會，長期照護（長照）的數位轉型與資料整合成為提升照護品質的關鍵。然而，長照機構、醫療院所與科技服務商之間，普遍存在資料格式不一、系統難以互通的困境，形成資訊孤島，不僅加重第一線人員的行政負擔，也阻礙了服務的連續性。</p>
+<p><strong>時間：</strong> 擬訂於 2025/09/15 ~ 2025/09/19（辦理 2 天，詳細日期與廠商協調後確認）</p>
+
+<p><strong>地點：</strong> 高雄軟體科技園區 A 棟 401 號會議室 (高雄市前鎮區復興四路 12 號) <a href="https://maps.app.goo.gl/qvDsPK9TP26FVPjx6">地圖連結</a></p>
+
+<p><strong>進行模式：</strong></p>
+<ul>
+  <li>聯測總共辦理 2 日，規劃 IG 中每個情境為一獨立賽道，參測廠商可自行決定參測賽道與角色。</li>
+  <li>每個賽道都有指定完成步驟與檢核項目，參測廠商須完成所有檢核項目即為通過該賽道。</li>
+  <li>大會（主辦單位）將會提前 3 至 4 周公布賽道檢核內容，並提供 FHIR 伺服器供測試。</li>
+  <li>同時成立 LINE 群組供廠商進行先行測試，測試過程中如有問題，亦可回報大會進行 IG 或規則修正。</li>
+  <li>聯測將配置督察員，用以檢核廠商的產品是否符合規範，並於完成聯測後，將測驗結果公告於 IG 網站中。</li>
+</ul>
+
+<h3 id="活動簡介-introduction">活動簡介 (Introduction)</h3>
+
+<p>隨著臺灣邁入超高齡社會，長期照護（長照）的數位轉型與資料整合成為提升照護品質的關鍵。然而，長照機構、醫療院所與科技服務商之間，普遍存在資料格式不一、系統難以互通的困境，形成資訊孤島，不僅加重第一線人員的行政負擔，也阻礙了服務的連續性。</p>
 
 <p>為應對此挑戰，經濟部產業發展署自2024年起推動「銀光科技智慧照顧驗證推動計畫」，旨在建立全國統一的長照資料交換標準。延續去年成果，本年度 (2025) 的專案聯測松將聚焦於三大核心賽道：「日間照護服務」、「失智症照護監測」與「服務計畫與紀錄 (醫院與長照機構轉銜)」。我們將以 FHIR 標準為基礎，發展更貼近實務需求的在地化實作指引，串連日照中心、失智症照護、醫院出院準備等關鍵流程，促進跨機構、跨系統的資料互通，實現以個案為中心的無縫照護。</p>
+
+<h3 id="運作機制說明-operation-mechanism">運作機制說明 (Operation Mechanism)</h3>
+
+<p>資訊標準為健康照護系統整合應用、系統商品化之基礎，可確保資料交換的品質、安全性與一致性。醫資標準化系統之建置與推行具一系列的流程，包含：標準確立、準備測試案例、實作系統、聯測驗證、推廣應用等，須有制度化、系統性之運作機制。聯測（Connectathon）為醫資標準化驗證之重要一環，其目的在於確保各參測單位之系統能符合標準規範，並能夠順利進行資料交換，也是目前國際間最常見的醫資標準化驗證方式。其中，專案聯測（Projectathon）為聯測之延伸，通常為特定主題或議題，由特定單位主辦，邀請相關單位參與，進行資料交換的驗證。透過專案聯測，可確保制定之標準能符合實務需求，以利後續推廣應用。</p>
+
+<p>本活動將遵循國際標準治理慣例，邀集國內健康醫療、資訊科技相關之產業界、政府與公法人、學術界、長照與醫療單位，共同參與本次聯測活動。希望鼓勵醫療／長照資訊系統相關新創業者，開發與實作標準化醫療資訊系統，以期發展具國際標準化互操作性（Interoperability）之醫療／長照資訊系統及儀器，以利健康醫療與長期照顧跨系統整合應用與資料交換、促進產業提升綜效競爭力並於全球銷售市場取得先機。</p>
+
+<p>本活動包含：</p>
+<ul>
+  <li><strong>聯測籌備工作小組</strong>
+    <ul>
+      <li>在專案聯測活動前，針對不同賽道主題，進行賽道規格制定、測試案例準備、賽道執行規劃等，並產生公告規範。</li>
+    </ul>
+  </li>
+  <li><strong>聯測準備及預演</strong>
+    <ul>
+      <li>聯測約前一個月將公告規範並提供測試環境，參測單位可先行進行測試。</li>
+      <li>工作小組將提供線上諮詢服務，並協助排除測試過程中可能遇到的技術問題。</li>
+    </ul>
+  </li>
+  <li><strong>聯測執行</strong>
+    <ul>
+      <li>參測單位將於 2 日內與其他參加單位以實際網路連線進行資料交換與系統介接測試，須於時間內完成指定規範與測試案例。符合通過者，將公告於本活動網站。</li>
+    </ul>
+  </li>
+  <li><strong>成果登錄</strong>
+    <ul>
+      <li>通過聯測的產品，將提供線上 EDM 並於活動網站上公告。參測單位可提供 2 頁以內簡報檔的產品介紹。</li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="賽道-tracks">賽道 (Tracks)</h3>
 
@@ -209,6 +266,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><strong>Track 0：OAuth2 存取認證</strong>
     <ul>
       <li>與大會的 OAuth 動態 Token 驗證機制整合，確保所有資料交換的安全性。</li>
+      <li>本賽道為【必測】賽道，參測單位必須先通過本賽道並取得 Token，才能參與其他賽道。</li>
     </ul>
   </li>
   <li><strong>Track 1：日間照護服務資料交換</strong>
@@ -216,14 +274,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li><strong>說明：</strong> 模擬日照中心紀錄個案的生理數據、活動參與和用藥狀況，並讓家屬能透過 App 即時查詢。</li>
     </ul>
   </li>
-  <li><strong>Track 2：失智症照護監測</strong>
+  <li><strong>Track 2：失智症評估與監測</strong>
     <ul>
       <li><strong>說明：</strong> 模擬失智症個案的評估、追蹤與安全監測，包含評估結果交換、定位追蹤與異常事件警報。</li>
     </ul>
   </li>
-  <li><strong>Track 3：機構間轉銜服務 (醫院與長照機構)</strong>
+  <li><strong>Track 3：機構間轉銜服務</strong>
     <ul>
-      <li><strong>說明：</strong> 模擬病患從醫院出院時，醫院系統將其病歷摘要與轉介單，安全地傳送給長照機構，以利機構快速接收個案。</li>
+      <li><strong>說明：</strong> 模擬病患從醫院出院時，醫院系統將其病歷摘要與轉介單，安全地傳送給長照機構，以利機構快速接收個案，並達成醫療與長照的無縫接軌。</li>
+    </ul>
+  </li>
+  <li><strong>Track 4：長照 2.0 服務計畫與紀錄</strong>
+    <ul>
+      <li><strong>說明：</strong> 以 FHIR 進行長照 2.0 之 AA01 照顧計畫擬定與 AA02 服務紀錄等表單的交換，並提供長照機構進行照顧計畫的擬定與服務紀錄的查詢。</li>
     </ul>
   </li>
 </ul>
@@ -241,116 +304,46 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>在各賽道中，參測廠商系統將會扮演特定的<strong>角色 (Actor)</strong>，與其他系統進行指定的<strong>資料交換 (Transaction)</strong>。詳細的技術規格與角色定義，請參閱各賽道的說明。</p>
 
-<h4 id="資料交換-transactions">資料交換 (Transactions)</h4>
+<h3 id="涉及系統-system-affected">涉及系統 (System Affected)</h3>
 
-<p><strong>賽道一：日間照護服務</strong></p>
+<p>本規範涉及的系統有：</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>測試步驟</th>
-      <th>說明</th>
-      <th>發送方 (From)</th>
-      <th>接收方 (To)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1-1</td>
-      <td>記錄生理量測數據</td>
-      <td>生理量測設備</td>
-      <td>日照中心系統</td>
-    </tr>
-    <tr>
-      <td>1-2</td>
-      <td>記錄個案日常活動</td>
-      <td>照護人員工作站</td>
-      <td>日照中心系統</td>
-    </tr>
-    <tr>
-      <td>1-3</td>
-      <td>家屬查詢當日紀錄</td>
-      <td>家屬行動 App</td>
-      <td>日照中心系統</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><strong>賽道二：失智症照護監測</strong></p>
-
-<table>
-  <thead>
-    <tr>
-      <th>測試步驟</th>
-      <th>說明</th>
-      <th>發送方 (From)</th>
-      <th>接收方 (To)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>2-1</td>
-      <td>提交失智評估結果</td>
-      <td>失智症評估系統</td>
-      <td>照護決策平台</td>
-    </tr>
-    <tr>
-      <td>2-2</td>
-      <td>回報個案即時位置</td>
-      <td>行動警示裝置</td>
-      <td>定位監測系統</td>
-    </tr>
-    <tr>
-      <td>2-3</td>
-      <td>發送異常事件警報</td>
-      <td>定位監測系統</td>
-      <td>警報通知系統</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><strong>賽道三：機構間轉銜服務 (醫院與長照機構)</strong></p>
-
-<table>
-  <thead>
-    <tr>
-      <th>測試步驟</th>
-      <th>說明</th>
-      <th>發送方 (From)</th>
-      <th>接收方 (To)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>3-1</td>
-      <td>發送出院病摘與轉介單</td>
-      <td>醫院資訊系統</td>
-      <td>長照機構系統</td>
-    </tr>
-    <tr>
-      <td>3-2</td>
-      <td>回覆是否同意收案</td>
-      <td>長照機構系統</td>
-      <td>醫院資訊系統</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="聯測活動資訊-connectathon-event-information">聯測活動資訊 (Connectathon Event Information)</h3>
-
-<p><strong>時間：</strong> 擬訂於 2025/09/15 ~ 2025/09/19（辦理 2 天，詳細日期與廠商協調後確認）</p>
-
-<p><strong>地點：</strong> 待定</p>
-
-<p><strong>進行模式：</strong></p>
 <ul>
-  <li>聯測總共辦理 2 日，規劃 IG 中每個情境為一獨立賽道，參測廠商可自行決定參測賽道與角色。</li>
-  <li>每個賽道都有指定完成步驟與檢核項目，參測廠商須完成所有檢核項目即為通過該賽道。</li>
-  <li>大會（主辦單位）將會提前 3 至 4 周公布賽道檢核內容，並提供 FHIR 伺服器供測試。</li>
-  <li>同時成立 LINE 群組供廠商進行先行測試，測試過程中如有問題，亦可回報大會進行 IG 或規則修正。</li>
-  <li>聯測將配置督察員，用以檢核廠商的產品是否符合規範，並於完成聯測後，將測驗結果公告於 IG 網站中。</li>
+  <li><strong>長照個管系統（照護協調端）</strong>： 各縣市照管中心的個案管理系統，在本案中為負責建立個案資料與轉介個案至長照機構之角色。</li>
+  <li><strong>長照機構資訊系統（長照機構端）</strong>： 長照機構內資訊系統，在本案中負責登錄個案資料、辦理入住／遷出作業、並與長照科技服務及醫療院所介接進行資料交換。</li>
+  <li><strong>長照科技服務提供商</strong>： 長照科技廠商提供用於長照場域之各項軟體、硬體與服務，並與長照機構資訊系統或其他長照科技服務進行介接，包含但不限於感測器、智慧手環／手錶、監測設備、復能設備等。</li>
+  <li><strong>長照資料交換中心</strong>： 指存放長照資料、專門術語，具備長照資料存取與交換功能之儲存庫（Repository），通常跟長照機構資訊系統整合。</li>
+  <li><strong>醫療院所資訊系統</strong>： 指醫院內整合門診、住院、急診、管理等各項功能之HIS（Hospital Information System）系統。具備對外介接並交換醫療資料之能力。</li>
 </ul>
 
+<h3 id="系統角色-system-actors">系統角色 (System Actors)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keyword</th>
+      <th>名稱</th>
+      <th>說明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LTC_MANAGEMENT</td>
+      <td>LTC Management System</td>
+      <td>長照資料維護端，負責長照個案資料的新增、維護與管理。</td>
+    </tr>
+    <tr>
+      <td>LTC_CONSUMER</td>
+      <td>LTC Consumer</td>
+      <td>長照個案資料使用端，負責長照個案資料的查詢與使用。</td>
+    </tr>
+    <tr>
+      <td>LTC_REPOSITORY</td>
+      <td>LTC Repository</td>
+      <td>長照資料交換中心，負責長照個案資料的交換、儲存與管理。</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
@@ -370,7 +363,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://mitw.dicom.org.tw/">MI-TW</a>.  Package fhir.twltc#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 28, 2025 14:54+0800">2025-07-28</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package fhir.twltc#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 20, 2025 12:48+0800">2025-08-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

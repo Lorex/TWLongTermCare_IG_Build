@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>Terminologies - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.2.0</title>
+    <title>Terminologies - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.3.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -30,10 +30,10 @@
     <![endif] -->
 
       <!-- Favicons -->
-    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
-    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
-    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -52,7 +52,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - ci-build+trial-use
+            <span style="display:inline-block;">0.3.0 - ci-build+trial-use
 
 
             </span>
@@ -105,7 +105,16 @@
   <li><a href="downloads.html">結構定義與範例檔下載</a></li>
   <li><a href="security.html">安全性</a></li>
   <li><a href="validates.html">驗證教學</a></li>
-  <li><a href="connectathon.html">2025 專案聯測松</a></li>
+  <li class="dropdown">
+    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+    </ul>
+  </li>
     <!-- <li><a href="history.html">版本歷程</a></li> -->
 </ul>      
 
@@ -169,7 +178,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.2.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://ltc-ig.fhir.tw/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.3.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://ltc-ig.fhir.tw/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   <h2>Terminologies</h2>
   
 
@@ -206,17 +215,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="ValueSet-ConditionSeverityVS-TWLTC.html">疾病嚴重度擴展值集</a></li>
   <li><a href="ValueSet-ReferralConditionCaregiverVS-TWLTC.html">看護狀況值集</a></li>
   <li><a href="ValueSet-ReferralConditionTubeVS-TWLTC.html">管路狀況值集</a></li>
-  <li><a name="l332">​</a><a href="ValueSet-ICD10PCSFTWLTC.html">臺灣 2023 年中文版 ICD-10-PCS-F 值集</a></li>
-  <li><a name="l336">​</a><a href="ValueSet-FallRecordResultVS-TWLTC.html">跌倒紀錄結果值集</a></li>
+  <li><a name="l358">​</a><a href="ValueSet-ICD10PCSFTWLTC.html">臺灣 2023 年中文版 ICD-10-PCS-F 值集</a></li>
+  <li><a name="l362">​</a><a href="ValueSet-FallRecordResultVS-TWLTC.html">跌倒紀錄結果值集</a></li>
   <li><a href="ValueSet-ConditionDisabilityVS-TWLTC.html">身心障礙手冊持有狀況值集</a></li>
   <li><a href="ValueSet-ConditionDisabilityTypeVS-TWLTC.html">身心障礙類型值集</a></li>
-  <li><a name="l348">​</a><a href="ValueSet-BodyActivityTempCodeVS-TWLTC.html">身體活動量測-暫用代碼值集</a></li>
-  <li><a name="l352">​</a><a href="ValueSet-BodyActivityRecentExerciseHistoryVS-TWLTC.html">身體活動量測-最近(目前)運動史值集</a></li>
-  <li><a name="l356">​</a><a href="ValueSet-BodyActivityGaitAnalysisVS-TWLTC.html">身體活動量測-步態分析值集</a></li>
-  <li><a name="l360">​</a><a href="ValueSet-BodyActivityGaitCycleVS-TWLTC.html">身體活動量測-步態週期值集</a></li>
-  <li><a name="l364">​</a><a href="ValueSet-BodyActivityTreadmillTypeVS-TWLTC.html">身體活動量測-跑步機類型值集</a></li>
-  <li><a name="l368">​</a><a href="ValueSet-BodyActivityExercisePrescriptionServiceRequestCodeVS-TWLTC.html">身體活動量測-適用運動處方之服務請求代碼值集</a></li>
-  <li><a name="l372">​</a><a href="ValueSet-BodyActivityWeightTrainingCodeVS-TWLTC.html">身體活動量測-重量訓練代碼值集</a></li>
+  <li><a name="l374">​</a><a href="ValueSet-BodyActivityTempCodeVS-TWLTC.html">身體活動量測-暫用代碼值集</a></li>
+  <li><a name="l378">​</a><a href="ValueSet-BodyActivityRecentExerciseHistoryVS-TWLTC.html">身體活動量測-最近(目前)運動史值集</a></li>
+  <li><a name="l382">​</a><a href="ValueSet-BodyActivityGaitAnalysisVS-TWLTC.html">身體活動量測-步態分析值集</a></li>
+  <li><a name="l386">​</a><a href="ValueSet-BodyActivityGaitCycleVS-TWLTC.html">身體活動量測-步態週期值集</a></li>
+  <li><a name="l390">​</a><a href="ValueSet-BodyActivityTreadmillTypeVS-TWLTC.html">身體活動量測-跑步機類型值集</a></li>
+  <li><a name="l394">​</a><a href="ValueSet-BodyActivityExercisePrescriptionServiceRequestCodeVS-TWLTC.html">身體活動量測-適用運動處方之服務請求代碼值集</a></li>
+  <li><a name="l398">​</a><a href="ValueSet-BodyActivityWeightTrainingCodeVS-TWLTC.html">身體活動量測-重量訓練代碼值集</a></li>
   <li><a href="ValueSet-ReferralCarePlanVS-TWLTC.html">轉介單申請服務種類值集</a></li>
   <li><a href="ValueSet-RelationshipTypeVS-TWLTC.html">關係類型擴展值集</a></li>
 </ul>
@@ -227,19 +236,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="CodeSystem-ConditionDisabilityCS-TWLTC.html">個案身心障礦手冊持有狀態代碼</a></li>
   <li><a href="CodeSystem-ConditionDisabilityTypeCS-TWLTC.html">個案身心障礦類型代碼（新制）</a></li>
   <li><a href="CodeSystem-ConditionDisabilityLegacyTypeCS-TWLTC.html">個案身心障礦類型代碼（舊制）</a></li>
-  <li><a name="l406">​</a><a href="CodeSystem-AddressUseExtensionCS-TWLTC.html">地址用途擴展識別碼</a></li>
+  <li><a name="l432">​</a><a href="CodeSystem-AddressUseExtensionCS-TWLTC.html">地址用途擴展識別碼</a></li>
   <li><a href="CodeSystem-EducationStatusCS-TWLTC.html">教育程度代碼</a></li>
   <li><a href="CodeSystem-EconomyStatusCS-TWLTC.html">經濟狀況代碼</a></li>
-  <li><a name="l418">​</a><a href="CodeSystem-ICD10PCSFTWLTC.html">臺灣 2023 年中文版 ICD-10-PCS-F-復健及診斷性聽力學</a></li>
-  <li><a name="l422">​</a><a href="CodeSystem-BodyActivityTempCodeCS-TWLTC.html">身體活動量測-暫用代碼</a></li>
-  <li><a name="l426">​</a><a href="CodeSystem-BodyActivityGaitCycleCS-TWLTC.html">身體活動量測-步態週期</a></li>
-  <li><a name="l430">​</a><a href="CodeSystem-BodyActivityWeightTrainingCS-TWLTC.html">身體活動量測-重量訓練代碼系統</a></li>
+  <li><a name="l444">​</a><a href="CodeSystem-ICD10PCSFTWLTC.html">臺灣 2023 年中文版 ICD-10-PCS-F-復健及診斷性聽力學</a></li>
+  <li><a name="l448">​</a><a href="CodeSystem-BodyActivityTempCodeCS-TWLTC.html">身體活動量測-暫用代碼</a></li>
+  <li><a name="l452">​</a><a href="CodeSystem-BodyActivityGaitCycleCS-TWLTC.html">身體活動量測-步態週期</a></li>
+  <li><a name="l456">​</a><a href="CodeSystem-BodyActivityWeightTrainingCS-TWLTC.html">身體活動量測-重量訓練代碼系統</a></li>
   <li><a href="CodeSystem-ReferralConditionCrushCS-TWLTC.html">轉介單壓傷狀況代碼</a></li>
   <li><a href="CodeSystem-ReferralConditionResidenceCS-TWLTC.html">轉介單居住狀況代碼</a></li>
   <li><a href="CodeSystem-ReferralCarePlanCS-TWLTC.html">轉介單申請服務種類代碼</a></li>
   <li><a href="CodeSystem-ReferralConditionCaregiverCS-TWLTC.html">轉介單看護狀況代碼</a></li>
   <li><a href="CodeSystem-ReferralConditionTubeCS-TWLTC.html">轉介單管路狀況代碼</a></li>
-  <li><a name="l454">​</a><a href="CodeSystem-RelationshipTypeExtensionCS-TWLTC.html">關係類型擴展代碼</a></li>
+  <li><a name="l480">​</a><a href="CodeSystem-RelationshipTypeExtensionCS-TWLTC.html">關係類型擴展代碼</a></li>
 </ul>
 
 
@@ -260,7 +269,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://mitw.dicom.org.tw/">MI-TW</a>.  Package fhir.twltc#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 28, 2025 14:54+0800">2025-07-28</span>
+          IG &copy; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package fhir.twltc#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 20, 2025 12:48+0800">2025-08-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -23,7 +23,7 @@
 
 <p>TW LTC IG 中所有Profiles的FMM等級如下：
   <ol>
-    <li>0.0.1 版本的所有 Profiles 均為 FMM0</li>
+    <li>0.3.0 版本的所有 Profiles 均為 FMM0</li>
   </ol>
 </p>
 </div>
@@ -61,14 +61,14 @@
     <!-- <li><strong><a href="terminologies.html">專門術語</a>
       </strong>：TW LTC IG網站所使用的專門術語，包括代碼系統（Code Systems）及值集（Value Sets），內容主要依據全國專門術語服務平臺（TW terminology services）與長期照顧情境使用之術語建置。
     </li> -->
-  </ul>
+  <!-- </ul> -->
   </li>
   <!-- <li><strong><a href="examples.html">範例</a></strong>：遵從 TW LTC IG 所定義 Profiles 之範例。</li> -->
   <li><strong><a href="downloads.html">結構定義與範例檔下載</a></strong>：實作者若不偏好使用 FHIR RESTful API 驗證資料是否遵從 Profiles，可直接下載所需的格式驗證檔，包括 XML、JSON 及 Turtle 三種格式，亦可於此下載完整範例。</li>
   <li><strong><a href="security.html">安全性</a></strong>：主要說明採用 TW LTC IG 網站進行實作時，有關資料存取授權的作法。</li>
   <li><strong><a href="validates.html">驗證教學</a></strong>：如何驗證實作檔是否遵從 TW LTC IG 規範。</li>
   <li><strong><a href="connectathon.html">
-    MI-TW 2024 聯測松</a></strong>：本規範與 MI-TW Connectathon 2024 臺灣醫學資訊聯測松的賽道整合資訊。</li>
+    2025 專案聯測松</a></strong>：本規範與 2025 專案聯測松的賽道整合資訊。</li>
   <!-- <li><strong><a href="https://twcore.mohw.gov.tw/ig/twcore/history.html">版本異動</a></strong>：若 TW LTC IG 網站的版本有所異動，皆可透過<a href="https://twcore.mohw.gov.tw/ig/twcore/history.html">異動說明頁</a>得以瞭解版本間的異動差異。</li> -->
 </ul>
 </div>
@@ -81,7 +81,7 @@
 		<tr class="header">
 			<th style="width:10%; vertical-align: middle;">角色</th>
       <th style="width:10%; vertical-align: middle;">貢獻版次</th>
-			<!-- <th style="width:25%; vertical-align: middle;">機構名稱</th> -->
+			<th style="width:25%; vertical-align: middle;">機構名稱</th>
 			<th style="width:15%; vertical-align: middle;">姓名</th>
 			<th style="width:30%; vertical-align: middle;">所屬單位</th>
 			<th style="vertical-align: middle;">聯絡方式</th>
@@ -90,9 +90,9 @@
 	<tbody>
 			<tr>
         <td style="vertical-align: middle;">作者</td>
-            <td style="vertical-align: middle;">v0.0.1</td>
-        <!-- <td rowspan="4" style="vertical-align: middle;">MI-TW 臺灣醫學資訊聯測松<br />
-        （Medical Informatics Taiwan Connectathon, MI-TW Connectathon）</td> -->
+            <td style="vertical-align: middle;">v0.0.1 ~ v0.3.0</td>
+        <td rowspan="7" style="vertical-align: middle;">經濟部產業發展署<br />
+        （Industrial Development Administration, Ministry of Economic Affairs）</td>
         <td style="vertical-align: middle;">楊宇凡（Yu-Fan Yang）</td>
         <td style="vertical-align: middle;">矽塔資訊服務有限公司<br />
         （Sitatech Information Services Co., Ltd）</td>
@@ -102,7 +102,16 @@
 			</tr>
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
-            <td style="vertical-align: middle;">v0.0.1</td>
+            <td style="vertical-align: middle;">v0.3.0</td>
+        <td style="vertical-align: middle;">曹軒寧（Hsuan-Ning Tsao）</td>
+        <td style="vertical-align: middle;">矽塔資訊服務有限公司<br >（Sitatech Information Services Co., Ltd）</td>
+        <td style="vertical-align: middle;">
+          <a href="mailto:shannontsao@sita.tech">shannontsao@sita.tech</a>
+        </td>
+			</tr>
+      <tr>
+        <td style="vertical-align: middle;">貢獻者</td>
+            <td style="vertical-align: middle;">v0.0.1 ~ v0.2.1</td>
         <td style="vertical-align: middle;">李修安（Hsiu-An Lee）</td>
         <td style="vertical-align: middle;">國家衛生研究院 - 癌症研究所<br >（National Health Research Institutes - The National Institute of Cancer Research）</td>
         <td style="vertical-align: middle;">
@@ -111,20 +120,47 @@
 			</tr>
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
-            <td style="vertical-align: middle;">v0.0.1</td>
+            <td style="vertical-align: middle;">v0.0.1 ~ v0.3.0</td>
         <td style="vertical-align: middle;">李祥豪（Siang-Hao Lee）</td>
         <td style="vertical-align: middle;">九日生行動健康科技公司<br >（9Rise International Mobile Health Technology Co., Ltd.）</td>
         <td style="vertical-align: middle;">
-          <a href="mailto:billy72325@gmail.com">shvoidlee@gmail.com</a>
+          <a href="mailto:shvoidlee@gmail.com">shvoidlee@gmail.com</a>
         </td>
 			</tr>
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
-            <td style="vertical-align: middle;">v0.0.1</td>
+            <td style="vertical-align: middle;">v0.3.0</td>
+        <td style="vertical-align: middle;">楊宗翰（Chung-Han Yang）</td>
+        <td style="vertical-align: middle;">九日生行動健康科技公司<br >（9Rise International Mobile Health Technology Co., Ltd.）</td>
+        <td style="vertical-align: middle;">
+          <a href="mailto:#"></a>
+        </td>
+			</tr>
+      <tr>
+        <td style="vertical-align: middle;">貢獻者</td>
+            <td style="vertical-align: middle;">v0.0.1 ~ v0.3.0</td>
         <td style="vertical-align: middle;">黃薰慧（Hsun-Hui Huang）</td>
         <td style="vertical-align: middle;">財團法人資訊工業策進會 - 數位轉型研究院<br >（Institute for Information Industry - Digital Transformation Research Institute）</td>
         <td style="vertical-align: middle;">
           <a href="mailto:beatrice@iii.org.tw">beatrice@iii.org.tw</a>
+        </td>
+			</tr>
+      <tr>
+        <td style="vertical-align: middle;">貢獻者</td>
+            <td style="vertical-align: middle;">v0.3.0</td>
+        <td style="vertical-align: middle;">張鈞亮 (Chun-Liang Chang)</td>
+        <td style="vertical-align: middle;">財團法人資訊工業策進會 - 數位轉型研究院<br >（Institute for Information Industry - Digital Transformation Research Institute）</td>
+        <td style="vertical-align: middle;">
+          <a href="mailto:liangglchang@iii.org.tw">liangglchang@iii.org.tw</a>
+        </td>
+			</tr>
+      <tr>
+        <td style="vertical-align: middle;">貢獻者</td>
+            <td style="vertical-align: middle;">v0.3.0</td>
+        <td style="vertical-align: middle;">崔智萱 (Nicole Tsui)</td>
+        <td style="vertical-align: middle;">財團法人資訊工業策進會 - 數位轉型研究院<br >（Institute for Information Industry - Digital Transformation Research Institute）</td>
+        <td style="vertical-align: middle;">
+          <a href="mailto:nicolechtsui@iii.org.tw">nicolechtsui@iii.org.tw</a>
         </td>
 			</tr>
 	</tbody>
