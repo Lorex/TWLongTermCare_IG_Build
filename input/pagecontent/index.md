@@ -91,7 +91,7 @@
 			<tr>
         <td style="vertical-align: middle;">作者</td>
             <td style="vertical-align: middle;">v0.0.1 ~ v0.3.0</td>
-        <td rowspan="7" style="vertical-align: middle;">經濟部產業發展署<br />
+        <td rowspan="8" style="vertical-align: middle;">經濟部產業發展署<br />
         （Industrial Development Administration, Ministry of Economic Affairs）</td>
         <td style="vertical-align: middle;">楊宇凡（Yu-Fan Yang）</td>
         <td style="vertical-align: middle;">矽塔資訊服務有限公司<br />
