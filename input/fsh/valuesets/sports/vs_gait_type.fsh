@@ -8,6 +8,6 @@ Description: "用於描述步態（walking gait）時腳的着地位置和運動
 * ^experimental = false
 * ^date = "2024-06-04"
 
-* $SNOMEDCT20240901#8117002 "Gait normal"
-* $SNOMEDCT20240901#264739002 "Medial rotation - action"
-* $SNOMEDCT20240901#264730003 "Lateral rotation - action"
+* $SNOMEDCT#8117002 "Gait normal"
+* $SNOMEDCT#264739002 "Medial rotation - action"
+* $SNOMEDCT#264730003 "Lateral rotation - action"

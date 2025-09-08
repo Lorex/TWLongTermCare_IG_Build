@@ -8,5 +8,5 @@ Description: "用於描述跑步機的類型。本 ValueSet 繼承自身體活�
 * ^experimental = false
 * ^date = "2024-06-04"
 
-* $SNOMEDCT20240901#465335000 "Treadmill, mechanical"
-* $SNOMEDCT20240901#466021001 "Treadmill, powered"
+* $SNOMEDCT#465335000 "Treadmill, mechanical"
+* $SNOMEDCT#466021001 "Treadmill, powered"

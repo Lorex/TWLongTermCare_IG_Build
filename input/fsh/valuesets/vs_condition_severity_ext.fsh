@@ -10,4 +10,4 @@ Description: "用以表述疾病嚴重度之擴展值集，包含疾病嚴重度
 
 * include codes from valueset http://hl7.org/fhir/ValueSet/condition-severity
 
-* $SNOMEDCT20240901#444821000124100
+* $SNOMEDCT#444821000124100
