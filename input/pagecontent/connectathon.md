@@ -1,8 +1,8 @@
 ### 活動資訊 (Event Information)
 
-**活動名稱：** 2025 臺灣長期照顧 FHIR 專案聯測松 (2025 TW LTC FHIR Projectathon)
+**活動名稱：** 2025 臺灣長期照顧 FHIR 專案聯測松 (2025 TW Long-Term Care FHIR Projectathon)
 
-**時間：** 擬訂於 2025/10/02 (四) ~ 2025/10/03 (五)，共 2 天
+**時間：** 2025/10/02 (四) ~ 2025/10/03 (五)，共 2 天
 
 **地點：** 高雄軟體科技園區 A 棟 401 號會議室 (高雄市前鎮區復興四路 12 號) [地圖連結](https://maps.app.goo.gl/qvDsPK9TP26FVPjx6)
 
