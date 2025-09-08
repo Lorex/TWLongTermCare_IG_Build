@@ -9,6 +9,6 @@ Description: "關係人與個案的關係類型擴展代碼值集，新增孫媳
 * ^experimental = false
 * ^date = "2024-09-02"
 
-* include codes from system http://terminology.hl7.org/CodeSystem/v2-0131
-* include codes from system http://terminology.hl7.org/CodeSystem/v3-RoleCode where concept is-a "_PersonalRelationshipRoleType"
+* include codes from system http://terminology.hl7.org/CodeSystem/v2-0131|2.1.0
+* include codes from system http://terminology.hl7.org/CodeSystem/v3-RoleCode|3.0.0 where concept is-a "_PersonalRelationshipRoleType"
 * include codes from system http://ltc-ig.fhir.tw/CodeSystem/RelationshipTypeCS-TWLTC
