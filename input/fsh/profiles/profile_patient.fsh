@@ -17,7 +17,7 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Patient Re
 * identifier[member].type 1..1 MS
 * identifier[member].type.coding 1..1 MS
 * identifier[member].type.coding.system 1..1 MS
-* identifier[member].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[member].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203|2.1.0"
 * identifier[member].type.coding.code 1..1 MS
 * identifier[member].type.coding.code = #PRN
 * identifier[member].type.coding.display 0..1 MS
