@@ -5,9 +5,7 @@
 ### 文件定義
 - XML：[下載](expansions.xml.zip)
 - JSON：[下載](expansions.json.zip)
-- Turtle：不提供（本版未產出）
 
 ### 範例
 - XML：請參考各資源頁面之 Examples 分頁
 - JSON：請參考各資源頁面之 Examples 分頁
-- Turtle：請參考各資源頁面之 Examples 分頁
