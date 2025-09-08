@@ -1,7 +1,7 @@
 ### 介紹
 
 <div style="padding-left: 10px;">
-<p>臺灣長期照顧實作指引（Taiwan Long Term Care Implementation Guide，簡稱TW LTC IG）採用HL7® FHIR® standard（Fast Healthcare Interoperability Resources）IG建置方法，在<a href="http://hl7.org/fhir/R4/"  target="_blank">FHIR R4.0.1</a>之標準基礎上，參考了<a href="https://twcore.mohw.gov.tw/ig/twcore/index.html" target="_blank">臺灣核心實作指引 （TW Core Implementation Guide）0.3.0</a>、<a href="https://hl7.org/fhir/us/eltss/index.html">美國長期照顧實作指引（Electronic Long-Term Services and Supports (eLTSS) Release 1 - US Realm, eLTSS） 2.0.0 - STU2</a> ，進一步定義適用於臺灣長期照顧資料交換需求的Resources（類似資料表）、其中的資料項目（意即欄位）、基數（意即0..1、0..*、1..1或1..*）、資料類型（文字、日期時間、代碼等）、可綁定的代碼（及其綁定的強制程度）及查詢參數等，旨在提供健康照護資訊系統開發與實作者以TW LTC IG為基礎，再進一步訂定其實務專案所需之資料交換格式以應用於專案中。TW LTC IG的實作方式有兩種：</p>
+<p>臺灣長期照顧實作指引（Taiwan Long Term Care Implementation Guide，簡稱TW LTC IG）採用HL7® FHIR® standard（Fast Healthcare Interoperability Resources）IG建置方法，在<a href="http://hl7.org/fhir/R4/"  target="_blank">FHIR R4.0.1</a>之標準基礎上，參考了<a href="https://twcore.mohw.gov.tw/ig/twcore/index.html" target="_blank">臺灣核心實作指引 （TW Core Implementation Guide）0.3.2</a>、<a href="https://hl7.org/fhir/us/eltss/index.html">美國長期照顧實作指引（Electronic Long-Term Services and Supports (eLTSS) Release 1 - US Realm, eLTSS） 2.0.0 - STU2</a> ，進一步定義適用於臺灣長期照顧資料交換需求的Resources（類似資料表）、其中的資料項目（意即欄位）、基數（意即0..1、0..*、1..1或1..*）、資料類型（文字、日期時間、代碼等）、可綁定的代碼（及其綁定的強制程度）及查詢參數等，旨在提供健康照護資訊系統開發與實作者以TW LTC IG為基礎，再進一步訂定其實務專案所需之資料交換格式以應用於專案中。TW LTC IG的實作方式有兩種：</p>
 <ol>
 <li><strong>僅支援Profiles</strong>：系統僅支援TW LTC Profiles以呈現健康照護相關資料。</li>
 <li><strong>支援Profiles + RESTful互動</strong>：系統支援TW LTC Profiles及RESTful互動以呈現健康照護相關資料。</li>
