@@ -8,7 +8,7 @@ Description: "最近(目前)運動史。本 ValueSet 繼承自身體活動量測
 * ^experimental = false
 * ^date = "2024-06-04"
 
-* $SNOMEDCT20240901#229072005 "Aerobic exercises"
-* $SNOMEDCT20240901#266741004 "Muscle strength exercise"
-* $SNOMEDCT20240901#229070002 "Stretching exercises"
-* $SNOMEDCT20240901#386293009 "Balance exercises"
+* $SNOMEDCT#229072005 "Aerobic exercises"
+* $SNOMEDCT#266741004 "Muscle strength exercise"
+* $SNOMEDCT#229070002 "Stretching exercises"
+* $SNOMEDCT#386293009 "Balance exercises"

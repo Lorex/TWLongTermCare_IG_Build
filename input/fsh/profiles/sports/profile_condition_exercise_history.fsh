@@ -23,7 +23,7 @@ Description: "長照機構住民運動處方的運動史資料，本 Profile 繼
     ExerciseHistory 1..1 MS
 * code.coding[ExerciseHistory] from $ExerciseHistoryVS (required)
 * code.coding[ExerciseHistory].system 1..1 MS
-* code.coding[ExerciseHistory].system = $SNOMEDCT20240901
+* code.coding[ExerciseHistory].system = $SNOMEDCT
 * code.coding[ExerciseHistory].code 1..1 MS
 * subject 1..1 MS
 * subject only Reference(LTCPatient)
