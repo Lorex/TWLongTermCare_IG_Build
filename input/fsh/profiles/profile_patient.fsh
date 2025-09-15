@@ -17,7 +17,7 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Patient Re
 * identifier[member].type 1..1 MS
 * identifier[member].type.coding 1..1 MS
 * identifier[member].type.coding.system 1..1 MS
-* identifier[member].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203|2.1.0"
+* identifier[member].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[member].type.coding.code 1..1 MS
 * identifier[member].type.coding.code = #PRN
 * identifier[member].type.coding.display 0..1 MS
@@ -77,3 +77,66 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Patient Re
 * managingOrganization.reference 1..1 MS
 * managingOrganization.reference ^short = "住民所屬的長照機構。[應輸入 Organization Resource ID]"
 * managingOrganization only Reference(LTCOrganization)
+
+// Example
+Instance: ltc-patient-chen-ming-hui
+InstanceOf: LTCPatient
+Title: "長期照顧住民範例"
+Description: "一個長期照顧機構住民的範例，展示如何使用 LTCPatient Profile"
+Usage: #example
+
+* identifier[idCardNumber].use = #official
+* identifier[idCardNumber].type = $IdType#NNxxx "National Person Identifier"
+* identifier[idCardNumber].system = "http://www.moi.gov.tw"
+* identifier[idCardNumber].value = "A123456789"
+
+* identifier[member].use = #official
+* identifier[member].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[member].type.coding.code = #PRN
+* identifier[member].type.coding.display = "Provider Number"
+* identifier[member].system = "http://www.ankang-ltc.tw"
+* identifier[member].value = "R2024001"
+
+* active = true
+
+* name[official].use = #official
+* name[official].text = "Chen Ming Hui"
+
+* name[usual].use = #usual
+* name[usual].text = "陳明慧"
+
+* telecom[0].system = #phone
+* telecom[0].use = #mobile
+* telecom[0].value = "0912345678"
+
+* gender = #female
+
+* birthDate = "1945-03-15"
+
+* address[home].use = #home
+* address[home].text = "新北市中和區安康路二段123號3樓301室"
+* address[home].line = "安康路二段123號3樓301室"
+* address[home].city = "中和區"
+* address[home].state = "新北市"
+* address[home].postalCode = "23511"
+* address[home].country = "TW"
+
+* address[billing].use = #billing
+* address[billing].text = "台北市大安區和平東路二段76號2樓"
+* address[billing].line = "和平東路二段76號2樓"
+* address[billing].city = "大安區"
+* address[billing].state = "台北市"
+* address[billing].postalCode = "10663"
+* address[billing].country = "TW"
+
+* contact[0].relationship = http://terminology.hl7.org/CodeSystem/v2-0131#N "Next-of-Kin"
+* contact[0].name.use = #usual
+* contact[0].name.text = "陳志強"
+* contact[0].telecom[0].system = #phone
+* contact[0].telecom[0].use = #mobile
+* contact[0].telecom[0].value = "0987654321"
+* contact[0].telecom[1].system = #phone
+* contact[0].telecom[1].use = #home
+* contact[0].telecom[1].value = "02-27031234"
+
+* managingOrganization = Reference(ltc-organization-example)

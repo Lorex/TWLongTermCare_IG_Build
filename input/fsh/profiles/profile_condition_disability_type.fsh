@@ -20,3 +20,41 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition 
 * severity 0..1 MS
 * severity ^short = "障礙程度"
 * severity from $ConditionSeverityVS-TWLTC (required)
+
+// Example
+Instance: ltc-condition-disability-type-limb-example
+InstanceOf: LTCConditionDisabilityType
+Title: "肢體障礙類型範例"
+Description: "一個肢體障礙類型的範例，展示如何使用 LTCConditionDisabilityType Profile"
+Usage: #example
+
+* clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
+* clinicalStatus.coding.code = #active
+
+* verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+* verificationStatus.coding.code = #confirmed
+
+* category[0].coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"
+* category[0].coding.code = #problem-list-item
+* category[0].coding.display = "Problem List Item"
+
+* code.coding.system = "http://ltc-ig.fhir.tw/ValueSet/ConditionDisabilityTypeVS-TWLTC"
+* code.coding.code = #limb-disability
+* code.coding.display = "肢體障礙"
+
+* severity.coding.system = "http://ltc-ig.fhir.tw/ValueSet/ConditionSeverityVS-TWLTC"
+* severity.coding.code = #mild
+* severity.coding.display = "輕度"
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* onsetDateTime = "2015-08-20"
+
+* recorder = Reference(ltc-practitioner-role-nurse-example)
+
+* note[0].time = "2024-01-15"
+* note[0].text = "左下肢功能輕度受限，影響行走功能，持有身心障礙手冊"
+
+* bodySite[0].coding.system = "http://snomed.info/sct"
+* bodySite[0].coding.code = #61685007
+* bodySite[0].coding.display = "Lower limb structure"

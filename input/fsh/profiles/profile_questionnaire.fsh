@@ -47,3 +47,48 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Questionna
 * item.item 0..* MS
 * item.item ^short = "問卷的問題或量表項目（用於巢狀問卷）"
 
+// Example
+Instance: ltc-questionnaire-adl-assessment-example
+InstanceOf: LTCQuestionnaire
+Title: "日常生活能力評估問卷範例"
+Description: "一個日常生活能力評估問卷的範例，展示如何使用 LTCQuestionnaire Profile"
+Usage: #example
+
+* url = "http://ltc-ig.fhir.tw/Questionnaire/adl-assessment"
+
+* identifier.use = #official
+* identifier.system = "http://ltc-ig.fhir.tw/questionnaire-id"
+* identifier.value = "ADL-001"
+
+* version = "1.0"
+* name = "ADLAssessment"
+* title = "日常生活能力評估量表"
+* status = #active
+
+* item[0].linkId = "adl-1"
+* item[0].prefix = "1."
+* item[0].type = #choice
+* item[0].text = "吃飯"
+* item[0].required = true
+* item[0].answerOption[0].valueString = "完全獨立"
+* item[0].answerOption[1].valueString = "需要部分協助"
+* item[0].answerOption[2].valueString = "完全需要協助"
+
+* item[1].linkId = "adl-2"
+* item[1].prefix = "2."
+* item[1].type = #choice
+* item[1].text = "洗澡"
+* item[1].required = true
+* item[1].answerOption[0].valueString = "完全獨立"
+* item[1].answerOption[1].valueString = "需要部分協助"
+* item[1].answerOption[2].valueString = "完全需要協助"
+
+* item[2].linkId = "adl-3"
+* item[2].prefix = "3."
+* item[2].type = #choice
+* item[2].text = "穿脫衣物"
+* item[2].required = true
+* item[2].answerOption[0].valueString = "完全獨立"
+* item[2].answerOption[1].valueString = "需要部分協助"
+* item[2].answerOption[2].valueString = "完全需要協助"
+

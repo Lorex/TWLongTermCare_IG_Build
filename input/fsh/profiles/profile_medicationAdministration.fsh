@@ -28,3 +28,36 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Medication
 * dosage.route from http://hl7.org/fhir/ValueSet/route-codes
 * dosage.dose 1..1 MS
 * dosage.dose ^short = "服用此藥物的劑量。[應填入劑量]"
+
+// Example
+Instance: ltc-medication-administration-metformin-example
+InstanceOf: LTCMedicationAdministration
+Title: "糖尿病藥物給藥範例"
+Description: "一個糖尿病藥物給藥的範例，展示如何使用 LTCMedicationAdministration Profile"
+Usage: #example
+
+* status = #completed
+
+* medicationCodeableConcept.coding.system = "http://www.whocc.no/atc"
+* medicationCodeableConcept.coding.code = #A10BA02
+* medicationCodeableConcept.coding.display = "metformin"
+* medicationCodeableConcept.text = "美福明 (Metformin)"
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* effectiveDateTime = "2024-01-15T08:00:00+08:00"
+
+* performer[0].actor = Reference(ltc-practitioner-role-nurse-example)
+
+* dosage.route.coding.system = "http://snomed.info/sct"
+* dosage.route.coding.code = #26643006
+* dosage.route.coding.display = "Oral route"
+* dosage.route.text = "口服"
+
+* dosage.dose.value = 500
+* dosage.dose.unit = "mg"
+* dosage.dose.system = "http://unitsofmeasure.org"
+* dosage.dose.code = #mg
+
+* note[0].time = "2024-01-15T08:00:00+08:00"
+* note[0].text = "住民按時服藥，無不良反應"

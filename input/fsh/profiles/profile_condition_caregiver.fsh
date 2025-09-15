@@ -25,3 +25,33 @@ Expression: "code.coding.code = 'caregiver' implies note.exists()"
 Severity: #error
 XPath: "f:code/f:coding[f:system/@value='http://ltc-ig.fhir.tw/ValueSet/ReferralConditionCaregiverVS-TWLTC']/f:code/@value = 'caregiver' implies f:note"
 
+// Example
+Instance: ltc-condition-caregiver-family-example
+InstanceOf: LTCConditionCaregiver
+Title: "家庭照顧者狀況範例"
+Description: "一個家庭照顧者狀況的範例，展示如何使用 LTCConditionCaregiver Profile"
+Usage: #example
+
+* clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
+* clinicalStatus.coding.code = #active
+
+* verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+* verificationStatus.coding.code = #confirmed
+
+* category[0].coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"
+* category[0].coding.code = #problem-list-item
+* category[0].coding.display = "Problem List Item"
+
+* code.coding.system = "http://ltc-ig.fhir.tw/ValueSet/ReferralConditionCaregiverVS-TWLTC"
+* code.coding.code = #caregiver
+* code.coding.display = "有照顧者"
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* onsetDateTime = "2024-01-01"
+
+* recorder = Reference(ltc-practitioner-role-nurse-example)
+
+* note[0].time = "2024-01-15"
+* note[0].text = "主要照顧者為兒子，本國籍，每日照顧時間約8小時，無外籍看護"
+
