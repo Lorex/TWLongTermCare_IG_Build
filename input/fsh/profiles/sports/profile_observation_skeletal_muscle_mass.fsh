@@ -55,3 +55,62 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observatio
 
 * method 0..1 MS
 * method from http://hl7.org/fhir/ValueSet/observation-methods (extensible)
+
+// Example
+Instance: pasport-observation-skeletal-muscle-mass-example
+InstanceOf: PASportObservationSkeletalMuscleMass
+Title: "骨骼肌重測量範例"
+Description: "一個骨骼肌重測量的範例，展示如何使用 PASportObservationSkeletalMuscleMass Profile 來記錄肌肉量變化"
+Usage: #example
+
+* status = #final
+
+* category[twcore].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[twcore].coding.code = #vital-signs
+* category[twcore].coding.display = "Vital Signs"
+
+* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport"
+* code.coding.code = #SMM
+* code.coding.display = "骨骼肌重"
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* effectiveDateTime = "2024-01-15T08:45:00+08:00"
+
+* performer = Reference(ltc-practitioner-example)
+
+* valueQuantity.value = 20.8
+* valueQuantity.unit = "kg"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #kg
+
+* method.coding.system = "http://snomed.info/sct"
+* method.coding.code = #702668008
+* method.coding.display = "Bioelectrical impedance analysis"
+
+* device.display = "InBody 270 身體組成分析儀"
+
+* interpretation.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+* interpretation.coding.code = #L
+* interpretation.coding.display = "Low"
+
+* note[0].time = "2024-01-15T08:45:00+08:00"
+* note[0].text = "骨骼肌重20.8公斤，略低於年齡標準。建議增加阻力訓練以提升肌肉量，預防肌少症"
+
+* referenceRange[0].low.value = 22.0
+* referenceRange[0].low.unit = "kg"
+* referenceRange[0].low.system = "http://unitsofmeasure.org"
+* referenceRange[0].low.code = #kg
+* referenceRange[0].high.value = 27.0
+* referenceRange[0].high.unit = "kg"
+* referenceRange[0].high.system = "http://unitsofmeasure.org"
+* referenceRange[0].high.code = #kg
+* referenceRange[0].text = "65歲女性正常範圍"
+
+* component[0].code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport"
+* component[0].code.coding.code = #SMI
+* component[0].code.coding.display = "骨骼肌指數"
+* component[0].valueQuantity.value = 7.6
+* component[0].valueQuantity.unit = "kg/m2"
+* component[0].valueQuantity.system = "http://unitsofmeasure.org"
+* component[0].valueQuantity.code = #kg/m2

@@ -36,3 +36,43 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 RelatedPer
 * extension[isPrimary] ^short = "是否為主要照顧者"
 * extension[isPrimary].valueBoolean 1..1 MS
 * extension[isPrimary].valueBoolean ^short = "是否為主要照顧者 [ true: 是 / false: 否，該關係人為次要照顧者 ]"
+
+// Example
+Instance: ltc-related-person-primary-caregiver-example
+InstanceOf: LTCRelatedPerson
+Title: "主要照顧者範例"
+Description: "一個主要照顧者的範例，展示如何使用 LTCRelatedPerson Profile"
+Usage: #example
+
+* active = true
+
+* patient = Reference(ltc-patient-chen-ming-hui)
+
+* relationship.coding.system = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+* relationship.coding.code = #CHILD
+* relationship.coding.display = "child"
+
+* name.use = #usual
+* name.text = "陳志強"
+* name.family = "陳"
+* name.given[0] = "志強"
+
+* telecom[0].system = #phone
+* telecom[0].use = #mobile
+* telecom[0].value = "0987654321"
+
+* telecom[1].system = #phone
+* telecom[1].use = #home
+* telecom[1].value = "02-27031234"
+
+* gender = #male
+
+* address.use = #home
+* address.text = "台北市大安區仁愛路三段55號8樓"
+* address.line = "仁愛路三段55號8樓"
+* address.city = "大安區"
+* address.state = "台北市"
+* address.postalCode = "10657"
+* address.country = "TW"
+
+* extension[isPrimary].valueBoolean = true

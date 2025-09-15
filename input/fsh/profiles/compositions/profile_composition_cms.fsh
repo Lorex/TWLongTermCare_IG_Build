@@ -117,3 +117,62 @@ Description: "此 Composition 以衛生福利部長期照顧管理中心照顧�
 * section[questionnaire-caregiver-support].entry ^short = "主要照護者工作與支持的內容"
 * section[questionnaire-caregiver-support].entry only Reference(LTCQuestionnaireResponseCMSCaregiverSupport)
 * section[questionnaire-caregiver-support].entry.reference 1..1 MS
+* section[questionnaire-caregiver-support].entry.reference ^short = "主要照護者工作與支持的內容。[應輸入 Questionnaire Resource ID]"
+
+// Example
+Instance: ltc-composition-cms-example
+InstanceOf: LTCCompositionCMS
+Title: "照顧管理評估量表文件架構範例"
+Description: "一個照顧管理評估量表文件架構的範例，展示如何使用 LTCCompositionCMS Profile"
+Usage: #example
+
+* status = #final
+* type.coding.system = "http://loinc.org"
+* type.coding.code = #11503-0
+* type.coding.display = "Medical records"
+* type.text = "照顧管理評估量表"
+
+* subject = Reference(http://ltc-ig.fhir.tw/Patient/ltc-patient-cms-chen-ming-hui-example)
+
+* date = "2024-01-15T14:30:00+08:00"
+
+* author = Reference(ltc-practitioner-role-nurse-example)
+
+* title = "陳明慧女士照顧管理評估量表"
+
+* section[patient].title = "A. 個案基本資料"
+* section[patient].entry[0] = Reference(http://ltc-ig.fhir.tw/Patient/ltc-patient-cms-chen-ming-hui-example)
+* section[patient].entry[1] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-example)
+* section[patient].entry[2] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-type-limb-example)
+
+* section[related-person].title = "B. 照顧者基本資料"
+* section[related-person].entry[0] = Reference(http://ltc-ig.fhir.tw/RelatedPerson/ltc-related-person-primary-caregiver-example)
+* section[related-person].entry[1] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-example)
+* section[related-person].entry[2] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-caregiver-family-example)
+
+* section[questionnaire-communication].title = "C. 個案溝通能力"
+* section[questionnaire-communication].entry[0] = Reference(http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-communication-example)
+
+* section[questionnaire-memory].title = "D. 個案短期記憶力"
+* section[questionnaire-memory].entry[0] = Reference(http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-memory-example)
+
+* section[questionnaire-adl].title = "E. 個案日常活動功能量表 (ADLs)"
+* section[questionnaire-adl].entry[0] = Reference(http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-example)
+
+* section[questionnaire-iadl].title = "F. 個案工具性日常活動功能量表 (IADLs)"
+* section[questionnaire-iadl].entry[0] = Reference(http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-iadl-example)
+
+* section[questionnaire-special-care].title = "G. 特殊複雜照護需要"
+* section[questionnaire-special-care].entry[0] = Reference(http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-special-care-example)
+
+* section[questionnaire-society].title = "H. 居家環境與社會參與"
+* section[questionnaire-society].entry[0] = Reference(http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-society-example)
+
+* section[questionnaire-mental].title = "I. 情緒及行為型態"
+* section[questionnaire-mental].entry[0] = Reference(http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-mental-example)
+
+* section[questionnaire-caregiver-load].title = "J. 主要照護者負荷"
+* section[questionnaire-caregiver-load].entry[0] = Reference(http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-caregiver-load-example)
+
+* section[questionnaire-caregiver-support].title = "K. 主要照護者工作與支持"
+* section[questionnaire-caregiver-support].entry[0] = Reference(http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-caregiver-support-example)

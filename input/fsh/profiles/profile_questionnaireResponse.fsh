@@ -41,3 +41,34 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Questionna
 * item.item 0..* MS
 * item.item ^short = "問卷的問題或量表項目（用於巢狀問卷）"
 
+// Example
+Instance: ltc-questionnaire-response-adl-example
+InstanceOf: LTCQuestionnaireResponse
+Title: "日常生活能力評估問卷回覆範例"
+Description: "一個日常生活能力評估問卷回覆的範例，展示如何使用 LTCQuestionnaireResponse Profile"
+Usage: #example
+
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/adl-assessment"
+
+* status = #completed
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* authored = "2024-01-15T10:30:00+08:00"
+
+* author = Reference(ltc-practitioner-role-nurse-example)
+
+* source = Reference(ltc-related-person-primary-caregiver-example)
+
+* item[0].linkId = "adl-1"
+* item[0].text = "吃飯"
+* item[0].answer[0].valueString = "需要部分協助"
+
+* item[1].linkId = "adl-2"
+* item[1].text = "洗澡"
+* item[1].answer[0].valueString = "完全需要協助"
+
+* item[2].linkId = "adl-3"
+* item[2].text = "穿脫衣物"
+* item[2].answer[0].valueString = "需要部分協助"
+

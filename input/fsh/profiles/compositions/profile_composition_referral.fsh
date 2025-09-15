@@ -102,3 +102,73 @@ Description: "此 Composition 以臺北市長期照顧管理中心個案服務�
 * section[organization].entry 1..1 MS
 * section[organization].entry ^short = "填表單位資訊"
 * section[organization].entry only Reference(LTCOrganization or $TWCoreOrganization)
+
+// Example
+Instance: ltc-composition-referral-example
+InstanceOf: LTCCompositionReferral
+Title: "轉介單文件架構範例"
+Description: "一個轉介單文件架構的範例，展示如何使用 LTCCompositionReferral Profile"
+Usage: #example
+
+* status = #final
+* type.coding.system = "http://loinc.org"
+* type.coding.code = #11488-4
+* type.coding.display = "Consult note"
+* type.text = "長期照顧管理中心個案服務初篩表/轉介單"
+
+* subject = Reference(http://ltc-ig.fhir.tw/Patient/ltc-patient-referral-chen-ming-hui-example)
+
+* date = "2024-01-20T09:00:00+08:00"
+
+* author = Reference(ltc-practitioner-role-nurse-example)
+
+* title = "陳明慧女士長期照顧服務轉介單"
+
+* section[patient].title = "個案基本資料"
+* section[patient].entry[0] = Reference(http://ltc-ig.fhir.tw/Patient/ltc-patient-referral-chen-ming-hui-example)
+
+* section[condition-disability].title = "身心障礙手冊"
+* section[condition-disability].entry[0] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-example)
+* section[condition-disability].entry[1] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-type-limb-example)
+
+* section[condition-tube].title = "管路"
+* section[condition-tube].entry[0] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-tube-nasogastric-example)
+
+* section[condition-crush].title = "壓傷"
+* section[condition-crush].entry[0] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-crush-stage2-example)
+
+* section[condition-residence].title = "居住狀況"
+* section[condition-residence].entry[0] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-residence-not-alone-example)
+
+* section[condition-caregiver].title = "看護"
+* section[condition-caregiver].entry[0] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-caregiver-family-example)
+
+* section[condition-problem].title = "疾病狀況"
+* section[condition-problem].entry[0] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-diabetes-example)
+
+* section[condition-need].title = "案主(家)主要問題及需求"
+* section[condition-need].entry[0] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-diabetes-example)
+
+* section[careplan].title = "欲申請服務之種類"
+* section[careplan].entry[0] = Reference(http://ltc-ig.fhir.tw/CarePlan/ltc-careplan-referral-home-service-example)
+
+* section[questionnaire-adl].title = "ADL 失能項目評估"
+* section[questionnaire-adl].entry[0] = Reference(http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-example)
+
+* section[questionnaire-iadl].title = "IADL 失能項目評估"
+* section[questionnaire-iadl].entry[0] = Reference(http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-example)
+
+* section[questionnaire-sof].title = "長者衰弱評估"
+* section[questionnaire-sof].entry[0] = Reference(http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-example)
+
+* section[questionnaire-caregiver].title = "照顧者評估"
+* section[questionnaire-caregiver].entry[0] = Reference(http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-example)
+
+* section[encounter].title = "出入院情形"
+* section[encounter].entry[0] = Reference(http://ltc-ig.fhir.tw/Encounter/ltc-encounter-example)
+
+* section[practitioner].title = "填表者/轉介者資訊及簽名欄"
+* section[practitioner].entry[0] = Reference(http://ltc-ig.fhir.tw/Practitioner/ltc-practitioner-nurse-example)
+
+* section[organization].title = "填表單位資訊"
+* section[organization].entry[0] = Reference(http://ltc-ig.fhir.tw/Organization/ltc-organization-example)

@@ -56,3 +56,39 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Goal Resou
 * target[step].detail[x][detailQuantity].code 1..1 MS
 * target[step].detail[x][detailQuantity].code = #/d
 
+// Example
+Instance: pasport-goal-walking-steps-example
+InstanceOf: PASportGoal
+Title: "運動目標－步行步數範例"
+Description: "一個運動目標的範例，展示如何使用 PASportGoal Profile 來表示每日步行步數目標"
+Usage: #example
+
+* identifier.system = "http://ltc-ig.fhir.tw/goal-id"
+* identifier.value = "goal-walking-2024-001"
+
+* lifecycleStatus = #active
+
+* category.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport"
+* category.coding.code = #PhysicalActivity
+* category.coding.display = "Physical Activity"
+
+* description.text = "患者每日步行步數目標：達到每日8000步，促進心血管健康和肌肉力量"
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* startDate = "2024-01-15"
+* statusDate = "2024-01-15"
+
+* target[step].measure.coding.system = "http://loinc.org"
+* target[step].measure.coding.code = #41950-7
+* target[step].measure.coding.display = "Number of steps in 24 hour Measured"
+
+* target[step].detailQuantity.value = 8000
+* target[step].detailQuantity.unit = "steps per day"
+* target[step].detailQuantity.system = "http://unitsofmeasure.org"
+* target[step].detailQuantity.code = #/d
+
+* target[step].dueDate = "2024-04-15"
+
+* note[0].time = "2024-01-15"
+* note[0].text = "考慮患者目前體能狀況，設定循序漸進的步數目標，最終達到每日8000步"

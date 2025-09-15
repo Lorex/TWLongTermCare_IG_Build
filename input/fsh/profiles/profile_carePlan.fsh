@@ -79,3 +79,39 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan R
 * activity.reference ^short = "照顧計畫的活動參考 Resource。"
 * note 0..* MS
 * note ^short = "照顧計畫的附註。"
+
+// Example
+Instance: ltc-careplan-mobility-example
+InstanceOf: LTCCarePlan
+Title: "行動照顧計畫範例"
+Description: "一個行動照顧計畫的範例，展示如何使用 LTCCarePlan Profile"
+Usage: #example
+
+* status = #active
+* intent = #plan
+
+* category[AssessPlan].coding.system = "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw"
+* category[AssessPlan].coding.code = #assess-plan
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* period.start = "2024-01-15"
+* period.end = "2024-04-15"
+
+* author = Reference(ltc-practitioner-role-nurse-example)
+
+* contributor[0] = Reference(ltc-related-person-primary-caregiver-example)
+
+* goal[0] = Reference(ltc-goal-mobility-improvement-example)
+
+* activity[0].detail.status = #in-progress
+* activity[0].detail.code.coding.system = "http://snomed.info/sct"
+* activity[0].detail.code.coding.code = #229070002
+* activity[0].detail.code.coding.display = "Mobility training"
+* activity[0].detail.description = "進行每日助行器行走訓練，每次30分鐘，每日2次"
+* activity[0].detail.scheduledPeriod.start = "2024-01-15"
+* activity[0].detail.scheduledPeriod.end = "2024-04-15"
+* activity[0].detail.performer[0] = Reference(ltc-practitioner-role-nurse-example)
+
+* note[0].time = "2024-01-15"
+* note[0].text = "住民配合度良好，預期能達成獨立行走的目標"
