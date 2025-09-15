@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Condition/ltc-condition-need-assistance-example> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-condition-need-assistance-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCCondition"^^xsd:anyURI ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCCondition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition ltc-condition-need-assistance-example</b></p><a name=\"ltc-condition-need-assistance-example\"> </a><a name=\"hcltc-condition-need-assistance-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCCondition.html\">長期照顧－病情、問題或診斷</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>severity</b>: <span title=\"Codes:{http://snomed.info/sct 24484000}\">Severe</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 160693008}\">需要日常生活活動協助</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-referral-example.html\">李秀芳(official) Female, DoB: 1950-03-22 ( National identifier: B987654321 (use: official, ))</a></p><p><b>onset</b>: 2024-01-15</p><p><b>recordedDate</b>: 2024-09-15</p><p><b>note</b>: </p><blockquote><div><p>個案由於身體功能退化，在日常生活活動上需要他人協助，包括洗澡、穿衣、進食等基本活動</p>\n</div></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ]
+     ] )
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-ver-status"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "confirmed" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "encounter-diagnosis" ]
+     ] )
+  ] ) ; # 
+  fhir:severity [
+     fhir:coding ( [
+       a sct:24484000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "24484000" ] ;
+       fhir:display [ fhir:v "Severe" ]
+     ] )
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:160693008 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "160693008" ] ;
+       fhir:display [ fhir:v "Needs assistance with activities of daily living" ]
+     ] ) ;
+     fhir:text [ fhir:v "需要日常生活活動協助" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/ltc-patient-referral-example> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-referral-example" ]
+  ] ; # 
+  fhir:onset [
+     a fhir:dateTime ;
+     fhir:v "2024-01-15"^^xsd:date
+  ] ; # 
+  fhir:recordedDate [ fhir:v "2024-09-15"^^xsd:date] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "個案由於身體功能退化，在日常生活活動上需要他人協助，包括洗澡、穿衣、進食等基本活動" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

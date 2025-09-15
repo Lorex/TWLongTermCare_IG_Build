@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Goal/pasport-goal-walking-steps-example> a fhir:Goal ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pasport-goal-walking-steps-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/PASportGoal"^^xsd:anyURI ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/PASportGoal>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Goal pasport-goal-walking-steps-example</b></p><a name=\"pasport-goal-walking-steps-example\"> </a><a name=\"hcpasport-goal-walking-steps-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-PASportGoal.html\">運動處方－運動目標</a></p></div><p><b>identifier</b>: <code>http://ltc-ig.fhir.tw/goal-id</code>/goal-walking-2024-001</p><p><b>lifecycleStatus</b>: Active</p><p><b>category</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport PhysicalActivity}\">Physical Activity</span></p><p><b>description</b>: <span title=\"Codes:\">患者每日步行步數目標：達到每日8000步，促進心血管健康和肌肉力量</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-chen-ming-hui.html\">陳明慧 Female, DoB: 1945-03-15 ( National Person Identifier: A123456789 (use: official, ))</a></p><p><b>start</b>: 2024-01-15</p><h3>Targets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Measure</b></td><td><b>Detail[x]</b></td><td><b>Due[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://loinc.org 41950-7}\">Number of steps in 24 hour Measured</span></td><td>8000 steps per day<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/d = '/d')</span></td><td>2024-04-15</td></tr></table><p><b>statusDate</b>: 2024-01-15</p><p><b>note</b>: @2024-01-15</p><blockquote><div><p>考慮患者目前體能狀況，設定循序漸進的步數目標，最終達到每日8000步</p>\n</div></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://ltc-ig.fhir.tw/goal-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "goal-walking-2024-001" ]
+  ] ) ; # 
+  fhir:lifecycleStatus [ fhir:v "active"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "PhysicalActivity" ] ;
+       fhir:display [ fhir:v "Physical Activity" ]
+     ] )
+  ] ) ; # 
+  fhir:description [
+     fhir:text [ fhir:v "患者每日步行步數目標：達到每日8000步，促進心血管健康和肌肉力量" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/ltc-patient-chen-ming-hui> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-chen-ming-hui" ]
+  ] ; # 
+  fhir:start [
+     a fhir:date ;
+     fhir:v "2024-01-15"^^xsd:date
+  ] ; # 
+  fhir:target ( [
+     fhir:measure [
+       fhir:coding ( [
+         a loinc:41950-7 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "41950-7" ] ;
+         fhir:display [ fhir:v "Number of steps in 24 hour Measured" ]
+       ] )
+     ] ;
+     fhir:detail [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "8000"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "steps per day" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "/d" ]
+     ] ;
+     fhir:due [
+       a fhir:date ;
+       fhir:v "2024-04-15"^^xsd:date
+     ]
+  ] ) ; # 
+  fhir:statusDate [ fhir:v "2024-01-15"^^xsd:date] ; # 
+  fhir:note ( [
+     fhir:time [ fhir:v "2024-01-15"^^xsd:date ] ;
+     fhir:text [ fhir:v "考慮患者目前體能狀況，設定循序漸進的步數目標，最終達到每日8000步" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

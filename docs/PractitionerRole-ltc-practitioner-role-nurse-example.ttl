@@ -1,0 +1,64 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/PractitionerRole/ltc-practitioner-role-nurse-example> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-practitioner-role-nurse-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitionerRole"^^xsd:anyURI ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitionerRole>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole ltc-practitioner-role-nurse-example</b></p><a name=\"ltc-practitioner-role-nurse-example\"> </a><a name=\"hcltc-practitioner-role-nurse-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCPractitionerRole.html\">長期照顧－服務人員角色</a></p></div><p><b>active</b>: true</p><p><b>practitioner</b>: <a href=\"Practitioner-ltc-practitioner-nurse-example.html\">Practitioner 王美玲(official)</a></p><p><b>organization</b>: <a href=\"Organization-ltc-organization-example.html\">Organization 新北市私立安康老人長期照顧中心（養護型）</a></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 224535009}\">Registered nurse</span></p><p><b>specialty</b>: <span title=\"Codes:{http://snomed.info/sct 408443003}\">General medical practice</span></p><p><b>telecom</b>: ph: 02-29412345(Work), <a href=\"mailto:meiling.wang@ltc-center.tw\">meiling.wang@ltc-center.tw</a></p><blockquote><p><b>availableTime</b></p><p><b>daysOfWeek</b>: Monday, Tuesday, Wednesday, Thursday, Friday</p><p><b>availableStartTime</b>: 08:00:00</p><p><b>availableEndTime</b>: 17:00:00</p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:practitioner [
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/ltc-practitioner-nurse-example> ;
+     fhir:reference [ fhir:v "Practitioner/ltc-practitioner-nurse-example" ]
+  ] ; # 
+  fhir:organization [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/ltc-organization-example> ;
+     fhir:reference [ fhir:v "Organization/ltc-organization-example" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       a sct:224535009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "224535009" ] ;
+       fhir:display [ fhir:v "Registered nurse" ]
+     ] )
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       a sct:408443003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "408443003" ] ;
+       fhir:display [ fhir:v "General medical practice" ]
+     ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "02-29412345" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "meiling.wang@ltc-center.tw" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:availableTime ( [
+     fhir:daysOfWeek ( [ fhir:v "mon" ] [ fhir:v "tue" ] [ fhir:v "wed" ] [ fhir:v "thu" ] [ fhir:v "fri" ] ) ;
+     fhir:availableStartTime [ fhir:v "08:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "17:00:00"^^xsd:time ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

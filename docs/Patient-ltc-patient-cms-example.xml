@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="ltc-patient-cms-example"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientCMS"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient ltc-patient-cms-example</b></p><a name="ltc-patient-cms-example"> </a><a name="hcltc-patient-cms-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-LTCPatientCMS.html">照顧管理評估量表－個案基本資料</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">陳明華(official) Female, DoB: 1945-08-15 ( National identifier: A123456789 (use: official, ))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td>true</td><td style="background-color: #f3f5da" title="Known Marital status of Patient">Marital Status:</td><td colspan="3"><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}">Married</span></td></tr><tr><td style="background-color: #f3f5da" title="Other Id (see the one above)">Other Id:</td><td colspan="3">Provider number/LTC-12345 (use: official, )</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>ph: 02-12345678(Home)</li><li>台北市信義區信義路五段7號(home)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Nominated Contact: Emergency Contact">Emergency Contact:</td><td colspan="3"><ul><li>陳建國(Official)</li><li>ph: 0912-345-678(Mobile)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="此 Extension 用以表述個案的身分別。"><a href="StructureDefinition-ExtPatientIdentity-TWLTC.html">個案身分別</a></td><td colspan="3"><span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/PatientIdentityCS-TWLTC 1}">一般戶</span></td></tr><tr><td style="background-color: #f3f5da" title="此 Extension 用以表述長照機構住民的教育程度。"><a href="StructureDefinition-ExtPatientEducationStatus-TWLTC.html">長照機構住民教育程度</a></td><td colspan="3"><span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC elementary}">國小</span></td></tr></table></div>
+  </text>
+  <extension url="http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEducationStatus-TWLTC">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC"/>
+        <code value="elementary"/>
+        <display value="國小"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientIdentity-TWLTC">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/PatientIdentityCS-TWLTC"/>
+        <code value="1"/>
+        <display value="一般戶"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PRN"/>
+        <display value="Provider number"/>
+      </coding>
+    </type>
+    <system value="http://ltc-hospital.tw"/>
+    <value value="LTC-12345"/>
+  </identifier>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="NNxxx"/>
+        <display value="National identifier"/>
+      </coding>
+    </type>
+    <system value="http://www.moi.gov.tw"/>
+    <value value="A123456789"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="official"/>
+    <text value="陳明華"/>
+    <family value="陳"/>
+    <given value="明華"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="02-12345678"/>
+    <use value="home"/>
+  </telecom>
+  <gender value="female"/>
+  <birthDate value="1945-08-15"/>
+  <address>
+    <use value="home"/>
+    <type value="both"/>
+    <text value="台北市信義區信義路五段7號"/>
+    <line value="信義路五段7號"/>
+    <city value="台北市"/>
+    <district value="信義區"/>
+    <postalCode value="110"/>
+    <country value="TW"/>
+  </address>
+  <maritalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+      <code value="M"/>
+      <display value="Married"/>
+    </coding>
+  </maritalStatus>
+  <contact>
+    <relationship>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
+        <code value="C"/>
+        <display value="Emergency Contact"/>
+      </coding>
+    </relationship>
+    <name>
+      <use value="official"/>
+      <text value="陳建國"/>
+      <family value="陳"/>
+      <given value="建國"/>
+    </name>
+    <telecom>
+      <system value="phone"/>
+      <value value="0912-345-678"/>
+      <use value="mobile"/>
+    </telecom>
+  </contact>
+</Patient>

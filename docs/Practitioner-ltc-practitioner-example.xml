@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="ltc-practitioner-example"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Practitioner ltc-practitioner-example</b></p><a name="ltc-practitioner-example"> </a><a name="hcltc-practitioner-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-LTCPractitioner.html">長期照顧－照顧服務提供者</a></p></div><p><b>identifier</b>: Medical License number/KMD12345 (use: official, )</p><p><b>active</b>: true</p><p><b>name</b>: 王美玲(Official)</p><p><b>telecom</b>: ph: 02-87654321(Work), <a href="mailto:meiling.wang@ltc-hospital.tw">meiling.wang@ltc-hospital.tw</a></p><p><b>address</b>: 台北市大安區復興南路二段201號(work)</p><p><b>gender</b>: Female</p><p><b>birthDate</b>: 1975-06-10</p><blockquote><p><b>qualification</b></p><p><b>identifier</b>: <code>http://www.mohw.gov.tw/license</code>/PT-2005-0123</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 36682004}">Physiotherapist</span></p><p><b>period</b>: 2005-07-15 --&gt; (ongoing)</p><p><b>issuer</b>: 衛生福利部</p></blockquote><blockquote><p><b>qualification</b></p><p><b>identifier</b>: <code>http://www.mohw.gov.tw/license</code>/LTC-2010-5678</p><p><b>code</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS long-term-care-specialist}">長期照護專科</span></p><p><b>period</b>: 2010-03-20 --&gt; (ongoing)</p><p><b>issuer</b>: 台灣長期照護學會</p></blockquote></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MD"/>
+        <display value="Medical License number"/>
+      </coding>
+    </type>
+    <system value="http://www.mohw.gov.tw/doctor"/>
+    <value value="KMD12345"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="official"/>
+    <text value="王美玲"/>
+    <family value="王"/>
+    <given value="美玲"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="02-87654321"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="meiling.wang@ltc-hospital.tw"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <use value="work"/>
+    <type value="both"/>
+    <text value="台北市大安區復興南路二段201號"/>
+    <line value="復興南路二段201號"/>
+    <city value="台北市"/>
+    <district value="大安區"/>
+    <postalCode value="106"/>
+    <country value="TW"/>
+  </address>
+  <gender value="female"/>
+  <birthDate value="1975-06-10"/>
+  <qualification>
+    <identifier>
+      <system value="http://www.mohw.gov.tw/license"/>
+      <value value="PT-2005-0123"/>
+    </identifier>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="36682004"/>
+        <display value="Physiotherapist"/>
+      </coding>
+    </code>
+    <period>
+      <start value="2005-07-15"/>
+    </period>
+    <issuer>
+      <display value="衛生福利部"/>
+    </issuer>
+  </qualification>
+  <qualification>
+    <identifier>
+      <system value="http://www.mohw.gov.tw/license"/>
+      <value value="LTC-2010-5678"/>
+    </identifier>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS"/>
+        <code value="long-term-care-specialist"/>
+        <display value="長期照護專科"/>
+      </coding>
+    </code>
+    <period>
+      <start value="2010-03-20"/>
+    </period>
+    <issuer>
+      <display value="台灣長期照護學會"/>
+    </issuer>
+  </qualification>
+</Practitioner>

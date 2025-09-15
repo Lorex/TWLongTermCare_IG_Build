@@ -1,0 +1,130 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Patient/ltc-patient-cms-chen-ming-hui-example> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-patient-cms-chen-ming-hui-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientCMS"^^xsd:anyURI ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientCMS>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ltc-patient-cms-chen-ming-hui-example</b></p><a name=\"ltc-patient-cms-chen-ming-hui-example\"> </a><a name=\"hcltc-patient-cms-chen-ming-hui-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCPatientCMS.html\">照顧管理評估量表－個案基本資料</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">陳明慧 Female, DoB: 1945-03-15 ( National Person Identifier: A123456789 (use: official, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known Marital status of Patient\">Marital Status:</td><td colspan=\"3\"><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus W}\">喪偶</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\">Provider Number/R2024001 (use: official, )</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Alternate names (see the one above)\">Alt. Name:</td><td colspan=\"3\">Chen Ming Hui(Official)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 0912345678(Mobile)</li><li>新北市中和區安康路二段123號3樓301室(home)</li><li>台北市大安區和平東路二段76號2樓(billing)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: Next-of-Kin\">Next-of-Kin:</td><td colspan=\"3\"><ul><li>陳志強</li><li>ph: 0987654321(Mobile)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>Managing Organization: <a href=\"Organization-ltc-organization-example.html\">Organization 新北市私立安康老人長期照顧中心（養護型）</a></li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"此 Extension 用以表述個案的身分別。\"><a href=\"StructureDefinition-ExtPatientIdentity-TWLTC.html\">個案身分別</a></td><td colspan=\"3\"><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/PatientIdentityCS-TWLTC 1}\">一般戶</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"此 Extension 用以表述長照機構住民的教育程度。\"><a href=\"StructureDefinition-ExtPatientEducationStatus-TWLTC.html\">長照機構住民教育程度</a></td><td colspan=\"3\"><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC elementary}\">國小</span></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEducationStatus-TWLTC"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "elementary" ] ;
+         fhir:display [ fhir:v "國小" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientIdentity-TWLTC"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://ltc-ig.fhir.tw/CodeSystem/PatientIdentityCS-TWLTC"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1" ] ;
+         fhir:display [ fhir:v "一般戶" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PRN" ] ;
+         fhir:display [ fhir:v "Provider Number" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://www.ankang-ltc.tw"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "R2024001" ]
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NNxxx" ] ;
+         fhir:display [ fhir:v "National Person Identifier" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://www.moi.gov.tw"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "A123456789" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:text [ fhir:v "Chen Ming Hui" ]
+  ] [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:text [ fhir:v "陳明慧" ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0912345678" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1945-03-15"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:text [ fhir:v "新北市中和區安康路二段123號3樓301室" ] ;
+     fhir:line ( [ fhir:v "安康路二段123號3樓301室" ] ) ;
+     fhir:city [ fhir:v "中和區" ] ;
+     fhir:state [ fhir:v "新北市" ] ;
+     fhir:postalCode [ fhir:v "23511" ] ;
+     fhir:country [ fhir:v "TW" ]
+  ] [
+     fhir:use [ fhir:v "billing" ] ;
+     fhir:text [ fhir:v "台北市大安區和平東路二段76號2樓" ] ;
+     fhir:line ( [ fhir:v "和平東路二段76號2樓" ] ) ;
+     fhir:city [ fhir:v "大安區" ] ;
+     fhir:state [ fhir:v "台北市" ] ;
+     fhir:postalCode [ fhir:v "10663" ] ;
+     fhir:country [ fhir:v "TW" ]
+  ] ) ; # 
+  fhir:maritalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "W" ] ;
+       fhir:display [ fhir:v "Widowed" ]
+     ] ) ;
+     fhir:text [ fhir:v "喪偶" ]
+  ] ; # 
+  fhir:contact ( [
+     fhir:relationship ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0131"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "N" ] ;
+         fhir:display [ fhir:v "Next-of-Kin" ]
+       ] )
+     ] ) ;
+     fhir:name [
+       fhir:use [ fhir:v "usual" ] ;
+       fhir:text [ fhir:v "陳志強" ]
+     ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "0987654321" ] ;
+       fhir:use [ fhir:v "mobile" ]
+     ] )
+  ] ) ; # 
+  fhir:managingOrganization [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/ltc-organization-example> ;
+     fhir:reference [ fhir:v "Organization/ltc-organization-example" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

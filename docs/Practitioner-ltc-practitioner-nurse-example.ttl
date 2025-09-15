@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Practitioner/ltc-practitioner-nurse-example> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-practitioner-nurse-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner"^^xsd:anyURI ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ltc-practitioner-nurse-example</b></p><a name=\"ltc-practitioner-nurse-example\"> </a><a name=\"hcltc-practitioner-nurse-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCPractitioner.html\">長期照顧－照顧服務提供者</a></p></div><p><b>identifier</b>: Provider Number/N123456789 (use: official, )</p><p><b>active</b>: true</p><p><b>name</b>: 王美玲(Official)</p><p><b>telecom</b>: ph: 02-29412345(Work), <a href=\"mailto:meiling.wang@ltc-center.tw\">meiling.wang@ltc-center.tw</a></p><p><b>gender</b>: Female</p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Identifier</b></td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td><code>http://www.mohw.gov.tw/nursing-license</code>/護理執照123456</td><td><span title=\"Codes:{http://snomed.info/sct 224535009}\">Registered nurse</span></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PRN" ] ;
+         fhir:display [ fhir:v "Provider Number" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://www.mohw.gov.tw"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "N123456789" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:text [ fhir:v "王美玲" ] ;
+     fhir:family [ fhir:v "王" ] ;
+     fhir:given ( [ fhir:v "美玲" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "02-29412345" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "meiling.wang@ltc-center.tw" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:qualification ( [
+     fhir:identifier ( [
+       fhir:system [ fhir:v "http://www.mohw.gov.tw/nursing-license"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "護理執照123456" ]
+     ] ) ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:224535009 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "224535009" ] ;
+         fhir:display [ fhir:v "Registered nurse" ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

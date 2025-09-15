@@ -1,0 +1,145 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Composition/ltc-composition-referral-example> a fhir:Composition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-composition-referral-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionReferral"^^xsd:anyURI ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionReferral>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Composition ltc-composition-referral-example</b></p><a name=\"ltc-composition-referral-example\"> </a><a name=\"hcltc-composition-referral-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCCompositionReferral.html\">長期照護管理中心個案服務初篩表/轉介單文件架構</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 11488-4}\">長期照顧管理中心個案服務初篩表/轉介單</span></p><p><b>date</b>: 2024-01-20 09:00:00+0800</p><p><b>author</b>: <a href=\"PractitionerRole-ltc-practitioner-role-nurse-example.html\">PractitionerRole Registered nurse</a></p><p><b>title</b>: 陳明慧女士長期照顧服務轉介單</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:11488-4 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11488-4" ] ;
+       fhir:display [ fhir:v "Consult note" ]
+     ] ) ;
+     fhir:text [ fhir:v "長期照顧管理中心個案服務初篩表/轉介單" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/ltc-patient-referral-chen-ming-hui-example> ;
+     fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/Patient/ltc-patient-referral-chen-ming-hui-example" ]
+  ] ; # 
+  fhir:date [ fhir:v "2024-01-20T09:00:00+08:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:link <http://ltc-ig.fhir.tw/PractitionerRole/ltc-practitioner-role-nurse-example> ;
+     fhir:reference [ fhir:v "PractitionerRole/ltc-practitioner-role-nurse-example" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "陳明慧女士長期照顧服務轉介單"] ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "個案基本資料" ] ;
+     fhir:entry ( [
+       fhir:link <http://ltc-ig.fhir.tw/Patient/ltc-patient-referral-chen-ming-hui-example> ;
+       fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/Patient/ltc-patient-referral-chen-ming-hui-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "身心障礙手冊" ] ;
+     fhir:entry ( [
+       fhir:link <http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-example> ;
+       fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-example" ]
+     ] [
+       fhir:link <http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-type-limb-example> ;
+       fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-type-limb-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "管路" ] ;
+     fhir:entry ( [
+       fhir:link <http://ltc-ig.fhir.tw/Condition/ltc-condition-tube-nasogastric-example> ;
+       fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/Condition/ltc-condition-tube-nasogastric-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "壓傷" ] ;
+     fhir:entry ( [
+       fhir:link <http://ltc-ig.fhir.tw/Condition/ltc-condition-crush-stage2-example> ;
+       fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/Condition/ltc-condition-crush-stage2-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "居住狀況" ] ;
+     fhir:entry ( [
+       fhir:link <http://ltc-ig.fhir.tw/Condition/ltc-condition-residence-not-alone-example> ;
+       fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/Condition/ltc-condition-residence-not-alone-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "看護" ] ;
+     fhir:entry ( [
+       fhir:link <http://ltc-ig.fhir.tw/Condition/ltc-condition-caregiver-family-example> ;
+       fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/Condition/ltc-condition-caregiver-family-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "疾病狀況" ] ;
+     fhir:entry ( [
+       fhir:link <http://ltc-ig.fhir.tw/Condition/ltc-condition-diabetes-example> ;
+       fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/Condition/ltc-condition-diabetes-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "案主(家)主要問題及需求" ] ;
+     fhir:entry ( [
+       fhir:link <http://ltc-ig.fhir.tw/Condition/ltc-condition-diabetes-example> ;
+       fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/Condition/ltc-condition-diabetes-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "欲申請服務之種類" ] ;
+     fhir:entry ( [
+       fhir:link <http://ltc-ig.fhir.tw/CarePlan/ltc-careplan-referral-home-service-example> ;
+       fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/CarePlan/ltc-careplan-referral-home-service-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "ADL 失能項目評估" ] ;
+     fhir:entry ( [
+       fhir:link <http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-example> ;
+       fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "IADL 失能項目評估" ] ;
+     fhir:entry ( [
+       fhir:link <http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-example> ;
+       fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "長者衰弱評估" ] ;
+     fhir:entry ( [
+       fhir:link <http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-example> ;
+       fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "照顧者評估" ] ;
+     fhir:entry ( [
+       fhir:link <http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-example> ;
+       fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "出入院情形" ] ;
+     fhir:entry ( [
+       fhir:link <http://ltc-ig.fhir.tw/Encounter/ltc-encounter-example> ;
+       fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/Encounter/ltc-encounter-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "填表者/轉介者資訊及簽名欄" ] ;
+     fhir:entry ( [
+       fhir:link <http://ltc-ig.fhir.tw/Practitioner/ltc-practitioner-nurse-example> ;
+       fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/Practitioner/ltc-practitioner-nurse-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "填表單位資訊" ] ;
+     fhir:entry ( [
+       fhir:link <http://ltc-ig.fhir.tw/Organization/ltc-organization-example> ;
+       fhir:reference [ fhir:v "http://ltc-ig.fhir.tw/Organization/ltc-organization-example" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

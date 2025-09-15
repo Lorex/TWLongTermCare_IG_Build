@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CareTeam/ltc-care-team-example> a fhir:CareTeam ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-care-team-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCCareTeam"^^xsd:anyURI ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCCareTeam>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CareTeam ltc-care-team-example</b></p><a name=\"ltc-care-team-example\"> </a><a name=\"hcltc-care-team-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCCareTeam.html\">長期照顧－照顧團隊</a></p></div><p><b>status</b>: Active</p><p><b>name</b>: 陳明慧照顧團隊</p><p><b>subject</b>: <a href=\"Patient-ltc-patient-chen-ming-hui.html\">陳明慧 Female, DoB: 1945-03-15 ( National Person Identifier: A123456789 (use: official, ))</a></p><p><b>period</b>: 2024-01-01 --&gt; (ongoing)</p><blockquote><p><b>participant</b></p><p><b>role</b>: <span title=\"Codes:{http://snomed.info/sct 224535009}\">Registered nurse</span></p><p><b>member</b>: <a href=\"PractitionerRole-ltc-practitioner-role-nurse-example.html\">PractitionerRole Registered nurse</a></p><p><b>period</b>: 2024-01-01 --&gt; (ongoing)</p></blockquote><blockquote><p><b>participant</b></p><p><b>role</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType IND}\">indirect</span></p><p><b>member</b>: <a href=\"RelatedPerson-ltc-related-person-primary-caregiver-example.html\">RelatedPerson 陳志強</a></p><p><b>period</b>: 2024-01-01 --&gt; (ongoing)</p></blockquote><p><b>managingOrganization</b>: <a href=\"Organization-ltc-organization-example.html\">Organization 新北市私立安康老人長期照顧中心（養護型）</a></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:name [ fhir:v "陳明慧照顧團隊"] ; # 
+  fhir:subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/ltc-patient-chen-ming-hui> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-chen-ming-hui" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2024-01-01"^^xsd:date ]
+  ] ; # 
+  fhir:participant ( [
+     fhir:role ( [
+       fhir:coding ( [
+         a sct:224535009 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "224535009" ] ;
+         fhir:display [ fhir:v "Registered nurse" ]
+       ] )
+     ] ) ;
+     fhir:member [
+       fhir:link <http://ltc-ig.fhir.tw/PractitionerRole/ltc-practitioner-role-nurse-example> ;
+       fhir:reference [ fhir:v "PractitionerRole/ltc-practitioner-role-nurse-example" ]
+     ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2024-01-01"^^xsd:date ]
+     ]
+  ] [
+     fhir:role ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "IND" ] ;
+         fhir:display [ fhir:v "indirect" ]
+       ] )
+     ] ) ;
+     fhir:member [
+       fhir:link <http://ltc-ig.fhir.tw/RelatedPerson/ltc-related-person-primary-caregiver-example> ;
+       fhir:reference [ fhir:v "RelatedPerson/ltc-related-person-primary-caregiver-example" ]
+     ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2024-01-01"^^xsd:date ]
+     ]
+  ] ) ; # 
+  fhir:managingOrganization ( [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/ltc-organization-example> ;
+     fhir:reference [ fhir:v "Organization/ltc-organization-example" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,56 @@
+{
+  "resourceType" : "Observation",
+  "id" : "pasport-observation-bmi-example",
+  "meta" : {
+    "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationBodyMassIndex"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation pasport-observation-bmi-example</b></p><a name=\"pasport-observation-bmi-example\"> </a><a name=\"hcpasport-observation-bmi-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-PASportObservationBodyMassIndex.html\">身體組成分析儀－身體質量指數</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 39156-5}\">Body mass index (BMI) [Ratio]</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-chen-ming-hui.html\">陳明慧 Female, DoB: 1945-03-15 ( National Person Identifier: A123456789\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>effective</b>: 2024-01-15 08:30:00+0800</p><p><b>performer</b>: <a href=\"PractitionerRole-ltc-practitioner-role-nurse-example.html\">PractitionerRole Registered nurse</a></p><p><b>value</b>: 23.8 kg/m2<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codekg/m2 = 'kg/m2')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}\">Normal</span></p><p><b>note</b>: @2024-01-15 08:30:00+0800</p><blockquote><div><p>BMI值23.8，屬於正常範圍，建議維持目前體重並透過運動增強體能</p>\n</div></blockquote><p><b>derivedFrom</b>: </p><ul><li><a href=\"Observation-pasport-observation-weight-example.html\">Observation Body weight</a></li><li><a href=\"Observation-pasport-observation-height-example.html\">Observation Body height</a></li></ul></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "vital-signs",
+      "display" : "Vital Signs"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "39156-5",
+      "display" : "Body mass index (BMI) [Ratio]"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/ltc-patient-chen-ming-hui"
+  },
+  "effectiveDateTime" : "2024-01-15T08:30:00+08:00",
+  "performer" : [{
+    "reference" : "PractitionerRole/ltc-practitioner-role-nurse-example"
+  }],
+  "valueQuantity" : {
+    "value" : 23.8,
+    "unit" : "kg/m2",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "kg/m2"
+  },
+  "interpretation" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "code" : "N",
+      "display" : "Normal"
+    }]
+  }],
+  "note" : [{
+    "time" : "2024-01-15T08:30:00+08:00",
+    "text" : "BMI值23.8，屬於正常範圍，建議維持目前體重並透過運動增強體能"
+  }],
+  "derivedFrom" : [{
+    "reference" : "Observation/pasport-observation-weight-example"
+  },
+  {
+    "reference" : "Observation/pasport-observation-height-example"
+  }]
+}
