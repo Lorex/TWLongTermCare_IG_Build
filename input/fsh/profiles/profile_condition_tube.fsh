@@ -14,7 +14,7 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition 
 * code.coding 1..1 MS
 * code.coding ^short = "管路裝設狀況與類別代碼"
 * code.coding.system 1..1 MS
-* code.coding.system = "http://ltc-ig.fhir.tw/ValueSet/ReferralConditionTubeVS-TWLTC"
+* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionTubeCS-TWLTC"
 * code.coding.code 1..1 MS
 * code.coding.code ^short = "管路裝設狀況與類別代碼，如果代碼為 other，則需填寫備註以描述管路使用情況"
 * note 0..1 MS
@@ -43,7 +43,7 @@ Usage: #example
 * category[0].coding.code = #problem-list-item
 * category[0].coding.display = "Problem List Item"
 
-* code.coding.system = "http://ltc-ig.fhir.tw/ValueSet/ReferralConditionTubeVS-TWLTC"
+* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionTubeCS-TWLTC"
 * code.coding.code = #nasogastric-tube
 * code.coding.display = "鼻胃管"
 

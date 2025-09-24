@@ -54,7 +54,7 @@ Title: "日常生活能力評估問卷範例"
 Description: "一個日常生活能力評估問卷的範例，展示如何使用 LTCQuestionnaire Profile"
 Usage: #example
 
-* url = "http://ltc-ig.fhir.tw/Questionnaire/adl-assessment"
+* url = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-adl-assessment-example"
 
 * identifier.use = #official
 * identifier.system = "http://ltc-ig.fhir.tw/questionnaire-id"

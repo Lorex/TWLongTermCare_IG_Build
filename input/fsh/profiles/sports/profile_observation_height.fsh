@@ -74,7 +74,7 @@ Usage: #example
 
 * method.coding.system = "http://snomed.info/sct"
 * method.coding.code = #363808001
-* method.coding.display = "Measurement technique"
+* method.coding.display = "Measured body weight"
 
 * note[0].time = "2024-01-15T08:15:00+08:00"
 * note[0].text = "身高165.8公分，用於計算BMI及設計個人化運動計畫"

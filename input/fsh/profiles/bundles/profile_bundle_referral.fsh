@@ -46,7 +46,7 @@ Description: "此 Bundle 以臺北市長期照顧管理中心個案服務初篩�
 * entry[composition].resource only LTCCompositionReferral
 * entry[patient].resource 1..1 MS
 * entry[patient] ^short = "個案基本資料"
-* entry[patient].resource only LTCPatient
+* entry[patient].resource only LTCPatientReferral
 * entry[condition-disability].resource 1..1 MS
 * entry[condition-disability] ^short = "身心障礙手冊"
 * entry[condition-tube].resource 1..1 MS

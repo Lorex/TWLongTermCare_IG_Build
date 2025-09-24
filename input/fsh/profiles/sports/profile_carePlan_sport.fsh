@@ -3,7 +3,8 @@ Alias: $TWCoreDevice = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/
 Alias: $TempCodeCS = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport
 
 Profile: PASportCarePlan
-Parent: $TWCoreCarePlan
+// TWCore 規範的是"照護計畫"，與本 IG 的運動計畫不同，因此使用 CarePlan 而非 TWCoreCarePlan
+Parent: CarePlan
 Id: PASportCarePlan
 Title: "運動處方－運動計畫"
 Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現長期照顧情境中涉及之運動計畫內容。"
@@ -56,11 +57,6 @@ Usage: #example
 
 * status = #active
 * intent = #plan
-
-// Note: category is automatically set by the Profile definition
-// PASportCarePlan profile automatically constrains:
-// * category.coding.code = #PhysicalActivity
-// * category.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport"
 
 * description = "依照運動處方設計步行運動計畫，每日步行30分鐘，目標達到每日8000步"
 

@@ -8,7 +8,7 @@ Usage: #example
 
 * status = #completed
 * subject = Reference(ltc-patient-cms-example)
-* questionnaire = "Questionnaire/ltc-questionnaire-communication"
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-communication"
 * authored = "2024-09-15T10:30:00+08:00"
 
 * item[0].linkId = "communication-1"
@@ -29,7 +29,7 @@ Usage: #example
 
 * status = #completed
 * subject = Reference(ltc-patient-cms-example)
-* questionnaire = "Questionnaire/ltc-questionnaire-memory"
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-memory"
 * authored = "2024-09-15T10:35:00+08:00"
 
 * item[0].linkId = "memory-1"
@@ -48,7 +48,7 @@ Usage: #example
 
 * status = #completed
 * subject = Reference(ltc-patient-cms-example)
-* questionnaire = "Questionnaire/ltc-questionnaire-iadl"
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-iadl"
 * authored = "2024-09-15T10:40:00+08:00"
 
 * item[0].linkId = "iadl-1"
@@ -71,7 +71,7 @@ Usage: #example
 
 * status = #completed
 * subject = Reference(ltc-patient-cms-example)
-* questionnaire = "Questionnaire/ltc-questionnaire-special-care"
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-special-care"
 * authored = "2024-09-15T10:45:00+08:00"
 
 * item[0].linkId = "special-care-1"
@@ -90,7 +90,7 @@ Usage: #example
 
 * status = #completed
 * subject = Reference(ltc-patient-cms-example)
-* questionnaire = "Questionnaire/ltc-questionnaire-society"
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-society"
 * authored = "2024-09-15T10:50:00+08:00"
 
 * item[0].linkId = "society-1"
@@ -111,7 +111,7 @@ Usage: #example
 
 * status = #completed
 * subject = Reference(ltc-patient-cms-example)
-* questionnaire = "Questionnaire/ltc-questionnaire-mental"
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-mental"
 * authored = "2024-09-15T10:55:00+08:00"
 
 * item[0].linkId = "mental-1"
@@ -134,7 +134,7 @@ Usage: #example
 
 * status = #completed
 * subject = Reference(ltc-patient-cms-example)
-* questionnaire = "Questionnaire/ltc-questionnaire-caregiver-load"
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-caregiver-load"
 * authored = "2024-09-15T11:00:00+08:00"
 
 * item[0].linkId = "caregiver-load-1"
@@ -155,7 +155,7 @@ Usage: #example
 
 * status = #completed
 * subject = Reference(ltc-patient-cms-example)
-* questionnaire = "Questionnaire/ltc-questionnaire-caregiver-support"
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-caregiver-support"
 * authored = "2024-09-15T11:05:00+08:00"
 
 * item[0].linkId = "caregiver-support-1"
@@ -178,7 +178,7 @@ Usage: #example
 
 * status = #completed
 * subject = Reference(ltc-patient-referral-example)
-* questionnaire = "Questionnaire/ltc-questionnaire-iadl"
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-iadl"
 * authored = "2024-09-15T14:00:00+08:00"
 
 * item[0].linkId = "iadl-1"
@@ -201,7 +201,7 @@ Usage: #example
 
 * status = #completed
 * subject = Reference(ltc-patient-referral-example)
-* questionnaire = "Questionnaire/ltc-questionnaire-sof"
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-sof"
 * authored = "2024-09-15T14:10:00+08:00"
 
 * item[0].linkId = "sof-1"
@@ -224,7 +224,7 @@ Usage: #example
 
 * status = #completed
 * subject = Reference(ltc-patient-referral-example)
-* questionnaire = "Questionnaire/ltc-questionnaire-caregiver"
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-caregiver"
 * authored = "2024-09-15T14:20:00+08:00"
 
 * item[0].linkId = "caregiver-1"

@@ -46,9 +46,9 @@ Usage: #example
 
 * performer[0] = Reference(ltc-practitioner-role-nurse-example)
 
-* valueCodeableConcept.coding.system = "http://snomed.info/sct"
-* valueCodeableConcept.coding.code = #373066001
-* valueCodeableConcept.coding.display = "Yes"
+* valueCodeableConcept.coding.system = "http://loinc.org"
+* valueCodeableConcept.coding.code = #LA33635-6
+* valueCodeableConcept.coding.display = "Observed"
 * valueCodeableConcept.text = "發生跌倒"
 
 * note[0].time = "2024-01-10T14:30:00+08:00"

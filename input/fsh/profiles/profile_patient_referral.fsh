@@ -24,7 +24,8 @@ Description: "一個轉介單住民的範例，展示如何使用 LTCPatientRefe
 Usage: #example
 
 * identifier[idCardNumber].use = #official
-* identifier[idCardNumber].type = $IdType#NNxxx "National Person Identifier"
+* identifier[idCardNumber].type = $IdType#NNxxx "National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code"
+* identifier[idCardNumber].type.text = "National Person Identifier (TWN)"
 * identifier[idCardNumber].system = "http://www.moi.gov.tw"
 * identifier[idCardNumber].value = "A123456789"
 
@@ -52,8 +53,8 @@ Usage: #example
 * birthDate = "1945-03-15"
 
 * extension[economyStatus].valueCodeableConcept.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/EconomyStatusCS-TWLTC"
-* extension[economyStatus].valueCodeableConcept.coding.code = #middle-income
-* extension[economyStatus].valueCodeableConcept.coding.display = "中等收入戶"
+* extension[economyStatus].valueCodeableConcept.coding.code = #middle-class
+* extension[economyStatus].valueCodeableConcept.coding.display = "中產"
 
 * address[home].use = #home
 * address[home].text = "新北市中和區安康路二段123號3樓301室"

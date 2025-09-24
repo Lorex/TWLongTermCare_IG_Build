@@ -35,8 +35,8 @@ Usage: #example
 * category[0].coding.display = "Problem List Item"
 
 * code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityCS-TWLTC"
-* code.coding.code = #disability-card-holder
-* code.coding.display = "持有身心障礙手冊"
+* code.coding.code = #disability-handbook
+* code.coding.display = "有身心障礙手冊"
 
 * subject = Reference(ltc-patient-chen-ming-hui)
 

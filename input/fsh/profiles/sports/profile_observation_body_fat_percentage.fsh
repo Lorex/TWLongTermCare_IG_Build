@@ -85,8 +85,8 @@ Usage: #example
 * valueQuantity.code = #%
 
 * method.coding.system = "http://snomed.info/sct"
-* method.coding.code = #702668008
-* method.coding.display = "Bioelectrical impedance analysis"
+* method.coding.code = #252465000
+* method.coding.display = "Pulse oximetry"
 
 * device.display = "InBody 270 身體組成分析儀"
 

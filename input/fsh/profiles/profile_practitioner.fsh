@@ -19,7 +19,7 @@ Usage: #example
 
 * identifier[0].use = #official
 * identifier[0].type = $IdType#PRN "Provider Number"
-* identifier[0].system = "http://www.mohw.gov.tw"
+* identifier[0].system = "http://example.org/fhir/NamingSystem/practitioner-id"
 * identifier[0].value = "N123456789"
 
 * active = true
@@ -39,7 +39,7 @@ Usage: #example
 
 * gender = #female
 
-* qualification[0].identifier.system = "http://www.mohw.gov.tw/nursing-license"
+* qualification[0].identifier.system = "http://example.org/fhir/NamingSystem/nursing-license"
 * qualification[0].identifier.value = "護理執照123456"
 * qualification[0].code.coding.system = "http://snomed.info/sct"
 * qualification[0].code.coding.code = #224535009

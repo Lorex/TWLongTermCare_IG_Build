@@ -48,8 +48,8 @@ Usage: #example
 * lifecycleStatus = #active
 
 * description.coding.system = "http://snomed.info/sct"
-* description.coding.code = #182856006
-* description.coding.display = "Mobility regime"
+* description.coding.code = #710950005
+* description.coding.display = "Progressive mobility (regime/therapy)"
 * description.text = "改善住民行動能力"
 
 * subject = Reference(ltc-patient-chen-ming-hui)
@@ -57,8 +57,8 @@ Usage: #example
 * startDate = "2024-01-15"
 
 * target[0].measure.coding.system = "http://snomed.info/sct"
-* target[0].measure.coding.code = #162643002
-* target[0].measure.coding.display = "Independent mobility"
+* target[0].measure.coding.code = #82971005
+* target[0].measure.coding.display = "Impaired mobility (finding)"
 * target[0].detailString = "能夠獨立使用助行器行走50公尺"
 * target[0].dueDate = "2024-04-15"
 

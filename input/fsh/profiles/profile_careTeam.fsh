@@ -46,9 +46,9 @@ Usage: #example
 * participant[0].member = Reference(ltc-practitioner-role-nurse-example)
 * participant[0].period.start = "2024-01-01"
 
-* participant[1].role.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
-* participant[1].role.coding.code = #IND
-* participant[1].role.coding.display = "indirect"
+* participant[1].role.coding.system = "http://snomed.info/sct"
+* participant[1].role.coding.code = #133932002
+* participant[1].role.coding.display = "Caregiver"
 * participant[1].member = Reference(ltc-related-person-primary-caregiver-example)
 * participant[1].period.start = "2024-01-01"
 

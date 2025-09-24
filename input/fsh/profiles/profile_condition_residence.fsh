@@ -13,7 +13,7 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition 
 * code.coding 1..1 MS
 * code.coding ^short = "居住狀況代碼"
 * code.coding.system 1..1 MS
-* code.coding.system = "http://ltc-ig.fhir.tw/ValueSet/ReferralConditionResidenceVS-TWLTC"
+* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionResidenceCS-TWLTC"
 * code.coding.code 1..1 MS
 * code.coding.code ^short = "個案是否獨居？"
 
@@ -34,7 +34,7 @@ Usage: #example
 * category[0].coding.code = #problem-list-item
 * category[0].coding.display = "Problem List Item"
 
-* code.coding.system = "http://ltc-ig.fhir.tw/ValueSet/ReferralConditionResidenceVS-TWLTC"
+* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionResidenceCS-TWLTC"
 * code.coding.code = #not-alone
 * code.coding.display = "非獨居"
 

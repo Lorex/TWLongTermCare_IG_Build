@@ -38,10 +38,10 @@ Usage: #example
 
 * status = #completed
 
-* medicationCodeableConcept.coding.system = "http://www.whocc.no/atc"
-* medicationCodeableConcept.coding.code = #A10BA02
-* medicationCodeableConcept.coding.display = "metformin"
-* medicationCodeableConcept.text = "美福明 (Metformin)"
+* medicationCodeableConcept.coding.system = "http://snomed.info/sct"
+* medicationCodeableConcept.coding.code = #323402006
+* medicationCodeableConcept.coding.display = "Product containing benethamine penicillin (medicinal product)"
+* medicationCodeableConcept.text = "Product containing benethamine penicillin (medicinal product)"
 
 * subject = Reference(ltc-patient-chen-ming-hui)
 

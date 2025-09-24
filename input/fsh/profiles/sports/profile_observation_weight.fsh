@@ -74,11 +74,11 @@ Usage: #example
 
 * method.coding.system = "http://snomed.info/sct"
 * method.coding.code = #363808001
-* method.coding.display = "Measurement technique"
+* method.coding.display = "Measured body weight"
 
 * component[0].code.coding.system = "http://loinc.org"
 * component[0].code.coding.code = #8350-1
-* component[0].code.coding.display = "Body weight change"
+* component[0].code.coding.display = "Weight W clothes Measured"
 * component[0].valueQuantity.value = -0.8
 * component[0].valueQuantity.unit = "kg"
 * component[0].valueQuantity.system = "http://unitsofmeasure.org"
