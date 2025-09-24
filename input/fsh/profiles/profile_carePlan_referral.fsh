@@ -44,16 +44,16 @@ Usage: #example
 
 * activity[0].detail.status = #not-started
 * activity[0].detail.code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ReferralCarePlanCS-TWLTC"
-* activity[0].detail.code.coding.code = #home-care-service
-* activity[0].detail.code.coding.display = "居家照顧服務"
-* activity[0].detail.description = "提供日常生活照顧、身體清潔、餐食準備等居家服務"
+* activity[0].detail.code.coding.code = #home-care
+* activity[0].detail.code.coding.display = "居家護理"
+* activity[0].detail.description = "提供居家護理服務，如換藥、傷口照護、健康評估等"
 * activity[0].detail.performer[0] = Reference(ltc-organization-example)
 
 * activity[1].detail.status = #not-started
 * activity[1].detail.code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ReferralCarePlanCS-TWLTC"
-* activity[1].detail.code.coding.code = #rehabilitation-service
-* activity[1].detail.code.coding.display = "復健服務"
-* activity[1].detail.description = "物理治療及職能治療服務"
+* activity[1].detail.code.coding.code = #home-swallowing
+* activity[1].detail.code.coding.display = "居家吞嚥"
+* activity[1].detail.description = "提供居家吞嚥訓練與相關照護服務"
 * activity[1].detail.performer[0] = Reference(ltc-organization-example)
 
 * note[0].time = "2024-01-20"

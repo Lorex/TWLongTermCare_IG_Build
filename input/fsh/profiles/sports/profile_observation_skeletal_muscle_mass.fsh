@@ -85,8 +85,8 @@ Usage: #example
 * valueQuantity.code = #kg
 
 * method.coding.system = "http://snomed.info/sct"
-* method.coding.code = #702668008
-* method.coding.display = "Bioelectrical impedance analysis"
+* method.coding.code = #252465000
+* method.coding.display = "Pulse oximetry"
 
 * device.display = "InBody 270 身體組成分析儀"
 
@@ -109,7 +109,7 @@ Usage: #example
 
 * component[0].code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport"
 * component[0].code.coding.code = #SMI
-* component[0].code.coding.display = "骨骼肌指數"
+* component[0].code.coding.display = "肌肉質量指數"
 * component[0].valueQuantity.value = 7.6
 * component[0].valueQuantity.unit = "kg/m2"
 * component[0].valueQuantity.system = "http://unitsofmeasure.org"

@@ -70,7 +70,7 @@ Usage: #example
 
 * code.coding[PA].system = "http://snomed.info/sct"
 * code.coding[PA].code = #229070002
-* code.coding[PA].display = "Exercise therapy"
+* code.coding[PA].display = "Stretching exercises"
 
 * code.text = "申請個人化運動治療計畫，包含步行訓練、平衡訓練及肌力強化運動"
 

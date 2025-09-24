@@ -9,7 +9,8 @@ Usage: #example
 * identifier[idCardNumber].use = #official
 * identifier[idCardNumber].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[idCardNumber].type.coding.code = #NNxxx
-* identifier[idCardNumber].type.coding.display = "National identifier"
+* identifier[idCardNumber].type.coding.display = "National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code"
+* identifier[idCardNumber].type.text = "National Person Identifier (TWN)"
 * identifier[idCardNumber].system = "http://www.moi.gov.tw"
 * identifier[idCardNumber].value = "A123456789"
 
@@ -75,7 +76,8 @@ Usage: #example
 * identifier[idCardNumber].use = #official
 * identifier[idCardNumber].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[idCardNumber].type.coding.code = #NNxxx
-* identifier[idCardNumber].type.coding.display = "National identifier"
+* identifier[idCardNumber].type.coding.display = "National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code"
+* identifier[idCardNumber].type.text = "National Person Identifier (TWN)"
 * identifier[idCardNumber].system = "http://www.moi.gov.tw"
 * identifier[idCardNumber].value = "B987654321"
 
@@ -114,8 +116,8 @@ Usage: #example
 
 // Required extension for LTCPatientReferral
 * extension[economyStatus].valueCodeableConcept.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/EconomyStatusCS-TWLTC"
-* extension[economyStatus].valueCodeableConcept.coding.code = #2
-* extension[economyStatus].valueCodeableConcept.coding.display = "中低收入戶"
+* extension[economyStatus].valueCodeableConcept.coding.code = #barely-maintain
+* extension[economyStatus].valueCodeableConcept.coding.display = "勉持"
 
 * contact.relationship.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0131"
 * contact.relationship.coding.code = #N

@@ -1,5 +1,5 @@
 Alias: $TempCodeCS = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport
-Alias: $ExerciseHistoryVS = http://ltc-ig.fhir.tw/ValueSet/TempCodeVS-Sport
+Alias: $SNOMEDCT = http://snomed.info/sct
 
 Profile: PASportConditionExerciseHistory
 Parent: LTCCondition
@@ -19,12 +19,10 @@ Description: "長照機構住民運動處方的運動史資料，本 Profile 繼
 * code.coding ^slicing.discriminator.type = #pattern
 * code.coding ^slicing.discriminator.path = "$this"
 * code.coding ^slicing.rules = #open
-* code.coding contains
-    ExerciseHistory 1..1 MS
-* code.coding[ExerciseHistory] from $ExerciseHistoryVS (required)
-* code.coding[ExerciseHistory].system 1..1 MS
-* code.coding[ExerciseHistory].system = $SNOMEDCT
-* code.coding[ExerciseHistory].code 1..1 MS
+* code.coding contains snomed 1..1 MS
+* code.coding[snomed].system 1..1 MS
+* code.coding[snomed].system = $SNOMEDCT
+* code.coding[snomed] ^patternCoding.system = $SNOMEDCT
 * subject 1..1 MS
 * subject only Reference(LTCPatient)
 * subject.reference 1..1 MS
@@ -45,9 +43,9 @@ Usage: #example
 * category.coding.code = #PhysicalActivity
 * category.coding.display = "Physical Activity"
 
-* code.coding[ExerciseHistory].system = "http://snomed.info/sct"
-* code.coding[ExerciseHistory].code = #229070002
-* code.coding[ExerciseHistory].display = "Exercise therapy"
+* code.coding[snomed].system = "http://snomed.info/sct"
+* code.coding[snomed].code = #229070002
+* code.coding[snomed].display = "Stretching exercises"
 
 * code.text = "患者過去有規律運動習慣，主要以散步和太極拳為主"
 

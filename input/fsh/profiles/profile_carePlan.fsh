@@ -107,7 +107,7 @@ Usage: #example
 * activity[0].detail.status = #in-progress
 * activity[0].detail.code.coding.system = "http://snomed.info/sct"
 * activity[0].detail.code.coding.code = #229070002
-* activity[0].detail.code.coding.display = "Mobility training"
+* activity[0].detail.code.coding.display = "Stretching exercises"
 * activity[0].detail.description = "進行每日助行器行走訓練，每次30分鐘，每日2次"
 * activity[0].detail.scheduledPeriod.start = "2024-01-15"
 * activity[0].detail.scheduledPeriod.end = "2024-04-15"

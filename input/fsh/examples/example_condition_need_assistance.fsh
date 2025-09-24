@@ -12,9 +12,9 @@ Usage: #example
 * severity.coding.display = "Severe"
 
 * code.coding.system = "http://snomed.info/sct"
-* code.coding.code = #160693008
-* code.coding.display = "Needs assistance with activities of daily living"
-* code.text = "需要日常生活活動協助"
+* code.coding.code = #296391000000100
+* code.coding.display = "Needs assistance with shaving (finding)"
+* code.text = "需要協助刮鬍"
 
 * subject = Reference(ltc-patient-referral-example)
 * onsetDateTime = "2024-01-15"

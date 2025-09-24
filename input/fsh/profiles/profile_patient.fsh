@@ -86,7 +86,8 @@ Description: "一個長期照顧機構住民的範例，展示如何使用 LTCPa
 Usage: #example
 
 * identifier[idCardNumber].use = #official
-* identifier[idCardNumber].type = $IdType#NNxxx "National Person Identifier"
+* identifier[idCardNumber].type = $IdType#NNxxx "National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code"
+* identifier[idCardNumber].type.text = "National Person Identifier (TWN)"
 * identifier[idCardNumber].system = "http://www.moi.gov.tw"
 * identifier[idCardNumber].value = "A123456789"
 

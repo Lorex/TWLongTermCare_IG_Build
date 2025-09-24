@@ -53,8 +53,8 @@ Usage: #example
 * bodySite.coding.display = "Left upper arm structure"
 
 * method.coding.system = "http://snomed.info/sct"
-* method.coding.code = #77938009
-* method.coding.display = "Arterial pressure monitoring, non-invasive method"
+* method.coding.code = #37931006
+* method.coding.display = "Auscultation"
 
 * interpretation.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
 * interpretation.coding.code = #N

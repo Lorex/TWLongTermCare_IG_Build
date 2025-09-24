@@ -13,7 +13,7 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition 
 * code.coding 1..1 MS
 * code.coding ^short = "壓傷狀況代碼"
 * code.coding.system 1..1 MS
-* code.coding.system = "http://ltc-ig.fhir.tw/ValueSet/ReferralConditionCrushVS-TWLTC"
+* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionCrushCS-TWLTC"
 * code.coding.code 1..1 MS
 * code.coding.code ^short = "個案是否有壓傷？如果代碼為 crush，則需填寫備註以描述壓傷狀況"
 * note 0..1 MS
@@ -42,7 +42,7 @@ Usage: #example
 * category[0].coding.code = #problem-list-item
 * category[0].coding.display = "Problem List Item"
 
-* code.coding.system = "http://ltc-ig.fhir.tw/ValueSet/ReferralConditionCrushVS-TWLTC"
+* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionCrushCS-TWLTC"
 * code.coding.code = #no-crush
 * code.coding.display = "無壓傷"
 
@@ -69,9 +69,9 @@ Usage: #example
 * category[0].coding.code = #problem-list-item
 * category[0].coding.display = "Problem List Item"
 
-* code.coding.system = "http://ltc-ig.fhir.tw/ValueSet/ReferralConditionCrushVS-TWLTC"
+* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionCrushCS-TWLTC"
 * code.coding.code = #crush
-* code.coding.display = "有壓傷"
+* code.coding.display = "壓傷"
 
 * subject = Reference(ltc-patient-chen-ming-hui)
 
@@ -84,5 +84,5 @@ Usage: #example
 
 * bodySite[0].coding.system = "http://snomed.info/sct"
 * bodySite[0].coding.code = #54735007
-* bodySite[0].coding.display = "Sacral region structure"
+* bodySite[0].coding.display = "Bone structure of sacrum"
 

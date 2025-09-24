@@ -14,7 +14,7 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition 
 * code.coding 1..1 MS
 * code.coding ^short = "身心障礙別代碼"
 * code.coding.system 1..1 MS
-* code.coding.system = "http://ltc-ig.fhir.tw/ValueSet/ConditionDisabilityTypeVS-TWLTC"
+* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityTypeCS-TWLTC"
 * code.coding.code 1..1 MS
 * code.coding.code ^short = "身心障礙類型代碼"
 * severity 0..1 MS
@@ -38,13 +38,13 @@ Usage: #example
 * category[0].coding.code = #problem-list-item
 * category[0].coding.display = "Problem List Item"
 
-* code.coding.system = "http://ltc-ig.fhir.tw/ValueSet/ConditionDisabilityTypeVS-TWLTC"
-* code.coding.code = #limb-disability
-* code.coding.display = "肢體障礙"
+* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityTypeCS-TWLTC"
+* code.coding.code = #07
+* code.coding.display = "第七類"
 
-* severity.coding.system = "http://ltc-ig.fhir.tw/ValueSet/ConditionSeverityVS-TWLTC"
-* severity.coding.code = #mild
-* severity.coding.display = "輕度"
+* severity.coding.system = "http://snomed.info/sct"
+* severity.coding.code = #255604002
+* severity.coding.display = "Mild (qualifier value)"
 
 * subject = Reference(ltc-patient-chen-ming-hui)
 

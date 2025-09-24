@@ -40,8 +40,8 @@ Usage: #example
 * code[0].coding.display = "Registered nurse"
 
 * specialty[0].coding.system = "http://snomed.info/sct"
-* specialty[0].coding.code = #408443003
-* specialty[0].coding.display = "General medical practice"
+* specialty[0].coding.code = #394609007
+* specialty[0].coding.display = "General surgery (qualifier value)"
 
 * telecom[0].system = #phone
 * telecom[0].use = #work
