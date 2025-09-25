@@ -34,7 +34,9 @@ Description: "此 Bundle 以衛生福利部長期照顧管理中心照顧管理�
 * entry[composition].resource 1..1 MS
 * entry[composition] ^short = "照顧管理評估量表文件結構"
 * entry[composition].resource only LTCCompositionCMS
-* entry[patient].res  LTCConditionDisability or LTCConditionDisabilityType or $TWCoreCondition
+* entry[patient].resource 1..1 MS
+* entry[patient] ^short = "個案基本資料"
+* entry[patient].resource only LTCPatientCMS or LTCConditionDisability or LTCConditionDisabilityType or $TWCoreCondition
 * entry[related-person].resource 1..1 MS
 * entry[related-person] ^short = "照顧者基本資料"
 * entry[related-person].resource only LTCRelatedPerson or LTCConditionDisability

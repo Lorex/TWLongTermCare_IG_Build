@@ -87,22 +87,22 @@ Description: "此 Composition 以臺北市長期照顧管理中心個案服務�
 * section[questionnaire-adl].title = "ADL 失能項目評估"
 * section[questionnaire-adl].entry 1..1 MS
 * section[questionnaire-adl].entry ^short = "ADL 失能項目評估"
-* section[questionnaire-adl].entry only Reference(LTCQuestionnaireResponseReferralADL)
+* section[questionnaire-adl].entry only Reference(LTCQuestionnaireResponseReferralADL or LTCQuestionnaireResponse)
 * section[questionnaire-iadl] ^short = "IADL 失能項目評估"
 * section[questionnaire-iadl].title = "IADL 失能項目評估"
 * section[questionnaire-iadl].entry 1..1 MS
 * section[questionnaire-iadl].entry ^short = "IADL 失能項目評估"
-* section[questionnaire-iadl].entry only Reference(LTCQuestionnaireResponseReferralIADL)
+* section[questionnaire-iadl].entry only Reference(LTCQuestionnaireResponseReferralIADL or LTCQuestionnaireResponse)
 * section[questionnaire-sof] ^short = "長者衰弱評估"
 * section[questionnaire-sof].title = "長者衰弱評估"
 * section[questionnaire-sof].entry 1..1 MS
 * section[questionnaire-sof].entry ^short = "長者衰弱評估"
-* section[questionnaire-sof].entry only Reference(LTCQuestionnaireResponseReferralSOF)
+* section[questionnaire-sof].entry only Reference(LTCQuestionnaireResponseReferralSOF or LTCQuestionnaireResponse)
 * section[questionnaire-caregiver] ^short = "照顧者評估"
 * section[questionnaire-caregiver].title = "照顧者評估"
 * section[questionnaire-caregiver].entry 1..1 MS
 * section[questionnaire-caregiver].entry ^short = "照顧者評估"
-* section[questionnaire-caregiver].entry only Reference(LTCQuestionnaireResponseReferralCaregiver)
+* section[questionnaire-caregiver].entry only Reference(LTCQuestionnaireResponseReferralCaregiver or LTCQuestionnaireResponse)
 * section[encounter] ^short = "出入院情形"
 * section[encounter].title = "出入院情形"
 * section[encounter].entry 1..1 MS
