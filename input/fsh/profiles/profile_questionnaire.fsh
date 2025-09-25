@@ -92,3 +92,65 @@ Usage: #example
 * item[2].answerOption[1].valueString = "需要部分協助"
 * item[2].answerOption[2].valueString = "完全需要協助"
 
+* item[3].linkId = "adl-4"
+* item[3].prefix = "4."
+* item[3].type = #choice
+* item[3].text = "個人修飾"
+* item[3].required = true
+* item[3].answerOption[0].valueString = "完全獨立"
+* item[3].answerOption[1].valueString = "需要部分協助"
+* item[3].answerOption[2].valueString = "完全需要協助"
+
+* item[4].linkId = "adl-5"
+* item[4].prefix = "5."
+* item[4].type = #choice
+* item[4].text = "大便控制"
+* item[4].required = true
+* item[4].answerOption[0].valueString = "完全獨立"
+* item[4].answerOption[1].valueString = "需要部分協助"
+* item[4].answerOption[2].valueString = "完全需要協助"
+
+* item[5].linkId = "adl-6"
+* item[5].prefix = "6."
+* item[5].type = #choice
+* item[5].text = "小便控制"
+* item[5].required = true
+* item[5].answerOption[0].valueString = "完全獨立"
+* item[5].answerOption[1].valueString = "需要部分協助"
+* item[5].answerOption[2].valueString = "完全需要協助"
+
+* item[6].linkId = "adl-7"
+* item[6].prefix = "7."
+* item[6].type = #choice
+* item[6].text = "上廁所"
+* item[6].required = true
+* item[6].answerOption[0].valueString = "完全獨立"
+* item[6].answerOption[1].valueString = "需要部分協助"
+* item[6].answerOption[2].valueString = "完全需要協助"
+
+* item[7].linkId = "adl-8"
+* item[7].prefix = "8."
+* item[7].type = #choice
+* item[7].text = "移位"
+* item[7].required = true
+* item[7].answerOption[0].valueString = "完全獨立"
+* item[7].answerOption[1].valueString = "需要部分協助"
+* item[7].answerOption[2].valueString = "完全需要協助"
+
+* item[8].linkId = "adl-9"
+* item[8].prefix = "9."
+* item[8].type = #choice
+* item[8].text = "走路"
+* item[8].required = true
+* item[8].answerOption[0].valueString = "完全獨立"
+* item[8].answerOption[1].valueString = "需要部分協助"
+* item[8].answerOption[2].valueString = "完全需要協助"
+
+* item[9].linkId = "adl-10"
+* item[9].prefix = "10."
+* item[9].type = #choice
+* item[9].text = "上下樓梯"
+* item[9].required = true
+* item[9].answerOption[0].valueString = "完全獨立"
+* item[9].answerOption[1].valueString = "需要部分協助"
+* item[9].answerOption[2].valueString = "完全需要協助"

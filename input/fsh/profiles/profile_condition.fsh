@@ -21,11 +21,35 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition 
 * asserter.reference 1..1 MS
 * asserter.reference ^short = "聲稱有此病情、問題或診斷的人員。[應輸入 Practitioner/PractitionerRole/Patient/RelatedPerson Resource ID]"
 
+// 子類：主要疾病
+Profile: LTCConditionProblem
+Parent: LTCCondition
+Id: LTCConditionProblem
+Title: "長期照顧－主要疾病"
+Description: "用於表述案主(家)主要疾病的 Condition Profile。"
+
+* category 1..1
+* category.coding 1..1
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"
+* category.coding.code = #encounter-diagnosis
+
+// 子類：主要問題及需求
+Profile: LTCConditionNeed
+Parent: LTCCondition
+Id: LTCConditionNeed
+Title: "長期照顧－主要問題及需求"
+Description: "用於表述案主(家)主要問題及需求的 Condition Profile。"
+
+* category 1..1
+* category.coding 1..1
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"
+* category.coding.code = #problem-list-item
+
 // Example
 Instance: ltc-condition-diabetes-example
-InstanceOf: LTCCondition
+InstanceOf: LTCConditionProblem
 Title: "糖尿病病情範例"
-Description: "一個糖尿病病情的範例，展示如何使用 LTCCondition Profile"
+Description: "一個糖尿病病情的範例，展示如何使用 LTCConditionProblem Profile"
 Usage: #example
 
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"

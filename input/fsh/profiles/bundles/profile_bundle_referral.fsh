@@ -49,29 +49,40 @@ Description: "此 Bundle 以臺北市長期照顧管理中心個案服務初篩�
 * entry[patient].resource only LTCPatientReferral
 * entry[condition-disability].resource 1..1 MS
 * entry[condition-disability] ^short = "身心障礙手冊"
+* entry[condition-disability].resource only LTCConditionDisability or LTCConditionDisabilityType
 * entry[condition-tube].resource 1..1 MS
 * entry[condition-tube] ^short = "管路"
+* entry[condition-tube].resource only LTCConditionTube
 * entry[condition-crush].resource 1..1 MS
 * entry[condition-crush] ^short = "壓傷"
+* entry[condition-crush].resource only LTCConditionCrush
 * entry[condition-residence].resource 1..1 MS
 * entry[condition-residence] ^short = "居住狀況"
+* entry[condition-residence].resource only LTCConditionResidence
 * entry[condition-caregiver].resource 1..1 MS
 * entry[condition-caregiver] ^short = "看護"
+* entry[condition-caregiver].resource only LTCConditionCaregiver
 * entry[condition-problem].resource 1..1 MS
 * entry[condition-problem] ^short = "疾病狀況"
+* entry[condition-problem].resource only LTCConditionProblem
 * entry[condition-need].resource 1..1 MS
 * entry[condition-need] ^short = "案主(家)主要問題及需求"
+* entry[condition-need].resource only LTCConditionNeed
 * entry[careplan].resource 1..1 MS
 * entry[careplan] ^short = "欲申請服務之種類"
 * entry[careplan].resource only LTCCarePlanReferral
 * entry[questionnaire-adl].resource 1..1 MS
 * entry[questionnaire-adl] ^short = "ADL 失能項目評估"
+* entry[questionnaire-adl].resource only LTCQuestionnaireResponseReferralADL
 * entry[questionnaire-iadl].resource 1..1 MS
 * entry[questionnaire-iadl] ^short = "IADL 失能項目評估"
+* entry[questionnaire-iadl].resource only LTCQuestionnaireResponseReferralIADL
 * entry[questionnaire-sof].resource 1..1 MS
 * entry[questionnaire-sof] ^short = "長者衰弱評估"
+* entry[questionnaire-sof].resource only LTCQuestionnaireResponseReferralSOF
 * entry[questionnaire-caregiver].resource 1..1 MS
 * entry[questionnaire-caregiver] ^short = "照顧者評估"
+* entry[questionnaire-caregiver].resource only LTCQuestionnaireResponseReferralCaregiver
 * entry[encounter].resource 1..1 MS
 * entry[encounter] ^short = "出入院情形"
 * entry[encounter].resource only $TWCoreEncounter
