@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 0, errors = 0, warn = 25, info = 49-->
+<!-- broken links = 0, errors = 0, warn = 25, info = 38-->
 <head>
   <title>TaiwanLongTermCareImplementationGuide : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -47,7 +47,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for TaiwanLongTermCareImplementationGuide</h1>
- <p>Generated Fri Sep 26 02:34:03 CST 2025, FHIR version 4.0.1 for fhir.twltc#0.3.0 (canonical = <a href="http://ltc-ig.fhir.tw">http://ltc-ig.fhir.tw</a> (<a href="http://ltc-ig.fhir.tw/history.html">history</a>)). See <a href="qa.html">Full QA Report</a> &amp; <a href="qa-ipreview.html">IP</a></p>
+ <p>Generated Fri Sep 26 02:52:55 CST 2025, FHIR version 4.0.1 for fhir.twltc#0.3.0 (canonical = <a href="http://ltc-ig.fhir.tw">http://ltc-ig.fhir.tw</a> (<a href="http://ltc-ig.fhir.tw/history.html">history</a>)). See <a href="qa.html">Full QA Report</a> &amp; <a href="qa-ipreview.html">IP</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v2.0.17</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = fhir.twltc, Canonical = http://ltc-ig.fhir.tw</td></tr>
@@ -95,7 +95,7 @@
  <tr><td>Related IGs:</td><td>n/a</td></tr>
  <tr><td>Dependent IGs:</td><td><a href="qa-dep.html">no references</a></td></tr>
  <tr><td>Global Profiles:</td><td>(none declared)</td></tr>
- <tr><td>Terminology Server(s):</td><td><a href="http://tx.fhir.org/r4">http://tx.fhir.org/r4</a>, <a href="https://tx.fhir.org/r4">https://tx.fhir.org/r4</a> (<a href="qa-txservers.html">details</a>)</td></tr>
+ <tr><td>Terminology Server(s):</td><td><a href="https://tx.fhir.org/r4">https://tx.fhir.org/r4</a> (<a href="qa-txservers.html">details</a>)</td></tr>
  <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
  <tr><td>R5 Dependencies:</td><td><span style="color: grey">(none)</span></td></tr>
  <tr><td>Draft Dependencies:</td><td><ul>
@@ -230,7 +230,7 @@ hl7.terminology.r4#6.5.0:     <a href="http://terminology.hl7.org/6.5.0/CodeSyst
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
  <tr><td>Validation Flags:</td><td> On: autoLoad; Off: hintAboutNonMustSupport, anyExtensionsAllowed, checkAggregation, showReferenceMessages, noExperimentalContent, displayWarnings</td></tr>
- <tr><td>Summary:</td><td> errors = 0, warn = 25, info = 49, broken links = 0, pinned = n/a.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
+ <tr><td>Summary:</td><td> errors = 0, warn = 25, info = 38, broken links = 0, pinned = n/a.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -479,8 +479,12 @@ hl7.terminology.r4#6.5.0:     <a href="http://terminology.hl7.org/6.5.0/CodeSyst
 <p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
 <p><b>HL7 Publisher 中的程式語法問題所造成的 LOINC Code Display 無法正常辨識。此部分遵循 TW Core 規範予以忽略。</b></p><ul>
  <li>%Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1% <span style="color: navy">(3 uses)</span></li>
+</ul>
+<p><b>HL7 Validator中的程式語法錯誤，造成已定義的 Profiles 無法被正常驗證驗證，此提示訊息不影響實作與實際代碼驗證。此部分遵循 TW Core 規範予以忽略。</b></p><ul>
  <li>%This element does not match any known slice defined in the profile% <span style="color: navy">(20 uses)</span></li>
- <li>HL7 Validator中的程式語法錯誤，造成已定義的 Profiles 無法被正常驗證驗證，此提示訊息不影響實作與實際代碼驗證。此部分遵循 TW Core 規範予以忽略。 <span style="color: maroon">(0 uses)</span></li>
+</ul>
+<p><b>IG Publisher 提示要為 Questionnaire 指定一個 OID，此為範例資料，不影響實作與實際代碼驗證。</b></p><ul>
+ <li>%could usefully have an OID assigned% <span style="color: navy">(11 uses)</span></li>
 </ul>
 <p><b>Publisher 偵測到特定欄位綁定的值集有多版本，並建議指定版本。惟該 Profiles 係繼承自 TW Core 台灣核心規範，為遵從上層定義故不進行額外版本指定。此警告訊息不影響實作與實際代碼驗證。</b></p><ul>
  <li>%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-nationality'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1, 5.1.0, 5.2.0. Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-nationality' to 'http://hl7.org/fhir/StructureDefinition/patient-nationality|5.2.0'% <span style="color: navy">(3 uses)</span></li>
