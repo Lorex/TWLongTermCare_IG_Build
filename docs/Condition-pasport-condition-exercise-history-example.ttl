@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Condition/pasport-condition-exercise-history-example> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pasport-condition-exercise-history-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/PASportConditionExerciseHistory"^^xsd:anyURI ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/PASportConditionExerciseHistory>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition pasport-condition-exercise-history-example</b></p><a name=\"pasport-condition-exercise-history-example\"> </a><a name=\"hcpasport-condition-exercise-history-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-PASportConditionExerciseHistory.html\">運動處方－運動史</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport PhysicalActivity}\">Physical Activity</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 229070002}\">患者過去有規律運動習慣，主要以散步和太極拳為主</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-chen-ming-hui.html\">陳明慧 Female, DoB: 1945-03-15 ( National Person Identifier (TWN): A123456789 (use: official, ))</a></p><p><b>onset</b>: 2020-01-01</p><p><b>recordedDate</b>: 2024-01-15</p><p><b>recorder</b>: <a href=\"PractitionerRole-ltc-practitioner-role-nurse-example.html\">PractitionerRole Registered nurse</a></p><h3>Evidences</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Detail</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Observation-pasport-observation-heart-rate-example.html\">Observation Heart rate</a></td></tr></table><p><b>note</b>: @2024-01-15</p><blockquote><div><p>患者報告從60歲開始每日早晨散步30分鐘，並參加社區太極拳課程已有4年。近期因關節不適減少運動頻率，希望透過專業指導恢復運動習慣。</p>\n</div></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ]
+     ] )
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-ver-status"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "confirmed" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "PhysicalActivity" ] ;
+       fhir:display [ fhir:v "Physical Activity" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:229070002 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "229070002" ] ;
+       fhir:display [ fhir:v "Stretching exercises" ]
+     ] ) ;
+     fhir:text [ fhir:v "患者過去有規律運動習慣，主要以散步和太極拳為主" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/ltc-patient-chen-ming-hui> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-chen-ming-hui" ]
+  ] ; # 
+  fhir:onset [
+     a fhir:dateTime ;
+     fhir:v "2020-01-01"^^xsd:date
+  ] ; # 
+  fhir:recordedDate [ fhir:v "2024-01-15"^^xsd:date] ; # 
+  fhir:recorder [
+     fhir:link <http://ltc-ig.fhir.tw/PractitionerRole/ltc-practitioner-role-nurse-example> ;
+     fhir:reference [ fhir:v "PractitionerRole/ltc-practitioner-role-nurse-example" ]
+  ] ; # 
+  fhir:evidence ( [
+     fhir:detail ( [
+       fhir:link <http://ltc-ig.fhir.tw/Observation/pasport-observation-heart-rate-example> ;
+       fhir:reference [ fhir:v "Observation/pasport-observation-heart-rate-example" ]
+     ] )
+  ] ) ; # 
+  fhir:note ( [
+     fhir:time [ fhir:v "2024-01-15"^^xsd:date ] ;
+     fhir:text [ fhir:v "患者報告從60歲開始每日早晨散步30分鐘，並參加社區太極拳課程已有4年。近期因關節不適減少運動頻率，希望透過專業指導恢復運動習慣。" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

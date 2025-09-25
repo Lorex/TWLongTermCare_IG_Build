@@ -19,3 +19,42 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan R
 * activity.detail.code 1..1 MS
 * activity.detail.code ^short = "服務種類代碼"
 * activity.detail.code from $ReferralCarePlanVS-TWLTC (required)
+
+// Example
+Instance: ltc-careplan-referral-home-service-example
+InstanceOf: LTCCarePlanReferral
+Title: "轉介單居家服務計畫範例"
+Description: "一個轉介單居家服務計畫的範例，展示如何使用 LTCCarePlanReferral Profile"
+Usage: #example
+
+* status = #active
+* intent = #proposal
+
+* category[AssessPlan].coding.system = "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw"
+* category[AssessPlan].coding.code = #assess-plan
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* period.start = "2024-02-01"
+* period.end = "2024-08-01"
+
+* author = Reference(ltc-practitioner-role-nurse-example)
+
+* goal[0] = Reference(ltc-goal-mobility-improvement-example)
+
+* activity[0].detail.status = #not-started
+* activity[0].detail.code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ReferralCarePlanCS-TWLTC"
+* activity[0].detail.code.coding.code = #home-care
+* activity[0].detail.code.coding.display = "居家護理"
+* activity[0].detail.description = "提供居家護理服務，如換藥、傷口照護、健康評估等"
+* activity[0].detail.performer[0] = Reference(ltc-organization-example)
+
+* activity[1].detail.status = #not-started
+* activity[1].detail.code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ReferralCarePlanCS-TWLTC"
+* activity[1].detail.code.coding.code = #home-swallowing
+* activity[1].detail.code.coding.display = "居家吞嚥"
+* activity[1].detail.description = "提供居家吞嚥訓練與相關照護服務"
+* activity[1].detail.performer[0] = Reference(ltc-organization-example)
+
+* note[0].time = "2024-01-20"
+* note[0].text = "個案需要居家照顧及復健服務，由照管中心評估後安排服務提供單位"

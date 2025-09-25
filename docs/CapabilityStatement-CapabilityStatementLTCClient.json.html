@@ -1,0 +1,1180 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>臺灣長期照顧實作指引 - 用戶端能力聲明 - JSON Representation - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"15.2"}
+    h3,h4,h5,h6{--heading-prefix:"15.2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)</span>
+            <br/>
+            <span style="display:inline-block;">0.3.0 - ci-build+trial-use
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">應用說明</a></li>
+  <li><a href="toc.html">目錄</a></li>
+	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<!-- <li>
+				<a href="capabilitystatements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters-and-operation.html">查詢參數及操作定義</a>
+			</li>
+			<li>
+				<a href="models.html">邏輯模型</a>
+			</li> -->
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles 及 Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+  <!-- <li><a href="examples.html">範例</a></li> -->
+  <li><a href="downloads.html">結構定義與範例檔下載</a></li>
+  <li><a href="security.html">安全性</a></li>
+  <li><a href="validates.html">驗證教學</a></li>
+  <li class="dropdown">
+    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+    </ul>
+  </li>
+  <!-- <li><a href="history.html">版本歷程</a></li> -->
+</ul>      
+
+<style>
+.dropdown-menu li:hover .sub-menu {visibility: visible;}
+.dropdown:hover .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 992px) {
+  table.colsi {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  table.rwd-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  p, a {
+    word-break: break-all;
+  }
+}
+</style>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>臺灣長期照顧實作指引 - 用戶端能力聲明</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="CapabilityStatement-CapabilityStatementLTCClient.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CapabilityStatement-CapabilityStatementLTCClient.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CapabilityStatement-CapabilityStatementLTCClient.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: 臺灣長期照顧實作指引 - 用戶端能力聲明 - JSON Representation</h2>
+
+  <table class="colsi">
+    <tr>
+
+      <td colspan="2">
+        
+          Active
+          
+            as of 2024-12-19
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="CapabilityStatement-CapabilityStatementLTCClient.json" no-download="true">Raw json</a> | <a href="CapabilityStatement-CapabilityStatementLTCClient.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement">resourceType</a>" : "CapabilityStatement",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.id">id</a>" : "CapabilityStatementLTCClient",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: CapabilityStatement CapabilityStatementLTCClient&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;CapabilityStatementLTCClient\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcCapabilityStatementLTCClient\&quot;&gt; &lt;/a&gt;&lt;h2 id=\&quot;title\&quot;&gt;臺灣長期照顧實作指引 - 用戶端能力聲明&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Implementation Guide Version: 0.3.0 &lt;/li&gt;&lt;li&gt;FHIR Version: 4.0.1 &lt;/li&gt;&lt;li&gt;Supported Formats: &lt;code&gt;xml&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Published on: 2024-12-19 &lt;/li&gt;&lt;li&gt;Published by: 經濟部產業發展署 &lt;/li&gt;&lt;/ul&gt;&lt;blockquote class=\&quot;impl-note\&quot;&gt;&lt;p&gt;&lt;strong&gt;Note to Implementers: FHIR Capabilities&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.&lt;/p&gt;&lt;/blockquote&gt;&lt;h2 id=\&quot;rest\&quot;&gt;FHIR RESTful Capabilities&lt;/h2&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h3 id=\&quot;mode1\&quot; class=\&quot;panel-title\&quot;&gt;Mode: &lt;code&gt;client&lt;/code&gt;&lt;/h3&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div&gt;&lt;p&gt;臺灣長期照顧實作指引用戶端建議支援以下 FHIR RESTful API 功能&lt;/p&gt;\n&lt;/div&gt;&lt;div class=\&quot;lead\&quot;&gt;&lt;em&gt;Security&lt;/em&gt;&lt;/div&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;Enable CORS: yes&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;Security services supported: &lt;code&gt;OAuth&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;blockquote&gt;&lt;div&gt;&lt;p&gt;支援 OAuth 2.0 認證機制&lt;/p&gt;\n&lt;/div&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;/div&gt;&lt;h3 id=\&quot;resourcesCap1\&quot;&gt;Capabilities by Resource/Profile&lt;/h3&gt;&lt;h4 id=\&quot;resourcesSummary1\&quot;&gt;Summary&lt;/h4&gt;&lt;p&gt;The summary table lists the resources that are part of this configuration, and for each resource it lists:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;The relevant profiles (if any)&lt;/li&gt;&lt;li&gt;The interactions supported by each resource (&lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;R&lt;/span&gt;&lt;/b&gt;ead, &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;S&lt;/span&gt;&lt;/b&gt;earch, &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;U&lt;/span&gt;&lt;/b&gt;pdate, and &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;C&lt;/span&gt;&lt;/b&gt;reate, are always shown, while &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;VR&lt;/span&gt;&lt;/b&gt;ead, &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;P&lt;/span&gt;&lt;/b&gt;atch, &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;D&lt;/span&gt;&lt;/b&gt;elete, &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;H&lt;/span&gt;&lt;/b&gt;istory on &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;I&lt;/span&gt;&lt;/b&gt;nstance, or &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;H&lt;/span&gt;&lt;/b&gt;istory on &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;T&lt;/span&gt;&lt;/b&gt;ype are only present if at least one of the resources has support for them.&lt;/li&gt;&lt;li&gt;&lt;span&gt;The required, recommended, and some optional search parameters (if any). &lt;/span&gt;&lt;/li&gt;&lt;li&gt;The linked resources enabled for &lt;code&gt;_include&lt;/code&gt;&lt;/li&gt;&lt;li&gt;The other resources enabled for &lt;code&gt;_revinclude&lt;/code&gt;&lt;/li&gt;&lt;li&gt;The operations on the resource (if any)&lt;/li&gt;&lt;/ul&gt;&lt;div class=\&quot;table-responsive\&quot;&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;b&gt;Resource Type&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Profile&lt;/b&gt;&lt;/th&gt;&lt;th class=\&quot;text-center\&quot;&gt;&lt;b title=\&quot;GET a resource (read interaction)\&quot;&gt;R&lt;/b&gt;&lt;/th&gt;&lt;th class=\&quot;text-center\&quot;&gt;&lt;b title=\&quot;GET all set of resources of the type (search interaction)\&quot;&gt;S&lt;/b&gt;&lt;/th&gt;&lt;th class=\&quot;text-center\&quot;&gt;&lt;b title=\&quot;PUT a new resource version (update interaction)\&quot;&gt;U&lt;/b&gt;&lt;/th&gt;&lt;th class=\&quot;text-center\&quot;&gt;&lt;b title=\&quot;POST a new resource (create interaction)\&quot;&gt;C&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b title=\&quot;Required and recommended search parameters\&quot;&gt;Searches&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;code&gt;&lt;b&gt;_include&lt;/b&gt;&lt;/code&gt;&lt;/th&gt;&lt;th&gt;&lt;code&gt;&lt;b&gt;_revinclude&lt;/b&gt;&lt;/code&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Operations&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;#Bundle1-1\&quot;&gt;Bundle&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/bundle.html\&quot;&gt;http://hl7.org/fhir/StructureDefinition/Bundle&lt;/a&gt;&lt;br/&gt;&lt;em&gt;Additional supported profiles:&lt;/em&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCBundleReferral.html\&quot;&gt;長期照顧管理中心個案服務初篩表/轉介單文件打包&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCBundleCMS.html\&quot;&gt;照顧管理評估量表文件打包&lt;/a&gt;&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td&gt;type&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;#Composition1-2\&quot;&gt;Composition&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/composition.html\&quot;&gt;http://hl7.org/fhir/StructureDefinition/Composition&lt;/a&gt;&lt;br/&gt;&lt;em&gt;Additional supported profiles:&lt;/em&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCCompositionReferral.html\&quot;&gt;長期照護管理中心個案服務初篩表/轉介單文件架構&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCCompositionCMS.html\&quot;&gt;照顧管理評估量表文件架構&lt;/a&gt;&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td&gt;subject, date, type&lt;/td&gt;&lt;td&gt;&lt;code&gt;Composition:subject&lt;/code&gt;, &lt;code&gt;Composition:author&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;#Patient1-3\&quot;&gt;Patient&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/patient.html\&quot;&gt;http://hl7.org/fhir/StructureDefinition/Patient&lt;/a&gt;&lt;br/&gt;&lt;em&gt;Additional supported profiles:&lt;/em&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCPatient.html\&quot;&gt;長期照顧－住民基本資料&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCPatientReferral.html\&quot;&gt;轉介單－個案基本資料&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCPatientCMS.html\&quot;&gt;照顧管理評估量表－個案基本資料&lt;/a&gt;&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td&gt;identifier, name, birthdate, gender&lt;/td&gt;&lt;td&gt;&lt;code&gt;Patient:organization&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;#CarePlan1-4\&quot;&gt;CarePlan&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/careplan.html\&quot;&gt;http://hl7.org/fhir/StructureDefinition/CarePlan&lt;/a&gt;&lt;br/&gt;&lt;em&gt;Additional supported profiles:&lt;/em&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCCarePlan.html\&quot;&gt;長期照顧－照顧計畫&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCCarePlanReferral.html\&quot;&gt;轉介單－服務種類&lt;/a&gt;&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td&gt;subject, status, intent&lt;/td&gt;&lt;td&gt;&lt;code&gt;CarePlan:subject&lt;/code&gt;, &lt;code&gt;CarePlan:author&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;#CareTeam1-5\&quot;&gt;CareTeam&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/careteam.html\&quot;&gt;http://hl7.org/fhir/StructureDefinition/CareTeam&lt;/a&gt;&lt;br/&gt;&lt;em&gt;Additional supported profiles:&lt;/em&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCCareTeam.html\&quot;&gt;長期照顧－照顧團隊&lt;/a&gt;&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td&gt;subject, status&lt;/td&gt;&lt;td&gt;&lt;code&gt;CareTeam:subject&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;#Condition1-6\&quot;&gt;Condition&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/condition.html\&quot;&gt;http://hl7.org/fhir/StructureDefinition/Condition&lt;/a&gt;&lt;br/&gt;&lt;em&gt;Additional supported profiles:&lt;/em&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCCondition.html\&quot;&gt;長期照顧－病情、問題或診斷&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCConditionCaregiver.html\&quot;&gt;長期照顧－看護狀況&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCConditionCrush.html\&quot;&gt;長期照顧－壓傷狀況&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCConditionDisability.html\&quot;&gt;長期照顧－身心障礙手冊持有狀態&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCConditionDisabilityType.html\&quot;&gt;長期照顧－身心障礙類型&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCConditionResidence.html\&quot;&gt;長期照顧－居住狀況&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCConditionTube.html\&quot;&gt;長期照顧－管路裝設狀況&lt;/a&gt;&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td&gt;subject, code, clinical-status&lt;/td&gt;&lt;td&gt;&lt;code&gt;Condition:subject&lt;/code&gt;, &lt;code&gt;Condition:recorder&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;#Goal1-7\&quot;&gt;Goal&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/goal.html\&quot;&gt;http://hl7.org/fhir/StructureDefinition/Goal&lt;/a&gt;&lt;br/&gt;&lt;em&gt;Additional supported profiles:&lt;/em&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCGoal.html\&quot;&gt;長期照顧－照顧目標&lt;/a&gt;&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td&gt;subject, status&lt;/td&gt;&lt;td&gt;&lt;code&gt;Goal:subject&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;#MedicationAdministration1-8\&quot;&gt;MedicationAdministration&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/medicationadministration.html\&quot;&gt;http://hl7.org/fhir/StructureDefinition/MedicationAdministration&lt;/a&gt;&lt;br/&gt;&lt;em&gt;Additional supported profiles:&lt;/em&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCMedicationAdministration.html\&quot;&gt;長期照顧－用藥資料&lt;/a&gt;&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td&gt;subject, medication, effective-time&lt;/td&gt;&lt;td&gt;&lt;code&gt;MedicationAdministration:subject&lt;/code&gt;, &lt;code&gt;MedicationAdministration:medication&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;#Observation1-9\&quot;&gt;Observation&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/observation.html\&quot;&gt;http://hl7.org/fhir/StructureDefinition/Observation&lt;/a&gt;&lt;br/&gt;&lt;em&gt;Additional supported profiles:&lt;/em&gt;&lt;br/&gt;\u00a0\u00a0&lt;code&gt;http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationFalling&lt;/code&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCObservationVitalSigns.html\&quot;&gt;長期照顧－生命體徵&lt;/a&gt;&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td&gt;subject, code, date&lt;/td&gt;&lt;td&gt;&lt;code&gt;Observation:subject&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;#Organization1-10\&quot;&gt;Organization&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/organization.html\&quot;&gt;http://hl7.org/fhir/StructureDefinition/Organization&lt;/a&gt;&lt;br/&gt;&lt;em&gt;Additional supported profiles:&lt;/em&gt;&lt;br/&gt;\u00a0\u00a0&lt;code&gt;http://ltc-ig.fhir.tw/StructureDefinition/LTCOrganization&lt;/code&gt;&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td&gt;identifier, name&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;#Practitioner1-11\&quot;&gt;Practitioner&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/practitioner.html\&quot;&gt;http://hl7.org/fhir/StructureDefinition/Practitioner&lt;/a&gt;&lt;br/&gt;&lt;em&gt;Additional supported profiles:&lt;/em&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCPractitioner.html\&quot;&gt;長期照顧－照顧服務提供者&lt;/a&gt;&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td&gt;identifier, name&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;#PractitionerRole1-12\&quot;&gt;PractitionerRole&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/practitionerrole.html\&quot;&gt;http://hl7.org/fhir/StructureDefinition/PractitionerRole&lt;/a&gt;&lt;br/&gt;&lt;em&gt;Additional supported profiles:&lt;/em&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCPractitionerRole.html\&quot;&gt;長期照顧－服務人員角色&lt;/a&gt;&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td&gt;practitioner, organization&lt;/td&gt;&lt;td&gt;&lt;code&gt;PractitionerRole:practitioner&lt;/code&gt;, &lt;code&gt;PractitionerRole:organization&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;#Questionnaire1-13\&quot;&gt;Questionnaire&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/questionnaire.html\&quot;&gt;http://hl7.org/fhir/StructureDefinition/Questionnaire&lt;/a&gt;&lt;br/&gt;&lt;em&gt;Additional supported profiles:&lt;/em&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCQuestionnaire.html\&quot;&gt;長期照顧－問卷&lt;/a&gt;&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td&gt;identifier, title&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;#QuestionnaireResponse1-14\&quot;&gt;QuestionnaireResponse&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/questionnaireresponse.html\&quot;&gt;http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse&lt;/a&gt;&lt;br/&gt;&lt;em&gt;Additional supported profiles:&lt;/em&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponse.html\&quot;&gt;長期照顧－問卷回覆&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseADL.html\&quot;&gt;ADL 問卷回覆&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;code&gt;http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMS&lt;/code&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseCMSCommunication.html\&quot;&gt;照顧管理評估量表－個案溝通能力問卷回覆&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseCMSCaregiverLoad.html\&quot;&gt;照顧管理評估量表－主要照顧者負荷問卷回覆&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseCMSCaregiverSupport.html\&quot;&gt;照顧管理評估量表－主要照顧者工作與支持&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseCMSMemory.html\&quot;&gt;照顧管理評估量表－個案短期記憶力問卷回覆&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseCMSMental.html\&quot;&gt;照顧管理評估量表－情緒及行為型態問卷回覆&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseCMSSociety.html\&quot;&gt;照顧管理評估量表－居家環境與社會參與問卷回覆&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseCMSSpecialCare.html\&quot;&gt;照顧管理評估量表－特殊複雜照護需要問卷回覆&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseIADL.html\&quot;&gt;IADL 問卷回覆&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseReferralCaregiver.html\&quot;&gt;轉介單－照顧者問卷回覆&lt;/a&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseReferralSOF.html\&quot;&gt;轉介單－衰弱評估問卷回覆&lt;/a&gt;&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td&gt;subject, questionnaire, authored&lt;/td&gt;&lt;td&gt;&lt;code&gt;QuestionnaireResponse:subject&lt;/code&gt;, &lt;code&gt;QuestionnaireResponse:questionnaire&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;#RelatedPerson1-15\&quot;&gt;RelatedPerson&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/relatedperson.html\&quot;&gt;http://hl7.org/fhir/StructureDefinition/RelatedPerson&lt;/a&gt;&lt;br/&gt;&lt;em&gt;Additional supported profiles:&lt;/em&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-LTCRelatedPerson.html\&quot;&gt;長期照顧－關係人&lt;/a&gt;&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;&gt;y&lt;/td&gt;&lt;td&gt;patient, relationship&lt;/td&gt;&lt;td&gt;&lt;code&gt;RelatedPerson:patient&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;hr/&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h4 id=\&quot;Bundle1-1\&quot; class=\&quot;panel-title\&quot;&gt;&lt;span style=\&quot;float: right;\&quot;&gt;Resource Conformance: supported &lt;/span&gt;Bundle&lt;/h4&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div class=\&quot;container\&quot;&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Base System Profile&lt;/span&gt;&lt;br/&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/bundle.html\&quot;&gt;Bundle&lt;/a&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Profile Conformance&lt;/span&gt;&lt;br/&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Reference Policy&lt;/span&gt;&lt;br/&gt;&lt;code&gt;literal&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Supported Profiles&lt;/span&gt;&lt;p&gt;&lt;a href=\&quot;StructureDefinition-LTCBundleReferral.html\&quot;&gt;長期照顧管理中心個案服務初篩表/轉介單文件打包&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCBundleCMS.html\&quot;&gt;照顧管理評估量表文件打包&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Interaction summary&lt;/span&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Supports &lt;br/&gt;&lt;code&gt;read&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援讀取 Bundle 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;search-type&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援搜尋 Bundle 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;create&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援建立 Bundle 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;update&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援更新 Bundle 資源&lt;/p&gt;\n&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-7\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Search Parameters&lt;/span&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Conformance&lt;/th&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Documentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;type&lt;/td&gt;&lt;td&gt;&lt;code&gt;token&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;Bundle 類型&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-5\&quot;&gt;\u00a0&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h4 id=\&quot;Composition1-2\&quot; class=\&quot;panel-title\&quot;&gt;&lt;span style=\&quot;float: right;\&quot;&gt;Resource Conformance: supported &lt;/span&gt;Composition&lt;/h4&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div class=\&quot;container\&quot;&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Base System Profile&lt;/span&gt;&lt;br/&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/composition.html\&quot;&gt;Composition&lt;/a&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Profile Conformance&lt;/span&gt;&lt;br/&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Reference Policy&lt;/span&gt;&lt;br/&gt;&lt;code&gt;literal&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Supported Profiles&lt;/span&gt;&lt;p&gt;&lt;a href=\&quot;StructureDefinition-LTCCompositionReferral.html\&quot;&gt;長期照護管理中心個案服務初篩表/轉介單文件架構&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCCompositionCMS.html\&quot;&gt;照顧管理評估量表文件架構&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Interaction summary&lt;/span&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Supports &lt;br/&gt;&lt;code&gt;read&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援讀取 Composition 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;search-type&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援搜尋 Composition 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;create&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援建立 Composition 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;update&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援更新 Composition 資源&lt;/p&gt;\n&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-7\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Search Parameters&lt;/span&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Conformance&lt;/th&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Documentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;subject&lt;/td&gt;&lt;td&gt;&lt;code&gt;reference&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;文件主體&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;&lt;code&gt;date&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;文件日期&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;type&lt;/td&gt;&lt;td&gt;&lt;code&gt;token&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;文件類型&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-5\&quot;&gt;\u00a0&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h4 id=\&quot;Patient1-3\&quot; class=\&quot;panel-title\&quot;&gt;&lt;span style=\&quot;float: right;\&quot;&gt;Resource Conformance: supported &lt;/span&gt;Patient&lt;/h4&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div class=\&quot;container\&quot;&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Base System Profile&lt;/span&gt;&lt;br/&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/patient.html\&quot;&gt;Patient&lt;/a&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Profile Conformance&lt;/span&gt;&lt;br/&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Reference Policy&lt;/span&gt;&lt;br/&gt;&lt;code&gt;literal&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Supported Profiles&lt;/span&gt;&lt;p&gt;&lt;a href=\&quot;StructureDefinition-LTCPatient.html\&quot;&gt;長期照顧－住民基本資料&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCPatientReferral.html\&quot;&gt;轉介單－個案基本資料&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCPatientCMS.html\&quot;&gt;照顧管理評估量表－個案基本資料&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Interaction summary&lt;/span&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Supports &lt;br/&gt;&lt;code&gt;read&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援讀取 Patient 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;search-type&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援搜尋 Patient 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;create&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援建立 Patient 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;update&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援更新 Patient 資源&lt;/p&gt;\n&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-7\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Search Parameters&lt;/span&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Conformance&lt;/th&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Documentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;identifier&lt;/td&gt;&lt;td&gt;&lt;code&gt;token&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;住民識別碼&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;name&lt;/td&gt;&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;住民姓名&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;birthdate&lt;/td&gt;&lt;td&gt;&lt;code&gt;date&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;出生日期&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;gender&lt;/td&gt;&lt;td&gt;&lt;code&gt;token&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;性別&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-5\&quot;&gt;\u00a0&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h4 id=\&quot;CarePlan1-4\&quot; class=\&quot;panel-title\&quot;&gt;&lt;span style=\&quot;float: right;\&quot;&gt;Resource Conformance: supported &lt;/span&gt;CarePlan&lt;/h4&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div class=\&quot;container\&quot;&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Base System Profile&lt;/span&gt;&lt;br/&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/careplan.html\&quot;&gt;CarePlan&lt;/a&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Profile Conformance&lt;/span&gt;&lt;br/&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Reference Policy&lt;/span&gt;&lt;br/&gt;&lt;code&gt;literal&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Supported Profiles&lt;/span&gt;&lt;p&gt;&lt;a href=\&quot;StructureDefinition-LTCCarePlan.html\&quot;&gt;長期照顧－照顧計畫&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCCarePlanReferral.html\&quot;&gt;轉介單－服務種類&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Interaction summary&lt;/span&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Supports &lt;br/&gt;&lt;code&gt;read&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援讀取 CarePlan 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;search-type&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援搜尋 CarePlan 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;create&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援建立 CarePlan 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;update&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援更新 CarePlan 資源&lt;/p&gt;\n&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-7\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Search Parameters&lt;/span&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Conformance&lt;/th&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Documentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;subject&lt;/td&gt;&lt;td&gt;&lt;code&gt;reference&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;照顧計畫主體&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;status&lt;/td&gt;&lt;td&gt;&lt;code&gt;token&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;照顧計畫狀態&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;intent&lt;/td&gt;&lt;td&gt;&lt;code&gt;token&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;照顧計畫意圖&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-5\&quot;&gt;\u00a0&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h4 id=\&quot;CareTeam1-5\&quot; class=\&quot;panel-title\&quot;&gt;&lt;span style=\&quot;float: right;\&quot;&gt;Resource Conformance: supported &lt;/span&gt;CareTeam&lt;/h4&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div class=\&quot;container\&quot;&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Base System Profile&lt;/span&gt;&lt;br/&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/careteam.html\&quot;&gt;CareTeam&lt;/a&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Profile Conformance&lt;/span&gt;&lt;br/&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Reference Policy&lt;/span&gt;&lt;br/&gt;&lt;code&gt;literal&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Supported Profiles&lt;/span&gt;&lt;p&gt;&lt;a href=\&quot;StructureDefinition-LTCCareTeam.html\&quot;&gt;長期照顧－照顧團隊&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Interaction summary&lt;/span&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Supports &lt;br/&gt;&lt;code&gt;read&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援讀取 CareTeam 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;search-type&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援搜尋 CareTeam 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;create&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援建立 CareTeam 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;update&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援更新 CareTeam 資源&lt;/p&gt;\n&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-7\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Search Parameters&lt;/span&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Conformance&lt;/th&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Documentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;subject&lt;/td&gt;&lt;td&gt;&lt;code&gt;reference&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;照護團隊主體&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;status&lt;/td&gt;&lt;td&gt;&lt;code&gt;token&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;照護團隊狀態&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-5\&quot;&gt;\u00a0&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h4 id=\&quot;Condition1-6\&quot; class=\&quot;panel-title\&quot;&gt;&lt;span style=\&quot;float: right;\&quot;&gt;Resource Conformance: supported &lt;/span&gt;Condition&lt;/h4&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div class=\&quot;container\&quot;&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Base System Profile&lt;/span&gt;&lt;br/&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/condition.html\&quot;&gt;Condition&lt;/a&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Profile Conformance&lt;/span&gt;&lt;br/&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Reference Policy&lt;/span&gt;&lt;br/&gt;&lt;code&gt;literal&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Supported Profiles&lt;/span&gt;&lt;p&gt;&lt;a href=\&quot;StructureDefinition-LTCCondition.html\&quot;&gt;長期照顧－病情、問題或診斷&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCConditionCaregiver.html\&quot;&gt;長期照顧－看護狀況&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCConditionCrush.html\&quot;&gt;長期照顧－壓傷狀況&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCConditionDisability.html\&quot;&gt;長期照顧－身心障礙手冊持有狀態&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCConditionDisabilityType.html\&quot;&gt;長期照顧－身心障礙類型&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCConditionResidence.html\&quot;&gt;長期照顧－居住狀況&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCConditionTube.html\&quot;&gt;長期照顧－管路裝設狀況&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Interaction summary&lt;/span&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Supports &lt;br/&gt;&lt;code&gt;read&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援讀取 Condition 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;search-type&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援搜尋 Condition 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;create&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援建立 Condition 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;update&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援更新 Condition 資源&lt;/p&gt;\n&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-7\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Search Parameters&lt;/span&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Conformance&lt;/th&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Documentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;subject&lt;/td&gt;&lt;td&gt;&lt;code&gt;reference&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;病情主體&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;code&lt;/td&gt;&lt;td&gt;&lt;code&gt;token&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;病情代碼&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;clinical-status&lt;/td&gt;&lt;td&gt;&lt;code&gt;token&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;臨床狀態&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-5\&quot;&gt;\u00a0&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h4 id=\&quot;Goal1-7\&quot; class=\&quot;panel-title\&quot;&gt;&lt;span style=\&quot;float: right;\&quot;&gt;Resource Conformance: supported &lt;/span&gt;Goal&lt;/h4&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div class=\&quot;container\&quot;&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Base System Profile&lt;/span&gt;&lt;br/&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/goal.html\&quot;&gt;Goal&lt;/a&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Profile Conformance&lt;/span&gt;&lt;br/&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Reference Policy&lt;/span&gt;&lt;br/&gt;&lt;code&gt;literal&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Supported Profiles&lt;/span&gt;&lt;p&gt;&lt;a href=\&quot;StructureDefinition-LTCGoal.html\&quot;&gt;長期照顧－照顧目標&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Interaction summary&lt;/span&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Supports &lt;br/&gt;&lt;code&gt;read&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援讀取 Goal 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;search-type&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援搜尋 Goal 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;create&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援建立 Goal 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;update&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援更新 Goal 資源&lt;/p&gt;\n&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-7\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Search Parameters&lt;/span&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Conformance&lt;/th&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Documentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;subject&lt;/td&gt;&lt;td&gt;&lt;code&gt;reference&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;目標主體&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;status&lt;/td&gt;&lt;td&gt;&lt;code&gt;token&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;目標狀態&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-5\&quot;&gt;\u00a0&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h4 id=\&quot;MedicationAdministration1-8\&quot; class=\&quot;panel-title\&quot;&gt;&lt;span style=\&quot;float: right;\&quot;&gt;Resource Conformance: supported &lt;/span&gt;MedicationAdministration&lt;/h4&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div class=\&quot;container\&quot;&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Base System Profile&lt;/span&gt;&lt;br/&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/medicationadministration.html\&quot;&gt;MedicationAdministration&lt;/a&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Profile Conformance&lt;/span&gt;&lt;br/&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Reference Policy&lt;/span&gt;&lt;br/&gt;&lt;code&gt;literal&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Supported Profiles&lt;/span&gt;&lt;p&gt;&lt;a href=\&quot;StructureDefinition-LTCMedicationAdministration.html\&quot;&gt;長期照顧－用藥資料&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Interaction summary&lt;/span&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Supports &lt;br/&gt;&lt;code&gt;read&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援讀取 MedicationAdministration 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;search-type&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援搜尋 MedicationAdministration 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;create&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援建立 MedicationAdministration 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;update&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援更新 MedicationAdministration 資源&lt;/p&gt;\n&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-7\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Search Parameters&lt;/span&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Conformance&lt;/th&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Documentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;subject&lt;/td&gt;&lt;td&gt;&lt;code&gt;reference&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;用藥主體&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;medication&lt;/td&gt;&lt;td&gt;&lt;code&gt;reference&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;藥物&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;effective-time&lt;/td&gt;&lt;td&gt;&lt;code&gt;date&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;用藥時間&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-5\&quot;&gt;\u00a0&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h4 id=\&quot;Observation1-9\&quot; class=\&quot;panel-title\&quot;&gt;&lt;span style=\&quot;float: right;\&quot;&gt;Resource Conformance: supported &lt;/span&gt;Observation&lt;/h4&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div class=\&quot;container\&quot;&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Base System Profile&lt;/span&gt;&lt;br/&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/observation.html\&quot;&gt;Observation&lt;/a&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Profile Conformance&lt;/span&gt;&lt;br/&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Reference Policy&lt;/span&gt;&lt;br/&gt;&lt;code&gt;literal&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Supported Profiles&lt;/span&gt;&lt;p&gt;&lt;code&gt;http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationFalling&lt;/code&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCObservationVitalSigns.html\&quot;&gt;長期照顧－生命體徵&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Interaction summary&lt;/span&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Supports &lt;br/&gt;&lt;code&gt;read&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援讀取 Observation 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;search-type&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援搜尋 Observation 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;create&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援建立 Observation 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;update&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援更新 Observation 資源&lt;/p&gt;\n&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-7\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Search Parameters&lt;/span&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Conformance&lt;/th&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Documentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;subject&lt;/td&gt;&lt;td&gt;&lt;code&gt;reference&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;觀察主體&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;code&lt;/td&gt;&lt;td&gt;&lt;code&gt;token&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;觀察代碼&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;&lt;code&gt;date&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;觀察日期&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-5\&quot;&gt;\u00a0&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h4 id=\&quot;Organization1-10\&quot; class=\&quot;panel-title\&quot;&gt;&lt;span style=\&quot;float: right;\&quot;&gt;Resource Conformance: supported &lt;/span&gt;Organization&lt;/h4&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div class=\&quot;container\&quot;&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Base System Profile&lt;/span&gt;&lt;br/&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/organization.html\&quot;&gt;Organization&lt;/a&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Profile Conformance&lt;/span&gt;&lt;br/&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Reference Policy&lt;/span&gt;&lt;br/&gt;&lt;code&gt;literal&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Supported Profiles&lt;/span&gt;&lt;p&gt;&lt;code&gt;http://ltc-ig.fhir.tw/StructureDefinition/LTCOrganization&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Interaction summary&lt;/span&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Supports &lt;br/&gt;&lt;code&gt;read&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援讀取 Organization 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;search-type&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援搜尋 Organization 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;create&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援建立 Organization 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;update&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援更新 Organization 資源&lt;/p&gt;\n&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-7\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Search Parameters&lt;/span&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Conformance&lt;/th&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Documentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;identifier&lt;/td&gt;&lt;td&gt;&lt;code&gt;token&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;機構識別碼&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;name&lt;/td&gt;&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;機構名稱&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-5\&quot;&gt;\u00a0&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h4 id=\&quot;Practitioner1-11\&quot; class=\&quot;panel-title\&quot;&gt;&lt;span style=\&quot;float: right;\&quot;&gt;Resource Conformance: supported &lt;/span&gt;Practitioner&lt;/h4&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div class=\&quot;container\&quot;&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Base System Profile&lt;/span&gt;&lt;br/&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/practitioner.html\&quot;&gt;Practitioner&lt;/a&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Profile Conformance&lt;/span&gt;&lt;br/&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Reference Policy&lt;/span&gt;&lt;br/&gt;&lt;code&gt;literal&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Supported Profiles&lt;/span&gt;&lt;p&gt;&lt;a href=\&quot;StructureDefinition-LTCPractitioner.html\&quot;&gt;長期照顧－照顧服務提供者&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Interaction summary&lt;/span&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Supports &lt;br/&gt;&lt;code&gt;read&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援讀取 Practitioner 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;search-type&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援搜尋 Practitioner 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;create&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援建立 Practitioner 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;update&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援更新 Practitioner 資源&lt;/p&gt;\n&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-7\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Search Parameters&lt;/span&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Conformance&lt;/th&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Documentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;identifier&lt;/td&gt;&lt;td&gt;&lt;code&gt;token&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;醫事人員識別碼&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;name&lt;/td&gt;&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;醫事人員姓名&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-5\&quot;&gt;\u00a0&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h4 id=\&quot;PractitionerRole1-12\&quot; class=\&quot;panel-title\&quot;&gt;&lt;span style=\&quot;float: right;\&quot;&gt;Resource Conformance: supported &lt;/span&gt;PractitionerRole&lt;/h4&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div class=\&quot;container\&quot;&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Base System Profile&lt;/span&gt;&lt;br/&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/practitionerrole.html\&quot;&gt;PractitionerRole&lt;/a&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Profile Conformance&lt;/span&gt;&lt;br/&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Reference Policy&lt;/span&gt;&lt;br/&gt;&lt;code&gt;literal&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Supported Profiles&lt;/span&gt;&lt;p&gt;&lt;a href=\&quot;StructureDefinition-LTCPractitionerRole.html\&quot;&gt;長期照顧－服務人員角色&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Interaction summary&lt;/span&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Supports &lt;br/&gt;&lt;code&gt;read&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援讀取 PractitionerRole 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;search-type&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援搜尋 PractitionerRole 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;create&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援建立 PractitionerRole 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;update&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援更新 PractitionerRole 資源&lt;/p&gt;\n&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-7\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Search Parameters&lt;/span&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Conformance&lt;/th&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Documentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;practitioner&lt;/td&gt;&lt;td&gt;&lt;code&gt;reference&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;醫事人員&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;organization&lt;/td&gt;&lt;td&gt;&lt;code&gt;reference&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;所屬機構&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-5\&quot;&gt;\u00a0&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h4 id=\&quot;Questionnaire1-13\&quot; class=\&quot;panel-title\&quot;&gt;&lt;span style=\&quot;float: right;\&quot;&gt;Resource Conformance: supported &lt;/span&gt;Questionnaire&lt;/h4&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div class=\&quot;container\&quot;&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Base System Profile&lt;/span&gt;&lt;br/&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/questionnaire.html\&quot;&gt;Questionnaire&lt;/a&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Profile Conformance&lt;/span&gt;&lt;br/&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Reference Policy&lt;/span&gt;&lt;br/&gt;&lt;code&gt;literal&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Supported Profiles&lt;/span&gt;&lt;p&gt;&lt;a href=\&quot;StructureDefinition-LTCQuestionnaire.html\&quot;&gt;長期照顧－問卷&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Interaction summary&lt;/span&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Supports &lt;br/&gt;&lt;code&gt;read&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援讀取 Questionnaire 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;search-type&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援搜尋 Questionnaire 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;create&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援建立 Questionnaire 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;update&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援更新 Questionnaire 資源&lt;/p&gt;\n&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-7\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Search Parameters&lt;/span&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Conformance&lt;/th&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Documentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;identifier&lt;/td&gt;&lt;td&gt;&lt;code&gt;token&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;問卷識別碼&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;title&lt;/td&gt;&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;問卷標題&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-5\&quot;&gt;\u00a0&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h4 id=\&quot;QuestionnaireResponse1-14\&quot; class=\&quot;panel-title\&quot;&gt;&lt;span style=\&quot;float: right;\&quot;&gt;Resource Conformance: supported &lt;/span&gt;QuestionnaireResponse&lt;/h4&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div class=\&quot;container\&quot;&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Base System Profile&lt;/span&gt;&lt;br/&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/questionnaireresponse.html\&quot;&gt;QuestionnaireResponse&lt;/a&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Profile Conformance&lt;/span&gt;&lt;br/&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Reference Policy&lt;/span&gt;&lt;br/&gt;&lt;code&gt;literal&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Supported Profiles&lt;/span&gt;&lt;p&gt;&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponse.html\&quot;&gt;長期照顧－問卷回覆&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseADL.html\&quot;&gt;ADL 問卷回覆&lt;/a&gt;&lt;br/&gt;&lt;code&gt;http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMS&lt;/code&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseCMSCommunication.html\&quot;&gt;照顧管理評估量表－個案溝通能力問卷回覆&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseCMSCaregiverLoad.html\&quot;&gt;照顧管理評估量表－主要照顧者負荷問卷回覆&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseCMSCaregiverSupport.html\&quot;&gt;照顧管理評估量表－主要照顧者工作與支持&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseCMSMemory.html\&quot;&gt;照顧管理評估量表－個案短期記憶力問卷回覆&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseCMSMental.html\&quot;&gt;照顧管理評估量表－情緒及行為型態問卷回覆&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseCMSSociety.html\&quot;&gt;照顧管理評估量表－居家環境與社會參與問卷回覆&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseCMSSpecialCare.html\&quot;&gt;照顧管理評估量表－特殊複雜照護需要問卷回覆&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseIADL.html\&quot;&gt;IADL 問卷回覆&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseReferralCaregiver.html\&quot;&gt;轉介單－照顧者問卷回覆&lt;/a&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-LTCQuestionnaireResponseReferralSOF.html\&quot;&gt;轉介單－衰弱評估問卷回覆&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Interaction summary&lt;/span&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Supports &lt;br/&gt;&lt;code&gt;read&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援讀取 QuestionnaireResponse 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;search-type&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援搜尋 QuestionnaireResponse 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;create&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援建立 QuestionnaireResponse 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;update&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援更新 QuestionnaireResponse 資源&lt;/p&gt;\n&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-7\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Search Parameters&lt;/span&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Conformance&lt;/th&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Documentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;subject&lt;/td&gt;&lt;td&gt;&lt;code&gt;reference&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;問卷回應主體&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;questionnaire&lt;/td&gt;&lt;td&gt;&lt;code&gt;reference&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;問卷&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;authored&lt;/td&gt;&lt;td&gt;&lt;code&gt;date&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;填寫日期&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-5\&quot;&gt;\u00a0&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h4 id=\&quot;RelatedPerson1-15\&quot; class=\&quot;panel-title\&quot;&gt;&lt;span style=\&quot;float: right;\&quot;&gt;Resource Conformance: supported &lt;/span&gt;RelatedPerson&lt;/h4&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div class=\&quot;container\&quot;&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Base System Profile&lt;/span&gt;&lt;br/&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/relatedperson.html\&quot;&gt;RelatedPerson&lt;/a&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Profile Conformance&lt;/span&gt;&lt;br/&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Reference Policy&lt;/span&gt;&lt;br/&gt;&lt;code&gt;literal&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Supported Profiles&lt;/span&gt;&lt;p&gt;&lt;a href=\&quot;StructureDefinition-LTCRelatedPerson.html\&quot;&gt;長期照顧－關係人&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Interaction summary&lt;/span&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Supports &lt;br/&gt;&lt;code&gt;read&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援讀取 RelatedPerson 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;search-type&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援搜尋 RelatedPerson 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;create&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援建立 RelatedPerson 資源&lt;/p&gt;\n&lt;/div&gt;&lt;code&gt;update&lt;/code&gt;&lt;div&gt;&lt;p&gt;建議支援更新 RelatedPerson 資源&lt;/p&gt;\n&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-7\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Search Parameters&lt;/span&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Conformance&lt;/th&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Documentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;patient&lt;/td&gt;&lt;td&gt;&lt;code&gt;reference&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;相關人員主體&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;relationship&lt;/td&gt;&lt;td&gt;&lt;code&gt;token&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;關係類型&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-5\&quot;&gt;\u00a0&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.url">url</a>" : "http://ltc-ig.fhir.tw/CapabilityStatement/CapabilityStatementLTCClient",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.version">version</a>" : "0.3.0",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.title">title</a>" : "臺灣長期照顧實作指引 - 用戶端能力聲明",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.date">date</a>" : "2024-12-19",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.publisher">publisher</a>" : "經濟部產業發展署",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "經濟部產業發展署",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://www.ida.gov.tw/"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.description">description</a>" : "此 CapabilityStatement 定義了臺灣長期照顧實作指引中用戶端系統建議支援的 FHIR RESTful API 功能。",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.kind">kind</a>" : "instance",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.software">software</a>" : {
+    "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.software.name">name</a>" : "臺灣長期照顧實作指引用戶端",
+    "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.software.version">version</a>" : "0.3.0",
+    "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.software.releaseDate">releaseDate</a>" : "2024-12-19"
+  },
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.implementation">implementation</a>" : {
+    "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.implementation.description">description</a>" : "臺灣長期照顧實作指引用戶端實作",
+    "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.implementation.url">url</a>" : "http://ltc-ig.fhir.tw"
+  },
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.fhirVersion">fhirVersion</a>" : "4.0.1",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.format">format</a>" : [
+    "xml"
+  ],
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest">rest</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.mode">mode</a>" : "client",
+      "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.documentation">documentation</a>" : "臺灣長期照顧實作指引用戶端建議支援以下 FHIR RESTful API 功能",
+      "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.security">security</a>" : {
+        "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.security.cors">cors</a>" : true,
+        "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.security.service">service</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/restful-security-service",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "OAuth",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "OAuth"
+              }
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.security.description">description</a>" : "支援 OAuth 2.0 認證機制"
+      },
+      "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a>" : "Bundle",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Bundle",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>" : [
+            <a href="StructureDefinition-LTCBundleReferral.html" style="color: Maroon">&#x1F517;</a> "http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleReferral"<a href="StructureDefinition-LTCBundleCMS.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleCMS"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "read",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援讀取 Bundle 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "search-type",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援搜尋 Bundle 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "create",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援建立 Bundle 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "update",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援更新 Bundle 資源"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.versioning">versioning</a>" : "versioned-update",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalCreate">conditionalCreate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalUpdate">conditionalUpdate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalDelete">conditionalDelete</a>" : "not-supported",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.referencePolicy">referencePolicy</a>" : [
+            "literal"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchRevInclude">searchRevInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "type",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "token",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "Bundle 類型"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a>" : "Composition",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Composition",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>" : [
+            <a href="StructureDefinition-LTCCompositionReferral.html" style="color: Maroon">&#x1F517;</a> "http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionReferral"<a href="StructureDefinition-LTCCompositionCMS.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionCMS"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "read",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援讀取 Composition 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "search-type",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援搜尋 Composition 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "create",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援建立 Composition 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "update",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援更新 Composition 資源"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.versioning">versioning</a>" : "versioned-update",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalCreate">conditionalCreate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalUpdate">conditionalUpdate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalDelete">conditionalDelete</a>" : "not-supported",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.referencePolicy">referencePolicy</a>" : [
+            "literal"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a>" : [
+            "Composition:subject",
+            "Composition:author"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchRevInclude">searchRevInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "subject",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "reference",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "文件主體"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "date",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "date",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "文件日期"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "type",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "token",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "文件類型"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a>" : "Patient",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Patient",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>" : [
+            <a href="StructureDefinition-LTCPatient.html" style="color: Maroon">&#x1F517;</a> "http://ltc-ig.fhir.tw/StructureDefinition/LTCPatient"<a href="StructureDefinition-LTCPatientReferral.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientReferral"<a href="StructureDefinition-LTCPatientCMS.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientCMS"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "read",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援讀取 Patient 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "search-type",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援搜尋 Patient 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "create",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援建立 Patient 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "update",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援更新 Patient 資源"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.versioning">versioning</a>" : "versioned-update",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalCreate">conditionalCreate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalUpdate">conditionalUpdate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalDelete">conditionalDelete</a>" : "not-supported",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.referencePolicy">referencePolicy</a>" : [
+            "literal"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a>" : [
+            "Patient:organization"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchRevInclude">searchRevInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "identifier",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "token",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "住民識別碼"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "name",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "string",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "住民姓名"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "birthdate",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "date",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "出生日期"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "gender",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "token",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "性別"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a>" : "CarePlan",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/CarePlan",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>" : [
+            <a href="StructureDefinition-LTCCarePlan.html" style="color: Maroon">&#x1F517;</a> "http://ltc-ig.fhir.tw/StructureDefinition/LTCCarePlan"<a href="StructureDefinition-LTCCarePlanReferral.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCCarePlanReferral"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "read",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援讀取 CarePlan 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "search-type",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援搜尋 CarePlan 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "create",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援建立 CarePlan 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "update",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援更新 CarePlan 資源"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.versioning">versioning</a>" : "versioned-update",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalCreate">conditionalCreate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalUpdate">conditionalUpdate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalDelete">conditionalDelete</a>" : "not-supported",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.referencePolicy">referencePolicy</a>" : [
+            "literal"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a>" : [
+            "CarePlan:subject",
+            "CarePlan:author"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchRevInclude">searchRevInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "subject",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "reference",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "照顧計畫主體"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "status",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "token",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "照顧計畫狀態"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "intent",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "token",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "照顧計畫意圖"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a>" : "CareTeam",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/CareTeam",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>" : [
+            <a href="StructureDefinition-LTCCareTeam.html" style="color: Maroon">&#x1F517;</a> "http://ltc-ig.fhir.tw/StructureDefinition/LTCCareTeam"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "read",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援讀取 CareTeam 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "search-type",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援搜尋 CareTeam 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "create",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援建立 CareTeam 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "update",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援更新 CareTeam 資源"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.versioning">versioning</a>" : "versioned-update",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalCreate">conditionalCreate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalUpdate">conditionalUpdate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalDelete">conditionalDelete</a>" : "not-supported",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.referencePolicy">referencePolicy</a>" : [
+            "literal"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a>" : [
+            "CareTeam:subject"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchRevInclude">searchRevInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "subject",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "reference",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "照護團隊主體"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "status",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "token",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "照護團隊狀態"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a>" : "Condition",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Condition",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>" : [
+            <a href="StructureDefinition-LTCCondition.html" style="color: Maroon">&#x1F517;</a> "http://ltc-ig.fhir.tw/StructureDefinition/LTCCondition"<a href="StructureDefinition-LTCConditionCaregiver.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCaregiver"<a href="StructureDefinition-LTCConditionCrush.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCrush"<a href="StructureDefinition-LTCConditionDisability.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisability"<a href="StructureDefinition-LTCConditionDisabilityType.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisabilityType"<a href="StructureDefinition-LTCConditionResidence.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionResidence"<a href="StructureDefinition-LTCConditionTube.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionTube"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "read",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援讀取 Condition 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "search-type",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援搜尋 Condition 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "create",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援建立 Condition 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "update",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援更新 Condition 資源"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.versioning">versioning</a>" : "versioned-update",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalCreate">conditionalCreate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalUpdate">conditionalUpdate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalDelete">conditionalDelete</a>" : "not-supported",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.referencePolicy">referencePolicy</a>" : [
+            "literal"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a>" : [
+            "Condition:subject",
+            "Condition:recorder"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchRevInclude">searchRevInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "subject",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "reference",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "病情主體"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "code",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "token",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "病情代碼"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "clinical-status",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "token",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "臨床狀態"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a>" : "Goal",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Goal",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>" : [
+            <a href="StructureDefinition-LTCGoal.html" style="color: Maroon">&#x1F517;</a> "http://ltc-ig.fhir.tw/StructureDefinition/LTCGoal"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "read",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援讀取 Goal 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "search-type",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援搜尋 Goal 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "create",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援建立 Goal 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "update",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援更新 Goal 資源"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.versioning">versioning</a>" : "versioned-update",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalCreate">conditionalCreate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalUpdate">conditionalUpdate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalDelete">conditionalDelete</a>" : "not-supported",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.referencePolicy">referencePolicy</a>" : [
+            "literal"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a>" : [
+            "Goal:subject"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchRevInclude">searchRevInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "subject",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "reference",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "目標主體"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "status",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "token",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "目標狀態"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a>" : "MedicationAdministration",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>" : [
+            <a href="StructureDefinition-LTCMedicationAdministration.html" style="color: Maroon">&#x1F517;</a> "http://ltc-ig.fhir.tw/StructureDefinition/LTCMedicationAdministration"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "read",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援讀取 MedicationAdministration 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "search-type",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援搜尋 MedicationAdministration 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "create",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援建立 MedicationAdministration 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "update",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援更新 MedicationAdministration 資源"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.versioning">versioning</a>" : "versioned-update",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalCreate">conditionalCreate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalUpdate">conditionalUpdate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalDelete">conditionalDelete</a>" : "not-supported",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.referencePolicy">referencePolicy</a>" : [
+            "literal"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a>" : [
+            "MedicationAdministration:subject",
+            "MedicationAdministration:medication"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchRevInclude">searchRevInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "subject",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "reference",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "用藥主體"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "medication",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "reference",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "藥物"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "effective-time",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "date",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "用藥時間"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a>" : "Observation",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Observation",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>" : [
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationFalling"<a href="StructureDefinition-LTCObservationVitalSigns.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationVitalSigns"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "read",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援讀取 Observation 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "search-type",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援搜尋 Observation 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "create",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援建立 Observation 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "update",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援更新 Observation 資源"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.versioning">versioning</a>" : "versioned-update",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalCreate">conditionalCreate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalUpdate">conditionalUpdate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalDelete">conditionalDelete</a>" : "not-supported",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.referencePolicy">referencePolicy</a>" : [
+            "literal"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a>" : [
+            "Observation:subject"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchRevInclude">searchRevInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "subject",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "reference",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "觀察主體"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "code",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "token",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "觀察代碼"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "date",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "date",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "觀察日期"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a>" : "Organization",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Organization",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>" : [
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCOrganization"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "read",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援讀取 Organization 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "search-type",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援搜尋 Organization 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "create",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援建立 Organization 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "update",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援更新 Organization 資源"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.versioning">versioning</a>" : "versioned-update",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalCreate">conditionalCreate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalUpdate">conditionalUpdate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalDelete">conditionalDelete</a>" : "not-supported",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.referencePolicy">referencePolicy</a>" : [
+            "literal"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchRevInclude">searchRevInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "identifier",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "token",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "機構識別碼"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "name",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "string",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "機構名稱"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a>" : "Practitioner",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Practitioner",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>" : [
+            <a href="StructureDefinition-LTCPractitioner.html" style="color: Maroon">&#x1F517;</a> "http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "read",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援讀取 Practitioner 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "search-type",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援搜尋 Practitioner 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "create",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援建立 Practitioner 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "update",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援更新 Practitioner 資源"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.versioning">versioning</a>" : "versioned-update",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalCreate">conditionalCreate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalUpdate">conditionalUpdate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalDelete">conditionalDelete</a>" : "not-supported",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.referencePolicy">referencePolicy</a>" : [
+            "literal"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchRevInclude">searchRevInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "identifier",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "token",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "醫事人員識別碼"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "name",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "string",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "醫事人員姓名"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a>" : "PractitionerRole",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>" : [
+            <a href="StructureDefinition-LTCPractitionerRole.html" style="color: Maroon">&#x1F517;</a> "http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitionerRole"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "read",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援讀取 PractitionerRole 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "search-type",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援搜尋 PractitionerRole 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "create",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援建立 PractitionerRole 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "update",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援更新 PractitionerRole 資源"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.versioning">versioning</a>" : "versioned-update",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalCreate">conditionalCreate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalUpdate">conditionalUpdate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalDelete">conditionalDelete</a>" : "not-supported",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.referencePolicy">referencePolicy</a>" : [
+            "literal"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a>" : [
+            "PractitionerRole:practitioner",
+            "PractitionerRole:organization"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchRevInclude">searchRevInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "practitioner",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "reference",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "醫事人員"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "organization",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "reference",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "所屬機構"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a>" : "Questionnaire",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Questionnaire",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>" : [
+            <a href="StructureDefinition-LTCQuestionnaire.html" style="color: Maroon">&#x1F517;</a> "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "read",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援讀取 Questionnaire 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "search-type",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援搜尋 Questionnaire 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "create",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援建立 Questionnaire 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "update",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援更新 Questionnaire 資源"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.versioning">versioning</a>" : "versioned-update",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalCreate">conditionalCreate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalUpdate">conditionalUpdate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalDelete">conditionalDelete</a>" : "not-supported",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.referencePolicy">referencePolicy</a>" : [
+            "literal"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchRevInclude">searchRevInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "identifier",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "token",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "問卷識別碼"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "title",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "string",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "問卷標題"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a>" : "QuestionnaireResponse",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>" : [
+            <a href="StructureDefinition-LTCQuestionnaireResponse.html" style="color: Maroon">&#x1F517;</a> "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse"<a href="StructureDefinition-LTCQuestionnaireResponseADL.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseADL",
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMS"<a href="StructureDefinition-LTCQuestionnaireResponseCMSCommunication.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCommunication"<a href="StructureDefinition-LTCQuestionnaireResponseCMSCaregiverLoad.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverLoad"<a href="StructureDefinition-LTCQuestionnaireResponseCMSCaregiverSupport.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverSupport"<a href="StructureDefinition-LTCQuestionnaireResponseCMSMemory.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMemory"<a href="StructureDefinition-LTCQuestionnaireResponseCMSMental.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMental"<a href="StructureDefinition-LTCQuestionnaireResponseCMSSociety.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSociety"<a href="StructureDefinition-LTCQuestionnaireResponseCMSSpecialCare.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSpecialCare"<a href="StructureDefinition-LTCQuestionnaireResponseIADL.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseIADL"<a href="StructureDefinition-LTCQuestionnaireResponseReferralCaregiver.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralCaregiver"<a href="StructureDefinition-LTCQuestionnaireResponseReferralSOF.html" style="color: Maroon">&#x1F517;</a> ,
+            "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralSOF"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "read",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援讀取 QuestionnaireResponse 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "search-type",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援搜尋 QuestionnaireResponse 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "create",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援建立 QuestionnaireResponse 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "update",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援更新 QuestionnaireResponse 資源"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.versioning">versioning</a>" : "versioned-update",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalCreate">conditionalCreate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalUpdate">conditionalUpdate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalDelete">conditionalDelete</a>" : "not-supported",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.referencePolicy">referencePolicy</a>" : [
+            "literal"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a>" : [
+            "QuestionnaireResponse:subject",
+            "QuestionnaireResponse:questionnaire"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchRevInclude">searchRevInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "subject",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "reference",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "問卷回應主體"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "questionnaire",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "reference",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "問卷"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "authored",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "date",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "填寫日期"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a>" : "RelatedPerson",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>" : [
+            <a href="StructureDefinition-LTCRelatedPerson.html" style="color: Maroon">&#x1F517;</a> "http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "read",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援讀取 RelatedPerson 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "search-type",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援搜尋 RelatedPerson 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "create",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援建立 RelatedPerson 資源"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a>" : "update",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>" : "建議支援更新 RelatedPerson 資源"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.versioning">versioning</a>" : "versioned-update",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalCreate">conditionalCreate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalUpdate">conditionalUpdate</a>" : true,
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.conditionalDelete">conditionalDelete</a>" : "not-supported",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.referencePolicy">referencePolicy</a>" : [
+            "literal"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a>" : [
+            "RelatedPerson:patient"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchRevInclude">searchRevInclude</a>" : [
+            "*"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "patient",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "reference",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "相關人員主體"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "relationship",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "token",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.documentation">documentation</a>" : "關係類型"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package fhir.twltc#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 26, 2025 02:28+0800">2025-09-26</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

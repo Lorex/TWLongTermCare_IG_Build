@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>臺灣長期照顧實作指引 - 伺服端能力聲明 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"15.1"}
+    h3,h4,h5,h6{--heading-prefix:"15.1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)</span>
+            <br/>
+            <span style="display:inline-block;">0.3.0 - ci-build+trial-use
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">應用說明</a></li>
+  <li><a href="toc.html">目錄</a></li>
+	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<!-- <li>
+				<a href="capabilitystatements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters-and-operation.html">查詢參數及操作定義</a>
+			</li>
+			<li>
+				<a href="models.html">邏輯模型</a>
+			</li> -->
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles 及 Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+  <!-- <li><a href="examples.html">範例</a></li> -->
+  <li><a href="downloads.html">結構定義與範例檔下載</a></li>
+  <li><a href="security.html">安全性</a></li>
+  <li><a href="validates.html">驗證教學</a></li>
+  <li class="dropdown">
+    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+    </ul>
+  </li>
+  <!-- <li><a href="history.html">版本歷程</a></li> -->
+</ul>      
+
+<style>
+.dropdown-menu li:hover .sub-menu {visibility: visible;}
+.dropdown:hover .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 992px) {
+  table.colsi {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  table.rwd-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  p, a {
+    word-break: break-all;
+  }
+}
+</style>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>臺灣長期照顧實作指引 - 伺服端能力聲明</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CapabilityStatement-CapabilityStatementLTCServer.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CapabilityStatement-CapabilityStatementLTCServer.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CapabilityStatement-CapabilityStatementLTCServer.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+
+  <h2 id="root">CapabilityStatement: 臺灣長期照顧實作指引 - 伺服端能力聲明
+
+  </h2>
+
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://ltc-ig.fhir.tw/CapabilityStatement/CapabilityStatementLTCServer<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://ltc-ig.fhir.tw/CapabilityStatement/CapabilityStatementLTCServer"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.3.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://ltc-ig.fhir.tw/CapabilityStatement/CapabilityStatementLTCServer|0.3.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+            as of 2024-12-19
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;"></span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+<p>
+<p>此 CapabilityStatement 定義了臺灣長期照顧實作指引中伺服端系統必須支援的 FHIR RESTful API 功能。</p>
+
+</p>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+<!--  <p>
+  Formats: <a href="CapabilityStatement-CapabilityStatementLTCServer.xml.html">XML</a>, <a href="CapabilityStatement-CapabilityStatementLTCServer.json.html">JSON</a>, <a href="CapabilityStatement-CapabilityStatementLTCServer.ttl.html">Turtle</a>
+  </p>-->
+
+  
+  <p>
+      <a href="CapabilityStatementLTCServer.openapi.json" no-download="true">Raw OpenAPI-Swagger Definition file</a> | <a href="CapabilityStatementLTCServer.openapi.json" download>Download</a>
+  </p>
+  
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><a name="CapabilityStatementLTCServer"> </a><a name="hcCapabilityStatementLTCServer"> </a><h2 id="title">臺灣長期照顧實作指引 - 伺服端能力聲明</h2><ul><li>Implementation Guide Version: 0.3.0 </li><li>FHIR Version: 4.0.1 </li><li>Supported Formats: <code>xml</code></li><li>Published on: 2024-12-19 </li><li>Published by: 經濟部產業發展署 </li></ul><blockquote class="impl-note"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h2 id="rest">FHIR RESTful Capabilities</h2><div class="panel panel-default"><div class="panel-heading"><h3 id="mode1" class="panel-title">Mode: <code>server</code></h3></div><div class="panel-body"><div><p>臺灣長期照顧實作指引伺服端必須支援以下 FHIR RESTful API 功能</p>
+</div><div class="lead"><em>Security</em></div><div class="row"><div class="col-lg-6">Enable CORS: yes</div><div class="col-lg-6">Security services supported: <code>OAuth</code></div></div><blockquote><div><p>支援 OAuth 2.0 認證機制</p>
+</div></blockquote></div></div><h3 id="resourcesCap1">Capabilities by Resource/Profile</h3><h4 id="resourcesSummary1">Summary</h4><p>The summary table lists the resources that are part of this configuration, and for each resource it lists:</p><ul><li>The relevant profiles (if any)</li><li>The interactions supported by each resource (<b><span class="bg-info">R</span></b>ead, <b><span class="bg-info">S</span></b>earch, <b><span class="bg-info">U</span></b>pdate, and <b><span class="bg-info">C</span></b>reate, are always shown, while <b><span class="bg-info">VR</span></b>ead, <b><span class="bg-info">P</span></b>atch, <b><span class="bg-info">D</span></b>elete, <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">I</span></b>nstance, or <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">T</span></b>ype are only present if at least one of the resources has support for them.</li><li><span>The required, recommended, and some optional search parameters (if any). </span></li><li>The linked resources enabled for <code>_include</code></li><li>The other resources enabled for <code>_revinclude</code></li><li>The operations on the resource (if any)</li></ul><div class="table-responsive"><table class="table table-condensed table-hover"><thead><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th class="text-center"><b title="GET a resource (read interaction)">R</b></th><th class="text-center"><b title="GET all set of resources of the type (search interaction)">S</b></th><th class="text-center"><b title="PUT a new resource version (update interaction)">U</b></th><th class="text-center"><b title="POST a new resource (create interaction)">C</b></th><th><b title="Required and recommended search parameters">Searches</b></th><th><code><b>_include</b></code></th><th><code><b>_revinclude</b></code></th><th><b>Operations</b></th></tr></thead><tbody><tr><td><a href="#Bundle1-1">Bundle</a></td><td><a href="http://hl7.org/fhir/R4/bundle.html">http://hl7.org/fhir/StructureDefinition/Bundle</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-LTCBundleReferral.html">長期照顧管理中心個案服務初篩表/轉介單文件打包</a><br/>  <a href="StructureDefinition-LTCBundleCMS.html">照顧管理評估量表文件打包</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td>type</td><td><code>*</code></td><td><code>*</code></td><td/></tr><tr><td><a href="#Composition1-2">Composition</a></td><td><a href="http://hl7.org/fhir/R4/composition.html">http://hl7.org/fhir/StructureDefinition/Composition</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-LTCCompositionReferral.html">長期照護管理中心個案服務初篩表/轉介單文件架構</a><br/>  <a href="StructureDefinition-LTCCompositionCMS.html">照顧管理評估量表文件架構</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td>subject, date, type</td><td><code>Composition:subject</code>, <code>Composition:author</code></td><td><code>*</code></td><td/></tr><tr><td><a href="#Patient1-3">Patient</a></td><td><a href="http://hl7.org/fhir/R4/patient.html">http://hl7.org/fhir/StructureDefinition/Patient</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-LTCPatient.html">長期照顧－住民基本資料</a><br/>  <a href="StructureDefinition-LTCPatientReferral.html">轉介單－個案基本資料</a><br/>  <a href="StructureDefinition-LTCPatientCMS.html">照顧管理評估量表－個案基本資料</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td>identifier, name, birthdate, gender</td><td><code>Patient:organization</code></td><td><code>*</code></td><td/></tr><tr><td><a href="#CarePlan1-4">CarePlan</a></td><td><a href="http://hl7.org/fhir/R4/careplan.html">http://hl7.org/fhir/StructureDefinition/CarePlan</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-LTCCarePlan.html">長期照顧－照顧計畫</a><br/>  <a href="StructureDefinition-LTCCarePlanReferral.html">轉介單－服務種類</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td>subject, status, intent</td><td><code>CarePlan:subject</code>, <code>CarePlan:author</code></td><td><code>*</code></td><td/></tr><tr><td><a href="#CareTeam1-5">CareTeam</a></td><td><a href="http://hl7.org/fhir/R4/careteam.html">http://hl7.org/fhir/StructureDefinition/CareTeam</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-LTCCareTeam.html">長期照顧－照顧團隊</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td>subject, status</td><td><code>CareTeam:subject</code></td><td><code>*</code></td><td/></tr><tr><td><a href="#Condition1-6">Condition</a></td><td><a href="http://hl7.org/fhir/R4/condition.html">http://hl7.org/fhir/StructureDefinition/Condition</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-LTCCondition.html">長期照顧－病情、問題或診斷</a><br/>  <a href="StructureDefinition-LTCConditionCaregiver.html">長期照顧－看護狀況</a><br/>  <a href="StructureDefinition-LTCConditionCrush.html">長期照顧－壓傷狀況</a><br/>  <a href="StructureDefinition-LTCConditionDisability.html">長期照顧－身心障礙手冊持有狀態</a><br/>  <a href="StructureDefinition-LTCConditionDisabilityType.html">長期照顧－身心障礙類型</a><br/>  <a href="StructureDefinition-LTCConditionResidence.html">長期照顧－居住狀況</a><br/>  <a href="StructureDefinition-LTCConditionTube.html">長期照顧－管路裝設狀況</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td>subject, code, clinical-status</td><td><code>Condition:subject</code>, <code>Condition:recorder</code></td><td><code>*</code></td><td/></tr><tr><td><a href="#Goal1-7">Goal</a></td><td><a href="http://hl7.org/fhir/R4/goal.html">http://hl7.org/fhir/StructureDefinition/Goal</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-LTCGoal.html">長期照顧－照顧目標</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td>subject, status</td><td><code>Goal:subject</code></td><td><code>*</code></td><td/></tr><tr><td><a href="#MedicationAdministration1-8">MedicationAdministration</a></td><td><a href="http://hl7.org/fhir/R4/medicationadministration.html">http://hl7.org/fhir/StructureDefinition/MedicationAdministration</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-LTCMedicationAdministration.html">長期照顧－用藥資料</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td>subject, medication, effective-time</td><td><code>MedicationAdministration:subject</code>, <code>MedicationAdministration:medication</code></td><td><code>*</code></td><td/></tr><tr><td><a href="#Observation1-9">Observation</a></td><td><a href="http://hl7.org/fhir/R4/observation.html">http://hl7.org/fhir/StructureDefinition/Observation</a><br/><em>Additional supported profiles:</em><br/>  <code>http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationFalling</code><br/>  <a href="StructureDefinition-LTCObservationVitalSigns.html">長期照顧－生命體徵</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td>subject, code, date</td><td><code>Observation:subject</code></td><td><code>*</code></td><td/></tr><tr><td><a href="#Organization1-10">Organization</a></td><td><a href="http://hl7.org/fhir/R4/organization.html">http://hl7.org/fhir/StructureDefinition/Organization</a><br/><em>Additional supported profiles:</em><br/>  <code>http://ltc-ig.fhir.tw/StructureDefinition/LTCOrganization</code></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td>identifier, name</td><td><code>*</code></td><td><code>*</code></td><td/></tr><tr><td><a href="#Practitioner1-11">Practitioner</a></td><td><a href="http://hl7.org/fhir/R4/practitioner.html">http://hl7.org/fhir/StructureDefinition/Practitioner</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-LTCPractitioner.html">長期照顧－照顧服務提供者</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td>identifier, name</td><td><code>*</code></td><td><code>*</code></td><td/></tr><tr><td><a href="#PractitionerRole1-12">PractitionerRole</a></td><td><a href="http://hl7.org/fhir/R4/practitionerrole.html">http://hl7.org/fhir/StructureDefinition/PractitionerRole</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-LTCPractitionerRole.html">長期照顧－服務人員角色</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td>practitioner, organization</td><td><code>PractitionerRole:practitioner</code>, <code>PractitionerRole:organization</code></td><td><code>*</code></td><td/></tr><tr><td><a href="#Questionnaire1-13">Questionnaire</a></td><td><a href="http://hl7.org/fhir/R4/questionnaire.html">http://hl7.org/fhir/StructureDefinition/Questionnaire</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-LTCQuestionnaire.html">長期照顧－問卷</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td>identifier, title</td><td><code>*</code></td><td><code>*</code></td><td/></tr><tr><td><a href="#QuestionnaireResponse1-14">QuestionnaireResponse</a></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-LTCQuestionnaireResponse.html">長期照顧－問卷回覆</a><br/>  <a href="StructureDefinition-LTCQuestionnaireResponseADL.html">ADL 問卷回覆</a><br/>  <code>http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMS</code><br/>  <a href="StructureDefinition-LTCQuestionnaireResponseCMSCommunication.html">照顧管理評估量表－個案溝通能力問卷回覆</a><br/>  <a href="StructureDefinition-LTCQuestionnaireResponseCMSCaregiverLoad.html">照顧管理評估量表－主要照顧者負荷問卷回覆</a><br/>  <a href="StructureDefinition-LTCQuestionnaireResponseCMSCaregiverSupport.html">照顧管理評估量表－主要照顧者工作與支持</a><br/>  <a href="StructureDefinition-LTCQuestionnaireResponseCMSMemory.html">照顧管理評估量表－個案短期記憶力問卷回覆</a><br/>  <a href="StructureDefinition-LTCQuestionnaireResponseCMSMental.html">照顧管理評估量表－情緒及行為型態問卷回覆</a><br/>  <a href="StructureDefinition-LTCQuestionnaireResponseCMSSociety.html">照顧管理評估量表－居家環境與社會參與問卷回覆</a><br/>  <a href="StructureDefinition-LTCQuestionnaireResponseCMSSpecialCare.html">照顧管理評估量表－特殊複雜照護需要問卷回覆</a><br/>  <a href="StructureDefinition-LTCQuestionnaireResponseIADL.html">IADL 問卷回覆</a><br/>  <a href="StructureDefinition-LTCQuestionnaireResponseReferralCaregiver.html">轉介單－照顧者問卷回覆</a><br/>  <a href="StructureDefinition-LTCQuestionnaireResponseReferralSOF.html">轉介單－衰弱評估問卷回覆</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td>subject, questionnaire, authored</td><td><code>QuestionnaireResponse:subject</code>, <code>QuestionnaireResponse:questionnaire</code></td><td><code>*</code></td><td/></tr><tr><td><a href="#RelatedPerson1-15">RelatedPerson</a></td><td><a href="http://hl7.org/fhir/R4/relatedperson.html">http://hl7.org/fhir/StructureDefinition/RelatedPerson</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-LTCRelatedPerson.html">長期照顧－關係人</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td>patient, relationship</td><td><code>RelatedPerson:patient</code></td><td><code>*</code></td><td/></tr></tbody></table></div><hr/><div class="panel panel-default"><div class="panel-heading"><h4 id="Bundle1-1" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Bundle</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/><code>literal</code></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-LTCBundleReferral.html">長期照顧管理中心個案服務初篩表/轉介單文件打包</a><br/><a href="StructureDefinition-LTCBundleCMS.html">照顧管理評估量表文件打包</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <br/><code>read</code><div><p>支援讀取 Bundle 資源</p>
+</div><code>search-type</code><div><p>支援搜尋 Bundle 資源</p>
+</div><code>create</code><div><p>支援建立 Bundle 資源</p>
+</div><code>update</code><div><p>支援更新 Bundle 資源</p>
+</div></li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>type</td><td><code>token</code></td><td><div><p>Bundle 類型</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Composition1-2" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Composition</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/composition.html">Composition</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/><code>literal</code></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-LTCCompositionReferral.html">長期照護管理中心個案服務初篩表/轉介單文件架構</a><br/><a href="StructureDefinition-LTCCompositionCMS.html">照顧管理評估量表文件架構</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <br/><code>read</code><div><p>支援讀取 Composition 資源</p>
+</div><code>search-type</code><div><p>支援搜尋 Composition 資源</p>
+</div><code>create</code><div><p>支援建立 Composition 資源</p>
+</div><code>update</code><div><p>支援更新 Composition 資源</p>
+</div></li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div><p>文件主體</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>date</td><td><code>date</code></td><td><div><p>文件日期</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>type</td><td><code>token</code></td><td><div><p>文件類型</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Patient1-3" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Patient</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/><code>literal</code></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-LTCPatient.html">長期照顧－住民基本資料</a><br/><a href="StructureDefinition-LTCPatientReferral.html">轉介單－個案基本資料</a><br/><a href="StructureDefinition-LTCPatientCMS.html">照顧管理評估量表－個案基本資料</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <br/><code>read</code><div><p>支援讀取 Patient 資源</p>
+</div><code>search-type</code><div><p>支援搜尋 Patient 資源</p>
+</div><code>create</code><div><p>支援建立 Patient 資源</p>
+</div><code>update</code><div><p>支援更新 Patient 資源</p>
+</div></li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>identifier</td><td><code>token</code></td><td><div><p>住民識別碼</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>name</td><td><code>string</code></td><td><div><p>住民姓名</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>birthdate</td><td><code>date</code></td><td><div><p>出生日期</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>gender</td><td><code>token</code></td><td><div><p>性別</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="CarePlan1-4" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>CarePlan</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/careplan.html">CarePlan</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/><code>literal</code></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-LTCCarePlan.html">長期照顧－照顧計畫</a><br/><a href="StructureDefinition-LTCCarePlanReferral.html">轉介單－服務種類</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <br/><code>read</code><div><p>支援讀取 CarePlan 資源</p>
+</div><code>search-type</code><div><p>支援搜尋 CarePlan 資源</p>
+</div><code>create</code><div><p>支援建立 CarePlan 資源</p>
+</div><code>update</code><div><p>支援更新 CarePlan 資源</p>
+</div></li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div><p>照顧計畫主體</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>status</td><td><code>token</code></td><td><div><p>照顧計畫狀態</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>intent</td><td><code>token</code></td><td><div><p>照顧計畫意圖</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="CareTeam1-5" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>CareTeam</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/careteam.html">CareTeam</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/><code>literal</code></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-LTCCareTeam.html">長期照顧－照顧團隊</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <br/><code>read</code><div><p>支援讀取 CareTeam 資源</p>
+</div><code>search-type</code><div><p>支援搜尋 CareTeam 資源</p>
+</div><code>create</code><div><p>支援建立 CareTeam 資源</p>
+</div><code>update</code><div><p>支援更新 CareTeam 資源</p>
+</div></li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div><p>照護團隊主體</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>status</td><td><code>token</code></td><td><div><p>照護團隊狀態</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Condition1-6" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Condition</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/><code>literal</code></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-LTCCondition.html">長期照顧－病情、問題或診斷</a><br/><a href="StructureDefinition-LTCConditionCaregiver.html">長期照顧－看護狀況</a><br/><a href="StructureDefinition-LTCConditionCrush.html">長期照顧－壓傷狀況</a><br/><a href="StructureDefinition-LTCConditionDisability.html">長期照顧－身心障礙手冊持有狀態</a><br/><a href="StructureDefinition-LTCConditionDisabilityType.html">長期照顧－身心障礙類型</a><br/><a href="StructureDefinition-LTCConditionResidence.html">長期照顧－居住狀況</a><br/><a href="StructureDefinition-LTCConditionTube.html">長期照顧－管路裝設狀況</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <br/><code>read</code><div><p>支援讀取 Condition 資源</p>
+</div><code>search-type</code><div><p>支援搜尋 Condition 資源</p>
+</div><code>create</code><div><p>支援建立 Condition 資源</p>
+</div><code>update</code><div><p>支援更新 Condition 資源</p>
+</div></li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div><p>病情主體</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>code</td><td><code>token</code></td><td><div><p>病情代碼</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>clinical-status</td><td><code>token</code></td><td><div><p>臨床狀態</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Goal1-7" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Goal</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/goal.html">Goal</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/><code>literal</code></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-LTCGoal.html">長期照顧－照顧目標</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <br/><code>read</code><div><p>支援讀取 Goal 資源</p>
+</div><code>search-type</code><div><p>支援搜尋 Goal 資源</p>
+</div><code>create</code><div><p>支援建立 Goal 資源</p>
+</div><code>update</code><div><p>支援更新 Goal 資源</p>
+</div></li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div><p>目標主體</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>status</td><td><code>token</code></td><td><div><p>目標狀態</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="MedicationAdministration1-8" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>MedicationAdministration</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/medicationadministration.html">MedicationAdministration</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/><code>literal</code></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-LTCMedicationAdministration.html">長期照顧－用藥資料</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <br/><code>read</code><div><p>支援讀取 MedicationAdministration 資源</p>
+</div><code>search-type</code><div><p>支援搜尋 MedicationAdministration 資源</p>
+</div><code>create</code><div><p>支援建立 MedicationAdministration 資源</p>
+</div><code>update</code><div><p>支援更新 MedicationAdministration 資源</p>
+</div></li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div><p>用藥主體</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>medication</td><td><code>reference</code></td><td><div><p>藥物</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>effective-time</td><td><code>date</code></td><td><div><p>用藥時間</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Observation1-9" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Observation</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/><code>literal</code></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><code>http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationFalling</code><br/><a href="StructureDefinition-LTCObservationVitalSigns.html">長期照顧－生命體徵</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <br/><code>read</code><div><p>支援讀取 Observation 資源</p>
+</div><code>search-type</code><div><p>支援搜尋 Observation 資源</p>
+</div><code>create</code><div><p>支援建立 Observation 資源</p>
+</div><code>update</code><div><p>支援更新 Observation 資源</p>
+</div></li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div><p>觀察主體</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>code</td><td><code>token</code></td><td><div><p>觀察代碼</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>date</td><td><code>date</code></td><td><div><p>觀察日期</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Organization1-10" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Organization</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/organization.html">Organization</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/><code>literal</code></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><code>http://ltc-ig.fhir.tw/StructureDefinition/LTCOrganization</code></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <br/><code>read</code><div><p>支援讀取 Organization 資源</p>
+</div><code>search-type</code><div><p>支援搜尋 Organization 資源</p>
+</div><code>create</code><div><p>支援建立 Organization 資源</p>
+</div><code>update</code><div><p>支援更新 Organization 資源</p>
+</div></li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>identifier</td><td><code>token</code></td><td><div><p>機構識別碼</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>name</td><td><code>string</code></td><td><div><p>機構名稱</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Practitioner1-11" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Practitioner</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/practitioner.html">Practitioner</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/><code>literal</code></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-LTCPractitioner.html">長期照顧－照顧服務提供者</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <br/><code>read</code><div><p>支援讀取 Practitioner 資源</p>
+</div><code>search-type</code><div><p>支援搜尋 Practitioner 資源</p>
+</div><code>create</code><div><p>支援建立 Practitioner 資源</p>
+</div><code>update</code><div><p>支援更新 Practitioner 資源</p>
+</div></li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>identifier</td><td><code>token</code></td><td><div><p>醫事人員識別碼</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>name</td><td><code>string</code></td><td><div><p>醫事人員姓名</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="PractitionerRole1-12" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>PractitionerRole</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/practitionerrole.html">PractitionerRole</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/><code>literal</code></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-LTCPractitionerRole.html">長期照顧－服務人員角色</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <br/><code>read</code><div><p>支援讀取 PractitionerRole 資源</p>
+</div><code>search-type</code><div><p>支援搜尋 PractitionerRole 資源</p>
+</div><code>create</code><div><p>支援建立 PractitionerRole 資源</p>
+</div><code>update</code><div><p>支援更新 PractitionerRole 資源</p>
+</div></li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>practitioner</td><td><code>reference</code></td><td><div><p>醫事人員</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>organization</td><td><code>reference</code></td><td><div><p>所屬機構</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Questionnaire1-13" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Questionnaire</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/questionnaire.html">Questionnaire</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/><code>literal</code></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-LTCQuestionnaire.html">長期照顧－問卷</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <br/><code>read</code><div><p>支援讀取 Questionnaire 資源</p>
+</div><code>search-type</code><div><p>支援搜尋 Questionnaire 資源</p>
+</div><code>create</code><div><p>支援建立 Questionnaire 資源</p>
+</div><code>update</code><div><p>支援更新 Questionnaire 資源</p>
+</div></li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>identifier</td><td><code>token</code></td><td><div><p>問卷識別碼</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>title</td><td><code>string</code></td><td><div><p>問卷標題</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="QuestionnaireResponse1-14" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>QuestionnaireResponse</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/><code>literal</code></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-LTCQuestionnaireResponse.html">長期照顧－問卷回覆</a><br/><a href="StructureDefinition-LTCQuestionnaireResponseADL.html">ADL 問卷回覆</a><br/><code>http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMS</code><br/><a href="StructureDefinition-LTCQuestionnaireResponseCMSCommunication.html">照顧管理評估量表－個案溝通能力問卷回覆</a><br/><a href="StructureDefinition-LTCQuestionnaireResponseCMSCaregiverLoad.html">照顧管理評估量表－主要照顧者負荷問卷回覆</a><br/><a href="StructureDefinition-LTCQuestionnaireResponseCMSCaregiverSupport.html">照顧管理評估量表－主要照顧者工作與支持</a><br/><a href="StructureDefinition-LTCQuestionnaireResponseCMSMemory.html">照顧管理評估量表－個案短期記憶力問卷回覆</a><br/><a href="StructureDefinition-LTCQuestionnaireResponseCMSMental.html">照顧管理評估量表－情緒及行為型態問卷回覆</a><br/><a href="StructureDefinition-LTCQuestionnaireResponseCMSSociety.html">照顧管理評估量表－居家環境與社會參與問卷回覆</a><br/><a href="StructureDefinition-LTCQuestionnaireResponseCMSSpecialCare.html">照顧管理評估量表－特殊複雜照護需要問卷回覆</a><br/><a href="StructureDefinition-LTCQuestionnaireResponseIADL.html">IADL 問卷回覆</a><br/><a href="StructureDefinition-LTCQuestionnaireResponseReferralCaregiver.html">轉介單－照顧者問卷回覆</a><br/><a href="StructureDefinition-LTCQuestionnaireResponseReferralSOF.html">轉介單－衰弱評估問卷回覆</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <br/><code>read</code><div><p>支援讀取 QuestionnaireResponse 資源</p>
+</div><code>search-type</code><div><p>支援搜尋 QuestionnaireResponse 資源</p>
+</div><code>create</code><div><p>支援建立 QuestionnaireResponse 資源</p>
+</div><code>update</code><div><p>支援更新 QuestionnaireResponse 資源</p>
+</div></li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div><p>問卷回應主體</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>questionnaire</td><td><code>reference</code></td><td><div><p>問卷</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>authored</td><td><code>date</code></td><td><div><p>填寫日期</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="RelatedPerson1-15" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>RelatedPerson</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/><code>literal</code></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-LTCRelatedPerson.html">長期照顧－關係人</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <br/><code>read</code><div><p>支援讀取 RelatedPerson 資源</p>
+</div><code>search-type</code><div><p>支援搜尋 RelatedPerson 資源</p>
+</div><code>create</code><div><p>支援建立 RelatedPerson 資源</p>
+</div><code>update</code><div><p>支援更新 RelatedPerson 資源</p>
+</div></li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>patient</td><td><code>reference</code></td><td><div><p>相關人員主體</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>relationship</td><td><code>token</code></td><td><div><p>關係類型</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package fhir.twltc#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 26, 2025 02:28+0800">2025-09-26</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,110 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Patient/ltc-patient-referral-example> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-patient-referral-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientReferral"^^xsd:anyURI ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientReferral>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ltc-patient-referral-example</b></p><a name=\"ltc-patient-referral-example\"> </a><a name=\"hcltc-patient-referral-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCPatientReferral.html\">轉介單－個案基本資料</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">李秀芳(official) Female, DoB: 1950-03-22 ( National Person Identifier (TWN): B987654321 (use: official, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known Marital status of Patient\">Marital Status:</td><td colspan=\"3\"><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus W}\">Widowed</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\">Provider number/REF-98765 (use: official, )</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 07-98765432(Home)</li><li>高雄市前鎮區成功二路25號(home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: Next-of-Kin\">Next-of-Kin:</td><td colspan=\"3\"><ul><li>李志明(Official)</li><li>ph: 0923-456-789(Mobile)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"此 Extension 用以表述長照機構住民的經濟狀況。\"><a href=\"StructureDefinition-ExtPatientEconomyStatus-TWLTC.html\">長照機構住民經濟狀況</a></td><td colspan=\"3\"><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/EconomyStatusCS-TWLTC barely-maintain}\">勉持</span></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEconomyStatus-TWLTC"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://ltc-ig.fhir.tw/CodeSystem/EconomyStatusCS-TWLTC"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "barely-maintain" ] ;
+         fhir:display [ fhir:v "勉持" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PRN" ] ;
+         fhir:display [ fhir:v "Provider number" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://ltc-referral-center.tw"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "REF-98765" ]
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NNxxx" ] ;
+         fhir:display [ fhir:v "National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code" ]
+       ] ) ;
+       fhir:text [ fhir:v "National Person Identifier (TWN)" ]
+     ] ;
+     fhir:system [ fhir:v "http://www.moi.gov.tw"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "B987654321" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:text [ fhir:v "李秀芳" ] ;
+     fhir:family [ fhir:v "李" ] ;
+     fhir:given ( [ fhir:v "秀芳" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "07-98765432" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1950-03-22"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:type [ fhir:v "both" ] ;
+     fhir:text [ fhir:v "高雄市前鎮區成功二路25號" ] ;
+     fhir:line ( [ fhir:v "成功二路25號" ] ) ;
+     fhir:city [ fhir:v "高雄市" ] ;
+     fhir:district [ fhir:v "前鎮區" ] ;
+     fhir:postalCode [ fhir:v "806" ] ;
+     fhir:country [ fhir:v "TW" ]
+  ] ) ; # 
+  fhir:maritalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "W" ] ;
+       fhir:display [ fhir:v "Widowed" ]
+     ] )
+  ] ; # 
+  fhir:contact ( [
+     fhir:relationship ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0131"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "N" ] ;
+         fhir:display [ fhir:v "Next-of-Kin" ]
+       ] )
+     ] ) ;
+     fhir:name [
+       fhir:use [ fhir:v "official" ] ;
+       fhir:text [ fhir:v "李志明" ] ;
+       fhir:family [ fhir:v "李" ] ;
+       fhir:given ( [ fhir:v "志明" ] )
+     ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "0923-456-789" ] ;
+       fhir:use [ fhir:v "mobile" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

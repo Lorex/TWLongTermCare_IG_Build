@@ -43,3 +43,38 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observatio
 
 * method 0..1 MS
 * method from http://hl7.org/fhir/ValueSet/observation-methods (extensible)
+
+// Example
+Instance: pasport-observation-height-example
+InstanceOf: PASportObservationHeight
+Title: "身高量測範例"
+Description: "一個身高量測的範例，展示如何使用 PASportObservationHeight Profile 來記錄身高數據"
+Usage: #example
+
+* status = #final
+
+* category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[VSCat].coding.code = #vital-signs
+* category[VSCat].coding.display = "Vital Signs"
+
+* code.coding.system = "http://loinc.org"
+* code.coding.code = #8302-2
+* code.coding.display = "Body height"
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* effectiveDateTime = "2024-01-15T08:15:00+08:00"
+
+* performer = Reference(ltc-practitioner-example)
+
+* valueQuantity.value = 165.8
+* valueQuantity.unit = "cm"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #cm
+
+* method.coding.system = "http://snomed.info/sct"
+* method.coding.code = #363808001
+* method.coding.display = "Measured body weight"
+
+* note[0].time = "2024-01-15T08:15:00+08:00"
+* note[0].text = "身高165.8公分，用於計算BMI及設計個人化運動計畫"

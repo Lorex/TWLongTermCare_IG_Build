@@ -10,7 +10,7 @@
   <name value="TaiwanLongTermCareImplementationGuide"/>
   <title value="臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)"/>
   <status value="active"/>
-  <date value="2025-09-09T04:22:03+08:00"/>
+  <date value="2025-09-26T02:27:53+08:00"/>
   <publisher value="經濟部產業發展署"/>
   <contact>
     <name value="經濟部產業發展署"/>
@@ -269,7 +269,7 @@
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-      <valueCode value="hl7.fhir.uv.tools.r4#0.7.1"/>
+      <valueCode value="hl7.fhir.uv.tools.r4#0.8.0"/>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
@@ -495,6 +495,94 @@
         <valueString value="true"/>
       </extension>
     </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTCQuestionnaireResponseADL"/>
+      </reference>
+      <name value="ADL 問卷回覆"/>
+      <description value="此 Profile 定義 FHIR 的 QuestionnaireResponse Resource，以呈現日常生活活動量表 (ADL) 的回覆資料。回覆採用整數分數（依題目配分），文字說明由問卷提供。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/ltc-patient-cms-example"/>
+      </reference>
+      <name value="CMS評估個案範例"/>
+      <description value="一個接受CMS評估的長照個案範例"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientCMS"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTCQuestionnaireResponseIADL"/>
+      </reference>
+      <name value="IADL 問卷回覆"/>
+      <description value="此 Profile 定義 FHIR 的 QuestionnaireResponse Resource，以呈現工具性日常活動功能問卷 (IADLs) 的回覆資料。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ltc-questionnaire-sof"/>
+      </reference>
+      <name value="SOF問卷"/>
+      <description value="轉介流程中SOF問卷"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ltc-questionnaire-response-sof-example"/>
+      </reference>
+      <name value="SOF問卷回應範例"/>
+      <description value="轉介流程中SOF問卷的回應範例"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralSOF"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ltc-questionnaire-caregiver-support"/>
+      </reference>
+      <name value="主要照護者工作與支持問卷"/>
+      <description value="CMS評估表中主要照護者工作與支持問卷"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="RelatedPerson"/>
+      </extension>
+      <reference>
+        <reference value="RelatedPerson/ltc-related-person-primary-caregiver-example"/>
+      </reference>
+      <name value="主要照顧者範例"/>
+      <description value="一個主要照顧者的範例，展示如何使用 LTCRelatedPerson Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ltc-questionnaire-caregiver-load"/>
+      </reference>
+      <name value="主要照顧者負荷問卷"/>
+      <description value="CMS評估表中照顧者負荷問卷"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"/>
+    </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
@@ -750,6 +838,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/ltc-condition-caregiver-family-example"/>
+      </reference>
+      <name value="家庭照顧者狀況範例"/>
+      <description value="一個家庭照顧者狀況的範例，展示如何使用 LTCConditionCaregiver Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCaregiver"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -758,6 +857,61 @@
       <name value="居住狀況值集"/>
       <description value="個案的居住狀況"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ltc-questionnaire-society"/>
+      </reference>
+      <name value="居家環境與社會參與問卷"/>
+      <description value="CMS評估表中居家環境與社會參與問卷"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ltc-questionnaire-response-society-example"/>
+      </reference>
+      <name value="居家環境與社會參與問卷回應範例"/>
+      <description value="CMS評估表中居家環境與社會參與問卷的回應範例"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSociety"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ltc-questionnaire-iadl"/>
+      </reference>
+      <name value="工具性日常活動功能問卷"/>
+      <description value="CMS評估表中IADL問卷"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ltc-questionnaire-response-iadl-example"/>
+      </reference>
+      <name value="工具性日常活動功能問卷回應範例"/>
+      <description value="CMS評估表中IADL問卷的回應範例"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseIADL"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pasport-observation-heart-rate-example"/>
+      </reference>
+      <name value="心率量測範例"/>
+      <description value="一個心率量測的範例，展示如何使用 PASportObservationHeartRate Profile 來記錄運動前後的心率變化"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationHeartRate"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -783,6 +937,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ltc-questionnaire-response-adl-example"/>
+      </reference>
+      <name value="日常生活能力評估問卷回覆範例"/>
+      <description value="一個日常生活能力評估問卷回覆的範例，展示如何使用 LTCQuestionnaireResponse Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseADL"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ltc-questionnaire-adl-assessment-example"/>
+      </reference>
+      <name value="日常生活能力評估問卷範例"/>
+      <description value="一個日常生活能力評估問卷的範例，展示如何使用 LTCQuestionnaire Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
@@ -791,6 +967,39 @@
       <name value="是否為主要照顧者"/>
       <description value="此 Extension 用以表述關係人是否為主要照顧者。"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ltc-questionnaire-communication"/>
+      </reference>
+      <name value="溝通表達能力問卷"/>
+      <description value="CMS評估表中溝通表達能力問卷"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ltc-questionnaire-response-communication-example"/>
+      </reference>
+      <name value="溝通表達能力問卷回應範例"/>
+      <description value="CMS評估表中溝通表達能力問卷的回應範例"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCommunication"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/ltc-condition-crush-none-example"/>
+      </reference>
+      <name value="無壓傷狀況範例"/>
+      <description value="一個無壓傷狀況的範例，展示如何使用 LTCConditionCrush Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCrush"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -805,6 +1014,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/ltc-patient-cms-chen-ming-hui-example"/>
+      </reference>
+      <name value="照顧管理評估量表住民範例"/>
+      <description value="一個照顧管理評估量表住民的範例，展示如何使用 LTCPatientCMS Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientCMS"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -816,6 +1036,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ltc-bundle-cms-example"/>
+      </reference>
+      <name value="照顧管理評估量表文件打包範例"/>
+      <description value="一個照顧管理評估量表文件打包的範例，展示如何使用 LTCBundleCMS Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleCMS"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -824,6 +1055,17 @@
       <name value="照顧管理評估量表文件架構"/>
       <description value="此 Composition 以衛生福利部長期照顧管理中心照顧管理評估量表為基礎，用以表述照顧管理評估量表的文件結構。"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/ltc-composition-cms-example"/>
+      </reference>
+      <name value="照顧管理評估量表文件架構範例"/>
+      <description value="一個照顧管理評估量表文件架構的範例，展示如何使用 LTCCompositionCMS Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionCMS"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -863,32 +1105,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/LTCQuestionnaireResponseCMSADL"/>
-      </reference>
-      <name value="照顧管理評估量表－個案日常生活能力問卷回覆"/>
-      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－個案日常生活能力問卷 (ADLs) 的回覆資料。"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
         <reference value="StructureDefinition/LTCQuestionnaireResponseCMSCommunication"/>
       </reference>
       <name value="照顧管理評估量表－個案溝通能力問卷回覆"/>
       <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－個案溝通能力問卷的回覆資料。"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/LTCQuestionnaireResponseCMSIADL"/>
-      </reference>
-      <name value="照顧管理評估量表－個案獨立生活能力問卷回覆"/>
-      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－個案獨立生活能力問卷 (IADLs) 的回覆資料。"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -937,6 +1157,61 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ltc-questionnaire-caregiver"/>
+      </reference>
+      <name value="照顧者問卷"/>
+      <description value="轉介流程中照顧者問卷"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ltc-questionnaire-response-caregiver-support-example"/>
+      </reference>
+      <name value="照顧者支持問卷回應範例"/>
+      <description value="CMS評估表中照顧者支持問卷的回應範例"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverSupport"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ltc-questionnaire-response-caregiver-load-example"/>
+      </reference>
+      <name value="照顧者負荷問卷回應範例"/>
+      <description value="CMS評估表中照顧者負荷問卷的回應範例"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverLoad"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ltc-questionnaire-special-care"/>
+      </reference>
+      <name value="特殊複雜照護需要問卷"/>
+      <description value="CMS評估表中特殊複雜照護需要問卷"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ltc-questionnaire-response-special-care-example"/>
+      </reference>
+      <name value="特殊複雜照護需要問卷回應範例"/>
+      <description value="CMS評估表中特殊複雜照護需要問卷的回應範例"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSpecialCare"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -956,6 +1231,28 @@
       <name value="看護狀況值集"/>
       <description value="個案雇用看護的狀況"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ltc-questionnaire-memory"/>
+      </reference>
+      <name value="短期記憶力問卷"/>
+      <description value="CMS評估表中短期記憶力問卷"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ltc-questionnaire-response-memory-example"/>
+      </reference>
+      <name value="短期記憶力問卷回應範例"/>
+      <description value="CMS評估表中短期記憶力問卷的回應範例"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMemory"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -981,6 +1278,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/ltc-condition-crush-stage2-example"/>
+      </reference>
+      <name value="第二期壓傷範例"/>
+      <description value="一個第二期壓傷的範例，展示如何使用 LTCConditionCrush Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCrush"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -992,6 +1300,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/ltc-condition-diabetes-example"/>
+      </reference>
+      <name value="糖尿病病情範例"/>
+      <description value="一個糖尿病病情的範例，展示如何使用 LTCConditionProblem Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionProblem"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/ltc-medication-administration-metformin-example"/>
+      </reference>
+      <name value="糖尿病藥物給藥範例"/>
+      <description value="一個糖尿病藥物給藥的範例，展示如何使用 LTCMedicationAdministration Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCMedicationAdministration"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -1000,6 +1330,17 @@
       <name value="經濟狀況代碼"/>
       <description value="用於表述個案的經濟狀況，在長照機構住民經濟狀況 Extension 中使用。&#xA;此代碼比照警政署偵查筆錄制式格式之選項進行設計。"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/ltc-condition-disability-type-limb-example"/>
+      </reference>
+      <name value="肢體障礙類型範例"/>
+      <description value="一個肢體障礙類型的範例，展示如何使用 LTCConditionDisabilityType Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisabilityType"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1025,6 +1366,116 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/CapabilityStatementLTCServer"/>
+      </reference>
+      <name value="臺灣長期照顧實作指引 - 伺服端能力聲明"/>
+      <description value="此 CapabilityStatement 定義了臺灣長期照顧實作指引中伺服端系統必須支援的 FHIR RESTful API 功能。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/CapabilityStatementLTCClient"/>
+      </reference>
+      <name value="臺灣長期照顧實作指引 - 用戶端能力聲明"/>
+      <description value="此 CapabilityStatement 定義了臺灣長期照顧實作指引中用戶端系統建議支援的 FHIR RESTful API 功能。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/ltc-condition-residence-not-alone-example"/>
+      </reference>
+      <name value="與家人同住居住狀況範例"/>
+      <description value="一個與家人同住之居住狀況的範例，展示如何使用 LTCConditionResidence Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionResidence"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ltc-observation-blood-pressure-example"/>
+      </reference>
+      <name value="血壓量測範例"/>
+      <description value="一個血壓量測的範例，展示如何使用 LTCObservationVitalSigns Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationVitalSigns"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pasport-observation-blood-pressure-example"/>
+      </reference>
+      <name value="血壓量測範例"/>
+      <description value="一個血壓量測的範例，展示如何使用 PASportObservationBloodPressure Profile 來記錄運動前後的血壓變化"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationBloodPressure"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/ltc-careplan-mobility-example"/>
+      </reference>
+      <name value="行動照顧計畫範例"/>
+      <description value="一個行動照顧計畫的範例，展示如何使用 LTCCarePlan Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCCarePlan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Goal"/>
+      </extension>
+      <reference>
+        <reference value="Goal/ltc-goal-mobility-improvement-example"/>
+      </reference>
+      <name value="行動能力改善目標範例"/>
+      <description value="一個行動能力改善目標的範例，展示如何使用 LTCGoal Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCGoal"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ltc-questionnaire-mental"/>
+      </reference>
+      <name value="認知功能與精神狀態問卷"/>
+      <description value="CMS評估表中認知功能與精神狀態問卷"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ltc-questionnaire-response-mental-example"/>
+      </reference>
+      <name value="認知功能與精神狀態問卷回應範例"/>
+      <description value="CMS評估表中認知功能與精神狀態問卷的回應範例"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMental"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ltc-observation-falling-history-example"/>
+      </reference>
+      <name value="跌倒紀錄範例"/>
+      <description value="一個跌倒紀錄的範例，展示如何使用 LTCObservationFallingHistory Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationFallingHistory"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -1033,6 +1484,17 @@
       <name value="跌倒紀錄結果值集"/>
       <description value="紀錄住民跌倒的偵測結果。"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/ltc-condition-disability-example"/>
+      </reference>
+      <name value="身心障礙手冊持有狀態範例"/>
+      <description value="一個身心障礙手冊持有狀態的範例，展示如何使用 LTCConditionDisability Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisability"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1399,6 +1861,72 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pasport-observation-bmi-example"/>
+      </reference>
+      <name value="身體質量指數測量範例"/>
+      <description value="一個BMI測量的範例，展示如何使用 PASportObservationBodyMassIndex Profile 來記錄身體質量指數"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationBodyMassIndex"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pasport-observation-height-example"/>
+      </reference>
+      <name value="身高量測範例"/>
+      <description value="一個身高量測的範例，展示如何使用 PASportObservationHeight Profile 來記錄身高數據"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationHeight"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ltc-questionnaire-response-adl-referral-example"/>
+      </reference>
+      <name value="轉介ADL問卷回應範例"/>
+      <description value="轉介流程中ADL問卷的回應範例"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseADL"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ltc-questionnaire-response-iadl-referral-example"/>
+      </reference>
+      <name value="轉介IADL問卷回應範例"/>
+      <description value="轉介流程中IADL問卷的回應範例"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseIADL"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/ltc-patient-referral-example"/>
+      </reference>
+      <name value="轉介個案範例"/>
+      <description value="一個需要長照服務轉介的個案範例"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientReferral"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/ltc-patient-referral-chen-ming-hui-example"/>
+      </reference>
+      <name value="轉介單住民範例"/>
+      <description value="一個轉介單住民的範例，展示如何使用 LTCPatientReferral Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientReferral"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -1418,6 +1946,39 @@
       <name value="轉介單居住狀況代碼"/>
       <description value="用於表述個案的居住狀況"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/ltc-careplan-referral-home-service-example"/>
+      </reference>
+      <name value="轉介單居家服務計畫範例"/>
+      <description value="一個轉介單居家服務計畫的範例，展示如何使用 LTCCarePlanReferral Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCCarePlanReferral"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ltc-bundle-referral-example"/>
+      </reference>
+      <name value="轉介單文件打包範例"/>
+      <description value="一個轉介單文件打包的範例，展示如何使用 LTCBundleReferral Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleReferral"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/ltc-composition-referral-example"/>
+      </reference>
+      <name value="轉介單文件架構範例"/>
+      <description value="一個轉介單文件架構的範例，展示如何使用 LTCCompositionReferral Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionReferral"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1468,28 +2029,6 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/LTCQuestionnaireResponseReferralADL"/>
-      </reference>
-      <name value="轉介單－ADL 失能項目評估問卷回覆"/>
-      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現轉介單－ADL 失能項目評估問卷的回覆資料。"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/LTCQuestionnaireResponseReferralIADL"/>
-      </reference>
-      <name value="轉介單－IADL 失能項目評估問卷回覆"/>
-      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現轉介單－IADL 失能項目評估問卷的回覆資料。"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
         <reference value="StructureDefinition/LTCPatientReferral"/>
       </reference>
       <name value="轉介單－個案基本資料"/>
@@ -1528,6 +2067,50 @@
       <name value="轉介單－衰弱評估問卷回覆"/>
       <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現轉介單－衰弱評估問卷的回覆資料。"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ltc-questionnaire-response-caregiver-referral-example"/>
+      </reference>
+      <name value="轉介照顧者問卷回應範例"/>
+      <description value="轉介流程中照顧者問卷的回應範例"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralCaregiver"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/pasport-condition-exercise-history-example"/>
+      </reference>
+      <name value="運動史記錄範例"/>
+      <description value="一個運動史記錄的範例，展示如何使用 PASportConditionExerciseHistory Profile 來記錄患者的運動背景"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/PASportConditionExerciseHistory"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/pasport-servicerequest-exercise-therapy-example"/>
+      </reference>
+      <name value="運動治療服務請求範例"/>
+      <description value="一個運動治療服務請求的範例，展示如何使用 PASportServiceRequest Profile 來申請運動治療服務"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/PASportServiceRequest"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Goal"/>
+      </extension>
+      <reference>
+        <reference value="Goal/pasport-goal-walking-steps-example"/>
+      </reference>
+      <name value="運動目標－步行步數範例"/>
+      <description value="一個運動目標的範例，展示如何使用 PASportGoal Profile 來表示每日步行步數目標"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/PASportGoal"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1586,6 +2169,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/pasport-careplan-walking-exercise-example"/>
+      </reference>
+      <name value="運動計畫－步行運動範例"/>
+      <description value="一個運動計畫的範例，展示如何使用 PASportCarePlan Profile 來表示步行運動計畫"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/PASportCarePlan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -1619,6 +2213,50 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/ltc-patient-chen-ming-hui"/>
+      </reference>
+      <name value="長期照顧住民範例"/>
+      <description value="一個長期照顧機構住民的範例，展示如何使用 LTCPatient Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCPatient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CareTeam"/>
+      </extension>
+      <reference>
+        <reference value="CareTeam/ltc-care-team-example"/>
+      </reference>
+      <name value="長期照顧團隊範例"/>
+      <description value="一個長期照顧團隊的範例，展示如何使用 LTCCareTeam Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCCareTeam"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/ltc-encounter-example"/>
+      </reference>
+      <name value="長期照顧就醫紀錄範例"/>
+      <description value="一個就醫紀錄的範例，用於轉介單中的出入院情形"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ltc-organization-example"/>
+      </reference>
+      <name value="長期照顧機構範例"/>
+      <description value="一個長期照顧機構的範例，展示如何使用 LTCOrganization Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/Organization-twltc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -1626,6 +2264,50 @@
       </reference>
       <name value="長期照顧管理中心個案服務初篩表/轉介單文件打包"/>
       <description value="此 Bundle 以臺北市長期照顧管理中心個案服務初篩表/轉介單為基礎，用以表述長期照顧管理中心個案服務初篩表/轉介單的文件打包結構。&#xA;&#xA;注意：各縣市轉介單格式可能有所不同，此 Profile 將於後續版本逐步納入各縣市初篩表/轉介單格式並進行整合。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/ltc-practitioner-nurse-example"/>
+      </reference>
+      <name value="長期照顧護理師範例"/>
+      <description value="一個長期照顧護理師的範例，展示如何使用 LTCPractitioner Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/ltc-practitioner-role-nurse-example"/>
+      </reference>
+      <name value="長期照顧護理師角色範例"/>
+      <description value="一個長期照顧護理師角色的範例，展示如何使用 LTCPractitionerRole Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitionerRole"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTCConditionNeed"/>
+      </reference>
+      <name value="長期照顧－主要問題及需求"/>
+      <description value="用於表述案主(家)主要問題及需求的 Condition Profile。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTCConditionProblem"/>
+      </reference>
+      <name value="長期照顧－主要疾病"/>
+      <description value="用於表述案主(家)主要疾病的 Condition Profile。"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1861,6 +2543,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/ltc-practitioner-example"/>
+      </reference>
+      <name value="長照醫事人員範例"/>
+      <description value="一個執行長照服務和運動處方的醫事人員範例"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -1881,6 +2574,61 @@
       <description value="關係人與個案的關係類型擴展代碼值集，新增孫媳婦、孫女婿、聘用看護-本國籍、聘用看護-外國籍等代碼"/>
       <exampleBoolean value="false"/>
     </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/ltc-condition-need-assistance-example"/>
+      </reference>
+      <name value="需要照護協助狀況範例"/>
+      <description value="個案需要長期照護協助的狀況範例，用於轉介Bundle中"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionNeed"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pasport-observation-skeletal-muscle-mass-example"/>
+      </reference>
+      <name value="骨骼肌重測量範例"/>
+      <description value="一個骨骼肌重測量的範例，展示如何使用 PASportObservationSkeletalMuscleMass Profile 來記錄肌肉量變化"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationSkeletalMuscleMass"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pasport-observation-body-fat-percentage-example"/>
+      </reference>
+      <name value="體脂率測量範例"/>
+      <description value="一個體脂率測量的範例，展示如何使用 PASportObservationBodyFatPercentage Profile 來記錄身體組成分析"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationBodyFatPercentage"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pasport-observation-weight-example"/>
+      </reference>
+      <name value="體重量測範例"/>
+      <description value="一個體重量測的範例，展示如何使用 PASportObservationWeight Profile 來記錄運動計畫中的體重監測"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationWeight"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/ltc-condition-tube-nasogastric-example"/>
+      </reference>
+      <name value="鼻胃管管路狀況範例"/>
+      <description value="一個鼻胃管的管路狀況範例，展示如何使用 LTCConditionTube Profile"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionTube"/>
+    </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
         <valueUrl value="toc.html"/>
@@ -1894,6 +2642,14 @@
         </extension>
         <nameUrl value="index.html"/>
         <title value="Home"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="capability-statements.html"/>
+        </extension>
+        <nameUrl value="capability-statements.html"/>
+        <title value="Capability Statements"/>
         <generation value="markdown"/>
       </page>
       <page>

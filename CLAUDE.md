@@ -125,7 +125,7 @@ TWLongTermCare_IG_Build/
 - `LTCOrganization`: 機構資料
 - `LTCPractitioner`: 醫療人員
 - `LTCPractitionerRole`: 醫療人員角色
-- `LTCRelatedPerson`: 相關人員（如照顧者）
+- `LTCRelatedPerson`: 關係人（如照顧者）
 
 ## 代碼系統 (Code Systems)
 
