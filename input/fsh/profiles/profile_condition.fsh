@@ -45,6 +45,12 @@ Description: "用於表述案主(家)主要問題及需求的 Condition Profile�
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"
 * category.coding.code = #problem-list-item
 
+// 加嚴條件以避免與其他 Condition 混淆：主要問題/需求以 SNOMED CT 表述
+* code 1..1 MS
+* code.coding 1..1 MS
+* code.coding.system 1..1 MS
+* code.coding.system = "http://snomed.info/sct"
+
 // Example
 Instance: ltc-condition-diabetes-example
 InstanceOf: LTCConditionProblem
@@ -77,3 +83,4 @@ Usage: #example
 
 * note[0].time = "2024-01-15"
 * note[0].text = "血糖控制穩定，需持續監測"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionProblem"

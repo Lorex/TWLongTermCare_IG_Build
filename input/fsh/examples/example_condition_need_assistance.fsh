@@ -22,3 +22,4 @@ Usage: #example
 * recordedDate = "2024-09-15"
 
 * note.text = "個案由於身體功能退化，在日常生活活動上需要他人協助，包括洗澡、穿衣、進食等基本活動"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionNeed"

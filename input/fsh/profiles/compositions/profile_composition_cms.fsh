@@ -72,7 +72,7 @@ Description: "此 Composition 以衛生福利部長期照顧管理中心照顧�
 * section[questionnaire-adl].title = "E. 個案日常活動功能量表 (ADLs)"
 * section[questionnaire-adl].entry 1..1 MS
 * section[questionnaire-adl].entry ^short = "個案日常活動功能量表 (ADLs) 的內容"
-* section[questionnaire-adl].entry only Reference(LTCQuestionnaireResponseCMSADL or LTCQuestionnaireResponse)
+* section[questionnaire-adl].entry only Reference(LTCQuestionnaireResponseADL or LTCQuestionnaireResponse)
 * section[questionnaire-adl].entry.reference 1..1 MS
 * section[questionnaire-adl].entry.reference ^short = "個案日常活動功能量表 (ADLs) 的內容。[應輸入 Questionnaire Resource ID]"
 * section[questionnaire-iadl] ^short = "F. 個案工具性日常活動功能量表 (IADLs)"

@@ -14,7 +14,7 @@ Description: "此 Composition 以臺北市長期照顧管理中心個案服務�
 * subject only Reference(LTCPatientReferral)
 * subject.reference 1..1 MS
 * subject.reference ^short = "轉介單描述的個案。[應輸入 Patient Resource ID]"
-* section 16..16 MS
+* section 16..17 MS
 * section ^slicing.discriminator.type = #value
 * section ^slicing.discriminator.path = "title"
 * section ^slicing.rules = #open
@@ -34,7 +34,8 @@ Description: "此 Composition 以臺北市長期照顧管理中心個案服務�
     questionnaire-caregiver 1..1 MS and
     encounter 1..1 MS and 
     practitioner 1..1 MS and
-    organization 1..1 MS
+    organization 1..1 MS and
+    related-person-extra 0..1 MS
     
 * section[patient] ^short = "個案基本資料"
 * section[patient].title = "個案基本資料"
@@ -87,7 +88,7 @@ Description: "此 Composition 以臺北市長期照顧管理中心個案服務�
 * section[questionnaire-adl].title = "ADL 失能項目評估"
 * section[questionnaire-adl].entry 1..1 MS
 * section[questionnaire-adl].entry ^short = "ADL 失能項目評估"
-* section[questionnaire-adl].entry only Reference(LTCQuestionnaireResponseReferralADL or LTCQuestionnaireResponse)
+* section[questionnaire-adl].entry only Reference(LTCQuestionnaireResponseADL or LTCQuestionnaireResponse)
 * section[questionnaire-iadl] ^short = "IADL 失能項目評估"
 * section[questionnaire-iadl].title = "IADL 失能項目評估"
 * section[questionnaire-iadl].entry 1..1 MS
@@ -118,6 +119,15 @@ Description: "此 Composition 以臺北市長期照顧管理中心個案服務�
 * section[organization].entry 1..1 MS
 * section[organization].entry ^short = "填表單位資訊"
 * section[organization].entry only Reference(LTCOrganization or $TWCoreOrganization)
+
+// 新增：關係人（確保 Bundle 中 RelatedPerson 可由 Composition 觸達）
+* section[related-person-extra] ^short = "關係人"
+* section[related-person-extra].title = "關係人"
+* section[related-person-extra].entry 1..* MS
+* section[related-person-extra].entry ^short = "關係人的內容。"
+* section[related-person-extra].entry only Reference(LTCRelatedPerson)
+* section[related-person-extra].entry.reference 1..1 MS
+* section[related-person-extra].entry.reference ^short = "關係人的內容。[應輸入 RelatedPerson Resource ID]"
 
 // Example
 Instance: ltc-composition-referral-example
@@ -188,3 +198,7 @@ Usage: #example
 
 * section[organization].title = "填表單位資訊"
 * section[organization].entry[0] = Reference(http://ltc-ig.fhir.tw/Organization/ltc-organization-example)
+
+// 範例：加入 RelatedPerson 以供 Bundle 連通
+* section[related-person-extra].title = "關係人"
+* section[related-person-extra].entry[0] = Reference(http://ltc-ig.fhir.tw/RelatedPerson/ltc-related-person-primary-caregiver-example)

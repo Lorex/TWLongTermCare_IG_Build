@@ -36,10 +36,10 @@ Description: "此 Bundle 以衛生福利部長期照顧管理中心照顧管理�
 * entry[composition].resource only LTCCompositionCMS
 * entry[patient].resource 1..1 MS
 * entry[patient] ^short = "個案基本資料"
-* entry[patient].resource only LTCPatientCMS or LTCConditionDisability or LTCConditionDisabilityType or $TWCoreCondition
+* entry[patient].resource only LTCPatientCMS or LTCConditionDisability or LTCConditionDisabilityType
 * entry[related-person].resource 1..1 MS
 * entry[related-person] ^short = "照顧者基本資料"
-* entry[related-person].resource only LTCRelatedPerson or LTCConditionDisability
+* entry[related-person].resource only LTCRelatedPerson
 * entry[questionnaire-communication].resource 1..1 MS
 * entry[questionnaire-communication] ^short = "個案溝通能力"
 * entry[questionnaire-communication].resource only LTCQuestionnaireResponseCMSCommunication
@@ -48,10 +48,10 @@ Description: "此 Bundle 以衛生福利部長期照顧管理中心照顧管理�
 * entry[questionnaire-memory].resource only LTCQuestionnaireResponseCMSMemory
 * entry[questionnaire-adl].resource 1..1 MS
 * entry[questionnaire-adl] ^short = "個案日常生活能力"
-* entry[questionnaire-adl].resource only LTCQuestionnaireResponseCMSADL
+* entry[questionnaire-adl].resource only LTCQuestionnaireResponseADL
 * entry[questionnaire-iadl].resource 1..1 MS
 * entry[questionnaire-iadl] ^short = "F. 個案工具性日常活動功能量表 (IADLs) 的內容"
-* entry[questionnaire-iadl].resource only LTCQuestionnaireResponseIADL or LTCQuestionnaireResponse
+* entry[questionnaire-iadl].resource only LTCQuestionnaireResponseIADL
 * entry[questionnaire-special-care].resource 1..1 MS
 * entry[questionnaire-special-care] ^short = "個案特殊照護需求"
 * entry[questionnaire-special-care].resource only LTCQuestionnaireResponseCMSSpecialCare
@@ -95,9 +95,10 @@ Usage: #example
 * entry[composition].fullUrl = "http://ltc-ig.fhir.tw/Composition/ltc-composition-cms-example"
 * entry[composition].resource = ltc-composition-cms-example
 
-* entry[patient].fullUrl = "http://ltc-ig.fhir.tw/Patient/ltc-patient-cms-chen-ming-hui-example"
-* entry[patient].resource = ltc-patient-cms-chen-ming-hui-example
+* entry[patient][0].fullUrl = "http://ltc-ig.fhir.tw/Patient/ltc-patient-cms-chen-ming-hui-example"
+* entry[patient][0].resource = ltc-patient-cms-chen-ming-hui-example
 
+// Additional entries for referenced resources
 * entry[patient][+].fullUrl = "http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-example"
 * entry[patient][=].resource = ltc-condition-disability-example
 
@@ -144,5 +145,7 @@ Usage: #example
 
 * entry[practitioner-role].fullUrl = "http://ltc-ig.fhir.tw/PractitionerRole/ltc-practitioner-role-nurse-example"
 * entry[practitioner-role].resource = ltc-practitioner-role-nurse-example
+
+
 
 

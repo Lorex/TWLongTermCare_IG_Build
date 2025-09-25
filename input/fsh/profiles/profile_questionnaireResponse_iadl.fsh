@@ -1,8 +1,10 @@
 Profile: LTCQuestionnaireResponseIADL
 Parent: LTCQuestionnaireResponse
 Id: LTCQuestionnaireResponseIADL
-Title: "照顧管理評估量表－個案獨立生活能力問卷回覆"
-Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－個案獨立生活能力問卷 (IADLs) 的回覆資料。"
+Title: "IADL 問卷回覆"
+Description: "此 Profile 定義 FHIR 的 QuestionnaireResponse Resource，以呈現工具性日常活動功能問卷 (IADLs) 的回覆資料。"
+* questionnaire 1..1 MS
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-iadl"
 * item 8..8 MS
 * item ^short = "E. 個案日常活動功能量表"
 * item ^slicing.discriminator.type = #value

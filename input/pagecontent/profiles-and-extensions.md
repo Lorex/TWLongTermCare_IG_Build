@@ -30,7 +30,7 @@
 - [主要照顧者工作與支持（LTC QuestionnaireResponse CMS Caregiver Support）](StructureDefinition-LTCQuestionnaireResponseCMSCaregiverSupport.html)
 - [主要照顧者負荷問卷回覆（LTC QuestionnaireResponse CMS Caregiver Load）](StructureDefinition-LTCQuestionnaireResponseCMSCaregiverLoad.html)
 - [個案基本資料 (LTC Patient CMS)](StructureDefinition-LTCPatientCMS.html)
-- [個案日常生活能力問卷回覆（LTC QuestionnaireResponse CMS ADL）](StructureDefinition-LTCQuestionnaireResponseCMSADL.html)
+- [日常生活能力問卷回覆（LTC QuestionnaireResponse ADL）](StructureDefinition-LTCQuestionnaireResponseADL.html)
 - [個案溝通能力問卷回覆（LTC QuestionnaireResponse CMS Communication）](StructureDefinition-LTCQuestionnaireResponseCMSCommunication.html)
 - [個案獨立生活能力問卷回覆（LTC QuestionnaireResponse IADL）](StructureDefinition-LTCQuestionnaireResponseIADL.html)
 - [個案短期記憶力問卷回覆（LTC QuestionnaireResponse CMS Memory）](StructureDefinition-LTCQuestionnaireResponseCMSMemory.html)
@@ -41,7 +41,7 @@
 #### 轉介單/初篩單
 - [長期照護管理中心個案服務初篩表/轉介單文件打包（LTC Bundle Referral）](StructureDefinition-LTCBundleReferral.html)
 - [長期照護管理中心個案服務初篩表/轉介單文件架構（LTC Composition Referral）](StructureDefinition-LTCCompositionReferral.html)
-- [ADL 失能項目評估問卷回覆（LTC QuestionnaireResponse Referral ADL）](StructureDefinition-LTCQuestionnaireResponseReferralADL.html)
+ 
 - [工具性日常活動功能問卷回覆（LTC QuestionnaireResponse IADL）](StructureDefinition-LTCQuestionnaireResponseIADL.html)
 - [個案基本資料（LTC Patient Referral）](StructureDefinition-LTCPatientReferral.html)
 - [服務種類（LTC CarePlan Referral）](StructureDefinition-LTCCarePlanReferral.html)
