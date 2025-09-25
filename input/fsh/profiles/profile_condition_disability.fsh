@@ -46,3 +46,4 @@ Usage: #example
 
 * note[0].time = "2024-01-15"
 * note[0].text = "住民持有身心障礙手冊，類別為肢體障礙輕度"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisability"

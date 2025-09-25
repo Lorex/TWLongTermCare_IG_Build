@@ -76,7 +76,7 @@ Description: "此 Bundle 以臺北市長期照顧管理中心個案服務初篩�
 * entry[questionnaire-adl].resource only LTCQuestionnaireResponseReferralADL
 * entry[questionnaire-iadl].resource 1..1 MS
 * entry[questionnaire-iadl] ^short = "IADL 失能項目評估"
-* entry[questionnaire-iadl].resource only LTCQuestionnaireResponseReferralIADL
+* entry[questionnaire-iadl].resource only LTCQuestionnaireResponseIADL
 * entry[questionnaire-sof].resource 1..1 MS
 * entry[questionnaire-sof] ^short = "長者衰弱評估"
 * entry[questionnaire-sof].resource only LTCQuestionnaireResponseReferralSOF
@@ -150,8 +150,8 @@ Usage: #example
 * entry[careplan].fullUrl = "http://ltc-ig.fhir.tw/CarePlan/ltc-careplan-referral-home-service-example"
 * entry[careplan].resource = ltc-careplan-referral-home-service-example
 
-* entry[questionnaire-adl].fullUrl = "http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-example"
-* entry[questionnaire-adl].resource = ltc-questionnaire-response-adl-example
+* entry[questionnaire-adl].fullUrl = "http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-referral-example"
+* entry[questionnaire-adl].resource = ltc-questionnaire-response-adl-referral-example
 
 * entry[questionnaire-iadl].fullUrl = "http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-iadl-referral-example"
 * entry[questionnaire-iadl].resource = ltc-questionnaire-response-iadl-referral-example

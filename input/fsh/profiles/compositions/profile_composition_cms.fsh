@@ -81,7 +81,7 @@ Description: "此 Composition 以衛生福利部長期照顧管理中心照顧�
 * section[questionnaire-iadl].title = "F. 個案工具性日常活動功能量表 (IADLs)"
 * section[questionnaire-iadl].entry 1..1 MS
 * section[questionnaire-iadl].entry ^short = "個案工具性日常活動功能量表 (IADLs) 的內容"
-* section[questionnaire-iadl].entry only Reference(LTCQuestionnaireResponseCMSIADL or LTCQuestionnaireResponse)
+* section[questionnaire-iadl].entry only Reference(LTCQuestionnaireResponseIADL or LTCQuestionnaireResponse)
 * section[questionnaire-iadl].entry.reference 1..1 MS
 * section[questionnaire-iadl].entry.reference ^short = "個案工具性日常活動功能量表 (IADLs) 的內容。[應輸入 Questionnaire Resource ID]"
 * section[questionnaire-special-care] ^short = "G. 特殊複雜照護需要"

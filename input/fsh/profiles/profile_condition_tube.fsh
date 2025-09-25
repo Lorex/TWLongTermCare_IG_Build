@@ -29,8 +29,8 @@ XPath: "f:code/f:coding[f:system/@value='http://ltc-ig.fhir.tw/ValueSet/Referral
 // Example
 Instance: ltc-condition-tube-nasogastric-example
 InstanceOf: LTCConditionTube
-Title: "鼻胃管裝設狀況範例"
-Description: "一個鼻胃管裝設狀況的範例，展示如何使用 LTCConditionTube Profile"
+Title: "鼻胃管管路狀況範例"
+Description: "一個鼻胃管的管路狀況範例，展示如何使用 LTCConditionTube Profile"
 Usage: #example
 
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -49,10 +49,11 @@ Usage: #example
 
 * subject = Reference(ltc-patient-chen-ming-hui)
 
-* onsetDateTime = "2023-12-01"
+* onsetDateTime = "2024-01-01"
 
 * recorder = Reference(ltc-practitioner-role-nurse-example)
 
 * note[0].time = "2024-01-15"
-* note[0].text = "因吞嚥困難需使用鼻胃管進食，管路狀況良好，無發炎現象"
+* note[0].text = "持續置放鼻胃管，需定期更換"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionTube"
 
