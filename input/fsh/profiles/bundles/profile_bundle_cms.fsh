@@ -50,8 +50,8 @@ Description: "此 Bundle 以衛生福利部長期照顧管理中心照顧管理�
 * entry[questionnaire-adl] ^short = "個案日常生活能力"
 * entry[questionnaire-adl].resource only LTCQuestionnaireResponseCMSADL
 * entry[questionnaire-iadl].resource 1..1 MS
-* entry[questionnaire-iadl] ^short = "個案獨立生活能力"
-* entry[questionnaire-iadl].resource only LTCQuestionnaireResponseCMSIADL
+* entry[questionnaire-iadl] ^short = "F. 個案工具性日常活動功能量表 (IADLs) 的內容"
+* entry[questionnaire-iadl].resource only LTCQuestionnaireResponseIADL or LTCQuestionnaireResponse
 * entry[questionnaire-special-care].resource 1..1 MS
 * entry[questionnaire-special-care] ^short = "個案特殊照護需求"
 * entry[questionnaire-special-care].resource only LTCQuestionnaireResponseCMSSpecialCare

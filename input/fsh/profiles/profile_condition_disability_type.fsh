@@ -58,3 +58,4 @@ Usage: #example
 * bodySite[0].coding.system = "http://snomed.info/sct"
 * bodySite[0].coding.code = #61685007
 * bodySite[0].coding.display = "Lower limb structure"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisabilityType"

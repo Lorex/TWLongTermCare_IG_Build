@@ -20,8 +20,8 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition 
 // Example
 Instance: ltc-condition-residence-not-alone-example
 InstanceOf: LTCConditionResidence
-Title: "非獨居狀況範例"
-Description: "一個非獨居狀況的範例，展示如何使用 LTCConditionResidence Profile"
+Title: "與家人同住居住狀況範例"
+Description: "一個與家人同住之居住狀況的範例，展示如何使用 LTCConditionResidence Profile"
 Usage: #example
 
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -39,10 +39,6 @@ Usage: #example
 * code.coding.display = "非獨居"
 
 * subject = Reference(ltc-patient-chen-ming-hui)
-
-* recordedDate = "2024-01-15"
-
-* recorder = Reference(ltc-practitioner-role-nurse-example)
-
 * note[0].time = "2024-01-15"
-* note[0].text = "與兒子同住，有家人照顧，居住環境安全"
+* note[0].text = "與配偶同住"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionResidence"

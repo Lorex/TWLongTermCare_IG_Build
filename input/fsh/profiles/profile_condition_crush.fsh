@@ -33,7 +33,7 @@ Description: "一個無壓傷狀況的範例，展示如何使用 LTCConditionCr
 Usage: #example
 
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
-* clinicalStatus.coding.code = #resolved
+* clinicalStatus.coding.code = #active
 
 * verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding.code = #confirmed
@@ -47,10 +47,9 @@ Usage: #example
 * code.coding.display = "無壓傷"
 
 * subject = Reference(ltc-patient-chen-ming-hui)
-
-* recordedDate = "2024-01-15"
-
-* recorder = Reference(ltc-practitioner-role-nurse-example)
+* note[0].time = "2024-01-15"
+* note[0].text = "目前無壓傷"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCrush"
 
 // Example with pressure injury
 Instance: ltc-condition-crush-stage2-example
@@ -74,6 +73,9 @@ Usage: #example
 * code.coding.display = "壓傷"
 
 * subject = Reference(ltc-patient-chen-ming-hui)
+* note[0].time = "2024-01-15"
+* note[0].text = "骶尾部約 2x2 公分紅腫破皮"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCrush"
 
 * onsetDateTime = "2024-01-10"
 

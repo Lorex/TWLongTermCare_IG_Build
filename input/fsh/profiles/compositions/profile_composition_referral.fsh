@@ -92,7 +92,7 @@ Description: "此 Composition 以臺北市長期照顧管理中心個案服務�
 * section[questionnaire-iadl].title = "IADL 失能項目評估"
 * section[questionnaire-iadl].entry 1..1 MS
 * section[questionnaire-iadl].entry ^short = "IADL 失能項目評估"
-* section[questionnaire-iadl].entry only Reference(LTCQuestionnaireResponseReferralIADL or LTCQuestionnaireResponse)
+* section[questionnaire-iadl].entry only Reference(LTCQuestionnaireResponseIADL or LTCQuestionnaireResponse)
 * section[questionnaire-sof] ^short = "長者衰弱評估"
 * section[questionnaire-sof].title = "長者衰弱評估"
 * section[questionnaire-sof].entry 1..1 MS

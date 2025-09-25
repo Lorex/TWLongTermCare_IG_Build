@@ -10,7 +10,7 @@ Description: "適用運動處方之服務請求代碼。本 ValueSet 繼承自�
 
 * $SNOMEDCT#819961005 "PA guidance"
 * $SNOMEDCT#398636004 "PA assessment"
-* $SNOMEDCT#435551000124105 "Counseling about physical activity"
+// * $SNOMEDCT#435551000124105 "Counseling about physical activity" // 此編碼僅限美國 SNOMED CT，目前使用的是國際版，故移除
 * $SNOMEDCT#390893007 "Referral to physical activity program"
 * $SNOMEDCT#426866005 "Determination of phyisical activity tolerance"
 * $SNOMEDCT#229095001 "Exercise class"
