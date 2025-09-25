@@ -1,3 +1,44 @@
+Instance: ltc-questionnaire-response-adl-referral-example
+InstanceOf: LTCQuestionnaireResponseReferralADL
+Title: "轉介ADL問卷回應範例"
+Description: "轉介流程中ADL問卷的回應範例"
+Usage: #example
+
+* status = #completed
+* subject = Reference(ltc-patient-referral-example)
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-adl-assessment-example"
+* authored = "2024-09-15T14:05:00+08:00"
+
+* item[0].linkId = "adl-1"
+* item[0].text = "吃飯"
+* item[0].answer.valueString = "需要部分協助"
+* item[1].linkId = "adl-2"
+* item[1].text = "洗澡"
+* item[1].answer.valueString = "需要部分協助"
+* item[2].linkId = "adl-3"
+* item[2].text = "穿脫衣物"
+* item[2].answer.valueString = "需要部分協助"
+* item[3].linkId = "adl-4"
+* item[3].text = "個人修飾"
+* item[3].answer.valueString = "需要部分協助"
+* item[4].linkId = "adl-5"
+* item[4].text = "大便控制"
+* item[4].answer.valueString = "需要部分協助"
+* item[5].linkId = "adl-6"
+* item[5].text = "小便控制"
+* item[5].answer.valueString = "需要部分協助"
+* item[6].linkId = "adl-7"
+* item[6].text = "上廁所"
+* item[6].answer.valueString = "需要部分協助"
+* item[7].linkId = "adl-8"
+* item[7].text = "移位"
+* item[7].answer.valueString = "需要部分協助"
+* item[8].linkId = "adl-9"
+* item[8].text = "走路"
+* item[8].answer.valueString = "需要部分協助"
+* item[9].linkId = "adl-10"
+* item[9].text = "上下樓梯"
+* item[9].answer.valueString = "需要部分協助"
 // Missing QuestionnaireResponse Instances for Bundle entries
 
 Instance: ltc-questionnaire-response-communication-example
@@ -171,7 +212,7 @@ Usage: #example
 // Referral-specific QuestionnaireResponse instances
 
 Instance: ltc-questionnaire-response-iadl-referral-example
-InstanceOf: LTCQuestionnaireResponse
+InstanceOf: LTCQuestionnaireResponseReferralIADL
 Title: "轉介IADL問卷回應範例"
 Description: "轉介流程中IADL問卷的回應範例"
 Usage: #example
@@ -182,19 +223,39 @@ Usage: #example
 * authored = "2024-09-15T14:00:00+08:00"
 
 * item[0].linkId = "iadl-1"
-* item[0].text = "購物能力"
-* item[0].answer.valueCoding.system = "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS"
-* item[0].answer.valueCoding.code = #dependent
-* item[0].answer.valueCoding.display = "依賴"
+* item[0].text = "使用電話"
+* item[0].answer.valueString = "需協助"
 
 * item[1].linkId = "iadl-2"
-* item[1].text = "使用電話能力"
-* item[1].answer.valueCoding.system = "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS"
-* item[1].answer.valueCoding.code = #dependent
-* item[1].answer.valueCoding.display = "依賴"
+* item[1].text = "購物"
+* item[1].answer.valueString = "需協助"
+
+* item[2].linkId = "iadl-3"
+* item[2].text = "備餐"
+* item[2].answer.valueString = "需協助"
+
+* item[3].linkId = "iadl-4"
+* item[3].text = "處理家務"
+* item[3].answer.valueString = "需協助"
+
+* item[4].linkId = "iadl-5"
+* item[4].text = "洗衣服"
+* item[4].answer.valueString = "需協助"
+
+* item[5].linkId = "iadl-6"
+* item[5].text = "外出"
+* item[5].answer.valueString = "需協助"
+
+* item[6].linkId = "iadl-7"
+* item[6].text = "服用藥物"
+* item[6].answer.valueString = "需協助"
+
+* item[7].linkId = "iadl-8"
+* item[7].text = "處理財務能力"
+* item[7].answer.valueString = "需協助"
 
 Instance: ltc-questionnaire-response-sof-example
-InstanceOf: LTCQuestionnaireResponse
+InstanceOf: LTCQuestionnaireResponseReferralSOF
 Title: "SOF問卷回應範例"
 Description: "轉介流程中SOF問卷的回應範例"
 Usage: #example
@@ -205,19 +266,19 @@ Usage: #example
 * authored = "2024-09-15T14:10:00+08:00"
 
 * item[0].linkId = "sof-1"
-* item[0].text = "跌倒風險評估"
-* item[0].answer.valueCoding.system = "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS"
-* item[0].answer.valueCoding.code = #high-risk
-* item[0].answer.valueCoding.display = "高風險"
+* item[0].text = "體重減輕"
+* item[0].answer.valueBoolean = true
 
 * item[1].linkId = "sof-2"
-* item[1].text = "平衡能力"
-* item[1].answer.valueCoding.system = "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS"
-* item[1].answer.valueCoding.code = #poor
-* item[1].answer.valueCoding.display = "差"
+* item[1].text = "下肢功能"
+* item[1].answer.valueBoolean = false
+
+* item[2].linkId = "sof-3"
+* item[2].text = "精力降低"
+* item[2].answer.valueBoolean = true
 
 Instance: ltc-questionnaire-response-caregiver-referral-example
-InstanceOf: LTCQuestionnaireResponse
+InstanceOf: LTCQuestionnaireResponseReferralCaregiver
 Title: "轉介照顧者問卷回應範例"
 Description: "轉介流程中照顧者問卷的回應範例"
 Usage: #example
@@ -227,14 +288,6 @@ Usage: #example
 * questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-caregiver"
 * authored = "2024-09-15T14:20:00+08:00"
 
-* item[0].linkId = "caregiver-1"
-* item[0].text = "主要照顧者關係"
-* item[0].answer.valueCoding.system = "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS"
-* item[0].answer.valueCoding.code = #spouse
-* item[0].answer.valueCoding.display = "配偶"
-
-* item[1].linkId = "caregiver-2"
-* item[1].text = "照顧能力"
-* item[1].answer.valueCoding.system = "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS"
-* item[1].answer.valueCoding.code = #limited
-* item[1].answer.valueCoding.display = "有限"
+* item.linkId = "caregiver-1"
+* item.text = "是否有照顧者"
+* item.answer.valueString = "是，固定"

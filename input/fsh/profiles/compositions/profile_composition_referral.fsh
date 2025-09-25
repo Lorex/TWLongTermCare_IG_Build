@@ -169,7 +169,7 @@ Usage: #example
 * section[careplan].entry[0] = Reference(http://ltc-ig.fhir.tw/CarePlan/ltc-careplan-referral-home-service-example)
 
 * section[questionnaire-adl].title = "ADL 失能項目評估"
-* section[questionnaire-adl].entry[0] = Reference(http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-example)
+* section[questionnaire-adl].entry[0] = Reference(http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-referral-example)
 
 * section[questionnaire-iadl].title = "IADL 失能項目評估"
 * section[questionnaire-iadl].entry[0] = Reference(http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-iadl-referral-example)
