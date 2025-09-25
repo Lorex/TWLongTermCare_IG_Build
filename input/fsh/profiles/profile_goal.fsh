@@ -38,3 +38,32 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Goal Resou
 * expressedBy.reference 1..1 MS
 * expressedBy.reference ^short = "誰提出了這個照顧目標？[應輸入 Practitioner / RelatedPerson / PractitionerRole Resource ID]"
 
+// Example
+Instance: ltc-goal-mobility-improvement-example
+InstanceOf: LTCGoal
+Title: "行動能力改善目標範例"
+Description: "一個行動能力改善目標的範例，展示如何使用 LTCGoal Profile"
+Usage: #example
+
+* lifecycleStatus = #active
+
+* description.coding.system = "http://snomed.info/sct"
+* description.coding.code = #710950005
+* description.coding.display = "Progressive mobility (regime/therapy)"
+* description.text = "改善住民行動能力"
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* startDate = "2024-01-15"
+
+* target[0].measure.coding.system = "http://snomed.info/sct"
+* target[0].measure.coding.code = #82971005
+* target[0].measure.coding.display = "Impaired mobility (finding)"
+* target[0].detailString = "能夠獨立使用助行器行走50公尺"
+* target[0].dueDate = "2024-04-15"
+
+* expressedBy = Reference(ltc-practitioner-role-nurse-example)
+
+* note[0].time = "2024-01-15"
+* note[0].text = "住民目前需要部分協助才能行走，期望透過復健訓練達到獨立行走的目標"
+

@@ -41,3 +41,67 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Questionna
 * item.item 0..* MS
 * item.item ^short = "問卷的問題或量表項目（用於巢狀問卷）"
 
+// Example
+Instance: ltc-questionnaire-response-adl-example
+InstanceOf: LTCQuestionnaireResponseADL
+Title: "日常生活能力評估問卷回覆範例"
+Description: "一個日常生活能力評估問卷回覆的範例，展示如何使用 LTCQuestionnaireResponse Profile"
+Usage: #example
+
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-adl-assessment-example"
+
+* status = #completed
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* authored = "2024-01-15T10:30:00+08:00"
+
+* author = Reference(ltc-practitioner-role-nurse-example)
+
+* source = Reference(ltc-related-person-primary-caregiver-example)
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseADL"
+
+* item[item-E1].linkId = "E1"
+* item[item-E1].text = "吃飯"
+* item[item-E1].answer[0].valueInteger = 5
+
+* item[item-E2].linkId = "E2"
+* item[item-E2].text = "洗澡"
+* item[item-E2].answer[0].valueInteger = 0
+
+* item[item-E3].linkId = "E3"
+* item[item-E3].text = "穿脫衣物"
+* item[item-E3].answer[0].valueInteger = 0
+
+* item[item-E4].linkId = "E4"
+* item[item-E4].text = "個人修飾"
+* item[item-E4].answer[0].valueInteger = 5
+
+* item[item-E5].linkId = "E5"
+* item[item-E5].text = "大便控制"
+* item[item-E5].answer[0].valueInteger = 10
+
+* item[item-E6].linkId = "E6"
+* item[item-E6].text = "小便控制"
+* item[item-E6].answer[0].valueInteger = 5
+
+* item[item-E7].linkId = "E7"
+* item[item-E7].text = "上廁所"
+* item[item-E7].answer[0].valueInteger = 5
+
+* item[item-E8].linkId = "E8"
+* item[item-E8].text = "移位"
+* item[item-E8].answer[0].valueInteger = 10
+
+* item[item-E9].linkId = "E9"
+* item[item-E9].text = "走路"
+* item[item-E9].answer[0].valueInteger = 10
+
+* item[item-E10].linkId = "E10"
+* item[item-E10].text = "上下樓梯"
+* item[item-E10].answer[0].valueInteger = 5
+
+* item[item-E11].linkId = "E11"
+* item[item-E11].text = "床椅移位"
+* item[item-E11].answer[0].valueInteger = 10
+

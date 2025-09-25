@@ -7,5 +7,6 @@
 - JSON：[下載](expansions.json.zip)
 
 ### 範例
-- XML：請參考各資源頁面之 Examples 分頁
-- JSON：請參考各資源頁面之 Examples 分頁
+- XML：[下載](examples.xml.zip)
+- JSON：[下載](examples.json.zip)
+- Turtle：[下載](examples.ttl.zip)
