@@ -323,7 +323,7 @@ Note that the fullUrl is not the same as the canonical URL - it's an absolute ur
 "
 "Bundle.entry:patient.resource","Bundle.entry.resource","","SubjectOfCare Client Resident
 ","",1,1,"Y","","Y","Patient {[CanonicalType[http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientCMS]]} {[]}
-Condition {[CanonicalType[http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisability], CanonicalType[http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisabilityType], CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Condition-twcore]]} {[]}","接受健康照護服務的個人或動物之資訊","關於接受照護或其他健康相關服務的個人或動物的人口統計學和其他行政資訊。","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"","","Entity. Role, or Act","Patient[classCode=PAT]","ClinicalDocument.recordTarget.patientRole"
+Condition {[CanonicalType[http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisability], CanonicalType[http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisabilityType]]} {[]}","接受健康照護服務的個人或動物之資訊","關於接受照護或其他健康相關服務的個人或動物的人口統計學和其他行政資訊。","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"","","Entity. Role, or Act","Patient[classCode=PAT]","ClinicalDocument.recordTarget.patientRole"
 "Bundle.entry:patient.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"bdl-2
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -439,8 +439,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Bundle.entry:related-person.resource","Bundle.entry.resource","","","",1,1,"Y","","Y","RelatedPerson {[CanonicalType[http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson]]} {[]}
-Condition {[CanonicalType[http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisability]]} {[]}","A person that is related to a patient, but who is not a direct target of care","Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"","","Entity. Role, or Act","role"
+"Bundle.entry:related-person.resource","Bundle.entry.resource","","","",1,1,"Y","","","RelatedPerson {[CanonicalType[http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson]]} {[]}
+","A person that is related to a patient, but who is not a direct target of care","Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"","","Entity. Role, or Act","role"
 "Bundle.entry:related-person.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"bdl-2
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -793,7 +793,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Bundle.entry:questionnaire-adl.resource","Bundle.entry.resource","","Form
-QuestionnaireAnswers","",1,1,"Y","","","QuestionnaireResponse {[CanonicalType[http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSADL]]} {[]}
+QuestionnaireAnswers","",1,1,"Y","","","QuestionnaireResponse {[CanonicalType[http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseADL]]} {[]}
 ","A structured set of questions and their answers","A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.","The QuestionnaireResponse contains enough information about the questions asked and their organization that it can be interpreted somewhat independently from the Questionnaire it is based on.  I.e. You don't need access to the Questionnaire in order to extract basic information from a QuestionnaireResponse.","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"","","Entity. Role, or Act","Observation[moodCode=EVN]"
 "Bundle.entry:questionnaire-adl.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"bdl-2
@@ -886,7 +886,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 
 This outcome is not used for error responses in batch/transaction, only for hints and warnings. In a batch operation, the error will be in Bundle.entry.response, and for transaction, there will be a single OperationOutcome instead of a bundle in the case of an error.","","","","","","","","",,,,,"",,,,"Bundle.entry.response.outcome",0,1,"",""
 "Bundle.entry:questionnaire-iadl","Bundle.entry","questionnaire-iadl","","",1,1,"Y","","Y","BackboneElement {[]} {[]}
-","個案獨立生活能力","An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only).","","","","","","","","","",,,,,"",,,,"Bundle.entry",0,*,"","bdl-5:must be a resource unless there's a request or response {resource.exists() or request.exists() or response.exists()}
+","F. 個案工具性日常活動功能量表 (IADLs) 的內容","An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only).","","","","","","","","","",,,,,"",,,,"Bundle.entry",0,*,"","bdl-5:must be a resource unless there's a request or response {resource.exists() or request.exists() or response.exists()}
 bdl-8:fullUrl cannot be a version specific reference {fullUrl.contains('/_history/').not()}ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}"
 "Bundle.entry:questionnaire-iadl.id","Bundle.entry.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
@@ -911,7 +911,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Bundle.entry:questionnaire-iadl.resource","Bundle.entry.resource","","Form
-QuestionnaireAnswers","",1,1,"Y","","","QuestionnaireResponse {[CanonicalType[http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSIADL]]} {[]}
+QuestionnaireAnswers","",1,1,"Y","","","QuestionnaireResponse {[CanonicalType[http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseIADL]]} {[]}
 ","A structured set of questions and their answers","A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.","The QuestionnaireResponse contains enough information about the questions asked and their organization that it can be interpreted somewhat independently from the Questionnaire it is based on.  I.e. You don't need access to the Questionnaire in order to extract basic information from a QuestionnaireResponse.","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"","","Entity. Role, or Act","Observation[moodCode=EVN]"
 "Bundle.entry:questionnaire-iadl.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"bdl-2

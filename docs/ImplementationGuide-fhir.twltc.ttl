@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "TaiwanLongTermCareImplementationGuide"] ; # 
   fhir:title [ fhir:v "臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-09-15T15:24:30+08:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-09-26T02:27:53+08:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "經濟部產業發展署"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "經濟部產業發展署" ] ;
@@ -922,6 +922,24 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseADL> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseADL" ]
+       ] ;
+       fhir:name [ fhir:v "ADL 問卷回覆" ] ;
+       fhir:description [ fhir:v "此 Profile 定義 FHIR 的 QuestionnaireResponse Resource，以呈現日常生活活動量表 (ADL) 的回覆資料。回覆採用整數分數（依題目配分），文字說明由問卷提供。" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "Patient"
          ]
        ] ) ;
@@ -941,6 +959,43 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseIADL> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseIADL" ]
+       ] ;
+       fhir:name [ fhir:v "IADL 問卷回覆" ] ;
+       fhir:description [ fhir:v "此 Profile 定義 FHIR 的 QuestionnaireResponse Resource，以呈現工具性日常活動功能問卷 (IADLs) 的回覆資料。" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Questionnaire"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-sof> ;
+         fhir:reference [ fhir:v "Questionnaire/ltc-questionnaire-sof" ]
+       ] ;
+       fhir:name [ fhir:v "SOF問卷" ] ;
+       fhir:description [ fhir:v "轉介流程中SOF問卷" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "QuestionnaireResponse"
          ]
        ] ) ;
@@ -952,8 +1007,27 @@
        fhir:description [ fhir:v "轉介流程中SOF問卷的回應範例" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse"^^xsd:anyURI ;
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse>
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralSOF"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralSOF>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Questionnaire"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-caregiver-support> ;
+         fhir:reference [ fhir:v "Questionnaire/ltc-questionnaire-caregiver-support" ]
+       ] ;
+       fhir:name [ fhir:v "主要照護者工作與支持問卷" ] ;
+       fhir:description [ fhir:v "CMS評估表中主要照護者工作與支持問卷" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire>
        ]
      ] [
        fhir:extension ( [
@@ -973,6 +1047,25 @@
          a fhir:canonical ;
          fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson"^^xsd:anyURI ;
          fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Questionnaire"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-caregiver-load> ;
+         fhir:reference [ fhir:v "Questionnaire/ltc-questionnaire-caregiver-load" ]
+       ] ;
+       fhir:name [ fhir:v "主要照顧者負荷問卷" ] ;
+       fhir:description [ fhir:v "CMS評估表中照顧者負荷問卷" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire>
        ]
      ] [
        fhir:extension ( [
@@ -1430,6 +1523,25 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "Questionnaire"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-society> ;
+         fhir:reference [ fhir:v "Questionnaire/ltc-questionnaire-society" ]
+       ] ;
+       fhir:name [ fhir:v "居家環境與社會參與問卷" ] ;
+       fhir:description [ fhir:v "CMS評估表中居家環境與社會參與問卷" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "QuestionnaireResponse"
          ]
        ] ) ;
@@ -1441,8 +1553,27 @@
        fhir:description [ fhir:v "CMS評估表中居家環境與社會參與問卷的回應範例" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse"^^xsd:anyURI ;
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse>
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSociety"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSociety>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Questionnaire"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-iadl> ;
+         fhir:reference [ fhir:v "Questionnaire/ltc-questionnaire-iadl" ]
+       ] ;
+       fhir:name [ fhir:v "工具性日常活動功能問卷" ] ;
+       fhir:description [ fhir:v "CMS評估表中IADL問卷" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire>
        ]
      ] [
        fhir:extension ( [
@@ -1460,8 +1591,8 @@
        fhir:description [ fhir:v "CMS評估表中IADL問卷的回應範例" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse"^^xsd:anyURI ;
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse>
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseIADL"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseIADL>
        ]
      ] [
        fhir:extension ( [
@@ -1534,8 +1665,8 @@
        fhir:description [ fhir:v "一個日常生活能力評估問卷回覆的範例，展示如何使用 LTCQuestionnaireResponse Profile" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse"^^xsd:anyURI ;
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse>
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseADL"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseADL>
        ]
      ] [
        fhir:extension ( [
@@ -1579,6 +1710,25 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "Questionnaire"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-communication> ;
+         fhir:reference [ fhir:v "Questionnaire/ltc-questionnaire-communication" ]
+       ] ;
+       fhir:name [ fhir:v "溝通表達能力問卷" ] ;
+       fhir:description [ fhir:v "CMS評估表中溝通表達能力問卷" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "QuestionnaireResponse"
          ]
        ] ) ;
@@ -1590,8 +1740,8 @@
        fhir:description [ fhir:v "CMS評估表中溝通表達能力問卷的回應範例" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse"^^xsd:anyURI ;
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse>
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCommunication"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCommunication>
        ]
      ] [
        fhir:extension ( [
@@ -1786,47 +1936,11 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSADL> ;
-         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseCMSADL" ]
-       ] ;
-       fhir:name [ fhir:v "照顧管理評估量表－個案日常生活能力問卷回覆" ] ;
-       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－個案日常生活能力問卷 (ADLs) 的回覆資料。" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:resource"
-         ]
-       ] ) ;
-       fhir:reference [
          fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCommunication> ;
          fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseCMSCommunication" ]
        ] ;
        fhir:name [ fhir:v "照顧管理評估量表－個案溝通能力問卷回覆" ] ;
        fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－個案溝通能力問卷的回覆資料。" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:resource"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSIADL> ;
-         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseCMSIADL" ]
-       ] ;
-       fhir:name [ fhir:v "照顧管理評估量表－個案獨立生活能力問卷回覆" ] ;
-       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－個案獨立生活能力問卷 (IADLs) 的回覆資料。" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -1908,6 +2022,25 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "Questionnaire"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-caregiver> ;
+         fhir:reference [ fhir:v "Questionnaire/ltc-questionnaire-caregiver" ]
+       ] ;
+       fhir:name [ fhir:v "照顧者問卷" ] ;
+       fhir:description [ fhir:v "轉介流程中照顧者問卷" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "QuestionnaireResponse"
          ]
        ] ) ;
@@ -1919,8 +2052,8 @@
        fhir:description [ fhir:v "CMS評估表中照顧者支持問卷的回應範例" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse"^^xsd:anyURI ;
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse>
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverSupport"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverSupport>
        ]
      ] [
        fhir:extension ( [
@@ -1938,8 +2071,27 @@
        fhir:description [ fhir:v "CMS評估表中照顧者負荷問卷的回應範例" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse"^^xsd:anyURI ;
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse>
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverLoad"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverLoad>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Questionnaire"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-special-care> ;
+         fhir:reference [ fhir:v "Questionnaire/ltc-questionnaire-special-care" ]
+       ] ;
+       fhir:name [ fhir:v "特殊複雜照護需要問卷" ] ;
+       fhir:description [ fhir:v "CMS評估表中特殊複雜照護需要問卷" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire>
        ]
      ] [
        fhir:extension ( [
@@ -1957,8 +2109,8 @@
        fhir:description [ fhir:v "CMS評估表中特殊複雜照護需要問卷的回應範例" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse"^^xsd:anyURI ;
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse>
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSpecialCare"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSpecialCare>
        ]
      ] [
        fhir:extension ( [
@@ -2001,6 +2153,25 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "Questionnaire"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-memory> ;
+         fhir:reference [ fhir:v "Questionnaire/ltc-questionnaire-memory" ]
+       ] ;
+       fhir:name [ fhir:v "短期記憶力問卷" ] ;
+       fhir:description [ fhir:v "CMS評估表中短期記憶力問卷" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "QuestionnaireResponse"
          ]
        ] ) ;
@@ -2012,8 +2183,8 @@
        fhir:description [ fhir:v "CMS評估表中短期記憶力問卷的回應範例" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse"^^xsd:anyURI ;
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse>
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMemory"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMemory>
        ]
      ] [
        fhir:extension ( [
@@ -2101,11 +2272,11 @@
          fhir:reference [ fhir:v "Condition/ltc-condition-diabetes-example" ]
        ] ;
        fhir:name [ fhir:v "糖尿病病情範例" ] ;
-       fhir:description [ fhir:v "一個糖尿病病情的範例，展示如何使用 LTCCondition Profile" ] ;
+       fhir:description [ fhir:v "一個糖尿病病情的範例，展示如何使用 LTCConditionProblem Profile" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCCondition"^^xsd:anyURI ;
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCCondition>
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionProblem"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionProblem>
        ]
      ] [
        fhir:extension ( [
@@ -2204,6 +2375,61 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "CapabilityStatement"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/CapabilityStatement/CapabilityStatementLTCServer> ;
+         fhir:reference [ fhir:v "CapabilityStatement/CapabilityStatementLTCServer" ]
+       ] ;
+       fhir:name [ fhir:v "臺灣長期照顧實作指引 - 伺服端能力聲明" ] ;
+       fhir:description [ fhir:v "此 CapabilityStatement 定義了臺灣長期照顧實作指引中伺服端系統必須支援的 FHIR RESTful API 功能。" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CapabilityStatement"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/CapabilityStatement/CapabilityStatementLTCClient> ;
+         fhir:reference [ fhir:v "CapabilityStatement/CapabilityStatementLTCClient" ]
+       ] ;
+       fhir:name [ fhir:v "臺灣長期照顧實作指引 - 用戶端能力聲明" ] ;
+       fhir:description [ fhir:v "此 CapabilityStatement 定義了臺灣長期照顧實作指引中用戶端系統建議支援的 FHIR RESTful API 功能。" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Condition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/Condition/ltc-condition-residence-not-alone-example> ;
+         fhir:reference [ fhir:v "Condition/ltc-condition-residence-not-alone-example" ]
+       ] ;
+       fhir:name [ fhir:v "與家人同住居住狀況範例" ] ;
+       fhir:description [ fhir:v "一個與家人同住之居住狀況的範例，展示如何使用 LTCConditionResidence Profile" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionResidence"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionResidence>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "Observation"
          ]
        ] ) ;
@@ -2280,6 +2506,25 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "Questionnaire"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-mental> ;
+         fhir:reference [ fhir:v "Questionnaire/ltc-questionnaire-mental" ]
+       ] ;
+       fhir:name [ fhir:v "認知功能與精神狀態問卷" ] ;
+       fhir:description [ fhir:v "CMS評估表中認知功能與精神狀態問卷" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "QuestionnaireResponse"
          ]
        ] ) ;
@@ -2291,8 +2536,8 @@
        fhir:description [ fhir:v "CMS評估表中認知功能與精神狀態問卷的回應範例" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse"^^xsd:anyURI ;
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse>
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMental"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMental>
        ]
      ] [
        fhir:extension ( [
@@ -2991,6 +3236,25 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-adl-referral-example> ;
+         fhir:reference [ fhir:v "QuestionnaireResponse/ltc-questionnaire-response-adl-referral-example" ]
+       ] ;
+       fhir:name [ fhir:v "轉介ADL問卷回應範例" ] ;
+       fhir:description [ fhir:v "轉介流程中ADL問卷的回應範例" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseADL"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseADL>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "QuestionnaireResponse"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:link <http://ltc-ig.fhir.tw/QuestionnaireResponse/ltc-questionnaire-response-iadl-referral-example> ;
          fhir:reference [ fhir:v "QuestionnaireResponse/ltc-questionnaire-response-iadl-referral-example" ]
        ] ;
@@ -2998,8 +3262,8 @@
        fhir:description [ fhir:v "轉介流程中IADL問卷的回應範例" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse"^^xsd:anyURI ;
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse>
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseIADL"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseIADL>
        ]
      ] [
        fhir:extension ( [
@@ -3213,42 +3477,6 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralADL> ;
-         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseReferralADL" ]
-       ] ;
-       fhir:name [ fhir:v "轉介單－ADL 失能項目評估問卷回覆" ] ;
-       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現轉介單－ADL 失能項目評估問卷的回覆資料。" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:resource"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralIADL> ;
-         fhir:reference [ fhir:v "StructureDefinition/LTCQuestionnaireResponseReferralIADL" ]
-       ] ;
-       fhir:name [ fhir:v "轉介單－IADL 失能項目評估問卷回覆" ] ;
-       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現轉介單－IADL 失能項目評估問卷的回覆資料。" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:resource"
-         ]
-       ] ) ;
-       fhir:reference [
          fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientReferral> ;
          fhir:reference [ fhir:v "StructureDefinition/LTCPatientReferral" ]
        ] ;
@@ -3328,8 +3556,8 @@
        fhir:description [ fhir:v "轉介流程中照顧者問卷的回應範例" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse"^^xsd:anyURI ;
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse>
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralCaregiver"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralCaregiver>
        ]
      ] [
        fhir:extension ( [
@@ -3681,6 +3909,42 @@
          a fhir:canonical ;
          fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitionerRole"^^xsd:anyURI ;
          fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitionerRole>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionNeed> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCConditionNeed" ]
+       ] ;
+       fhir:name [ fhir:v "長期照顧－主要問題及需求" ] ;
+       fhir:description [ fhir:v "用於表述案主(家)主要問題及需求的 Condition Profile。" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionProblem> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCConditionProblem" ]
+       ] ;
+       fhir:name [ fhir:v "長期照顧－主要疾病" ] ;
+       fhir:description [ fhir:v "用於表述案主(家)主要疾病的 Condition Profile。" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
        ]
      ] [
        fhir:extension ( [
@@ -4131,27 +4395,8 @@
        fhir:description [ fhir:v "個案需要長期照護協助的狀況範例，用於轉介Bundle中" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCCondition"^^xsd:anyURI ;
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCCondition>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "Condition"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://ltc-ig.fhir.tw/Condition/ltc-condition-residence-not-alone-example> ;
-         fhir:reference [ fhir:v "Condition/ltc-condition-residence-not-alone-example" ]
-       ] ;
-       fhir:name [ fhir:v "非獨居狀況範例" ] ;
-       fhir:description [ fhir:v "一個非獨居狀況的範例，展示如何使用 LTCConditionResidence Profile" ] ;
-       fhir:example [
-         a fhir:canonical ;
-         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionResidence"^^xsd:anyURI ;
-         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionResidence>
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionNeed"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionNeed>
        ]
      ] [
        fhir:extension ( [
@@ -4222,8 +4467,8 @@
          fhir:link <http://ltc-ig.fhir.tw/Condition/ltc-condition-tube-nasogastric-example> ;
          fhir:reference [ fhir:v "Condition/ltc-condition-tube-nasogastric-example" ]
        ] ;
-       fhir:name [ fhir:v "鼻胃管裝設狀況範例" ] ;
-       fhir:description [ fhir:v "一個鼻胃管裝設狀況的範例，展示如何使用 LTCConditionTube Profile" ] ;
+       fhir:name [ fhir:v "鼻胃管管路狀況範例" ] ;
+       fhir:description [ fhir:v "一個鼻胃管的管路狀況範例，展示如何使用 LTCConditionTube Profile" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionTube"^^xsd:anyURI ;
@@ -4257,6 +4502,20 @@
            fhir:v "index.html"^^xsd:anyURI
          ] ;
          fhir:title [ fhir:v "Home" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "capability-statements.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "capability-statements.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Capability Statements" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [

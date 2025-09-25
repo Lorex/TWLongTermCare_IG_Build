@@ -2,7 +2,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sct: <http://snomed.info/id/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
@@ -18,18 +17,17 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ltc-practitioner-example</b></p><a name=\"ltc-practitioner-example\"> </a><a name=\"hcltc-practitioner-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCPractitioner.html\">長期照顧－照顧服務提供者</a></p></div><p><b>identifier</b>: Medical License number/KMD12345 (use: official, )</p><p><b>active</b>: true</p><p><b>name</b>: 王美玲(Official)</p><p><b>telecom</b>: ph: 02-87654321(Work), <a href=\"mailto:meiling.wang@ltc-hospital.tw\">meiling.wang@ltc-hospital.tw</a></p><p><b>address</b>: 台北市大安區復興南路二段201號(work)</p><p><b>gender</b>: Female</p><p><b>birthDate</b>: 1975-06-10</p><blockquote><p><b>qualification</b></p><p><b>identifier</b>: <code>http://www.mohw.gov.tw/license</code>/PT-2005-0123</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 36682004}\">Physiotherapist</span></p><p><b>period</b>: 2005-07-15 --&gt; (ongoing)</p><p><b>issuer</b>: 衛生福利部</p></blockquote><blockquote><p><b>qualification</b></p><p><b>identifier</b>: <code>http://www.mohw.gov.tw/license</code>/LTC-2010-5678</p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS long-term-care-specialist}\">長期照護專科</span></p><p><b>period</b>: 2010-03-20 --&gt; (ongoing)</p><p><b>issuer</b>: 台灣長期照護學會</p></blockquote></div>"^^rdf:XMLLiteral
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ltc-practitioner-example</b></p><a name=\"ltc-practitioner-example\"> </a><a name=\"hcltc-practitioner-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCPractitioner.html\">長期照顧－照顧服務提供者</a></p></div><p><b>identifier</b>: Medical License number/KMD12345 (use: official, )</p><p><b>active</b>: true</p><p><b>name</b>: 王美玲(Official)</p><p><b>telecom</b>: ph: 02-87654321(Work), <a href=\"mailto:meiling.wang@ltc-hospital.tw\">meiling.wang@ltc-hospital.tw</a></p><p><b>address</b>: 台北市大安區復興南路二段201號(work)</p><p><b>gender</b>: Female</p><p><b>birthDate</b>: 1975-06-10</p></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
      fhir:type [
        fhir:coding ( [
          fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "MD" ] ;
-         fhir:display [ fhir:v "Medical License number" ]
+         fhir:code [ fhir:v "MD" ]
        ] )
      ] ;
-     fhir:system [ fhir:v "http://www.mohw.gov.tw/doctor"^^xsd:anyURI ] ;
+     fhir:system [ fhir:v "http://example.org/fhir/NamingSystem/hospital-license"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "KMD12345" ]
   ] ) ; # 
   fhir:active [ fhir:v true] ; # 
@@ -59,45 +57,7 @@
      fhir:country [ fhir:v "TW" ]
   ] ) ; # 
   fhir:gender [ fhir:v "female"] ; # 
-  fhir:birthDate [ fhir:v "1975-06-10"^^xsd:date] ; # 
-  fhir:qualification ( [
-     fhir:identifier ( [
-       fhir:system [ fhir:v "http://www.mohw.gov.tw/license"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "PT-2005-0123" ]
-     ] ) ;
-     fhir:code [
-       fhir:coding ( [
-         a sct:36682004 ;
-         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "36682004" ] ;
-         fhir:display [ fhir:v "Physiotherapist" ]
-       ] )
-     ] ;
-     fhir:period [
-       fhir:start [ fhir:v "2005-07-15"^^xsd:date ]
-     ] ;
-     fhir:issuer [
-       fhir:display [ fhir:v "衛生福利部" ]
-     ]
-  ] [
-     fhir:identifier ( [
-       fhir:system [ fhir:v "http://www.mohw.gov.tw/license"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "LTC-2010-5678" ]
-     ] ) ;
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "long-term-care-specialist" ] ;
-         fhir:display [ fhir:v "長期照護專科" ]
-       ] )
-     ] ;
-     fhir:period [
-       fhir:start [ fhir:v "2010-03-20"^^xsd:date ]
-     ] ;
-     fhir:issuer [
-       fhir:display [ fhir:v "台灣長期照護學會" ]
-     ]
-  ] ) . # 
+  fhir:birthDate [ fhir:v "1975-06-10"^^xsd:date] . # 
 
 # -------------------------------------------------------------------------------------
 
