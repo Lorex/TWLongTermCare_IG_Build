@@ -1,5 +1,5 @@
 Instance: ltc-questionnaire-response-adl-referral-example
-InstanceOf: LTCQuestionnaireResponseReferralADL
+InstanceOf: LTCQuestionnaireResponseADL
 Title: "轉介ADL問卷回應範例"
 Description: "轉介流程中ADL問卷的回應範例"
 Usage: #example
@@ -9,36 +9,41 @@ Usage: #example
 * questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-adl-assessment-example"
 * authored = "2024-09-15T14:05:00+08:00"
 
-* item[0].linkId = "adl-1"
-* item[0].text = "吃飯"
-* item[0].answer.valueString = "需要部分協助"
-* item[1].linkId = "adl-2"
-* item[1].text = "洗澡"
-* item[1].answer.valueString = "需要部分協助"
-* item[2].linkId = "adl-3"
-* item[2].text = "穿脫衣物"
-* item[2].answer.valueString = "需要部分協助"
-* item[3].linkId = "adl-4"
-* item[3].text = "個人修飾"
-* item[3].answer.valueString = "需要部分協助"
-* item[4].linkId = "adl-5"
-* item[4].text = "大便控制"
-* item[4].answer.valueString = "需要部分協助"
-* item[5].linkId = "adl-6"
-* item[5].text = "小便控制"
-* item[5].answer.valueString = "需要部分協助"
-* item[6].linkId = "adl-7"
-* item[6].text = "上廁所"
-* item[6].answer.valueString = "需要部分協助"
-* item[7].linkId = "adl-8"
-* item[7].text = "移位"
-* item[7].answer.valueString = "需要部分協助"
-* item[8].linkId = "adl-9"
-* item[8].text = "走路"
-* item[8].answer.valueString = "需要部分協助"
-* item[9].linkId = "adl-10"
-* item[9].text = "上下樓梯"
-* item[9].answer.valueString = "需要部分協助"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseADL"
+
+* item[item-E1].linkId = "E1"
+* item[item-E1].text = "吃飯"
+* item[item-E1].answer.valueInteger = 5
+* item[item-E2].linkId = "E2"
+* item[item-E2].text = "洗澡"
+* item[item-E2].answer.valueInteger = 0
+* item[item-E3].linkId = "E3"
+* item[item-E3].text = "穿脫衣物"
+* item[item-E3].answer.valueInteger = 0
+* item[item-E4].linkId = "E4"
+* item[item-E4].text = "個人修飾"
+* item[item-E4].answer.valueInteger = 5
+* item[item-E5].linkId = "E5"
+* item[item-E5].text = "大便控制"
+* item[item-E5].answer.valueInteger = 10
+* item[item-E6].linkId = "E6"
+* item[item-E6].text = "小便控制"
+* item[item-E6].answer.valueInteger = 5
+* item[item-E7].linkId = "E7"
+* item[item-E7].text = "上廁所"
+* item[item-E7].answer.valueInteger = 5
+* item[item-E8].linkId = "E8"
+* item[item-E8].text = "移位"
+* item[item-E8].answer.valueInteger = 10
+* item[item-E9].linkId = "E9"
+* item[item-E9].text = "走路"
+* item[item-E9].answer.valueInteger = 10
+* item[item-E10].linkId = "E10"
+* item[item-E10].text = "上下樓梯"
+* item[item-E10].answer.valueInteger = 5
+* item[item-E11].linkId = "E11"
+* item[item-E11].text = "床椅移位"
+* item[item-E11].answer.valueInteger = 10
 // Missing QuestionnaireResponse Instances for Bundle entries
 
 Instance: ltc-questionnaire-response-communication-example
@@ -51,6 +56,7 @@ Usage: #example
 * subject = Reference(ltc-patient-cms-example)
 * questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-communication"
 * authored = "2024-09-15T10:30:00+08:00"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCommunication"
 
 * item[item-c1].linkId = "C1"
 * item[item-c1].text = "個案意識狀態"
@@ -82,6 +88,7 @@ Usage: #example
 * subject = Reference(ltc-patient-cms-example)
 * questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-memory"
 * authored = "2024-09-15T10:35:00+08:00"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMemory"
 
 * item[item-d0].linkId = "D0"
 * item[item-d0].text = "個案短期記憶力回答狀態"
@@ -113,6 +120,7 @@ Usage: #example
 * subject = Reference(ltc-patient-cms-example)
 * questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-iadl"
 * authored = "2024-09-15T10:40:00+08:00"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseIADL"
 
 * item[item-F1].linkId = "F1"
 * item[item-F1].text = "使用電話"
@@ -156,6 +164,7 @@ Usage: #example
 * subject = Reference(ltc-patient-cms-example)
 * questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-special-care"
 * authored = "2024-09-15T10:45:00+08:00"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSpecialCare"
 
 * item[item-G1].linkId = "G1"
 * item[item-G1].text = "疼痛狀況"
@@ -243,6 +252,7 @@ Usage: #example
 * subject = Reference(ltc-patient-cms-example)
 * questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-society"
 * authored = "2024-09-15T10:50:00+08:00"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSociety"
 
 * item[item-H1a].linkId = "H1a"
 * item[item-H1a].text = "請問個案目前的居住狀況？"
@@ -278,6 +288,7 @@ Usage: #example
 * subject = Reference(ltc-patient-cms-example)
 * questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-mental"
 * authored = "2024-09-15T10:55:00+08:00"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMental"
 
 * item[item-I01].linkId = "I01"
 * item[item-I01].text = "遊走"
@@ -345,6 +356,7 @@ Usage: #example
 * subject = Reference(ltc-patient-cms-example)
 * questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-caregiver-load"
 * authored = "2024-09-15T11:00:00+08:00"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverLoad"
 
 * item[0].linkId = "J01"
 * item[0].text = "睡眠受到干擾"
@@ -376,6 +388,7 @@ Usage: #example
 * subject = Reference(ltc-patient-cms-example)
 * questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-caregiver-support"
 * authored = "2024-09-15T11:05:00+08:00"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverSupport"
 
 * item[item-K1].linkId = "K1"
 * item[item-K1].text = "請問您是否與個案同住？"
@@ -466,6 +479,8 @@ Usage: #example
 * questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-sof"
 * authored = "2024-09-15T14:10:00+08:00"
 
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralSOF"
+
 * item[0].linkId = "sof-1"
 * item[0].text = "體重減輕"
 * item[0].answer.valueBoolean = true
@@ -488,6 +503,8 @@ Usage: #example
 * subject = Reference(ltc-patient-referral-example)
 * questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-caregiver"
 * authored = "2024-09-15T14:20:00+08:00"
+
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralCaregiver"
 
 * item.linkId = "caregiver-1"
 * item.text = "是否有照顧者"

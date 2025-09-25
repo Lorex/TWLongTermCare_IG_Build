@@ -54,4 +54,5 @@ Usage: #example
 
 * note[0].time = "2024-01-15"
 * note[0].text = "主要照顧者為兒子，本國籍，每日照顧時間約8小時，無外籍看護"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCaregiver"
 

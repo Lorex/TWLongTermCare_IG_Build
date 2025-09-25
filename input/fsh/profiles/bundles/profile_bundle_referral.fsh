@@ -73,7 +73,7 @@ Description: "此 Bundle 以臺北市長期照顧管理中心個案服務初篩�
 * entry[careplan].resource only LTCCarePlanReferral
 * entry[questionnaire-adl].resource 1..1 MS
 * entry[questionnaire-adl] ^short = "ADL 失能項目評估"
-* entry[questionnaire-adl].resource only LTCQuestionnaireResponseReferralADL
+* entry[questionnaire-adl].resource only LTCQuestionnaireResponseADL
 * entry[questionnaire-iadl].resource 1..1 MS
 * entry[questionnaire-iadl] ^short = "IADL 失能項目評估"
 * entry[questionnaire-iadl].resource only LTCQuestionnaireResponseIADL
@@ -99,7 +99,7 @@ Description: "此 Bundle 以臺北市長期照顧管理中心個案服務初篩�
 * entry[goal] ^short = "治療目標，為了因應 FHIR 結構要求，此項目為選填。"
 * entry[goal].resource only LTCGoal
 * entry[related-person-extra].resource 1..1 MS
-* entry[related-person-extra] ^short = "相關人員，為了因應 FHIR 結構要求，此項目為選填。"
+* entry[related-person-extra] ^short = "關係人，為了因應 FHIR 結構要求，此項目為選填。"
 * entry[related-person-extra].resource only LTCRelatedPerson
 
 // Example
