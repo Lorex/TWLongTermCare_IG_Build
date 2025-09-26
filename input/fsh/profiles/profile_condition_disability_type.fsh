@@ -14,7 +14,7 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition 
 * code.coding 1..1 MS
 * code.coding ^short = "身心障礙別代碼"
 * code.coding.system 1..1 MS
-* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityTypeCS-TWLTC"
+* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityTypeCS-TWLTC" (exactly)
 * code.coding.code 1..1 MS
 * code.coding.code ^short = "身心障礙類型代碼"
 * severity 0..1 MS

@@ -17,7 +17,7 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Questionna
     item-d1b3 0..1 MS
 * item[item-d0] ^short = "D0. 個案短期記憶力回答狀態"
 * item[item-d0].linkId 1..1 MS
-* item[item-d0].linkId = "D0"
+* item[item-d0].linkId = "D0" (exactly)
 * item[item-d0].text 1..1 MS
 * item[item-d0].text = "個案短期記憶力回答狀態"
 * item[item-d0].answer 1..1 MS
