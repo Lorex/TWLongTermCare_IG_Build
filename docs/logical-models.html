@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Logical Models - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)</span>
+            <br/>
+            <span style="display:inline-block;">0.3.0 - ci-build+trial-use
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">應用說明</a></li>
+  <li><a href="toc.html">目錄</a></li>
+	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="capability-statements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters-and-operation.html">查詢參數及操作定義</a>
+			</li>
+			<li>
+				<a href="logical-models.html">邏輯模型</a>
+			</li>
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles 及 Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+  <li><a href="examples.html">範例</a></li>
+  <li><a href="downloads.html">結構定義與範例檔下載</a></li>
+  <li><a href="security.html">安全性</a></li>
+  <li><a href="validates.html">驗證教學</a></li>
+  <li class="dropdown">
+    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+    </ul>
+  </li>
+  <!-- <li><a href="history.html">版本歷程</a></li> -->
+</ul>      
+
+<style>
+.dropdown-menu li:hover .sub-menu {visibility: visible;}
+.dropdown:hover .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 992px) {
+  table.colsi {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  table.rwd-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  p, a {
+    word-break: break-all;
+  }
+}
+</style>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Logical Models</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Logical Models</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="邏輯模型-logical-models">邏輯模型 (Logical Models)</h3>
+
+<p>本頁面說明台灣長期照顧實作指引（TW LTC IG）中定義的邏輯模型，這些模型提供資料結構的概覽，幫助使用者了解如何準備欄位資料。</p>
+
+<h4 id="邏輯模型概述">邏輯模型概述</h4>
+
+<p>邏輯模型是 FHIR 中用來描述資料結構的概念模型，它們不直接對應到 FHIR 資源，而是提供一個高層次的資料結構視圖，幫助使用者理解如何組織和準備資料。</p>
+
+<h4 id="可用的邏輯模型">可用的邏輯模型</h4>
+
+<h4 id="1-照顧管理評估量表邏輯模型-ltc-cms-model">1. 照顧管理評估量表邏輯模型 (LTC-CMS-Model)</h4>
+
+<p><a href="StructureDefinition-LTCCMSModel.html">照顧管理評估量表邏輯模型</a></p>
+
+<p><strong>用途</strong>: 描述照顧管理評估量表的完整資料結構，包括個案基本資料、照顧者資訊、各項評估量表內容等。</p>
+
+<p><strong>主要組成部分</strong>:</p>
+<ul>
+  <li><strong>醫事機構基本資料</strong>: 包含機構代碼、名稱、地址、聯絡方式</li>
+  <li><strong>個案基本資料</strong>: 包含身分證字號、姓名、出生日期、性別、地址、身心障礙狀況</li>
+  <li><strong>照顧者基本資料</strong>: 包含主要照顧者與次要照顧者資訊</li>
+  <li><strong>評估量表內容</strong>: 包含溝通能力、記憶力、ADL、IADL、特殊照護需求、社會參與、心理狀況、照顧者負荷、照顧者支持等評估</li>
+</ul>
+
+<p><strong>使用場景</strong>: 適用於長期照顧管理中心進行個案評估時，作為資料準備的參考指南。</p>
+
+<h4 id="2-轉介單邏輯模型-ltc-referral-model">2. 轉介單邏輯模型 (LTC-Referral-Model)</h4>
+
+<p><a href="StructureDefinition-LTCRferralModel.html">轉介單邏輯模型</a></p>
+
+<p><strong>用途</strong>: 描述長期照顧管理中心個案服務初篩表/轉介單的完整資料結構。</p>
+
+<p><strong>主要組成部分</strong>:</p>
+<ul>
+  <li><strong>個案基本資料</strong>: 包含身分證字號、姓名、出生日期、性別、地址、緊急聯絡人</li>
+  <li><strong>身心障礙手冊</strong>: 包含是否領有手冊、障礙類別、疾病代碼、等級</li>
+  <li><strong>醫療狀況</strong>: 包含管路狀況、壓傷狀況</li>
+  <li><strong>居住狀況</strong>: 包含居住類型、是否獨居、居住環境、無障礙設施</li>
+  <li><strong>照顧者狀況</strong>: 包含是否有照顧者、照顧者類型、國籍、關係、工作狀況</li>
+  <li><strong>疾病狀況</strong>: 包含主要疾病、ICD-10 代碼、診斷日期、目前狀況</li>
+  <li><strong>問題及需求</strong>: 包含主要問題、照護需求、需求優先級</li>
+  <li><strong>申請服務</strong>: 包含服務類型、描述、頻率、期間</li>
+  <li><strong>功能評估</strong>: 包含 ADL、IADL、衰弱評估、照顧者評估</li>
+  <li><strong>出入院情形</strong>: 包含住院狀態、入院/出院日期、醫院資訊</li>
+  <li><strong>轉介資訊</strong>: 包含填表者/轉介者資訊、簽名</li>
+  <li><strong>填表單位資訊</strong>: 包含單位名稱、地址、電話、聯絡人</li>
+</ul>
+
+<p><strong>使用場景</strong>: 適用於醫療機構或相關單位向長期照顧管理中心轉介個案時，作為轉介單資料準備的參考指南。</p>
+
+<h4 id="邏輯模型與-fhir-profile-的關係">邏輯模型與 FHIR Profile 的關係</h4>
+
+<p>邏輯模型提供高層次的資料結構視圖，而 FHIR Profile 則定義具體的 FHIR 資源結構。兩者相輔相成：</p>
+
+<ol>
+  <li><strong>邏輯模型</strong>: 幫助使用者理解需要準備哪些資料欄位</li>
+  <li><strong>FHIR Profile</strong>: 定義這些資料如何在 FHIR 資源中具體實現</li>
+</ol>
+
+<h4 id="使用建議">使用建議</h4>
+
+<ol>
+  <li><strong>資料準備階段</strong>: 使用邏輯模型了解需要收集的資料欄位</li>
+  <li><strong>實作階段</strong>: 參考對應的 FHIR Profile 了解如何將資料轉換為 FHIR 資源</li>
+  <li><strong>驗證階段</strong>: 使用邏輯模型檢查是否遺漏重要資料欄位</li>
+</ol>
+
+<h4 id="範例">範例</h4>
+
+<p>每個邏輯模型都包含完整的範例，展示如何填寫各個欄位。這些範例可以作為實際使用時的參考模板。</p>
+
+<h4 id="注意事項">注意事項</h4>
+
+<ul>
+  <li>各縣市轉介單格式可能有所不同，轉介單邏輯模型將於後續版本逐步納入各縣市格式</li>
+  <li>邏輯模型中的欄位標示為必填 (MS) 的項目，在實際使用時必須提供</li>
+  <li>建議在實際使用前，先參考對應的 FHIR Profile 了解具體的實作細節</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package fhir.twltc#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 26, 2025 16:13+0800">2025-09-26</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

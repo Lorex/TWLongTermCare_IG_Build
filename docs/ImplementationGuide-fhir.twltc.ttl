@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "TaiwanLongTermCareImplementationGuide"] ; # 
   fhir:title [ fhir:v "臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-09-26T02:46:56+08:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-09-26T16:12:42+08:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "經濟部產業發展署"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "經濟部產業發展署" ] ;
@@ -1053,6 +1053,25 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "RelatedPerson"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/RelatedPerson/ltc-related-person-primary-caregiver-referral-example> ;
+         fhir:reference [ fhir:v "RelatedPerson/ltc-related-person-primary-caregiver-referral-example" ]
+       ] ;
+       fhir:name [ fhir:v "主要照顧者範例（轉介用）" ] ;
+       fhir:description [ fhir:v "轉介單使用之主要照顧者範例，patient 指向轉介個案" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "Questionnaire"
          ]
        ] ) ;
@@ -1505,6 +1524,25 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "Condition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/Condition/ltc-condition-caregiver-family-referral-example> ;
+         fhir:reference [ fhir:v "Condition/ltc-condition-caregiver-family-referral-example" ]
+       ] ;
+       fhir:name [ fhir:v "家庭照顧者狀況範例（轉介用）" ] ;
+       fhir:description [ fhir:v "轉介單使用之家庭照顧者狀況 Condition 範例" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCaregiver"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCaregiver>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "ValueSet"
          ]
        ] ) ;
@@ -1872,6 +1910,49 @@
          a fhir:canonical ;
          fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionCMS"^^xsd:anyURI ;
          fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionCMS>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCCMSModel> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCCMSModel" ]
+       ] ;
+       fhir:name [ fhir:v "照顧管理評估量表邏輯模型" ] ;
+       fhir:description [ fhir:v "此邏輯模型以衛生福利部長期照顧管理中心照顧管理評估量表為基礎，用以描述照顧管理評估量表的資料結構與欄位準備指引。" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "application/fhir+json"
+         ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/Binary/ltc-cms-model-example> ;
+         fhir:reference [ fhir:v "Binary/ltc-cms-model-example" ]
+       ] ;
+       fhir:name [ fhir:v "照顧管理評估量表邏輯模型範例" ] ;
+       fhir:description [ fhir:v "一個照顧管理評估量表邏輯模型的範例，展示如何準備欄位資料" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCCMSModel"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCCMSModel>
        ]
      ] [
        fhir:extension ( [
@@ -3470,6 +3551,31 @@
        ]
      ] [
        fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "application/fhir+json"
+         ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/Binary/ltc-referral-model-example> ;
+         fhir:reference [ fhir:v "Binary/ltc-referral-model-example" ]
+       ] ;
+       fhir:name [ fhir:v "轉介單邏輯模型範例" ] ;
+       fhir:description [ fhir:v "一個轉介單邏輯模型的範例，展示如何準備欄位資料" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCRferralModel"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCRferralModel>
+       ]
+     ] [
+       fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
@@ -3558,6 +3664,44 @@
          a fhir:canonical ;
          fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralCaregiver"^^xsd:anyURI ;
          fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralCaregiver>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Condition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-referral-example> ;
+         fhir:reference [ fhir:v "Condition/ltc-condition-disability-referral-example" ]
+       ] ;
+       fhir:name [ fhir:v "轉介－身心障礙手冊持有狀態範例" ] ;
+       fhir:description [ fhir:v "供轉介單使用的身心障礙手冊持有狀態 Condition 範例" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisability"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisability>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Condition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-type-limb-referral-example> ;
+         fhir:reference [ fhir:v "Condition/ltc-condition-disability-type-limb-referral-example" ]
+       ] ;
+       fhir:name [ fhir:v "轉介－身心障礙類型（肢體）範例" ] ;
+       fhir:description [ fhir:v "供轉介單使用的身心障礙類型（肢體） Condition 範例" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisabilityType"^^xsd:anyURI ;
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisabilityType>
        ]
      ] [
        fhir:extension ( [
@@ -3868,6 +4012,24 @@
        ] ;
        fhir:name [ fhir:v "長期照顧管理中心個案服務初篩表/轉介單文件打包" ] ;
        fhir:description [ fhir:v "此 Bundle 以臺北市長期照顧管理中心個案服務初篩表/轉介單為基礎，用以表述長期照顧管理中心個案服務初篩表/轉介單的文件打包結構。\n\n注意：各縣市轉介單格式可能有所不同，此 Profile 將於後續版本逐步納入各縣市初篩表/轉介單格式並進行整合。" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCRferralModel> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCRferralModel" ]
+       ] ;
+       fhir:name [ fhir:v "長期照顧管理中心個案服務初篩表/轉介單邏輯模型" ] ;
+       fhir:description [ fhir:v "此邏輯模型以臺北市長期照顧管理中心個案服務初篩表/轉介單為基礎，用以描述轉介單的資料結構與欄位準備指引。\n\n注意：各縣市轉介單格式可能有所不同，此邏輯模型將於後續版本逐步納入各縣市初篩表/轉介單格式並進行整合。" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -4550,6 +4712,20 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:url ;
+             fhir:v "examples.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "examples.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Examples" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
              fhir:v "ImplementationGuide-fhir.twltc.html"^^xsd:anyURI
            ]
          ] ) ;
@@ -4564,6 +4740,20 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:url ;
+             fhir:v "logical-models.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "logical-models.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Logical Models" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
              fhir:v "profiles-and-extensions.html"^^xsd:anyURI
            ]
          ] ) ;
@@ -4572,6 +4762,20 @@
            fhir:v "profiles-and-extensions.html"^^xsd:anyURI
          ] ;
          fhir:title [ fhir:v "Profiles and Extensions" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "searchparameters-and-operation.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "searchparameters-and-operation.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Searchparameters and Operation" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
