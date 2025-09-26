@@ -39,10 +39,12 @@
 <ul>
   <li><strong><a href="index.html">應用說明</a></strong>：TW LTC IG 介紹及背景說明。</li>
   <li><strong><a href="artifacts.html">規範文件</a></strong>：TW LTC IG 能力聲明、所有 Profiles 與查詢參數及操作定義、專門術語及 Extensions。
-  <!-- <ul>
+  <ul>
     <li><strong><a href="capabilitystatements.html">能力聲明</a>
       </strong>：應用 TW LTC IG 於建置業務目的使用的 FHIR Server 時，該 FHIR Server 必須及建議應該支援的操作功能。
     </li>
+  </ul>
+  /<!--
     <li><strong><a href="searchparameters-and-operation.html">查詢參數及操作定義</a>
       </strong>：查詢 FHIR Server 的 Profiles時，針對各 Profiles可使用的查詢參數及操作定義。
     </li>
