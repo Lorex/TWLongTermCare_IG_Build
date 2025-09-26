@@ -29,6 +29,7 @@ Description: "此 Bundle 以衛生福利部長期照顧管理中心照顧管理�
     questionnaire-caregiver-support 1..1 MS and
     condition-caregiver 0..1 MS and
     organization 0..1 MS and
+    practitioner 0..1 MS and
     practitioner-role 0..1 MS
 
 * entry[composition].resource 1..1 MS
@@ -72,8 +73,11 @@ Description: "此 Bundle 以衛生福利部長期照顧管理中心照顧管理�
 * entry[condition-caregiver].resource only LTCConditionCaregiver
 * entry[organization].resource 1..1 MS
 * entry[organization] ^short = "組織機構，為了因應 FHIR 結構要求，此項目為選填。"
-* entry[organization].resource only $TWCoreOrganization
-* entry[practitioner-role].resource 1..1 MS
+* entry[organization].resource only Organization-twltc
+* entry[practitioner].resource 0..1 MS
+* entry[practitioner] ^short = "醫護人員，為了因應 FHIR 結構要求，此項目為選填。"
+* entry[practitioner].resource only LTCPractitioner
+* entry[practitioner-role].resource 0..1 MS
 * entry[practitioner-role] ^short = "醫護人員角色，為了因應 FHIR 結構要求，此項目為選填。"
 * entry[practitioner-role].resource only $TWCorePractitionerRole
 
@@ -145,6 +149,9 @@ Usage: #example
 
 * entry[practitioner-role].fullUrl = "http://ltc-ig.fhir.tw/PractitionerRole/ltc-practitioner-role-nurse-example"
 * entry[practitioner-role].resource = ltc-practitioner-role-nurse-example
+
+* entry[practitioner].fullUrl = "http://ltc-ig.fhir.tw/Practitioner/ltc-practitioner-nurse-example"
+* entry[practitioner].resource = ltc-practitioner-nurse-example
 
 
 

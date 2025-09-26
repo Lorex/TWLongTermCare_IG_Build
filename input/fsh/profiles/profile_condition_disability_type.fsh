@@ -46,7 +46,7 @@ Usage: #example
 * severity.coding.code = #255604002
 * severity.coding.display = "Mild (qualifier value)"
 
-* subject = Reference(ltc-patient-chen-ming-hui)
+* subject = Reference(ltc-patient-cms-chen-ming-hui-example)
 
 * onsetDateTime = "2015-08-20"
 

@@ -46,12 +46,35 @@ Usage: #example
 * code.coding.code = #caregiver
 * code.coding.display = "有看護"
 
-* subject = Reference(ltc-patient-chen-ming-hui)
+* subject = Reference(ltc-patient-cms-chen-ming-hui-example)
 
 * onsetDateTime = "2024-01-01"
 
 * recorder = Reference(ltc-practitioner-role-nurse-example)
 
+* note[0].time = "2024-01-15"
+* note[0].text = "主要照顧者為兒子，本國籍，每日照顧時間約8小時，無外籍看護"
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCaregiver"
+
+// Referral-specific caregiver condition example, points to referral patient
+Instance: ltc-condition-caregiver-family-referral-example
+InstanceOf: LTCConditionCaregiver
+Title: "家庭照顧者狀況範例（轉介用）"
+Description: "轉介單使用之家庭照顧者狀況 Condition 範例"
+Usage: #example
+
+* clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
+* clinicalStatus.coding.code = #active
+* verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+* verificationStatus.coding.code = #confirmed
+* category[0].coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"
+* category[0].coding.code = #problem-list-item
+* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionCaregiverCS-TWLTC"
+* code.coding.code = #caregiver
+* code.coding.display = "有看護"
+* subject = Reference(ltc-patient-referral-chen-ming-hui-example)
+* onsetDateTime = "2024-01-01"
+* recorder = Reference(ltc-practitioner-role-nurse-example)
 * note[0].time = "2024-01-15"
 * note[0].text = "主要照顧者為兒子，本國籍，每日照顧時間約8小時，無外籍看護"
 * meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCaregiver"

@@ -46,7 +46,7 @@ Usage: #example
 * code.coding.code = #no-crush
 * code.coding.display = "無壓傷"
 
-* subject = Reference(ltc-patient-chen-ming-hui)
+* subject = Reference(ltc-patient-referral-chen-ming-hui-example)
 * note[0].time = "2024-01-15"
 * note[0].text = "目前無壓傷"
 * meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCrush"
@@ -72,7 +72,7 @@ Usage: #example
 * code.coding.code = #crush
 * code.coding.display = "壓傷"
 
-* subject = Reference(ltc-patient-chen-ming-hui)
+* subject = Reference(ltc-patient-referral-chen-ming-hui-example)
 * note[0].time = "2024-01-15"
 * note[0].text = "骶尾部約 2x2 公分紅腫破皮"
 * meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCrush"

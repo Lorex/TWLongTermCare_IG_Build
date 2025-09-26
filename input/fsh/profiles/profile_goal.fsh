@@ -52,7 +52,7 @@ Usage: #example
 * description.coding.display = "Progressive mobility (regime/therapy)"
 * description.text = "改善住民行動能力"
 
-* subject = Reference(ltc-patient-chen-ming-hui)
+* subject = Reference(ltc-patient-referral-chen-ming-hui-example)
 
 * startDate = "2024-01-15"
 

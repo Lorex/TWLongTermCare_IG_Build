@@ -46,7 +46,7 @@ Usage: #example
 
 * active = true
 
-* patient = Reference(ltc-patient-chen-ming-hui)
+* patient = Reference(ltc-patient-cms-chen-ming-hui-example)
 
 * relationship.coding.system = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
 * relationship.coding.code = #CHILD
@@ -75,4 +75,28 @@ Usage: #example
 * address.postalCode = "10657"
 * address.country = "TW"
 
+* extension[isPrimary].valueBoolean = true
+
+// Referral-specific RelatedPerson pointing to referral patient
+Instance: ltc-related-person-primary-caregiver-referral-example
+InstanceOf: LTCRelatedPerson
+Title: "主要照顧者範例（轉介用）"
+Description: "轉介單使用之主要照顧者範例，patient 指向轉介個案"
+Usage: #example
+
+* active = true
+* patient = Reference(ltc-patient-referral-chen-ming-hui-example)
+* relationship.coding.system = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+* relationship.coding.code = #CHILD
+* relationship.coding.display = "child"
+* name.use = #usual
+* name.text = "陳志強"
+* name.family = "陳"
+* name.given[0] = "志強"
+* telecom[0].system = #phone
+* telecom[0].use = #mobile
+* telecom[0].value = "0987654321"
+* gender = #male
+* address.use = #home
+* address.text = "台北市大安區仁愛路三段55號8樓"
 * extension[isPrimary].valueBoolean = true
