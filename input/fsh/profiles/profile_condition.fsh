@@ -73,7 +73,7 @@ Usage: #example
 * code.coding.display = "Diabetes mellitus type 2"
 * code.text = "第2型糖尿病"
 
-* subject = Reference(ltc-patient-chen-ming-hui)
+* subject = Reference(ltc-patient-referral-chen-ming-hui-example)
 
 * onsetDateTime = "2020-05-15"
 

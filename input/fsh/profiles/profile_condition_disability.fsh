@@ -38,7 +38,7 @@ Usage: #example
 * code.coding.code = #disability-handbook
 * code.coding.display = "有身心障礙手冊"
 
-* subject = Reference(ltc-patient-chen-ming-hui)
+* subject = Reference(ltc-patient-cms-chen-ming-hui-example)
 
 * onsetDateTime = "2015-08-20"
 

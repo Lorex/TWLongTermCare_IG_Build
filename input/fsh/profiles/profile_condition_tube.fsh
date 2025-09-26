@@ -47,7 +47,7 @@ Usage: #example
 * code.coding.code = #nasogastric-tube
 * code.coding.display = "鼻胃管"
 
-* subject = Reference(ltc-patient-chen-ming-hui)
+* subject = Reference(ltc-patient-referral-chen-ming-hui-example)
 
 * onsetDateTime = "2024-01-01"
 

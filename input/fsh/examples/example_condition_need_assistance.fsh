@@ -17,7 +17,7 @@ Usage: #example
 * code.coding.display = "Needs assistance with shaving (finding)"
 * code.text = "需要協助刮鬍"
 
-* subject = Reference(ltc-patient-referral-example)
+* subject = Reference(ltc-patient-referral-chen-ming-hui-example)
 * onsetDateTime = "2024-01-15"
 * recordedDate = "2024-09-15"
 

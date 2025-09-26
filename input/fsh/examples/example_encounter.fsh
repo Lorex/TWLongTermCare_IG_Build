@@ -8,7 +8,7 @@ Usage: #example
 * status = #finished
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "ambulatory"
 
-* subject = Reference(ltc-patient-chen-ming-hui)
+* subject = Reference(ltc-patient-referral-chen-ming-hui-example)
 
 * period.start = "2024-01-10T09:00:00+08:00"
 * period.end = "2024-01-10T11:30:00+08:00"

@@ -38,7 +38,7 @@ Usage: #example
 * code.coding.code = #not-alone
 * code.coding.display = "非獨居"
 
-* subject = Reference(ltc-patient-chen-ming-hui)
+* subject = Reference(ltc-patient-referral-chen-ming-hui-example)
 * note[0].time = "2024-01-15"
 * note[0].text = "與配偶同住"
 * meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionResidence"
