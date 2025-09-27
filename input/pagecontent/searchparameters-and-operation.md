@@ -99,6 +99,13 @@
   - `patient` (reference) - 相關人員主體
   - `relationship` (token) - 關係類型
 
+#### Location
+
+- **查詢參數：**
+  - `name` (string) - 位置名稱
+  - `address` (string) - 位置地址
+  - `status` (token) - 位置狀態
+
 ### 查詢參數類型說明
 
 - **token**: 代碼值，用於搜尋編碼資料
