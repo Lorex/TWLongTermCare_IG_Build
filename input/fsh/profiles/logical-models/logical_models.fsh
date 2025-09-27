@@ -9,3 +9,6 @@ Alias: $LTCRferralModel = http://ltc-ig.fhir.tw/StructureDefinition/LTCRferralMo
 
 // 個案位置監測邏輯模型
 Alias: $LTCLocationModel = http://ltc-ig.fhir.tw/StructureDefinition/LTCLocationModel
+
+// 異常事件警報邏輯模型
+Alias: $LTCAdverseEventModel = http://ltc-ig.fhir.tw/StructureDefinition/LTCAdverseEventModel
