@@ -10,7 +10,7 @@
   "name" : "TaiwanLongTermCareImplementationGuide",
   "title" : "臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)",
   "status" : "active",
-  "date" : "2025-09-26T02:27:53+08:00",
+  "date" : "2025-09-26T16:12:42+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -756,6 +756,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "RelatedPerson"
+      }],
+      "reference" : {
+        "reference" : "RelatedPerson/ltc-related-person-primary-caregiver-referral-example"
+      },
+      "name" : "主要照顧者範例（轉介用）",
+      "description" : "轉介單使用之主要照顧者範例，patient 指向轉介個案",
+      "exampleCanonical" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
       }],
       "reference" : {
@@ -1056,6 +1068,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/ltc-condition-caregiver-family-referral-example"
+      },
+      "name" : "家庭照顧者狀況範例（轉介用）",
+      "description" : "轉介單使用之家庭照顧者狀況 Condition 範例",
+      "exampleCanonical" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionCaregiver"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -1292,6 +1316,34 @@
       "name" : "照顧管理評估量表文件架構範例",
       "description" : "一個照顧管理評估量表文件架構的範例，展示如何使用 LTCCompositionCMS Profile",
       "exampleCanonical" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionCMS"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/LTCCMSModel"
+      },
+      "name" : "照顧管理評估量表邏輯模型",
+      "description" : "此邏輯模型以衛生福利部長期照顧管理中心照顧管理評估量表為基礎，用以描述照顧管理評估量表的資料結構與欄位準備指引。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format",
+        "valueCode" : "application/fhir+json"
+      },
+      {
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/ltc-cms-model-example"
+      },
+      "name" : "照顧管理評估量表邏輯模型範例",
+      "description" : "一個照顧管理評估量表邏輯模型的範例，展示如何準備欄位資料",
+      "exampleCanonical" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCCMSModel"
     },
     {
       "extension" : [{
@@ -2339,6 +2391,22 @@
     },
     {
       "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format",
+        "valueCode" : "application/fhir+json"
+      },
+      {
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/ltc-referral-model-example"
+      },
+      "name" : "轉介單邏輯模型範例",
+      "description" : "一個轉介單邏輯模型的範例，展示如何準備欄位資料",
+      "exampleCanonical" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCRferralModel"
+    },
+    {
+      "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
@@ -2396,6 +2464,30 @@
       "name" : "轉介照顧者問卷回應範例",
       "description" : "轉介流程中照顧者問卷的回應範例",
       "exampleCanonical" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralCaregiver"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/ltc-condition-disability-referral-example"
+      },
+      "name" : "轉介－身心障礙手冊持有狀態範例",
+      "description" : "供轉介單使用的身心障礙手冊持有狀態 Condition 範例",
+      "exampleCanonical" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisability"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/ltc-condition-disability-type-limb-referral-example"
+      },
+      "name" : "轉介－身心障礙類型（肢體）範例",
+      "description" : "供轉介單使用的身心障礙類型（肢體） Condition 範例",
+      "exampleCanonical" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisabilityType"
     },
     {
       "extension" : [{
@@ -2599,6 +2691,18 @@
       },
       "name" : "長期照顧管理中心個案服務初篩表/轉介單文件打包",
       "description" : "此 Bundle 以臺北市長期照顧管理中心個案服務初篩表/轉介單為基礎，用以表述長期照顧管理中心個案服務初篩表/轉介單的文件打包結構。\n\n注意：各縣市轉介單格式可能有所不同，此 Profile 將於後續版本逐步納入各縣市初篩表/轉介單格式並進行整合。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/LTCRferralModel"
+      },
+      "name" : "長期照顧管理中心個案服務初篩表/轉介單邏輯模型",
+      "description" : "此邏輯模型以臺北市長期照顧管理中心個案服務初篩表/轉介單為基礎，用以描述轉介單的資料結構與欄位準備指引。\n\n注意：各縣市轉介單格式可能有所不同，此邏輯模型將於後續版本逐步納入各縣市初篩表/轉介單格式並進行整合。",
       "exampleBoolean" : false
     },
     {
@@ -3044,6 +3148,15 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "examples.html"
+        }],
+        "nameUrl" : "examples.html",
+        "title" : "Examples",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "ImplementationGuide-fhir.twltc.html"
         }],
         "nameUrl" : "ImplementationGuide-fhir.twltc.html",
@@ -3053,10 +3166,28 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "logical-models.html"
+        }],
+        "nameUrl" : "logical-models.html",
+        "title" : "Logical Models",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "profiles-and-extensions.html"
         }],
         "nameUrl" : "profiles-and-extensions.html",
         "title" : "Profiles and Extensions",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "searchparameters-and-operation.html"
+        }],
+        "nameUrl" : "searchparameters-and-operation.html",
+        "title" : "Searchparameters and Operation",
         "generation" : "markdown"
       },
       {

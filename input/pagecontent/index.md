@@ -39,31 +39,31 @@
 <ul>
   <li><strong><a href="index.html">應用說明</a></strong>：TW LTC IG 介紹及背景說明。</li>
   <li><strong><a href="artifacts.html">規範文件</a></strong>：TW LTC IG 能力聲明、所有 Profiles 與查詢參數及操作定義、專門術語及 Extensions。
-  <!-- <ul>
-    <li><strong><a href="capabilitystatements.html">能力聲明</a>
+  <ul>
+    <li><strong><a href="capability-statements.html">能力聲明</a>
       </strong>：應用 TW LTC IG 於建置業務目的使用的 FHIR Server 時，該 FHIR Server 必須及建議應該支援的操作功能。
     </li>
     <li><strong><a href="searchparameters-and-operation.html">查詢參數及操作定義</a>
       </strong>：查詢 FHIR Server 的 Profiles時，針對各 Profiles可使用的查詢參數及操作定義。
     </li>
-    <li><strong><a href="models.html">邏輯模型</a>
+    <li><strong><a href="logical-models.html">邏輯模型</a>
       </strong>：TW LTC IG 的所有邏輯模型（Logical Models），各邏輯模型會定義相應情境下使用的所有資料欄位。為了便於實作者快速理解，資料欄位會使用易於理解的命名，實作者再透過邏輯模型中的功能頁籤「Mappings」瞭解各資料欄位實際使用本IG的哪個Profiles的哪個資料項目（element）。
     </li>
-      <li><strong><a href="profiles-and-extensions.html">FHIR Profiles及Extensions</a></strong>：
-          <ul>
-              <li>TW LTC IG 的所有 Profiles 之定義與範例及Extensions。</li>
-              <li>各資料項目不同實作強制程度的 Terminology。</li>
-              <li>各資料項目的限制（Constraints）。</li>
-              <li>查詢依據 TW LTC IG 實作之 FHIR Server 的特定 Profiles 時，可使用的查詢參數。</li>
-              <li>有哪些 Profiles 具有查詢參數以及 Server 必須支援哪些必要的查詢參數功能。</li>
-          </ul>
-        </li> -->
-    <!-- <li><strong><a href="terminologies.html">專門術語</a>
+    <li><strong><a href="profiles-and-extensions.html">FHIR Profiles及Extensions</a></strong>：
+      <ul>
+          <li>TW LTC IG 的所有 Profiles 之定義與範例及Extensions。</li>
+          <li>各資料項目不同實作強制程度的 Terminology。</li>
+          <li>各資料項目的限制（Constraints）。</li>
+          <li>查詢依據 TW LTC IG 實作之 FHIR Server 的特定 Profiles 時，可使用的查詢參數。</li>
+          <li>有哪些 Profiles 具有查詢參數以及 Server 必須支援哪些必要的查詢參數功能。</li>
+      </ul>
+    </li>
+    <li><strong><a href="terminologies.html">專門術語</a>
       </strong>：TW LTC IG網站所使用的專門術語，包括代碼系統（Code Systems）及值集（Value Sets），內容主要依據全國專門術語服務平臺（TW terminology services）與長期照顧情境使用之術語建置。
-    </li> -->
-  <!-- </ul> -->
   </li>
-  <!-- <li><strong><a href="examples.html">範例</a></strong>：遵從 TW LTC IG 所定義 Profiles 之範例。</li> -->
+  </ul>
+  </li>
+  <li><strong><a href="examples.html">範例</a></strong>：TW LTC IG 的所有範例。</li>
   <li><strong><a href="downloads.html">結構定義與範例檔下載</a></strong>：實作者若不偏好使用 FHIR RESTful API 驗證資料是否遵從 Profiles，可直接下載所需的格式驗證檔，包括 XML、JSON 及 Turtle 三種格式，亦可於此下載完整範例。</li>
   <li><strong><a href="security.html">安全性</a></strong>：主要說明採用 TW LTC IG 網站進行實作時，有關資料存取授權的作法。</li>
   <li><strong><a href="validates.html">驗證教學</a></strong>：如何驗證實作檔是否遵從 TW LTC IG 規範。</li>

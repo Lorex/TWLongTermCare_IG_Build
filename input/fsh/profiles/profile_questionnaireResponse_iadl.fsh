@@ -21,7 +21,7 @@ Description: "此 Profile 定義 FHIR 的 QuestionnaireResponse Resource，以�
    item-F8 1..1 MS
 * item[item-F1] ^short = "F1. 使用電話"
 * item[item-F1].linkId 1..1 MS
-* item[item-F1].linkId = "F1"
+* item[item-F1].linkId = "F1" (exactly)
 * item[item-F1].text 1..1 MS
 * item[item-F1].text = "使用電話"
 * item[item-F1].answer 1..1 MS

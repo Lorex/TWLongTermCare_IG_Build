@@ -41,8 +41,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"15"}
-    h3,h4,h5,h6{--heading-prefix:"15.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"18"}
+    h3,h4,h5,h6{--heading-prefix:"18.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -84,15 +84,15 @@
 			</b>
 		</a>
 		<ul class="dropdown-menu">
-			<!-- <li>
-				<a href="capabilitystatements.html">能力聲明</a>
+			<li>
+				<a href="capability-statements.html">能力聲明</a>
 			</li>
 			<li>
 				<a href="searchparameters-and-operation.html">查詢參數及操作定義</a>
 			</li>
 			<li>
-				<a href="models.html">邏輯模型</a>
-			</li> -->
+				<a href="logical-models.html">邏輯模型</a>
+			</li>
 			<li>
 				<a href="profiles-and-extensions.html">FHIR Profiles 及 Extensions</a>
 			</li>
@@ -101,7 +101,7 @@
 			</li>
 		</ul>
 	</li>
-  <!-- <li><a href="examples.html">範例</a></li> -->
+  <li><a href="examples.html">範例</a></li>
   <li><a href="downloads.html">結構定義與範例檔下載</a></li>
   <li><a href="security.html">安全性</a></li>
   <li><a href="validates.html">驗證教學</a></li>
@@ -193,19 +193,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#1">Behavior: Capability Statements</a>
       </li>
       <li>
-         <a href="#2">Structures: Resource Profiles</a>
+         <a href="#2">Structures: Logical Models</a>
       </li>
       <li>
-         <a href="#3">Structures: Extension Definitions</a>
+         <a href="#3">Structures: Resource Profiles</a>
       </li>
       <li>
-         <a href="#4">Terminology: Value Sets</a>
+         <a href="#4">Structures: Extension Definitions</a>
       </li>
       <li>
-         <a href="#5">Terminology: Code Systems</a>
+         <a href="#5">Terminology: Value Sets</a>
       </li>
       <li>
-         <a href="#6">Example: Example Instances</a>
+         <a href="#6">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#7">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -240,6 +243,34 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </tbody>
    </table>
    <a name="2"> </a>
+   <h3>Structures: Logical Models </h3>
+    <p>These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCCMSModel.html"
+                  title="StructureDefinition/LTCCMSModel">照顧管理評估量表邏輯模型</a>
+            </td>
+            <td>
+<p>此邏輯模型以衛生福利部長期照顧管理中心照顧管理評估量表為基礎，用以描述照顧管理評估量表的資料結構與欄位準備指引。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCRferralModel.html"
+                  title="StructureDefinition/LTCRferralModel">長期照顧管理中心個案服務初篩表/轉介單邏輯模型</a>
+            </td>
+            <td>
+<p>此邏輯模型以臺北市長期照顧管理中心個案服務初篩表/轉介單為基礎，用以描述轉介單的資料結構與欄位準備指引。</p>
+
+<p>注意：各縣市轉介單格式可能有所不同，此邏輯模型將於後續版本逐步納入各縣市初篩表/轉介單格式並進行整合。</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
    <h3>Structures: Resource Profiles </h3>
     <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -989,7 +1020,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="3"> </a>
+   <a name="4"> </a>
    <h3>Structures: Extension Definitions </h3>
     <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -1033,7 +1064,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="4"> </a>
+   <a name="5"> </a>
    <h3>Terminology: Value Sets </h3>
     <p>These define sets of codes used by systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -1246,7 +1277,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="5"> </a>
+   <a name="6"> </a>
    <h3>Terminology: Code Systems </h3>
     <p>These define new code systems used by systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -1408,7 +1439,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="6"> </a>
+   <a name="7"> </a>
    <h3>Example: Example Instances </h3>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
 <table class="grid">
@@ -1461,6 +1492,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="RelatedPerson-ltc-related-person-primary-caregiver-referral-example.html"
+                  title="RelatedPerson/ltc-related-person-primary-caregiver-referral-example">主要照顧者範例（轉介用）</a>
+            </td>
+            <td>
+<p>轉介單使用之主要照顧者範例，patient 指向轉介個案</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Questionnaire-ltc-questionnaire-caregiver-load.html"
                   title="Questionnaire/ltc-questionnaire-caregiver-load">主要照顧者負荷問卷</a>
             </td>
@@ -1475,6 +1515,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>一個家庭照顧者狀況的範例，展示如何使用 LTCConditionCaregiver Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ltc-condition-caregiver-family-referral-example.html"
+                  title="Condition/ltc-condition-caregiver-family-referral-example">家庭照顧者狀況範例（轉介用）</a>
+            </td>
+            <td>
+<p>轉介單使用之家庭照顧者狀況 Condition 範例</p>
 </td>
          </tr>
          <tr>
@@ -1592,6 +1641,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>一個照顧管理評估量表文件架構的範例，展示如何使用 LTCCompositionCMS Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Binary-ltc-cms-model-example.html"
+                  title="Binary/ltc-cms-model-example">照顧管理評估量表邏輯模型範例</a>
+            </td>
+            <td>
+<p>一個照顧管理評估量表邏輯模型的範例，展示如何準備欄位資料</p>
 </td>
          </tr>
          <tr>
@@ -1857,11 +1915,38 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Binary-ltc-referral-model-example.html"
+                  title="Binary/ltc-referral-model-example">轉介單邏輯模型範例</a>
+            </td>
+            <td>
+<p>一個轉介單邏輯模型的範例，展示如何準備欄位資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="QuestionnaireResponse-ltc-questionnaire-response-caregiver-referral-example.html"
                   title="QuestionnaireResponse/ltc-questionnaire-response-caregiver-referral-example">轉介照顧者問卷回應範例</a>
             </td>
             <td>
 <p>轉介流程中照顧者問卷的回應範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ltc-condition-disability-referral-example.html"
+                  title="Condition/ltc-condition-disability-referral-example">轉介－身心障礙手冊持有狀態範例</a>
+            </td>
+            <td>
+<p>供轉介單使用的身心障礙手冊持有狀態 Condition 範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ltc-condition-disability-type-limb-referral-example.html"
+                  title="Condition/ltc-condition-disability-type-limb-referral-example">轉介－身心障礙類型（肢體）範例</a>
+            </td>
+            <td>
+<p>供轉介單使用的身心障礙類型（肢體） Condition 範例</p>
 </td>
          </tr>
          <tr>
@@ -2028,7 +2113,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package fhir.twltc#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 26, 2025 02:28+0800">2025-09-26</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package fhir.twltc#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 26, 2025 16:13+0800">2025-09-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

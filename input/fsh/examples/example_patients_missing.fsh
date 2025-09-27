@@ -1,3 +1,41 @@
+// Referral-specific disability Conditions to avoid profile ambiguity and align with referral bundle
+Instance: ltc-condition-disability-referral-example
+InstanceOf: LTCConditionDisability
+Title: "轉介－身心障礙手冊持有狀態範例"
+Description: "供轉介單使用的身心障礙手冊持有狀態 Condition 範例"
+Usage: #example
+
+* clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
+* clinicalStatus.coding.code = #active
+* verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+* verificationStatus.coding.code = #confirmed
+* category[0].coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"
+* category[0].coding.code = #problem-list-item
+* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityCS-TWLTC"
+* code.coding.code = #disability-handbook
+* subject = Reference(ltc-patient-referral-chen-ming-hui-example)
+* onsetDateTime = "2015-08-20"
+* recorder = Reference(ltc-practitioner-role-nurse-example)
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisability"
+
+Instance: ltc-condition-disability-type-limb-referral-example
+InstanceOf: LTCConditionDisabilityType
+Title: "轉介－身心障礙類型（肢體）範例"
+Description: "供轉介單使用的身心障礙類型（肢體） Condition 範例"
+Usage: #example
+
+* clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
+* clinicalStatus.coding.code = #active
+* verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+* verificationStatus.coding.code = #confirmed
+* category[0].coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"
+* category[0].coding.code = #problem-list-item
+* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityTypeCS-TWLTC"
+* code.coding.code = #07
+* subject = Reference(ltc-patient-referral-chen-ming-hui-example)
+* onsetDateTime = "2015-08-20"
+* recorder = Reference(ltc-practitioner-role-nurse-example)
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisabilityType"
 // Missing Patient instances referenced in other examples
 
 Instance: ltc-patient-cms-example
