@@ -66,3 +66,7 @@
 - [體脂率測量範例](Observation-pasport-observation-body-fat-percentage-example.html)
 - [體重量測範例](Observation-pasport-observation-weight-example.html)
 - [鼻胃管管路狀況範例](Condition-ltc-condition-tube-nasogastric-example.html)
+- [長期照護醫師意見書問卷範例](Questionnaire-ltc-questionnaire-aa12-example.html)
+- [長期照護醫師意見書問卷回覆範例](QuestionnaireResponse-ltc-questionnaire-response-aa12-example.html)
+- [長期照護醫師範例](Practitioner-ltc-practitioner-physician-aa12-example.html)
+- [長期照護醫療機構範例](Organization-ltc-organization-aa12-example.html)
