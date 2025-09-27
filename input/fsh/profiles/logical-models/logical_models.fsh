@@ -6,3 +6,6 @@ Alias: $LTCCMSModel = http://ltc-ig.fhir.tw/StructureDefinition/LTCCMSModel
 
 // 轉介單邏輯模型  
 Alias: $LTCRferralModel = http://ltc-ig.fhir.tw/StructureDefinition/LTCRferralModel
+
+// 個案位置監測邏輯模型
+Alias: $LTCLocationModel = http://ltc-ig.fhir.tw/StructureDefinition/LTCLocationModel
