@@ -88,10 +88,10 @@ Description: "此 Bundle 以臺北市長期照顧管理中心個案服務初篩�
 * entry[encounter].resource only $TWCoreEncounter
 * entry[practitioner].resource 1..1 MS
 * entry[practitioner] ^short = "填表者/轉介者資訊及簽名欄"
-* entry[practitioner].resource only $TWCorePractitioner
+* entry[practitioner].resource only LTCPractitioner
 * entry[organization].resource 1..1 MS
 * entry[organization] ^short = "填表單位資訊"
-* entry[organization].resource only $TWCoreOrganization
+* entry[organization].resource only Organization-twltc
 * entry[practitioner-role].resource 1..1 MS
 * entry[practitioner-role] ^short = "醫護人員角色，為了因應 FHIR 結構要求，此項目為選填。"
 * entry[practitioner-role].resource only $TWCorePractitionerRole
@@ -123,11 +123,11 @@ Usage: #example
 * entry[patient].fullUrl = "http://ltc-ig.fhir.tw/Patient/ltc-patient-referral-chen-ming-hui-example"
 * entry[patient].resource = ltc-patient-referral-chen-ming-hui-example
 
-* entry[condition-disability].fullUrl = "http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-example"
-* entry[condition-disability].resource = ltc-condition-disability-example
+* entry[condition-disability].fullUrl = "http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-referral-example"
+* entry[condition-disability].resource = ltc-condition-disability-referral-example
 
-* entry[condition-disability][+].fullUrl = "http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-type-limb-example"
-* entry[condition-disability][=].resource = ltc-condition-disability-type-limb-example
+* entry[condition-disability][+].fullUrl = "http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-type-limb-referral-example"
+* entry[condition-disability][=].resource = ltc-condition-disability-type-limb-referral-example
 
 * entry[condition-tube].fullUrl = "http://ltc-ig.fhir.tw/Condition/ltc-condition-tube-nasogastric-example"
 * entry[condition-tube].resource = ltc-condition-tube-nasogastric-example
@@ -138,8 +138,8 @@ Usage: #example
 * entry[condition-residence].fullUrl = "http://ltc-ig.fhir.tw/Condition/ltc-condition-residence-not-alone-example"
 * entry[condition-residence].resource = ltc-condition-residence-not-alone-example
 
-* entry[condition-caregiver].fullUrl = "http://ltc-ig.fhir.tw/Condition/ltc-condition-caregiver-family-example"
-* entry[condition-caregiver].resource = ltc-condition-caregiver-family-example
+* entry[condition-caregiver].fullUrl = "http://ltc-ig.fhir.tw/Condition/ltc-condition-caregiver-family-referral-example"
+* entry[condition-caregiver].resource = ltc-condition-caregiver-family-referral-example
 
 * entry[condition-problem].fullUrl = "http://ltc-ig.fhir.tw/Condition/ltc-condition-diabetes-example"
 * entry[condition-problem].resource = ltc-condition-diabetes-example
@@ -178,5 +178,5 @@ Usage: #example
 * entry[goal].fullUrl = "http://ltc-ig.fhir.tw/Goal/ltc-goal-mobility-improvement-example"
 * entry[goal].resource = ltc-goal-mobility-improvement-example
 
-* entry[related-person-extra].fullUrl = "http://ltc-ig.fhir.tw/RelatedPerson/ltc-related-person-primary-caregiver-example"
-* entry[related-person-extra].resource = ltc-related-person-primary-caregiver-example
+* entry[related-person-extra].fullUrl = "http://ltc-ig.fhir.tw/RelatedPerson/ltc-related-person-primary-caregiver-referral-example"
+* entry[related-person-extra].resource = ltc-related-person-primary-caregiver-referral-example

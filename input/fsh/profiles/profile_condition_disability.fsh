@@ -13,7 +13,7 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition 
 * code.coding 1..1 MS
 * code.coding ^short = "領有身心障礙手冊的代碼"
 * code.coding.system 1..1 MS
-* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityCS-TWLTC"
+* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityCS-TWLTC" (exactly)
 * code.coding.code 1..1 MS
 * code.coding.code ^short = "身心障礙持有狀態代碼"
 
@@ -38,7 +38,7 @@ Usage: #example
 * code.coding.code = #disability-handbook
 * code.coding.display = "有身心障礙手冊"
 
-* subject = Reference(ltc-patient-chen-ming-hui)
+* subject = Reference(ltc-patient-cms-chen-ming-hui-example)
 
 * onsetDateTime = "2015-08-20"
 

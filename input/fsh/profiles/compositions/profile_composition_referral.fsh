@@ -48,7 +48,7 @@ Description: "此 Composition 以臺北市長期照顧管理中心個案服務�
 * section[condition-disability].title = "身心障礙手冊"
 * section[condition-disability].entry 1..* MS
 * section[condition-disability].entry ^short = "身心障礙手冊的內容，至少應填寫是否領有身心障礙手冊，如有領有身心障礙手冊，則續填身障類別與疾病代碼 (ICD-10)，如有多個身障疾病則可放入多個 Condition。"
-* section[condition-disability].entry only Reference(LTCConditionDisability or LTCConditionDisabilityType or $TWCoreCondition)
+* section[condition-disability].entry only Reference(LTCConditionDisability or LTCConditionDisabilityType)
 * section[condition-tube] ^short = "管路"
 * section[condition-tube].title = "管路"
 * section[condition-tube].entry 1..1 MS
@@ -88,22 +88,22 @@ Description: "此 Composition 以臺北市長期照顧管理中心個案服務�
 * section[questionnaire-adl].title = "ADL 失能項目評估"
 * section[questionnaire-adl].entry 1..1 MS
 * section[questionnaire-adl].entry ^short = "ADL 失能項目評估"
-* section[questionnaire-adl].entry only Reference(LTCQuestionnaireResponseADL or LTCQuestionnaireResponse)
+* section[questionnaire-adl].entry only Reference(LTCQuestionnaireResponseADL)
 * section[questionnaire-iadl] ^short = "IADL 失能項目評估"
 * section[questionnaire-iadl].title = "IADL 失能項目評估"
 * section[questionnaire-iadl].entry 1..1 MS
 * section[questionnaire-iadl].entry ^short = "IADL 失能項目評估"
-* section[questionnaire-iadl].entry only Reference(LTCQuestionnaireResponseIADL or LTCQuestionnaireResponse)
+* section[questionnaire-iadl].entry only Reference(LTCQuestionnaireResponseIADL)
 * section[questionnaire-sof] ^short = "長者衰弱評估"
 * section[questionnaire-sof].title = "長者衰弱評估"
 * section[questionnaire-sof].entry 1..1 MS
 * section[questionnaire-sof].entry ^short = "長者衰弱評估"
-* section[questionnaire-sof].entry only Reference(LTCQuestionnaireResponseReferralSOF or LTCQuestionnaireResponse)
+* section[questionnaire-sof].entry only Reference(LTCQuestionnaireResponseReferralSOF)
 * section[questionnaire-caregiver] ^short = "照顧者評估"
 * section[questionnaire-caregiver].title = "照顧者評估"
 * section[questionnaire-caregiver].entry 1..1 MS
 * section[questionnaire-caregiver].entry ^short = "照顧者評估"
-* section[questionnaire-caregiver].entry only Reference(LTCQuestionnaireResponseReferralCaregiver or LTCQuestionnaireResponse)
+* section[questionnaire-caregiver].entry only Reference(LTCQuestionnaireResponseReferralCaregiver)
 * section[encounter] ^short = "出入院情形"
 * section[encounter].title = "出入院情形"
 * section[encounter].entry 1..1 MS
@@ -113,12 +113,12 @@ Description: "此 Composition 以臺北市長期照顧管理中心個案服務�
 * section[practitioner].title = "填表者/轉介者資訊及簽名欄"
 * section[practitioner].entry 1..1 MS
 * section[practitioner].entry ^short = "填表者/轉介者資訊及簽名欄"
-* section[practitioner].entry only Reference(LTCPractitioner or $TWCorePractitioner)
+* section[practitioner].entry only Reference(LTCPractitioner)
 * section[organization] ^short = "填表單位資訊"
 * section[organization].title = "填表單位資訊"
 * section[organization].entry 1..1 MS
 * section[organization].entry ^short = "填表單位資訊"
-* section[organization].entry only Reference(LTCOrganization or $TWCoreOrganization)
+* section[organization].entry only Reference(LTCOrganization)
 
 // 新增：關係人（確保 Bundle 中 RelatedPerson 可由 Composition 觸達）
 * section[related-person-extra] ^short = "關係人"
@@ -150,12 +150,14 @@ Usage: #example
 
 * title = "陳明慧女士長期照顧服務轉介單"
 
+* meta.profile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionReferral"
+
 * section[patient].title = "個案基本資料"
 * section[patient].entry[0] = Reference(http://ltc-ig.fhir.tw/Patient/ltc-patient-referral-chen-ming-hui-example)
 
 * section[condition-disability].title = "身心障礙手冊"
-* section[condition-disability].entry[0] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-example)
-* section[condition-disability].entry[1] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-type-limb-example)
+* section[condition-disability].entry[0] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-referral-example)
+* section[condition-disability].entry[1] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-type-limb-referral-example)
 
 * section[condition-tube].title = "管路"
 * section[condition-tube].entry[0] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-tube-nasogastric-example)
@@ -167,7 +169,7 @@ Usage: #example
 * section[condition-residence].entry[0] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-residence-not-alone-example)
 
 * section[condition-caregiver].title = "看護"
-* section[condition-caregiver].entry[0] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-caregiver-family-example)
+* section[condition-caregiver].entry[0] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-caregiver-family-referral-example)
 
 * section[condition-problem].title = "疾病狀況"
 * section[condition-problem].entry[0] = Reference(http://ltc-ig.fhir.tw/Condition/ltc-condition-diabetes-example)
@@ -201,4 +203,4 @@ Usage: #example
 
 // 範例：加入 RelatedPerson 以供 Bundle 連通
 * section[related-person-extra].title = "關係人"
-* section[related-person-extra].entry[0] = Reference(http://ltc-ig.fhir.tw/RelatedPerson/ltc-related-person-primary-caregiver-example)
+* section[related-person-extra].entry[0] = Reference(http://ltc-ig.fhir.tw/RelatedPerson/ltc-related-person-primary-caregiver-referral-example)

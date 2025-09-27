@@ -20,7 +20,7 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Questionna
     item-c5 1..1 MS
 * item[item-c1] ^short = "C1. 個案意識狀態"
 * item[item-c1].linkId 1..1 MS
-* item[item-c1].linkId = "C1"
+* item[item-c1].linkId = "C1" (exactly)
 * item[item-c1].text 1..1 MS
 * item[item-c1].text = "個案意識狀態"
 * item[item-c1].answer 1..1 MS

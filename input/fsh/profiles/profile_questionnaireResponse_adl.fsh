@@ -22,7 +22,7 @@ Description: "此 Profile 定義 FHIR 的 QuestionnaireResponse Resource，以�
     item-E11 1..1 MS
 * item[item-E1] ^short = "E1. 吃飯"
 * item[item-E1].linkId 1..1 MS
-* item[item-E1].linkId = "E1"
+* item[item-E1].linkId = "E1" (exactly)
 * item[item-E1].text 1..1 MS
 * item[item-E1].text = "吃飯"
 * item[item-E1].answer 1..1 MS

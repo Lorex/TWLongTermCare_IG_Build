@@ -265,7 +265,7 @@ Usage: #definition
 // Observation
 * rest.resource[8].type = #Observation
 * rest.resource[8].profile = "http://hl7.org/fhir/StructureDefinition/Observation"
-* rest.resource[8].supportedProfile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationFalling"
+* rest.resource[8].supportedProfile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationFallingHistory"
 * rest.resource[8].supportedProfile[1] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationVitalSigns"
 * rest.resource[8].interaction[0].code = #read
 * rest.resource[8].interaction[0].documentation = "支援讀取 Observation 資源"
@@ -295,7 +295,7 @@ Usage: #definition
 // Organization
 * rest.resource[9].type = #Organization
 * rest.resource[9].profile = "http://hl7.org/fhir/StructureDefinition/Organization"
-* rest.resource[9].supportedProfile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCOrganization"
+* rest.resource[9].supportedProfile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/Organization-twltc"
 * rest.resource[9].interaction[0].code = #read
 * rest.resource[9].interaction[0].documentation = "支援讀取 Organization 資源"
 * rest.resource[9].interaction[1].code = #search-type
@@ -402,17 +402,16 @@ Usage: #definition
 * rest.resource[13].profile = "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
 * rest.resource[13].supportedProfile[0] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse"
 * rest.resource[13].supportedProfile[1] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseADL"
-* rest.resource[13].supportedProfile[2] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMS"
-* rest.resource[13].supportedProfile[3] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCommunication"
-* rest.resource[13].supportedProfile[4] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverLoad"
-* rest.resource[13].supportedProfile[5] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverSupport"
-* rest.resource[13].supportedProfile[6] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMemory"
-* rest.resource[13].supportedProfile[7] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMental"
-* rest.resource[13].supportedProfile[8] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSociety"
-* rest.resource[13].supportedProfile[9] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSpecialCare"
-* rest.resource[13].supportedProfile[10] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseIADL"
-* rest.resource[13].supportedProfile[11] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralCaregiver"
-* rest.resource[13].supportedProfile[12] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralSOF"
+* rest.resource[13].supportedProfile[2] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCommunication"
+* rest.resource[13].supportedProfile[3] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverLoad"
+* rest.resource[13].supportedProfile[4] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverSupport"
+* rest.resource[13].supportedProfile[5] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMemory"
+* rest.resource[13].supportedProfile[6] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMental"
+* rest.resource[13].supportedProfile[7] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSociety"
+* rest.resource[13].supportedProfile[8] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSpecialCare"
+* rest.resource[13].supportedProfile[9] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseIADL"
+* rest.resource[13].supportedProfile[10] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralCaregiver"
+* rest.resource[13].supportedProfile[11] = "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralSOF"
 * rest.resource[13].interaction[0].code = #read
 * rest.resource[13].interaction[0].documentation = "支援讀取 QuestionnaireResponse 資源"
 * rest.resource[13].interaction[1].code = #search-type

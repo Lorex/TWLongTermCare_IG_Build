@@ -33,7 +33,7 @@ Usage: #example
 * category[AssessPlan].coding.system = "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw"
 * category[AssessPlan].coding.code = #assess-plan
 
-* subject = Reference(ltc-patient-chen-ming-hui)
+* subject = Reference(ltc-patient-referral-chen-ming-hui-example)
 
 * period.start = "2024-02-01"
 * period.end = "2024-08-01"

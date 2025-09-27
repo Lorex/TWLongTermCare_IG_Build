@@ -52,7 +52,7 @@ Usage: #example
 
 * status = #completed
 
-* subject = Reference(ltc-patient-chen-ming-hui)
+* subject = Reference(ltc-patient-cms-chen-ming-hui-example)
 
 * authored = "2024-01-15T10:30:00+08:00"
 
