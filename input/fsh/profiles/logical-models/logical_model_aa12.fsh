@@ -1,5 +1,5 @@
-Logical: PhysicianOpinionModel
-Id: PhysicianOpinionModel
+Logical: AA12Model
+Id: AA12Model
 Title: "長期照護醫師意見書 (AA12) 邏輯模型"
 Description: "此邏輯模型以衛生福利部 AA12 長期照護醫師意見書為基礎，用以描述醫師意見書的資料結構與欄位準備指引。"
 
@@ -61,12 +61,11 @@ Description: "此邏輯模型以衛生福利部 AA12 長期照護醫師意見書
 * physicalMentalStatus 0..1 string "身心狀態或特殊需要註記事項" "身心狀態或特殊需要的註記事項"
 
 // Mapping
-Mapping: PhysicianOpinionModelMapping
-Id: PhysicianOpinionModelMapping
+Mapping: AA12ModelMapping
+Id: AA12ModelMapping
 Title: "長期照護醫師意見書邏輯模型對應"
 Description: "此對應說明長期照護醫師意見書邏輯模型與 FHIR 資源的對應關係"
-Source: PhysicianOpinionModel
-Target: "http://hl7.org/fhir/StructureDefinition"
+Source: AA12Model
 
 * formHeader.formDate -> "QuestionnaireResponse.authored"
 * formHeader.formNumber -> "QuestionnaireResponse.identifier.value"
@@ -76,15 +75,15 @@ Target: "http://hl7.org/fhir/StructureDefinition"
 * applicant.gender -> "Patient.gender"
 * applicant.address -> "Patient.address.text"
 * applicant.phone -> "Patient.telecom.value"
-* physician.name -> "Practitioner.name.text"
-* physician.institutionName -> "Organization.name"
-* physician.institutionAddress -> "Organization.address.text"
-* physician.institutionPhone -> "Organization.telecom.value"
-* physician.institutionFax -> "Organization.telecom.value"
+* physician.name -> "TWCorePractitioner.name.text"
+* physician.institutionName -> "TWCoreOrganization.name"
+* physician.institutionAddress -> "TWCoreOrganization.address.text"
+* physician.institutionPhone -> "TWCoreOrganization.telecom.value"
+* physician.institutionFax -> "TWCoreOrganization.telecom.value"
 * basicInformation.lastConsultationDate -> "QuestionnaireResponse.item.where(linkId='last-consultation-date').answer.valueDate"
 * basicInformation.opinionCount -> "QuestionnaireResponse.item.where(linkId='opinion-count').answer.valueCoding"
 * basicInformation.previousOpinionDate -> "QuestionnaireResponse.item.where(linkId='previous-opinion-date').answer.valueDate"
-* basicInformation.consultationDepartments -> "PractitionerRole.specialty"
+* basicInformation.consultationDepartments -> "TWCorePractitionerRole.specialty"
 * diseaseDiagnosis.diseases.diseaseName -> "QuestionnaireResponse.item.where(linkId='disease-name').answer.valueString"
 * diseaseDiagnosis.diseases.icdCode -> "QuestionnaireResponse.item.where(linkId='disease-icd').answer.valueString"
 * diseaseDiagnosis.diseases.onsetDate -> "QuestionnaireResponse.item.where(linkId='disease-onset').answer.valueDate"

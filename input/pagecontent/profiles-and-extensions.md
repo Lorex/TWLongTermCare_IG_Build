@@ -48,6 +48,9 @@
 - [照顧者問卷回覆（LTC QuestionnaireResponse Referral Caregiver）](StructureDefinition-LTCQuestionnaireResponseReferralCaregiver.html)
 - [衰弱評估問卷回覆（LTC QuestionnaireResponse Referral SOF）](StructureDefinition-LTCQuestionnaireResponseReferralSOF.html)
 
+#### 長期照護醫師意見書 (AA12)
+- [長期照護醫師意見書問卷回覆（LTC QuestionnaireResponse AA12）](StructureDefinition-LTCQuestionnaireResponseAA12.html)
+
 #### 運動處方
 - [服務請求（PA Sport ServiceRequest）](StructureDefinition-PASportServiceRequest.html)
 - [病史（PA Sport Condition Medical History）](StructureDefinition-PASportConditionMedicalHistory.html)
