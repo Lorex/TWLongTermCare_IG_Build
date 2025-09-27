@@ -59,6 +59,7 @@
 - [長期照顧就醫紀錄範例](Encounter-ltc-encounter-example.html)
 - [長期照顧機構範例](Organization-ltc-organization-example.html)
 - [個案位置監測範例](Location-ltc-location-example.html)
+- [異常事件警報範例](AdverseEvent-ltc-adverse-event-example.html)
 - [長期照顧護理師範例](Practitioner-ltc-practitioner-nurse-example.html)
 - [長期照顧護理師角色範例](PractitionerRole-ltc-practitioner-role-nurse-example.html)
 - [長照醫事人員範例](Practitioner-ltc-practitioner-example.html)

@@ -106,6 +106,20 @@
   - `address` (string) - 位置地址
   - `status` (token) - 位置狀態
 
+#### AdverseEvent
+
+- **查詢參數：**
+  - `identifier` (token) - 異常事件識別碼
+  - `subject` (reference) - 異常事件主體
+  - `event` (token) - 異常事件類型
+  - `seriousness` (token) - 異常事件臨床嚴重程度
+  - `severity` (token) - 異常事件嚴重程度等級
+  - `date` (date) - 異常事件發生日期
+  - `actuality` (token) - 異常事件實際性
+  - `outcome` (token) - 異常事件結果
+  - `detected` (date) - 異常事件偵測日期
+  - `recorded` (date) - 異常事件記錄日期
+
 ### 查詢參數類型說明
 
 - **token**: 代碼值，用於搜尋編碼資料
