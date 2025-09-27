@@ -56,13 +56,14 @@
 
 | 項目 | 類型 | Code system | Code | Unit | Unit Code (UCUM Code) |
 |---|---|---|---|---|---|
-| 身高 | Observation Vital Signs | LoincCode | 3137-7 | cm | cm |
+| 一組生命徵象檢驗檢查 | Observation Vital Signs | LoincCode | 85353-1 | - | - |
+| 身高 | Observation Vital Signs | LoincCode | 8302-2 | cm | cm |
 | 體重 | Observation Vital Signs | LoincCode | 29463-7 | kg | kg |
-| 體溫 | Observation Vital Signs | LoincCode | 8310-5 | Cel | Cel |
-| 血壓 | Observation Vital Signs | LoincCode | 35094-2 | mmHg | mmHg |
-| 收縮壓 | Observation Vital Signs | LoincCode | 8480-6 | mmHg | mmHg |
-| 舒張壓 | Observation Vital Signs | LoincCode | 8462-4 | mmHg | mmHg |
-| 心率 | Observation Vital Signs | LoincCode | 8867-4 | beats/min | beats/min |
+| 體溫 | Observation Vital Signs | LoincCode | 8310-5 | 攝氏 | Cel |
+| 血壓 | Observation Vital Signs | LoincCode | 85354-9 | mmHg | mm[Hg] |
+| 收縮壓 | Observation Vital Signs | LoincCode | 8480-6 | mmHg | mm[Hg] |
+| 舒張壓 | Observation Vital Signs | LoincCode | 8462-4 | mmHg | mm[Hg] |
+| 心率 | Observation Vital Signs | LoincCode | 8867-4 | /分鐘 | /min |
 | 進食後血糖 | Observation Laboratory Data | LoincCode | 87422-2 | mg/dL | mg/dL |
 | 進食前血糖 | Observation Laboratory Data | LoincCode | 88365-2 | mg/dL | mg/dL |
 
