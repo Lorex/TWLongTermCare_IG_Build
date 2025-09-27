@@ -23,6 +23,7 @@
 - [身心障礙手冊持有狀態（LTC Condition Disability）](StructureDefinition-LTCConditionDisability.html)
 - [身心障礙類型（LTC Condition Disability Type）](StructureDefinition-LTCConditionDisabilityType.html)
 - [關係人（LTC RelatedPerson）](StructureDefinition-LTCRelatedPerson.html)
+- [個案位置監測（LTC Location）](StructureDefinition-Location-twltc.html)
 
 #### 照顧管理評估量表
 - [照顧管理評估量表文件打包（LTC Bundle CMS）](StructureDefinition-LTCBundleCMS.html)
