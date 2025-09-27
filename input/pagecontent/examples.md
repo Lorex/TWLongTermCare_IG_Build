@@ -69,4 +69,4 @@
 - [長期照護醫師意見書問卷範例](Questionnaire-ltc-questionnaire-aa12-example.html)
 - [長期照護醫師意見書問卷回覆範例](QuestionnaireResponse-ltc-questionnaire-response-aa12-example.html)
 - [長期照護醫師範例](Practitioner-ltc-practitioner-physician-aa12-example.html)
-- [長期照護醫療機構範例](Organization-ltc-organization-aa12-example.html)
+- [長期照護醫療機構範例](Organization-twcore-organization-hospital-aa12-example.html)

@@ -46,7 +46,7 @@
 
 #### 3. 長期照護醫師意見書邏輯模型 (LTC-AA12-Model)
 
-<a href="StructureDefinition-LTCAA12Model.html">長期照護醫師意見書邏輯模型</a>
+<a href="StructureDefinition-AA12Model.html">長期照護醫師意見書邏輯模型</a>
 
 **用途**: 描述長期照護醫師意見書的完整資料結構，包括個案基本資料、醫師資訊、醫療機構資訊、診斷與治療建議等。
 
