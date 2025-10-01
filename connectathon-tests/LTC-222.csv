@@ -1,0 +1,5 @@
+Step ID,說明,應執行項目,驗證,應檢附
+LTC-222-00,"前置：取得 Access Token","先通過 LTC-011，完成 Authorization Code Flow 取得 access_token（或以 refresh_token 刷新），保存供後續使用。","具備有效 Authorization: Bearer {token}，可成功呼叫 [base]/metadata。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-222-01,"查詢 Location","使用 Location ID 查詢特定位置資料。","HTTP 200；返回對應 Location。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-222-02,"條件查詢：依個案（若以 Patient-managed 位置）","查詢與特定個案相關的位置資料。","HTTP 200；結果合理。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-222-03,"時間篩選（若使用 Observation 表示位置）","查詢指定時間範圍內的位置相關資料。","HTTP 200；結果符合時間範圍。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"

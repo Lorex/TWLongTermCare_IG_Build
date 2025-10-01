@@ -1,0 +1,7 @@
+Step ID,說明,應執行項目,驗證,應檢附
+LTC-112-00,"前置：取得 Access Token","先通過 LTC-011，完成 Authorization Code Flow 取得 access_token（或以 refresh_token 刷新），保存供後續使用。","具備有效 Authorization: Bearer {token}，可成功呼叫 [base]/metadata。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-112-01,"查詢單筆 Observation","使用 Observation ID 查詢特定檢驗檢查資料。","HTTP 200；返回對應 Observation。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-112-02,"條件查詢：依個案","使用 Patient ID 查詢該病人的檢驗檢查資料。","HTTP 200；bundle.entry 至少一筆。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-112-03,"條件查詢：依時間","查詢指定時間範圍內的檢驗檢查資料。","HTTP 200；符合時間範圍。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-112-04,"歷史查詢（_history）","查詢特定檢驗檢查資料的版本歷史。","HTTP 200；返回版本歷史。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-112-05,"分頁與排序（選擇性）","查詢檢驗檢查資料並使用分頁與排序功能。","HTTP 200；有下一頁連結或排序正確。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"

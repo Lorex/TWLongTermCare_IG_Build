@@ -1,0 +1,7 @@
+Step ID,說明,應執行項目,驗證,應檢附
+LTC-011-01,"準備授權參數","備妥 Authorization Server 的授權端點、Token 端點、client_id、client_secret、redirect_uri、測試帳號密碼。","參數完整且可使用。","測試帳號、client 資料截圖或文件。"
+LTC-011-02,"執行 Authorization Code Flow (A,B)","瀏覽器導向授權端點，登入測試帳號，授權 client，取得 authorization code。","成功取得 code，redirect_uri 帶有 code 參數。","授權畫面與 redirect URI（含 code）的截圖。"
+LTC-011-03,"以 code 換取 Access Token (D,E)","向 Token 端點送出 POST（grant_type=authorization_code、code、redirect_uri、client 認證）。","HTTP 200；回應 JSON 內含 access_token、token_type=bearer、expires_in。","Token 回應 JSON。"
+LTC-011-04,"驗證 Token 可用性","使用取得的 Token 查詢 FHIR 伺服器的 metadata 資訊。","HTTP 200；回應為 CapabilityStatement。","請求與回應截圖/JSON。"
+LTC-011-05,"記錄 Token 與時效","保存 access_token 與有效期限，供後續交易使用。","後續交易均可帶入 Authorization 標頭。","存檔的 token 與到期時間。"
+LTC-011-06,"（選擇性）刷新 Token","若有 refresh_token，測試以 refresh_token 取得新 token。","HTTP 200；取得新的 access_token。","刷新請求與回應 JSON。"
