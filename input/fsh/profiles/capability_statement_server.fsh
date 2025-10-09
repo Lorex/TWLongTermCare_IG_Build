@@ -8,7 +8,7 @@ Usage: #definition
 * publisher = "經濟部產業發展署"
 * kind = #instance
 * software.name = "臺灣長期照顧實作指引伺服端"
-* software.version = "0.3.0"
+* software.version = "0.4.0"
 * software.releaseDate = "2024-12-19"
 * implementation.description = "臺灣長期照顧實作指引伺服端實作"
 * implementation.url = "http://ltc-ig.fhir.tw"

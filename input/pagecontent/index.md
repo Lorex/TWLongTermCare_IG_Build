@@ -23,7 +23,7 @@
 
 <p>TW LTC IG 中所有Profiles的FMM等級如下：
   <ol>
-    <li>0.3.0 版本的所有 Profiles 均為 FMM0</li>
+    <li>0.4.0 版本的所有 Profiles 均為 FMM0</li>
   </ol>
 </p>
 </div>
@@ -91,7 +91,7 @@
 	<tbody>
 			<tr>
         <td style="vertical-align: middle;">作者</td>
-            <td style="vertical-align: middle;">v0.0.1 ~ v0.3.0</td>
+            <td style="vertical-align: middle;">v0.0.1 ~ v0.4.0</td>
         <td rowspan="8" style="vertical-align: middle;">經濟部產業發展署<br />
         （Industrial Development Administration, Ministry of Economic Affairs）</td>
         <td style="vertical-align: middle;">楊宇凡（Yu-Fan Yang）</td>
@@ -103,7 +103,7 @@
 			</tr>
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
-            <td style="vertical-align: middle;">v0.3.0</td>
+            <td style="vertical-align: middle;">v0.4.0</td>
         <td style="vertical-align: middle;">曹軒寧（Hsuan-Ning Tsao）</td>
         <td style="vertical-align: middle;">矽塔資訊服務有限公司<br >（Sitatech Information Services Co., Ltd）</td>
         <td style="vertical-align: middle;">
@@ -121,7 +121,7 @@
 			</tr>
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
-            <td style="vertical-align: middle;">v0.0.1 ~ v0.3.0</td>
+            <td style="vertical-align: middle;">v0.0.1 ~ v0.4.0</td>
         <td style="vertical-align: middle;">李祥豪（Siang-Hao Lee）</td>
         <td style="vertical-align: middle;">九日生行動健康科技公司<br >（9Rise International Mobile Health Technology Co., Ltd.）</td>
         <td style="vertical-align: middle;">
@@ -130,7 +130,7 @@
 			</tr>
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
-            <td style="vertical-align: middle;">v0.3.0</td>
+            <td style="vertical-align: middle;">v0.3.0 ~ 0.4.0</td>
         <td style="vertical-align: middle;">楊宗翰（Chung-Han Yang）</td>
         <td style="vertical-align: middle;">九日生行動健康科技公司<br >（9Rise International Mobile Health Technology Co., Ltd.）</td>
         <td style="vertical-align: middle;">
@@ -139,7 +139,7 @@
 			</tr>
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
-            <td style="vertical-align: middle;">v0.0.1 ~ v0.3.0</td>
+            <td style="vertical-align: middle;">v0.0.1 ~ v0.4.0</td>
         <td style="vertical-align: middle;">黃薰慧（Hsun-Hui Huang）</td>
         <td style="vertical-align: middle;">財團法人資訊工業策進會 - 數位轉型研究院<br >（Institute for Information Industry - Digital Transformation Research Institute）</td>
         <td style="vertical-align: middle;">
