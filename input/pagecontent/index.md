@@ -69,6 +69,7 @@
   <li><strong><a href="validates.html">驗證教學</a></strong>：如何驗證實作檔是否遵從 TW LTC IG 規範。</li>
   <li><strong><a href="connectathon.html">
     2025 專案聯測松</a></strong>：本規範與 2025 專案聯測松的賽道整合資訊。</li>
+  <li><strong><a href="connectathon-result.html">聯測松結果</a></strong>：2025 專案聯測松的驗證結果。</li>
   <!-- <li><strong><a href="https://twcore.mohw.gov.tw/ig/twcore/history.html">版本異動</a></strong>：若 TW LTC IG 網站的版本有所異動，皆可透過<a href="https://twcore.mohw.gov.tw/ig/twcore/history.html">異動說明頁</a>得以瞭解版本間的異動差異。</li> -->
 </ul>
 </div>
