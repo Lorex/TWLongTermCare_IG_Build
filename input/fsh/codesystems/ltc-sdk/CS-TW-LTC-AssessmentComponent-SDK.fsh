@@ -1,0 +1,13 @@
+CodeSystem: CS_TW_LTC_AssessmentComponent_SDK
+Id: cs-tw-ltc-assessment-component-sdk
+Title: "長照 SDK－評估核定摘要－欄位碼"
+* ^url = "https://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component-sdk"
+* ^version = "0.1.0"
+* ^status = #draft
+* ^content = #complete
+* #cms-level        "CMS 等級"
+* #welfare-identity "長照福利身分"
+* #assessment-type  "評估類型"
+* #plan-start       "計畫起始日"
+* #plan-end         "計畫結束日"
+* #approval-status  "核定狀態"
