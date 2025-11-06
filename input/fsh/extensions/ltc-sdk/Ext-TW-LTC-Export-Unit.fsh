@@ -1,5 +1,5 @@
-Extension: Ext_TW_LTC_Export_Unit
-Id: Ext_TW_LTC_Export_Unit
+Extension: ExtTWLTCExportUnit
+Id: Ext-TW-LTC-Export-Unit
 Title: "長照 SDK－單位資訊（PIA/PIB/CENTER/MAN_*）"
 // * ^url = http://ltc-ig.fhir.tw/StructureDefinition/Ext_TW_LTC_Export_Unit
 * ^context[0].type = #element

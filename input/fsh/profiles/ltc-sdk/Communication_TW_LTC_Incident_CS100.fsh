@@ -1,5 +1,5 @@
-Profile: Communication_TW_LTC_Incident_CS100
-Parent: Communication_TW_LTC_Incident
+Profile: CommunicationTWLTCIncidentCS100
+Parent: CommunicationTWLTCIncident
 Id: Communication-TW-LTC-Incident-CS100
 Title: "長照 SDK－異常服務紀錄（CS100）"
 Description: "對應 CS100 報表/頁面使用之事件/異常通報記錄；在通用 Incident Base 之上僅標示 CS100 情境，便於與 SDK/其他情境區分。"

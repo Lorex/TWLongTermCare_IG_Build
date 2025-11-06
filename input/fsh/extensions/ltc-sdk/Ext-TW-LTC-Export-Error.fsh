@@ -1,5 +1,5 @@
-Extension: Ext_TW_LTC_Export_Error
-Id: Ext_TW_LTC_Export_Error
+Extension: ExtTWLTCExportError
+Id: Ext-TW-LTC-Export-Error
 Title: "長照 SDK－錯誤訊息"
 // * ^url = http://ltc-ig.fhir.tw/StructureDefinition/Ext_TW_LTC_Export_Error
 * value[x] only string

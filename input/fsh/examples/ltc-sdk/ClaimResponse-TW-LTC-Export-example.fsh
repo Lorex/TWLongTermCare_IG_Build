@@ -1,5 +1,5 @@
 Instance: ClaimResponse-TW-LTC-Export-example
-InstanceOf: Claim-TW-LTC-Export
+InstanceOf: ClaimTWLTCExport
 Title: "長照 SDK－照管PLAN—計畫與金額（示例）"
 Usage: #example
 

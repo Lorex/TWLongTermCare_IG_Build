@@ -1,4 +1,4 @@
-Profile: EpisodeOfCare_TW_LTC_Case_CS100
+Profile: EpisodeOfCareTWLTCCaseCS100
 Parent: EpisodeOfCare
 Id: EpisodeOfCare-TW-LTC-Case-CS100
 Title: "長照案件（CS100 專用版）"
@@ -34,4 +34,4 @@ Description: """
 
 // 申請來源（如 CS100 有提供）
 * extension 0..*
-* extension contains Ext_TW_LTC_Case_Source named source 0..1 MS
+* extension contains ExtTWLTCCaseSource named source 0..1 MS

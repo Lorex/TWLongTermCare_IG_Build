@@ -1,4 +1,4 @@
-Extension: Ext_TW_LTC_Export_CaseNo
+Extension: ExtTWLTCExportCaseNo
 Id: Ext-TW-LTC-Export-CaseNo
 Title: "長照 SDK－案件編號（CASENO）"
 // * ^url = http://ltc-ig.fhir.tw/StructureDefinition/Ext_TW_LTC_Export_CaseNo

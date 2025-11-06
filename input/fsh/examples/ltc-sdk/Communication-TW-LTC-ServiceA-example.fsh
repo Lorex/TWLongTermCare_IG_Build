@@ -1,5 +1,5 @@
 Instance: Communication-TW-LTC-ServiceA-example
-InstanceOf: Communication_TW_LTC_ServiceA
+InstanceOf: CommunicationTWLTCServiceA
 Title: "照管SERVICE_A—電訪（示例）"
 Usage: #example
 * status = #completed

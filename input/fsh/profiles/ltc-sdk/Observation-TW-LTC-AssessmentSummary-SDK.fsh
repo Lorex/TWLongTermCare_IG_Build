@@ -1,4 +1,4 @@
-Profile: Observation_TW_LTC_AssessmentSummary_SDK
+Profile: ObservationTWLTCAssessmentSummarySDK
 Parent: Observation
 Id: Observation-TW-LTC-AssessmentSummary-SDK
 Title: "長照 SDK－評估核定摘要"

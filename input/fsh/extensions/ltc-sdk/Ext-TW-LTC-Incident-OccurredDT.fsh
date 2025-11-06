@@ -1,4 +1,4 @@
-Extension: Ext_TW_LTC_Incident_OccurredDateTime
+Extension: ExtTWLTCIncidentOccurredDateTime
 Id: ext-tw-ltc-incident-occurreddatetime
 Title: "長照 SDK－異常紀錄－發生日期時間"
 Description: "事件實際發生的日期時間（不同於通報時間）。"

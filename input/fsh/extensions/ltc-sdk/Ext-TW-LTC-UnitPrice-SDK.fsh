@@ -1,4 +1,4 @@
-Extension: Ext_TW_LTC_UnitPrice_SDK
+Extension: ExtTWLTCUnitPriceSDK
 Id: ext-tw-ltc-unitprice-sdk
 Title: "單價"
 // * ^url = "https://ltc-ig.fhir.tw/StructureDefinition/ext-tw-ltc-unitprice-sdk"

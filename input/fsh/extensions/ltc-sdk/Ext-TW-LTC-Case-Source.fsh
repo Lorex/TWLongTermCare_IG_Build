@@ -1,4 +1,4 @@
-Extension: Ext_TW_LTC_Case_Source
+Extension: ExtTWLTCCaseSource
 Id: ext-tw-ltc-case-source
 Title: "長照 SDK－案件－申請來源"
 Description: "案件（EpisodeOfCare）之申請來源。"

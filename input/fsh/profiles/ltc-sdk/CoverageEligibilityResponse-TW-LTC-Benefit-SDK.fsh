@@ -1,4 +1,4 @@
-Profile: CoverageEligibilityResponse_TW_LTC_Benefit_SDK
+Profile: CoverageEligibilityResponseTWLTCBenefitSDK
 Parent: CoverageEligibilityResponse
 Id: CoverageEligibilityResponse-TW-LTC-Benefit-SDK
 Title: "長照 SDK－核定額度"

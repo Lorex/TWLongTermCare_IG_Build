@@ -1,4 +1,4 @@
-Extension: Ext_TW_LTC_Incident_TextType
+Extension: ExtTWLTCIncidentTextType
 Id: ext-tw-ltc-incident-texttype
 Title: "長照 SDK－異常紀錄－文字區塊標記"
 Description: "標記 payload.contentString 的用途（描述/過程/後續處理/建議）。"

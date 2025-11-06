@@ -1,4 +1,4 @@
-Profile: Claim-TW-LTC-Export
+Profile: ClaimTWLTCExport
 Parent: Claim
 Id: Claim-TW-LTC-Export
 Title: "長照 SDK－照管全量匯出（Claim）"

@@ -1,4 +1,4 @@
-Profile: Composition_TW_LTC_CS100_CaseSummary
+Profile: CompositionTWLTCCS100CaseSummary
 Parent: Composition
 Id: Composition-TW-LTC-CS100-CaseSummary
 Title: "個案總查詢（CS100 對應版）Case Summary"
@@ -53,31 +53,31 @@ Description: """
 * section[case].code.text = "CS100-LTC Case (EpisodeOfCare)"
 * section[case].title = "CS100-案件資訊"
 * section[case].entry 1..*
-* section[case].entry only Reference(EpisodeOfCare-TW-LTC-Case-CS100)
+* section[case].entry only Reference(EpisodeOfCareTWLTCCaseCS100)
 
 // C. 評估核定摘要
 * section[assessment].code.text = "CS100-Assessment Summary"
 * section[assessment].title = "CS100-評估核定摘要"
 * section[assessment].entry 0..*
-* section[assessment].entry only Reference(Observation-TW-LTC-AssessmentSummary)
+* section[assessment].entry only Reference(ObservationTWLTCAssessmentSummary)
 
 // D. 照顧計畫
 * section[careplan].code.text = "CS100-CarePlan"
 * section[careplan].title = "CS100-照顧計畫"
 * section[careplan].entry 0..*
-* section[careplan].entry only Reference(CarePlan-TW-LTC-Plan-SDK)
+* section[careplan].entry only Reference(CarePlanTWLTCPlanSDK)
 
 // E. 核定額度
 * section[eligibility].code.text = "CS100-Eligibility/Benefit"
 * section[eligibility].title = "CS100-核定額度"
 * section[eligibility].entry 0..*
-* section[eligibility].entry only Reference(CoverageEligibilityResponse-TW-LTC-Benefit)
+* section[eligibility].entry only Reference(CoverageEligibilityResponseTWLTCBenefit)
 
 // F. 近期事件（通報）
 * section[incidents].code.text = "CS100-Recent Incidents"
 * section[incidents].title = "CS100-近期異動/通報"
 * section[incidents].entry 0..*
-* section[incidents].entry only Reference(Communication-TW-LTC-Incident)
+* section[incidents].entry only Reference(CommunicationTWLTCIncident)
 
 // Profile: Composition_TW_LTC_CS100_CaseSummary
 // Parent: Composition

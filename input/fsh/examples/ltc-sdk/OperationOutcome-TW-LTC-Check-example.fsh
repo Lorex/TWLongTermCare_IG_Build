@@ -1,5 +1,5 @@
 Instance: OperationOutcome-TW-LTC-Check-example
-InstanceOf: OperationOutcome_TW_LTC_Check
+InstanceOf: OperationOutcomeTWLTCCheck
 Title: "照管QP_O—跨月檢核（示例）"
 Usage: #example
 * extension[caseNo].valueString = "111301921"

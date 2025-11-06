@@ -1,5 +1,5 @@
 Instance: Claim-TW-LTC-Export-Dispatch-example
-InstanceOf: Claim-TW-LTC-Export
+InstanceOf: ClaimTWLTCExport
 Title: "長照 SDK－照管CASE—可提供服務（示例）"
 Usage: #example
 

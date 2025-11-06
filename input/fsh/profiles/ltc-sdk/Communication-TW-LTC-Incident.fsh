@@ -1,4 +1,4 @@
-Profile: Communication_TW_LTC_Incident
+Profile: CommunicationTWLTCIncident
 Parent: Communication
 Id: Communication-TW-LTC-Incident
 Title: "長照 SDK－異常服務紀錄（Incident Report）"

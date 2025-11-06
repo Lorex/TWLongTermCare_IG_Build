@@ -1,5 +1,5 @@
-Profile: CarePlan_TW_LTC_Plan_CS100
-Parent: CarePlan_TW_LTC_Plan_SDK
+Profile: CarePlanTWLTCPlanCS100
+Parent: CarePlanTWLTCPlanSDK
 Id: CarePlan-TW-LTC-Plan-CS100
 Title: "長照 SDK－照顧計畫（CS100）"
 Description: "為避免與 SDK 版混淆而提供之 CS100 命名；規則同 CarePlan-TW-LTC-Plan-SDK。"

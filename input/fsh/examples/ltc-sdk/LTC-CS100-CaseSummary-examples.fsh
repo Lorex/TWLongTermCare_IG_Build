@@ -125,34 +125,34 @@ Usage: #example
 * identifier.value  = "CS-20251106-0001"
 
 // A 基本
-* section[0].code = LOINC#8716-3 "Patient demographics"
-* section[0].title = "CS100-個案基本"
-* section[0].entry[0] = Reference(ex-pt)
+* section[patient].code = LOINC#8716-3 "Patient demographics"
+* section[patient].title = "CS100-個案基本"
+* section[patient].entry[0] = Reference(ex-pt)
 
 // B 案件
-* section[+].code.text = "CS100-LTC Case (EpisodeOfCare)"
-* section[=].title = "CS100-案件資訊"
-* section[=].entry[0] = Reference(ex-case-cs100)
+* section[case].code.text = "CS100-LTC Case (EpisodeOfCare)"
+* section[case].title = "CS100-案件資訊"
+* section[case].entry[0] = Reference(ex-case-cs100)
 
 // C 評估摘要
-* section[+].code.text = "CS100-Assessment Summary"
-* section[=].title = "CS100-評估核定摘要"
-* section[=].entry[0] = Reference(ex-assessment)
+* section[assessment].code.text = "CS100-Assessment Summary"
+* section[assessment].title = "CS100-評估核定摘要"
+* section[assessment].entry[0] = Reference(ex-assessment)
 
 // D 照顧計畫
-* section[+].code.text = "CS100-CarePlan"
-* section[=].title = "CS100-照顧計畫"
-* section[=].entry[0] = Reference(ex-plan)
+* section[careplan].code.text = "CS100-CarePlan"
+* section[careplan].title = "CS100-照顧計畫"
+* section[careplan].entry[0] = Reference(ex-plan)
 
 // E 核定額度
-* section[+].code.text = "CS100-Eligibility/Benefit"
-* section[=].title = "CS100-核定額度"
-* section[=].entry[0] = Reference(ex-elig)
+* section[eligibility].code.text = "CS100-Eligibility/Benefit"
+* section[eligibility].title = "CS100-核定額度"
+* section[eligibility].entry[0] = Reference(ex-elig)
 
 // F 近期通報
-* section[+].code.text = "CS100-Recent Incidents"
-* section[=].title = "CS100-近期異動/通報"
-* section[=].entry[0] = Reference(ex-incident)
+* section[incidents].code.text = "CS100-Recent Incidents"
+* section[incidents].title = "CS100-近期異動/通報"
+* section[incidents].entry[0] = Reference(ex-incident)
 
 
 // Instance: ex-pt

@@ -1,4 +1,4 @@
-Profile: EpisodeOfCare_TW_LTC_Case_SDK
+Profile: EpisodeOfCareTWLTCCaseSDK
 Parent: EpisodeOfCare
 Id: EpisodeOfCare-TW-LTC-Case-SDK
 Title: "長照 SDK－長照案件"
