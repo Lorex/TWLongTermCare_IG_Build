@@ -1,6 +1,7 @@
 // ===== Patient / Organization / Practitioner =====
 Instance: ex-pt-sdk
 InstanceOf: Patient
+Description: "長照 SDK 範例用的個案（Patient）資源。"
 Usage: #example
 * identifier.system = "https://example.org/mrn"
 * identifier.value = "A0001"
@@ -8,11 +9,13 @@ Usage: #example
 
 Instance: ex-org-sdk
 InstanceOf: Organization
+Description: "長照 SDK 範例用的長期照顧管理中心（Organization）資源。"
 Usage: #example
 * name = "OOO長期照顧管理中心"
 
 Instance: ex-prac-sdk
 InstanceOf: Practitioner
+Description: "長照 SDK 範例用的照顧管理專員（Practitioner）資源。"
 Usage: #example
 * name.text = "李小華"
 
@@ -20,6 +23,7 @@ Usage: #example
 // ===== EpisodeOfCare (LTC 案件) =====
 Instance: ex-case-sdk
 InstanceOf: EpisodeOfCare-TW-LTC-Case-SDK
+Description: "長照 SDK 範例用的長照案件（EpisodeOfCare）資源。"
 Usage: #example
 * status = CS_TW_LTC_CaseStatus_SDK#active "服務中"
 * period.start = "2025-01-01"
@@ -32,6 +36,7 @@ Usage: #example
 // ===== Observation (評估核定摘要) =====
 Instance: ex-assess-sdk
 InstanceOf: Observation-TW-LTC-AssessmentSummary-SDK
+Description: "長照 SDK 範例用的評估核定摘要（Observation）資源。"
 Usage: #example
 * status = #final
 * code = LOINC#8357-6 "Assessment note"
@@ -47,6 +52,7 @@ Usage: #example
 // ===== Coverage（核付對象保險覆蓋；供 CER 必填 coverage 參照）=====
 Instance: ex-coverage-sdk
 InstanceOf: Coverage
+Description: "長照 SDK 範例用的保險覆蓋（Coverage）資源。"
 Usage: #example
 * status = #active
 * beneficiary = Reference(ex-pt-sdk)
@@ -56,6 +62,7 @@ Usage: #example
 // ===== CoverageEligibilityRequest（CER 必填 request 參照）=====
 Instance: ex-elig-req-sdk
 InstanceOf: CoverageEligibilityRequest
+Description: "長照 SDK 範例用的核定請求（CoverageEligibilityRequest）資源。"
 Usage: #example
 * status = #active
 * purpose = #benefits
@@ -68,6 +75,7 @@ Usage: #example
 // ===== CoverageEligibilityResponse（核定額度：修正所有必填與 allowedDecimal）=====
 Instance: ex-elig-sdk
 InstanceOf: CoverageEligibilityResponse-TW-LTC-Benefit-SDK
+Description: "長照 SDK 範例用的核定額度回應（CoverageEligibilityResponse）資源。"
 Usage: #example
 * status = #active
 * purpose = #benefits
@@ -97,6 +105,7 @@ Usage: #example
 // ===== CarePlan（照顧計畫：補 activity.detail.status；count 不可為 0）=====
 Instance: ex-plan-sdk
 InstanceOf: CarePlan-TW-LTC-Plan-SDK
+Description: "長照 SDK 範例用的照顧計畫（CarePlan）資源。"
 Usage: #example
 * status = #active
 * intent = #plan

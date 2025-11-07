@@ -1,6 +1,7 @@
 Instance: ClaimResponse-TW-LTC-Export-example
 InstanceOf: ClaimTWLTCExport
 Title: "長照 SDK－照管PLAN—計畫與金額（示例）"
+Description: "長照 SDK 照管PLAN計畫與金額回應的範例，展示長照系統對服務計畫的回應。"
 Usage: #example
 
 * status = #active
@@ -27,7 +28,7 @@ Usage: #example
 
 // ITEM 1：BB03 23×840=19320
 * item[+].sequence = 1
-* item[=].productOrService = ttps://ltc-ig.fhir.tw/CodeSystem/tw-ltc-service-item#BB03
+* item[=].productOrService = https://ltc-ig.fhir.tw/CodeSystem/tw-ltc-service-item#BB03
 * item[=].quantity.value = 23
 * item[=].unitPrice.value = 840
 * item[=].unitPrice.currency = #TWD

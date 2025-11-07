@@ -1,6 +1,7 @@
 Instance: Claim-TW-LTC-Export-Dispatch-example
 InstanceOf: ClaimTWLTCExport
 Title: "長照 SDK－照管CASE—可提供服務（示例）"
+Description: "長照 SDK 照管CASE可提供服務的範例，展示如何使用 Claim 資源記錄個案可提供的服務項目。"
 Usage: #example
 
 * status = #active
@@ -25,12 +26,12 @@ Usage: #example
 
 // 只列代碼（補 sequence）
 * item[+].sequence = 1
-* item[=].productOrService = ttps://ltc-ig.fhir.tw/CodeSystem/tw-ltc-service-item#BA04
+* item[=].productOrService = https://ltc-ig.fhir.tw/CodeSystem/tw-ltc-service-item#BA04
 * item[+].sequence = 2
-* item[=].productOrService = ttps://ltc-ig.fhir.tw/CodeSystem/tw-ltc-service-item#BA07
+* item[=].productOrService = https://ltc-ig.fhir.tw/CodeSystem/tw-ltc-service-item#BA07
 * item[+].sequence = 3
-* item[=].productOrService = ttps://ltc-ig.fhir.tw/CodeSystem/tw-ltc-service-item#BA18
+* item[=].productOrService = https://ltc-ig.fhir.tw/CodeSystem/tw-ltc-service-item#BA18
 * item[+].sequence = 4
-* item[=].productOrService = ttps://ltc-ig.fhir.tw/CodeSystem/tw-ltc-service-item#BA02
+* item[=].productOrService = https://ltc-ig.fhir.tw/CodeSystem/tw-ltc-service-item#BA02
 * item[+].sequence = 5
-* item[=].productOrService = ttps://ltc-ig.fhir.tw/CodeSystem/tw-ltc-service-item#BA13
+* item[=].productOrService = https://ltc-ig.fhir.tw/CodeSystem/tw-ltc-service-item#BA13

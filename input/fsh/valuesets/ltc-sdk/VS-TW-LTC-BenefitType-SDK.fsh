@@ -1,6 +1,7 @@
 ValueSet: VS_TW_LTC_BenefitType_SDK
 Id: vs-tw-ltc-benefit-type-sdk
 Title: "長照 SDK－金流欄位"
+Description: "此 ValueSet 用於表示長照 SDK 中的金流欄位。"
 * ^url = "https://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-benefit-type-sdk"
 * ^version = "2025-11-06"
 * ^status = #draft

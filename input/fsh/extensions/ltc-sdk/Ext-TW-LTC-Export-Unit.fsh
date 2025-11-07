@@ -1,6 +1,7 @@
 Extension: ExtTWLTCExportUnit
 Id: Ext-TW-LTC-Export-Unit
 Title: "長照 SDK－單位資訊（PIA/PIB/CENTER/MAN_*）"
+Description: "此 Extension 用於表示長照 SDK 的單位資訊，包含特約單位、照管中心、個管員等相關資訊，適用於 Claim 及 ClaimResponse 資源。"
 // * ^url = http://ltc-ig.fhir.tw/StructureDefinition/Ext_TW_LTC_Export_Unit
 * ^context[0].type = #element
 * ^context[=].expression = "Claim"

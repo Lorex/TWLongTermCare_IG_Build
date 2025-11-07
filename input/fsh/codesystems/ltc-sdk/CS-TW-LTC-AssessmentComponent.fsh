@@ -1,6 +1,7 @@
 CodeSystem: CS_TW_LTC_AssessmentComponent
 Id: cs-tw-ltc-assessment-component
 Title: "長照 SDK－評估核定摘要－欄位碼"
+Description: "此 CodeSystem 定義長照 SDK 評估核定摘要的欄位碼。"
 * ^url = "https://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component"
 * ^version = "0.1.0"
 * ^status = #draft

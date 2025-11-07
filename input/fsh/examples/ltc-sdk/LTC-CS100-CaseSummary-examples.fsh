@@ -1,6 +1,7 @@
 // 基本參照
 Instance: ex-pt
 InstanceOf: Patient
+Description: "長照 CS100 範例用的個案（Patient）資源。"
 Usage: #example
 * identifier.system = "https://example.org/mrn"
 * identifier.value = "A0001"
@@ -8,17 +9,20 @@ Usage: #example
 
 Instance: ex-org
 InstanceOf: Organization
+Description: "長照 CS100 範例用的長照管理中心（Organization）資源。"
 Usage: #example
 * name = "某某長照管理中心"
 
 Instance: ex-prac
 InstanceOf: Practitioner
+Description: "長照 CS100 範例用的個案管理員（Practitioner）資源。"
 Usage: #example
 * name.text = "張個管"
 
 // r1: 案件（CS100）
 Instance: ex-case-cs100
 InstanceOf: EpisodeOfCare-TW-LTC-Case-CS100
+Description: "長照 CS100 範例用的長照案件（EpisodeOfCare）資源。"
 Usage: #example
 * status = #active
 * period.start = "2025-10-01"
@@ -31,6 +35,7 @@ Usage: #example
 // r2: 評估核定摘要
 Instance: ex-assessment
 InstanceOf: Observation-TW-LTC-AssessmentSummary
+Description: "長照 CS100 範例用的評估核定摘要（Observation）資源。"
 Usage: #example
 * status = #final
 * code = LOINC#8357-6 "Assessment note"
@@ -44,6 +49,7 @@ Usage: #example
 // === CER 必填用的 Coverage 與 CoverageEligibilityRequest ===
 Instance: ex-coverage
 InstanceOf: Coverage
+Description: "長照 CS100 範例用的保險覆蓋（Coverage）資源。"
 Usage: #example
 * status = #active
 * beneficiary = Reference(ex-pt)
@@ -51,6 +57,7 @@ Usage: #example
 
 Instance: ex-elig-req
 InstanceOf: CoverageEligibilityRequest
+Description: "長照 CS100 範例用的核定請求（CoverageEligibilityRequest）資源。"
 Usage: #example
 * status = #active
 * purpose = #benefits
@@ -62,6 +69,7 @@ Usage: #example
 // r3: 核定額度（補齊 requestor / request / outcome / insurer / insurance.coverage）
 Instance: ex-elig
 InstanceOf: CoverageEligibilityResponse-TW-LTC-Benefit
+Description: "長照 CS100 範例用的核定額度回應（CoverageEligibilityResponse）資源。"
 Usage: #example
 * status = #active
 * purpose = #benefits
@@ -86,6 +94,7 @@ Usage: #example
 // r4: 計畫（補 activity.detail.status）
 Instance: ex-plan
 InstanceOf: CarePlan-TW-LTC-Plan-SDK
+Description: "長照 CS100 範例用的照顧計畫（CarePlan）資源。"
 Usage: #example
 * status = #active
 * intent = #plan
@@ -101,6 +110,7 @@ Usage: #example
 // 通報（補必填 reasonCode）
 Instance: ex-incident
 InstanceOf: Communication-TW-LTC-Incident
+Description: "長照 CS100 範例用的異常通報（Communication）資源。"
 Usage: #example
 * status = #completed
 * subject = Reference(ex-pt)
@@ -113,6 +123,7 @@ Usage: #example
 // CS100 個案總查詢 Composition（移除不存在的 identifier slice，補 author）
 Instance: ex-case-summary-cs100
 InstanceOf: Composition-TW-LTC-CS100-CaseSummary
+Description: "長照 CS100 個案總查詢的範例，展示如何使用 Composition 資源整合個案的完整資訊。"
 Usage: #example
 * status = #final
 * type = LOINC#11506-3 "Patient Summary"

@@ -1,6 +1,7 @@
 Instance: Claim-TW-LTC-Export-example
 InstanceOf: ClaimTWLTCExport
 Title: "長照 SDK－照管PLAN—計畫與金額（示例）"
+Description: "長照 SDK 照管PLAN計畫與金額的範例，展示如何使用 Claim 資源記錄長照服務計畫與費用。"
 Usage: #example
 
 * status = #active
