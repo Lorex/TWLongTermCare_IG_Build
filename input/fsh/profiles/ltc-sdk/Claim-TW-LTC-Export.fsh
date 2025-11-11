@@ -32,7 +32,7 @@ Description: "以 Claim 承載照管匯出的服務代碼、數量/單價/小計
 // --- 服務明細 ---
 * item 1..* MS
 * item.productOrService 1..1 MS
-* item.productOrService from http://ltc-ig.fhir.tw/ValueSet/VS-TW-LTC-ServiceItem (preferred)
+* item.productOrService from https://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-service-item (preferred)
 * item.quantity 0..1
 * item.unitPrice 0..1
 * item.net 0..1

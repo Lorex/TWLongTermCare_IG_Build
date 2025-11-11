@@ -7,6 +7,6 @@ Usage: #example
 * sent = "2025-07-14T10:30:00+08:00"
 * category = http://ltc-ig.fhir.tw/CodeSystem/LTCServiceActivity#TEL
 * topic = https://ltc-ig.fhir.tw/CodeSystem/tw-ltc-service-item#AA02
-* subject = Reference(Patient/example)
+* subject = Reference(ex-pt-sdk)
 * extension[caseNo].valueString = "106305420"
 * note[0].text = "評估人員：吳麗竹；提醒：下週安排家訪。"

@@ -40,7 +40,7 @@ Usage: #example
 
 // ITEM 2：DA01 以總額表示
 * item[+].sequence = 2
-* item[=].productOrService = ttps://ltc-ig.fhir.tw/CodeSystem/tw-ltc-service-item#DA01
+* item[=].productOrService = https://ltc-ig.fhir.tw/CodeSystem/tw-ltc-service-item#DA01
 * item[=].quantity.value = 1680
 * item[=].unitPrice.value = 1
 * item[=].unitPrice.currency = #TWD

@@ -115,7 +115,7 @@ Usage: #example
 * status = #completed
 * subject = Reference(ex-pt)
 * sent = "2025-11-05T10:30:00+08:00"
-* reasonCode[0].coding[0].system = "https://ltc-ig.fhir.tw/ValueSet/VS_TW_LTC_Incident_Category"
+* reasonCode[0].coding[0].system = "https://ltc-ig.fhir.tw/CodeSystem/CS_TW_LTC_Incident_Category"
 * reasonCode[0].coding[0].code = #fall
 * reasonCode[0].coding[0].display = "跌倒"
 * payload[0].contentString = "巡視時發現個案暈眩跌坐於地，已聯繫家屬與機構。"
