@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCQuestionnaireResp
   "name" : "LTCQuestionnaireResponse",
   "title" : "長期照顧－問卷回覆",
   "status" : "active",
-  "date" : "2026-02-28T05:34:23+08:00",
+  "date" : "2026-02-28T07:16:04+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

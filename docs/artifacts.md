@@ -162,7 +162,7 @@ These define sets of codes used by systems conforming to this implementation gui
 | [壓傷狀況值集](ValueSet-ReferralConditionCrushVS-TWLTC.md) | 個案壓傷的狀況 |
 | [居住狀況值集](ValueSet-ReferralConditionResidenceVS-TWLTC.md) | 個案的居住狀況 |
 | [教育程度值集](ValueSet-EducationStatusVS-TWLTC.md) | 用以表述教育程度之值集，包含教育程度之描述內容。 |
-| [照顧目標描述值集](ValueSet-GoalDescriptionVS-TWLTC.md) | 照顧目標的描述值集，用以表述長期照顧情境中涉及之照顧目標描述內容。本值集比照 US Core Goal Profile 中的 description 元素定義，引用 SNOMED CT 與 LOINC 等術語系統。 |
+| [照顧目標描述值集](ValueSet-GoalDescriptionVS-TWLTC.md) | 照顧目標的描述值集，用以表述長期照顧情境中涉及之照顧目標描述內容。本值集列舉臺灣長期照顧情境常用之 SNOMED CT 照顧目標代碼，綁定強度為 extensible，實作者可依需求使用其他 SNOMED CT 或 LOINC 代碼。 |
 | [疾病嚴重度擴展值集](ValueSet-ConditionSeverityVS-TWLTC.md) | 用以表述疾病嚴重度之擴展值集，包含疾病嚴重度之描述內容。配合身心障礙手冊障礙程度分級，包含輕度、中度、重度、極重度等代碼。 |
 | [看護狀況值集](ValueSet-ReferralConditionCaregiverVS-TWLTC.md) | 個案雇用看護的狀況 |
 | [管路狀況值集](ValueSet-ReferralConditionTubeVS-TWLTC.md) | 個案持有管路的狀況 |

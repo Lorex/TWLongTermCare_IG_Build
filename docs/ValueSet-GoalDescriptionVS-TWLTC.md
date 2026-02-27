@@ -12,7 +12,7 @@
 | Active as of 2024-08-25 | *Computable Name*:GoalDescriptionVSTWLTC |
 
  
-照顧目標的描述值集，用以表述長期照顧情境中涉及之照顧目標描述內容。本值集比照 US Core Goal Profile 中的 description 元素定義，引用 SNOMED CT 與 LOINC 等術語系統。 
+照顧目標的描述值集，用以表述長期照顧情境中涉及之照顧目標描述內容。本值集列舉臺灣長期照顧情境常用之 SNOMED CT 照顧目標代碼，綁定強度為 extensible，實作者可依需求使用其他 SNOMED CT 或 LOINC 代碼。 
 
  **References** 
 
@@ -23,8 +23,6 @@
  
 
 ### Expansion
-
-No Expansion for this valueset (not supported by Publication Tooling)
 
 -------
 
@@ -62,13 +60,70 @@ No Expansion for this valueset (not supported by Publication Tooling)
       "value" : "https://www.ida.gov.tw/"
     }]
   }],
-  "description" : "照顧目標的描述值集，用以表述長期照顧情境中涉及之照顧目標描述內容。本值集比照 US Core Goal Profile 中的 description 元素定義，引用 SNOMED CT 與 LOINC 等術語系統。",
+  "description" : "照顧目標的描述值集，用以表述長期照顧情境中涉及之照顧目標描述內容。本值集列舉臺灣長期照顧情境常用之 SNOMED CT 照顧目標代碼，綁定強度為 extensible，實作者可依需求使用其他 SNOMED CT 或 LOINC 代碼。",
   "compose" : {
     "include" : [{
-      "system" : "http://snomed.info/sct"
-    },
-    {
-      "system" : "http://loinc.org"
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "710950005",
+        "display" : "Advancing mobility"
+      },
+      {
+        "code" : "370885003",
+        "display" : "Manage activities of daily living (ADLS)"
+      },
+      {
+        "code" : "386373004",
+        "display" : "Nutrition therapy"
+      },
+      {
+        "code" : "718361005",
+        "display" : "Weight management program"
+      },
+      {
+        "code" : "278414003",
+        "display" : "Pain management"
+      },
+      {
+        "code" : "386296001",
+        "display" : "Fall prevention"
+      },
+      {
+        "code" : "702474001",
+        "display" : "Cognitive rehabilitation therapy"
+      },
+      {
+        "code" : "5154007",
+        "display" : "Speech therapy"
+      },
+      {
+        "code" : "385942004",
+        "display" : "Wound care management"
+      },
+      {
+        "code" : "710054004",
+        "display" : "Maintaining skin integrity"
+      },
+      {
+        "code" : "385991005",
+        "display" : "Wellness promotion"
+      },
+      {
+        "code" : "182832007",
+        "display" : "Drug administration"
+      },
+      {
+        "code" : "430193006",
+        "display" : "Medication reconciliation"
+      },
+      {
+        "code" : "133921002",
+        "display" : "Emotional support"
+      },
+      {
+        "code" : "129008009",
+        "display" : "Bowel control"
+      }]
     }]
   }
 }

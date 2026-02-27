@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCCompositionCMS.cs
   "name" : "LTCCompositionCMS",
   "title" : "照顧管理評估量表文件架構",
   "status" : "active",
-  "date" : "2026-02-28T05:34:23+08:00",
+  "date" : "2026-02-28T07:16:04+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

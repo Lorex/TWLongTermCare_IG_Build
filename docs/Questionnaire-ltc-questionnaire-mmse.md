@@ -37,7 +37,7 @@ Mini-Mental State Examination [MMSE] - 簡易智能狀態測驗
   "title" : "簡易智能狀態測驗",
   "status" : "active",
   "subjectType" : ["Patient"],
-  "date" : "2026-02-28T05:34:23+08:00",
+  "date" : "2026-02-28T07:16:04+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -20,7 +20,7 @@ Profile: [轉介單－服務種類](StructureDefinition-LTCCarePlanReferral.md)
 
 **author**: [PractitionerRole Registered nurse](PractitionerRole-ltc-practitioner-role-nurse-example.md)
 
-**goal**: [Goal: lifecycleStatus = active; description = Progressive mobility (regime/therapy); start[x] = 2024-01-15; note = 住民目前需要部分協助才能行走，期望透過復健訓練達到獨立行走的目標](Goal-ltc-goal-mobility-improvement-example.md)
+**goal**: [Goal: lifecycleStatus = active; description = Advancing mobility; start[x] = 2024-01-15; note = 住民目前需要部分協助才能行走，期望透過復健訓練達到獨立行走的目標](Goal-ltc-goal-mobility-improvement-example.md)
 
 > **activity**
 

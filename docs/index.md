@@ -92,7 +92,7 @@ TW LTC IG 中所有Profiles的FMM等級如下：
   "name" : "TaiwanLongTermCareImplementationGuide",
   "title" : "臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)",
   "status" : "active",
-  "date" : "2026-02-28T05:34:23+08:00",
+  "date" : "2026-02-28T07:16:04+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -1584,7 +1584,7 @@ TW LTC IG 中所有Profiles的FMM等級如下：
         "reference" : "ValueSet/GoalDescriptionVS-TWLTC"
       },
       "name" : "照顧目標描述值集",
-      "description" : "照顧目標的描述值集，用以表述長期照顧情境中涉及之照顧目標描述內容。本值集比照 US Core Goal Profile 中的 description 元素定義，引用 SNOMED CT 與 LOINC 等術語系統。",
+      "description" : "照顧目標的描述值集，用以表述長期照顧情境中涉及之照顧目標描述內容。本值集列舉臺灣長期照顧情境常用之 SNOMED CT 照顧目標代碼，綁定強度為 extensible，實作者可依需求使用其他 SNOMED CT 或 LOINC 代碼。",
       "exampleBoolean" : false
     },
     {

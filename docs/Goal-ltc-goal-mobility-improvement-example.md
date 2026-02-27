@@ -48,7 +48,7 @@ Profile: [長期照顧－照顧目標](StructureDefinition-LTCGoal.md)
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "code" : "710950005",
-      "display" : "Progressive mobility (regime/therapy)"
+      "display" : "Advancing mobility"
     }],
     "text" : "改善住民行動能力"
   },
