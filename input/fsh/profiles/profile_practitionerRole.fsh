@@ -6,7 +6,7 @@ Id: LTCPractitionerRole
 Title: "長期照顧－服務人員角色"
 Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 PractitionerRole Resource，以呈現長期照顧服務人員的角色資料。
 
-有關 PractitionerRole 與 Practitioner 的差異及相關解釋，請參照 [TW Core IG](https://build.fhir.org/ig/cctwFHIRterm/MOHW_TWCoreIG_Build/StructureDefinition-PractitionerRole-twcore.html) 中的說明。"
+有關 PractitionerRole 與 Practitioner 的差異及相關解釋，請參照 [TW Core IG](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-PractitionerRole-twcore.html) 中的說明。"
 
 * practitioner 1..1 MS
 * practitioner ^short = "能為長照機構提供所定義服務的長照服務提供者"
