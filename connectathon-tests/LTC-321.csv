@@ -1,0 +1,5 @@
+Step ID,說明,應執行項目,驗證,應檢附
+LTC-321-00,"前置：取得 Access Token","先通過 LTC-011，完成 Authorization Code Flow 取得 access_token（或以 refresh_token 刷新），保存供後續使用。","具備有效 Authorization: Bearer {token}，可成功呼叫 [base]/metadata。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-321-01,"準備 CarePlan 轉介單","建立 CarePlan，含 intent=plan、category、subject、activity（建議服務）。","欄位齊全；JSON 可被伺服器接受。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-321-02,"上傳單筆 CarePlan","上傳單筆轉介單資料到 FHIR 伺服器。","HTTP 201；Location 指回新資源。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-321-03,"伺服器一致性檢查","查詢剛建立的轉介單資料，核對內容正確性。","HTTP 200；內容正確。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"

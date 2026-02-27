@@ -1,0 +1,5 @@
+Step ID,說明,應執行項目,驗證,應檢附
+LTC-312-00,"前置：取得 Access Token","先通過 LTC-011，完成 Authorization Code Flow 取得 access_token（或以 refresh_token 刷新），保存供後續使用。","具備有效 Authorization: Bearer {token}，可成功呼叫 [base]/metadata。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-312-01,"查詢 CMS 問卷回應","使用 Patient ID 查詢該病人的 CMS 問卷回應資料。","HTTP 200；返回多筆或空集合。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-312-02,"依問卷篩選（選擇性）","以 questionnaire 參數或 item.linkId 篩選 CMS。","HTTP 200；結果為指定量表。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-312-03,"歷史查詢（_history）","查詢特定 CMS 問卷回應資料的版本歷史。","HTTP 200；返回版本歷史。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"

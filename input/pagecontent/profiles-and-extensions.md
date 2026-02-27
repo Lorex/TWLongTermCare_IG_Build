@@ -23,6 +23,8 @@
 - [身心障礙手冊持有狀態（LTC Condition Disability）](StructureDefinition-LTCConditionDisability.html)
 - [身心障礙類型（LTC Condition Disability Type）](StructureDefinition-LTCConditionDisabilityType.html)
 - [關係人（LTC RelatedPerson）](StructureDefinition-LTCRelatedPerson.html)
+- [個案位置監測（LTC Location）](StructureDefinition-Location-twltc.html)
+- [異常事件警報（LTC AdverseEvent）](StructureDefinition-AdverseEvent-twltc.html)
 
 #### 照顧管理評估量表
 - [照顧管理評估量表文件打包（LTC Bundle CMS）](StructureDefinition-LTCBundleCMS.html)
@@ -47,6 +49,9 @@
 - [服務種類（LTC CarePlan Referral）](StructureDefinition-LTCCarePlanReferral.html)
 - [照顧者問卷回覆（LTC QuestionnaireResponse Referral Caregiver）](StructureDefinition-LTCQuestionnaireResponseReferralCaregiver.html)
 - [衰弱評估問卷回覆（LTC QuestionnaireResponse Referral SOF）](StructureDefinition-LTCQuestionnaireResponseReferralSOF.html)
+
+#### 長期照護醫師意見書 (AA12)
+- [長期照護醫師意見書問卷回覆（LTC QuestionnaireResponse AA12）](StructureDefinition-LTCQuestionnaireResponseAA12.html)
 
 #### 運動處方
 - [服務請求（PA Sport ServiceRequest）](StructureDefinition-PASportServiceRequest.html)

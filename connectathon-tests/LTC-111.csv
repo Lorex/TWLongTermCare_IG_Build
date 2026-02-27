@@ -1,0 +1,7 @@
+Step ID,說明,應執行項目,驗證,應檢附
+LTC-111-00,"前置：取得 Access Token","先通過 LTC-011，完成 Authorization Code Flow 取得 access_token（或以 refresh_token 刷新），保存供後續使用。","具備有效 Authorization: Bearer {token}，可成功呼叫 [base]/metadata。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-111-01,"準備 Observation 資料","建立至少一筆 Vital Signs 觀察（如 85353-1，含身高/體重/血壓/心率等子項）。","符合 LOINC/UCUM；JSON 可被伺服器接受。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-111-02,"攜帶 Token 上傳單筆","上傳單筆檢驗檢查資料到 FHIR 伺服器。","HTTP 201 Created；Location 指向新資源。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-111-03,"批次上傳（選擇性）","使用 Bundle 批次上傳多筆檢驗檢查資料。","HTTP 200；每筆 entry.response.status=201。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-111-04,"伺服器一致性檢查","查詢剛建立的檢驗檢查資料，核對內容一致性。","HTTP 200；內容與送出一致。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"
+LTC-111-05,"錯誤處理測試（選擇性）","送出缺少必要欄位的檢驗檢查資料測試伺服器錯誤回應。","HTTP 4xx 並有 OperationOutcome。","提供 Connlab 系統上的 Transaction ID 連線紀錄，並且要在系統 UI 上能正確呈現資料。"

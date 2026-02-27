@@ -23,7 +23,7 @@
 
 <p>TW LTC IG 中所有Profiles的FMM等級如下：
   <ol>
-    <li>0.3.0 版本的所有 Profiles 均為 FMM0</li>
+    <li>0.4.0 版本的所有 Profiles 均為 FMM0</li>
   </ol>
 </p>
 </div>
@@ -69,6 +69,7 @@
   <li><strong><a href="validates.html">驗證教學</a></strong>：如何驗證實作檔是否遵從 TW LTC IG 規範。</li>
   <li><strong><a href="connectathon.html">
     2025 專案聯測松</a></strong>：本規範與 2025 專案聯測松的賽道整合資訊。</li>
+  <li><strong><a href="connectathon-result.html">聯測松結果</a></strong>：2025 專案聯測松的驗證結果。</li>
   <!-- <li><strong><a href="https://twcore.mohw.gov.tw/ig/twcore/history.html">版本異動</a></strong>：若 TW LTC IG 網站的版本有所異動，皆可透過<a href="https://twcore.mohw.gov.tw/ig/twcore/history.html">異動說明頁</a>得以瞭解版本間的異動差異。</li> -->
 </ul>
 </div>
@@ -90,7 +91,7 @@
 	<tbody>
 			<tr>
         <td style="vertical-align: middle;">作者</td>
-            <td style="vertical-align: middle;">v0.0.1 ~ v0.3.0</td>
+            <td style="vertical-align: middle;">v0.0.1 ~ v0.4.0</td>
         <td rowspan="8" style="vertical-align: middle;">經濟部產業發展署<br />
         （Industrial Development Administration, Ministry of Economic Affairs）</td>
         <td style="vertical-align: middle;">楊宇凡（Yu-Fan Yang）</td>
@@ -102,7 +103,7 @@
 			</tr>
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
-            <td style="vertical-align: middle;">v0.3.0</td>
+            <td style="vertical-align: middle;">v0.4.0</td>
         <td style="vertical-align: middle;">曹軒寧（Hsuan-Ning Tsao）</td>
         <td style="vertical-align: middle;">矽塔資訊服務有限公司<br >（Sitatech Information Services Co., Ltd）</td>
         <td style="vertical-align: middle;">
@@ -120,7 +121,7 @@
 			</tr>
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
-            <td style="vertical-align: middle;">v0.0.1 ~ v0.3.0</td>
+            <td style="vertical-align: middle;">v0.0.1 ~ v0.4.0</td>
         <td style="vertical-align: middle;">李祥豪（Siang-Hao Lee）</td>
         <td style="vertical-align: middle;">九日生行動健康科技公司<br >（9Rise International Mobile Health Technology Co., Ltd.）</td>
         <td style="vertical-align: middle;">
@@ -129,7 +130,7 @@
 			</tr>
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
-            <td style="vertical-align: middle;">v0.3.0</td>
+            <td style="vertical-align: middle;">v0.3.0 ~ 0.4.0</td>
         <td style="vertical-align: middle;">楊宗翰（Chung-Han Yang）</td>
         <td style="vertical-align: middle;">九日生行動健康科技公司<br >（9Rise International Mobile Health Technology Co., Ltd.）</td>
         <td style="vertical-align: middle;">
@@ -138,7 +139,7 @@
 			</tr>
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
-            <td style="vertical-align: middle;">v0.0.1 ~ v0.3.0</td>
+            <td style="vertical-align: middle;">v0.0.1 ~ v0.4.0</td>
         <td style="vertical-align: middle;">黃薰慧（Hsun-Hui Huang）</td>
         <td style="vertical-align: middle;">財團法人資訊工業策進會 - 數位轉型研究院<br >（Institute for Information Industry - Digital Transformation Research Institute）</td>
         <td style="vertical-align: middle;">

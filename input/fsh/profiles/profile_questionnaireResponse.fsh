@@ -42,6 +42,28 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Questionna
 * item.item ^short = "問卷的問題或量表項目（用於巢狀問卷）"
 
 // Example
+Instance: ltc-questionnaire-response-example
+InstanceOf: LTCQuestionnaireResponse
+Title: "問卷回覆範例"
+Description: "一個問卷回覆的範例，展示如何使用 LTCQuestionnaireResponse Profile 來記錄問卷回覆"
+Usage: #example
+
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-sof"
+* status = #completed
+* subject = Reference(ltc-patient-cms-chen-ming-hui-example)
+* authored = "2024-01-15T10:30:00+08:00"
+* author = Reference(ltc-practitioner-role-nurse-example)
+* item[0].linkId = "sof-1"
+* item[0].text = "體重減輕"
+* item[0].answer[0].valueBoolean = false
+* item[1].linkId = "sof-2"
+* item[1].text = "下肢功能"
+* item[1].answer[0].valueBoolean = true
+* item[2].linkId = "sof-3"
+* item[2].text = "精力降低"
+* item[2].answer[0].valueBoolean = false
+
+// Example (ADL)
 Instance: ltc-questionnaire-response-adl-example
 InstanceOf: LTCQuestionnaireResponseADL
 Title: "日常生活能力評估問卷回覆範例"

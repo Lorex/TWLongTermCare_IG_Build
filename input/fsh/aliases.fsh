@@ -12,3 +12,5 @@ Alias:   $LOINC = http://loinc.org
 Alias: $TWCoreBundle = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Bundle-twcore
 Alias: $TWCoreBundleDocument = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Bundle-document-twcore
 Alias: $TWCoreComposition = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Composition-twcore
+// LTC IG Profiles
+Alias: $LTCQuestionnaire = http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire
