@@ -79,3 +79,46 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observatio
 * component[swing].valueQuantity.system = "http://unitsofmeasure.org"
 * component[swing].valueQuantity.code 1..1 MS
 * component[swing].valueQuantity.code = #%
+
+// Example
+Instance: pasport-observation-gait-cycle-example
+InstanceOf: PASportObservationGaitCycle
+Title: "步態週期測量範例"
+Description: "一個步態週期測量的範例，展示如何使用 PASportObservationGaitCycle Profile 來記錄步態週期分析"
+Usage: #example
+
+* status = #final
+
+* category[twcore].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[twcore].coding.code = #activity
+* category[twcore].coding.display = "Activity"
+
+* code.coding.system = "http://snomed.info/sct"
+* code.coding.code = #363837002
+* code.coding.display = "Measure of gait"
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* effectiveDateTime = "2024-01-15T10:00:00+08:00"
+
+* performer = Reference(ltc-practitioner-example)
+
+* bodySite.coding.system = "http://snomed.info/sct"
+* bodySite.coding.code = #56459004
+* bodySite.coding.display = "Foot structure"
+
+* component[stance].code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/GaitCycleCS-Sport"
+* component[stance].code.coding.code = #1
+* component[stance].code.coding.display = "支撐期(stance phase)"
+* component[stance].valueQuantity.value = 60
+* component[stance].valueQuantity.unit = "%"
+* component[stance].valueQuantity.system = "http://unitsofmeasure.org"
+* component[stance].valueQuantity.code = #%
+
+* component[swing].code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/GaitCycleCS-Sport"
+* component[swing].code.coding.code = #2
+* component[swing].code.coding.display = "擺動期(swing phase)"
+* component[swing].valueQuantity.value = 40
+* component[swing].valueQuantity.unit = "%"
+* component[swing].valueQuantity.system = "http://unitsofmeasure.org"
+* component[swing].valueQuantity.code = #%

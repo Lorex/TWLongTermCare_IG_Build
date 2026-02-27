@@ -142,7 +142,7 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observatio
 * component[MeanHeart].code.coding.code 1..1 MS
 * component[MeanHeart].code.coding.code = #103205-1
 * component[MeanHeart].code.coding.display 1..1 MS
-* component[MeanHeart].code.coding.display = "Average heart rate"
+* component[MeanHeart].code.coding.display = "Mean heart rate"
 * component[MeanHeart].valueQuantity 0..1 MS
 * component[MeanHeart].valueQuantity.value 1..1 MS
 * component[MeanHeart].valueQuantity.unit 1..1 MS
@@ -167,4 +167,83 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observatio
 * component[Gradient].valueQuantity.system 1..1 MS
 * component[Gradient].valueQuantity.system = "http://unitsofmeasure.org"
 * component[Gradient].valueQuantity.code 1..1 MS
+* component[Gradient].valueQuantity.code = #%
+
+// Example
+Instance: pasport-observation-treadmill-example
+InstanceOf: PASportObservationTreadmill
+Title: "跑步機運動記錄範例"
+Description: "一個跑步機運動記錄的範例，展示如何使用 PASportObservationTreadmill Profile 來記錄跑步機運動數據"
+Usage: #example
+
+* status = #final
+
+* category[twcore].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[twcore].coding.code = #activity
+* category[twcore].coding.display = "Activity"
+
+* code.coding.system = "http://snomed.info/sct"
+* code.coding.code = #466021001
+* code.coding.display = "Treadmill, powered"
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* effectiveDateTime = "2024-01-15T10:30:00+08:00"
+
+* performer = Reference(ltc-practitioner-example)
+
+* component[Duration].code.coding.system = "http://loinc.org"
+* component[Duration].code.coding.code = #55411-3
+* component[Duration].code.coding.display = "Exercise duration"
+* component[Duration].valueQuantity.value = 30
+* component[Duration].valueQuantity.unit = "min"
+* component[Duration].valueQuantity.system = "http://unitsofmeasure.org"
+* component[Duration].valueQuantity.code = #min
+
+* component[Distance].code.coding.system = "http://loinc.org"
+* component[Distance].code.coding.code = #55412-1
+* component[Distance].code.coding.display = "Exercise distance unspecified time"
+* component[Distance].valueQuantity.value = 3.5
+* component[Distance].valueQuantity.unit = "km"
+* component[Distance].valueQuantity.system = "http://unitsofmeasure.org"
+* component[Distance].valueQuantity.code = #km
+
+* component[Calories].code.coding.system = "http://loinc.org"
+* component[Calories].code.coding.code = #55421-2
+* component[Calories].code.coding.display = "Calories burned Machine estimate"
+* component[Calories].valueQuantity.value = 250
+* component[Calories].valueQuantity.unit = "kcal"
+* component[Calories].valueQuantity.system = "http://unitsofmeasure.org"
+* component[Calories].valueQuantity.code = #kcal
+
+* component[Speed].code.coding.system = "http://snomed.info/sct"
+* component[Speed].code.coding.code = #252141006
+* component[Speed].code.coding.display = "Treadmill speed achieved"
+* component[Speed].valueQuantity.value = 7.0
+* component[Speed].valueQuantity.unit = "km/h"
+* component[Speed].valueQuantity.system = "http://unitsofmeasure.org"
+* component[Speed].valueQuantity.code = #km/h
+
+* component[MaxHeart].code.coding.system = "http://loinc.org"
+* component[MaxHeart].code.coding.code = #101692-2
+* component[MaxHeart].code.coding.display = "Maximum heart rate"
+* component[MaxHeart].valueQuantity.value = 145
+* component[MaxHeart].valueQuantity.unit = "/min"
+* component[MaxHeart].valueQuantity.system = "http://unitsofmeasure.org"
+* component[MaxHeart].valueQuantity.code = #/min
+
+* component[MeanHeart].code.coding.system = "http://loinc.org"
+* component[MeanHeart].code.coding.code = #103205-1
+* component[MeanHeart].code.coding.display = "Mean heart rate"
+* component[MeanHeart].valueQuantity.value = 128
+* component[MeanHeart].valueQuantity.unit = "/min"
+* component[MeanHeart].valueQuantity.system = "http://unitsofmeasure.org"
+* component[MeanHeart].valueQuantity.code = #/min
+
+* component[Gradient].code.coding.system = "http://snomed.info/sct"
+* component[Gradient].code.coding.code = #252140007
+* component[Gradient].code.coding.display = "Treadmill gradient achieved"
+* component[Gradient].valueQuantity.value = 5
+* component[Gradient].valueQuantity.unit = "%"
+* component[Gradient].valueQuantity.system = "http://unitsofmeasure.org"
 * component[Gradient].valueQuantity.code = #%

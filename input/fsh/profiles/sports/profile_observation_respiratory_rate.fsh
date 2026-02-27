@@ -43,3 +43,31 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observatio
 
 * method 0..1 MS
 * method from http://hl7.org/fhir/ValueSet/observation-methods (extensible)
+
+// Example
+Instance: pasport-observation-respiratory-rate-example
+InstanceOf: PASportObservationRespiratoryRate
+Title: "呼吸速率測量範例"
+Description: "一個呼吸速率測量的範例，展示如何使用 PASportObservationRespiratoryRate Profile 來記錄呼吸速率資料"
+Usage: #example
+
+* status = #final
+
+* category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[VSCat].coding.code = #vital-signs
+* category[VSCat].coding.display = "Vital Signs"
+
+* code.coding.system = "http://loinc.org"
+* code.coding.code = #9279-1
+* code.coding.display = "Respiratory rate"
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* effectiveDateTime = "2024-01-15T08:45:00+08:00"
+
+* performer = Reference(ltc-practitioner-example)
+
+* valueQuantity.value = 18
+* valueQuantity.unit = "/min"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #/min

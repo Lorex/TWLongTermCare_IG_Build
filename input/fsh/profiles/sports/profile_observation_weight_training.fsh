@@ -101,3 +101,46 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observatio
 * component[Completed].code.coding.display = "Repetition count"
 * component[Completed].value[x] 1..1 MS
 * component[Completed].value[x] only Quantity
+
+// Example
+Instance: pasport-observation-weight-training-example
+InstanceOf: PASportObservationWeightTraining
+Title: "重量訓練記錄範例"
+Description: "一個重量訓練記錄的範例，展示如何使用 PASportObservationWeightTraining Profile 來記錄重量訓練數據"
+Usage: #example
+
+* status = #final
+
+* category[twcore].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[twcore].coding.code = #activity
+* category[twcore].coding.display = "Activity"
+
+* code.coding.system = "http://loinc.org"
+* code.coding.code = #LA11839-0
+* code.coding.display = "Weights"
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* effectiveDateTime = "2024-01-15T11:00:00+08:00"
+
+* performer = Reference(ltc-practitioner-example)
+
+* valueCodeableConcept.text = "臥推（Bench Press）"
+
+* component[Weight].code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/SportTrainingCS-Sport"
+* component[Weight].code.coding.code = #training-wt
+* component[Weight].code.coding.display = "訓練重量"
+* component[Weight].valueQuantity.value = 60
+* component[Weight].valueQuantity.unit = "kg"
+* component[Weight].valueQuantity.system = "http://unitsofmeasure.org"
+* component[Weight].valueQuantity.code = #kg
+
+* component[Sets].code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/SportTrainingCS-Sport"
+* component[Sets].code.coding.code = #sets
+* component[Sets].code.coding.display = "訓練組數"
+* component[Sets].valueQuantity.value = 3
+
+* component[Completed].code.coding.system = "http://loinc.org"
+* component[Completed].code.coding.code = #100298-9
+* component[Completed].code.coding.display = "Repetition count"
+* component[Completed].valueQuantity.value = 10
