@@ -49,7 +49,7 @@ Usage: #example
 
 * description.coding.system = "http://snomed.info/sct"
 * description.coding.code = #710950005
-* description.coding.display = "Progressive mobility (regime/therapy)"
+* description.coding.display = "Advancing mobility"
 * description.text = "改善住民行動能力"
 
 * subject = Reference(ltc-patient-referral-chen-ming-hui-example)
