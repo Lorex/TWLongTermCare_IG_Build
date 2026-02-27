@@ -1,0 +1,64 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/ValueSet/ServiceRequestPAVS-Sport> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ServiceRequestPAVS-Sport"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ServiceRequestPAVS-Sport</b></p><a name=\"ServiceRequestPAVS-Sport\"> </a><a name=\"hcServiceRequestPAVS-Sport\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/819961005\">819961005</a></td><td>PA guidance</td></tr><tr><td><a href=\"http://snomed.info/id/398636004\">398636004</a></td><td>PA assessment</td></tr><tr><td><a href=\"http://snomed.info/id/390893007\">390893007</a></td><td>Referral to physical activity program</td></tr><tr><td><a href=\"http://snomed.info/id/426866005\">426866005</a></td><td>Determination of phyisical activity tolerance</td></tr><tr><td><a href=\"http://snomed.info/id/229095001\">229095001</a></td><td>Exercise class</td></tr><tr><td><a href=\"http://snomed.info/id/229065009\">229065009</a></td><td>Exercise therapy</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://ltc-ig.fhir.tw/ValueSet/ServiceRequestPAVS-Sport"^^xsd:anyURI ;
+     fhir:l <http://ltc-ig.fhir.tw/ValueSet/ServiceRequestPAVS-Sport>
+  ] ; # 
+  fhir:version [ fhir:v "0.4.1"] ; # 
+  fhir:name [ fhir:v "ServiceRequestPAVSSport"] ; # 
+  fhir:title [ fhir:v "身體活動量測-適用運動處方之服務請求代碼值集"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2024-06-04"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "經濟部產業發展署"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "經濟部產業發展署" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.ida.gov.tw/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "適用運動處方之服務請求代碼。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "819961005" ] ;
+         fhir:display [ fhir:v "PA guidance" ]
+       ] [
+         fhir:code [ fhir:v "398636004" ] ;
+         fhir:display [ fhir:v "PA assessment" ]
+       ] [
+         fhir:code [ fhir:v "390893007" ] ;
+         fhir:display [ fhir:v "Referral to physical activity program" ]
+       ] [
+         fhir:code [ fhir:v "426866005" ] ;
+         fhir:display [ fhir:v "Determination of phyisical activity tolerance" ]
+       ] [
+         fhir:code [ fhir:v "229095001" ] ;
+         fhir:display [ fhir:v "Exercise class" ]
+       ] [
+         fhir:code [ fhir:v "229065009" ] ;
+         fhir:display [ fhir:v "Exercise therapy" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Observation/ltc-observation-vital-signs-panel-example> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-observation-vital-signs-panel-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationVitalSignsPanel"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationVitalSignsPanel>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ltc-observation-vital-signs-panel-example</b></p><a name=\"ltc-observation-vital-signs-panel-example\"> </a><a name=\"hcltc-observation-vital-signs-panel-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCObservationVitalSignsPanel.html\">長期照顧－一組生命徵象檢驗檢查</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85353-1}\">一組生命徵象檢驗檢查</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-chen-ming-hui.html\">陳明慧 Female, DoB: 1945-03-15 ( National Person Identifier (TWN): A123456789 (use: official, ))</a></p><p><b>effective</b>: 2024-01-15 08:00:00+0800</p><p><b>performer</b>: <a href=\"Practitioner-ltc-practitioner-physician-aa12-example.html\">Practitioner 王醫師</a></p><p><b>note</b>: @2024-01-15 08:00:00+0800</p><blockquote><div><p>生命徵象檢查完成，各項指標均在正常範圍內</p>\n</div></blockquote><p><b>hasMember</b>: <a href=\"Observation-ltc-observation-blood-pressure-example.html\">Observation Blood pressure panel with all children optional</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "vital-signs" ] ;
+       fhir:display [ fhir:v "Vital Signs" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:85353-1 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "85353-1" ] ;
+       fhir:display [ fhir:v "Vital signs, weight, height, head circumference, oxygen saturation and BMI panel" ]
+     ] ) ;
+     fhir:text [ fhir:v "一組生命徵象檢驗檢查" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-chen-ming-hui> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-chen-ming-hui" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2024-01-15T08:00:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <http://ltc-ig.fhir.tw/Practitioner/ltc-practitioner-physician-aa12-example> ;
+     fhir:reference [ fhir:v "Practitioner/ltc-practitioner-physician-aa12-example" ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:time [ fhir:v "2024-01-15T08:00:00+08:00"^^xsd:dateTime ] ;
+     fhir:text [ fhir:v "生命徵象檢查完成，各項指標均在正常範圍內" ]
+  ] ) ; # 
+  fhir:hasMember ( [
+     fhir:l <http://ltc-ig.fhir.tw/Observation/ltc-observation-blood-pressure-example> ;
+     fhir:reference [ fhir:v "Observation/ltc-observation-blood-pressure-example" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

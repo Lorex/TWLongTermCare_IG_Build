@@ -1,0 +1,2800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artifacts Summary - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"20"}
+    h3,h4,h5,h6{--heading-prefix:"20.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)</span>
+            <br/>
+            <span style="display:inline-block;">0.4.1 - ci-build+trial-use
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">應用說明</a></li>
+  <li><a href="toc.html">目錄</a></li>
+	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="capability-statements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters-and-operation.html">查詢參數及操作定義</a>
+			</li>
+			<li>
+				<a href="logical-models.html">邏輯模型</a>
+			</li>
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles 及 Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+  <li><a href="examples.html">範例</a></li>
+  <li><a href="downloads.html">結構定義與範例檔下載</a></li>
+  <li><a href="security.html">安全性</a></li>
+  <li><a href="validates.html">驗證教學</a></li>
+  <li class="dropdown">
+    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
+      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+    </ul>
+  </li>
+  <li><a href="connectathon-result.html">聯測松結果</a></li>
+  <!-- <li><a href="history.html">版本歷程</a></li> -->
+</ul>      
+
+<style>
+.dropdown-menu li:hover .sub-menu {visibility: visible;}
+.dropdown:hover .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 992px) {
+  table.colsi {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  table.rwd-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  p, a {
+    word-break: break-all;
+  }
+}
+</style>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.4.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Artifacts Summary</h2>
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Behavior: Capability Statements</a>
+      </li>
+      <li>
+         <a href="#2">Structures: Logical Models</a>
+      </li>
+      <li>
+         <a href="#3">Structures: Questionnaires</a>
+      </li>
+      <li>
+         <a href="#4">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#5">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#6">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#7">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#8">Example: Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Behavior: Capability Statements </h3>
+    <p>The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-CapabilityStatementLTCServer.html"
+                  title="CapabilityStatement/CapabilityStatementLTCServer">臺灣長期照顧實作指引 - 伺服端能力聲明</a>
+            </td>
+            <td>
+<p>此 CapabilityStatement 定義了臺灣長期照顧實作指引中伺服端系統必須支援的 FHIR RESTful API 功能。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-CapabilityStatementLTCClient.html"
+                  title="CapabilityStatement/CapabilityStatementLTCClient">臺灣長期照顧實作指引 - 用戶端能力聲明</a>
+            </td>
+            <td>
+<p>此 CapabilityStatement 定義了臺灣長期照顧實作指引中用戶端系統建議支援的 FHIR RESTful API 功能。</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Structures: Logical Models </h3>
+    <p>These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCLocationModel.html"
+                  title="StructureDefinition/LTCLocationModel">個案位置監測邏輯模型</a>
+            </td>
+            <td>
+<p>此邏輯模型以失智症照護監測賽道的情境2為基礎，用以描述個案位置監測的資料結構與欄位準備指引。支援記錄個案所在的地點名稱與經緯度座標資訊。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCCMSModel.html"
+                  title="StructureDefinition/LTCCMSModel">照顧管理評估量表邏輯模型</a>
+            </td>
+            <td>
+<p>此邏輯模型以衛生福利部長期照顧管理中心照顧管理評估量表為基礎，用以描述照顧管理評估量表的資料結構與欄位準備指引。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCAdverseEventModel.html"
+                  title="StructureDefinition/LTCAdverseEventModel">異常事件警報邏輯模型</a>
+            </td>
+            <td>
+<p>此邏輯模型以失智症照護監測賽道的情境3為基礎，用以描述異常事件警報的資料結構與欄位準備指引。支援記錄異常事件類型、嚴重程度、發生時間、位置等資訊。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCMMSEAssessmentModel.html"
+                  title="StructureDefinition/LTCMMSEAssessmentModel">簡易智能狀態測驗評估</a>
+            </td>
+            <td>
+<p>簡易智能狀態測驗 (Mini-Mental Status Examination, MMSE) 的邏輯模型，用於認知功能評估</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCCDRAssessmentModel.html"
+                  title="StructureDefinition/LTCCDRAssessmentModel">臨床失智評估量表評估</a>
+            </td>
+            <td>
+<p>臨床失智評估量表 (Clinical Dementia Rating Scale, CDR) 的邏輯模型，用於失智症分期評估</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-AA12Model.html"
+                  title="StructureDefinition/AA12Model">長期照護醫師意見書 (AA12) 邏輯模型</a>
+            </td>
+            <td>
+<p>此邏輯模型以衛生福利部 AA12 長期照護醫師意見書為基礎，用以描述醫師意見書的資料結構與欄位準備指引。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCRferralModel.html"
+                  title="StructureDefinition/LTCRferralModel">長期照顧管理中心個案服務初篩表/轉介單邏輯模型</a>
+            </td>
+            <td>
+<p>此邏輯模型以臺北市長期照顧管理中心個案服務初篩表/轉介單為基礎，用以描述轉介單的資料結構與欄位準備指引。</p>
+
+<p>注意：各縣市轉介單格式可能有所不同，此邏輯模型將於後續版本逐步納入各縣市初篩表/轉介單格式並進行整合。</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Structures: Questionnaires </h3>
+    <p>These define forms used by systems conforming to this implementation guide to capture or expose data to end users.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-questionnaire-aa02-example.html"
+                  title="Questionnaire/questionnaire-aa02-example">照顧管理問卷 (AA02)</a>
+            </td>
+            <td>
+<p>依 AA02 追蹤服務適應與介入、各項服務使用情形、計畫適切性與需求異動、其他處理事項之書寫範例而設計。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-questionnaire-aa01-example.html"
+                  title="Questionnaire/questionnaire-aa01-example">照顧計畫擬訂與服務連結問卷 (AA01)</a>
+            </td>
+            <td>
+<p>AA01照顧計畫擬訂與服務連結問卷，用於個案管理師擬定個人化照顧計畫</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaireResponseADL.html"
+                  title="StructureDefinition/LTCQuestionnaireResponseADL">ADL 問卷回覆</a>
+            </td>
+            <td>
+<p>此 Profile 定義 FHIR 的 QuestionnaireResponse Resource，以呈現日常生活活動量表 (ADL) 的回覆資料。回覆採用整數分數（依題目配分），文字說明由問卷提供。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaireResponseIADL.html"
+                  title="StructureDefinition/LTCQuestionnaireResponseIADL">IADL 問卷回覆</a>
+            </td>
+            <td>
+<p>此 Profile 定義 FHIR 的 QuestionnaireResponse Resource，以呈現工具性日常活動功能問卷 (IADLs) 的回覆資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationRespiratoryRate.html"
+                  title="StructureDefinition/PASportObservationRespiratoryRate">基礎生理量測－呼吸速率</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之呼吸速率資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationRestingHeartRate.html"
+                  title="StructureDefinition/PASportObservationRestingHeartRate">基礎生理量測－安靜心率</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之安靜心率資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationMeanHeartRate.html"
+                  title="StructureDefinition/PASportObservationMeanHeartRate">基礎生理量測－平均心率</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之平均心率資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationHeartRate.html"
+                  title="StructureDefinition/PASportObservationHeartRate">基礎生理量測－心率</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之心率資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationHeartRateVariability.html"
+                  title="StructureDefinition/PASportObservationHeartRateVariability">基礎生理量測－心率變異性</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之心率變異性資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationPeripheralOxygenSaturation.html"
+                  title="StructureDefinition/PASportObservationPeripheralOxygenSaturation">基礎生理量測－脈搏血氧飽和度</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之脈搏血氧飽和度資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationWaist.html"
+                  title="StructureDefinition/PASportObservationWaist">基礎生理量測－腰圍</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之腰圍資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationBloodPressure.html"
+                  title="StructureDefinition/PASportObservationBloodPressure">基礎生理量測－血壓</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之血壓資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationGlucose.html"
+                  title="StructureDefinition/PASportObservationGlucose">基礎生理量測－血糖</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之血糖資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationHeight.html"
+                  title="StructureDefinition/PASportObservationHeight">基礎生理量測－身高</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之身高資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationBodyTemperature.html"
+                  title="StructureDefinition/PASportObservationBodyTemperature">基礎生理量測－體溫</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之體溫資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationWeight.html"
+                  title="StructureDefinition/PASportObservationWeight">基礎生理量測－體重</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之體重資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCObservationFallingHistory.html"
+                  title="StructureDefinition/LTCObservationFallingHistory">安全防護－跌倒紀錄</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現長照機構住民的跌倒紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCBundleCMS.html"
+                  title="StructureDefinition/LTCBundleCMS">照顧管理評估量表文件打包</a>
+            </td>
+            <td>
+<p>此 Bundle 以衛生福利部長期照顧管理中心照顧管理評估量表為基礎，用以表述照顧管理評估量表的文件打包結構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCCompositionCMS.html"
+                  title="StructureDefinition/LTCCompositionCMS">照顧管理評估量表文件架構</a>
+            </td>
+            <td>
+<p>此 Composition 以衛生福利部長期照顧管理中心照顧管理評估量表為基礎，用以表述照顧管理評估量表的文件結構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaireResponseCMSCaregiverSupport.html"
+                  title="StructureDefinition/LTCQuestionnaireResponseCMSCaregiverSupport">照顧管理評估量表－主要照顧者工作與支持</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－主要照顧者工作與支持的回覆資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaireResponseCMSCaregiverLoad.html"
+                  title="StructureDefinition/LTCQuestionnaireResponseCMSCaregiverLoad">照顧管理評估量表－主要照顧者負荷問卷回覆</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－主要照顧者負荷問卷的回覆資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCPatientCMS.html"
+                  title="StructureDefinition/LTCPatientCMS">照顧管理評估量表－個案基本資料</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Patient Resource，以呈現適用於照顧管理評估量表的長照機構住民基本資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaireResponseCMSCommunication.html"
+                  title="StructureDefinition/LTCQuestionnaireResponseCMSCommunication">照顧管理評估量表－個案溝通能力問卷回覆</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－個案溝通能力問卷的回覆資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaireResponseCMSMemory.html"
+                  title="StructureDefinition/LTCQuestionnaireResponseCMSMemory">照顧管理評估量表－個案短期記憶力問卷回覆</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－個案短期記憶力問卷的回覆資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaireResponseCMSSociety.html"
+                  title="StructureDefinition/LTCQuestionnaireResponseCMSSociety">照顧管理評估量表－居家環境與社會參與問卷回覆</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－居家環境與社會參與問卷的回覆資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaireResponseCMSMental.html"
+                  title="StructureDefinition/LTCQuestionnaireResponseCMSMental">照顧管理評估量表－情緒及行為型態問卷回覆</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－情緒及行為型態問卷的回覆資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaireResponseCMSSpecialCare.html"
+                  title="StructureDefinition/LTCQuestionnaireResponseCMSSpecialCare">照顧管理評估量表－特殊複雜照護需要問卷回覆</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－特殊複雜照護需要問卷的回覆資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationGaitType.html"
+                  title="StructureDefinition/PASportObservationGaitType">穿戴裝置－步態分析</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現穿戴裝置中涉及之步態分析資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationGaitCycle.html"
+                  title="StructureDefinition/PASportObservationGaitCycle">穿戴裝置－步態週期</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現穿戴裝置中涉及之步態週期資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationVisceralFatIndex.html"
+                  title="StructureDefinition/PASportObservationVisceralFatIndex">身體組成分析儀－內臟脂肪指數</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之內臟脂肪指數資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationVisceralFatArea.html"
+                  title="StructureDefinition/PASportObservationVisceralFatArea">身體組成分析儀－內臟脂肪面積</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之內臟脂肪面積資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationFatFreeMass.html"
+                  title="StructureDefinition/PASportObservationFatFreeMass">身體組成分析儀－去脂體重</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之去脂體重資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationBasalMetabolicRate.html"
+                  title="StructureDefinition/PASportObservationBasalMetabolicRate">身體組成分析儀－基礎代謝率</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之基礎代謝率資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationBodyBoneMass.html"
+                  title="StructureDefinition/PASportObservationBodyBoneMass">身體組成分析儀－推定骨量</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之推定骨量資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationExtracellularWaterRatio.html"
+                  title="StructureDefinition/PASportObservationExtracellularWaterRatio">身體組成分析儀－水腫指數</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之水腫指數資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationMineral.html"
+                  title="StructureDefinition/PASportObservationMineral">身體組成分析儀－礦物質重</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之礦物質重資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationIntracellularWater.html"
+                  title="StructureDefinition/PASportObservationIntracellularWater">身體組成分析儀－細胞內水分</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之細胞內水分資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationExtracellularWater.html"
+                  title="StructureDefinition/PASportObservationExtracellularWater">身體組成分析儀－細胞外水分</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之細胞外水分資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationCellMass.html"
+                  title="StructureDefinition/PASportObservationCellMass">身體組成分析儀－細胞量</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之細胞量資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationSkeletalMuscleMassIndex.html"
+                  title="StructureDefinition/PASportObservationSkeletalMuscleMassIndex">身體組成分析儀－肌肉質量指數</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之肌肉質量指數資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationSoftLeanMass.html"
+                  title="StructureDefinition/PASportObservationSoftLeanMass">身體組成分析儀－肌肉量</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之肌肉量資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationObesityDegree.html"
+                  title="StructureDefinition/PASportObservationObesityDegree">身體組成分析儀－肥胖度</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之肥胖度資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationWaistHipRate.html"
+                  title="StructureDefinition/PASportObservationWaistHipRate">身體組成分析儀－腰臀圍比</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之腰臀圍比資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationProtein.html"
+                  title="StructureDefinition/PASportObservationProtein">身體組成分析儀－蛋白質重</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之蛋白質重資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationTotalBodyWater.html"
+                  title="StructureDefinition/PASportObservationTotalBodyWater">身體組成分析儀－身體總水分</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之身體總水分資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationBodyMassIndex.html"
+                  title="StructureDefinition/PASportObservationBodyMassIndex">身體組成分析儀－身體質量指數</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之BMI資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationSkeletalMuscleMass.html"
+                  title="StructureDefinition/PASportObservationSkeletalMuscleMass">身體組成分析儀－骨骼肌重</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之骨骼肌重資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationBodyAge.html"
+                  title="StructureDefinition/PASportObservationBodyAge">身體組成分析儀－體內年齡</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之體內年齡資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationBodyFatPercentage.html"
+                  title="StructureDefinition/PASportObservationBodyFatPercentage">身體組成分析儀－體脂率</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之體脂率資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationBodyFatMass.html"
+                  title="StructureDefinition/PASportObservationBodyFatMass">身體組成分析儀－體脂肪重</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之體脂肪重資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCPatientReferral.html"
+                  title="StructureDefinition/LTCPatientReferral">轉介單－個案基本資料</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Patient Resource，以呈現適用於長期照護管理中心個案服務初篩表/轉介單的長照機構住民基本資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCCarePlanReferral.html"
+                  title="StructureDefinition/LTCCarePlanReferral">轉介單－服務種類</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現轉診單中欲申請之服務種類。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaireResponseReferralCaregiver.html"
+                  title="StructureDefinition/LTCQuestionnaireResponseReferralCaregiver">轉介單－照顧者問卷回覆</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現轉介單－照顧者問卷的回覆資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaireResponseReferralSOF.html"
+                  title="StructureDefinition/LTCQuestionnaireResponseReferralSOF">轉介單－衰弱評估問卷回覆</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現轉介單－衰弱評估問卷的回覆資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportServiceRequest.html"
+                  title="StructureDefinition/PASportServiceRequest">運動處方－服務請求</a>
+            </td>
+            <td>
+<p>長照機構住民運動處方的服務請求資料，本 Profile 繼承自身體活動量測 (Physical Activity Measure) 的 Sport Data ServiceRequest Profile。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportConditionMedicalHistory.html"
+                  title="StructureDefinition/PASportConditionMedicalHistory">運動處方－病史</a>
+            </td>
+            <td>
+<p>長照機構住民運動處方的病史資料，本 Profile 繼承自身體活動量測 (Physical Activity Measure) 的 Sport Data Condition Profile。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportConditionExerciseHistory.html"
+                  title="StructureDefinition/PASportConditionExerciseHistory">運動處方－運動史</a>
+            </td>
+            <td>
+<p>長照機構住民運動處方的運動史資料，本 Profile 繼承自身體活動量測 (Physical Activity Measure) 的 Sport Data Condition Profile。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportGoal.html"
+                  title="StructureDefinition/PASportGoal">運動處方－運動目標</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Goal Resource，以呈現運動處方中涉及之運動目標內容。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportCarePlan.html"
+                  title="StructureDefinition/PASportCarePlan">運動處方－運動計畫</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現長期照顧情境中涉及之運動計畫內容。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationTreadmill.html"
+                  title="StructureDefinition/PASportObservationTreadmill">運動項目－跑步機</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現運動項目中涉及之跑步機資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PASportObservationWeightTraining.html"
+                  title="StructureDefinition/PASportObservationWeightTraining">運動項目－重量訓練</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現運動項目中涉及之重量訓練資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCCompositionReferral.html"
+                  title="StructureDefinition/LTCCompositionReferral">長期照護管理中心個案服務初篩表/轉介單文件架構</a>
+            </td>
+            <td>
+<p>此 Composition 以臺北市長期照顧管理中心個案服務初篩表/轉介單為基礎，用以表述長期照顧管理中心個案服務初篩表/轉介單的文件結構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaireResponseAA12.html"
+                  title="StructureDefinition/LTCQuestionnaireResponseAA12">長期照護醫師意見書問卷回覆 (AA12)</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現長期照護醫師意見書的問卷回覆內容。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCBundleReferral.html"
+                  title="StructureDefinition/LTCBundleReferral">長期照顧管理中心個案服務初篩表/轉介單文件打包</a>
+            </td>
+            <td>
+<p>此 Bundle 以臺北市長期照顧管理中心個案服務初篩表/轉介單為基礎，用以表述長期照顧管理中心個案服務初篩表/轉介單的文件打包結構。</p>
+
+<p>注意：各縣市轉介單格式可能有所不同，此 Profile 將於後續版本逐步納入各縣市初篩表/轉介單格式並進行整合。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaireResponseAA01.html"
+                  title="StructureDefinition/LTCQuestionnaireResponseAA01">長期照顧－AA01照顧計畫擬訂與服務連結問卷回應</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現長期照顧情境中 AA01 照顧計畫擬訂與服務連結問卷的回應內容。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaireResponseAA02.html"
+                  title="StructureDefinition/LTCQuestionnaireResponseAA02">長期照顧－AA02照顧管理追蹤問卷回覆</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現 AA02 照顧管理追蹤問卷的回覆內容。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCObservationVitalSignsPanel.html"
+                  title="StructureDefinition/LTCObservationVitalSignsPanel">長期照顧－一組生命徵象檢驗檢查</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現長照機構住民的一組生命徵象檢驗檢查資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCConditionNeed.html"
+                  title="StructureDefinition/LTCConditionNeed">長期照顧－主要問題及需求</a>
+            </td>
+            <td>
+<p>用於表述案主(家)主要問題及需求的 Condition Profile。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCConditionProblem.html"
+                  title="StructureDefinition/LTCConditionProblem">長期照顧－主要疾病</a>
+            </td>
+            <td>
+<p>用於表述案主(家)主要疾病的 Condition Profile。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCPatient.html"
+                  title="StructureDefinition/LTCPatient">長期照顧－住民基本資料</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Patient Resource，以呈現長照機構住民的基本資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Location-twltc.html"
+                  title="StructureDefinition/Location-twltc">長期照顧－個案位置監測</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Location Resource，以呈現失智症個案的位置監測資料，包括所在地名稱與經緯度座標資訊。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaire.html"
+                  title="StructureDefinition/LTCQuestionnaire">長期照顧－問卷</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Questionnaire Resource，以呈現長期照顧情境中涉及之問卷或量表內容。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaireResponse.html"
+                  title="StructureDefinition/LTCQuestionnaireResponse">長期照顧－問卷回覆</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現長期照顧情境中涉及之問卷或量表回覆內容。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCConditionCrush.html"
+                  title="StructureDefinition/LTCConditionCrush">長期照顧－壓傷狀況</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的壓傷狀況。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCConditionResidence.html"
+                  title="StructureDefinition/LTCConditionResidence">長期照顧－居住狀況</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的居住狀況。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCPractitionerRole.html"
+                  title="StructureDefinition/LTCPractitionerRole">長期照顧－服務人員角色</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 PractitionerRole Resource，以呈現長期照顧服務人員的角色資料。</p>
+
+<p>有關 PractitionerRole 與 Practitioner 的差異及相關解釋，請參照 <a href="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-PractitionerRole-twcore.html">TW Core IG</a> 中的說明。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Organization-twltc.html"
+                  title="StructureDefinition/Organization-twltc">長期照顧－機構</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Organization Resource，以呈現機構的資料。這裡的機構包含但不限於醫院、診所、長照機構、社區服務單位等。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCProcedureCareActivity.html"
+                  title="StructureDefinition/LTCProcedureCareActivity">長期照顧－照護活動</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Procedure Resource，以呈現長照機構住民的照護活動紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCCareTeam.html"
+                  title="StructureDefinition/LTCCareTeam">長期照顧－照顧團隊</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 CareTeam Resource，以呈現長期照顧情境中涉及之照顧團隊資訊。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCPractitioner.html"
+                  title="StructureDefinition/LTCPractitioner">長期照顧－照顧服務提供者</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Practitioner Resource，以呈現照顧服務提供者的資料。這裡的照顧服務提供者係指醫事人員、照顧服務員、其他經過專業訓練的照顧服務提供者，領域包含但不限於長期照顧與運動。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCGoal.html"
+                  title="StructureDefinition/LTCGoal">長期照顧－照顧目標</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Goal Resource，以呈現長期照顧情境中涉及之照顧目標內容。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCCarePlan.html"
+                  title="StructureDefinition/LTCCarePlan">長期照顧－照顧計畫</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現長期照顧情境中涉及之照顧計畫內容。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCObservationVitalSigns.html"
+                  title="StructureDefinition/LTCObservationVitalSigns">長期照顧－生命體徵</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現長照機構住民的生命體徵資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCMedicationAdministration.html"
+                  title="StructureDefinition/LTCMedicationAdministration">長期照顧－用藥資料</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 MedicationAdministration Resource，以呈現長照機構住民的用藥資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-AdverseEvent-twltc.html"
+                  title="StructureDefinition/AdverseEvent-twltc">長期照顧－異常事件警報</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 AdverseEvent Resource，以呈現失智症個案異常事件警報的資料，包括事件類型、嚴重程度、發生時間、位置等資訊。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCCondition.html"
+                  title="StructureDefinition/LTCCondition">長期照顧－病情、問題或診斷</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的病情、問題或診斷資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCConditionCaregiver.html"
+                  title="StructureDefinition/LTCConditionCaregiver">長期照顧－看護狀況</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長期照顧情境中住民的看護狀況資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCConditionTube.html"
+                  title="StructureDefinition/LTCConditionTube">長期照顧－管路裝設狀況</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的管路裝設狀況與類別。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaireResponseMMSE.html"
+                  title="StructureDefinition/LTCQuestionnaireResponseMMSE">長期照顧－簡易智能狀態測驗回覆</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現簡易智能狀態測驗 (MMSE) 的回覆內容。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCQuestionnaireResponseCDR.html"
+                  title="StructureDefinition/LTCQuestionnaireResponseCDR">長期照顧－臨床失智評估量表回覆</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現臨床失智評估量表 (CDR) 的回覆內容。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCConditionDisability.html"
+                  title="StructureDefinition/LTCConditionDisability">長期照顧－身心障礙手冊持有狀態</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的身心障礙手冊持有狀態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCConditionDisabilityType.html"
+                  title="StructureDefinition/LTCConditionDisabilityType">長期照顧－身心障礙類型</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的身心障礙類型。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCRelatedPerson.html"
+                  title="StructureDefinition/LTCRelatedPerson">長期照顧－關係人</a>
+            </td>
+            <td>
+<p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 RelatedPerson Resource，以呈現住民的關係人，包含家屬、照顧者、法定代理人等與住民有關的人員資料。</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cdr-total-score.html"
+                  title="StructureDefinition/cdr-total-score">CDR 總分</a>
+            </td>
+            <td>
+<p>臨床失智評估量表的總分</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mmse-total-score.html"
+                  title="StructureDefinition/mmse-total-score">MMSE 總分</a>
+            </td>
+            <td>
+<p>簡易智能狀態測驗的總分</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ExtPatientIdentity-TWLTC.html"
+                  title="StructureDefinition/ExtPatientIdentity-TWLTC">個案身分別</a>
+            </td>
+            <td>
+<p>此 Extension 用以表述個案的身分別。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ExtRelatedPersonIsPrimary-TWLTC.html"
+                  title="StructureDefinition/ExtRelatedPersonIsPrimary-TWLTC">是否為主要照顧者</a>
+            </td>
+            <td>
+<p>此 Extension 用以表述關係人是否為主要照顧者。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ExtPatientEducationStatus-TWLTC.html"
+                  title="StructureDefinition/ExtPatientEducationStatus-TWLTC">長照機構住民教育程度</a>
+            </td>
+            <td>
+<p>此 Extension 用以表述長照機構住民的教育程度。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ExtPatientEconomyStatus-TWLTC.html"
+                  title="StructureDefinition/ExtPatientEconomyStatus-TWLTC">長照機構住民經濟狀況</a>
+            </td>
+            <td>
+<p>此 Extension 用以表述長照機構住民的經濟狀況。</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-EconomyStatusVS-TWLTC.html"
+                  title="ValueSet/EconomyStatusVS-TWLTC">個案經濟狀況值集</a>
+            </td>
+            <td>
+<p>用以表述個案經濟狀況之值集，包含個案經濟狀況之描述內容。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-PatientIdentityVS-TWLTC.html"
+                  title="ValueSet/PatientIdentityVS-TWLTC">個案身分別值集</a>
+            </td>
+            <td>
+<p>個案身分別的值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-AddressUseVS-TWLTC.html"
+                  title="ValueSet/AddressUseVS-TWLTC">地址用途擴展值集</a>
+            </td>
+            <td>
+<p>地址的用途，新增戶籍地與現居地等代碼</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ReferralConditionCrushVS-TWLTC.html"
+                  title="ValueSet/ReferralConditionCrushVS-TWLTC">壓傷狀況值集</a>
+            </td>
+            <td>
+<p>個案壓傷的狀況</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ReferralConditionResidenceVS-TWLTC.html"
+                  title="ValueSet/ReferralConditionResidenceVS-TWLTC">居住狀況值集</a>
+            </td>
+            <td>
+<p>個案的居住狀況</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-EducationStatusVS-TWLTC.html"
+                  title="ValueSet/EducationStatusVS-TWLTC">教育程度值集</a>
+            </td>
+            <td>
+<p>用以表述教育程度之值集，包含教育程度之描述內容。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-GoalDescriptionVS-TWLTC.html"
+                  title="ValueSet/GoalDescriptionVS-TWLTC">照顧目標描述值集</a>
+            </td>
+            <td>
+<p>照顧目標的描述值集，用以表述長期照顧情境中涉及之照顧目標描述內容。本值集比照 US Core Goal Profile 中的 description 元素定義，引用 SNOMED CT 與 LOINC 等術語系統。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ConditionSeverityVS-TWLTC.html"
+                  title="ValueSet/ConditionSeverityVS-TWLTC">疾病嚴重度擴展值集</a>
+            </td>
+            <td>
+<p>用以表述疾病嚴重度之擴展值集，包含疾病嚴重度之描述內容。配合身心障礙手冊障礙程度分級，包含輕度、中度、重度、極重度等代碼。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ReferralConditionCaregiverVS-TWLTC.html"
+                  title="ValueSet/ReferralConditionCaregiverVS-TWLTC">看護狀況值集</a>
+            </td>
+            <td>
+<p>個案雇用看護的狀況</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ReferralConditionTubeVS-TWLTC.html"
+                  title="ValueSet/ReferralConditionTubeVS-TWLTC">管路狀況值集</a>
+            </td>
+            <td>
+<p>個案持有管路的狀況</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ICD-10-PCS-2023-TW-F-VS.html"
+                  title="ValueSet/ICD-10-PCS-2023-TW-F-VS">臺灣 2023 年中文版 ICD-10-PCS-F 值集</a>
+            </td>
+            <td>
+<p>臺灣 2023 年中文版 ICD-10-PCS 復健及診斷性聽力學(Physical Rehabilitation and Diagnostic Audiology)，章節數值為「F」。 包括：復健、診斷性聽力學。 代碼出版日期：2023-11-10；資料所屬單位：衛生福利部中央健康保險署。 因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-FallHistoryResultVS-TWLTC.html"
+                  title="ValueSet/FallHistoryResultVS-TWLTC">跌倒紀錄結果值集</a>
+            </td>
+            <td>
+<p>紀錄住民跌倒的偵測結果。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ConditionDisabilityVS-TWLTC.html"
+                  title="ValueSet/ConditionDisabilityVS-TWLTC">身心障礙手冊持有狀況值集</a>
+            </td>
+            <td>
+<p>個案持有身心障礙手冊的狀況</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ConditionDisabilityTypeVS-TWLTC.html"
+                  title="ValueSet/ConditionDisabilityTypeVS-TWLTC">身心障礙類型值集</a>
+            </td>
+            <td>
+<p>個案身心障礙類型</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-TempCodeVS-Sport.html" title="ValueSet/TempCodeVS-Sport">身體活動量測-暫用代碼值集</a>
+            </td>
+            <td>
+<p>身體活動量測暫時使用的代碼，目前無官方代碼。本 ValueSet 繼承自身體活動量測 IG，後續將配合官方代碼更新。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ExerciseHistoryVS-Sport.html"
+                  title="ValueSet/ExerciseHistoryVS-Sport">身體活動量測-最近(目前)運動史值集</a>
+            </td>
+            <td>
+<p>最近(目前)運動史。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-GaitTypeVS-Sport.html" title="ValueSet/GaitTypeVS-Sport">身體活動量測-步態分析值集</a>
+            </td>
+            <td>
+<p>用於描述步態（walking gait）時腳的着地位置和運動模式。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-GaitCycleVS-Sport.html"
+                  title="ValueSet/GaitCycleVS-Sport">身體活動量測-步態週期值集</a>
+            </td>
+            <td>
+<p>一個步伐的完整過程，從一隻腳接觸地面開始到同一隻腳再次接觸地面結束。這個過程可以分為兩個主要階段：支撐期（stance phase）和擺動期（swing phase）。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-TreadmillTypeVS-Sport.html"
+                  title="ValueSet/TreadmillTypeVS-Sport">身體活動量測-跑步機類型值集</a>
+            </td>
+            <td>
+<p>用於描述跑步機的類型。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ServiceRequestPAVS-Sport.html"
+                  title="ValueSet/ServiceRequestPAVS-Sport">身體活動量測-適用運動處方之服務請求代碼值集</a>
+            </td>
+            <td>
+<p>適用運動處方之服務請求代碼。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-SportTrainingVS-Sport.html"
+                  title="ValueSet/SportTrainingVS-Sport">身體活動量測-重量訓練代碼值集</a>
+            </td>
+            <td>
+<p>定義重量訓練各個方面的代碼，包括使用的重量、執行的組數以及每組的重複次數。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ReferralCarePlanVS-TWLTC.html"
+                  title="ValueSet/ReferralCarePlanVS-TWLTC">轉介單申請服務種類值集</a>
+            </td>
+            <td>
+<p>轉介單申請服務種類的值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-RelationshipTypeVS-TWLTC.html"
+                  title="ValueSet/RelationshipTypeVS-TWLTC">關係類型擴展值集</a>
+            </td>
+            <td>
+<p>關係人與個案的關係類型擴展代碼值集，新增孫媳婦、孫女婿、聘用看護-本國籍、聘用看護-外國籍等代碼</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-PatientIdentityCS-TWLTC.html"
+                  title="CodeSystem/PatientIdentityCS-TWLTC">個案身分別代碼</a>
+            </td>
+            <td>
+<p>個案身分別代碼</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-ConditionDisabilityCS-TWLTC.html"
+                  title="CodeSystem/ConditionDisabilityCS-TWLTC">個案身心障礙手冊持有狀態代碼</a>
+            </td>
+            <td>
+<p>用於表述個案的身心障礙手冊持有狀態代碼。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-ConditionDisabilityTypeCS-TWLTC.html"
+                  title="CodeSystem/ConditionDisabilityTypeCS-TWLTC">個案身心障礙類型代碼（新制）</a>
+            </td>
+            <td>
+<p>用於表述個案的身心障礙類型代碼（新制）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-ConditionDisabilityLegacyTypeCS-TWLTC.html"
+                  title="CodeSystem/ConditionDisabilityLegacyTypeCS-TWLTC">個案身心障礙類型代碼（舊制）</a>
+            </td>
+            <td>
+<p>用於表述個案的身心障礙類型代碼（舊制）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-AddressUseCS-TWLTC.html"
+                  title="CodeSystem/AddressUseCS-TWLTC">地址用途擴展識別碼</a>
+            </td>
+            <td>
+<p>地址用途的擴展識別碼，新增戶籍地與現居地等代碼</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-EducationStatusCS-TWLTC.html"
+                  title="CodeSystem/EducationStatusCS-TWLTC">教育程度代碼</a>
+            </td>
+            <td>
+<p>用於表述個案的教育程度，在長照機構住民教育程度 Extension 中使用。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-EconomyStatusCS-TWLTC.html"
+                  title="CodeSystem/EconomyStatusCS-TWLTC">經濟狀況代碼</a>
+            </td>
+            <td>
+<p>用於表述個案的經濟狀況，在長照機構住民經濟狀況 Extension 中使用。
+此代碼比照警政署偵查筆錄制式格式之選項進行設計。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-ICD-10-PCS-2023-TW-F-CS.html"
+                  title="CodeSystem/ICD-10-PCS-2023-TW-F-CS">臺灣 2023 年中文版 ICD-10-PCS-F-復健及診斷性聽力學</a>
+            </td>
+            <td>
+<p>臺灣 2023 年中文版 ICD-10-PCS 復健及診斷性聽力學(Physical Rehabilitation and Diagnostic Audiology)，章節數值為「F」。 包括：復健、診斷性聽力學。 代碼出版日期：2023-11-10；資料所屬單位：衛生福利部中央健康保險署。 因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。本 CodeSystem 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-TempCodeCS-Sport.html"
+                  title="CodeSystem/TempCodeCS-Sport">身體活動量測-暫用代碼</a>
+            </td>
+            <td>
+<p>身體活動量測暫時使用的代碼，目前無官方代碼。本 CodeSystem 繼承自身體活動量測 IG，後續將配合官方代碼更新。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-GaitCycleCS-Sport.html"
+                  title="CodeSystem/GaitCycleCS-Sport">身體活動量測-步態週期</a>
+            </td>
+            <td>
+<p>一個步伐的完整過程，從一隻腳接觸地面開始到同一隻腳再次接觸地面結束。這個過程可以分為兩個主要階段：支撐期（stance phase）和擺動期（swing phase）。本 CodeSystem 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-SportTrainingCS-Sport.html"
+                  title="CodeSystem/SportTrainingCS-Sport">身體活動量測-重量訓練代碼系統</a>
+            </td>
+            <td>
+<p>此代碼系統定義重量訓練各個方面的代碼，包括使用的重量、執行的組數以及每組的重複次數。本 CodeSystem 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-ReferralConditionCrushCS-TWLTC.html"
+                  title="CodeSystem/ReferralConditionCrushCS-TWLTC">轉介單壓傷狀況代碼</a>
+            </td>
+            <td>
+<p>用於表述個案的壓傷狀況。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-ReferralConditionResidenceCS-TWLTC.html"
+                  title="CodeSystem/ReferralConditionResidenceCS-TWLTC">轉介單居住狀況代碼</a>
+            </td>
+            <td>
+<p>用於表述個案的居住狀況</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-ReferralCarePlanCS-TWLTC.html"
+                  title="CodeSystem/ReferralCarePlanCS-TWLTC">轉介單申請服務種類代碼</a>
+            </td>
+            <td>
+<p>用於表述個案欲申請的服務項目。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-ReferralConditionCaregiverCS-TWLTC.html"
+                  title="CodeSystem/ReferralConditionCaregiverCS-TWLTC">轉介單看護狀況代碼</a>
+            </td>
+            <td>
+<p>用於表述個案雇用看護的狀況。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-ReferralConditionTubeCS-TWLTC.html"
+                  title="CodeSystem/ReferralConditionTubeCS-TWLTC">轉介單管路狀況代碼</a>
+            </td>
+            <td>
+<p>用於表述轉介單的狀況代碼，包含身心障礙手冊、管路、壓傷、居住狀況、看護、主要問題及需求等。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-RelationshipTypeCS-TWLTC.html"
+                  title="CodeSystem/RelationshipTypeCS-TWLTC">關係類型擴展代碼</a>
+            </td>
+            <td>
+<p>關係人與個案的關係類型擴展代碼，新增孫媳婦、孫女婿、聘用看護-本國籍、聘用看護-外國籍等代碼</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="8"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Binary-cdr-assessment-example.html"
+                  title="Binary/cdr-assessment-example">CDR 評估範例</a>
+            </td>
+            <td>
+<p>一個完整的 CDR 評估範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-ltc-patient-cms-example.html"
+                  title="Patient/ltc-patient-cms-example">CMS評估個案範例</a>
+            </td>
+            <td>
+<p>一個接受CMS評估的長照個案範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Binary-mmse-assessment-example.html"
+                  title="Binary/mmse-assessment-example">MMSE 評估範例</a>
+            </td>
+            <td>
+<p>一個完整的 MMSE 評估範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-ltc-questionnaire-sof.html"
+                  title="Questionnaire/ltc-questionnaire-sof">SOF問卷</a>
+            </td>
+            <td>
+<p>轉介流程中SOF問卷</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-sof-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-sof-example">SOF問卷回應範例</a>
+            </td>
+            <td>
+<p>轉介流程中SOF問卷的回應範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ltc-observation-vital-signs-panel-example.html"
+                  title="Observation/ltc-observation-vital-signs-panel-example">一組生命徵象檢驗檢查範例</a>
+            </td>
+            <td>
+<p>一個一組生命徵象檢驗檢查的範例，展示如何使用 LTCObservationVitalSignsPanel Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-ltc-questionnaire-caregiver-support.html"
+                  title="Questionnaire/ltc-questionnaire-caregiver-support">主要照護者工作與支持問卷</a>
+            </td>
+            <td>
+<p>CMS評估表中主要照護者工作與支持問卷</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="RelatedPerson-ltc-related-person-primary-caregiver-example.html"
+                  title="RelatedPerson/ltc-related-person-primary-caregiver-example">主要照顧者範例</a>
+            </td>
+            <td>
+<p>一個主要照顧者的範例，展示如何使用 LTCRelatedPerson Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="RelatedPerson-ltc-related-person-primary-caregiver-referral-example.html"
+                  title="RelatedPerson/ltc-related-person-primary-caregiver-referral-example">主要照顧者範例（轉介用）</a>
+            </td>
+            <td>
+<p>轉介單使用之主要照顧者範例，patient 指向轉介個案</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-ltc-questionnaire-caregiver-load.html"
+                  title="Questionnaire/ltc-questionnaire-caregiver-load">主要照顧者負荷問卷</a>
+            </td>
+            <td>
+<p>CMS評估表中照顧者負荷問卷</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-visceral-fat-index-example.html"
+                  title="Observation/pasport-observation-visceral-fat-index-example">內臟脂肪指數測量範例</a>
+            </td>
+            <td>
+<p>一個內臟脂肪指數測量的範例，展示如何使用 PASportObservationVisceralFatIndex Profile 來記錄身體組成分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-visceral-fat-area-example.html"
+                  title="Observation/pasport-observation-visceral-fat-area-example">內臟脂肪面積測量範例</a>
+            </td>
+            <td>
+<p>一個內臟脂肪面積測量的範例，展示如何使用 PASportObservationVisceralFatArea Profile 來記錄身體組成分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-fat-free-mass-example.html"
+                  title="Observation/pasport-observation-fat-free-mass-example">去脂體重測量範例</a>
+            </td>
+            <td>
+<p>一個去脂體重測量的範例，展示如何使用 PASportObservationFatFreeMass Profile 來記錄身體組成分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-respiratory-rate-example.html"
+                  title="Observation/pasport-observation-respiratory-rate-example">呼吸速率測量範例</a>
+            </td>
+            <td>
+<p>一個呼吸速率測量的範例，展示如何使用 PASportObservationRespiratoryRate Profile 來記錄呼吸速率資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-example">問卷回覆範例</a>
+            </td>
+            <td>
+<p>一個問卷回覆的範例，展示如何使用 LTCQuestionnaireResponse Profile 來記錄問卷回覆</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-basal-metabolic-rate-example.html"
+                  title="Observation/pasport-observation-basal-metabolic-rate-example">基礎代謝率測量範例</a>
+            </td>
+            <td>
+<p>一個基礎代謝率測量的範例，展示如何使用 PASportObservationBasalMetabolicRate Profile 來記錄身體組成分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-resting-heart-rate-example.html"
+                  title="Observation/pasport-observation-resting-heart-rate-example">安靜心率測量範例</a>
+            </td>
+            <td>
+<p>一個安靜心率測量的範例，展示如何使用 PASportObservationRestingHeartRate Profile 來記錄安靜心率資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ltc-condition-caregiver-family-example.html"
+                  title="Condition/ltc-condition-caregiver-family-example">家庭照顧者狀況範例</a>
+            </td>
+            <td>
+<p>一個家庭照顧者狀況的範例，展示如何使用 LTCConditionCaregiver Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ltc-condition-caregiver-family-referral-example.html"
+                  title="Condition/ltc-condition-caregiver-family-referral-example">家庭照顧者狀況範例（轉介用）</a>
+            </td>
+            <td>
+<p>轉介單使用之家庭照顧者狀況 Condition 範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-ltc-questionnaire-society.html"
+                  title="Questionnaire/ltc-questionnaire-society">居家環境與社會參與問卷</a>
+            </td>
+            <td>
+<p>CMS評估表中居家環境與社會參與問卷</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-society-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-society-example">居家環境與社會參與問卷回應範例</a>
+            </td>
+            <td>
+<p>CMS評估表中居家環境與社會參與問卷的回應範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-ltc-questionnaire-iadl.html"
+                  title="Questionnaire/ltc-questionnaire-iadl">工具性日常活動功能問卷</a>
+            </td>
+            <td>
+<p>CMS評估表中IADL問卷</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-iadl-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-iadl-example">工具性日常活動功能問卷回應範例</a>
+            </td>
+            <td>
+<p>CMS評估表中IADL問卷的回應範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-mean-heart-rate-example.html"
+                  title="Observation/pasport-observation-mean-heart-rate-example">平均心率測量範例</a>
+            </td>
+            <td>
+<p>一個平均心率測量的範例，展示如何使用 PASportObservationMeanHeartRate Profile 來記錄平均心率資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-heart-rate-variability-example.html"
+                  title="Observation/pasport-observation-heart-rate-variability-example">心率變異性測量範例</a>
+            </td>
+            <td>
+<p>一個心率變異性測量的範例，展示如何使用 PASportObservationHeartRateVariability Profile 來記錄心率變異性資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-heart-rate-example.html"
+                  title="Observation/pasport-observation-heart-rate-example">心率量測範例</a>
+            </td>
+            <td>
+<p>一個心率量測的範例，展示如何使用 PASportObservationHeartRate Profile 來記錄運動前後的心率變化</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-body-bone-mass-example.html"
+                  title="Observation/pasport-observation-body-bone-mass-example">推定骨量測量範例</a>
+            </td>
+            <td>
+<p>一個推定骨量測量的範例，展示如何使用 PASportObservationBodyBoneMass Profile 來記錄身體組成分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-adl-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-adl-example">日常生活能力評估問卷回覆範例</a>
+            </td>
+            <td>
+<p>一個日常生活能力評估問卷回覆的範例，展示如何使用 LTCQuestionnaireResponse Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-ltc-questionnaire-adl-assessment-example.html"
+                  title="Questionnaire/ltc-questionnaire-adl-assessment-example">日常生活能力評估問卷範例</a>
+            </td>
+            <td>
+<p>一個日常生活能力評估問卷的範例，展示如何使用 LTCQuestionnaire Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-gait-type-example.html"
+                  title="Observation/pasport-observation-gait-type-example">步態分析測量範例</a>
+            </td>
+            <td>
+<p>一個步態分析測量的範例，展示如何使用 PASportObservationGaitType Profile 來記錄步態類型分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-gait-cycle-example.html"
+                  title="Observation/pasport-observation-gait-cycle-example">步態週期測量範例</a>
+            </td>
+            <td>
+<p>一個步態週期測量的範例，展示如何使用 PASportObservationGaitCycle Profile 來記錄步態週期分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-extracellular-water-ratio-example.html"
+                  title="Observation/pasport-observation-extracellular-water-ratio-example">水腫指數測量範例</a>
+            </td>
+            <td>
+<p>一個水腫指數測量的範例，展示如何使用 PASportObservationExtracellularWaterRatio Profile 來記錄身體組成分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-ltc-procedure-bathing-example.html"
+                  title="Procedure/ltc-procedure-bathing-example">沐浴協助範例</a>
+            </td>
+            <td>
+<p>一個沐浴協助的範例，展示如何使用 LTCProcedureCareActivity Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-ltc-questionnaire-communication.html"
+                  title="Questionnaire/ltc-questionnaire-communication">溝通表達能力問卷</a>
+            </td>
+            <td>
+<p>CMS評估表中溝通表達能力問卷</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-communication-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-communication-example">溝通表達能力問卷回應範例</a>
+            </td>
+            <td>
+<p>CMS評估表中溝通表達能力問卷的回應範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ltc-condition-crush-none-example.html"
+                  title="Condition/ltc-condition-crush-none-example">無壓傷狀況範例</a>
+            </td>
+            <td>
+<p>一個無壓傷狀況的範例，展示如何使用 LTCConditionCrush Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-ltc-patient-cms-chen-ming-hui-example.html"
+                  title="Patient/ltc-patient-cms-chen-ming-hui-example">照顧管理評估量表住民範例</a>
+            </td>
+            <td>
+<p>一個照顧管理評估量表住民的範例，展示如何使用 LTCPatientCMS Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-ltc-bundle-cms-example.html"
+                  title="Bundle/ltc-bundle-cms-example">照顧管理評估量表文件打包範例</a>
+            </td>
+            <td>
+<p>一個照顧管理評估量表文件打包的範例，展示如何使用 LTCBundleCMS Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-ltc-composition-cms-example.html"
+                  title="Composition/ltc-composition-cms-example">照顧管理評估量表文件架構範例</a>
+            </td>
+            <td>
+<p>一個照顧管理評估量表文件架構的範例，展示如何使用 LTCCompositionCMS Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Binary-ltc-cms-model-example.html"
+                  title="Binary/ltc-cms-model-example">照顧管理評估量表邏輯模型範例</a>
+            </td>
+            <td>
+<p>一個照顧管理評估量表邏輯模型的範例，展示如何準備欄位資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-ltc-questionnaire-caregiver.html"
+                  title="Questionnaire/ltc-questionnaire-caregiver">照顧者問卷</a>
+            </td>
+            <td>
+<p>轉介流程中照顧者問卷</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-caregiver-support-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-caregiver-support-example">照顧者支持問卷回應範例</a>
+            </td>
+            <td>
+<p>CMS評估表中照顧者支持問卷的回應範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-caregiver-load-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-caregiver-load-example">照顧者負荷問卷回應範例</a>
+            </td>
+            <td>
+<p>CMS評估表中照顧者負荷問卷的回應範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-ltc-questionnaire-special-care.html"
+                  title="Questionnaire/ltc-questionnaire-special-care">特殊複雜照護需要問卷</a>
+            </td>
+            <td>
+<p>CMS評估表中特殊複雜照護需要問卷</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-special-care-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-special-care-example">特殊複雜照護需要問卷回應範例</a>
+            </td>
+            <td>
+<p>CMS評估表中特殊複雜照護需要問卷的回應範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-pasport-condition-medical-history-example.html"
+                  title="Condition/pasport-condition-medical-history-example">病史記錄範例</a>
+            </td>
+            <td>
+<p>一個病史記錄的範例，展示如何使用 PASportConditionMedicalHistory Profile 來記錄患者的病史</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ltc-condition-example.html"
+                  title="Condition/ltc-condition-example">病情、問題或診斷範例</a>
+            </td>
+            <td>
+<p>一個病情的範例，展示如何使用 LTCCondition Profile 來記錄住民的病情資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-ltc-questionnaire-memory.html"
+                  title="Questionnaire/ltc-questionnaire-memory">短期記憶力問卷</a>
+            </td>
+            <td>
+<p>CMS評估表中短期記憶力問卷</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-memory-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-memory-example">短期記憶力問卷回應範例</a>
+            </td>
+            <td>
+<p>CMS評估表中短期記憶力問卷的回應範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-mineral-example.html"
+                  title="Observation/pasport-observation-mineral-example">礦物質重測量範例</a>
+            </td>
+            <td>
+<p>一個礦物質重測量的範例，展示如何使用 PASportObservationMineral Profile 來記錄身體組成分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ltc-condition-crush-stage2-example.html"
+                  title="Condition/ltc-condition-crush-stage2-example">第二期壓傷範例</a>
+            </td>
+            <td>
+<p>一個第二期壓傷的範例，展示如何使用 LTCConditionCrush Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-ltc-questionnaire-mmse.html"
+                  title="Questionnaire/ltc-questionnaire-mmse">簡易智能狀態測驗 (MMSE)</a>
+            </td>
+            <td>
+<p>簡易智能狀態測驗 (Mini-Mental Status Examination, MMSE) 問卷</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-mmse-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-mmse-example">簡易智能狀態測驗回覆範例</a>
+            </td>
+            <td>
+<p>一個簡易智能狀態測驗回覆的範例，展示如何使用 LTCQuestionnaireResponseMMSE Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-mmse-complete-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-mmse-complete-example">簡易智能狀態測驗完整回覆範例</a>
+            </td>
+            <td>
+<p>一個完整的簡易智能狀態測驗回覆範例，展示所有 22 個項目的回答</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-mmse-impaired-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-mmse-impaired-example">簡易智能狀態測驗認知障礙回覆範例</a>
+            </td>
+            <td>
+<p>一個認知功能障礙患者的簡易智能狀態測驗回覆範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ltc-condition-diabetes-example.html"
+                  title="Condition/ltc-condition-diabetes-example">糖尿病病情範例</a>
+            </td>
+            <td>
+<p>一個糖尿病病情的範例，展示如何使用 LTCConditionProblem Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationAdministration-ltc-medication-administration-metformin-example.html"
+                  title="MedicationAdministration/ltc-medication-administration-metformin-example">糖尿病藥物給藥範例</a>
+            </td>
+            <td>
+<p>一個糖尿病藥物給藥的範例，展示如何使用 LTCMedicationAdministration Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-intracellular-water-example.html"
+                  title="Observation/pasport-observation-intracellular-water-example">細胞內水分測量範例</a>
+            </td>
+            <td>
+<p>一個細胞內水分測量的範例，展示如何使用 PASportObservationIntracellularWater Profile 來記錄身體組成分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-extracellular-water-example.html"
+                  title="Observation/pasport-observation-extracellular-water-example">細胞外水分測量範例</a>
+            </td>
+            <td>
+<p>一個細胞外水分測量的範例，展示如何使用 PASportObservationExtracellularWater Profile 來記錄身體組成分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-cell-mass-example.html"
+                  title="Observation/pasport-observation-cell-mass-example">細胞量測量範例</a>
+            </td>
+            <td>
+<p>一個細胞量測量的範例，展示如何使用 PASportObservationCellMass Profile 來記錄身體組成分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-skeletal-muscle-mass-index-example.html"
+                  title="Observation/pasport-observation-skeletal-muscle-mass-index-example">肌肉質量指數測量範例</a>
+            </td>
+            <td>
+<p>一個肌肉質量指數測量的範例，展示如何使用 PASportObservationSkeletalMuscleMassIndex Profile 來記錄身體組成分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-soft-lean-mass-example.html"
+                  title="Observation/pasport-observation-soft-lean-mass-example">肌肉量測量範例</a>
+            </td>
+            <td>
+<p>一個肌肉量測量的範例，展示如何使用 PASportObservationSoftLeanMass Profile 來記錄身體組成分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ltc-condition-disability-type-limb-example.html"
+                  title="Condition/ltc-condition-disability-type-limb-example">肢體障礙類型範例</a>
+            </td>
+            <td>
+<p>一個肢體障礙類型的範例，展示如何使用 LTCConditionDisabilityType Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-obesity-degree-example.html"
+                  title="Observation/pasport-observation-obesity-degree-example">肥胖度測量範例</a>
+            </td>
+            <td>
+<p>一個肥胖度測量的範例，展示如何使用 PASportObservationObesityDegree Profile 來記錄肥胖度資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-peripheral-oxygen-saturation-example.html"
+                  title="Observation/pasport-observation-peripheral-oxygen-saturation-example">脈搏血氧飽和度測量範例</a>
+            </td>
+            <td>
+<p>一個脈搏血氧飽和度測量的範例，展示如何使用 PASportObservationPeripheralOxygenSaturation Profile 來記錄脈搏血氧飽和度資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-waist-example.html"
+                  title="Observation/pasport-observation-waist-example">腰圍測量範例</a>
+            </td>
+            <td>
+<p>一個腰圍測量的範例，展示如何使用 PASportObservationWaist Profile 來記錄基礎生理量測</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-waist-hip-rate-example.html"
+                  title="Observation/pasport-observation-waist-hip-rate-example">腰臀圍比測量範例</a>
+            </td>
+            <td>
+<p>一個腰臀圍比測量的範例，展示如何使用 PASportObservationWaistHipRate Profile 來記錄身體組成分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-ltc-questionnaire-cdr.html"
+                  title="Questionnaire/ltc-questionnaire-cdr">臨床失智評估量表 (CDR)</a>
+            </td>
+            <td>
+<p>臨床失智評估量表 (Clinical Dementia Rating Scale, CDR) 問卷</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-cdr-moderate-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-cdr-moderate-example">臨床失智評估量表中度失智回覆範例</a>
+            </td>
+            <td>
+<p>一個中度失智患者的臨床失智評估量表回覆範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-cdr-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-cdr-example">臨床失智評估量表回覆範例</a>
+            </td>
+            <td>
+<p>一個臨床失智評估量表回覆的範例，展示如何使用 LTCQuestionnaireResponseCDR Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-cdr-complete-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-cdr-complete-example">臨床失智評估量表完整回覆範例</a>
+            </td>
+            <td>
+<p>一個完整的臨床失智評估量表回覆範例，展示所有 6 個領域的評估</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ltc-condition-residence-not-alone-example.html"
+                  title="Condition/ltc-condition-residence-not-alone-example">與家人同住居住狀況範例</a>
+            </td>
+            <td>
+<p>一個與家人同住之居住狀況的範例，展示如何使用 LTCConditionResidence Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-protein-example.html"
+                  title="Observation/pasport-observation-protein-example">蛋白質重測量範例</a>
+            </td>
+            <td>
+<p>一個蛋白質重測量的範例，展示如何使用 PASportObservationProtein Profile 來記錄身體組成分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ltc-observation-blood-pressure-example.html"
+                  title="Observation/ltc-observation-blood-pressure-example">血壓量測範例</a>
+            </td>
+            <td>
+<p>一個血壓量測的範例，展示如何使用 LTCObservationVitalSigns Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-blood-pressure-example.html"
+                  title="Observation/pasport-observation-blood-pressure-example">血壓量測範例</a>
+            </td>
+            <td>
+<p>一個血壓量測的範例，展示如何使用 PASportObservationBloodPressure Profile 來記錄運動前後的血壓變化</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-glucose-example.html"
+                  title="Observation/pasport-observation-glucose-example">血糖測量範例</a>
+            </td>
+            <td>
+<p>一個血糖測量的範例，展示如何使用 PASportObservationGlucose Profile 來記錄基礎生理量測</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CarePlan-ltc-careplan-mobility-example.html"
+                  title="CarePlan/ltc-careplan-mobility-example">行動照顧計畫範例</a>
+            </td>
+            <td>
+<p>一個行動照顧計畫的範例，展示如何使用 LTCCarePlan Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Goal-ltc-goal-mobility-improvement-example.html"
+                  title="Goal/ltc-goal-mobility-improvement-example">行動能力改善目標範例</a>
+            </td>
+            <td>
+<p>一個行動能力改善目標的範例，展示如何使用 LTCGoal Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-ltc-questionnaire-mental.html"
+                  title="Questionnaire/ltc-questionnaire-mental">認知功能與精神狀態問卷</a>
+            </td>
+            <td>
+<p>CMS評估表中認知功能與精神狀態問卷</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-mental-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-mental-example">認知功能與精神狀態問卷回應範例</a>
+            </td>
+            <td>
+<p>CMS評估表中認知功能與精神狀態問卷的回應範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ltc-observation-falling-history-example.html"
+                  title="Observation/ltc-observation-falling-history-example">跌倒紀錄範例</a>
+            </td>
+            <td>
+<p>一個跌倒紀錄的範例，展示如何使用 LTCObservationFallingHistory Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-treadmill-example.html"
+                  title="Observation/pasport-observation-treadmill-example">跑步機運動記錄範例</a>
+            </td>
+            <td>
+<p>一個跑步機運動記錄的範例，展示如何使用 PASportObservationTreadmill Profile 來記錄跑步機運動數據</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ltc-condition-disability-example.html"
+                  title="Condition/ltc-condition-disability-example">身心障礙手冊持有狀態範例</a>
+            </td>
+            <td>
+<p>一個身心障礙手冊持有狀態的範例，展示如何使用 LTCConditionDisability Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-total-body-water-example.html"
+                  title="Observation/pasport-observation-total-body-water-example">身體總水分測量範例</a>
+            </td>
+            <td>
+<p>一個身體總水分測量的範例，展示如何使用 PASportObservationTotalBodyWater Profile 來記錄身體組成分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-bmi-example.html"
+                  title="Observation/pasport-observation-bmi-example">身體質量指數測量範例</a>
+            </td>
+            <td>
+<p>一個BMI測量的範例，展示如何使用 PASportObservationBodyMassIndex Profile 來記錄身體質量指數</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-height-example.html"
+                  title="Observation/pasport-observation-height-example">身高量測範例</a>
+            </td>
+            <td>
+<p>一個身高量測的範例，展示如何使用 PASportObservationHeight Profile 來記錄身高數據</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-adl-referral-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-adl-referral-example">轉介ADL問卷回應範例</a>
+            </td>
+            <td>
+<p>轉介流程中ADL問卷的回應範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-iadl-referral-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-iadl-referral-example">轉介IADL問卷回應範例</a>
+            </td>
+            <td>
+<p>轉介流程中IADL問卷的回應範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-ltc-patient-referral-example.html"
+                  title="Patient/ltc-patient-referral-example">轉介個案範例</a>
+            </td>
+            <td>
+<p>一個需要長照服務轉介的個案範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-ltc-patient-referral-chen-ming-hui-example.html"
+                  title="Patient/ltc-patient-referral-chen-ming-hui-example">轉介單住民範例</a>
+            </td>
+            <td>
+<p>一個轉介單住民的範例，展示如何使用 LTCPatientReferral Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CarePlan-ltc-careplan-referral-home-service-example.html"
+                  title="CarePlan/ltc-careplan-referral-home-service-example">轉介單居家服務計畫範例</a>
+            </td>
+            <td>
+<p>一個轉介單居家服務計畫的範例，展示如何使用 LTCCarePlanReferral Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-ltc-bundle-referral-example.html"
+                  title="Bundle/ltc-bundle-referral-example">轉介單文件打包範例</a>
+            </td>
+            <td>
+<p>一個轉介單文件打包的範例，展示如何使用 LTCBundleReferral Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-ltc-composition-referral-example.html"
+                  title="Composition/ltc-composition-referral-example">轉介單文件架構範例</a>
+            </td>
+            <td>
+<p>一個轉介單文件架構的範例，展示如何使用 LTCCompositionReferral Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Binary-ltc-referral-model-example.html"
+                  title="Binary/ltc-referral-model-example">轉介單邏輯模型範例</a>
+            </td>
+            <td>
+<p>一個轉介單邏輯模型的範例，展示如何準備欄位資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-caregiver-referral-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-caregiver-referral-example">轉介照顧者問卷回應範例</a>
+            </td>
+            <td>
+<p>轉介流程中照顧者問卷的回應範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ltc-condition-disability-referral-example.html"
+                  title="Condition/ltc-condition-disability-referral-example">轉介－身心障礙手冊持有狀態範例</a>
+            </td>
+            <td>
+<p>供轉介單使用的身心障礙手冊持有狀態 Condition 範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ltc-condition-disability-type-limb-referral-example.html"
+                  title="Condition/ltc-condition-disability-type-limb-referral-example">轉介－身心障礙類型（肢體）範例</a>
+            </td>
+            <td>
+<p>供轉介單使用的身心障礙類型（肢體） Condition 範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-pasport-condition-exercise-history-example.html"
+                  title="Condition/pasport-condition-exercise-history-example">運動史記錄範例</a>
+            </td>
+            <td>
+<p>一個運動史記錄的範例，展示如何使用 PASportConditionExerciseHistory Profile 來記錄患者的運動背景</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-pasport-servicerequest-exercise-therapy-example.html"
+                  title="ServiceRequest/pasport-servicerequest-exercise-therapy-example">運動治療服務請求範例</a>
+            </td>
+            <td>
+<p>一個運動治療服務請求的範例，展示如何使用 PASportServiceRequest Profile 來申請運動治療服務</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Goal-pasport-goal-walking-steps-example.html"
+                  title="Goal/pasport-goal-walking-steps-example">運動目標－步行步數範例</a>
+            </td>
+            <td>
+<p>一個運動目標的範例，展示如何使用 PASportGoal Profile 來表示每日步行步數目標</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CarePlan-pasport-careplan-walking-exercise-example.html"
+                  title="CarePlan/pasport-careplan-walking-exercise-example">運動計畫－步行運動範例</a>
+            </td>
+            <td>
+<p>一個運動計畫的範例，展示如何使用 PASportCarePlan Profile 來表示步行運動計畫</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-weight-training-example.html"
+                  title="Observation/pasport-observation-weight-training-example">重量訓練記錄範例</a>
+            </td>
+            <td>
+<p>一個重量訓練記錄的範例，展示如何使用 PASportObservationWeightTraining Profile 來記錄重量訓練數據</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-aa12-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-aa12-example">長期照護醫師意見書問卷回覆範例 (AA12)</a>
+            </td>
+            <td>
+<p>一個長期照護醫師意見書問卷回覆的範例，展示如何使用 LTCQuestionnaireResponseAA12 Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-ltc-questionnaire-aa12-example.html"
+                  title="Questionnaire/ltc-questionnaire-aa12-example">長期照護醫師意見書問卷範例 (AA12)</a>
+            </td>
+            <td>
+<p>一個長期照護醫師意見書問卷的範例，展示如何使用 LTCQuestionnaire Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-ltc-practitioner-physician-aa12-example.html"
+                  title="Practitioner/ltc-practitioner-physician-aa12-example">長期照護醫師意見書醫師範例 (AA12)</a>
+            </td>
+            <td>
+<p>一個長期照護醫師意見書的醫師範例，展示如何使用 TWCorePractitioner Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-twcore-organization-hospital-aa12-example.html"
+                  title="Organization/twcore-organization-hospital-aa12-example">長期照護醫師意見書醫院範例 (AA12)</a>
+            </td>
+            <td>
+<p>一個長期照護醫師意見書的醫院範例，展示如何使用 TWCoreOrganization Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-ltc-patient-chen-ming-hui.html"
+                  title="Patient/ltc-patient-chen-ming-hui">長期照顧住民範例</a>
+            </td>
+            <td>
+<p>一個長期照顧機構住民的範例，展示如何使用 LTCPatient Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-ltc-location-example.html"
+                  title="Location/ltc-location-example">長期照顧個案位置監測範例</a>
+            </td>
+            <td>
+<p>一個長期照顧個案位置監測的範例，展示如何使用 LTCLocation Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CareTeam-ltc-care-team-example.html"
+                  title="CareTeam/ltc-care-team-example">長期照顧團隊範例</a>
+            </td>
+            <td>
+<p>一個長期照顧團隊的範例，展示如何使用 LTCCareTeam Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-ltc-encounter-example.html"
+                  title="Encounter/ltc-encounter-example">長期照顧就醫紀錄範例</a>
+            </td>
+            <td>
+<p>一個就醫紀錄的範例，用於轉介單中的出入院情形</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-ltc-organization-example.html"
+                  title="Organization/ltc-organization-example">長期照顧機構範例</a>
+            </td>
+            <td>
+<p>一個長期照顧機構的範例，展示如何使用 LTCOrganization Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="AdverseEvent-ltc-adverse-event-example.html"
+                  title="AdverseEvent/ltc-adverse-event-example">長期照顧異常事件警報範例</a>
+            </td>
+            <td>
+<p>一個長期照顧異常事件警報的範例，展示如何使用 LTCAdverseEvent Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-ltc-practitioner-nurse-example.html"
+                  title="Practitioner/ltc-practitioner-nurse-example">長期照顧護理師範例</a>
+            </td>
+            <td>
+<p>一個長期照顧護理師的範例，展示如何使用 LTCPractitioner Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="PractitionerRole-ltc-practitioner-role-nurse-example.html"
+                  title="PractitionerRole/ltc-practitioner-role-nurse-example">長期照顧護理師角色範例</a>
+            </td>
+            <td>
+<p>一個長期照顧護理師角色的範例，展示如何使用 LTCPractitionerRole Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-aa01-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-aa01-example">長期照顧－AA01照顧計畫擬訂與服務連結問卷回應範例</a>
+            </td>
+            <td>
+<p>一個AA01照顧計畫擬訂與服務連結問卷回應的範例，展示如何使用 LTCQuestionnaireResponseAA01 Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-ltc-questionnaire-response-aa02-example.html"
+                  title="QuestionnaireResponse/ltc-questionnaire-response-aa02-example">長期照顧－AA02照顧管理追蹤問卷回應範例</a>
+            </td>
+            <td>
+<p>一個AA02照顧管理追蹤問卷回應的範例，展示如何使用 LTCQuestionnaireResponseAA02 Profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-ltc-practitioner-example.html"
+                  title="Practitioner/ltc-practitioner-example">長照醫事人員範例</a>
+            </td>
+            <td>
+<p>一個執行長照服務和運動處方的醫事人員範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ltc-condition-need-assistance-example.html"
+                  title="Condition/ltc-condition-need-assistance-example">需要照護協助狀況範例</a>
+            </td>
+            <td>
+<p>個案需要長期照護協助的狀況範例，用於轉介Bundle中</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-skeletal-muscle-mass-example.html"
+                  title="Observation/pasport-observation-skeletal-muscle-mass-example">骨骼肌重測量範例</a>
+            </td>
+            <td>
+<p>一個骨骼肌重測量的範例，展示如何使用 PASportObservationSkeletalMuscleMass Profile 來記錄肌肉量變化</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-body-age-example.html"
+                  title="Observation/pasport-observation-body-age-example">體內年齡測量範例</a>
+            </td>
+            <td>
+<p>一個體內年齡測量的範例，展示如何使用 PASportObservationBodyAge Profile 來記錄體內年齡資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-body-temperature-example.html"
+                  title="Observation/pasport-observation-body-temperature-example">體溫測量範例</a>
+            </td>
+            <td>
+<p>一個體溫測量的範例，展示如何使用 PASportObservationBodyTemperature Profile 來記錄體溫資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-body-fat-percentage-example.html"
+                  title="Observation/pasport-observation-body-fat-percentage-example">體脂率測量範例</a>
+            </td>
+            <td>
+<p>一個體脂率測量的範例，展示如何使用 PASportObservationBodyFatPercentage Profile 來記錄身體組成分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-body-fat-mass-example.html"
+                  title="Observation/pasport-observation-body-fat-mass-example">體脂肪重測量範例</a>
+            </td>
+            <td>
+<p>一個體脂肪重測量的範例，展示如何使用 PASportObservationBodyFatMass Profile 來記錄身體組成分析</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pasport-observation-weight-example.html"
+                  title="Observation/pasport-observation-weight-example">體重量測範例</a>
+            </td>
+            <td>
+<p>一個體重量測的範例，展示如何使用 PASportObservationWeight Profile 來記錄運動計畫中的體重監測</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ltc-condition-tube-nasogastric-example.html"
+                  title="Condition/ltc-condition-tube-nasogastric-example">鼻胃管管路狀況範例</a>
+            </td>
+            <td>
+<p>一個鼻胃管的管路狀況範例，展示如何使用 LTCConditionTube Profile</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package fhir.twltc#0.4.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Feb 28, 2026 05:34+0800">2026-02-28</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

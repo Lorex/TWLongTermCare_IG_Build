@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="ltc-careplan-mobility-example"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/LTCCarePlan"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CarePlan ltc-careplan-mobility-example</b></p><a name="ltc-careplan-mobility-example"> </a><a name="hcltc-careplan-mobility-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-LTCCarePlan.html">長期照顧－照顧計畫</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title="Codes:{https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw assess-plan}">Assessment and Plan of Treatment</span></p><p><b>subject</b>: <a href="Patient-ltc-patient-chen-ming-hui.html">陳明慧 Female, DoB: 1945-03-15 ( National Person Identifier (TWN): A123456789 (use: official, ))</a></p><p><b>period</b>: 2024-01-15 --&gt; 2024-04-15</p><p><b>author</b>: <a href="PractitionerRole-ltc-practitioner-role-nurse-example.html">PractitionerRole Registered nurse</a></p><p><b>contributor</b>: <a href="RelatedPerson-ltc-related-person-primary-caregiver-example.html">RelatedPerson 陳志強</a></p><p><b>goal</b>: <a href="Goal-ltc-goal-mobility-improvement-example.html">Goal: lifecycleStatus = active; description = Progressive mobility (regime/therapy); start[x] = 2024-01-15; note = 住民目前需要部分協助才能行走，期望透過復健訓練達到獨立行走的目標</a></p><blockquote><p><b>activity</b></p><h3>Details</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Status</b></td><td><b>Scheduled[x]</b></td><td><b>Performer</b></td><td><b>Description</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 229070002}">Stretching exercises</span></td><td>In Progress</td><td>2024-01-15 --&gt; 2024-04-15</td><td><a href="PractitionerRole-ltc-practitioner-role-nurse-example.html">PractitionerRole Registered nurse</a></td><td>進行每日助行器行走訓練，每次30分鐘，每日2次</td></tr></table></blockquote><p><b>note</b>: @2024-01-15</p><blockquote><div><p>住民配合度良好，預期能達成獨立行走的目標</p>
+</div></blockquote></div>
+  </text>
+  <status value="active"/>
+  <intent value="plan"/>
+  <category>
+    <coding>
+      <system value="https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw"/>
+      <code value="assess-plan"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/ltc-patient-chen-ming-hui"/>
+  </subject>
+  <period>
+    <start value="2024-01-15"/>
+    <end value="2024-04-15"/>
+  </period>
+  <author>
+    <reference value="PractitionerRole/ltc-practitioner-role-nurse-example"/>
+  </author>
+  <contributor>
+    <reference value="RelatedPerson/ltc-related-person-primary-caregiver-example"/>
+  </contributor>
+  <goal>
+    <reference value="Goal/ltc-goal-mobility-improvement-example"/>
+  </goal>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="229070002"/>
+          <display value="Stretching exercises"/>
+        </coding>
+      </code>
+      <status value="in-progress"/>
+      <scheduledPeriod>
+        <start value="2024-01-15"/>
+        <end value="2024-04-15"/>
+      </scheduledPeriod>
+      <performer>
+        <reference value="PractitionerRole/ltc-practitioner-role-nurse-example"/>
+      </performer>
+      <description value="進行每日助行器行走訓練，每次30分鐘，每日2次"/>
+    </detail>
+  </activity>
+  <note>
+    <time value="2024-01-15"/>
+    <text value="住民配合度良好，預期能達成獨立行走的目標"/>
+  </note>
+</CarePlan>
