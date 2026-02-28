@@ -19,7 +19,7 @@
 
 * This Logical Model is not used by any profiles in this Implementation Guide
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.twltc|current/StructureDefinition/LTCCDRAssessmentModel)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCCDRAssessmentModel)
 
 ### Formal Views of Profile Content
 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCCDRAssessmentMode
   "title" : "臨床失智評估量表評估",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-02-28T07:16:04+08:00",
+  "date" : "2026-02-28T23:13:53+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

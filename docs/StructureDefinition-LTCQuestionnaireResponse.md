@@ -20,7 +20,7 @@
 * Examples for this Profile: [QuestionnaireResponse/ltc-questionnaire-response-example](QuestionnaireResponse-ltc-questionnaire-response-example.md)
 * CapabilityStatements using this Profile: [臺灣長期照顧實作指引 - 用戶端能力聲明](CapabilityStatement-CapabilityStatementLTCClient.md) and [臺灣長期照顧實作指引 - 伺服端能力聲明](CapabilityStatement-CapabilityStatementLTCServer.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.twltc|current/StructureDefinition/LTCQuestionnaireResponse)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCQuestionnaireResponse)
 
 ### Formal Views of Profile Content
 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCQuestionnaireResp
   "name" : "LTCQuestionnaireResponse",
   "title" : "長期照顧－問卷回覆",
   "status" : "active",
-  "date" : "2026-02-28T07:16:04+08:00",
+  "date" : "2026-02-28T23:13:53+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

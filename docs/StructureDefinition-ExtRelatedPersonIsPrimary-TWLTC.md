@@ -22,7 +22,7 @@
 * Use this Extension: [長期照顧－關係人](StructureDefinition-LTCRelatedPerson.md)
 * Examples for this Extension: [Bundle/ltc-bundle-cms-example](Bundle-ltc-bundle-cms-example.md), [Bundle/ltc-bundle-referral-example](Bundle-ltc-bundle-referral-example.md), [RelatedPerson/ltc-related-person-primary-caregiver-example](RelatedPerson-ltc-related-person-primary-caregiver-example.md) and [RelatedPerson/ltc-related-person-primary-caregiver-referral-example](RelatedPerson-ltc-related-person-primary-caregiver-referral-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.twltc|current/StructureDefinition/ExtRelatedPersonIsPrimary-TWLTC)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/ExtRelatedPersonIsPrimary-TWLTC)
 
 ### Formal Views of Extension Content
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-ExtRelatedPersonIsPr
   "name" : "ExtRelatedPersonIsPrimaryTWLTC",
   "title" : "是否為主要照顧者",
   "status" : "active",
-  "date" : "2026-02-28T07:16:04+08:00",
+  "date" : "2026-02-28T23:13:53+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

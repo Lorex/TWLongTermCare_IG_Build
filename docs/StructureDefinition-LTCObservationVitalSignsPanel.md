@@ -19,7 +19,7 @@
 * Refer to this Profile: [長期照顧－一組生命徵象檢驗檢查](StructureDefinition-LTCObservationVitalSignsPanel.md)
 * Examples for this Profile: [Observation/ltc-observation-vital-signs-panel-example](Observation-ltc-observation-vital-signs-panel-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.twltc|current/StructureDefinition/LTCObservationVitalSignsPanel)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCObservationVitalSignsPanel)
 
 ### Formal Views of Profile Content
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCObservationVitalS
   "name" : "LTCObservationVitalSignsPanel",
   "title" : "長期照顧－一組生命徵象檢驗檢查",
   "status" : "active",
-  "date" : "2026-02-28T07:16:04+08:00",
+  "date" : "2026-02-28T23:13:53+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

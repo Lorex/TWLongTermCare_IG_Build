@@ -22,7 +22,7 @@
 
 * Examples for this Extension: [QuestionnaireResponse/ltc-questionnaire-response-mmse-complete-example](QuestionnaireResponse-ltc-questionnaire-response-mmse-complete-example.md), [QuestionnaireResponse/ltc-questionnaire-response-mmse-example](QuestionnaireResponse-ltc-questionnaire-response-mmse-example.md) and [QuestionnaireResponse/ltc-questionnaire-response-mmse-impaired-example](QuestionnaireResponse-ltc-questionnaire-response-mmse-impaired-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.twltc|current/StructureDefinition/mmse-total-score)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/mmse-total-score)
 
 ### Formal Views of Extension Content
 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-mmse-total-score.csv
   "title" : "MMSE 總分",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-02-28T07:16:04+08:00",
+  "date" : "2026-02-28T23:13:53+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

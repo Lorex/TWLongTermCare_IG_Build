@@ -18,7 +18,7 @@
 
 * Examples for this Profile: [ServiceRequest/pasport-servicerequest-exercise-therapy-example](ServiceRequest-pasport-servicerequest-exercise-therapy-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.twltc|current/StructureDefinition/PASportServiceRequest)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/PASportServiceRequest)
 
 ### Formal Views of Profile Content
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-PASportServiceReques
   "name" : "PASportServiceRequest",
   "title" : "運動處方－服務請求",
   "status" : "active",
-  "date" : "2026-02-28T07:16:04+08:00",
+  "date" : "2026-02-28T23:13:53+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

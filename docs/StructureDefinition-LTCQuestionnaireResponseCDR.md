@@ -18,7 +18,7 @@
 
 * Examples for this Profile: [QuestionnaireResponse/ltc-questionnaire-response-cdr-complete-example](QuestionnaireResponse-ltc-questionnaire-response-cdr-complete-example.md), [QuestionnaireResponse/ltc-questionnaire-response-cdr-example](QuestionnaireResponse-ltc-questionnaire-response-cdr-example.md) and [QuestionnaireResponse/ltc-questionnaire-response-cdr-moderate-example](QuestionnaireResponse-ltc-questionnaire-response-cdr-moderate-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.twltc|current/StructureDefinition/LTCQuestionnaireResponseCDR)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCQuestionnaireResponseCDR)
 
 ### Formal Views of Profile Content
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCQuestionnaireResp
   "name" : "LTCQuestionnaireResponseCDR",
   "title" : "長期照顧－臨床失智評估量表回覆",
   "status" : "active",
-  "date" : "2026-02-28T07:16:04+08:00",
+  "date" : "2026-02-28T23:13:53+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

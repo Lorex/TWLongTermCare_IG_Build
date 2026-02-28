@@ -7,7 +7,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ImplementationGuide/fhir.twltc | *Version*:0.4.1 |
+| *Official URL*:http://ltc-ig.fhir.tw/ImplementationGuide/tw.iii.ltc | *Version*:0.4.1 |
 | Active as of 2026-02-28 | *Computable Name*:TaiwanLongTermCareImplementationGuide |
 
 ### 介紹
@@ -71,11 +71,11 @@ TW LTC IG 中所有Profiles的FMM等級如下：
 | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 作者 | v0.0.1 ~ v0.4.1 | 經濟部產業發展署（Industrial Development Administration, Ministry of Economic Affairs） | 楊宇凡（Yu-Fan Yang） | 矽塔資訊服務有限公司（Sitatech Information Services Co., Ltd） | [ceo@sita.tech](mailto:ceo@sita.tech) |
-| 貢獻者 | v0.4.0 ~ v0.4.1 | 曹軒寧（Hsuan-Ning Tsao） | 矽塔資訊服務有限公司（Sitatech Information Services Co., Ltd） | [shannontsao@sita.tech](mailto:shannontsao@sita.tech) | |
+| 貢獻者 | v0.4.0 | 曹軒寧（Hsuan-Ning Tsao） | 矽塔資訊服務有限公司（Sitatech Information Services Co., Ltd） | [shannontsao@sita.tech](mailto:shannontsao@sita.tech) | |
 | 貢獻者 | v0.0.1 ~ v0.2.1 | 李修安（Hsiu-An Lee） | 國家衛生研究院 - 癌症研究所（National Health Research Institutes - The National Institute of Cancer Research） | [billy72325@gmail.com](mailto:billy72325@gmail.com) | |
-| 貢獻者 | v0.0.1 ~ v0.4.1 | 李祥豪（Siang-Hao Lee） | 九日生行動健康科技公司（9Rise International Mobile Health Technology Co., Ltd.） | [shvoidlee@gmail.com](mailto:shvoidlee@gmail.com) | |
-| 貢獻者 | v0.3.0 ~ v0.4.1 | 楊宗翰（Chung-Han Yang） | 九日生行動健康科技公司（9Rise International Mobile Health Technology Co., Ltd.） |  | |
-| 貢獻者 | v0.0.1 ~ v0.4.1 | 黃薰慧（Hsun-Hui Huang） | 財團法人資訊工業策進會 - 數位轉型研究院（Institute for Information Industry - Digital Transformation Research Institute） | [beatrice@iii.org.tw](mailto:beatrice@iii.org.tw) | |
+| 貢獻者 | v0.0.1 ~ v0.4.0 | 李祥豪（Siang-Hao Lee） | 九日生行動健康科技公司（9Rise International Mobile Health Technology Co., Ltd.） | [shvoidlee@gmail.com](mailto:shvoidlee@gmail.com) | |
+| 貢獻者 | v0.3.0 ~ v0.4.0 | 楊宗翰（Chung-Han Yang） | 九日生行動健康科技公司（9Rise International Mobile Health Technology Co., Ltd.） |  | |
+| 貢獻者 | v0.0.1 ~ v0.4.0 | 黃薰慧（Hsun-Hui Huang） | 財團法人資訊工業策進會 - 數位轉型研究院（Institute for Information Industry - Digital Transformation Research Institute） | [beatrice@iii.org.tw](mailto:beatrice@iii.org.tw) | |
 | 貢獻者 | v0.3.0 | 張鈞亮 (Chun-Liang Chang) | 財團法人資訊工業策進會 - 數位轉型研究院（Institute for Information Industry - Digital Transformation Research Institute） | [liangglchang@iii.org.tw](mailto:liangglchang@iii.org.tw) | |
 | 貢獻者 | v0.3.0 | 崔智萱 (Nicole Tsui) | 財團法人資訊工業策進會 - 數位轉型研究院（Institute for Information Industry - Digital Transformation Research Institute） | [nicolechtsui@iii.org.tw](mailto:nicolechtsui@iii.org.tw) | |
 
@@ -86,13 +86,13 @@ TW LTC IG 中所有Profiles的FMM等級如下：
 ```json
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "fhir.twltc",
-  "url" : "http://ltc-ig.fhir.tw/ImplementationGuide/fhir.twltc",
+  "id" : "tw.iii.ltc",
+  "url" : "http://ltc-ig.fhir.tw/ImplementationGuide/tw.iii.ltc",
   "version" : "0.4.1",
   "name" : "TaiwanLongTermCareImplementationGuide",
   "title" : "臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)",
   "status" : "active",
-  "date" : "2026-02-28T07:16:04+08:00",
+  "date" : "2026-02-28T23:13:53+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -101,7 +101,7 @@ TW LTC IG 中所有Profiles的FMM等級如下：
       "value" : "https://www.ida.gov.tw/"
     }]
   }],
-  "packageId" : "fhir.twltc",
+  "packageId" : "tw.iii.ltc",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.1"],
   "dependsOn" : [{

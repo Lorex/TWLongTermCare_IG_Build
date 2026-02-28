@@ -18,7 +18,7 @@
 
 * Examples for this Profile: [Observation/pasport-observation-waist-hip-rate-example](Observation-pasport-observation-waist-hip-rate-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.twltc|current/StructureDefinition/PASportObservationWaistHipRate)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/PASportObservationWaistHipRate)
 
 ### Formal Views of Profile Content
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-PASportObservationWa
   "name" : "PASportObservationWaistHipRate",
   "title" : "身體組成分析儀－腰臀圍比",
   "status" : "active",
-  "date" : "2026-02-28T07:16:04+08:00",
+  "date" : "2026-02-28T23:13:53+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -26,7 +26,7 @@
   "version" : "0.4.1",
   "name" : "LTCQuestionnaireMemory",
   "status" : "active",
-  "date" : "2026-02-28T07:16:04+08:00",
+  "date" : "2026-02-28T23:13:53+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

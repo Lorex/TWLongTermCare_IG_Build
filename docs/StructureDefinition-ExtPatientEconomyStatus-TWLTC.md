@@ -22,7 +22,7 @@
 * Use this Extension: [轉介單－個案基本資料](StructureDefinition-LTCPatientReferral.md)
 * Examples for this Extension: [Bundle/ltc-bundle-referral-example](Bundle-ltc-bundle-referral-example.md), [Patient/ltc-patient-referral-chen-ming-hui-example](Patient-ltc-patient-referral-chen-ming-hui-example.md) and [Patient/ltc-patient-referral-example](Patient-ltc-patient-referral-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.twltc|current/StructureDefinition/ExtPatientEconomyStatus-TWLTC)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/ExtPatientEconomyStatus-TWLTC)
 
 ### Formal Views of Extension Content
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-ExtPatientEconomySta
   "name" : "ExtPatientEconomyStatusTWLTC",
   "title" : "長照機構住民經濟狀況",
   "status" : "active",
-  "date" : "2026-02-28T07:16:04+08:00",
+  "date" : "2026-02-28T23:13:53+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

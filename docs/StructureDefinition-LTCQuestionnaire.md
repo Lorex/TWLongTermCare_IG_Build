@@ -20,7 +20,7 @@
 * Examples for this Profile: [AA12](Questionnaire-ltc-questionnaire-aa12-example.md), [ADLAssessment](Questionnaire-ltc-questionnaire-adl-assessment-example.md), [LTCQuestionnaireCaregiverLoad](Questionnaire-ltc-questionnaire-caregiver-load.md), [LTCQuestionnaireCaregiverSupport](Questionnaire-ltc-questionnaire-caregiver-support.md)... Show 12 more, [LTCQuestionnaireCaregiver](Questionnaire-ltc-questionnaire-caregiver.md), [CDR](Questionnaire-ltc-questionnaire-cdr.md), [LTCQuestionnaireCommunication](Questionnaire-ltc-questionnaire-communication.md), [LTCQuestionnaireIADL](Questionnaire-ltc-questionnaire-iadl.md), [LTCQuestionnaireMemory](Questionnaire-ltc-questionnaire-memory.md), [LTCQuestionnaireMental](Questionnaire-ltc-questionnaire-mental.md), [MMSE](Questionnaire-ltc-questionnaire-mmse.md), [LTCQuestionnaireSociety](Questionnaire-ltc-questionnaire-society.md), [LTCQuestionnaireSOF](Questionnaire-ltc-questionnaire-sof.md), [LTCQuestionnaireSpecialCare](Questionnaire-ltc-questionnaire-special-care.md), [AA01](Questionnaire-questionnaire-aa01-example.md) and [AA02](Questionnaire-questionnaire-aa02-example.md)
 * CapabilityStatements using this Profile: [臺灣長期照顧實作指引 - 用戶端能力聲明](CapabilityStatement-CapabilityStatementLTCClient.md) and [臺灣長期照顧實作指引 - 伺服端能力聲明](CapabilityStatement-CapabilityStatementLTCServer.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.twltc|current/StructureDefinition/LTCQuestionnaire)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCQuestionnaire)
 
 ### Formal Views of Profile Content
 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCQuestionnaire.csv
   "name" : "LTCQuestionnaire",
   "title" : "長期照顧－問卷",
   "status" : "active",
-  "date" : "2026-02-28T07:16:04+08:00",
+  "date" : "2026-02-28T23:13:53+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

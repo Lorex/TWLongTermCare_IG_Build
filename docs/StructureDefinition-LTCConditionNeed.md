@@ -19,7 +19,7 @@
 * Use this Profile: [長期照顧管理中心個案服務初篩表/轉介單文件打包](StructureDefinition-LTCBundleReferral.md)
 * Examples for this Profile: [Condition/ltc-condition-need-assistance-example](Condition-ltc-condition-need-assistance-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.twltc|current/StructureDefinition/LTCConditionNeed)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCConditionNeed)
 
 ### Formal Views of Profile Content
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCConditionNeed.csv
   "name" : "LTCConditionNeed",
   "title" : "長期照顧－主要問題及需求",
   "status" : "active",
-  "date" : "2026-02-28T07:16:04+08:00",
+  "date" : "2026-02-28T23:13:53+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

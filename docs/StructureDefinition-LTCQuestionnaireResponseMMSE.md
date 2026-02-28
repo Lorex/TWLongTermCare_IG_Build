@@ -18,7 +18,7 @@
 
 * Examples for this Profile: [QuestionnaireResponse/ltc-questionnaire-response-mmse-complete-example](QuestionnaireResponse-ltc-questionnaire-response-mmse-complete-example.md), [QuestionnaireResponse/ltc-questionnaire-response-mmse-example](QuestionnaireResponse-ltc-questionnaire-response-mmse-example.md) and [QuestionnaireResponse/ltc-questionnaire-response-mmse-impaired-example](QuestionnaireResponse-ltc-questionnaire-response-mmse-impaired-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.twltc|current/StructureDefinition/LTCQuestionnaireResponseMMSE)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCQuestionnaireResponseMMSE)
 
 ### Formal Views of Profile Content
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCQuestionnaireResp
   "name" : "LTCQuestionnaireResponseMMSE",
   "title" : "長期照顧－簡易智能狀態測驗回覆",
   "status" : "active",
-  "date" : "2026-02-28T07:16:04+08:00",
+  "date" : "2026-02-28T23:13:53+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

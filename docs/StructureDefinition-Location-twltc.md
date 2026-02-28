@@ -19,7 +19,7 @@
 * Refer to this Profile: [長期照顧－異常事件警報](StructureDefinition-AdverseEvent-twltc.md)
 * Examples for this Profile: [新北市私立安康老人長期照顧中心（養護型）](Location-ltc-location-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.twltc|current/StructureDefinition/Location-twltc)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/Location-twltc)
 
 ### Formal Views of Profile Content
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-Location-twltc.csv),
   "name" : "LTCLocation",
   "title" : "長期照顧－個案位置監測",
   "status" : "active",
-  "date" : "2026-02-28T07:16:04+08:00",
+  "date" : "2026-02-28T23:13:53+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

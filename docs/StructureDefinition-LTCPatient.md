@@ -21,7 +21,7 @@
 * Examples for this Profile: [Patient/ltc-patient-chen-ming-hui](Patient-ltc-patient-chen-ming-hui.md)
 * CapabilityStatements using this Profile: [臺灣長期照顧實作指引 - 用戶端能力聲明](CapabilityStatement-CapabilityStatementLTCClient.md) and [臺灣長期照顧實作指引 - 伺服端能力聲明](CapabilityStatement-CapabilityStatementLTCServer.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.twltc|current/StructureDefinition/LTCPatient)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCPatient)
 
 ### Formal Views of Profile Content
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCPatient.csv), [Ex
   "name" : "LTCPatient",
   "title" : "長期照顧－住民基本資料",
   "status" : "active",
-  "date" : "2026-02-28T07:16:04+08:00",
+  "date" : "2026-02-28T23:13:53+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
