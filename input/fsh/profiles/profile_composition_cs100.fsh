@@ -45,31 +45,31 @@ Description: """
 * section[patient].entry only Reference(LTCPatient or Observation)
 
 // B. 案件（CS100）
-* section[case].code = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code#case "CS100-案件資訊"
+* section[case].code = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code#case
 * section[case].title = "CS100-案件資訊"
 * section[case].entry 1..*
 * section[case].entry only Reference(LTCEpisodeOfCareCS100)
 
 // C. 評估核定摘要
-* section[assessment].code = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code#assessment "CS100-評估核定摘要"
+* section[assessment].code = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code#assessment
 * section[assessment].title = "CS100-評估核定摘要"
 * section[assessment].entry 0..*
 * section[assessment].entry only Reference(LTCObservationAssessmentCS100)
 
 // D. 照顧計畫
-* section[careplan].code = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code#careplan "CS100-照顧計畫"
+* section[careplan].code = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code#careplan
 * section[careplan].title = "CS100-照顧計畫"
 * section[careplan].entry 0..*
 * section[careplan].entry only Reference(LTCCarePlanPayload)
 
 // E. 核定額度
-* section[eligibility].code = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code#eligibility "CS100-核定額度"
+* section[eligibility].code = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code#eligibility
 * section[eligibility].title = "CS100-核定額度"
 * section[eligibility].entry 0..*
 * section[eligibility].entry only Reference(LTCCoverageEligibilityResponse)
 
 // F. 近期事件（通報）
-* section[incidents].code = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code#incidents "CS100-近期異動/通報"
+* section[incidents].code = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code#incidents
 * section[incidents].title = "CS100-近期異動/通報"
 * section[incidents].entry 0..*
 * section[incidents].entry only Reference(LTCAdverseEvent)

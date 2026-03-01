@@ -28,7 +28,7 @@ Usage: #example
 
 // ITEM 1：BB03 23x840=19320
 * item[+].sequence = 1
-* item[=].productOrService = http://ltc-ig.fhir.tw/CodeSystem/LTCServiceItem#BB03
+* item[=].productOrService = CS_TW_LTC_ServiceItem#BB03
 * item[=].quantity.value = 23
 * item[=].unitPrice.value = 840
 * item[=].unitPrice.currency = #TWD
@@ -40,7 +40,7 @@ Usage: #example
 
 // ITEM 2：DA01 1680（總額表示法）
 * item[+].sequence = 2
-* item[=].productOrService = http://ltc-ig.fhir.tw/CodeSystem/LTCServiceItem#DA01
+* item[=].productOrService = CS_TW_LTC_ServiceItem#DA01
 * item[=].quantity.value = 1680
 * item[=].unitPrice.value = 1
 * item[=].unitPrice.currency = #TWD
