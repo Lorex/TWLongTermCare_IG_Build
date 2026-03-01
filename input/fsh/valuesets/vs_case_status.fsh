@@ -5,6 +5,7 @@ Description: "此 ValueSet 用於表示長照 SDK 中個案的狀態，使用 FH
 * ^url = "http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-case-status"
 * ^version = "0.1.0"
 * ^status = #active
+* ^experimental = false
 * http://hl7.org/fhir/episode-of-care-status#active "Active"
 * http://hl7.org/fhir/episode-of-care-status#onhold "On Hold"
 * http://hl7.org/fhir/episode-of-care-status#finished "Finished"

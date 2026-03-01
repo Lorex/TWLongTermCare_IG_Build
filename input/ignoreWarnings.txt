@@ -2,6 +2,7 @@
 
 # Publisher 提示缺少範例檔產生的 Warnings，此警告訊息不影響實作與實際代碼驗證。
 %The Implementation Guide contains no examples for this extension%
+%The Implementation Guide contains no examples for this profile%
 
 # Publisher 提示 ValueSet 值集數量過多，僅顯示部分內容，此警告訊息不影響實作與實際代碼驗證。
 %The value set expansion is too large, and only a subset has been displayed%
@@ -22,6 +23,8 @@
 %There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-nationality'%
 %There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType'%
 %There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/v2-0131'%
+%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActIncidentCode'%
+%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ParticipationMode'%
 
 # Publisher 提示欄位基數與 Slice 列舉的數量不一致，故建議使用者進行檢查。惟該 Profiles 係繼承自 TW Core 台灣核心規範，為遵從上層定義故不進行額外設定。此為提示性訊息，不影響實作與實際代碼驗證。
 %The slice definition for Condition.code.coding has a maximum of 1 but the slices add up to a maximum of 6. Check that this is what is intended%
@@ -32,6 +35,7 @@
 
 # Publisher 中的程式語法問題所造成的 LOINC Code Display 無法正常辨識。此部分遵循 TW Core 規範予以忽略。
 %Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1%
+%Reference to draft CodeSystem http://hl7.org/fhir/episode-of-care-status|4.0.1%
 
 # Validator 中的程式語法錯誤，造成已定義的 Profiles 無法被正常驗證驗證，此提示訊息不影響實作與實際代碼驗證。此部分遵循 TW Core 規範予以忽略。
 %This element does not match any known slice defined in the profile%
@@ -56,6 +60,12 @@
 
 # Validator 提示 SNOMED CT 的 preferred display 含有括號，被誤判為 FSN。此為 SNOMED CT 術語本身的命名方式，不影響實作與實際代碼驗證。
 %This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without%
+
+# Publisher 提示 identifier system URL 無法作為 CodeSystem 驗證，此為 identifier system，非代碼系統，不影響實作與實際代碼驗證。
+A definition for CodeSystem 'https://ltc-ig.fhir.tw/identifier/export/plan-id' could not be found, so the code cannot be validated
+
+# Publisher 建議所有 Observation 資源應有 performer 欄位，此為最佳實踐建議，不影響實作與實際代碼驗證。
+Best Practice Recommendation: In general, all observations should have a performer
 
 # Validator 提醒目前 TW Core IG 已經更新到 1.0.0，此提示訊息不影響實作與實際代碼驗證。
 The ImplementationGuide uses package tw.gov.mohw.twcore#0.3.2 released on 2024-12-12, but the most recent appropriate version is 1.0.0. This reference is getting old and the more recent version should be considered
