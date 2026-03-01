@@ -1,0 +1,35 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CoverageEligibilityRequest/ltc-coverageeligibilityrequest-cs100-example> a fhir:CoverageEligibilityRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-coverageeligibilityrequest-cs100-example"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CoverageEligibilityRequest ltc-coverageeligibilityrequest-cs100-example</b></p><a name=\"ltc-coverageeligibilityrequest-cs100-example\"> </a><a name=\"hcltc-coverageeligibilityrequest-cs100-example\"> </a><p><b>status</b>: Active</p><p><b>purpose</b>: Coverage benefits</p><p><b>patient</b>: <a href=\"Patient-ltc-patient-cs100-example.html\">王小明 (no stated gender), DoB Unknown ( https://example.org/mrn#A0001)</a></p><p><b>created</b>: 2025-10-05 09:00:00+0800</p><p><b>insurer</b>: <a href=\"Organization-ltc-organization-cs100-example.html\">Organization 某某長照管理中心</a></p><h3>Insurances</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Coverage</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Coverage-ltc-coverage-cs100-example.html\">Coverage: status = active</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:purpose ( [ fhir:v "benefits"] ) ; # 
+  fhir:patient [
+     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-cs100-example> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-cs100-example" ]
+  ] ; # 
+  fhir:created [ fhir:v "2025-10-05T09:00:00+08:00"^^xsd:dateTime] ; # 
+  fhir:insurer [
+     fhir:l <http://ltc-ig.fhir.tw/Organization/ltc-organization-cs100-example> ;
+     fhir:reference [ fhir:v "Organization/ltc-organization-cs100-example" ]
+  ] ; # 
+  fhir:insurance ( [
+     fhir:coverage [
+       fhir:l <http://ltc-ig.fhir.tw/Coverage/ltc-coverage-cs100-example> ;
+       fhir:reference [ fhir:v "Coverage/ltc-coverage-cs100-example" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="ltc-claim-export-example"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-Claim-Export"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Claim ltc-claim-export-example</b></p><a name="ltc-claim-export-example"> </a><a name="hcltc-claim-export-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-LTC-Claim-Export.html">長照 SDK－照管全量匯出（Claim）</a></p></div><p><b>identifier</b>: <code>https://ltc-ig.fhir.tw/identifier/export/case-no</code>/111301921, <code>https://ltc-ig.fhir.tw/identifier/export/eva-id</code>/7574654624, <code>https://ltc-ig.fhir.tw/identifier/export/yyyymm-roc</code>/11407</p><p><b>status</b>: Active</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/claim-type professional}">Professional</span></p><p><b>use</b>: Preauthorization</p><p><b>patient</b>: <a href="Patient-ltc-patient-cs100-example.html">王小明 (no stated gender), DoB Unknown ( https://example.org/mrn#A0001)</a></p><p><b>created</b>: 2025-07-04</p><p><b>provider</b>: <a href="Organization-ltc-organization-cs100-example.html">Organization 某某長照管理中心</a></p><p><b>priority</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/processpriority normal}">Normal</span></p><h3>Insurances</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Sequence</b></td><td><b>Focal</b></td><td><b>Coverage</b></td></tr><tr><td style="display: none">*</td><td>1</td><td>true</td><td><a href="Coverage-ltc-coverage-cs100-example.html">Coverage: status = active</a></td></tr></table><blockquote><p><b>item</b></p><p><b>sequence</b>: 1</p><p><b>productOrService</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item BB03}">日間照顧（全日）--第2型</span></p><p><b>programCode</b>: <span title="Codes:{https://ltc-ig.fhir.tw/identifier/export/plan-id PLAN-0001}">PLAN-0001</span></p><p><b>quantity</b>: 23</p><h3>UnitPrices</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style="display: none">*</td><td>840</td><td>New Taiwan dollar</td></tr></table><h3>Nets</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style="display: none">*</td><td>19320</td><td>New Taiwan dollar</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 2</p><p><b>productOrService</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item DA01}">交通接送</span></p><p><b>programCode</b>: <span title="Codes:{https://ltc-ig.fhir.tw/identifier/export/plan-id PLAN-0002}">PLAN-0002</span></p><p><b>quantity</b>: 1680</p><h3>UnitPrices</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style="display: none">*</td><td>1</td><td>New Taiwan dollar</td></tr></table><h3>Nets</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style="display: none">*</td><td>1680</td><td>New Taiwan dollar</td></tr></table></blockquote></div>
+  </text>
+  <identifier>
+    <system value="https://ltc-ig.fhir.tw/identifier/export/case-no"/>
+    <value value="111301921"/>
+  </identifier>
+  <identifier>
+    <system value="https://ltc-ig.fhir.tw/identifier/export/eva-id"/>
+    <value value="7574654624"/>
+  </identifier>
+  <identifier>
+    <system value="https://ltc-ig.fhir.tw/identifier/export/yyyymm-roc"/>
+    <value value="11407"/>
+  </identifier>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type"/>
+      <code value="professional"/>
+    </coding>
+  </type>
+  <use value="preauthorization"/>
+  <patient>
+    <reference value="Patient/ltc-patient-cs100-example"/>
+  </patient>
+  <created value="2025-07-04"/>
+  <provider>
+    <reference value="Organization/ltc-organization-cs100-example"/>
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority"/>
+      <code value="normal"/>
+    </coding>
+  </priority>
+  <insurance>
+    <sequence value="1"/>
+    <focal value="true"/>
+    <coverage>
+      <reference value="Coverage/ltc-coverage-cs100-example"/>
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1"/>
+    <productOrService>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item"/>
+        <code value="BB03"/>
+      </coding>
+    </productOrService>
+    <programCode>
+      <coding>
+        <system value="https://ltc-ig.fhir.tw/identifier/export/plan-id"/>
+        <code value="PLAN-0001"/>
+      </coding>
+    </programCode>
+    <quantity>
+      <value value="23"/>
+    </quantity>
+    <unitPrice>
+      <value value="840"/>
+      <currency value="TWD"/>
+    </unitPrice>
+    <net>
+      <value value="19320"/>
+      <currency value="TWD"/>
+    </net>
+  </item>
+  <item>
+    <sequence value="2"/>
+    <productOrService>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item"/>
+        <code value="DA01"/>
+      </coding>
+    </productOrService>
+    <programCode>
+      <coding>
+        <system value="https://ltc-ig.fhir.tw/identifier/export/plan-id"/>
+        <code value="PLAN-0002"/>
+      </coding>
+    </programCode>
+    <quantity>
+      <value value="1680"/>
+    </quantity>
+    <unitPrice>
+      <value value="1"/>
+      <currency value="TWD"/>
+    </unitPrice>
+    <net>
+      <value value="1680"/>
+      <currency value="TWD"/>
+    </net>
+  </item>
+</Claim>

@@ -1,4 +1,4 @@
-# 臺灣 2023 年中文版 ICD-10-PCS-F 值集 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# 臺灣 2023 年中文版 ICD-10-PCS-F 值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ICD-10-PCS-2023-TW-F-VS | *Version*:0.4.1 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ICD-10-PCS-2023-TW-F-VS | *Version*:1.0.0 |
 | Active as of 2024-06-04 | *Computable Name*:ICD10PCS2023TWFVS |
 
  
@@ -46,7 +46,7 @@
   "resourceType" : "ValueSet",
   "id" : "ICD-10-PCS-2023-TW-F-VS",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/ICD-10-PCS-2023-TW-F-VS",
-  "version" : "0.4.1",
+  "version" : "1.0.0",
   "name" : "ICD10PCS2023TWFVS",
   "title" : "臺灣 2023 年中文版 ICD-10-PCS-F 值集",
   "status" : "active",

@@ -1,4 +1,4 @@
-# 個案身心障礙手冊持有狀態代碼 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# 個案身心障礙手冊持有狀態代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityCS-TWLTC | *Version*:0.4.1 |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityCS-TWLTC | *Version*:1.0.0 |
 | Active as of 2024-08-25 | *Computable Name*:ConditionDisabilityCSTWLTC |
 
  
@@ -27,7 +27,7 @@
   "resourceType" : "CodeSystem",
   "id" : "ConditionDisabilityCS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityCS-TWLTC",
-  "version" : "0.4.1",
+  "version" : "1.0.0",
   "name" : "ConditionDisabilityCSTWLTC",
   "title" : "個案身心障礙手冊持有狀態代碼",
   "status" : "active",

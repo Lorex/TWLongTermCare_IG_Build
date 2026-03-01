@@ -1,4 +1,4 @@
-# 身體組成分析儀－去脂體重 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# 身體組成分析儀－去脂體重 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationFatFreeMass | *Version*:0.4.1 |
-| Active as of 2026-02-28 | *Computable Name*:PASportObservationFatFreeMass |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationFatFreeMass | *Version*:1.0.0 |
+| Active as of 2026-03-01 | *Computable Name*:PASportObservationFatFreeMass |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之去脂體重資料。 
@@ -37,11 +37,11 @@ Other representations of profile: [CSV](StructureDefinition-PASportObservationFa
   "resourceType" : "StructureDefinition",
   "id" : "PASportObservationFatFreeMass",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationFatFreeMass",
-  "version" : "0.4.1",
+  "version" : "1.0.0",
   "name" : "PASportObservationFatFreeMass",
   "title" : "身體組成分析儀－去脂體重",
   "status" : "active",
-  "date" : "2026-02-28T23:13:53+08:00",
+  "date" : "2026-03-01T19:25:35+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

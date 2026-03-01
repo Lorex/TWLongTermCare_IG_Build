@@ -1,4 +1,4 @@
-# Validates - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# Validates - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * **Validates**
@@ -37,7 +37,7 @@ Your browser does not support HTML video.
 
 成功新增檔案位置於終端機時，會如下圖所示，其終端機會指向「TW LTC IG 資料」。
 
-如下圖所示，請於「終端機」輸入 FHIR 提供的驗證程式－紅色1『***java -jar validator_cli.jar***』、要驗證的Profile實例-藍色2『***Patient-pat-example.json***』，以及驗證的規格依據-橘色3 『***-version 4.0 -ig fhir.twltc***』，「Enter鍵入」，即可查看驗證結果。
+如下圖所示，請於「終端機」輸入 FHIR 提供的驗證程式－紅色1『***java -jar validator_cli.jar***』、要驗證的Profile實例-藍色2『***Patient-pat-example.json***』，以及驗證的規格依據-橘色3 『***-version 4.0 -ig tw.iii.ltc***』，「Enter鍵入」，即可查看驗證結果。
 
 若驗證「通過」，如下圖所示，可看到「Success: 0 errors, 0 warnings, 1 notes」。
 
@@ -71,7 +71,7 @@ Your browser does not support HTML video.
 如下圖所示，可看到命令列環境指向TW LTC IG資料夾。
 ![](validates/1-2-9.jpg)
 
-如下圖所示，請於指向TW LTC IG資料夾命令列環境，輸入FHIR提供的驗證程式－紅色1『 ***java -jar validator_cli.jar***』 、所要驗證之Profile-藍色2『***Patient-pat-example.json***』，以及所要驗證之依據-橘色3 『***-version 4.0 -ig fhir.twltc***』，「Enter鍵入」。
+如下圖所示，請於指向TW LTC IG資料夾命令列環境，輸入FHIR提供的驗證程式－紅色1『 ***java -jar validator_cli.jar***』 、所要驗證之Profile-藍色2『***Patient-pat-example.json***』，以及所要驗證之依據-橘色3 『***-version 4.0 -ig tw.iii.ltc***』，「Enter鍵入」。
 
 如下圖若驗證「通過」，可看到「Success: 0 errors, 0 warnings, 1 notes」。
 

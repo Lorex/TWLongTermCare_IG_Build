@@ -1,0 +1,92 @@
+{
+  "resourceType" : "Claim",
+  "id" : "ltc-claim-export-dispatch-example",
+  "meta" : {
+    "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/LTC-Claim-Export"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Claim ltc-claim-export-dispatch-example</b></p><a name=\"ltc-claim-export-dispatch-example\"> </a><a name=\"hcltc-claim-export-dispatch-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-Claim-Export.html\">長照 SDK－照管全量匯出（Claim）</a></p></div><p><b>identifier</b>: <code>https://ltc-ig.fhir.tw/identifier/export/case-no</code>/111307113, <code>https://ltc-ig.fhir.tw/identifier/export/eva-id</code>/7546385480</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/claim-type professional}\">Professional</span></p><p><b>use</b>: Preauthorization</p><p><b>patient</b>: <a href=\"Patient-ltc-patient-cs100-example.html\">王小明 (no stated gender), DoB Unknown ( https://example.org/mrn#A0001)</a></p><p><b>created</b>: 2025-07-01</p><p><b>provider</b>: <a href=\"Organization-ltc-organization-cs100-example.html\">Organization 某某長照管理中心</a></p><p><b>priority</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/processpriority normal}\">Normal</span></p><h3>Insurances</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Sequence</b></td><td><b>Focal</b></td><td><b>Coverage</b></td></tr><tr><td style=\"display: none\">*</td><td>1</td><td>true</td><td><a href=\"Coverage-ltc-coverage-cs100-example.html\">Coverage: status = active</a></td></tr></table><blockquote><p><b>item</b></p><p><b>sequence</b>: 1</p><p><b>productOrService</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item BA04}\">協助進食或管灌餵食</span></p></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 2</p><p><b>productOrService</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item BA07}\">協助沐浴及洗頭</span></p></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 3</p><p><b>productOrService</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item BA18}\">安全看視</span></p></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 4</p><p><b>productOrService</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item BA02}\">基本日常照顧</span></p></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 5</p><p><b>productOrService</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item BA13}\">陪同外出</span></p></blockquote></div>"
+  },
+  "identifier" : [{
+    "system" : "https://ltc-ig.fhir.tw/identifier/export/case-no",
+    "value" : "111307113"
+  },
+  {
+    "system" : "https://ltc-ig.fhir.tw/identifier/export/eva-id",
+    "value" : "7546385480"
+  }],
+  "status" : "active",
+  "type" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/claim-type",
+      "code" : "professional"
+    }]
+  },
+  "use" : "preauthorization",
+  "patient" : {
+    "reference" : "Patient/ltc-patient-cs100-example"
+  },
+  "created" : "2025-07-01",
+  "provider" : {
+    "reference" : "Organization/ltc-organization-cs100-example"
+  },
+  "priority" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/processpriority",
+      "code" : "normal"
+    }]
+  },
+  "insurance" : [{
+    "sequence" : 1,
+    "focal" : true,
+    "coverage" : {
+      "reference" : "Coverage/ltc-coverage-cs100-example"
+    }
+  }],
+  "item" : [{
+    "sequence" : 1,
+    "productOrService" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item",
+        "code" : "BA04"
+      }]
+    }
+  },
+  {
+    "sequence" : 2,
+    "productOrService" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item",
+        "code" : "BA07"
+      }]
+    }
+  },
+  {
+    "sequence" : 3,
+    "productOrService" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item",
+        "code" : "BA18"
+      }]
+    }
+  },
+  {
+    "sequence" : 4,
+    "productOrService" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item",
+        "code" : "BA02"
+      }]
+    }
+  },
+  {
+    "sequence" : 5,
+    "productOrService" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item",
+        "code" : "BA13"
+      }]
+    }
+  }]
+}

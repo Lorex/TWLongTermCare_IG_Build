@@ -1,0 +1,47 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/EpisodeOfCare/ltc-episodeofcare-cs100-example> a fhir:EpisodeOfCare ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-episodeofcare-cs100-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-CS100"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-CS100>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: EpisodeOfCare ltc-episodeofcare-cs100-example</b></p><a name=\"ltc-episodeofcare-cs100-example\"> </a><a name=\"hcltc-episodeofcare-cs100-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-EpisodeOfCare-CS100.html\">長照案件（CS100 專用版）</a></p></div><p><b>identifier</b>: <code>https://ltc-ig.fhir.tw/identifier/cs100/case-id</code>/CASE-00001</p><p><b>status</b>: Active</p><p><b>patient</b>: <a href=\"Patient-ltc-patient-cs100-example.html\">王小明 (no stated gender), DoB Unknown ( https://example.org/mrn#A0001)</a></p><p><b>managingOrganization</b>: <a href=\"Organization-ltc-organization-cs100-example.html\">Organization 某某長照管理中心</a></p><p><b>period</b>: 2025-10-01 --&gt; (ongoing)</p><p><b>careManager</b>: <a href=\"Practitioner-ltc-practitioner-cs100-example.html\">Practitioner 張個管</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "https://ltc-ig.fhir.tw/identifier/cs100/case-id"^^xsd:anyURI ;
+       fhir:l <https://ltc-ig.fhir.tw/identifier/cs100/case-id>
+     ] ;
+     fhir:value [ fhir:v "CASE-00001" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:patient [
+     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-cs100-example> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-cs100-example" ]
+  ] ; # 
+  fhir:managingOrganization [
+     fhir:l <http://ltc-ig.fhir.tw/Organization/ltc-organization-cs100-example> ;
+     fhir:reference [ fhir:v "Organization/ltc-organization-cs100-example" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2025-10-01"^^xsd:date ]
+  ] ; # 
+  fhir:careManager [
+     fhir:l <http://ltc-ig.fhir.tw/Practitioner/ltc-practitioner-cs100-example> ;
+     fhir:reference [ fhir:v "Practitioner/ltc-practitioner-cs100-example" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

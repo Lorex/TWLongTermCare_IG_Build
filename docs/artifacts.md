@@ -1,4 +1,4 @@
-# Artifacts Summary - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# Artifacts Summary - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * **Artifacts Summary**
@@ -47,6 +47,7 @@ These define constraints on FHIR resources for systems conforming to this implem
 | :--- | :--- |
 | [ADL 問卷回覆](StructureDefinition-LTCQuestionnaireResponseADL.md) | 此 Profile 定義 FHIR 的 QuestionnaireResponse Resource，以呈現日常生活活動量表 (ADL) 的回覆資料。回覆採用整數分數（依題目配分），文字說明由問卷提供。 |
 | [IADL 問卷回覆](StructureDefinition-LTCQuestionnaireResponseIADL.md) | 此 Profile 定義 FHIR 的 QuestionnaireResponse Resource，以呈現工具性日常活動功能問卷 (IADLs) 的回覆資料。 |
+| [個案總查詢（CS100 對應版）Case Summary](StructureDefinition-LTC-Composition-CS100.md) | 本文件為『個案總查詢（Case Summary）』之 CS100 專用版本， 其內容與章節配置對應衛生福利部照顧服務管理資訊平臺功能 《CS100 個案總查詢》之查詢結果欄位與區塊。 |
 | [基礎生理量測－呼吸速率](StructureDefinition-PASportObservationRespiratoryRate.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之呼吸速率資料。 |
 | [基礎生理量測－安靜心率](StructureDefinition-PASportObservationRestingHeartRate.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之安靜心率資料。 |
 | [基礎生理量測－平均心率](StructureDefinition-PASportObservationMeanHeartRate.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之平均心率資料。 |
@@ -110,15 +111,17 @@ These define constraints on FHIR resources for systems conforming to this implem
 | [長期照顧－AA01照顧計畫擬訂與服務連結問卷回應](StructureDefinition-LTCQuestionnaireResponseAA01.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現長期照顧情境中 AA01 照顧計畫擬訂與服務連結問卷的回應內容。 |
 | [長期照顧－AA02照顧管理追蹤問卷回覆](StructureDefinition-LTCQuestionnaireResponseAA02.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現 AA02 照顧管理追蹤問卷的回覆內容。 |
 | [長期照顧－一組生命徵象檢驗檢查](StructureDefinition-LTCObservationVitalSignsPanel.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現長照機構住民的一組生命徵象檢驗檢查資料。 |
-| [長期照顧－主要問題及需求](StructureDefinition-LTCConditionNeed.md) | 用於表述案主(家)主要問題及需求的 Condition Profile。 |
-| [長期照顧－主要疾病](StructureDefinition-LTCConditionProblem.md) | 用於表述案主(家)主要疾病的 Condition Profile。 |
+| [長期照顧－主要問題及需求](StructureDefinition-LTCConditionNeed.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現案主或其家庭之主要問題及照護需求。 |
+| [長期照顧－主要疾病](StructureDefinition-LTCConditionProblem.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現案主或其家庭之主要疾病資料。 |
 | [長期照顧－住民基本資料](StructureDefinition-LTCPatient.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Patient Resource，以呈現長照機構住民的基本資料。 |
 | [長期照顧－個案位置監測](StructureDefinition-Location-twltc.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Location Resource，以呈現失智症個案的位置監測資料，包括所在地名稱與經緯度座標資訊。 |
 | [長期照顧－問卷](StructureDefinition-LTCQuestionnaire.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Questionnaire Resource，以呈現長期照顧情境中涉及之問卷或量表內容。 |
 | [長期照顧－問卷回覆](StructureDefinition-LTCQuestionnaireResponse.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現長期照顧情境中涉及之問卷或量表回覆內容。 |
 | [長期照顧－壓傷狀況](StructureDefinition-LTCConditionCrush.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的壓傷狀況。 |
 | [長期照顧－居住狀況](StructureDefinition-LTCConditionResidence.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的居住狀況。 |
+| [長期照顧－文件組成基礎](StructureDefinition-LTCCompositionBase.md) | 此 Profile 為所有長期照顧 Composition Profile 的共用基礎，定義文件組成之基本結構與共用欄位。 |
 | [長期照顧－服務人員角色](StructureDefinition-LTCPractitionerRole.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 PractitionerRole Resource，以呈現長期照顧服務人員的角色資料。有關 PractitionerRole 與 Practitioner 的差異及相關解釋，請參照 [TW Core IG](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-PractitionerRole-twcore.html) 中的說明。 |
+| [長期照顧－案件管理基礎](StructureDefinition-LTCEpisodeOfCareBase.md) | 此 Profile 為所有長期照顧 EpisodeOfCare Profile 的共用基礎，定義案件管理之基本結構與共用欄位。 |
 | [長期照顧－機構](StructureDefinition-Organization-twltc.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Organization Resource，以呈現機構的資料。這裡的機構包含但不限於醫院、診所、長照機構、社區服務單位等。 |
 | [長期照顧－照護活動](StructureDefinition-LTCProcedureCareActivity.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Procedure Resource，以呈現長照機構住民的照護活動紀錄。 |
 | [長期照顧－照顧團隊](StructureDefinition-LTCCareTeam.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 CareTeam Resource，以呈現長期照顧情境中涉及之照顧團隊資訊。 |
@@ -127,15 +130,28 @@ These define constraints on FHIR resources for systems conforming to this implem
 | [長期照顧－照顧計畫](StructureDefinition-LTCCarePlan.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現長期照顧情境中涉及之照顧計畫內容。 |
 | [長期照顧－生命體徵](StructureDefinition-LTCObservationVitalSigns.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現長照機構住民的生命體徵資料。 |
 | [長期照顧－用藥資料](StructureDefinition-LTCMedicationAdministration.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 MedicationAdministration Resource，以呈現長照機構住民的用藥資料。 |
-| [長期照顧－異常事件警報](StructureDefinition-AdverseEvent-twltc.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 AdverseEvent Resource，以呈現失智症個案異常事件警報的資料，包括事件類型、嚴重程度、發生時間、位置等資訊。 |
+| [長期照顧－異常事件警報](StructureDefinition-AdverseEvent-twltc.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 AdverseEvent Resource，以呈現長照個案異常事件的資料，包括事件類型、嚴重程度、發生時間、位置、通報方式、多段文字描述與關聯案件等資訊。同時適用於失智照顧及 SDK 異常服務通報場景。 |
 | [長期照顧－病情、問題或診斷](StructureDefinition-LTCCondition.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的病情、問題或診斷資料。 |
 | [長期照顧－看護狀況](StructureDefinition-LTCConditionCaregiver.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長期照顧情境中住民的看護狀況資料。 |
 | [長期照顧－管路裝設狀況](StructureDefinition-LTCConditionTube.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的管路裝設狀況與類別。 |
 | [長期照顧－簡易智能狀態測驗回覆](StructureDefinition-LTCQuestionnaireResponseMMSE.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現簡易智能狀態測驗 (MMSE) 的回覆內容。 |
 | [長期照顧－臨床失智評估量表回覆](StructureDefinition-LTCQuestionnaireResponseCDR.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現臨床失智評估量表 (CDR) 的回覆內容。 |
+| [長期照顧－評估核定摘要基礎](StructureDefinition-LTCObservationAssessmentBase.md) | 此 Profile 為評估核定摘要 Observation 的共用基礎 Profile，定義評估結果之基本結構與共用欄位。 |
 | [長期照顧－身心障礙手冊持有狀態](StructureDefinition-LTCConditionDisability.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的身心障礙手冊持有狀態。 |
 | [長期照顧－身心障礙類型](StructureDefinition-LTCConditionDisabilityType.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的身心障礙類型。 |
 | [長期照顧－關係人](StructureDefinition-LTCRelatedPerson.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 RelatedPerson Resource，以呈現住民的關係人，包含家屬、照顧者、法定代理人等與住民有關的人員資料。 |
+| [長照 SDK－回傳包（4合1）](StructureDefinition-LTC-Bundle-Payload.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Bundle Resource，以呈現長照 SDK 回傳之資料包，包含案件、評估、核定額度及照顧計畫等資源之集合。 |
+| [長照 SDK－服務活動紀錄（SERVICE_A）](StructureDefinition-LTC-Communication-ServiceA.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Communication Resource，以呈現長照服務活動紀錄，包含電訪、家訪等過程資料。 |
+| [長照 SDK－照管全量匯出（ClaimResponse）](StructureDefinition-LTC-ClaimResponse-Export.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 ClaimResponse Resource，以呈現長照照管全量匯出之審核結果與檢核錯誤資訊。 |
+| [長照 SDK－照管全量匯出（Claim）](StructureDefinition-LTC-Claim-Export.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Claim Resource，以呈現長照照管全量匯出之服務代碼、數量、單價及小計等申報資料。 |
+| [長照 SDK－照顧計畫（CS100）](StructureDefinition-LTC-CarePlan-CS100.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現 CS100 個案總查詢之照顧計畫資料，規則同 LTCCarePlanPayload。 |
+| [長照 SDK－照顧計畫（不含輔具）](StructureDefinition-LTC-CarePlan-Payload.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現長照 SDK 回傳之照顧計畫，包含服務項目代碼、金額、數量及頻率等資料。 |
+| [長照 SDK－評估核定摘要](StructureDefinition-LTC-Observation-Assessment-Payload.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現長照 SDK 回傳之評估核定摘要，包含福利身分、CMS 等級、評估類型及計畫起訖等資訊。 |
+| [長照 SDK－評估核定摘要（Observation）](StructureDefinition-LTC-Observation-Assessment-CS100.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現 CS100 個案總查詢之評估核定摘要，包含 CMS 等級、福利身分及評估類型等資訊。 |
+| [長照 SDK－跨月檢核結果（QP_O）](StructureDefinition-LTC-OperationOutcome-Check.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 OperationOutcome Resource，以呈現長照 SDK 跨月金額與月份檢核之錯誤旗標與訊息。 |
+| [長照 SDK－長照案件](StructureDefinition-LTC-EpisodeOfCare-Payload.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 EpisodeOfCare Resource，以呈現長照 SDK 回傳之案件資訊，包含案件流水號、個案狀態、開結案時間及主責機構等資料。 |
+| [長照案件（CS100 專用版）](StructureDefinition-LTC-EpisodeOfCare-CS100.md) | 對應衛生福利部照顧服務管理資訊平臺『CS100 個案總查詢』之案件列資料。 作為 CS100 匯出資料列的病例/案件載體，提供個案管理之基礎欄位（案件編號、狀態、期間、主責機構、個管等）。 |
+| [長照－核定額度（CoverageEligibilityResponse）](StructureDefinition-LTC-CoverageEligibilityResponse.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 CoverageEligibilityResponse Resource，以呈現長照各服務別之核定額度摘要，包含總額、補助金額、自付額及比率等資料。 |
 
 ### Structures: Extension Definitions 
 
@@ -146,7 +162,17 @@ These define constraints on FHIR data types for systems conforming to this imple
 | [CDR 總分](StructureDefinition-cdr-total-score.md) | 臨床失智評估量表的總分 |
 | [MMSE 總分](StructureDefinition-mmse-total-score.md) | 簡易智能狀態測驗的總分 |
 | [個案身分別](StructureDefinition-ExtPatientIdentity-TWLTC.md) | 此 Extension 用以表述個案的身分別。 |
+| [單價](StructureDefinition-Ext-TW-LTC-UnitPrice.md) | 此 Extension 用於表示長照服務項目的單價金額。 |
 | [是否為主要照顧者](StructureDefinition-ExtRelatedPersonIsPrimary-TWLTC.md) | 此 Extension 用以表述關係人是否為主要照顧者。 |
+| [長期照顧－異常事件文字描述](StructureDefinition-Ext-TW-LTC-AdverseEvent-Description.md) | 記錄異常事件的多段文字描述，包含事件描述、發生過程、後續處理、改善建議等 |
+| [長期照顧－異常事件通報方式](StructureDefinition-Ext-TW-LTC-AdverseEvent-NotifMethod.md) | 記錄異常事件的通報方式（如電話、機構通報、LINE 等） |
+| [長期照顧－異常事件關聯案件](StructureDefinition-Ext-TW-LTC-AdverseEvent-About.md) | 關聯的案件（EpisodeOfCare）或照顧計畫（CarePlan） |
+| [長照 SDK－單位資訊（PIA/PIB/CENTER/MAN_*）](StructureDefinition-Ext-TW-LTC-Export-Unit.md) | 此 Extension 用於表示長照 SDK 的單位資訊，包含特約單位、照管中心、個管員等相關資訊，適用於 Claim 及 ClaimResponse 資源。 |
+| [長照 SDK－案件編號（CASENO）](StructureDefinition-Ext-TW-LTC-Export-CaseNo.md) | 此 Extension 用於表示長照 SDK 的案件編號（CASENO），適用於 Claim、CarePlan、Communication 或 OperationOutcome 資源。 |
+| [長照 SDK－案件－申請來源](StructureDefinition-Ext-TW-LTC-Case-Source.md) | 案件（EpisodeOfCare）之申請來源。 |
+| [長照 SDK－民國年月（YYYMM）](StructureDefinition-Ext-TW-LTC-Export-YYYMM-ROC.md) | 此 Extension 用於表示長照 SDK 的民國年月（YYYMM 格式），適用於 Claim、ClaimResponse 或 OperationOutcome 資源。 |
+| [長照 SDK－評估案號（EVA_ID）](StructureDefinition-Ext-TW-LTC-Export-EvaId.md) | 此 Extension 用於表示長照 SDK 的評估案號（EVA_ID），適用於 Claim 或 CarePlan 資源。 |
+| [長照 SDK－錯誤訊息](StructureDefinition-Ext-TW-LTC-Export-Error.md) | 此 Extension 用於表示長照 SDK 回傳的錯誤訊息，適用於 ClaimResponse 或 OperationOutcome.issue。 |
 | [長照機構住民教育程度](StructureDefinition-ExtPatientEducationStatus-TWLTC.md) | 此 Extension 用以表述長照機構住民的教育程度。 |
 | [長照機構住民經濟狀況](StructureDefinition-ExtPatientEconomyStatus-TWLTC.md) | 此 Extension 用以表述長照機構住民的經濟狀況。 |
 
@@ -178,6 +204,19 @@ These define sets of codes used by systems conforming to this implementation gui
 | [身體活動量測-適用運動處方之服務請求代碼值集](ValueSet-ServiceRequestPAVS-Sport.md) | 適用運動處方之服務請求代碼。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。 |
 | [身體活動量測-重量訓練代碼值集](ValueSet-SportTrainingVS-Sport.md) | 定義重量訓練各個方面的代碼，包括使用的重量、執行的組數以及每組的重複次數。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。 |
 | [轉介單申請服務種類值集](ValueSet-ReferralCarePlanVS-TWLTC.md) | 轉介單申請服務種類的值集 |
+| [長照 SDK－CMS 等級](ValueSet-vs-tw-ltc-cmslevel.md) | 此 ValueSet 用於表示長照 SDK 中的 CMS（照顧管理評估量表）等級。 |
+| [長照 SDK－個案狀態](ValueSet-vs-tw-ltc-case-status.md) | 此 ValueSet 用於表示長照 SDK 中個案的狀態，使用 FHIR EpisodeOfCare status 對應碼：active（服務中）、onhold（暫停服務）、finished（已結案）。 |
+| [長照 SDK－服務別（核定）](ValueSet-vs-tw-ltc-service-group.md) | 此 ValueSet 用於表示長照 SDK 中的服務別（核定）。 |
+| [長照 SDK－服務活動](ValueSet-vs-tw-ltc-service-activity.md) | 此 ValueSet 彙整長照照管服務活動紀錄使用之代碼。 |
+| [長照 SDK－服務項目（計畫）](ValueSet-vs-tw-ltc-service-item.md) | 此 ValueSet 用於表示長照 SDK 中的服務項目（計畫）。 |
+| [長照 SDK－核定額度欄位](ValueSet-vs-tw-ltc-benefit-type.md) | 此 ValueSet 用於表示長照 SDK 中的核定額度欄位。 |
+| [長照 SDK－申請來源](ValueSet-vs-tw-ltc-case-source.md) | 此 ValueSet 用於表示長照 SDK 中個案的申請來源。 |
+| [長照 SDK－異常紀錄－文字區塊類型](ValueSet-vs-tw-ltc-incident-texttype.md) | 此 ValueSet 用於表示長照 SDK 異常紀錄中的文字區塊類型。 |
+| [長照 SDK－異常紀錄－異常類別](ValueSet-vs-tw-ltc-incident-category.md) | 此 ValueSet 用於表示長照 SDK 異常紀錄的異常類別。 |
+| [長照 SDK－異常紀錄－通報方式](ValueSet-vs-tw-ltc-incident-notifmethod.md) | 此 ValueSet 用於表示長照 SDK 異常紀錄的通報方式。 |
+| [長照 SDK－評估核定摘要欄位碼](ValueSet-vs-tw-ltc-assessment-component.md) | 此 ValueSet 用於表示長照 SDK 評估核定摘要的欄位碼。 |
+| [長照 SDK－評估類型](ValueSet-vs-tw-ltc-assessment-type.md) | 此 ValueSet 用於表示長照 SDK 中的評估類型。 |
+| [長照 SDK－長照福利身分](ValueSet-vs-tw-ltc-welfare-identity.md) | 此 ValueSet 用於表示長照 SDK 中的長照福利身分。 |
 | [關係類型擴展值集](ValueSet-RelationshipTypeVS-TWLTC.md) | 關係人與個案的關係類型擴展代碼值集，新增孫媳婦、孫女婿、聘用看護-本國籍、聘用看護-外國籍等代碼 |
 
 ### Terminology: Code Systems 
@@ -202,6 +241,20 @@ These define new code systems used by systems conforming to this implementation 
 | [轉介單申請服務種類代碼](CodeSystem-ReferralCarePlanCS-TWLTC.md) | 用於表述個案欲申請的服務項目。 |
 | [轉介單看護狀況代碼](CodeSystem-ReferralConditionCaregiverCS-TWLTC.md) | 用於表述個案雇用看護的狀況。 |
 | [轉介單管路狀況代碼](CodeSystem-ReferralConditionTubeCS-TWLTC.md) | 用於表述轉介單的狀況代碼，包含身心障礙手冊、管路、壓傷、居住狀況、看護、主要問題及需求等。 |
+| [長照 SDK－CMS 等級](CodeSystem-cs-tw-ltc-cmslevel.md) | 對應 r2.5：1, 1a, 1b, 2..8。 |
+| [長照 SDK－Composition 章節代碼](CodeSystem-cs-tw-ltc-section-code.md) | 用於長照 Composition 資源中各章節（section）的區段識別代碼。 |
+| [長照 SDK－個案狀態](CodeSystem-cs-tw-ltc-case-status.md) | 對應 r1.3：服務中、暫停服務、已結案。使用 FHIR EpisodeOfCare status 對應碼。 |
+| [長照 SDK－服務別（核定用）](CodeSystem-cs-tw-ltc-service-group.md) | 此 CodeSystem 定義長照 SDK 中的服務別（核定用）代碼。 |
+| [長照 SDK－服務活動代碼](CodeSystem-cs-tw-ltc-service-activity.md) | 此 CodeSystem 定義長照照管服務活動紀錄所使用之代碼。 |
+| [長照 SDK－服務項目代碼](CodeSystem-cs-tw-ltc-service-item.md) | 對應 r4.* 臺灣長照給付『照顧組合／輔具／無障礙修繕』服務項目代碼（AA..FA 系列），來源：清單.xlsx。 |
+| [長照 SDK－核定額度－金流欄位](CodeSystem-cs-tw-ltc-benefit-type.md) | 此 CodeSystem 定義長照 SDK 核定額度中的金流欄位代碼。 |
+| [長照 SDK－申請來源（暫行）](CodeSystem-cs-tw-ltc-case-source.md) | 申請來源常見分類（待以 Excel 實值更新）。 |
+| [長照 SDK－異常紀錄－文字區塊類型](CodeSystem-cs-tw-ltc-incident-texttype.md) | 區分各段文字（描述、過程、後續處理、改善建議）。 |
+| [長照 SDK－異常紀錄－異常類別](CodeSystem-cs-tw-ltc-incident-category.md) | 表單『異常類別』多選。 |
+| [長照 SDK－異常紀錄－通報方式](CodeSystem-cs-tw-ltc-incident-notifmethod.md) | 表單『通報方式』多選。 |
+| [長照 SDK－評估核定摘要－欄位碼](CodeSystem-cs-tw-ltc-assessment-component.md) | 此 CodeSystem 定義長照 SDK 評估核定摘要的欄位碼。 |
+| [長照 SDK－評估類型](CodeSystem-cs-tw-ltc-assessment-type.md) | 對應 r2.8 / r3.21：出院銜接、初評、複評、計畫異動、舊系統無評估轉入、身障居服匯入、AA計劃異動。 |
+| [長照 SDK－長照福利身分](CodeSystem-cs-tw-ltc-welfare-identity.md) | 此 CodeSystem 定義長照 SDK 中的長照福利身分代碼。 |
 | [關係類型擴展代碼](CodeSystem-RelationshipTypeCS-TWLTC.md) | 關係人與個案的關係類型擴展代碼，新增孫媳婦、孫女婿、聘用看護-本國籍、聘用看護-外國籍等代碼 |
 
 ### Example: Example Instances 
@@ -321,12 +374,40 @@ These are example instances that show what data produced and consumed by systems
 | [長期照顧團隊範例](CareTeam-ltc-care-team-example.md) | 一個長期照顧團隊的範例，展示如何使用 LTCCareTeam Profile |
 | [長期照顧就醫紀錄範例](Encounter-ltc-encounter-example.md) | 一個就醫紀錄的範例，用於轉介單中的出入院情形 |
 | [長期照顧機構範例](Organization-ltc-organization-example.md) | 一個長期照顧機構的範例，展示如何使用 LTCOrganization Profile |
+| [長期照顧異常事件範例－SDK 異常服務通報（跌倒）](AdverseEvent-ltc-adverse-event-incident-example.md) | 展示 SDK 異常服務通報場景：電話通報跌倒事件，包含異常類別、通報方式、多段文字描述及關聯案件 |
 | [長期照顧異常事件警報範例](AdverseEvent-ltc-adverse-event-example.md) | 一個長期照顧異常事件警報的範例，展示如何使用 LTCAdverseEvent Profile |
 | [長期照顧護理師範例](Practitioner-ltc-practitioner-nurse-example.md) | 一個長期照顧護理師的範例，展示如何使用 LTCPractitioner Profile |
 | [長期照顧護理師角色範例](PractitionerRole-ltc-practitioner-role-nurse-example.md) | 一個長期照顧護理師角色的範例，展示如何使用 LTCPractitionerRole Profile |
 | [長期照顧－AA01照顧計畫擬訂與服務連結問卷回應範例](QuestionnaireResponse-ltc-questionnaire-response-aa01-example.md) | 一個AA01照顧計畫擬訂與服務連結問卷回應的範例，展示如何使用 LTCQuestionnaireResponseAA01 Profile |
 | [長期照顧－AA02照顧管理追蹤問卷回應範例](QuestionnaireResponse-ltc-questionnaire-response-aa02-example.md) | 一個AA02照顧管理追蹤問卷回應的範例，展示如何使用 LTCQuestionnaireResponseAA02 Profile |
+| [長照 CS100－保險覆蓋（Coverage）範例](Coverage-ltc-coverage-cs100-example.md) | 長照 CS100 範例用的保險覆蓋（Coverage）資源。 |
+| [長照 CS100－個案管理員（Practitioner）範例](Practitioner-ltc-practitioner-cs100-example.md) | 長照 CS100 範例用的個案管理員（Practitioner）資源。 |
+| [長照 CS100－個案總查詢（Composition）範例](Composition-ltc-bundle-cs100-example.md) | 長照 CS100 個案總查詢的範例，展示如何使用 Composition 資源整合個案的完整資訊。 |
+| [長照 CS100－個案（Patient）範例](Patient-ltc-patient-cs100-example.md) | 長照 CS100 範例用的個案（Patient）資源。 |
+| [長照 CS100－核定請求（CoverageEligibilityRequest）範例](CoverageEligibilityRequest-ltc-coverageeligibilityrequest-cs100-example.md) | 長照 CS100 範例用的核定請求（CoverageEligibilityRequest）資源。 |
+| [長照 CS100－核定額度回應（CoverageEligibilityResponse）範例](CoverageEligibilityResponse-ltc-coverageeligibilityresponse-cs100-example.md) | 長照 CS100 範例用的核定額度回應（CoverageEligibilityResponse）資源。 |
+| [長照 CS100－照顧計畫獨立（CarePlan）範例](CarePlan-ltc-careplan-cs100-standalone-example.md) | 長照 CS100 個案總查詢之照顧計畫範例，展示如何使用 LTCCarePlanCS100 Profile。 |
+| [長照 CS100－照顧計畫（CarePlan）範例](CarePlan-ltc-careplan-cs100-example.md) | 長照 CS100 範例用的照顧計畫（CarePlan）資源。 |
+| [長照 CS100－異常事件（AdverseEvent）範例](AdverseEvent-ltc-adverseevent-cs100-example.md) | 長照 CS100 範例用的異常事件（AdverseEvent）資源。 |
+| [長照 CS100－評估核定摘要（Observation）範例](Observation-ltc-observation-assessment-cs100-example.md) | 長照 CS100 範例用的評估核定摘要（Observation）資源。 |
+| [長照 CS100－長照案件（EpisodeOfCare）範例](EpisodeOfCare-ltc-episodeofcare-cs100-example.md) | 長照 CS100 範例用的長照案件（EpisodeOfCare）資源。 |
+| [長照 CS100－長照管理中心（Organization）範例](Organization-ltc-organization-cs100-example.md) | 長照 CS100 範例用的長照管理中心（Organization）資源。 |
+| [長照 SDK－保險覆蓋（Coverage）範例](Coverage-ltc-coverage-sdk-example.md) | 長照 SDK 範例用的保險覆蓋（Coverage）資源。 |
+| [長照 SDK－個案（Patient）範例](Patient-ltc-patient-sdk-example.md) | 長照 SDK 範例用的個案（Patient）資源。 |
+| [長照 SDK－回傳包（4合1）範例](Bundle-ltc-bundle-payload-example.md) | 長照 SDK 回傳資料包範例，包含案件、評估、核定額度及照顧計畫等資源之集合。 |
+| [長照 SDK－核定請求（CoverageEligibilityRequest）範例](CoverageEligibilityRequest-ltc-coverageeligibilityrequest-sdk-example.md) | 長照 SDK 範例用的核定請求（CoverageEligibilityRequest）資源。 |
+| [長照 SDK－核定額度回應（CoverageEligibilityResponse）範例](CoverageEligibilityResponse-ltc-coverageeligibilityresponse-sdk-example.md) | 長照 SDK 範例用的核定額度回應（CoverageEligibilityResponse）資源。 |
+| [長照 SDK－照顧管理專員（Practitioner）範例](Practitioner-ltc-practitioner-sdk-example.md) | 長照 SDK 範例用的照顧管理專員（Practitioner）資源。 |
+| [長照 SDK－照顧計畫（CarePlan）範例](CarePlan-ltc-careplan-sdk-example.md) | 長照 SDK 範例用的照顧計畫（CarePlan）資源。 |
+| [長照 SDK－評估核定摘要（Observation）範例](Observation-ltc-observation-assessment-sdk-example.md) | 長照 SDK 範例用的評估核定摘要（Observation）資源。 |
+| [長照 SDK－長照案件（EpisodeOfCare）範例](EpisodeOfCare-ltc-episodeofcare-sdk-example.md) | 長照 SDK 範例用的長照案件（EpisodeOfCare）資源。 |
+| [長照 SDK－長照管理中心（Organization）範例](Organization-ltc-organization-sdk-example.md) | 長照 SDK 範例用的長期照顧管理中心（Organization）資源。 |
 | [長照醫事人員範例](Practitioner-ltc-practitioner-example.md) | 一個執行長照服務和運動處方的醫事人員範例 |
+| [長照－照管全量匯出審核結果（ClaimResponse）範例](ClaimResponse-ltc-claimresponse-export-example.md) | 長照照管全量匯出之審核結果與檢核錯誤資訊範例，展示如何使用 LTCClaimResponseExport Profile。 |
+| [長照－照管可提供服務（Claim）範例](Claim-ltc-claim-export-dispatch-example.md) | 長照 SDK 照管CASE可提供服務的範例，展示如何使用 Claim 資源記錄個案可提供的服務項目。 |
+| [長照－照管計畫與金額（Claim）範例](Claim-ltc-claim-export-example.md) | 長照 SDK 照管PLAN計畫與金額的範例，展示如何使用 Claim 資源記錄長照服務計畫與費用。 |
+| [長照－照管電訪活動（Communication）範例](Communication-ltc-communication-servicea-example.md) | 長照 SDK 照管SERVICE_A電訪的範例，展示如何記錄照顧管理服務活動。 |
+| [長照－跨月檢核（OperationOutcome）範例](OperationOutcome-ltc-operationoutcome-check-example.md) | 長照 SDK 照管QP_O跨月檢核的範例，展示如何使用 OperationOutcome 資源記錄跨月金額檢核結果。 |
 | [需要照護協助狀況範例](Condition-ltc-condition-need-assistance-example.md) | 個案需要長期照護協助的狀況範例，用於轉介Bundle中 |
 | [骨骼肌重測量範例](Observation-pasport-observation-skeletal-muscle-mass-example.md) | 一個骨骼肌重測量的範例，展示如何使用 PASportObservationSkeletalMuscleMass Profile 來記錄肌肉量變化 |
 | [體內年齡測量範例](Observation-pasport-observation-body-age-example.md) | 一個體內年齡測量的範例，展示如何使用 PASportObservationBodyAge Profile 來記錄體內年齡資料 |

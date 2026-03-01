@@ -1,0 +1,28 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Patient/ltc-patient-cs100-example> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-patient-cs100-example"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ltc-patient-cs100-example</b></p><a name=\"ltc-patient-cs100-example\"> </a><a name=\"hcltc-patient-cs100-example\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">王小明 (no stated gender), DoB Unknown ( https://example.org/mrn#A0001)</p><hr/></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "https://example.org/mrn"^^xsd:anyURI ;
+       fhir:l <https://example.org/mrn>
+     ] ;
+     fhir:value [ fhir:v "A0001" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:text [ fhir:v "王小明" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

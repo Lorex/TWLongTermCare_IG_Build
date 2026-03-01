@@ -1,0 +1,177 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/AdverseEvent/ltc-adverse-event-incident-example> a fhir:AdverseEvent ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-adverse-event-incident-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: AdverseEvent ltc-adverse-event-incident-example</b></p><a name=\"ltc-adverse-event-incident-example\"> </a><a name=\"hcltc-adverse-event-incident-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-AdverseEvent-twltc.html\">長期照顧－異常事件警報</a></p></div><p><b>長期照顧－異常事件通報方式</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-notifmethod phone}\">電話</span></p><blockquote><p><b>長期照顧－異常事件文字描述</b></p><ul><li>textType: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype desc}\">事件描述</span></li><li>text: 10:20 於浴室滑倒，家屬協助起身。</li></ul></blockquote><blockquote><p><b>長期照顧－異常事件文字描述</b></p><ul><li>textType: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype postprocess}\">事件發生後處理過程詳述</span></li><li>text: 檢查擦傷，無明顯腫脹；已冰敷觀察中。</li></ul></blockquote><blockquote><p><b>長期照顧－異常事件文字描述</b></p><ul><li>textType: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype advice}\">檢討及改善建議</span></li><li>text: 建議持續觀察 48 小時，必要時就醫。已通知個管與居服單位追蹤。</li></ul></blockquote><p><b>長期照顧－異常事件關聯案件</b>: <a href=\"EpisodeOfCare-ltc-episodeofcare-cs100-example.html\">EpisodeOfCare: identifier = https://ltc-ig.fhir.tw/identifier/cs100/case-id#CASE-00001; status = active; period = 2025-10-01 --&gt; (ongoing)</a></p><p><b>identifier</b>: <code>http://ltc-ig.fhir.tw/adverse-event</code>/AE-SDK-2025-001 (use: official, )</p><p><b>actuality</b>: Adverse Event</p><p><b>event</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-category careacc}\">照顧意外事件</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-cs100-example.html\">王小明 (no stated gender), DoB Unknown ( https://example.org/mrn#A0001)</a></p><p><b>date</b>: 2025-10-01 10:20:00+0800</p><p><b>recordedDate</b>: 2025-10-01 10:35:00+0800</p><p><b>location</b>: <a href=\"Location-ltc-location-example.html\">Location 新北市私立安康老人長期照顧中心（養護型）</a></p><p><b>contributor</b>: <a href=\"Practitioner-ltc-practitioner-cs100-example.html\">Practitioner 張個管</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-NotifMethod"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-NotifMethod>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-notifmethod"^^xsd:anyURI ;
+           fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-notifmethod>
+         ] ;
+         fhir:code [ fhir:v "phone" ] ;
+         fhir:display [ fhir:v "電話" ]
+       ] )
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "textType"^^xsd:anyURI ;
+         fhir:l fhir:textType
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype"^^xsd:anyURI ;
+             fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype>
+           ] ;
+           fhir:code [ fhir:v "desc" ] ;
+           fhir:display [ fhir:v "事件描述" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "text"^^xsd:anyURI ;
+         fhir:l fhir:text
+       ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "10:20 於浴室滑倒，家屬協助起身。"
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description>
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "textType"^^xsd:anyURI ;
+         fhir:l fhir:textType
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype"^^xsd:anyURI ;
+             fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype>
+           ] ;
+           fhir:code [ fhir:v "postprocess" ] ;
+           fhir:display [ fhir:v "事件發生後處理過程詳述" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "text"^^xsd:anyURI ;
+         fhir:l fhir:text
+       ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "檢查擦傷，無明顯腫脹；已冰敷觀察中。"
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description>
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "textType"^^xsd:anyURI ;
+         fhir:l fhir:textType
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype"^^xsd:anyURI ;
+             fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype>
+           ] ;
+           fhir:code [ fhir:v "advice" ] ;
+           fhir:display [ fhir:v "檢討及改善建議" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "text"^^xsd:anyURI ;
+         fhir:l fhir:text
+       ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "建議持續觀察 48 小時，必要時就醫。已通知個管與居服單位追蹤。"
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-About"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-About>
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:l <http://ltc-ig.fhir.tw/EpisodeOfCare/ltc-episodeofcare-cs100-example> ;
+       fhir:reference [ fhir:v "EpisodeOfCare/ltc-episodeofcare-cs100-example" ]
+     ]
+  ] ) ; # 
+  fhir:identifier [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [
+       fhir:v "http://ltc-ig.fhir.tw/adverse-event"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/adverse-event>
+     ] ;
+     fhir:value [ fhir:v "AE-SDK-2025-001" ]
+  ] ; # 
+  fhir:actuality [ fhir:v "actual"] ; # 
+  fhir:event [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-category"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-category>
+       ] ;
+       fhir:code [ fhir:v "careacc" ] ;
+       fhir:display [ fhir:v "照顧意外事件" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-cs100-example> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-cs100-example" ]
+  ] ; # 
+  fhir:date [ fhir:v "2025-10-01T10:20:00+08:00"^^xsd:dateTime] ; # 
+  fhir:recordedDate [ fhir:v "2025-10-01T10:35:00+08:00"^^xsd:dateTime] ; # 
+  fhir:location [
+     fhir:l <http://ltc-ig.fhir.tw/Location/ltc-location-example> ;
+     fhir:reference [ fhir:v "Location/ltc-location-example" ]
+  ] ; # 
+  fhir:contributor ( [
+     fhir:l <http://ltc-ig.fhir.tw/Practitioner/ltc-practitioner-cs100-example> ;
+     fhir:reference [ fhir:v "Practitioner/ltc-practitioner-cs100-example" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,4 +1,4 @@
-# 長期照顧－問卷 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# 長期照顧－問卷 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire | *Version*:0.4.1 |
-| Active as of 2026-02-28 | *Computable Name*:LTCQuestionnaire |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire | *Version*:1.0.0 |
+| Active as of 2026-03-01 | *Computable Name*:LTCQuestionnaire |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Questionnaire Resource，以呈現長期照顧情境中涉及之問卷或量表內容。 
@@ -39,11 +39,11 @@ Other representations of profile: [CSV](StructureDefinition-LTCQuestionnaire.csv
   "resourceType" : "StructureDefinition",
   "id" : "LTCQuestionnaire",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire",
-  "version" : "0.4.1",
+  "version" : "1.0.0",
   "name" : "LTCQuestionnaire",
   "title" : "長期照顧－問卷",
   "status" : "active",
-  "date" : "2026-02-28T23:13:53+08:00",
+  "date" : "2026-03-01T19:25:35+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

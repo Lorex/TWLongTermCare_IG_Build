@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="ltc-bundle-cs100-example"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-Composition-CS100"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Composition ltc-bundle-cs100-example</b></p><a name="ltc-bundle-cs100-example"> </a><a name="hcltc-bundle-cs100-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-LTC-Composition-CS100.html">個案總查詢（CS100 對應版）Case Summary</a></p></div><p><b>identifier</b>: <code>https://ltc-ig.fhir.tw/identifier/cs100/report-id</code>/CS-20251106-0001</p><p><b>status</b>: Final</p><p><b>type</b>: <span title="Codes:{http://loinc.org 11506-3}">Progress note</span></p><p><b>date</b>: 2025-11-06 12:00:00+0800</p><p><b>author</b>: <a href="Practitioner-ltc-practitioner-cs100-example.html">Practitioner 張個管</a></p><p><b>title</b>: CS100 個案總查詢 - 王小明</p></div>
+  </text>
+  <identifier>
+    <system value="https://ltc-ig.fhir.tw/identifier/cs100/report-id"/>
+    <value value="CS-20251106-0001"/>
+  </identifier>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="11506-3"/>
+      <display value="Progress note"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/ltc-patient-cs100-example"/>
+  </subject>
+  <date value="2025-11-06T12:00:00+08:00"/>
+  <author>
+    <reference value="Practitioner/ltc-practitioner-cs100-example"/>
+  </author>
+  <title value="CS100 個案總查詢 - 王小明"/>
+  <section>
+    <title value="CS100-個案基本"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="8716-3"/>
+        <display value="Vital signs note"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="Patient/ltc-patient-cs100-example"/>
+    </entry>
+  </section>
+  <section>
+    <title value="CS100-案件資訊"/>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code"/>
+        <code value="case"/>
+        <display value="案件資訊"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="EpisodeOfCare/ltc-episodeofcare-cs100-example"/>
+    </entry>
+  </section>
+  <section>
+    <title value="CS100-評估核定摘要"/>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code"/>
+        <code value="assessment"/>
+        <display value="評估核定摘要"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="Observation/ltc-observation-assessment-cs100-example"/>
+    </entry>
+  </section>
+  <section>
+    <title value="CS100-照顧計畫"/>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code"/>
+        <code value="careplan"/>
+        <display value="照顧計畫"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="CarePlan/ltc-careplan-cs100-example"/>
+    </entry>
+  </section>
+  <section>
+    <title value="CS100-核定額度"/>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code"/>
+        <code value="eligibility"/>
+        <display value="核定額度"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="CoverageEligibilityResponse/ltc-coverageeligibilityresponse-cs100-example"/>
+    </entry>
+  </section>
+  <section>
+    <title value="CS100-近期異動/通報"/>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code"/>
+        <code value="incidents"/>
+        <display value="近期異動/通報"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="AdverseEvent/ltc-adverseevent-cs100-example"/>
+    </entry>
+  </section>
+</Composition>

@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Home - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1</title>
+    <title>Home - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -50,9 +50,9 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)</span>
+          <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引(TW LTC IG)</span>
             <br/>
-            <span style="display:inline-block;">0.4.1 - ci-build+trial-use
+            <span style="display:inline-block;">1.0.0 - STU 1.0.0
 
 
             </span>
@@ -180,7 +180,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) - Local Development build (v0.4.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引(TW LTC IG) - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Home</h2>
   
 
@@ -195,7 +195,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://ltc-ig.fhir.tw/ImplementationGuide/tw.iii.ltc<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://ltc-ig.fhir.tw/ImplementationGuide/tw.iii.ltc"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.4.1<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://ltc-ig.fhir.tw/ImplementationGuide/tw.iii.ltc|0.4.1"/></span>
+      <span class="copy-text">1.0.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://ltc-ig.fhir.tw/ImplementationGuide/tw.iii.ltc|1.0.0"/></span>
       </td>
     </tr>
 
@@ -211,7 +211,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Active
           
-            as of 2026-02-28
+            as of 2026-03-01
           
         
       </td>
@@ -237,6 +237,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#重要異動公告" id="markdown-toc-重要異動公告">重要異動公告</a></li>
   <li><a href="#介紹" id="markdown-toc-介紹">介紹</a></li>
   <li><a href="#背景" id="markdown-toc-背景">背景</a></li>
   <li><a href="#如何閱讀這個實作指引ig" id="markdown-toc-如何閱讀這個實作指引ig">如何閱讀這個實作指引（IG）</a></li>
@@ -244,6 +245,27 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
+<h3 id="重要異動公告">重要異動公告</h3>
+
+<div class="bg-warning">
+
+  <p><strong>STU 1.0.0 重大變更（Breaking Changes）</strong></p>
+
+  <p>本版為首個正式試用版（Standard for Trial Use），包含以下與先前版本不相容的異動：</p>
+
+  <ol>
+    <li><strong>Profile 命名統一</strong>：所有 Profile 統一採用 <code class="language-plaintext highlighter-rouge">LTC[ResourceType][Purpose]</code> 命名規範（如 <code class="language-plaintext highlighter-rouge">LTCCarePlanPayload</code>、<code class="language-plaintext highlighter-rouge">LTCBundlePayload</code>），舊名稱（如 <code class="language-plaintext highlighter-rouge">CarePlanTWLTCPlanSDK</code>、<code class="language-plaintext highlighter-rouge">BundleTWLTCSDKPayload</code>）不再使用。</li>
+    <li><strong>CodeSystem/ValueSet 去除 SDK 後綴</strong>：<code class="language-plaintext highlighter-rouge">CS-TW-LTC-CMSLevel-SDK</code>、<code class="language-plaintext highlighter-rouge">CS-TW-LTC-CaseStatus-SDK</code> 等已改為 <code class="language-plaintext highlighter-rouge">CS-TW-LTC-CMSLevel</code>、<code class="language-plaintext highlighter-rouge">CS-TW-LTC-CaseStatus</code>。</li>
+    <li><strong>Extension 整併</strong>：<code class="language-plaintext highlighter-rouge">Export-PlanId</code>、<code class="language-plaintext highlighter-rouge">FrequencyLabel-SDK</code> 已改用 FHIR 原生欄位取代；Incident 系列 Extension 已廢棄，改用 <code class="language-plaintext highlighter-rouge">LTCAdverseEvent</code> Profile。</li>
+    <li><strong>異常事件通報</strong>：原 <code class="language-plaintext highlighter-rouge">Communication</code>-based Incident Profile 已全面遷移至 <code class="language-plaintext highlighter-rouge">LTCAdverseEvent</code>，並新增 <code class="language-plaintext highlighter-rouge">AdverseEventDescription</code>、<code class="language-plaintext highlighter-rouge">AdverseEventNotifMethod</code>、<code class="language-plaintext highlighter-rouge">AdverseEventAbout</code> 三個 Extension。</li>
+    <li><strong>Common Base Profile 導入</strong>：新增 <code class="language-plaintext highlighter-rouge">LTCCompositionBase</code>、<code class="language-plaintext highlighter-rouge">LTCObservationAssessmentBase</code>、<code class="language-plaintext highlighter-rouge">LTCEpisodeOfCareBase</code> 作為共用基礎 Profile。</li>
+    <li><strong>CoverageEligibilityResponse 合併</strong>：SDK 版與 CS100 版合併為單一 <code class="language-plaintext highlighter-rouge">LTCCoverageEligibilityResponse</code>。</li>
+  </ol>
+
+  <p>實作者請參照新版 Profile 名稱與結構進行調整。</p>
+
+</div>
+
 <h3 id="介紹">介紹</h3>
 
 <div style="padding-left: 10px;">
@@ -269,7 +291,38 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>TW LTC IG 中所有Profiles的FMM等級如下：
   <ol>
-    <li>0.4.1 版本的所有 Profiles 均為 FMM0</li>
+    <li><strong>FMM 2</strong>：以下 Profiles 已在 2025 專案聯測松中由至少 3 套獨立系統成功實作互操作：
+      <ul>
+        <li>LTCPatient（5 系統）</li>
+        <li>LTCObservationVitalSigns（5 系統）</li>
+        <li>LTCObservationVitalSignsPanel（5 系統）</li>
+        <li>LTCOrganization（5 系統）</li>
+        <li>LTCPractitioner（5 系統）</li>
+        <li>LTCQuestionnaireResponseMMSE（4 系統）</li>
+        <li>LTCQuestionnaire（4 系統）</li>
+        <li>LTCQuestionnaireResponse（4 系統）</li>
+        <li>LTCQuestionnaireResponseCDR（3 系統）</li>
+      </ul>
+    </li>
+    <li><strong>FMM 1</strong>：以下 Profiles 已在聯測中由至少 1 套系統實作，工作小組認為可供實作使用：
+      <ul>
+        <li>LTCMedicationAdministration（2 系統）</li>
+        <li>LTCBundleCMS（2 系統）</li>
+        <li>LTCCompositionCMS（2 系統）</li>
+        <li>LTCPatientCMS（2 系統）</li>
+        <li>LTCCondition（2 系統）</li>
+        <li>LTCQuestionnaireResponseADL（2 系統）</li>
+        <li>LTCQuestionnaireResponseIADL（2 系統）</li>
+        <li>LTCQuestionnaireResponseAA01（2 系統）</li>
+        <li>LTCQuestionnaireResponseAA02（2 系統）</li>
+        <li>LTCObservationFallingHistory（2 系統）</li>
+        <li>LTCGoal（2 系統）</li>
+        <li>LTCCarePlan（2 系統）</li>
+        <li>LTCQuestionnaireResponseAA12（2 系統）</li>
+        <li>LTCPractitionerRole（2 系統）</li>
+      </ul>
+    </li>
+    <li><strong>FMM 0 (DRAFT)</strong>：其餘所有 Profiles 為草稿版本。</li>
   </ol>
 </p>
 </div>
@@ -431,7 +484,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#0.4.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Feb 28, 2026 23:13+0800">2026-02-28</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Mar 1, 2026 19:25+0800">2026-03-01</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

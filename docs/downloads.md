@@ -1,4 +1,4 @@
-# Downloads - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# Downloads - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * **Downloads**
@@ -8,7 +8,7 @@
 ### 下載整個 IG
 
 * TW LTC IG：[下載](full-ig.zip)
-* TW LTC Package：[下載](fhir.twltc.r4.tgz)
+* TW LTC Package：[下載](package.tgz)
 
 ### 文件定義
 

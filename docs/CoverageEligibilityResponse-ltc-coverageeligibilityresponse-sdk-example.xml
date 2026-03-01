@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CoverageEligibilityResponse xmlns="http://hl7.org/fhir">
+  <id value="ltc-coverageeligibilityresponse-sdk-example"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CoverageEligibilityResponse ltc-coverageeligibilityresponse-sdk-example</b></p><a name="ltc-coverageeligibilityresponse-sdk-example"> </a><a name="hcltc-coverageeligibilityresponse-sdk-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-LTC-CoverageEligibilityResponse.html">長照－核定額度（CoverageEligibilityResponse）</a></p></div><p><b>status</b>: Active</p><p><b>purpose</b>: Coverage benefits</p><p><b>patient</b>: <a href="Patient-ltc-patient-sdk-example.html">王小明 Male, DoB: 1950-01-01 ( Provider number (use: official, ))</a></p><p><b>created</b>: 2025-08-04 17:02:19+0800</p><p><b>request</b>: <a href="CoverageEligibilityRequest-ltc-coverageeligibilityrequest-sdk-example.html">CoverageEligibilityRequest: status = active; purpose = benefits; created = 2025-08-04 17:00:00+0800</a></p><p><b>outcome</b>: Processing Complete</p><p><b>insurer</b>: <a href="Organization-ltc-organization-sdk-example.html">Organization OOO長期照顧管理中心</a></p><blockquote><p><b>insurance</b></p><p><b>coverage</b>: <a href="Coverage-ltc-coverage-sdk-example.html">Coverage: status = active</a></p><blockquote><p><b>item</b></p><p><b>category</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-group care-pro}">照顧及專業服務</span></p><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type total}">總額度</span></p><p><b>allowed</b>: <span title="New Taiwan Dollar">NT$15,460.00</span> (TWD)</p></blockquote><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type subsidy}">補助額度</span></p><p><b>allowed</b>: <span title="New Taiwan Dollar">NT$12,987.00</span> (TWD)</p></blockquote><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type copay}">部分負擔</span></p><p><b>allowed</b>: <span title="New Taiwan Dollar">NT$2,473.00</span> (TWD)</p></blockquote></blockquote></blockquote></div>
+  </text>
+  <status value="active"/>
+  <purpose value="benefits"/>
+  <patient>
+    <reference value="Patient/ltc-patient-sdk-example"/>
+  </patient>
+  <created value="2025-08-04T17:02:19+08:00"/>
+  <request>
+    <reference value="CoverageEligibilityRequest/ltc-coverageeligibilityrequest-sdk-example"/>
+  </request>
+  <outcome value="complete"/>
+  <insurer>
+    <reference value="Organization/ltc-organization-sdk-example"/>
+  </insurer>
+  <insurance>
+    <coverage>
+      <reference value="Coverage/ltc-coverage-sdk-example"/>
+    </coverage>
+    <item>
+      <category>
+        <coding>
+          <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-group"/>
+          <code value="care-pro"/>
+          <display value="照顧及專業服務"/>
+        </coding>
+      </category>
+      <benefit>
+        <type>
+          <coding>
+            <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type"/>
+            <code value="total"/>
+          </coding>
+        </type>
+        <allowedMoney>
+          <value value="15460"/>
+          <currency value="TWD"/>
+        </allowedMoney>
+      </benefit>
+      <benefit>
+        <type>
+          <coding>
+            <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type"/>
+            <code value="subsidy"/>
+          </coding>
+        </type>
+        <allowedMoney>
+          <value value="12987"/>
+          <currency value="TWD"/>
+        </allowedMoney>
+      </benefit>
+      <benefit>
+        <type>
+          <coding>
+            <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type"/>
+            <code value="copay"/>
+          </coding>
+        </type>
+        <allowedMoney>
+          <value value="2473"/>
+          <currency value="TWD"/>
+        </allowedMoney>
+      </benefit>
+    </item>
+  </insurance>
+</CoverageEligibilityResponse>

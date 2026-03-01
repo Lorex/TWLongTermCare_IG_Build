@@ -1,4 +1,4 @@
-# 關係類型擴展代碼 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# 關係類型擴展代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/RelationshipTypeCS-TWLTC | *Version*:0.4.1 |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/RelationshipTypeCS-TWLTC | *Version*:1.0.0 |
 | Active as of 2024-09-02 | *Computable Name*:RelationshipTypeCSTWLTC |
 
  
@@ -27,7 +27,7 @@
   "resourceType" : "CodeSystem",
   "id" : "RelationshipTypeCS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/RelationshipTypeCS-TWLTC",
-  "version" : "0.4.1",
+  "version" : "1.0.0",
   "name" : "RelationshipTypeCSTWLTC",
   "title" : "關係類型擴展代碼",
   "status" : "active",

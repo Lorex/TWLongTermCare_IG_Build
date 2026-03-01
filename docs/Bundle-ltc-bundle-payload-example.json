@@ -1,0 +1,347 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "ltc-bundle-payload-example",
+  "meta" : {
+    "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/LTC-Bundle-Payload"]
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "http://example.org/Patient/ltc-patient-sdk-example",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "ltc-patient-sdk-example",
+      "meta" : {
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/LTCPatient"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_ltc-patient-sdk-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient ltc-patient-sdk-example</b></p><a name=\"ltc-patient-sdk-example\"> </a><a name=\"hcltc-patient-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCPatient.html\">長期照顧－住民基本資料</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">王小明 Male, DoB: 1950-01-01 ( Provider number\u00a0(use:\u00a0official,\u00a0))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 0912345678</li><li>台北市中山區中山北路100號(home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: Next-of-Kin\">Next-of-Kin:</td><td colspan=\"3\"><ul><li>王大明</li><li>ph: 0987654321</li></ul></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "use" : "official",
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "PRN"
+          }]
+        },
+        "system" : "https://example.org/mrn",
+        "value" : "A0001"
+      }],
+      "name" : [{
+        "use" : "usual",
+        "text" : "王小明"
+      }],
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "0912345678"
+      }],
+      "gender" : "male",
+      "birthDate" : "1950-01-01",
+      "address" : [{
+        "use" : "home",
+        "text" : "台北市中山區中山北路100號"
+      }],
+      "contact" : [{
+        "relationship" : [{
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0131",
+            "code" : "N",
+            "display" : "Next-of-Kin"
+          }]
+        }],
+        "name" : {
+          "text" : "王大明"
+        },
+        "telecom" : [{
+          "system" : "phone",
+          "value" : "0987654321"
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/Organization/ltc-organization-sdk-example",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "ltc-organization-sdk-example",
+      "meta" : {
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/Organization-twltc"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_ltc-organization-sdk-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization ltc-organization-sdk-example</b></p><a name=\"ltc-organization-sdk-example\"> </a><a name=\"hcltc-organization-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Organization-twltc.html\">長期照顧－機構</a></p></div><p><b>identifier</b>: <code>http://www.moi.gov.tw</code>/0131060099</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: OOO長期照顧管理中心</p></div>"
+      },
+      "identifier" : [{
+        "system" : "http://www.moi.gov.tw",
+        "value" : "0131060099"
+      }],
+      "type" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code" : "prov",
+          "display" : "Healthcare Provider"
+        }]
+      }],
+      "name" : "OOO長期照顧管理中心"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/Practitioner/ltc-practitioner-sdk-example",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "ltc-practitioner-sdk-example",
+      "meta" : {
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_ltc-practitioner-sdk-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ltc-practitioner-sdk-example</b></p><a name=\"ltc-practitioner-sdk-example\"> </a><a name=\"hcltc-practitioner-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCPractitioner.html\">長期照顧－照顧服務提供者</a></p></div><p><b>identifier</b>: <code>http://example.org/fhir/NamingSystem/practitioner-id</code>/P001</p><p><b>name</b>: 李小華</p></div>"
+      },
+      "identifier" : [{
+        "system" : "http://example.org/fhir/NamingSystem/practitioner-id",
+        "value" : "P001"
+      }],
+      "name" : [{
+        "text" : "李小華"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/EpisodeOfCare/ltc-episodeofcare-sdk-example",
+    "resource" : {
+      "resourceType" : "EpisodeOfCare",
+      "id" : "ltc-episodeofcare-sdk-example",
+      "meta" : {
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-Payload"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"EpisodeOfCare_ltc-episodeofcare-sdk-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: EpisodeOfCare ltc-episodeofcare-sdk-example</b></p><a name=\"ltc-episodeofcare-sdk-example\"> </a><a name=\"hcltc-episodeofcare-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-EpisodeOfCare-Payload.html\">長照 SDK－長照案件</a></p></div><p><b>identifier</b>: <code>https://ltc-ig.fhir.tw/identifier/sdk/r1.1-case-serial</code>/123456789</p><p><b>status</b>: Active</p><p><b>patient</b>: <a href=\"Patient-ltc-patient-sdk-example.html\">王小明 Male, DoB: 1950-01-01 ( Provider number\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>managingOrganization</b>: <a href=\"Organization-ltc-organization-sdk-example.html\">Organization OOO長期照顧管理中心</a></p><p><b>period</b>: 2025-01-01 --&gt; (ongoing)</p></div>"
+      },
+      "identifier" : [{
+        "system" : "https://ltc-ig.fhir.tw/identifier/sdk/r1.1-case-serial",
+        "value" : "123456789"
+      }],
+      "status" : "active",
+      "patient" : {
+        "reference" : "Patient/ltc-patient-sdk-example"
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/ltc-organization-sdk-example"
+      },
+      "period" : {
+        "start" : "2025-01-01"
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/Observation/ltc-observation-assessment-sdk-example",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ltc-observation-assessment-sdk-example",
+      "meta" : {
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/LTC-Observation-Assessment-Payload"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_ltc-observation-assessment-sdk-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ltc-observation-assessment-sdk-example</b></p><a name=\"ltc-observation-assessment-sdk-example\"> </a><a name=\"hcltc-observation-assessment-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-Observation-Assessment-Payload.html\">長照 SDK－評估核定摘要</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8357-6}\">Blood pressure method</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-sdk-example.html\">王小明 Male, DoB: 1950-01-01 ( Provider number\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>effective</b>: 2025-01-01</p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component welfare-identity}\">長照福利身分</span></p><p><b>value</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-welfare-identity cat3}\">第3類</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component cms-level}\">CMS 等級</span></p><p><b>value</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel 1a}\">1a</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component assessment-type}\">評估類型</span></p><p><b>value</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-type initial}\">初評</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component plan-start}\">計畫起始日</span></p><p><b>value</b>: 2025-01-01</p></blockquote></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "8357-6",
+          "display" : "Blood pressure method"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/ltc-patient-sdk-example"
+      },
+      "effectiveDateTime" : "2025-01-01",
+      "component" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component",
+            "code" : "welfare-identity",
+            "display" : "長照福利身分"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-welfare-identity",
+            "code" : "cat3",
+            "display" : "第3類"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component",
+            "code" : "cms-level",
+            "display" : "CMS 等級"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel",
+            "code" : "1a",
+            "display" : "1a"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component",
+            "code" : "assessment-type",
+            "display" : "評估類型"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-type",
+            "code" : "initial",
+            "display" : "初評"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component",
+            "code" : "plan-start",
+            "display" : "計畫起始日"
+          }]
+        },
+        "valueDateTime" : "2025-01-01"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/CoverageEligibilityResponse/ltc-coverageeligibilityresponse-sdk-example",
+    "resource" : {
+      "resourceType" : "CoverageEligibilityResponse",
+      "id" : "ltc-coverageeligibilityresponse-sdk-example",
+      "meta" : {
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"CoverageEligibilityResponse_ltc-coverageeligibilityresponse-sdk-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: CoverageEligibilityResponse ltc-coverageeligibilityresponse-sdk-example</b></p><a name=\"ltc-coverageeligibilityresponse-sdk-example\"> </a><a name=\"hcltc-coverageeligibilityresponse-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-CoverageEligibilityResponse.html\">長照－核定額度（CoverageEligibilityResponse）</a></p></div><p><b>status</b>: Active</p><p><b>purpose</b>: Coverage benefits</p><p><b>patient</b>: <a href=\"Patient-ltc-patient-sdk-example.html\">王小明 Male, DoB: 1950-01-01 ( Provider number\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>created</b>: 2025-08-04 17:02:19+0800</p><p><b>request</b>: <a href=\"CoverageEligibilityRequest-ltc-coverageeligibilityrequest-sdk-example.html\">CoverageEligibilityRequest: status = active; purpose = benefits; created = 2025-08-04 17:00:00+0800</a></p><p><b>outcome</b>: Processing Complete</p><p><b>insurer</b>: <a href=\"Organization-ltc-organization-sdk-example.html\">Organization OOO長期照顧管理中心</a></p><blockquote><p><b>insurance</b></p><p><b>coverage</b>: <a href=\"Coverage-ltc-coverage-sdk-example.html\">Coverage: status = active</a></p><blockquote><p><b>item</b></p><p><b>category</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-group care-pro}\">照顧及專業服務</span></p><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type total}\">總額度</span></p><p><b>allowed</b>: <span title=\"New Taiwan Dollar\">NT$15,460.00</span> (TWD)</p></blockquote><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type subsidy}\">補助額度</span></p><p><b>allowed</b>: <span title=\"New Taiwan Dollar\">NT$12,987.00</span> (TWD)</p></blockquote><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type copay}\">部分負擔</span></p><p><b>allowed</b>: <span title=\"New Taiwan Dollar\">NT$2,473.00</span> (TWD)</p></blockquote></blockquote></blockquote></div>"
+      },
+      "status" : "active",
+      "purpose" : ["benefits"],
+      "patient" : {
+        "reference" : "Patient/ltc-patient-sdk-example"
+      },
+      "created" : "2025-08-04T17:02:19+08:00",
+      "request" : {
+        "reference" : "CoverageEligibilityRequest/ltc-coverageeligibilityrequest-sdk-example"
+      },
+      "outcome" : "complete",
+      "insurer" : {
+        "reference" : "Organization/ltc-organization-sdk-example"
+      },
+      "insurance" : [{
+        "coverage" : {
+          "reference" : "Coverage/ltc-coverage-sdk-example"
+        },
+        "item" : [{
+          "category" : {
+            "coding" : [{
+              "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-group",
+              "code" : "care-pro",
+              "display" : "照顧及專業服務"
+            }]
+          },
+          "benefit" : [{
+            "type" : {
+              "coding" : [{
+                "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type",
+                "code" : "total"
+              }]
+            },
+            "allowedMoney" : {
+              "value" : 15460,
+              "currency" : "TWD"
+            }
+          },
+          {
+            "type" : {
+              "coding" : [{
+                "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type",
+                "code" : "subsidy"
+              }]
+            },
+            "allowedMoney" : {
+              "value" : 12987,
+              "currency" : "TWD"
+            }
+          },
+          {
+            "type" : {
+              "coding" : [{
+                "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type",
+                "code" : "copay"
+              }]
+            },
+            "allowedMoney" : {
+              "value" : 2473,
+              "currency" : "TWD"
+            }
+          }]
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/CarePlan/ltc-careplan-sdk-example",
+    "resource" : {
+      "resourceType" : "CarePlan",
+      "id" : "ltc-careplan-sdk-example",
+      "meta" : {
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-Payload"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"CarePlan_ltc-careplan-sdk-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: CarePlan ltc-careplan-sdk-example</b></p><a name=\"ltc-careplan-sdk-example\"> </a><a name=\"hcltc-careplan-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-CarePlan-Payload.html\">長照 SDK－照顧計畫（不含輔具）</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:{https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw assess-plan}\">Assessment and Plan of Treatment</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-sdk-example.html\">王小明 Male, DoB: 1950-01-01 ( Provider number\u00a0(use:\u00a0official,\u00a0))</a></p><blockquote><p><b>activity</b></p><h3>Details</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Code</b></td><td><b>Status</b></td><td><b>Scheduled[x]</b></td><td><b>Quantity</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item AA01}\">照顧計畫擬定與服務連結</span></td><td>Scheduled</td><td>每週 2 次（週二、週五）</td><td>19</td></tr></table></blockquote></div>"
+      },
+      "status" : "active",
+      "intent" : "plan",
+      "category" : [{
+        "coding" : [{
+          "system" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw",
+          "code" : "assess-plan"
+        }]
+      }],
+      "subject" : {
+        "reference" : "Patient/ltc-patient-sdk-example"
+      },
+      "activity" : [{
+        "detail" : {
+          "extension" : [{
+            "url" : "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-UnitPrice",
+            "valueMoney" : {
+              "value" : 195,
+              "currency" : "TWD"
+            }
+          }],
+          "code" : {
+            "coding" : [{
+              "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item",
+              "code" : "AA01",
+              "display" : "照顧計畫擬定與服務連結"
+            }]
+          },
+          "status" : "scheduled",
+          "scheduledString" : "每週 2 次（週二、週五）",
+          "quantity" : {
+            "value" : 19
+          }
+        }
+      }]
+    }
+  }]
+}

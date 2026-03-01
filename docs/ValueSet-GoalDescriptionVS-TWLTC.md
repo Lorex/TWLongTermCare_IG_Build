@@ -1,4 +1,4 @@
-# 照顧目標描述值集 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# 照顧目標描述值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/GoalDescriptionVS-TWLTC | *Version*:0.4.1 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/GoalDescriptionVS-TWLTC | *Version*:1.0.0 |
 | Active as of 2024-08-25 | *Computable Name*:GoalDescriptionVSTWLTC |
 
  
@@ -46,7 +46,7 @@
   "resourceType" : "ValueSet",
   "id" : "GoalDescriptionVS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/GoalDescriptionVS-TWLTC",
-  "version" : "0.4.1",
+  "version" : "1.0.0",
   "name" : "GoalDescriptionVSTWLTC",
   "title" : "照顧目標描述值集",
   "status" : "active",

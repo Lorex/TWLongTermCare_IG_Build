@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="ltc-patient-sdk-example"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/LTCPatient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient ltc-patient-sdk-example</b></p><a name="ltc-patient-sdk-example"> </a><a name="hcltc-patient-sdk-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-LTCPatient.html">長期照顧－住民基本資料</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">王小明 Male, DoB: 1950-01-01 ( Provider number (use: official, ))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>ph: 0912345678</li><li>台北市中山區中山北路100號(home)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Nominated Contact: Next-of-Kin">Next-of-Kin:</td><td colspan="3"><ul><li>王大明</li><li>ph: 0987654321</li></ul></td></tr></table></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PRN"/>
+      </coding>
+    </type>
+    <system value="https://example.org/mrn"/>
+    <value value="A0001"/>
+  </identifier>
+  <name>
+    <use value="usual"/>
+    <text value="王小明"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="0912345678"/>
+  </telecom>
+  <gender value="male"/>
+  <birthDate value="1950-01-01"/>
+  <address>
+    <use value="home"/>
+    <text value="台北市中山區中山北路100號"/>
+  </address>
+  <contact>
+    <relationship>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
+        <code value="N"/>
+        <display value="Next-of-Kin"/>
+      </coding>
+    </relationship>
+    <name>
+      <text value="王大明"/>
+    </name>
+    <telecom>
+      <system value="phone"/>
+      <value value="0987654321"/>
+    </telecom>
+  </contact>
+</Patient>

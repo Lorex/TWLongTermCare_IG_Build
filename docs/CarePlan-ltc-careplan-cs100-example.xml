@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="ltc-careplan-cs100-example"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-Payload"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CarePlan ltc-careplan-cs100-example</b></p><a name="ltc-careplan-cs100-example"> </a><a name="hcltc-careplan-cs100-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-LTC-CarePlan-Payload.html">長照 SDK－照顧計畫（不含輔具）</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title="Codes:{https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw assess-plan}">Assessment and Plan of Treatment</span></p><p><b>subject</b>: <a href="Patient-ltc-patient-cs100-example.html">王小明 (no stated gender), DoB Unknown ( https://example.org/mrn#A0001)</a></p><p><b>period</b>: 2025-10-10 --&gt; (ongoing)</p><p><b>supportingInfo</b>: <a href="CoverageEligibilityResponse-ltc-coverageeligibilityresponse-cs100-example.html">CoverageEligibilityResponse: status = active; purpose = benefits; created = 2025-10-05 10:00:00+0800; outcome = complete</a></p><blockquote><p><b>activity</b></p><h3>Details</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Status</b></td><td><b>Scheduled[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item BA13}">陪同外出</span></td><td>Scheduled</td><td>8 per 1 week</td></tr></table></blockquote></div>
+  </text>
+  <status value="active"/>
+  <intent value="plan"/>
+  <category>
+    <coding>
+      <system value="https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw"/>
+      <code value="assess-plan"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/ltc-patient-cs100-example"/>
+  </subject>
+  <period>
+    <start value="2025-10-10"/>
+  </period>
+  <supportingInfo>
+    <reference value="CoverageEligibilityResponse/ltc-coverageeligibilityresponse-cs100-example"/>
+  </supportingInfo>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item"/>
+          <code value="BA13"/>
+          <display value="陪同外出"/>
+        </coding>
+      </code>
+      <status value="scheduled"/>
+      <scheduledTiming>
+        <repeat>
+          <frequency value="8"/>
+          <period value="1"/>
+          <periodUnit value="wk"/>
+        </repeat>
+      </scheduledTiming>
+    </detail>
+  </activity>
+</CarePlan>

@@ -1,4 +1,4 @@
-# 特殊複雜照護需要問卷 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# 特殊複雜照護需要問卷 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-special-care | *Version*:0.4.1 |
+| *Official URL*:http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-special-care | *Version*:1.0.0 |
 | Active as of 2024-09-01 | *Computable Name*:LTCQuestionnaireSpecialCare |
 
 
@@ -23,7 +23,7 @@
     "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"]
   },
   "url" : "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-special-care",
-  "version" : "0.4.1",
+  "version" : "1.0.0",
   "name" : "LTCQuestionnaireSpecialCare",
   "status" : "active",
   "date" : "2024-09-01",

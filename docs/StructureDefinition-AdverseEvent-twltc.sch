@@ -14,7 +14,6 @@
     <sch:rule context="f:AdverseEvent">
       <sch:assert test="count(f:date) &gt;= 1">date: minimum cardinality of 'date' is 1</sch:assert>
       <sch:assert test="count(f:recordedDate) &gt;= 1">recordedDate: minimum cardinality of 'recordedDate' is 1</sch:assert>
-      <sch:assert test="count(f:contributor) &lt;= 1">contributor: maximum cardinality of 'contributor' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -35,7 +34,6 @@
     <sch:title>f:AdverseEvent/f:event</sch:title>
     <sch:rule context="f:AdverseEvent/f:event">
       <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
-      <sch:assert test="count(f:text) &gt;= 1">text: minimum cardinality of 'text' is 1</sch:assert>
       <sch:assert test="count(f:text) &lt;= 1">text: maximum cardinality of 'text' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>

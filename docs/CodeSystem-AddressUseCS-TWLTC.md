@@ -1,4 +1,4 @@
-# 地址用途擴展識別碼 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# 地址用途擴展識別碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/AddressUseCS-TWLTC | *Version*:0.4.1 |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/AddressUseCS-TWLTC | *Version*:1.0.0 |
 | Active as of 2024-08-22 | *Computable Name*:AddressUseCSTWLTC |
 
  
@@ -27,7 +27,7 @@
   "resourceType" : "CodeSystem",
   "id" : "AddressUseCS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/AddressUseCS-TWLTC",
-  "version" : "0.4.1",
+  "version" : "1.0.0",
   "name" : "AddressUseCSTWLTC",
   "title" : "地址用途擴展識別碼",
   "status" : "active",

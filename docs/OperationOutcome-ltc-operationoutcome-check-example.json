@@ -1,0 +1,31 @@
+{
+  "resourceType" : "OperationOutcome",
+  "id" : "ltc-operationoutcome-check-example",
+  "meta" : {
+    "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/LTC-OperationOutcome-Check"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome ltc-operationoutcome-check-example</b></p><a name=\"ltc-operationoutcome-check-example\"> </a><a name=\"hcltc-operationoutcome-check-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-OperationOutcome-Check.html\">長照 SDK－跨月檢核結果（QP_O）</a></p></div><p><b>長照 SDK－案件編號（CASENO）</b>: 111301921</p><p><b>長照 SDK－民國年月（YYYMM）</b>: 11406</p><p><b>長照 SDK－民國年月（YYYMM）</b>: 11407</p><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td></tr><tr><td style=\"display: none\">*</td><td>Warning</td><td>Business Rule Violation</td><td><span title=\"Codes:\">跨月金額差異偏高</span></td><td>PRICE_ERR=true；ERR_MSG=『與上月差異 &gt; 30%』</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-CaseNo",
+    "valueString" : "111301921"
+  },
+  {
+    "url" : "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-YYYMM-ROC",
+    "valueString" : "11406"
+  },
+  {
+    "url" : "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-YYYMM-ROC",
+    "valueString" : "11407"
+  }],
+  "issue" : [{
+    "severity" : "warning",
+    "code" : "business-rule",
+    "details" : {
+      "text" : "跨月金額差異偏高"
+    },
+    "diagnostics" : "PRICE_ERR=true；ERR_MSG=『與上月差異 > 30%』"
+  }]
+}

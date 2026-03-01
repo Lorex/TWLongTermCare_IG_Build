@@ -1,0 +1,45 @@
+{
+  "resourceType" : "CarePlan",
+  "id" : "ltc-careplan-sdk-example",
+  "meta" : {
+    "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-Payload"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CarePlan ltc-careplan-sdk-example</b></p><a name=\"ltc-careplan-sdk-example\"> </a><a name=\"hcltc-careplan-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-CarePlan-Payload.html\">長照 SDK－照顧計畫（不含輔具）</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:{https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw assess-plan}\">Assessment and Plan of Treatment</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-sdk-example.html\">王小明 Male, DoB: 1950-01-01 ( Provider number\u00a0(use:\u00a0official,\u00a0))</a></p><blockquote><p><b>activity</b></p><h3>Details</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Code</b></td><td><b>Status</b></td><td><b>Scheduled[x]</b></td><td><b>Quantity</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item AA01}\">照顧計畫擬定與服務連結</span></td><td>Scheduled</td><td>每週 2 次（週二、週五）</td><td>19</td></tr></table></blockquote></div>"
+  },
+  "status" : "active",
+  "intent" : "plan",
+  "category" : [{
+    "coding" : [{
+      "system" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw",
+      "code" : "assess-plan"
+    }]
+  }],
+  "subject" : {
+    "reference" : "Patient/ltc-patient-sdk-example"
+  },
+  "activity" : [{
+    "detail" : {
+      "extension" : [{
+        "url" : "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-UnitPrice",
+        "valueMoney" : {
+          "value" : 195,
+          "currency" : "TWD"
+        }
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item",
+          "code" : "AA01",
+          "display" : "照顧計畫擬定與服務連結"
+        }]
+      },
+      "status" : "scheduled",
+      "scheduledString" : "每週 2 次（週二、週五）",
+      "quantity" : {
+        "value" : 19
+      }
+    }
+  }]
+}

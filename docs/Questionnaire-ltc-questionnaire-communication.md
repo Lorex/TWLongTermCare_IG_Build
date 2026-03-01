@@ -1,4 +1,4 @@
-# 溝通表達能力問卷 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# 溝通表達能力問卷 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-communication | *Version*:0.4.1 |
-| Active as of 2026-02-28 | *Computable Name*:LTCQuestionnaireCommunication |
+| *Official URL*:http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-communication | *Version*:1.0.0 |
+| Active as of 2026-03-01 | *Computable Name*:LTCQuestionnaireCommunication |
 
 
 
@@ -23,10 +23,10 @@
     "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire"]
   },
   "url" : "http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-communication",
-  "version" : "0.4.1",
+  "version" : "1.0.0",
   "name" : "LTCQuestionnaireCommunication",
   "status" : "active",
-  "date" : "2026-02-28T23:13:53+08:00",
+  "date" : "2026-03-01T19:25:35+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

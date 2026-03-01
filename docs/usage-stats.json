@@ -1,8 +1,333 @@
 {
   "package": "tw.iii.ltc",
-  "version": "0.4.1",
+  "version": "1.0.0",
   "fhirVersion": "4.0.1",
   "extensions": [
+    {
+      "url": "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-About",
+      "title": "長期照顧－異常事件關聯案件",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description",
+      "title": "長期照顧－異常事件文字描述",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-NotifMethod",
+      "title": "長期照顧－異常事件通報方式",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Case-Source",
+      "title": "長照 SDK－案件－申請來源",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-CaseNo",
+      "title": "長照 SDK－案件編號（CASENO）",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-Error",
+      "title": "長照 SDK－錯誤訊息",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-EvaId",
+      "title": "長照 SDK－評估案號（EVA_ID）",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-Unit",
+      "title": "長照 SDK－單位資訊（PIA/PIB/CENTER/MAN_*）",
+      "types": [
+        "CodeableConcept",
+        "CodeableConcept",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta",
+        "string",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta",
+        "string",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta",
+        "string",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-YYYMM-ROC",
+      "title": "長照 SDK－民國年月（YYYMM）",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-UnitPrice",
+      "title": "單價",
+      "types": [
+        "Money"
+      ]
+    },
     {
       "url": "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEconomyStatus-TWLTC",
       "title": "長照機構住民經濟狀況",
@@ -102,13 +427,29 @@
         "title": "運動處方－運動計畫"
       }
     ],
-    "CareTeam": [
+    "Claim": [
       {
-        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCCareTeam",
-        "title": "長期照顧－照顧團隊"
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTC-Claim-Export",
+        "title": "長照 SDK－照管全量匯出（Claim）"
+      }
+    ],
+    "ClaimResponse": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTC-ClaimResponse-Export",
+        "title": "長照 SDK－照管全量匯出（ClaimResponse）"
+      }
+    ],
+    "Communication": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTC-Communication-ServiceA",
+        "title": "長照 SDK－服務活動紀錄（SERVICE_A）"
       }
     ],
     "Composition": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionBase",
+        "title": "長期照顧－文件組成基礎"
+      },
       {
         "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionCMS",
         "title": "照顧管理評估量表文件架構"
@@ -118,26 +459,16 @@
         "title": "長期照護管理中心個案服務初篩表/轉介單文件架構"
       }
     ],
-    "Condition": [
+    "CoverageEligibilityResponse": [
       {
-        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportConditionExerciseHistory",
-        "title": "運動處方－運動史"
-      },
-      {
-        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportConditionMedicalHistory",
-        "title": "運動處方－病史"
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse",
+        "title": "長照－核定額度（CoverageEligibilityResponse）"
       }
     ],
-    "Goal": [
+    "EpisodeOfCare": [
       {
-        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportGoal",
-        "title": "運動處方－運動目標"
-      }
-    ],
-    "MedicationAdministration": [
-      {
-        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCMedicationAdministration",
-        "title": "長期照顧－用藥資料"
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCEpisodeOfCareBase",
+        "title": "長期照顧－案件管理基礎"
       }
     ],
     "Observation": [
@@ -288,6 +619,40 @@
       {
         "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationWeightTraining",
         "title": "運動項目－重量訓練"
+      }
+    ],
+    "OperationOutcome": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTC-OperationOutcome-Check",
+        "title": "長照 SDK－跨月檢核結果（QP_O）"
+      }
+    ],
+    "CareTeam": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCCareTeam",
+        "title": "長期照顧－照顧團隊"
+      }
+    ],
+    "Condition": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportConditionExerciseHistory",
+        "title": "運動處方－運動史"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportConditionMedicalHistory",
+        "title": "運動處方－病史"
+      }
+    ],
+    "Goal": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportGoal",
+        "title": "運動處方－運動目標"
+      }
+    ],
+    "MedicationAdministration": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCMedicationAdministration",
+        "title": "長期照顧－用藥資料"
       }
     ],
     "Patient": [
@@ -485,6 +850,35 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
       "StructureDefinition.snapshot"
+    ],
+    "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-About": [
+      "AdverseEvent"
+    ],
+    "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description": [
+      "AdverseEvent"
+    ],
+    "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-NotifMethod": [
+      "AdverseEvent"
+    ],
+    "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Case-Source": [
+      "EpisodeOfCare"
+    ],
+    "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-CaseNo": [
+      "Communication",
+      "OperationOutcome"
+    ],
+    "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-Error": [
+      "ClaimResponse"
+    ],
+    "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-Unit": [
+      "ClaimResponse"
+    ],
+    "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-YYYMM-ROC": [
+      "OperationOutcome"
+    ],
+    "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-UnitPrice": [
+      "Bundle.entry.resource.activity.detail",
+      "CarePlan.activity.detail"
     ],
     "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEconomyStatus-TWLTC": [
       "Bundle.entry.resource",

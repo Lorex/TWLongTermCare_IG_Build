@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CarePlan/ltc-careplan-sdk-example> a fhir:CarePlan ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-careplan-sdk-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-Payload"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-Payload>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CarePlan ltc-careplan-sdk-example</b></p><a name=\"ltc-careplan-sdk-example\"> </a><a name=\"hcltc-careplan-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-CarePlan-Payload.html\">長照 SDK－照顧計畫（不含輔具）</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:{https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw assess-plan}\">Assessment and Plan of Treatment</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-sdk-example.html\">王小明 Male, DoB: 1950-01-01 ( Provider number (use: official, ))</a></p><blockquote><p><b>activity</b></p><h3>Details</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Code</b></td><td><b>Status</b></td><td><b>Scheduled[x]</b></td><td><b>Quantity</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item AA01}\">照顧計畫擬定與服務連結</span></td><td>Scheduled</td><td>每週 2 次（週二、週五）</td><td>19</td></tr></table></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "plan"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw"^^xsd:anyURI ;
+         fhir:l <https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw>
+       ] ;
+       fhir:code [ fhir:v "assess-plan" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-sdk-example> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-sdk-example" ]
+  ] ; # 
+  fhir:activity ( [
+     fhir:detail [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-UnitPrice"^^xsd:anyURI ;
+           fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-UnitPrice>
+         ] ;
+         fhir:value [
+           a fhir:Money ;
+           fhir:value [ fhir:v "195"^^xsd:decimal ] ;
+           fhir:currency [ fhir:v "TWD" ]
+         ]
+       ] ) ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item"^^xsd:anyURI ;
+             fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item>
+           ] ;
+           fhir:code [ fhir:v "AA01" ] ;
+           fhir:display [ fhir:v "照顧計畫擬定與服務連結" ]
+         ] )
+       ] ;
+       fhir:status [ fhir:v "scheduled" ] ;
+       fhir:scheduled [
+         a fhir:String ;
+         fhir:v "每週 2 次（週二、週五）"
+       ] ;
+       fhir:quantity [
+         fhir:value [ fhir:v "19"^^xsd:decimal ]
+       ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

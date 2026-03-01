@@ -1,4 +1,4 @@
-# 長期照顧－服務人員角色 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# 長期照顧－服務人員角色 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitionerRole | *Version*:0.4.1 |
-| Active as of 2026-02-28 | *Computable Name*:LTCPractitionerRole |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitionerRole | *Version*:1.0.0 |
+| Active as of 2026-03-01 | *Computable Name*:LTCPractitionerRole |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 PractitionerRole Resource，以呈現長期照顧服務人員的角色資料。 
@@ -17,7 +17,7 @@
 
 **Usages:**
 
-* Refer to this Profile: [長期照顧－照顧計畫](StructureDefinition-LTCCarePlan.md), [長期照顧－照顧團隊](StructureDefinition-LTCCareTeam.md), [長期照顧－病情、問題或診斷](StructureDefinition-LTCCondition.md), [長期照顧－照顧目標](StructureDefinition-LTCGoal.md)... Show 7 more, [長期照顧－照護活動](StructureDefinition-LTCProcedureCareActivity.md), [長期照顧－問卷回覆](StructureDefinition-LTCQuestionnaireResponse.md), [長期照顧－AA01照顧計畫擬訂與服務連結問卷回應](StructureDefinition-LTCQuestionnaireResponseAA01.md), [長期照顧－AA02照顧管理追蹤問卷回覆](StructureDefinition-LTCQuestionnaireResponseAA02.md), [長期照顧－臨床失智評估量表回覆](StructureDefinition-LTCQuestionnaireResponseCDR.md), [長期照顧－簡易智能狀態測驗回覆](StructureDefinition-LTCQuestionnaireResponseMMSE.md) and [運動處方－運動計畫](StructureDefinition-PASportCarePlan.md)
+* Refer to this Profile: [長照 SDK－照顧計畫（CS100）](StructureDefinition-LTC-CarePlan-CS100.md), [長照案件（CS100 專用版）](StructureDefinition-LTC-EpisodeOfCare-CS100.md), [長期照顧－照顧計畫](StructureDefinition-LTCCarePlan.md), [長期照顧－照顧團隊](StructureDefinition-LTCCareTeam.md)... Show 9 more, [長期照顧－病情、問題或診斷](StructureDefinition-LTCCondition.md), [長期照顧－照顧目標](StructureDefinition-LTCGoal.md), [長期照顧－照護活動](StructureDefinition-LTCProcedureCareActivity.md), [長期照顧－問卷回覆](StructureDefinition-LTCQuestionnaireResponse.md), [長期照顧－AA01照顧計畫擬訂與服務連結問卷回應](StructureDefinition-LTCQuestionnaireResponseAA01.md), [長期照顧－AA02照顧管理追蹤問卷回覆](StructureDefinition-LTCQuestionnaireResponseAA02.md), [長期照顧－臨床失智評估量表回覆](StructureDefinition-LTCQuestionnaireResponseCDR.md), [長期照顧－簡易智能狀態測驗回覆](StructureDefinition-LTCQuestionnaireResponseMMSE.md) and [運動處方－運動計畫](StructureDefinition-PASportCarePlan.md)
 * Examples for this Profile: [PractitionerRole/ltc-practitioner-role-nurse-example](PractitionerRole-ltc-practitioner-role-nurse-example.md)
 * CapabilityStatements using this Profile: [臺灣長期照顧實作指引 - 用戶端能力聲明](CapabilityStatement-CapabilityStatementLTCClient.md) and [臺灣長期照顧實作指引 - 伺服端能力聲明](CapabilityStatement-CapabilityStatementLTCServer.md)
 
@@ -40,11 +40,11 @@ Other representations of profile: [CSV](StructureDefinition-LTCPractitionerRole.
   "resourceType" : "StructureDefinition",
   "id" : "LTCPractitionerRole",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitionerRole",
-  "version" : "0.4.1",
+  "version" : "1.0.0",
   "name" : "LTCPractitionerRole",
   "title" : "長期照顧－服務人員角色",
   "status" : "active",
-  "date" : "2026-02-28T23:13:53+08:00",
+  "date" : "2026-03-01T19:25:35+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

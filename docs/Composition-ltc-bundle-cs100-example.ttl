@@ -1,0 +1,152 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Composition/ltc-bundle-cs100-example> a fhir:Composition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-bundle-cs100-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-Composition-CS100"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Composition-CS100>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Composition ltc-bundle-cs100-example</b></p><a name=\"ltc-bundle-cs100-example\"> </a><a name=\"hcltc-bundle-cs100-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-Composition-CS100.html\">個案總查詢（CS100 對應版）Case Summary</a></p></div><p><b>identifier</b>: <code>https://ltc-ig.fhir.tw/identifier/cs100/report-id</code>/CS-20251106-0001</p><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 11506-3}\">Progress note</span></p><p><b>date</b>: 2025-11-06 12:00:00+0800</p><p><b>author</b>: <a href=\"Practitioner-ltc-practitioner-cs100-example.html\">Practitioner 張個管</a></p><p><b>title</b>: CS100 個案總查詢 - 王小明</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier [
+     fhir:system [
+       fhir:v "https://ltc-ig.fhir.tw/identifier/cs100/report-id"^^xsd:anyURI ;
+       fhir:l <https://ltc-ig.fhir.tw/identifier/cs100/report-id>
+     ] ;
+     fhir:value [ fhir:v "CS-20251106-0001" ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:11506-3 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "11506-3" ] ;
+       fhir:display [ fhir:v "Progress note" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-cs100-example> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-cs100-example" ]
+  ] ; # 
+  fhir:date [ fhir:v "2025-11-06T12:00:00+08:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:l <http://ltc-ig.fhir.tw/Practitioner/ltc-practitioner-cs100-example> ;
+     fhir:reference [ fhir:v "Practitioner/ltc-practitioner-cs100-example" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "CS100 個案總查詢 - 王小明"] ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "CS100-個案基本" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:8716-3 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "8716-3" ] ;
+         fhir:display [ fhir:v "Vital signs note" ]
+       ] )
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-cs100-example> ;
+       fhir:reference [ fhir:v "Patient/ltc-patient-cs100-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "CS100-案件資訊" ] ;
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code"^^xsd:anyURI ;
+           fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code>
+         ] ;
+         fhir:code [ fhir:v "case" ] ;
+         fhir:display [ fhir:v "案件資訊" ]
+       ] )
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://ltc-ig.fhir.tw/EpisodeOfCare/ltc-episodeofcare-cs100-example> ;
+       fhir:reference [ fhir:v "EpisodeOfCare/ltc-episodeofcare-cs100-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "CS100-評估核定摘要" ] ;
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code"^^xsd:anyURI ;
+           fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code>
+         ] ;
+         fhir:code [ fhir:v "assessment" ] ;
+         fhir:display [ fhir:v "評估核定摘要" ]
+       ] )
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://ltc-ig.fhir.tw/Observation/ltc-observation-assessment-cs100-example> ;
+       fhir:reference [ fhir:v "Observation/ltc-observation-assessment-cs100-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "CS100-照顧計畫" ] ;
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code"^^xsd:anyURI ;
+           fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code>
+         ] ;
+         fhir:code [ fhir:v "careplan" ] ;
+         fhir:display [ fhir:v "照顧計畫" ]
+       ] )
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://ltc-ig.fhir.tw/CarePlan/ltc-careplan-cs100-example> ;
+       fhir:reference [ fhir:v "CarePlan/ltc-careplan-cs100-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "CS100-核定額度" ] ;
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code"^^xsd:anyURI ;
+           fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code>
+         ] ;
+         fhir:code [ fhir:v "eligibility" ] ;
+         fhir:display [ fhir:v "核定額度" ]
+       ] )
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://ltc-ig.fhir.tw/CoverageEligibilityResponse/ltc-coverageeligibilityresponse-cs100-example> ;
+       fhir:reference [ fhir:v "CoverageEligibilityResponse/ltc-coverageeligibilityresponse-cs100-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "CS100-近期異動/通報" ] ;
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code"^^xsd:anyURI ;
+           fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code>
+         ] ;
+         fhir:code [ fhir:v "incidents" ] ;
+         fhir:display [ fhir:v "近期異動/通報" ]
+       ] )
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://ltc-ig.fhir.tw/AdverseEvent/ltc-adverseevent-cs100-example> ;
+       fhir:reference [ fhir:v "AdverseEvent/ltc-adverseevent-cs100-example" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

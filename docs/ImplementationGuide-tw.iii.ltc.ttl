@@ -17,11 +17,11 @@
      fhir:v "http://ltc-ig.fhir.tw/ImplementationGuide/tw.iii.ltc"^^xsd:anyURI ;
      fhir:l <http://ltc-ig.fhir.tw/ImplementationGuide/tw.iii.ltc>
   ] ; # 
-  fhir:version [ fhir:v "0.4.1"] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
   fhir:name [ fhir:v "TaiwanLongTermCareImplementationGuide"] ; # 
-  fhir:title [ fhir:v "臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)"] ; # 
+  fhir:title [ fhir:v "臺灣長期照顧實作指引(TW LTC IG)"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-28T23:13:53+08:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-03-01T19:25:35+08:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "經濟部產業發展署"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "經濟部產業發展署" ] ;
@@ -120,7 +120,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "ci-build+trial-use"
+           fhir:v "STU 1.0.0"
          ]
        ] ) ;
        fhir:url [
@@ -801,7 +801,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "ci-build+trial-use"
+           fhir:v "STU 1.0.0"
          ]
        ] ) ;
        fhir:url [
@@ -1805,6 +1805,27 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Composition-CS100> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTC-Composition-CS100" ]
+       ] ;
+       fhir:name [ fhir:v "個案總查詢（CS100 對應版）Case Summary" ] ;
+       fhir:description [ fhir:v "本文件為『個案總查詢（Case Summary）』之 CS100 專用版本，\n其內容與章節配置對應衛生福利部照顧服務管理資訊平臺功能\n《CS100 個案總查詢》之查詢結果欄位與區塊。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "StructureDefinition:extension"
          ]
        ] ) ;
@@ -2032,6 +2053,27 @@
          a fhir:Canonical ;
          fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse"^^xsd:anyURI ;
          fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-UnitPrice> ;
+         fhir:reference [ fhir:v "StructureDefinition/Ext-TW-LTC-UnitPrice" ]
+       ] ;
+       fhir:name [ fhir:v "單價" ] ;
+       fhir:description [ fhir:v "此 Extension 用於表示長照服務項目的單價金額。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
        ]
      ] [
        fhir:extension ( [
@@ -6294,6 +6336,28 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/AdverseEvent/ltc-adverse-event-incident-example> ;
+         fhir:reference [ fhir:v "AdverseEvent/ltc-adverse-event-incident-example" ]
+       ] ;
+       fhir:name [ fhir:v "長期照顧異常事件範例－SDK 異常服務通報（跌倒）" ] ;
+       fhir:description [ fhir:v "展示 SDK 異常服務通報場景：電話通報跌倒事件，包含異常類別、通報方式、多段文字描述及關聯案件" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "AdverseEvent"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://ltc-ig.fhir.tw/AdverseEvent/ltc-adverse-event-example> ;
          fhir:reference [ fhir:v "AdverseEvent/ltc-adverse-event-example" ]
        ] ;
@@ -6513,7 +6577,7 @@
          fhir:reference [ fhir:v "StructureDefinition/LTCConditionNeed" ]
        ] ;
        fhir:name [ fhir:v "長期照顧－主要問題及需求" ] ;
-       fhir:description [ fhir:v "用於表述案主(家)主要問題及需求的 Condition Profile。" ] ;
+       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現案主或其家庭之主要問題及照護需求。" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -6534,7 +6598,7 @@
          fhir:reference [ fhir:v "StructureDefinition/LTCConditionProblem" ]
        ] ;
        fhir:name [ fhir:v "長期照顧－主要疾病" ] ;
-       fhir:description [ fhir:v "用於表述案主(家)主要疾病的 Condition Profile。" ] ;
+       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現案主或其家庭之主要疾病資料。" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -6677,11 +6741,53 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionBase> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCCompositionBase" ]
+       ] ;
+       fhir:name [ fhir:v "長期照顧－文件組成基礎" ] ;
+       fhir:description [ fhir:v "此 Profile 為所有長期照顧 Composition Profile 的共用基礎，定義文件組成之基本結構與共用欄位。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitionerRole> ;
          fhir:reference [ fhir:v "StructureDefinition/LTCPractitionerRole" ]
        ] ;
        fhir:name [ fhir:v "長期照顧－服務人員角色" ] ;
        fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 PractitionerRole Resource，以呈現長期照顧服務人員的角色資料。\n\n有關 PractitionerRole 與 Practitioner 的差異及相關解釋，請參照 [TW Core IG](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-PractitionerRole-twcore.html) 中的說明。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCEpisodeOfCareBase> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCEpisodeOfCareBase" ]
+       ] ;
+       fhir:name [ fhir:v "長期照顧－案件管理基礎" ] ;
+       fhir:description [ fhir:v "此 Profile 為所有長期照顧 EpisodeOfCare Profile 的共用基礎，定義案件管理之基本結構與共用欄位。" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -6862,6 +6968,27 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description> ;
+         fhir:reference [ fhir:v "StructureDefinition/Ext-TW-LTC-AdverseEvent-Description" ]
+       ] ;
+       fhir:name [ fhir:v "長期照顧－異常事件文字描述" ] ;
+       fhir:description [ fhir:v "記錄異常事件的多段文字描述，包含事件描述、發生過程、後續處理、改善建議等" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
@@ -6870,7 +6997,49 @@
          fhir:reference [ fhir:v "StructureDefinition/AdverseEvent-twltc" ]
        ] ;
        fhir:name [ fhir:v "長期照顧－異常事件警報" ] ;
-       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 AdverseEvent Resource，以呈現失智症個案異常事件警報的資料，包括事件類型、嚴重程度、發生時間、位置等資訊。" ] ;
+       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 AdverseEvent Resource，以呈現長照個案異常事件的資料，包括事件類型、嚴重程度、發生時間、位置、通報方式、多段文字描述與關聯案件等資訊。同時適用於失智照顧及 SDK 異常服務通報場景。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-NotifMethod> ;
+         fhir:reference [ fhir:v "StructureDefinition/Ext-TW-LTC-AdverseEvent-NotifMethod" ]
+       ] ;
+       fhir:name [ fhir:v "長期照顧－異常事件通報方式" ] ;
+       fhir:description [ fhir:v "記錄異常事件的通報方式（如電話、機構通報、LINE 等）" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-About> ;
+         fhir:reference [ fhir:v "StructureDefinition/Ext-TW-LTC-AdverseEvent-About" ]
+       ] ;
+       fhir:name [ fhir:v "長期照顧－異常事件關聯案件" ] ;
+       fhir:description [ fhir:v "關聯的案件（EpisodeOfCare）或照顧計畫（CarePlan）" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -6992,6 +7161,27 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationAssessmentBase> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCObservationAssessmentBase" ]
+       ] ;
+       fhir:name [ fhir:v "長期照顧－評估核定摘要基礎" ] ;
+       fhir:description [ fhir:v "此 Profile 為評估核定摘要 Observation 的共用基礎 Profile，定義評估結果之基本結構與共用欄位。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisability> ;
          fhir:reference [ fhir:v "StructureDefinition/LTCConditionDisability" ]
        ] ;
@@ -7039,6 +7229,1407 @@
        ] ;
        fhir:name [ fhir:v "長期照顧－關係人" ] ;
        fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 RelatedPerson Resource，以呈現住民的關係人，包含家屬、照顧者、法定代理人等與住民有關的人員資料。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Coverage"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/Coverage/ltc-coverage-cs100-example> ;
+         fhir:reference [ fhir:v "Coverage/ltc-coverage-cs100-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 CS100－保險覆蓋（Coverage）範例" ] ;
+       fhir:description [ fhir:v "長照 CS100 範例用的保險覆蓋（Coverage）資源。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/Practitioner/ltc-practitioner-cs100-example> ;
+         fhir:reference [ fhir:v "Practitioner/ltc-practitioner-cs100-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 CS100－個案管理員（Practitioner）範例" ] ;
+       fhir:description [ fhir:v "長照 CS100 範例用的個案管理員（Practitioner）資源。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Composition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/Composition/ltc-bundle-cs100-example> ;
+         fhir:reference [ fhir:v "Composition/ltc-bundle-cs100-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 CS100－個案總查詢（Composition）範例" ] ;
+       fhir:description [ fhir:v "長照 CS100 個案總查詢的範例，展示如何使用 Composition 資源整合個案的完整資訊。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-Composition-CS100"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Composition-CS100>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-cs100-example> ;
+         fhir:reference [ fhir:v "Patient/ltc-patient-cs100-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 CS100－個案（Patient）範例" ] ;
+       fhir:description [ fhir:v "長照 CS100 範例用的個案（Patient）資源。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CoverageEligibilityRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CoverageEligibilityRequest/ltc-coverageeligibilityrequest-cs100-example> ;
+         fhir:reference [ fhir:v "CoverageEligibilityRequest/ltc-coverageeligibilityrequest-cs100-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 CS100－核定請求（CoverageEligibilityRequest）範例" ] ;
+       fhir:description [ fhir:v "長照 CS100 範例用的核定請求（CoverageEligibilityRequest）資源。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CoverageEligibilityResponse"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CoverageEligibilityResponse/ltc-coverageeligibilityresponse-cs100-example> ;
+         fhir:reference [ fhir:v "CoverageEligibilityResponse/ltc-coverageeligibilityresponse-cs100-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 CS100－核定額度回應（CoverageEligibilityResponse）範例" ] ;
+       fhir:description [ fhir:v "長照 CS100 範例用的核定額度回應（CoverageEligibilityResponse）資源。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CarePlan"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CarePlan/ltc-careplan-cs100-standalone-example> ;
+         fhir:reference [ fhir:v "CarePlan/ltc-careplan-cs100-standalone-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 CS100－照顧計畫獨立（CarePlan）範例" ] ;
+       fhir:description [ fhir:v "長照 CS100 個案總查詢之照顧計畫範例，展示如何使用 LTCCarePlanCS100 Profile。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-CS100"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-CS100>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CarePlan"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CarePlan/ltc-careplan-cs100-example> ;
+         fhir:reference [ fhir:v "CarePlan/ltc-careplan-cs100-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 CS100－照顧計畫（CarePlan）範例" ] ;
+       fhir:description [ fhir:v "長照 CS100 範例用的照顧計畫（CarePlan）資源。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-Payload"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-Payload>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "AdverseEvent"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/AdverseEvent/ltc-adverseevent-cs100-example> ;
+         fhir:reference [ fhir:v "AdverseEvent/ltc-adverseevent-cs100-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 CS100－異常事件（AdverseEvent）範例" ] ;
+       fhir:description [ fhir:v "長照 CS100 範例用的異常事件（AdverseEvent）資源。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/Observation/ltc-observation-assessment-cs100-example> ;
+         fhir:reference [ fhir:v "Observation/ltc-observation-assessment-cs100-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 CS100－評估核定摘要（Observation）範例" ] ;
+       fhir:description [ fhir:v "長照 CS100 範例用的評估核定摘要（Observation）資源。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-Observation-Assessment-CS100"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Observation-Assessment-CS100>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "EpisodeOfCare"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/EpisodeOfCare/ltc-episodeofcare-cs100-example> ;
+         fhir:reference [ fhir:v "EpisodeOfCare/ltc-episodeofcare-cs100-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 CS100－長照案件（EpisodeOfCare）範例" ] ;
+       fhir:description [ fhir:v "長照 CS100 範例用的長照案件（EpisodeOfCare）資源。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-CS100"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-CS100>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/Organization/ltc-organization-cs100-example> ;
+         fhir:reference [ fhir:v "Organization/ltc-organization-cs100-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 CS100－長照管理中心（Organization）範例" ] ;
+       fhir:description [ fhir:v "長照 CS100 範例用的長照管理中心（Organization）資源。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-cmslevel> ;
+         fhir:reference [ fhir:v "ValueSet/vs-tw-ltc-cmslevel" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－CMS 等級" ] ;
+       fhir:description [ fhir:v "此 ValueSet 用於表示長照 SDK 中的 CMS（照顧管理評估量表）等級。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-tw-ltc-cmslevel" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－CMS 等級" ] ;
+       fhir:description [ fhir:v "對應 r2.5：1, 1a, 1b, 2..8。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-tw-ltc-section-code" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－Composition 章節代碼" ] ;
+       fhir:description [ fhir:v "用於長照 Composition 資源中各章節（section）的區段識別代碼。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Coverage"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/Coverage/ltc-coverage-sdk-example> ;
+         fhir:reference [ fhir:v "Coverage/ltc-coverage-sdk-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－保險覆蓋（Coverage）範例" ] ;
+       fhir:description [ fhir:v "長照 SDK 範例用的保險覆蓋（Coverage）資源。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-case-status> ;
+         fhir:reference [ fhir:v "ValueSet/vs-tw-ltc-case-status" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－個案狀態" ] ;
+       fhir:description [ fhir:v "此 ValueSet 用於表示長照 SDK 中個案的狀態，使用 FHIR EpisodeOfCare status 對應碼：active（服務中）、onhold（暫停服務）、finished（已結案）。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-status> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-tw-ltc-case-status" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－個案狀態" ] ;
+       fhir:description [ fhir:v "對應 r1.3：服務中、暫停服務、已結案。使用 FHIR EpisodeOfCare status 對應碼。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-sdk-example> ;
+         fhir:reference [ fhir:v "Patient/ltc-patient-sdk-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－個案（Patient）範例" ] ;
+       fhir:description [ fhir:v "長照 SDK 範例用的個案（Patient）資源。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCPatient"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCPatient>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-Unit> ;
+         fhir:reference [ fhir:v "StructureDefinition/Ext-TW-LTC-Export-Unit" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－單位資訊（PIA/PIB/CENTER/MAN_*）" ] ;
+       fhir:description [ fhir:v "此 Extension 用於表示長照 SDK 的單位資訊，包含特約單位、照管中心、個管員等相關資訊，適用於 Claim 及 ClaimResponse 資源。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Bundle-Payload> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTC-Bundle-Payload" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－回傳包（4合1）" ] ;
+       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Bundle Resource，以呈現長照 SDK 回傳之資料包，包含案件、評估、核定額度及照顧計畫等資源之集合。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/Bundle/ltc-bundle-payload-example> ;
+         fhir:reference [ fhir:v "Bundle/ltc-bundle-payload-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－回傳包（4合1）範例" ] ;
+       fhir:description [ fhir:v "長照 SDK 回傳資料包範例，包含案件、評估、核定額度及照顧計畫等資源之集合。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-Bundle-Payload"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Bundle-Payload>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-group> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-tw-ltc-service-group" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－服務別（核定用）" ] ;
+       fhir:description [ fhir:v "此 CodeSystem 定義長照 SDK 中的服務別（核定用）代碼。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-service-group> ;
+         fhir:reference [ fhir:v "ValueSet/vs-tw-ltc-service-group" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－服務別（核定）" ] ;
+       fhir:description [ fhir:v "此 ValueSet 用於表示長照 SDK 中的服務別（核定）。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-service-activity> ;
+         fhir:reference [ fhir:v "ValueSet/vs-tw-ltc-service-activity" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－服務活動" ] ;
+       fhir:description [ fhir:v "此 ValueSet 彙整長照照管服務活動紀錄使用之代碼。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-activity> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-tw-ltc-service-activity" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－服務活動代碼" ] ;
+       fhir:description [ fhir:v "此 CodeSystem 定義長照照管服務活動紀錄所使用之代碼。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Communication-ServiceA> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTC-Communication-ServiceA" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－服務活動紀錄（SERVICE_A）" ] ;
+       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Communication Resource，以呈現長照服務活動紀錄，包含電訪、家訪等過程資料。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-tw-ltc-service-item" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－服務項目代碼" ] ;
+       fhir:description [ fhir:v "對應 r4.* 臺灣長照給付『照顧組合／輔具／無障礙修繕』服務項目代碼（AA..FA 系列），來源：清單.xlsx。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-service-item> ;
+         fhir:reference [ fhir:v "ValueSet/vs-tw-ltc-service-item" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－服務項目（計畫）" ] ;
+       fhir:description [ fhir:v "此 ValueSet 用於表示長照 SDK 中的服務項目（計畫）。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CoverageEligibilityRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CoverageEligibilityRequest/ltc-coverageeligibilityrequest-sdk-example> ;
+         fhir:reference [ fhir:v "CoverageEligibilityRequest/ltc-coverageeligibilityrequest-sdk-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－核定請求（CoverageEligibilityRequest）範例" ] ;
+       fhir:description [ fhir:v "長照 SDK 範例用的核定請求（CoverageEligibilityRequest）資源。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CoverageEligibilityResponse"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CoverageEligibilityResponse/ltc-coverageeligibilityresponse-sdk-example> ;
+         fhir:reference [ fhir:v "CoverageEligibilityResponse/ltc-coverageeligibilityresponse-sdk-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－核定額度回應（CoverageEligibilityResponse）範例" ] ;
+       fhir:description [ fhir:v "長照 SDK 範例用的核定額度回應（CoverageEligibilityResponse）資源。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-benefit-type> ;
+         fhir:reference [ fhir:v "ValueSet/vs-tw-ltc-benefit-type" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－核定額度欄位" ] ;
+       fhir:description [ fhir:v "此 ValueSet 用於表示長照 SDK 中的核定額度欄位。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-tw-ltc-benefit-type" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－核定額度－金流欄位" ] ;
+       fhir:description [ fhir:v "此 CodeSystem 定義長照 SDK 核定額度中的金流欄位代碼。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-CaseNo> ;
+         fhir:reference [ fhir:v "StructureDefinition/Ext-TW-LTC-Export-CaseNo" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－案件編號（CASENO）" ] ;
+       fhir:description [ fhir:v "此 Extension 用於表示長照 SDK 的案件編號（CASENO），適用於 Claim、CarePlan、Communication 或 OperationOutcome 資源。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Case-Source> ;
+         fhir:reference [ fhir:v "StructureDefinition/Ext-TW-LTC-Case-Source" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－案件－申請來源" ] ;
+       fhir:description [ fhir:v "案件（EpisodeOfCare）之申請來源。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-YYYMM-ROC> ;
+         fhir:reference [ fhir:v "StructureDefinition/Ext-TW-LTC-Export-YYYMM-ROC" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－民國年月（YYYMM）" ] ;
+       fhir:description [ fhir:v "此 Extension 用於表示長照 SDK 的民國年月（YYYMM 格式），適用於 Claim、ClaimResponse 或 OperationOutcome 資源。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-ClaimResponse-Export> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTC-ClaimResponse-Export" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－照管全量匯出（ClaimResponse）" ] ;
+       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 ClaimResponse Resource，以呈現長照照管全量匯出之審核結果與檢核錯誤資訊。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Claim-Export> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTC-Claim-Export" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－照管全量匯出（Claim）" ] ;
+       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Claim Resource，以呈現長照照管全量匯出之服務代碼、數量、單價及小計等申報資料。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/Practitioner/ltc-practitioner-sdk-example> ;
+         fhir:reference [ fhir:v "Practitioner/ltc-practitioner-sdk-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－照顧管理專員（Practitioner）範例" ] ;
+       fhir:description [ fhir:v "長照 SDK 範例用的照顧管理專員（Practitioner）資源。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CarePlan"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CarePlan/ltc-careplan-sdk-example> ;
+         fhir:reference [ fhir:v "CarePlan/ltc-careplan-sdk-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－照顧計畫（CarePlan）範例" ] ;
+       fhir:description [ fhir:v "長照 SDK 範例用的照顧計畫（CarePlan）資源。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-Payload"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-Payload>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-CS100> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTC-CarePlan-CS100" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－照顧計畫（CS100）" ] ;
+       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現 CS100 個案總查詢之照顧計畫資料，規則同 LTCCarePlanPayload。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-Payload> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTC-CarePlan-Payload" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－照顧計畫（不含輔具）" ] ;
+       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現長照 SDK 回傳之照顧計畫，包含服務項目代碼、金額、數量及頻率等資料。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-case-source> ;
+         fhir:reference [ fhir:v "ValueSet/vs-tw-ltc-case-source" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－申請來源" ] ;
+       fhir:description [ fhir:v "此 ValueSet 用於表示長照 SDK 中個案的申請來源。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-source> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-tw-ltc-case-source" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－申請來源（暫行）" ] ;
+       fhir:description [ fhir:v "申請來源常見分類（待以 Excel 實值更新）。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-incident-texttype> ;
+         fhir:reference [ fhir:v "ValueSet/vs-tw-ltc-incident-texttype" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－異常紀錄－文字區塊類型" ] ;
+       fhir:description [ fhir:v "此 ValueSet 用於表示長照 SDK 異常紀錄中的文字區塊類型。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-tw-ltc-incident-texttype" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－異常紀錄－文字區塊類型" ] ;
+       fhir:description [ fhir:v "區分各段文字（描述、過程、後續處理、改善建議）。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-incident-category> ;
+         fhir:reference [ fhir:v "ValueSet/vs-tw-ltc-incident-category" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－異常紀錄－異常類別" ] ;
+       fhir:description [ fhir:v "此 ValueSet 用於表示長照 SDK 異常紀錄的異常類別。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-category> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-tw-ltc-incident-category" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－異常紀錄－異常類別" ] ;
+       fhir:description [ fhir:v "表單『異常類別』多選。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-incident-notifmethod> ;
+         fhir:reference [ fhir:v "ValueSet/vs-tw-ltc-incident-notifmethod" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－異常紀錄－通報方式" ] ;
+       fhir:description [ fhir:v "此 ValueSet 用於表示長照 SDK 異常紀錄的通報方式。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-notifmethod> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-tw-ltc-incident-notifmethod" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－異常紀錄－通報方式" ] ;
+       fhir:description [ fhir:v "表單『通報方式』多選。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Observation-Assessment-Payload> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTC-Observation-Assessment-Payload" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－評估核定摘要" ] ;
+       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現長照 SDK 回傳之評估核定摘要，包含福利身分、CMS 等級、評估類型及計畫起訖等資訊。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-assessment-component> ;
+         fhir:reference [ fhir:v "ValueSet/vs-tw-ltc-assessment-component" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－評估核定摘要欄位碼" ] ;
+       fhir:description [ fhir:v "此 ValueSet 用於表示長照 SDK 評估核定摘要的欄位碼。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Observation-Assessment-CS100> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTC-Observation-Assessment-CS100" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－評估核定摘要（Observation）" ] ;
+       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現 CS100 個案總查詢之評估核定摘要，包含 CMS 等級、福利身分及評估類型等資訊。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/Observation/ltc-observation-assessment-sdk-example> ;
+         fhir:reference [ fhir:v "Observation/ltc-observation-assessment-sdk-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－評估核定摘要（Observation）範例" ] ;
+       fhir:description [ fhir:v "長照 SDK 範例用的評估核定摘要（Observation）資源。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-Observation-Assessment-Payload"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Observation-Assessment-Payload>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-tw-ltc-assessment-component" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－評估核定摘要－欄位碼" ] ;
+       fhir:description [ fhir:v "此 CodeSystem 定義長照 SDK 評估核定摘要的欄位碼。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-EvaId> ;
+         fhir:reference [ fhir:v "StructureDefinition/Ext-TW-LTC-Export-EvaId" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－評估案號（EVA_ID）" ] ;
+       fhir:description [ fhir:v "此 Extension 用於表示長照 SDK 的評估案號（EVA_ID），適用於 Claim 或 CarePlan 資源。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-assessment-type> ;
+         fhir:reference [ fhir:v "ValueSet/vs-tw-ltc-assessment-type" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－評估類型" ] ;
+       fhir:description [ fhir:v "此 ValueSet 用於表示長照 SDK 中的評估類型。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-type> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-tw-ltc-assessment-type" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－評估類型" ] ;
+       fhir:description [ fhir:v "對應 r2.8 / r3.21：出院銜接、初評、複評、計畫異動、舊系統無評估轉入、身障居服匯入、AA計劃異動。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-OperationOutcome-Check> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTC-OperationOutcome-Check" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－跨月檢核結果（QP_O）" ] ;
+       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 OperationOutcome Resource，以呈現長照 SDK 跨月金額與月份檢核之錯誤旗標與訊息。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-Error> ;
+         fhir:reference [ fhir:v "StructureDefinition/Ext-TW-LTC-Export-Error" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－錯誤訊息" ] ;
+       fhir:description [ fhir:v "此 Extension 用於表示長照 SDK 回傳的錯誤訊息，適用於 ClaimResponse 或 OperationOutcome.issue。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-Payload> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTC-EpisodeOfCare-Payload" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－長照案件" ] ;
+       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 EpisodeOfCare Resource，以呈現長照 SDK 回傳之案件資訊，包含案件流水號、個案狀態、開結案時間及主責機構等資料。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "EpisodeOfCare"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/EpisodeOfCare/ltc-episodeofcare-sdk-example> ;
+         fhir:reference [ fhir:v "EpisodeOfCare/ltc-episodeofcare-sdk-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－長照案件（EpisodeOfCare）範例" ] ;
+       fhir:description [ fhir:v "長照 SDK 範例用的長照案件（EpisodeOfCare）資源。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-Payload"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-Payload>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-welfare-identity> ;
+         fhir:reference [ fhir:v "ValueSet/vs-tw-ltc-welfare-identity" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－長照福利身分" ] ;
+       fhir:description [ fhir:v "此 ValueSet 用於表示長照 SDK 中的長照福利身分。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-welfare-identity> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-tw-ltc-welfare-identity" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－長照福利身分" ] ;
+       fhir:description [ fhir:v "此 CodeSystem 定義長照 SDK 中的長照福利身分代碼。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/Organization/ltc-organization-sdk-example> ;
+         fhir:reference [ fhir:v "Organization/ltc-organization-sdk-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照 SDK－長照管理中心（Organization）範例" ] ;
+       fhir:description [ fhir:v "長照 SDK 範例用的長期照顧管理中心（Organization）資源。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/Organization-twltc"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Organization-twltc>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-CS100> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTC-EpisodeOfCare-CS100" ]
+       ] ;
+       fhir:name [ fhir:v "長照案件（CS100 專用版）" ] ;
+       fhir:description [ fhir:v "對應衛生福利部照顧服務管理資訊平臺『CS100 個案總查詢』之案件列資料。\n作為 CS100 匯出資料列的病例/案件載體，提供個案管理之基礎欄位（案件編號、狀態、期間、主責機構、個管等）。" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -7106,6 +8697,137 @@
          a fhir:Canonical ;
          fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner"^^xsd:anyURI ;
          fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTC-CoverageEligibilityResponse" ]
+       ] ;
+       fhir:name [ fhir:v "長照－核定額度（CoverageEligibilityResponse）" ] ;
+       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 CoverageEligibilityResponse Resource，以呈現長照各服務別之核定額度摘要，包含總額、補助金額、自付額及比率等資料。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ClaimResponse"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/ClaimResponse/ltc-claimresponse-export-example> ;
+         fhir:reference [ fhir:v "ClaimResponse/ltc-claimresponse-export-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照－照管全量匯出審核結果（ClaimResponse）範例" ] ;
+       fhir:description [ fhir:v "長照照管全量匯出之審核結果與檢核錯誤資訊範例，展示如何使用 LTCClaimResponseExport Profile。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-ClaimResponse-Export"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-ClaimResponse-Export>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Claim"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/Claim/ltc-claim-export-dispatch-example> ;
+         fhir:reference [ fhir:v "Claim/ltc-claim-export-dispatch-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照－照管可提供服務（Claim）範例" ] ;
+       fhir:description [ fhir:v "長照 SDK 照管CASE可提供服務的範例，展示如何使用 Claim 資源記錄個案可提供的服務項目。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-Claim-Export"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Claim-Export>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Claim"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/Claim/ltc-claim-export-example> ;
+         fhir:reference [ fhir:v "Claim/ltc-claim-export-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照－照管計畫與金額（Claim）範例" ] ;
+       fhir:description [ fhir:v "長照 SDK 照管PLAN計畫與金額的範例，展示如何使用 Claim 資源記錄長照服務計畫與費用。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-Claim-Export"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Claim-Export>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Communication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/Communication/ltc-communication-servicea-example> ;
+         fhir:reference [ fhir:v "Communication/ltc-communication-servicea-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照－照管電訪活動（Communication）範例" ] ;
+       fhir:description [ fhir:v "長照 SDK 照管SERVICE_A電訪的範例，展示如何記錄照顧管理服務活動。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-Communication-ServiceA"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Communication-ServiceA>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "OperationOutcome"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/OperationOutcome/ltc-operationoutcome-check-example> ;
+         fhir:reference [ fhir:v "OperationOutcome/ltc-operationoutcome-check-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照－跨月檢核（OperationOutcome）範例" ] ;
+       fhir:description [ fhir:v "長照 SDK 照管QP_O跨月檢核的範例，展示如何使用 OperationOutcome 資源記錄跨月金額檢核結果。" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-OperationOutcome-Check"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-OperationOutcome-Check>
        ]
      ] [
        fhir:extension ( [
@@ -7486,16 +9208,16 @@
            ] ;
            fhir:value [
              a fhir:Url ;
-             fhir:v "ImplementationGuide-fhir.twltc.html"^^xsd:anyURI ;
-             fhir:l fhir:ImplementationGuide-fhir.twltc.html
+             fhir:v "ImplementationGuide-tw.iii.ltc.html"^^xsd:anyURI ;
+             fhir:l fhir:ImplementationGuide-tw.iii.ltc.html
            ]
          ] ) ;
          fhir:name [
            a fhir:Url ;
-           fhir:v "ImplementationGuide-fhir.twltc.html"^^xsd:anyURI ;
-           fhir:l fhir:ImplementationGuide-fhir.twltc.html
+           fhir:v "ImplementationGuide-tw.iii.ltc.html"^^xsd:anyURI ;
+           fhir:l fhir:ImplementationGuide-tw.iii.ltc.html
          ] ;
-         fhir:title [ fhir:v "Implementation Guide Fhir Twltc" ] ;
+         fhir:title [ fhir:v "Implementation Guide Tw Iii Ltc" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [

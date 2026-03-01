@@ -6,11 +6,11 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide tw.iii.ltc</b></p><a name="tw.iii.ltc"> </a><a name="hctw.iii.ltc"> </a><h2>TaiwanLongTermCareImplementationGuide</h2><p>The official URL for this implementation guide is: </p><pre>http://ltc-ig.fhir.tw/ImplementationGuide/tw.iii.ltc</pre></div>
   </text>
   <url value="http://ltc-ig.fhir.tw/ImplementationGuide/tw.iii.ltc"/>
-  <version value="0.4.1"/>
+  <version value="1.0.0"/>
   <name value="TaiwanLongTermCareImplementationGuide"/>
-  <title value="臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)"/>
+  <title value="臺灣長期照顧實作指引(TW LTC IG)"/>
   <status value="active"/>
-  <date value="2026-02-28T23:13:53+08:00"/>
+  <date value="2026-03-01T19:25:35+08:00"/>
   <publisher value="經濟部產業發展署"/>
   <contact>
     <name value="經濟部產業發展署"/>
@@ -57,7 +57,7 @@
         <valueString value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="ci-build+trial-use"/>
+        <valueString value="STU 1.0.0"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -284,7 +284,7 @@
         <valueCode value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="ci-build+trial-use"/>
+        <valueString value="STU 1.0.0"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -679,6 +679,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTC-Composition-CS100"/>
+      </reference>
+      <name value="個案總查詢（CS100 對應版）Case Summary"/>
+      <description value="本文件為『個案總查詢（Case Summary）』之 CS100 專用版本，&#xA;其內容與章節配置對應衛生福利部照顧服務管理資訊平臺功能&#xA;《CS100 個案總查詢》之查詢結果欄位與區塊。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
@@ -797,6 +808,17 @@
       <name value="問卷回覆範例"/>
       <description value="一個問卷回覆的範例，展示如何使用 LTCQuestionnaireResponse Profile 來記錄問卷回覆"/>
       <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Ext-TW-LTC-UnitPrice"/>
+      </reference>
+      <name value="單價"/>
+      <description value="此 Extension 用於表示長照服務項目的單價金額。"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2976,6 +2998,17 @@
         <valueString value="AdverseEvent"/>
       </extension>
       <reference>
+        <reference value="AdverseEvent/ltc-adverse-event-incident-example"/>
+      </reference>
+      <name value="長期照顧異常事件範例－SDK 異常服務通報（跌倒）"/>
+      <description value="展示 SDK 異常服務通報場景：電話通報跌倒事件，包含異常類別、通報方式、多段文字描述及關聯案件"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AdverseEvent"/>
+      </extension>
+      <reference>
         <reference value="AdverseEvent/ltc-adverse-event-example"/>
       </reference>
       <name value="長期照顧異常事件警報範例"/>
@@ -3089,7 +3122,7 @@
         <reference value="StructureDefinition/LTCConditionNeed"/>
       </reference>
       <name value="長期照顧－主要問題及需求"/>
-      <description value="用於表述案主(家)主要問題及需求的 Condition Profile。"/>
+      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現案主或其家庭之主要問題及照護需求。"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -3100,7 +3133,7 @@
         <reference value="StructureDefinition/LTCConditionProblem"/>
       </reference>
       <name value="長期照顧－主要疾病"/>
-      <description value="用於表述案主(家)主要疾病的 Condition Profile。"/>
+      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現案主或其家庭之主要疾病資料。"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -3174,10 +3207,32 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/LTCCompositionBase"/>
+      </reference>
+      <name value="長期照顧－文件組成基礎"/>
+      <description value="此 Profile 為所有長期照顧 Composition Profile 的共用基礎，定義文件組成之基本結構與共用欄位。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/LTCPractitionerRole"/>
       </reference>
       <name value="長期照顧－服務人員角色"/>
       <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 PractitionerRole Resource，以呈現長期照顧服務人員的角色資料。&#xA;&#xA;有關 PractitionerRole 與 Practitioner 的差異及相關解釋，請參照 [TW Core IG](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-PractitionerRole-twcore.html) 中的說明。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTCEpisodeOfCareBase"/>
+      </reference>
+      <name value="長期照顧－案件管理基礎"/>
+      <description value="此 Profile 為所有長期照顧 EpisodeOfCare Profile 的共用基礎，定義案件管理之基本結構與共用欄位。"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -3270,13 +3325,46 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Ext-TW-LTC-AdverseEvent-Description"/>
+      </reference>
+      <name value="長期照顧－異常事件文字描述"/>
+      <description value="記錄異常事件的多段文字描述，包含事件描述、發生過程、後續處理、改善建議等"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
         <reference value="StructureDefinition/AdverseEvent-twltc"/>
       </reference>
       <name value="長期照顧－異常事件警報"/>
-      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 AdverseEvent Resource，以呈現失智症個案異常事件警報的資料，包括事件類型、嚴重程度、發生時間、位置等資訊。"/>
+      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 AdverseEvent Resource，以呈現長照個案異常事件的資料，包括事件類型、嚴重程度、發生時間、位置、通報方式、多段文字描述與關聯案件等資訊。同時適用於失智照顧及 SDK 異常服務通報場景。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Ext-TW-LTC-AdverseEvent-NotifMethod"/>
+      </reference>
+      <name value="長期照顧－異常事件通報方式"/>
+      <description value="記錄異常事件的通報方式（如電話、機構通報、LINE 等）"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Ext-TW-LTC-AdverseEvent-About"/>
+      </reference>
+      <name value="長期照顧－異常事件關聯案件"/>
+      <description value="關聯的案件（EpisodeOfCare）或照顧計畫（CarePlan）"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -3339,6 +3427,17 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/LTCObservationAssessmentBase"/>
+      </reference>
+      <name value="長期照顧－評估核定摘要基礎"/>
+      <description value="此 Profile 為評估核定摘要 Observation 的共用基礎 Profile，定義評估結果之基本結構與共用欄位。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/LTCConditionDisability"/>
       </reference>
       <name value="長期照顧－身心障礙手冊持有狀態"/>
@@ -3365,6 +3464,732 @@
       </reference>
       <name value="長期照顧－關係人"/>
       <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 RelatedPerson Resource，以呈現住民的關係人，包含家屬、照顧者、法定代理人等與住民有關的人員資料。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Coverage"/>
+      </extension>
+      <reference>
+        <reference value="Coverage/ltc-coverage-cs100-example"/>
+      </reference>
+      <name value="長照 CS100－保險覆蓋（Coverage）範例"/>
+      <description value="長照 CS100 範例用的保險覆蓋（Coverage）資源。"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/ltc-practitioner-cs100-example"/>
+      </reference>
+      <name value="長照 CS100－個案管理員（Practitioner）範例"/>
+      <description value="長照 CS100 範例用的個案管理員（Practitioner）資源。"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/ltc-bundle-cs100-example"/>
+      </reference>
+      <name value="長照 CS100－個案總查詢（Composition）範例"/>
+      <description value="長照 CS100 個案總查詢的範例，展示如何使用 Composition 資源整合個案的完整資訊。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-Composition-CS100"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/ltc-patient-cs100-example"/>
+      </reference>
+      <name value="長照 CS100－個案（Patient）範例"/>
+      <description value="長照 CS100 範例用的個案（Patient）資源。"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CoverageEligibilityRequest"/>
+      </extension>
+      <reference>
+        <reference value="CoverageEligibilityRequest/ltc-coverageeligibilityrequest-cs100-example"/>
+      </reference>
+      <name value="長照 CS100－核定請求（CoverageEligibilityRequest）範例"/>
+      <description value="長照 CS100 範例用的核定請求（CoverageEligibilityRequest）資源。"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CoverageEligibilityResponse"/>
+      </extension>
+      <reference>
+        <reference value="CoverageEligibilityResponse/ltc-coverageeligibilityresponse-cs100-example"/>
+      </reference>
+      <name value="長照 CS100－核定額度回應（CoverageEligibilityResponse）範例"/>
+      <description value="長照 CS100 範例用的核定額度回應（CoverageEligibilityResponse）資源。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/ltc-careplan-cs100-standalone-example"/>
+      </reference>
+      <name value="長照 CS100－照顧計畫獨立（CarePlan）範例"/>
+      <description value="長照 CS100 個案總查詢之照顧計畫範例，展示如何使用 LTCCarePlanCS100 Profile。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-CS100"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/ltc-careplan-cs100-example"/>
+      </reference>
+      <name value="長照 CS100－照顧計畫（CarePlan）範例"/>
+      <description value="長照 CS100 範例用的照顧計畫（CarePlan）資源。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-Payload"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AdverseEvent"/>
+      </extension>
+      <reference>
+        <reference value="AdverseEvent/ltc-adverseevent-cs100-example"/>
+      </reference>
+      <name value="長照 CS100－異常事件（AdverseEvent）範例"/>
+      <description value="長照 CS100 範例用的異常事件（AdverseEvent）資源。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ltc-observation-assessment-cs100-example"/>
+      </reference>
+      <name value="長照 CS100－評估核定摘要（Observation）範例"/>
+      <description value="長照 CS100 範例用的評估核定摘要（Observation）資源。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-Observation-Assessment-CS100"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EpisodeOfCare"/>
+      </extension>
+      <reference>
+        <reference value="EpisodeOfCare/ltc-episodeofcare-cs100-example"/>
+      </reference>
+      <name value="長照 CS100－長照案件（EpisodeOfCare）範例"/>
+      <description value="長照 CS100 範例用的長照案件（EpisodeOfCare）資源。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-CS100"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ltc-organization-cs100-example"/>
+      </reference>
+      <name value="長照 CS100－長照管理中心（Organization）範例"/>
+      <description value="長照 CS100 範例用的長照管理中心（Organization）資源。"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-tw-ltc-cmslevel"/>
+      </reference>
+      <name value="長照 SDK－CMS 等級"/>
+      <description value="此 ValueSet 用於表示長照 SDK 中的 CMS（照顧管理評估量表）等級。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cs-tw-ltc-cmslevel"/>
+      </reference>
+      <name value="長照 SDK－CMS 等級"/>
+      <description value="對應 r2.5：1, 1a, 1b, 2..8。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cs-tw-ltc-section-code"/>
+      </reference>
+      <name value="長照 SDK－Composition 章節代碼"/>
+      <description value="用於長照 Composition 資源中各章節（section）的區段識別代碼。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Coverage"/>
+      </extension>
+      <reference>
+        <reference value="Coverage/ltc-coverage-sdk-example"/>
+      </reference>
+      <name value="長照 SDK－保險覆蓋（Coverage）範例"/>
+      <description value="長照 SDK 範例用的保險覆蓋（Coverage）資源。"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-tw-ltc-case-status"/>
+      </reference>
+      <name value="長照 SDK－個案狀態"/>
+      <description value="此 ValueSet 用於表示長照 SDK 中個案的狀態，使用 FHIR EpisodeOfCare status 對應碼：active（服務中）、onhold（暫停服務）、finished（已結案）。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cs-tw-ltc-case-status"/>
+      </reference>
+      <name value="長照 SDK－個案狀態"/>
+      <description value="對應 r1.3：服務中、暫停服務、已結案。使用 FHIR EpisodeOfCare status 對應碼。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/ltc-patient-sdk-example"/>
+      </reference>
+      <name value="長照 SDK－個案（Patient）範例"/>
+      <description value="長照 SDK 範例用的個案（Patient）資源。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCPatient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Ext-TW-LTC-Export-Unit"/>
+      </reference>
+      <name value="長照 SDK－單位資訊（PIA/PIB/CENTER/MAN_*）"/>
+      <description value="此 Extension 用於表示長照 SDK 的單位資訊，包含特約單位、照管中心、個管員等相關資訊，適用於 Claim 及 ClaimResponse 資源。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTC-Bundle-Payload"/>
+      </reference>
+      <name value="長照 SDK－回傳包（4合1）"/>
+      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 Bundle Resource，以呈現長照 SDK 回傳之資料包，包含案件、評估、核定額度及照顧計畫等資源之集合。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ltc-bundle-payload-example"/>
+      </reference>
+      <name value="長照 SDK－回傳包（4合1）範例"/>
+      <description value="長照 SDK 回傳資料包範例，包含案件、評估、核定額度及照顧計畫等資源之集合。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-Bundle-Payload"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cs-tw-ltc-service-group"/>
+      </reference>
+      <name value="長照 SDK－服務別（核定用）"/>
+      <description value="此 CodeSystem 定義長照 SDK 中的服務別（核定用）代碼。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-tw-ltc-service-group"/>
+      </reference>
+      <name value="長照 SDK－服務別（核定）"/>
+      <description value="此 ValueSet 用於表示長照 SDK 中的服務別（核定）。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-tw-ltc-service-activity"/>
+      </reference>
+      <name value="長照 SDK－服務活動"/>
+      <description value="此 ValueSet 彙整長照照管服務活動紀錄使用之代碼。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cs-tw-ltc-service-activity"/>
+      </reference>
+      <name value="長照 SDK－服務活動代碼"/>
+      <description value="此 CodeSystem 定義長照照管服務活動紀錄所使用之代碼。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTC-Communication-ServiceA"/>
+      </reference>
+      <name value="長照 SDK－服務活動紀錄（SERVICE_A）"/>
+      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 Communication Resource，以呈現長照服務活動紀錄，包含電訪、家訪等過程資料。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cs-tw-ltc-service-item"/>
+      </reference>
+      <name value="長照 SDK－服務項目代碼"/>
+      <description value="對應 r4.* 臺灣長照給付『照顧組合／輔具／無障礙修繕』服務項目代碼（AA..FA 系列），來源：清單.xlsx。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-tw-ltc-service-item"/>
+      </reference>
+      <name value="長照 SDK－服務項目（計畫）"/>
+      <description value="此 ValueSet 用於表示長照 SDK 中的服務項目（計畫）。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CoverageEligibilityRequest"/>
+      </extension>
+      <reference>
+        <reference value="CoverageEligibilityRequest/ltc-coverageeligibilityrequest-sdk-example"/>
+      </reference>
+      <name value="長照 SDK－核定請求（CoverageEligibilityRequest）範例"/>
+      <description value="長照 SDK 範例用的核定請求（CoverageEligibilityRequest）資源。"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CoverageEligibilityResponse"/>
+      </extension>
+      <reference>
+        <reference value="CoverageEligibilityResponse/ltc-coverageeligibilityresponse-sdk-example"/>
+      </reference>
+      <name value="長照 SDK－核定額度回應（CoverageEligibilityResponse）範例"/>
+      <description value="長照 SDK 範例用的核定額度回應（CoverageEligibilityResponse）資源。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-tw-ltc-benefit-type"/>
+      </reference>
+      <name value="長照 SDK－核定額度欄位"/>
+      <description value="此 ValueSet 用於表示長照 SDK 中的核定額度欄位。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cs-tw-ltc-benefit-type"/>
+      </reference>
+      <name value="長照 SDK－核定額度－金流欄位"/>
+      <description value="此 CodeSystem 定義長照 SDK 核定額度中的金流欄位代碼。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Ext-TW-LTC-Export-CaseNo"/>
+      </reference>
+      <name value="長照 SDK－案件編號（CASENO）"/>
+      <description value="此 Extension 用於表示長照 SDK 的案件編號（CASENO），適用於 Claim、CarePlan、Communication 或 OperationOutcome 資源。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Ext-TW-LTC-Case-Source"/>
+      </reference>
+      <name value="長照 SDK－案件－申請來源"/>
+      <description value="案件（EpisodeOfCare）之申請來源。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Ext-TW-LTC-Export-YYYMM-ROC"/>
+      </reference>
+      <name value="長照 SDK－民國年月（YYYMM）"/>
+      <description value="此 Extension 用於表示長照 SDK 的民國年月（YYYMM 格式），適用於 Claim、ClaimResponse 或 OperationOutcome 資源。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTC-ClaimResponse-Export"/>
+      </reference>
+      <name value="長照 SDK－照管全量匯出（ClaimResponse）"/>
+      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 ClaimResponse Resource，以呈現長照照管全量匯出之審核結果與檢核錯誤資訊。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTC-Claim-Export"/>
+      </reference>
+      <name value="長照 SDK－照管全量匯出（Claim）"/>
+      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 Claim Resource，以呈現長照照管全量匯出之服務代碼、數量、單價及小計等申報資料。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/ltc-practitioner-sdk-example"/>
+      </reference>
+      <name value="長照 SDK－照顧管理專員（Practitioner）範例"/>
+      <description value="長照 SDK 範例用的照顧管理專員（Practitioner）資源。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/ltc-careplan-sdk-example"/>
+      </reference>
+      <name value="長照 SDK－照顧計畫（CarePlan）範例"/>
+      <description value="長照 SDK 範例用的照顧計畫（CarePlan）資源。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-Payload"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTC-CarePlan-CS100"/>
+      </reference>
+      <name value="長照 SDK－照顧計畫（CS100）"/>
+      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現 CS100 個案總查詢之照顧計畫資料，規則同 LTCCarePlanPayload。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTC-CarePlan-Payload"/>
+      </reference>
+      <name value="長照 SDK－照顧計畫（不含輔具）"/>
+      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現長照 SDK 回傳之照顧計畫，包含服務項目代碼、金額、數量及頻率等資料。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-tw-ltc-case-source"/>
+      </reference>
+      <name value="長照 SDK－申請來源"/>
+      <description value="此 ValueSet 用於表示長照 SDK 中個案的申請來源。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cs-tw-ltc-case-source"/>
+      </reference>
+      <name value="長照 SDK－申請來源（暫行）"/>
+      <description value="申請來源常見分類（待以 Excel 實值更新）。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-tw-ltc-incident-texttype"/>
+      </reference>
+      <name value="長照 SDK－異常紀錄－文字區塊類型"/>
+      <description value="此 ValueSet 用於表示長照 SDK 異常紀錄中的文字區塊類型。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cs-tw-ltc-incident-texttype"/>
+      </reference>
+      <name value="長照 SDK－異常紀錄－文字區塊類型"/>
+      <description value="區分各段文字（描述、過程、後續處理、改善建議）。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-tw-ltc-incident-category"/>
+      </reference>
+      <name value="長照 SDK－異常紀錄－異常類別"/>
+      <description value="此 ValueSet 用於表示長照 SDK 異常紀錄的異常類別。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cs-tw-ltc-incident-category"/>
+      </reference>
+      <name value="長照 SDK－異常紀錄－異常類別"/>
+      <description value="表單『異常類別』多選。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-tw-ltc-incident-notifmethod"/>
+      </reference>
+      <name value="長照 SDK－異常紀錄－通報方式"/>
+      <description value="此 ValueSet 用於表示長照 SDK 異常紀錄的通報方式。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cs-tw-ltc-incident-notifmethod"/>
+      </reference>
+      <name value="長照 SDK－異常紀錄－通報方式"/>
+      <description value="表單『通報方式』多選。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTC-Observation-Assessment-Payload"/>
+      </reference>
+      <name value="長照 SDK－評估核定摘要"/>
+      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現長照 SDK 回傳之評估核定摘要，包含福利身分、CMS 等級、評估類型及計畫起訖等資訊。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-tw-ltc-assessment-component"/>
+      </reference>
+      <name value="長照 SDK－評估核定摘要欄位碼"/>
+      <description value="此 ValueSet 用於表示長照 SDK 評估核定摘要的欄位碼。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTC-Observation-Assessment-CS100"/>
+      </reference>
+      <name value="長照 SDK－評估核定摘要（Observation）"/>
+      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現 CS100 個案總查詢之評估核定摘要，包含 CMS 等級、福利身分及評估類型等資訊。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ltc-observation-assessment-sdk-example"/>
+      </reference>
+      <name value="長照 SDK－評估核定摘要（Observation）範例"/>
+      <description value="長照 SDK 範例用的評估核定摘要（Observation）資源。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-Observation-Assessment-Payload"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cs-tw-ltc-assessment-component"/>
+      </reference>
+      <name value="長照 SDK－評估核定摘要－欄位碼"/>
+      <description value="此 CodeSystem 定義長照 SDK 評估核定摘要的欄位碼。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Ext-TW-LTC-Export-EvaId"/>
+      </reference>
+      <name value="長照 SDK－評估案號（EVA_ID）"/>
+      <description value="此 Extension 用於表示長照 SDK 的評估案號（EVA_ID），適用於 Claim 或 CarePlan 資源。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-tw-ltc-assessment-type"/>
+      </reference>
+      <name value="長照 SDK－評估類型"/>
+      <description value="此 ValueSet 用於表示長照 SDK 中的評估類型。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cs-tw-ltc-assessment-type"/>
+      </reference>
+      <name value="長照 SDK－評估類型"/>
+      <description value="對應 r2.8 / r3.21：出院銜接、初評、複評、計畫異動、舊系統無評估轉入、身障居服匯入、AA計劃異動。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTC-OperationOutcome-Check"/>
+      </reference>
+      <name value="長照 SDK－跨月檢核結果（QP_O）"/>
+      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 OperationOutcome Resource，以呈現長照 SDK 跨月金額與月份檢核之錯誤旗標與訊息。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Ext-TW-LTC-Export-Error"/>
+      </reference>
+      <name value="長照 SDK－錯誤訊息"/>
+      <description value="此 Extension 用於表示長照 SDK 回傳的錯誤訊息，適用於 ClaimResponse 或 OperationOutcome.issue。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTC-EpisodeOfCare-Payload"/>
+      </reference>
+      <name value="長照 SDK－長照案件"/>
+      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 EpisodeOfCare Resource，以呈現長照 SDK 回傳之案件資訊，包含案件流水號、個案狀態、開結案時間及主責機構等資料。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EpisodeOfCare"/>
+      </extension>
+      <reference>
+        <reference value="EpisodeOfCare/ltc-episodeofcare-sdk-example"/>
+      </reference>
+      <name value="長照 SDK－長照案件（EpisodeOfCare）範例"/>
+      <description value="長照 SDK 範例用的長照案件（EpisodeOfCare）資源。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-Payload"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-tw-ltc-welfare-identity"/>
+      </reference>
+      <name value="長照 SDK－長照福利身分"/>
+      <description value="此 ValueSet 用於表示長照 SDK 中的長照福利身分。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cs-tw-ltc-welfare-identity"/>
+      </reference>
+      <name value="長照 SDK－長照福利身分"/>
+      <description value="此 CodeSystem 定義長照 SDK 中的長照福利身分代碼。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ltc-organization-sdk-example"/>
+      </reference>
+      <name value="長照 SDK－長照管理中心（Organization）範例"/>
+      <description value="長照 SDK 範例用的長期照顧管理中心（Organization）資源。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/Organization-twltc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTC-EpisodeOfCare-CS100"/>
+      </reference>
+      <name value="長照案件（CS100 專用版）"/>
+      <description value="對應衛生福利部照顧服務管理資訊平臺『CS100 個案總查詢』之案件列資料。&#xA;作為 CS100 匯出資料列的病例/案件載體，提供個案管理之基礎欄位（案件編號、狀態、期間、主責機構、個管等）。"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -3399,6 +4224,72 @@
       <name value="長照醫事人員範例"/>
       <description value="一個執行長照服務和運動處方的醫事人員範例"/>
       <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTC-CoverageEligibilityResponse"/>
+      </reference>
+      <name value="長照－核定額度（CoverageEligibilityResponse）"/>
+      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 CoverageEligibilityResponse Resource，以呈現長照各服務別之核定額度摘要，包含總額、補助金額、自付額及比率等資料。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ClaimResponse"/>
+      </extension>
+      <reference>
+        <reference value="ClaimResponse/ltc-claimresponse-export-example"/>
+      </reference>
+      <name value="長照－照管全量匯出審核結果（ClaimResponse）範例"/>
+      <description value="長照照管全量匯出之審核結果與檢核錯誤資訊範例，展示如何使用 LTCClaimResponseExport Profile。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-ClaimResponse-Export"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Claim"/>
+      </extension>
+      <reference>
+        <reference value="Claim/ltc-claim-export-dispatch-example"/>
+      </reference>
+      <name value="長照－照管可提供服務（Claim）範例"/>
+      <description value="長照 SDK 照管CASE可提供服務的範例，展示如何使用 Claim 資源記錄個案可提供的服務項目。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-Claim-Export"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Claim"/>
+      </extension>
+      <reference>
+        <reference value="Claim/ltc-claim-export-example"/>
+      </reference>
+      <name value="長照－照管計畫與金額（Claim）範例"/>
+      <description value="長照 SDK 照管PLAN計畫與金額的範例，展示如何使用 Claim 資源記錄長照服務計畫與費用。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-Claim-Export"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Communication"/>
+      </extension>
+      <reference>
+        <reference value="Communication/ltc-communication-servicea-example"/>
+      </reference>
+      <name value="長照－照管電訪活動（Communication）範例"/>
+      <description value="長照 SDK 照管SERVICE_A電訪的範例，展示如何記錄照顧管理服務活動。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-Communication-ServiceA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationOutcome"/>
+      </extension>
+      <reference>
+        <reference value="OperationOutcome/ltc-operationoutcome-check-example"/>
+      </reference>
+      <name value="長照－跨月檢核（OperationOutcome）範例"/>
+      <description value="長照 SDK 照管QP_O跨月檢核的範例，展示如何使用 OperationOutcome 資源記錄跨月金額檢核結果。"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTC-OperationOutcome-Check"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -3575,10 +4466,10 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="ImplementationGuide-fhir.twltc.html"/>
+          <valueUrl value="ImplementationGuide-tw.iii.ltc.html"/>
         </extension>
-        <nameUrl value="ImplementationGuide-fhir.twltc.html"/>
-        <title value="Implementation Guide Fhir Twltc"/>
+        <nameUrl value="ImplementationGuide-tw.iii.ltc.html"/>
+        <title value="Implementation Guide Tw Iii Ltc"/>
         <generation value="markdown"/>
       </page>
       <page>

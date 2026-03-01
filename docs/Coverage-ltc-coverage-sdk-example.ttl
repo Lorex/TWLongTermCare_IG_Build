@@ -1,0 +1,27 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Coverage/ltc-coverage-sdk-example> a fhir:Coverage ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-coverage-sdk-example"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Coverage ltc-coverage-sdk-example</b></p><a name=\"ltc-coverage-sdk-example\"> </a><a name=\"hcltc-coverage-sdk-example\"> </a><p><b>status</b>: Active</p><p><b>beneficiary</b>: <a href=\"Patient-ltc-patient-sdk-example.html\">王小明 Male, DoB: 1950-01-01 ( Provider number (use: official, ))</a></p><p><b>payor</b>: <a href=\"Organization-ltc-organization-sdk-example.html\">Organization OOO長期照顧管理中心</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:beneficiary [
+     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-sdk-example> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-sdk-example" ]
+  ] ; # 
+  fhir:payor ( [
+     fhir:l <http://ltc-ig.fhir.tw/Organization/ltc-organization-sdk-example> ;
+     fhir:reference [ fhir:v "Organization/ltc-organization-sdk-example" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

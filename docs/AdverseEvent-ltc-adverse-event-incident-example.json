@@ -1,0 +1,102 @@
+{
+  "resourceType" : "AdverseEvent",
+  "id" : "ltc-adverse-event-incident-example",
+  "meta" : {
+    "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: AdverseEvent ltc-adverse-event-incident-example</b></p><a name=\"ltc-adverse-event-incident-example\"> </a><a name=\"hcltc-adverse-event-incident-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-AdverseEvent-twltc.html\">長期照顧－異常事件警報</a></p></div><p><b>長期照顧－異常事件通報方式</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-notifmethod phone}\">電話</span></p><blockquote><p><b>長期照顧－異常事件文字描述</b></p><ul><li>textType: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype desc}\">事件描述</span></li><li>text: 10:20 於浴室滑倒，家屬協助起身。</li></ul></blockquote><blockquote><p><b>長期照顧－異常事件文字描述</b></p><ul><li>textType: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype postprocess}\">事件發生後處理過程詳述</span></li><li>text: 檢查擦傷，無明顯腫脹；已冰敷觀察中。</li></ul></blockquote><blockquote><p><b>長期照顧－異常事件文字描述</b></p><ul><li>textType: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype advice}\">檢討及改善建議</span></li><li>text: 建議持續觀察 48 小時，必要時就醫。已通知個管與居服單位追蹤。</li></ul></blockquote><p><b>長期照顧－異常事件關聯案件</b>: <a href=\"EpisodeOfCare-ltc-episodeofcare-cs100-example.html\">EpisodeOfCare: identifier = https://ltc-ig.fhir.tw/identifier/cs100/case-id#CASE-00001; status = active; period = 2025-10-01 --&gt; (ongoing)</a></p><p><b>identifier</b>: <code>http://ltc-ig.fhir.tw/adverse-event</code>/AE-SDK-2025-001\u00a0(use:\u00a0official,\u00a0)</p><p><b>actuality</b>: Adverse Event</p><p><b>event</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-category careacc}\">照顧意外事件</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-cs100-example.html\">王小明 (no stated gender), DoB Unknown ( https://example.org/mrn#A0001)</a></p><p><b>date</b>: 2025-10-01 10:20:00+0800</p><p><b>recordedDate</b>: 2025-10-01 10:35:00+0800</p><p><b>location</b>: <a href=\"Location-ltc-location-example.html\">Location 新北市私立安康老人長期照顧中心（養護型）</a></p><p><b>contributor</b>: <a href=\"Practitioner-ltc-practitioner-cs100-example.html\">Practitioner 張個管</a></p></div>"
+  },
+  "extension" : [{
+    "url" : "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-NotifMethod",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-notifmethod",
+        "code" : "phone",
+        "display" : "電話"
+      }]
+    }
+  },
+  {
+    "extension" : [{
+      "url" : "textType",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype",
+          "code" : "desc",
+          "display" : "事件描述"
+        }]
+      }
+    },
+    {
+      "url" : "text",
+      "valueString" : "10:20 於浴室滑倒，家屬協助起身。"
+    }],
+    "url" : "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description"
+  },
+  {
+    "extension" : [{
+      "url" : "textType",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype",
+          "code" : "postprocess",
+          "display" : "事件發生後處理過程詳述"
+        }]
+      }
+    },
+    {
+      "url" : "text",
+      "valueString" : "檢查擦傷，無明顯腫脹；已冰敷觀察中。"
+    }],
+    "url" : "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description"
+  },
+  {
+    "extension" : [{
+      "url" : "textType",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype",
+          "code" : "advice",
+          "display" : "檢討及改善建議"
+        }]
+      }
+    },
+    {
+      "url" : "text",
+      "valueString" : "建議持續觀察 48 小時，必要時就醫。已通知個管與居服單位追蹤。"
+    }],
+    "url" : "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description"
+  },
+  {
+    "url" : "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-About",
+    "valueReference" : {
+      "reference" : "EpisodeOfCare/ltc-episodeofcare-cs100-example"
+    }
+  }],
+  "identifier" : {
+    "use" : "official",
+    "system" : "http://ltc-ig.fhir.tw/adverse-event",
+    "value" : "AE-SDK-2025-001"
+  },
+  "actuality" : "actual",
+  "event" : {
+    "coding" : [{
+      "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-category",
+      "code" : "careacc",
+      "display" : "照顧意外事件"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/ltc-patient-cs100-example"
+  },
+  "date" : "2025-10-01T10:20:00+08:00",
+  "recordedDate" : "2025-10-01T10:35:00+08:00",
+  "location" : {
+    "reference" : "Location/ltc-location-example"
+  },
+  "contributor" : [{
+    "reference" : "Practitioner/ltc-practitioner-cs100-example"
+  }]
+}

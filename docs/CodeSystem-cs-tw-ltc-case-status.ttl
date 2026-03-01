@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-status> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cs-tw-ltc-case-status"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem cs-tw-ltc-case-status</b></p><a name=\"cs-tw-ltc-case-status\"> </a><a name=\"hccs-tw-ltc-case-status\"> </a><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">active<a name=\"cs-tw-ltc-case-status-active\"> </a></td><td>服務中</td></tr><tr><td style=\"white-space:nowrap\">onhold<a name=\"cs-tw-ltc-case-status-onhold\"> </a></td><td>暫停服務</td></tr><tr><td style=\"white-space:nowrap\">finished<a name=\"cs-tw-ltc-case-status-finished\"> </a></td><td>已結案</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-status"^^xsd:anyURI ;
+     fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-status>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "CS_TW_LTC_CaseStatus"] ; # 
+  fhir:title [ fhir:v "長照 SDK－個案狀態"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-03-01T19:25:35+08:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "經濟部產業發展署"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "經濟部產業發展署" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.ida.gov.tw/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "對應 r1.3：服務中、暫停服務、已結案。使用 FHIR EpisodeOfCare status 對應碼。"] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "active" ] ;
+     fhir:display [ fhir:v "服務中" ]
+  ] [
+     fhir:code [ fhir:v "onhold" ] ;
+     fhir:display [ fhir:v "暫停服務" ]
+  ] [
+     fhir:code [ fhir:v "finished" ] ;
+     fhir:display [ fhir:v "已結案" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

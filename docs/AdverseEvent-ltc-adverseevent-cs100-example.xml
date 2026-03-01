@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AdverseEvent xmlns="http://hl7.org/fhir">
+  <id value="ltc-adverseevent-cs100-example"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: AdverseEvent ltc-adverseevent-cs100-example</b></p><a name="ltc-adverseevent-cs100-example"> </a><a name="hcltc-adverseevent-cs100-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-AdverseEvent-twltc.html">長期照顧－異常事件警報</a></p></div><blockquote><p><b>長期照顧－異常事件文字描述</b></p><ul><li>textType: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype desc}">事件描述</span></li><li>text: 巡視時發現個案暈眩跌坐於地，已聯繫家屬與機構。</li></ul></blockquote><p><b>identifier</b>: <code>http://ltc-ig.fhir.tw/adverse-event</code>/AE-CS100-2025-001 (use: official, )</p><p><b>actuality</b>: Adverse Event</p><p><b>event</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-category careacc}">照顧意外事件</span></p><p><b>subject</b>: <a href="Patient-ltc-patient-cs100-example.html">王小明 (no stated gender), DoB Unknown ( https://example.org/mrn#A0001)</a></p><p><b>date</b>: 2025-11-05 10:20:00+0800</p><p><b>recordedDate</b>: 2025-11-05 10:30:00+0800</p></div>
+  </text>
+  <extension url="http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description">
+    <extension url="textType">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype"/>
+          <code value="desc"/>
+          <display value="事件描述"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="text">
+      <valueString value="巡視時發現個案暈眩跌坐於地，已聯繫家屬與機構。"/>
+    </extension>
+  </extension>
+  <identifier>
+    <use value="official"/>
+    <system value="http://ltc-ig.fhir.tw/adverse-event"/>
+    <value value="AE-CS100-2025-001"/>
+  </identifier>
+  <actuality value="actual"/>
+  <event>
+    <coding>
+      <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-category"/>
+      <code value="careacc"/>
+      <display value="照顧意外事件"/>
+    </coding>
+  </event>
+  <subject>
+    <reference value="Patient/ltc-patient-cs100-example"/>
+  </subject>
+  <date value="2025-11-05T10:20:00+08:00"/>
+  <recordedDate value="2025-11-05T10:30:00+08:00"/>
+</AdverseEvent>

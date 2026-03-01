@@ -1,4 +1,4 @@
-# 身心障礙手冊持有狀況值集 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# 身心障礙手冊持有狀況值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ConditionDisabilityVS-TWLTC | *Version*:0.4.1 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ConditionDisabilityVS-TWLTC | *Version*:1.0.0 |
 | Active as of 2024-08-25 | *Computable Name*:ConditionDisabilityVSTWLTC |
 
  
@@ -46,7 +46,7 @@
   "resourceType" : "ValueSet",
   "id" : "ConditionDisabilityVS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/ConditionDisabilityVS-TWLTC",
-  "version" : "0.4.1",
+  "version" : "1.0.0",
   "name" : "ConditionDisabilityVSTWLTC",
   "title" : "身心障礙手冊持有狀況值集",
   "status" : "active",

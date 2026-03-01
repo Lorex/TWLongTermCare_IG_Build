@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/EpisodeOfCare/ltc-episodeofcare-sdk-example> a fhir:EpisodeOfCare ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-episodeofcare-sdk-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-Payload"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-Payload>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: EpisodeOfCare ltc-episodeofcare-sdk-example</b></p><a name=\"ltc-episodeofcare-sdk-example\"> </a><a name=\"hcltc-episodeofcare-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-EpisodeOfCare-Payload.html\">長照 SDK－長照案件</a></p></div><p><b>identifier</b>: <code>https://ltc-ig.fhir.tw/identifier/sdk/r1.1-case-serial</code>/123456789</p><p><b>status</b>: Active</p><p><b>patient</b>: <a href=\"Patient-ltc-patient-sdk-example.html\">王小明 Male, DoB: 1950-01-01 ( Provider number (use: official, ))</a></p><p><b>managingOrganization</b>: <a href=\"Organization-ltc-organization-sdk-example.html\">Organization OOO長期照顧管理中心</a></p><p><b>period</b>: 2025-01-01 --&gt; (ongoing)</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "https://ltc-ig.fhir.tw/identifier/sdk/r1.1-case-serial"^^xsd:anyURI ;
+       fhir:l <https://ltc-ig.fhir.tw/identifier/sdk/r1.1-case-serial>
+     ] ;
+     fhir:value [ fhir:v "123456789" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:patient [
+     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-sdk-example> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-sdk-example" ]
+  ] ; # 
+  fhir:managingOrganization [
+     fhir:l <http://ltc-ig.fhir.tw/Organization/ltc-organization-sdk-example> ;
+     fhir:reference [ fhir:v "Organization/ltc-organization-sdk-example" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2025-01-01"^^xsd:date ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Communication/ltc-communication-servicea-example> a fhir:Communication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-communication-servicea-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-Communication-ServiceA"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Communication-ServiceA>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Communication ltc-communication-servicea-example</b></p><a name=\"ltc-communication-servicea-example\"> </a><a name=\"hcltc-communication-servicea-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-Communication-ServiceA.html\">長照 SDK－服務活動紀錄（SERVICE_A）</a></p></div><p><b>長照 SDK－案件編號（CASENO）</b>: 106305420</p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-activity TEL}\">電話訪視/關懷</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-sdk-example.html\">王小明 Male, DoB: 1950-01-01 ( Provider number (use: official, ))</a></p><p><b>topic</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item AA02}\">照顧管理</span></p><p><b>sent</b>: 2025-07-14 10:30:00+0800</p><p><b>note</b>: </p><blockquote><div><p>評估人員：吳麗竹；提醒：下週安排家訪。</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-CaseNo"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-CaseNo>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "106305420"
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-activity"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-activity>
+       ] ;
+       fhir:code [ fhir:v "TEL" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-sdk-example> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-sdk-example" ]
+  ] ; # 
+  fhir:topic [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item>
+       ] ;
+       fhir:code [ fhir:v "AA02" ]
+     ] )
+  ] ; # 
+  fhir:sent [ fhir:v "2025-07-14T10:30:00+08:00"^^xsd:dateTime] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "評估人員：吳麗竹；提醒：下週安排家訪。" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

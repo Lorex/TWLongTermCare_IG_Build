@@ -1,0 +1,109 @@
+{
+  "resourceType" : "Composition",
+  "id" : "ltc-bundle-cs100-example",
+  "meta" : {
+    "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/LTC-Composition-CS100"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Composition ltc-bundle-cs100-example</b></p><a name=\"ltc-bundle-cs100-example\"> </a><a name=\"hcltc-bundle-cs100-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-Composition-CS100.html\">個案總查詢（CS100 對應版）Case Summary</a></p></div><p><b>identifier</b>: <code>https://ltc-ig.fhir.tw/identifier/cs100/report-id</code>/CS-20251106-0001</p><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 11506-3}\">Progress note</span></p><p><b>date</b>: 2025-11-06 12:00:00+0800</p><p><b>author</b>: <a href=\"Practitioner-ltc-practitioner-cs100-example.html\">Practitioner 張個管</a></p><p><b>title</b>: CS100 個案總查詢 - 王小明</p></div>"
+  },
+  "identifier" : {
+    "system" : "https://ltc-ig.fhir.tw/identifier/cs100/report-id",
+    "value" : "CS-20251106-0001"
+  },
+  "status" : "final",
+  "type" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "11506-3",
+      "display" : "Progress note"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/ltc-patient-cs100-example"
+  },
+  "date" : "2025-11-06T12:00:00+08:00",
+  "author" : [{
+    "reference" : "Practitioner/ltc-practitioner-cs100-example"
+  }],
+  "title" : "CS100 個案總查詢 - 王小明",
+  "section" : [{
+    "title" : "CS100-個案基本",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "8716-3",
+        "display" : "Vital signs note"
+      }]
+    },
+    "entry" : [{
+      "reference" : "Patient/ltc-patient-cs100-example"
+    }]
+  },
+  {
+    "title" : "CS100-案件資訊",
+    "code" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code",
+        "code" : "case",
+        "display" : "案件資訊"
+      }]
+    },
+    "entry" : [{
+      "reference" : "EpisodeOfCare/ltc-episodeofcare-cs100-example"
+    }]
+  },
+  {
+    "title" : "CS100-評估核定摘要",
+    "code" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code",
+        "code" : "assessment",
+        "display" : "評估核定摘要"
+      }]
+    },
+    "entry" : [{
+      "reference" : "Observation/ltc-observation-assessment-cs100-example"
+    }]
+  },
+  {
+    "title" : "CS100-照顧計畫",
+    "code" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code",
+        "code" : "careplan",
+        "display" : "照顧計畫"
+      }]
+    },
+    "entry" : [{
+      "reference" : "CarePlan/ltc-careplan-cs100-example"
+    }]
+  },
+  {
+    "title" : "CS100-核定額度",
+    "code" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code",
+        "code" : "eligibility",
+        "display" : "核定額度"
+      }]
+    },
+    "entry" : [{
+      "reference" : "CoverageEligibilityResponse/ltc-coverageeligibilityresponse-cs100-example"
+    }]
+  },
+  {
+    "title" : "CS100-近期異動/通報",
+    "code" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code",
+        "code" : "incidents",
+        "display" : "近期異動/通報"
+      }]
+    },
+    "entry" : [{
+      "reference" : "AdverseEvent/ltc-adverseevent-cs100-example"
+    }]
+  }]
+}

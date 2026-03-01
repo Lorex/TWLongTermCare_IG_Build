@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Observation/ltc-observation-assessment-cs100-example> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-observation-assessment-cs100-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-Observation-Assessment-CS100"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Observation-Assessment-CS100>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ltc-observation-assessment-cs100-example</b></p><a name=\"ltc-observation-assessment-cs100-example\"> </a><a name=\"hcltc-observation-assessment-cs100-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-Observation-Assessment-CS100.html\">長照 SDK－評估核定摘要（Observation）</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8357-6}\">Blood pressure method</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-cs100-example.html\">王小明 (no stated gender), DoB Unknown ( https://example.org/mrn#A0001)</a></p><p><b>effective</b>: 2025-10-02</p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component cms-level}\">CMS 等級</span></p><p><b>value</b>: <span title=\"Codes:\">1a</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component welfare-identity}\">長照福利身分</span></p><p><b>value</b>: <span title=\"Codes:\">第3類</span></p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:8357-6 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "8357-6" ] ;
+       fhir:display [ fhir:v "Blood pressure method" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-cs100-example> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-cs100-example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2025-10-02"^^xsd:date
+  ] ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component"^^xsd:anyURI ;
+           fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component>
+         ] ;
+         fhir:code [ fhir:v "cms-level" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "1a" ]
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component"^^xsd:anyURI ;
+           fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component>
+         ] ;
+         fhir:code [ fhir:v "welfare-identity" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "第3類" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

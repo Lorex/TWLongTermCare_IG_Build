@@ -1,0 +1,383 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>長照 CS100－核定額度回應（CoverageEligibilityResponse）範例 - JSON Representation - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"20.324"}
+    h3,h4,h5,h6{--heading-prefix:"20.324"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引(TW LTC IG)</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - STU 1.0.0
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">應用說明</a></li>
+  <li><a href="toc.html">目錄</a></li>
+	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="capability-statements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters-and-operation.html">查詢參數及操作定義</a>
+			</li>
+			<li>
+				<a href="logical-models.html">邏輯模型</a>
+			</li>
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles 及 Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+  <li><a href="examples.html">範例</a></li>
+  <li><a href="downloads.html">結構定義與範例檔下載</a></li>
+  <li><a href="security.html">安全性</a></li>
+  <li><a href="validates.html">驗證教學</a></li>
+  <li class="dropdown">
+    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
+      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+    </ul>
+  </li>
+  <li><a href="connectathon-result.html">聯測松結果</a></li>
+  <!-- <li><a href="history.html">版本歷程</a></li> -->
+</ul>      
+
+<style>
+.dropdown-menu li:hover .sub-menu {visibility: visible;}
+.dropdown:hover .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 992px) {
+  table.colsi {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  table.rwd-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  p, a {
+    word-break: break-all;
+  }
+}
+</style>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>長照 CS100－核定額度回應（CoverageEligibilityResponse）範例</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引(TW LTC IG) - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="CoverageEligibilityResponse-ltc-coverageeligibilityresponse-cs100-example.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CoverageEligibilityResponse-ltc-coverageeligibilityresponse-cs100-example.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CoverageEligibilityResponse-ltc-coverageeligibilityresponse-cs100-example.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: 長照 CS100－核定額度回應（CoverageEligibilityResponse）範例 - JSON Representation</h2>
+
+
+<p><a href="CoverageEligibilityResponse-ltc-coverageeligibilityresponse-cs100-example.json" no-download="true">Raw json</a> | <a href="CoverageEligibilityResponse-ltc-coverageeligibilityresponse-cs100-example.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse">resourceType</a>" : "CoverageEligibilityResponse",
+  "<a href="http://hl7.org/fhir/R4/resource.html#CoverageEligibilityResponse.id">id</a>" : "ltc-coverageeligibilityresponse-cs100-example",
+  "<a href="http://hl7.org/fhir/R4/resource.html#CoverageEligibilityResponse.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      <a href="StructureDefinition-LTC-CoverageEligibilityResponse.html" style="color: Maroon">&#x1F517;</a> "http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#CoverageEligibilityResponse.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: CoverageEligibilityResponse ltc-coverageeligibilityresponse-cs100-example&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ltc-coverageeligibilityresponse-cs100-example\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcltc-coverageeligibilityresponse-cs100-example\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-LTC-CoverageEligibilityResponse.html\&quot;&gt;長照－核定額度（CoverageEligibilityResponse）&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Active&lt;/p&gt;&lt;p&gt;&lt;b&gt;purpose&lt;/b&gt;: Coverage benefits&lt;/p&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=\&quot;Patient-ltc-patient-cs100-example.html\&quot;&gt;王小明 (no stated gender), DoB Unknown ( https://example.org/mrn#A0001)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;created&lt;/b&gt;: 2025-10-05 10:00:00+0800&lt;/p&gt;&lt;p&gt;&lt;b&gt;requestor&lt;/b&gt;: &lt;a href=\&quot;Organization-ltc-organization-cs100-example.html\&quot;&gt;Organization 某某長照管理中心&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;request&lt;/b&gt;: &lt;a href=\&quot;CoverageEligibilityRequest-ltc-coverageeligibilityrequest-cs100-example.html\&quot;&gt;CoverageEligibilityRequest: status = active; purpose = benefits; created = 2025-10-05 09:00:00+0800&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;outcome&lt;/b&gt;: Processing Complete&lt;/p&gt;&lt;p&gt;&lt;b&gt;insurer&lt;/b&gt;: &lt;a href=\&quot;Organization-ltc-organization-cs100-example.html\&quot;&gt;Organization 某某長照管理中心&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;insurance&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;coverage&lt;/b&gt;: &lt;a href=\&quot;Coverage-ltc-coverage-cs100-example.html\&quot;&gt;Coverage: status = active&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-group care-pro}\&quot;&gt;照顧及專業服務&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;benefit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type total}\&quot;&gt;總額度&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;allowed&lt;/b&gt;: &lt;span title=\&quot;New Taiwan Dollar\&quot;&gt;NT$15,460.00&lt;/span&gt; (TWD)&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;benefit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type subsidy}\&quot;&gt;補助額度&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;allowed&lt;/b&gt;: &lt;span title=\&quot;New Taiwan Dollar\&quot;&gt;NT$12,987.00&lt;/span&gt; (TWD)&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;benefit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type copay}\&quot;&gt;部分負擔&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;allowed&lt;/b&gt;: &lt;span title=\&quot;New Taiwan Dollar\&quot;&gt;NT$2,473.00&lt;/span&gt; (TWD)&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.purpose">purpose</a>" : [
+    "benefits"
+  ],
+  "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.patient">patient</a>" : {
+    <a href="Patient-ltc-patient-cs100-example.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/ltc-patient-cs100-example"
+  },
+  "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.created">created</a>" : "2025-10-05T10:00:00+08:00",
+  "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.requestor">requestor</a>" : {
+    <a href="Organization-ltc-organization-cs100-example.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/ltc-organization-cs100-example"
+  },
+  "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.request">request</a>" : {
+    <a href="CoverageEligibilityRequest-ltc-coverageeligibilityrequest-cs100-example.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "CoverageEligibilityRequest/ltc-coverageeligibilityrequest-cs100-example"
+  },
+  "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.outcome">outcome</a>" : "complete",
+  "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.insurer">insurer</a>" : {
+    <a href="Organization-ltc-organization-cs100-example.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/ltc-organization-cs100-example"
+  },
+  "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.insurance">insurance</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.insurance.coverage">coverage</a>" : {
+        <a href="Coverage-ltc-coverage-cs100-example.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Coverage/ltc-coverage-cs100-example"
+      },
+      "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.insurance.item">item</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.insurance.item.category">category</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-group",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "care-pro"
+              }
+            ]
+          },
+          "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.insurance.item.benefit">benefit</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.insurance.item.benefit.type">type</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "total"
+                  }
+                ]
+              },
+              "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.insurance.item.benefit.allowed_x_">allowedMoney</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Money#Money.value">value</a>" : 15460,
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Money#Money.currency">currency</a>" : "TWD"
+              }
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.insurance.item.benefit.type">type</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "subsidy"
+                  }
+                ]
+              },
+              "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.insurance.item.benefit.allowed_x_">allowedMoney</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Money#Money.value">value</a>" : 12987,
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Money#Money.currency">currency</a>" : "TWD"
+              }
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.insurance.item.benefit.type">type</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "copay"
+                  }
+                ]
+              },
+              "<a href="http://hl7.org/fhir/R4/coverageeligibilityresponse.html#CoverageEligibilityResponse.insurance.item.benefit.allowed_x_">allowedMoney</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Money#Money.value">value</a>" : 2473,
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Money#Money.currency">currency</a>" : "TWD"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Mar 1, 2026 19:25+0800">2026-03-01</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

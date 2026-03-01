@@ -1,0 +1,483 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Bundle/ltc-bundle-payload-example> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-bundle-payload-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-Bundle-Payload"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Bundle-Payload>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [
+       fhir:v "http://example.org/Patient/ltc-patient-sdk-example"^^xsd:anyURI ;
+       fhir:l <http://example.org/Patient/ltc-patient-sdk-example>
+     ] ;
+     fhir:resource ( <http://example.org/Patient/ltc-patient-sdk-example> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "http://example.org/Organization/ltc-organization-sdk-example"^^xsd:anyURI ;
+       fhir:l <http://example.org/Organization/ltc-organization-sdk-example>
+     ] ;
+     fhir:resource ( <http://example.org/Organization/ltc-organization-sdk-example> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "http://example.org/Practitioner/ltc-practitioner-sdk-example"^^xsd:anyURI ;
+       fhir:l <http://example.org/Practitioner/ltc-practitioner-sdk-example>
+     ] ;
+     fhir:resource ( <http://example.org/Practitioner/ltc-practitioner-sdk-example> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "http://example.org/EpisodeOfCare/ltc-episodeofcare-sdk-example"^^xsd:anyURI ;
+       fhir:l <http://example.org/EpisodeOfCare/ltc-episodeofcare-sdk-example>
+     ] ;
+     fhir:resource ( <http://example.org/EpisodeOfCare/ltc-episodeofcare-sdk-example> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "http://example.org/Observation/ltc-observation-assessment-sdk-example"^^xsd:anyURI ;
+       fhir:l <http://example.org/Observation/ltc-observation-assessment-sdk-example>
+     ] ;
+     fhir:resource ( <http://example.org/Observation/ltc-observation-assessment-sdk-example> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "http://example.org/CoverageEligibilityResponse/ltc-coverageeligibilityresponse-sdk-example"^^xsd:anyURI ;
+       fhir:l <http://example.org/CoverageEligibilityResponse/ltc-coverageeligibilityresponse-sdk-example>
+     ] ;
+     fhir:resource ( <http://example.org/CoverageEligibilityResponse/ltc-coverageeligibilityresponse-sdk-example> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "http://example.org/CarePlan/ltc-careplan-sdk-example"^^xsd:anyURI ;
+       fhir:l <http://example.org/CarePlan/ltc-careplan-sdk-example>
+     ] ;
+     fhir:resource ( <http://example.org/CarePlan/ltc-careplan-sdk-example> )
+  ] ) . # 
+
+<http://example.org/Patient/ltc-patient-sdk-example> a fhir:Patient ;
+  fhir:id [ fhir:v "ltc-patient-sdk-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCPatient"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCPatient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_ltc-patient-sdk-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient ltc-patient-sdk-example</b></p><a name=\"ltc-patient-sdk-example\"> </a><a name=\"hcltc-patient-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCPatient.html\">長期照顧－住民基本資料</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">王小明 Male, DoB: 1950-01-01 ( Provider number (use: official, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 0912345678</li><li>台北市中山區中山北路100號(home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: Next-of-Kin\">Next-of-Kin:</td><td colspan=\"3\"><ul><li>王大明</li><li>ph: 0987654321</li></ul></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "PRN" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "https://example.org/mrn"^^xsd:anyURI ;
+       fhir:l <https://example.org/mrn>
+     ] ;
+     fhir:value [ fhir:v "A0001" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:text [ fhir:v "王小明" ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0912345678" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1950-01-01"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:text [ fhir:v "台北市中山區中山北路100號" ]
+  ] ) ; # 
+  fhir:contact ( [
+     fhir:relationship ( [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0131"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0131>
+         ] ;
+         fhir:code [ fhir:v "N" ] ;
+         fhir:display [ fhir:v "Next-of-Kin" ]
+       ] )
+     ] ) ;
+     fhir:name [
+       fhir:text [ fhir:v "王大明" ]
+     ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "0987654321" ]
+     ] )
+  ] ) . # 
+
+<http://example.org/Organization/ltc-organization-sdk-example> a fhir:Organization ;
+  fhir:id [ fhir:v "ltc-organization-sdk-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/Organization-twltc"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Organization-twltc>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_ltc-organization-sdk-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization ltc-organization-sdk-example</b></p><a name=\"ltc-organization-sdk-example\"> </a><a name=\"hcltc-organization-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Organization-twltc.html\">長期照顧－機構</a></p></div><p><b>identifier</b>: <code>http://www.moi.gov.tw</code>/0131060099</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: OOO長期照顧管理中心</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://www.moi.gov.tw"^^xsd:anyURI ;
+       fhir:l <http://www.moi.gov.tw>
+     ] ;
+     fhir:value [ fhir:v "0131060099" ]
+  ] ) ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/organization-type"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/organization-type>
+       ] ;
+       fhir:code [ fhir:v "prov" ] ;
+       fhir:display [ fhir:v "Healthcare Provider" ]
+     ] )
+  ] ) ; # 
+  fhir:name [ fhir:v "OOO長期照顧管理中心"] . # 
+
+<http://example.org/Practitioner/ltc-practitioner-sdk-example> a fhir:Practitioner ;
+  fhir:id [ fhir:v "ltc-practitioner-sdk-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_ltc-practitioner-sdk-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ltc-practitioner-sdk-example</b></p><a name=\"ltc-practitioner-sdk-example\"> </a><a name=\"hcltc-practitioner-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCPractitioner.html\">長期照顧－照顧服務提供者</a></p></div><p><b>identifier</b>: <code>http://example.org/fhir/NamingSystem/practitioner-id</code>/P001</p><p><b>name</b>: 李小華</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://example.org/fhir/NamingSystem/practitioner-id"^^xsd:anyURI ;
+       fhir:l <http://example.org/fhir/NamingSystem/practitioner-id>
+     ] ;
+     fhir:value [ fhir:v "P001" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:text [ fhir:v "李小華" ]
+  ] ) . # 
+
+<http://example.org/EpisodeOfCare/ltc-episodeofcare-sdk-example> a fhir:EpisodeOfCare ;
+  fhir:id [ fhir:v "ltc-episodeofcare-sdk-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-Payload"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-Payload>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"EpisodeOfCare_ltc-episodeofcare-sdk-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: EpisodeOfCare ltc-episodeofcare-sdk-example</b></p><a name=\"ltc-episodeofcare-sdk-example\"> </a><a name=\"hcltc-episodeofcare-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-EpisodeOfCare-Payload.html\">長照 SDK－長照案件</a></p></div><p><b>identifier</b>: <code>https://ltc-ig.fhir.tw/identifier/sdk/r1.1-case-serial</code>/123456789</p><p><b>status</b>: Active</p><p><b>patient</b>: <a href=\"Patient-ltc-patient-sdk-example.html\">王小明 Male, DoB: 1950-01-01 ( Provider number (use: official, ))</a></p><p><b>managingOrganization</b>: <a href=\"Organization-ltc-organization-sdk-example.html\">Organization OOO長期照顧管理中心</a></p><p><b>period</b>: 2025-01-01 --&gt; (ongoing)</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "https://ltc-ig.fhir.tw/identifier/sdk/r1.1-case-serial"^^xsd:anyURI ;
+       fhir:l <https://ltc-ig.fhir.tw/identifier/sdk/r1.1-case-serial>
+     ] ;
+     fhir:value [ fhir:v "123456789" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:patient [
+     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-sdk-example> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-sdk-example" ]
+  ] ; # 
+  fhir:managingOrganization [
+     fhir:l <http://ltc-ig.fhir.tw/Organization/ltc-organization-sdk-example> ;
+     fhir:reference [ fhir:v "Organization/ltc-organization-sdk-example" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2025-01-01"^^xsd:date ]
+  ] . # 
+
+<http://example.org/Observation/ltc-observation-assessment-sdk-example> a fhir:Observation ;
+  fhir:id [ fhir:v "ltc-observation-assessment-sdk-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-Observation-Assessment-Payload"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-Observation-Assessment-Payload>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_ltc-observation-assessment-sdk-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ltc-observation-assessment-sdk-example</b></p><a name=\"ltc-observation-assessment-sdk-example\"> </a><a name=\"hcltc-observation-assessment-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-Observation-Assessment-Payload.html\">長照 SDK－評估核定摘要</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8357-6}\">Blood pressure method</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-sdk-example.html\">王小明 Male, DoB: 1950-01-01 ( Provider number (use: official, ))</a></p><p><b>effective</b>: 2025-01-01</p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component welfare-identity}\">長照福利身分</span></p><p><b>value</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-welfare-identity cat3}\">第3類</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component cms-level}\">CMS 等級</span></p><p><b>value</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel 1a}\">1a</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component assessment-type}\">評估類型</span></p><p><b>value</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-type initial}\">初評</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component plan-start}\">計畫起始日</span></p><p><b>value</b>: 2025-01-01</p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:8357-6 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "8357-6" ] ;
+       fhir:display [ fhir:v "Blood pressure method" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-sdk-example> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-sdk-example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2025-01-01"^^xsd:date
+  ] ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component"^^xsd:anyURI ;
+           fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component>
+         ] ;
+         fhir:code [ fhir:v "welfare-identity" ] ;
+         fhir:display [ fhir:v "長照福利身分" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-welfare-identity"^^xsd:anyURI ;
+           fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-welfare-identity>
+         ] ;
+         fhir:code [ fhir:v "cat3" ] ;
+         fhir:display [ fhir:v "第3類" ]
+       ] )
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component"^^xsd:anyURI ;
+           fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component>
+         ] ;
+         fhir:code [ fhir:v "cms-level" ] ;
+         fhir:display [ fhir:v "CMS 等級" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel"^^xsd:anyURI ;
+           fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel>
+         ] ;
+         fhir:code [ fhir:v "1a" ] ;
+         fhir:display [ fhir:v "1a" ]
+       ] )
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component"^^xsd:anyURI ;
+           fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component>
+         ] ;
+         fhir:code [ fhir:v "assessment-type" ] ;
+         fhir:display [ fhir:v "評估類型" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-type"^^xsd:anyURI ;
+           fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-type>
+         ] ;
+         fhir:code [ fhir:v "initial" ] ;
+         fhir:display [ fhir:v "初評" ]
+       ] )
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component"^^xsd:anyURI ;
+           fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component>
+         ] ;
+         fhir:code [ fhir:v "plan-start" ] ;
+         fhir:display [ fhir:v "計畫起始日" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:DateTime ;
+       fhir:v "2025-01-01"^^xsd:date
+     ]
+  ] ) . # 
+
+<http://example.org/CoverageEligibilityResponse/ltc-coverageeligibilityresponse-sdk-example> a fhir:CoverageEligibilityResponse ;
+  fhir:id [ fhir:v "ltc-coverageeligibilityresponse-sdk-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"CoverageEligibilityResponse_ltc-coverageeligibilityresponse-sdk-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: CoverageEligibilityResponse ltc-coverageeligibilityresponse-sdk-example</b></p><a name=\"ltc-coverageeligibilityresponse-sdk-example\"> </a><a name=\"hcltc-coverageeligibilityresponse-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-CoverageEligibilityResponse.html\">長照－核定額度（CoverageEligibilityResponse）</a></p></div><p><b>status</b>: Active</p><p><b>purpose</b>: Coverage benefits</p><p><b>patient</b>: <a href=\"Patient-ltc-patient-sdk-example.html\">王小明 Male, DoB: 1950-01-01 ( Provider number (use: official, ))</a></p><p><b>created</b>: 2025-08-04 17:02:19+0800</p><p><b>request</b>: <a href=\"CoverageEligibilityRequest-ltc-coverageeligibilityrequest-sdk-example.html\">CoverageEligibilityRequest: status = active; purpose = benefits; created = 2025-08-04 17:00:00+0800</a></p><p><b>outcome</b>: Processing Complete</p><p><b>insurer</b>: <a href=\"Organization-ltc-organization-sdk-example.html\">Organization OOO長期照顧管理中心</a></p><blockquote><p><b>insurance</b></p><p><b>coverage</b>: <a href=\"Coverage-ltc-coverage-sdk-example.html\">Coverage: status = active</a></p><blockquote><p><b>item</b></p><p><b>category</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-group care-pro}\">照顧及專業服務</span></p><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type total}\">總額度</span></p><p><b>allowed</b>: <span title=\"New Taiwan Dollar\">NT$15,460.00</span> (TWD)</p></blockquote><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type subsidy}\">補助額度</span></p><p><b>allowed</b>: <span title=\"New Taiwan Dollar\">NT$12,987.00</span> (TWD)</p></blockquote><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type copay}\">部分負擔</span></p><p><b>allowed</b>: <span title=\"New Taiwan Dollar\">NT$2,473.00</span> (TWD)</p></blockquote></blockquote></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:purpose ( [ fhir:v "benefits"] ) ; # 
+  fhir:patient [
+     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-sdk-example> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-sdk-example" ]
+  ] ; # 
+  fhir:created [ fhir:v "2025-08-04T17:02:19+08:00"^^xsd:dateTime] ; # 
+  fhir:request [
+     fhir:l <http://ltc-ig.fhir.tw/CoverageEligibilityRequest/ltc-coverageeligibilityrequest-sdk-example> ;
+     fhir:reference [ fhir:v "CoverageEligibilityRequest/ltc-coverageeligibilityrequest-sdk-example" ]
+  ] ; # 
+  fhir:outcome [ fhir:v "complete"] ; # 
+  fhir:insurer [
+     fhir:l <http://ltc-ig.fhir.tw/Organization/ltc-organization-sdk-example> ;
+     fhir:reference [ fhir:v "Organization/ltc-organization-sdk-example" ]
+  ] ; # 
+  fhir:insurance ( [
+     fhir:coverage [
+       fhir:l <http://ltc-ig.fhir.tw/Coverage/ltc-coverage-sdk-example> ;
+       fhir:reference [ fhir:v "Coverage/ltc-coverage-sdk-example" ]
+     ] ;
+     fhir:item ( [
+       fhir:category [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-group"^^xsd:anyURI ;
+             fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-group>
+           ] ;
+           fhir:code [ fhir:v "care-pro" ] ;
+           fhir:display [ fhir:v "照顧及專業服務" ]
+         ] )
+       ] ;
+       fhir:benefit ( [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [
+               fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type"^^xsd:anyURI ;
+               fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type>
+             ] ;
+             fhir:code [ fhir:v "total" ]
+           ] )
+         ] ;
+         fhir:allowed [
+           a fhir:Money ;
+           fhir:value [ fhir:v "15460"^^xsd:decimal ] ;
+           fhir:currency [ fhir:v "TWD" ]
+         ]
+       ] [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [
+               fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type"^^xsd:anyURI ;
+               fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type>
+             ] ;
+             fhir:code [ fhir:v "subsidy" ]
+           ] )
+         ] ;
+         fhir:allowed [
+           a fhir:Money ;
+           fhir:value [ fhir:v "12987"^^xsd:decimal ] ;
+           fhir:currency [ fhir:v "TWD" ]
+         ]
+       ] [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [
+               fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type"^^xsd:anyURI ;
+               fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type>
+             ] ;
+             fhir:code [ fhir:v "copay" ]
+           ] )
+         ] ;
+         fhir:allowed [
+           a fhir:Money ;
+           fhir:value [ fhir:v "2473"^^xsd:decimal ] ;
+           fhir:currency [ fhir:v "TWD" ]
+         ]
+       ] )
+     ] )
+  ] ) . # 
+
+<http://example.org/CarePlan/ltc-careplan-sdk-example> a fhir:CarePlan ;
+  fhir:id [ fhir:v "ltc-careplan-sdk-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-Payload"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-Payload>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"CarePlan_ltc-careplan-sdk-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: CarePlan ltc-careplan-sdk-example</b></p><a name=\"ltc-careplan-sdk-example\"> </a><a name=\"hcltc-careplan-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-CarePlan-Payload.html\">長照 SDK－照顧計畫（不含輔具）</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:{https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw assess-plan}\">Assessment and Plan of Treatment</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-sdk-example.html\">王小明 Male, DoB: 1950-01-01 ( Provider number (use: official, ))</a></p><blockquote><p><b>activity</b></p><h3>Details</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Code</b></td><td><b>Status</b></td><td><b>Scheduled[x]</b></td><td><b>Quantity</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item AA01}\">照顧計畫擬定與服務連結</span></td><td>Scheduled</td><td>每週 2 次（週二、週五）</td><td>19</td></tr></table></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "plan"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw"^^xsd:anyURI ;
+         fhir:l <https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw>
+       ] ;
+       fhir:code [ fhir:v "assess-plan" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-sdk-example> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-sdk-example" ]
+  ] ; # 
+  fhir:activity ( [
+     fhir:detail [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-UnitPrice"^^xsd:anyURI ;
+           fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-UnitPrice>
+         ] ;
+         fhir:value [
+           a fhir:Money ;
+           fhir:value [ fhir:v "195"^^xsd:decimal ] ;
+           fhir:currency [ fhir:v "TWD" ]
+         ]
+       ] ) ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item"^^xsd:anyURI ;
+             fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item>
+           ] ;
+           fhir:code [ fhir:v "AA01" ] ;
+           fhir:display [ fhir:v "照顧計畫擬定與服務連結" ]
+         ] )
+       ] ;
+       fhir:status [ fhir:v "scheduled" ] ;
+       fhir:scheduled [
+         a fhir:String ;
+         fhir:v "每週 2 次（週二、週五）"
+       ] ;
+       fhir:quantity [
+         fhir:value [ fhir:v "19"^^xsd:decimal ]
+       ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

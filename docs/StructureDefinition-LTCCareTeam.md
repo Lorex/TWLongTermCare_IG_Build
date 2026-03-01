@@ -1,4 +1,4 @@
-# 長期照顧－照顧團隊 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# 長期照顧－照顧團隊 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,15 +8,16 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCareTeam | *Version*:0.4.1 |
-| Active as of 2026-02-28 | *Computable Name*:LTCCareTeam |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCareTeam | *Version*:1.0.0 |
+| Active as of 2026-03-01 | *Computable Name*:LTCCareTeam |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 CareTeam Resource，以呈現長期照顧情境中涉及之照顧團隊資訊。 
 
 **Usages:**
 
-* Refer to this Profile: [長期照顧－照顧計畫](StructureDefinition-LTCCarePlan.md) and [運動處方－運動計畫](StructureDefinition-PASportCarePlan.md)
+* Use this Profile: [長照 SDK－回傳包（4合1）](StructureDefinition-LTC-Bundle-Payload.md)
+* Refer to this Profile: [長照 SDK－照顧計畫（CS100）](StructureDefinition-LTC-CarePlan-CS100.md), [長期照顧－照顧計畫](StructureDefinition-LTCCarePlan.md) and [運動處方－運動計畫](StructureDefinition-PASportCarePlan.md)
 * Examples for this Profile: [陳明慧照顧團隊](CareTeam-ltc-care-team-example.md)
 * CapabilityStatements using this Profile: [臺灣長期照顧實作指引 - 用戶端能力聲明](CapabilityStatement-CapabilityStatementLTCClient.md) and [臺灣長期照顧實作指引 - 伺服端能力聲明](CapabilityStatement-CapabilityStatementLTCServer.md)
 
@@ -39,11 +40,11 @@ Other representations of profile: [CSV](StructureDefinition-LTCCareTeam.csv), [E
   "resourceType" : "StructureDefinition",
   "id" : "LTCCareTeam",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCCareTeam",
-  "version" : "0.4.1",
+  "version" : "1.0.0",
   "name" : "LTCCareTeam",
   "title" : "長期照顧－照顧團隊",
   "status" : "active",
-  "date" : "2026-02-28T23:13:53+08:00",
+  "date" : "2026-03-01T19:25:35+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -76,10 +77,6 @@ Other representations of profile: [CSV](StructureDefinition-LTCCareTeam.csv), [E
   "derivation" : "constraint",
   "differential" : {
     "element" : [{
-      "id" : "CareTeam",
-      "path" : "CareTeam"
-    },
-    {
       "id" : "CareTeam.status",
       "path" : "CareTeam.status",
       "short" : "照顧團隊的狀態。[應填入 proposed / active / suspended / inactive / entered-in-error]",

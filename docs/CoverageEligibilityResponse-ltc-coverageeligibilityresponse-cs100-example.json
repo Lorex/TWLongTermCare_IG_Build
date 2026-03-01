@@ -1,0 +1,76 @@
+{
+  "resourceType" : "CoverageEligibilityResponse",
+  "id" : "ltc-coverageeligibilityresponse-cs100-example",
+  "meta" : {
+    "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CoverageEligibilityResponse ltc-coverageeligibilityresponse-cs100-example</b></p><a name=\"ltc-coverageeligibilityresponse-cs100-example\"> </a><a name=\"hcltc-coverageeligibilityresponse-cs100-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-CoverageEligibilityResponse.html\">長照－核定額度（CoverageEligibilityResponse）</a></p></div><p><b>status</b>: Active</p><p><b>purpose</b>: Coverage benefits</p><p><b>patient</b>: <a href=\"Patient-ltc-patient-cs100-example.html\">王小明 (no stated gender), DoB Unknown ( https://example.org/mrn#A0001)</a></p><p><b>created</b>: 2025-10-05 10:00:00+0800</p><p><b>requestor</b>: <a href=\"Organization-ltc-organization-cs100-example.html\">Organization 某某長照管理中心</a></p><p><b>request</b>: <a href=\"CoverageEligibilityRequest-ltc-coverageeligibilityrequest-cs100-example.html\">CoverageEligibilityRequest: status = active; purpose = benefits; created = 2025-10-05 09:00:00+0800</a></p><p><b>outcome</b>: Processing Complete</p><p><b>insurer</b>: <a href=\"Organization-ltc-organization-cs100-example.html\">Organization 某某長照管理中心</a></p><blockquote><p><b>insurance</b></p><p><b>coverage</b>: <a href=\"Coverage-ltc-coverage-cs100-example.html\">Coverage: status = active</a></p><blockquote><p><b>item</b></p><p><b>category</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-group care-pro}\">照顧及專業服務</span></p><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type total}\">總額度</span></p><p><b>allowed</b>: <span title=\"New Taiwan Dollar\">NT$15,460.00</span> (TWD)</p></blockquote><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type subsidy}\">補助額度</span></p><p><b>allowed</b>: <span title=\"New Taiwan Dollar\">NT$12,987.00</span> (TWD)</p></blockquote><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type copay}\">部分負擔</span></p><p><b>allowed</b>: <span title=\"New Taiwan Dollar\">NT$2,473.00</span> (TWD)</p></blockquote></blockquote></blockquote></div>"
+  },
+  "status" : "active",
+  "purpose" : ["benefits"],
+  "patient" : {
+    "reference" : "Patient/ltc-patient-cs100-example"
+  },
+  "created" : "2025-10-05T10:00:00+08:00",
+  "requestor" : {
+    "reference" : "Organization/ltc-organization-cs100-example"
+  },
+  "request" : {
+    "reference" : "CoverageEligibilityRequest/ltc-coverageeligibilityrequest-cs100-example"
+  },
+  "outcome" : "complete",
+  "insurer" : {
+    "reference" : "Organization/ltc-organization-cs100-example"
+  },
+  "insurance" : [{
+    "coverage" : {
+      "reference" : "Coverage/ltc-coverage-cs100-example"
+    },
+    "item" : [{
+      "category" : {
+        "coding" : [{
+          "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-group",
+          "code" : "care-pro"
+        }]
+      },
+      "benefit" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type",
+            "code" : "total"
+          }]
+        },
+        "allowedMoney" : {
+          "value" : 15460,
+          "currency" : "TWD"
+        }
+      },
+      {
+        "type" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type",
+            "code" : "subsidy"
+          }]
+        },
+        "allowedMoney" : {
+          "value" : 12987,
+          "currency" : "TWD"
+        }
+      },
+      {
+        "type" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-benefit-type",
+            "code" : "copay"
+          }]
+        },
+        "allowedMoney" : {
+          "value" : 2473,
+          "currency" : "TWD"
+        }
+      }]
+    }]
+  }]
+}

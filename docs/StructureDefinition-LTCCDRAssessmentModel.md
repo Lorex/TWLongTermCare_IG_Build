@@ -1,4 +1,4 @@
-# 臨床失智評估量表評估 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# 臨床失智評估量表評估 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCDRAssessmentModel | *Version*:0.4.1 |
-| Active as of 2026-02-28 | *Computable Name*:LTCCDRAssessmentModel |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCDRAssessmentModel | *Version*:1.0.0 |
+| Active as of 2026-03-01 | *Computable Name*:LTCCDRAssessmentModel |
 | **Copyright/Legal**: Copyright © 2024 Taiwan Long-Term Care Implementation Guide | |
 
  
@@ -38,12 +38,12 @@ Other representations of profile: [CSV](StructureDefinition-LTCCDRAssessmentMode
   "resourceType" : "StructureDefinition",
   "id" : "LTCCDRAssessmentModel",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCCDRAssessmentModel",
-  "version" : "0.4.1",
+  "version" : "1.0.0",
   "name" : "LTCCDRAssessmentModel",
   "title" : "臨床失智評估量表評估",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-02-28T23:13:53+08:00",
+  "date" : "2026-03-01T19:25:35+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

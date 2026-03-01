@@ -1,4 +1,4 @@
-# 身體活動量測-步態週期值集 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# 身體活動量測-步態週期值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/GaitCycleVS-Sport | *Version*:0.4.1 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/GaitCycleVS-Sport | *Version*:1.0.0 |
 | Active as of 2024-06-04 | *Computable Name*:GaitCycleVSSport |
 
  
@@ -46,7 +46,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "resourceType" : "ValueSet",
   "id" : "GaitCycleVS-Sport",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/GaitCycleVS-Sport",
-  "version" : "0.4.1",
+  "version" : "1.0.0",
   "name" : "GaitCycleVSSport",
   "title" : "身體活動量測-步態週期值集",
   "status" : "active",

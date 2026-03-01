@@ -1,4 +1,4 @@
-# 長期照顧－異常事件警報 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# 長期照顧－異常事件警報 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,15 +8,16 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc | *Version*:0.4.1 |
-| Active as of 2026-02-28 | *Computable Name*:LTCAdverseEvent |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc | *Version*:1.0.0 |
+| Active as of 2026-03-01 | *Computable Name*:LTCAdverseEvent |
 
  
-此 Profile 說明本 IG 如何進一步定義 FHIR 的 AdverseEvent Resource，以呈現失智症個案異常事件警報的資料，包括事件類型、嚴重程度、發生時間、位置等資訊。 
+此 Profile 說明本 IG 如何進一步定義 FHIR 的 AdverseEvent Resource，以呈現長照個案異常事件的資料，包括事件類型、嚴重程度、發生時間、位置、通報方式、多段文字描述與關聯案件等資訊。同時適用於失智照顧及 SDK 異常服務通報場景。 
 
 **Usages:**
 
-* Examples for this Profile: [AdverseEvent/ltc-adverse-event-example](AdverseEvent-ltc-adverse-event-example.md)
+* Refer to this Profile: [個案總查詢（CS100 對應版）Case Summary](StructureDefinition-LTC-Composition-CS100.md)
+* Examples for this Profile: [AdverseEvent/ltc-adverse-event-example](AdverseEvent-ltc-adverse-event-example.md), [AdverseEvent/ltc-adverse-event-incident-example](AdverseEvent-ltc-adverse-event-incident-example.md) and [AdverseEvent/ltc-adverseevent-cs100-example](AdverseEvent-ltc-adverseevent-cs100-example.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/AdverseEvent-twltc)
 
@@ -37,11 +38,11 @@ Other representations of profile: [CSV](StructureDefinition-AdverseEvent-twltc.c
   "resourceType" : "StructureDefinition",
   "id" : "AdverseEvent-twltc",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc",
-  "version" : "0.4.1",
+  "version" : "1.0.0",
   "name" : "LTCAdverseEvent",
   "title" : "長期照顧－異常事件警報",
   "status" : "active",
-  "date" : "2026-02-28T23:13:53+08:00",
+  "date" : "2026-03-01T19:25:35+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -50,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-AdverseEvent-twltc.c
       "value" : "https://www.ida.gov.tw/"
     }]
   }],
-  "description" : "此 Profile 說明本 IG 如何進一步定義 FHIR 的 AdverseEvent Resource，以呈現失智症個案異常事件警報的資料，包括事件類型、嚴重程度、發生時間、位置等資訊。",
+  "description" : "此 Profile 說明本 IG 如何進一步定義 FHIR 的 AdverseEvent Resource，以呈現長照個案異常事件的資料，包括事件類型、嚴重程度、發生時間、位置、通報方式、多段文字描述與關聯案件等資訊。同時適用於失智照顧及 SDK 異常服務通報場景。",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "w5",
@@ -72,6 +73,57 @@ Other representations of profile: [CSV](StructureDefinition-AdverseEvent-twltc.c
       "id" : "AdverseEvent",
       "path" : "AdverseEvent",
       "short" : "異常事件警報的資訊"
+    },
+    {
+      "id" : "AdverseEvent.extension",
+      "path" : "AdverseEvent.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "AdverseEvent.extension:notifMethod",
+      "path" : "AdverseEvent.extension",
+      "sliceName" : "notifMethod",
+      "short" : "通報方式（如電話、機構通報等）",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-NotifMethod"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "AdverseEvent.extension:description",
+      "path" : "AdverseEvent.extension",
+      "sliceName" : "description",
+      "short" : "多段文字描述（事件描述、過程、處理、建議）",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "AdverseEvent.extension:about",
+      "path" : "AdverseEvent.extension",
+      "sliceName" : "about",
+      "short" : "關聯的案件（EpisodeOfCare）或照顧計畫（CarePlan）",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-About"]
+      }],
+      "mustSupport" : true
     },
     {
       "id" : "AdverseEvent.identifier",
@@ -109,13 +161,21 @@ Other representations of profile: [CSV](StructureDefinition-AdverseEvent-twltc.c
       "id" : "AdverseEvent.event",
       "path" : "AdverseEvent.event",
       "short" : "異常事件類型",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-incident-category"
+      }
+    },
+    {
+      "id" : "AdverseEvent.event.coding",
+      "path" : "AdverseEvent.event.coding",
       "mustSupport" : true
     },
     {
       "id" : "AdverseEvent.event.text",
       "path" : "AdverseEvent.event.text",
       "short" : "異常事件類型的描述",
-      "min" : 1,
       "mustSupport" : true
     },
     {
@@ -216,7 +276,6 @@ Other representations of profile: [CSV](StructureDefinition-AdverseEvent-twltc.c
       "id" : "AdverseEvent.contributor",
       "path" : "AdverseEvent.contributor",
       "short" : "涉及此異常事件的人員或設備",
-      "max" : "1",
       "mustSupport" : true
     }]
   }

@@ -1,4 +1,4 @@
-# 個案身分別 - 臺灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide) v0.4.1
+# 個案身分別 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientIdentity-TWLTC | *Version*:0.4.1 |
-| Active as of 2026-02-28 | *Computable Name*:ExtPatientIdentityTWLTC |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientIdentity-TWLTC | *Version*:1.0.0 |
+| Active as of 2026-03-01 | *Computable Name*:ExtPatientIdentityTWLTC |
 
 此 Extension 用以表述個案的身分別。
 
@@ -45,11 +45,11 @@ Other representations of profile: [CSV](StructureDefinition-ExtPatientIdentity-T
   "resourceType" : "StructureDefinition",
   "id" : "ExtPatientIdentity-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientIdentity-TWLTC",
-  "version" : "0.4.1",
+  "version" : "1.0.0",
   "name" : "ExtPatientIdentityTWLTC",
   "title" : "個案身分別",
   "status" : "active",
-  "date" : "2026-02-28T23:13:53+08:00",
+  "date" : "2026-03-01T19:25:35+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
