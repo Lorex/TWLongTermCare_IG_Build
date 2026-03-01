@@ -13,7 +13,7 @@ Usage: #example
 // 異常類別：照顧意外事件
 * event.coding[+] = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-category#careacc "照顧意外事件"
 
-* subject = Reference(Patient/ex-pt)
+* subject = Reference(Patient/ltc-patient-cs100-example)
 * date = "2025-10-01T10:20:00+08:00"
 * recordedDate = "2025-10-01T10:35:00+08:00"
 
@@ -21,7 +21,7 @@ Usage: #example
 * location = Reference(ltc-location-example)
 
 // 涉入者（通報服務員）
-* contributor[+] = Reference(Practitioner/ex-prac)
+* contributor[+] = Reference(Practitioner/ltc-practitioner-cs100-example)
 
 // 通報方式：電話
 * extension[notifMethod][+].valueCodeableConcept = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-notifmethod#phone "電話"
@@ -37,4 +37,4 @@ Usage: #example
 * extension[description][=].extension[text].valueString = "建議持續觀察 48 小時，必要時就醫。已通知個管與居服單位追蹤。"
 
 // 關聯案件
-* extension[about][+].valueReference = Reference(ex-case-cs100)
+* extension[about][+].valueReference = Reference(ltc-episodeofcare-cs100-example)

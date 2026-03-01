@@ -1,6 +1,7 @@
 // ===== Patient / Organization / Practitioner =====
-Instance: ex-pt-sdk
+Instance: ltc-patient-sdk-example
 InstanceOf: LTCPatient
+Title: "長照 SDK－個案（Patient）範例"
 Description: "長照 SDK 範例用的個案（Patient）資源。"
 Usage: #example
 * identifier[member].use = #official
@@ -21,8 +22,9 @@ Usage: #example
 * contact[0].telecom[0].system = #phone
 * contact[0].telecom[0].value = "0987654321"
 
-Instance: ex-org-sdk
+Instance: ltc-organization-sdk-example
 InstanceOf: LTCOrganization
+Title: "長照 SDK－長照管理中心（Organization）範例"
 Description: "長照 SDK 範例用的長期照顧管理中心（Organization）資源。"
 Usage: #example
 * identifier.system = "http://www.moi.gov.tw"
@@ -30,8 +32,9 @@ Usage: #example
 * type = http://terminology.hl7.org/CodeSystem/organization-type#prov "Healthcare Provider"
 * name = "OOO長期照顧管理中心"
 
-Instance: ex-prac-sdk
+Instance: ltc-practitioner-sdk-example
 InstanceOf: LTCPractitioner
+Title: "長照 SDK－照顧管理專員（Practitioner）範例"
 Description: "長照 SDK 範例用的照顧管理專員（Practitioner）資源。"
 Usage: #example
 * identifier[0].system = "http://example.org/fhir/NamingSystem/practitioner-id"
@@ -40,26 +43,28 @@ Usage: #example
 
 
 // ===== EpisodeOfCare (LTC 案件) =====
-Instance: ex-case-sdk
+Instance: ltc-episodeofcare-sdk-example
 InstanceOf: LTCEpisodeOfCarePayload
+Title: "長照 SDK－長照案件（EpisodeOfCare）範例"
 Description: "長照 SDK 範例用的長照案件（EpisodeOfCare）資源。"
 Usage: #example
 * status = #active
 * period.start = "2025-01-01"
-* patient = Reference(ex-pt-sdk)
-* managingOrganization = Reference(ex-org-sdk)
+* patient = Reference(ltc-patient-sdk-example)
+* managingOrganization = Reference(ltc-organization-sdk-example)
 * identifier[caseSerial].system = "https://ltc-ig.fhir.tw/identifier/sdk/r1.1-case-serial"
 * identifier[caseSerial].value = "123456789"
 
 
 // ===== Observation (評估核定摘要) =====
-Instance: ex-assess-sdk
+Instance: ltc-observation-assessment-sdk-example
 InstanceOf: LTCObservationAssessmentPayload
+Title: "長照 SDK－評估核定摘要（Observation）範例"
 Description: "長照 SDK 範例用的評估核定摘要（Observation）資源。"
 Usage: #example
 * status = #final
 * code = $LOINC#8357-6 "Blood pressure method"
-* subject = Reference(ex-pt-sdk)
+* subject = Reference(ltc-patient-sdk-example)
 * effectiveDateTime = "2025-01-01"
 * component[welfare-identity].valueCodeableConcept = CS_TW_LTC_WelfareIdentity#cat3 "第3類"
 * component[cms-level].valueCodeableConcept = CS_TW_LTC_CMSLevel#1a "1a"
@@ -69,42 +74,45 @@ Usage: #example
 
 
 // ===== Coverage（核付對象保險覆蓋；供 CER 必填 coverage 參照）=====
-Instance: ex-coverage-sdk
+Instance: ltc-coverage-sdk-example
 InstanceOf: Coverage
+Title: "長照 SDK－保險覆蓋（Coverage）範例"
 Description: "長照 SDK 範例用的保險覆蓋（Coverage）資源。"
 Usage: #example
 * status = #active
-* beneficiary = Reference(ex-pt-sdk)
-* payor = Reference(ex-org-sdk)
+* beneficiary = Reference(ltc-patient-sdk-example)
+* payor = Reference(ltc-organization-sdk-example)
 
 
 // ===== CoverageEligibilityRequest（CER 必填 request 參照）=====
-Instance: ex-elig-req-sdk
+Instance: ltc-coverageeligibilityrequest-sdk-example
 InstanceOf: CoverageEligibilityRequest
+Title: "長照 SDK－核定請求（CoverageEligibilityRequest）範例"
 Description: "長照 SDK 範例用的核定請求（CoverageEligibilityRequest）資源。"
 Usage: #example
 * status = #active
 * purpose = #benefits
-* patient = Reference(ex-pt-sdk)
+* patient = Reference(ltc-patient-sdk-example)
 * created = "2025-08-04T17:00:00+08:00"
-* insurer = Reference(ex-org-sdk)
-* insurance[0].coverage = Reference(ex-coverage-sdk)
+* insurer = Reference(ltc-organization-sdk-example)
+* insurance[0].coverage = Reference(ltc-coverage-sdk-example)
 
 
 // ===== CoverageEligibilityResponse（核定額度：修正所有必填與 allowedDecimal）=====
-Instance: ex-elig-sdk
+Instance: ltc-coverageeligibilityresponse-sdk-example
 InstanceOf: LTCCoverageEligibilityResponse
+Title: "長照 SDK－核定額度回應（CoverageEligibilityResponse）範例"
 Description: "長照 SDK 範例用的核定額度回應（CoverageEligibilityResponse）資源。"
 Usage: #example
 * status = #active
 * purpose = #benefits
-* patient = Reference(ex-pt-sdk)
+* patient = Reference(ltc-patient-sdk-example)
 * created = "2025-08-04T17:02:19+08:00"
 // ---- 補齊 R4 必填欄位 ----
-* request = Reference(ex-elig-req-sdk)
+* request = Reference(ltc-coverageeligibilityrequest-sdk-example)
 * outcome = #complete
-* insurer = Reference(ex-org-sdk)
-* insurance[0].coverage = Reference(ex-coverage-sdk)
+* insurer = Reference(ltc-organization-sdk-example)
+* insurance[0].coverage = Reference(ltc-coverage-sdk-example)
 
 // ---- 服務群組 + 各項額度（注意：沒有 allowedDecimal，百分比改用 allowedUnsignedInt）----
 * insurance.item[0].category = CS_TW_LTC_ServiceGroup#care-pro "照顧及專業服務"
@@ -122,13 +130,14 @@ Usage: #example
 
 
 // ===== CarePlan（照顧計畫：補 activity.detail.status；count 不可為 0）=====
-Instance: ex-plan-sdk
+Instance: ltc-careplan-sdk-example
 InstanceOf: LTCCarePlanPayload
+Title: "長照 SDK－照顧計畫（CarePlan）範例"
 Description: "長照 SDK 範例用的照顧計畫（CarePlan）資源。"
 Usage: #example
 * status = #active
 * intent = #plan
-* subject = Reference(ex-pt-sdk)
+* subject = Reference(ltc-patient-sdk-example)
 * activity[0].detail.status = #scheduled
 * activity[0].detail.code = CS_TW_LTC_ServiceItem#AA01 "照顧計畫擬定與服務連結"
 * activity[0].detail.extension[unitPrice].valueMoney.value = 195

@@ -1,45 +1,50 @@
 // 基本參照
-Instance: ex-pt
+Instance: ltc-patient-cs100-example
 InstanceOf: Patient
+Title: "長照 CS100－個案（Patient）範例"
 Description: "長照 CS100 範例用的個案（Patient）資源。"
 Usage: #example
 * identifier.system = "https://example.org/mrn"
 * identifier.value = "A0001"
 * name.text = "王小明"
 
-Instance: ex-org
+Instance: ltc-organization-cs100-example
 InstanceOf: Organization
+Title: "長照 CS100－長照管理中心（Organization）範例"
 Description: "長照 CS100 範例用的長照管理中心（Organization）資源。"
 Usage: #example
 * name = "某某長照管理中心"
 
-Instance: ex-prac
+Instance: ltc-practitioner-cs100-example
 InstanceOf: Practitioner
+Title: "長照 CS100－個案管理員（Practitioner）範例"
 Description: "長照 CS100 範例用的個案管理員（Practitioner）資源。"
 Usage: #example
 * name.text = "張個管"
 
 // r1: 案件（CS100）
-Instance: ex-case-cs100
+Instance: ltc-episodeofcare-cs100-example
 InstanceOf: LTCEpisodeOfCareCS100
+Title: "長照 CS100－長照案件（EpisodeOfCare）範例"
 Description: "長照 CS100 範例用的長照案件（EpisodeOfCare）資源。"
 Usage: #example
 * status = #active
 * period.start = "2025-10-01"
-* patient = Reference(ex-pt)
-* managingOrganization = Reference(ex-org)
-* careManager = Reference(ex-prac)
+* patient = Reference(ltc-patient-cs100-example)
+* managingOrganization = Reference(ltc-organization-cs100-example)
+* careManager = Reference(ltc-practitioner-cs100-example)
 * identifier[caseId].system = "https://ltc-ig.fhir.tw/identifier/cs100/case-id"
 * identifier[caseId].value  = "CASE-00001"
 
 // r2: 評估核定摘要
-Instance: ex-assessment
+Instance: ltc-observation-assessment-cs100-example
 InstanceOf: LTCObservationAssessmentCS100
+Title: "長照 CS100－評估核定摘要（Observation）範例"
 Description: "長照 CS100 範例用的評估核定摘要（Observation）資源。"
 Usage: #example
 * status = #final
 * code = $LOINC#8357-6 "Blood pressure method"
-* subject = Reference(ex-pt)
+* subject = Reference(ltc-patient-cs100-example)
 * effectiveDateTime = "2025-10-02"
 * component[0].code = CS_TW_LTC_AssessmentComponent#cms-level
 * component[0].valueCodeableConcept.text = "1a"
@@ -47,39 +52,42 @@ Usage: #example
 * component[=].valueCodeableConcept.text = "第3類"
 
 // === CER 必填用的 Coverage 與 CoverageEligibilityRequest ===
-Instance: ex-coverage
+Instance: ltc-coverage-cs100-example
 InstanceOf: Coverage
+Title: "長照 CS100－保險覆蓋（Coverage）範例"
 Description: "長照 CS100 範例用的保險覆蓋（Coverage）資源。"
 Usage: #example
 * status = #active
-* beneficiary = Reference(ex-pt)
-* payor = Reference(ex-org)
+* beneficiary = Reference(ltc-patient-cs100-example)
+* payor = Reference(ltc-organization-cs100-example)
 
-Instance: ex-elig-req
+Instance: ltc-coverageeligibilityrequest-cs100-example
 InstanceOf: CoverageEligibilityRequest
+Title: "長照 CS100－核定請求（CoverageEligibilityRequest）範例"
 Description: "長照 CS100 範例用的核定請求（CoverageEligibilityRequest）資源。"
 Usage: #example
 * status = #active
 * purpose = #benefits
-* patient = Reference(ex-pt)
+* patient = Reference(ltc-patient-cs100-example)
 * created = "2025-10-05T09:00:00+08:00"
-* insurer = Reference(ex-org)
-* insurance[0].coverage = Reference(ex-coverage)
+* insurer = Reference(ltc-organization-cs100-example)
+* insurance[0].coverage = Reference(ltc-coverage-cs100-example)
 
 // r3: 核定額度（補齊 requestor / request / outcome / insurer / insurance.coverage）
-Instance: ex-elig
+Instance: ltc-coverageeligibilityresponse-cs100-example
 InstanceOf: LTCCoverageEligibilityResponse
+Title: "長照 CS100－核定額度回應（CoverageEligibilityResponse）範例"
 Description: "長照 CS100 範例用的核定額度回應（CoverageEligibilityResponse）資源。"
 Usage: #example
 * status = #active
 * purpose = #benefits
 * created = "2025-10-05T10:00:00+08:00"
-* patient = Reference(ex-pt)
-* requestor = Reference(ex-org)
-* request   = Reference(ex-elig-req)
+* patient = Reference(ltc-patient-cs100-example)
+* requestor = Reference(ltc-organization-cs100-example)
+* request   = Reference(ltc-coverageeligibilityrequest-cs100-example)
 * outcome   = #complete
-* insurer   = Reference(ex-org)
-* insurance[0].coverage = Reference(ex-coverage)
+* insurer   = Reference(ltc-organization-cs100-example)
+* insurance[0].coverage = Reference(ltc-coverage-cs100-example)
 * insurance.item[0].category = CS_TW_LTC_ServiceGroup#care-pro
 * insurance.item[0].benefit[0].type = CS_TW_LTC_BenefitType#total
 * insurance.item[0].benefit[0].allowedMoney.value = 15460
@@ -92,24 +100,26 @@ Usage: #example
 * insurance.item[0].benefit[=].allowedMoney.currency = #TWD
 
 // r4: 計畫（補 activity.detail.status）
-Instance: ex-plan
+Instance: ltc-careplan-cs100-example
 InstanceOf: LTCCarePlanPayload
+Title: "長照 CS100－照顧計畫（CarePlan）範例"
 Description: "長照 CS100 範例用的照顧計畫（CarePlan）資源。"
 Usage: #example
 * status = #active
 * intent = #plan
-* subject = Reference(ex-pt)
+* subject = Reference(ltc-patient-cs100-example)
 * period.start = "2025-10-10"
 * activity[0].detail.status = #scheduled
 * activity[0].detail.code = CS_TW_LTC_ServiceItem#BA13 "陪同外出"
 * activity[0].detail.scheduledTiming.repeat.frequency = 8
 * activity[0].detail.scheduledTiming.repeat.period = 1
 * activity[0].detail.scheduledTiming.repeat.periodUnit = #wk
-* supportingInfo = Reference(ex-elig)
+* supportingInfo = Reference(ltc-coverageeligibilityresponse-cs100-example)
 
 // 通報（改用 AdverseEvent）
-Instance: ex-incident
+Instance: ltc-adverseevent-cs100-example
 InstanceOf: LTCAdverseEvent
+Title: "長照 CS100－異常事件（AdverseEvent）範例"
 Description: "長照 CS100 範例用的異常事件（AdverseEvent）資源。"
 Usage: #example
 * identifier.use = #official
@@ -117,23 +127,24 @@ Usage: #example
 * identifier.value = "AE-CS100-2025-001"
 * actuality = #actual
 * event.coding[+] = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-category#careacc "照顧意外事件"
-* subject = Reference(ex-pt)
+* subject = Reference(ltc-patient-cs100-example)
 * date = "2025-11-05T10:20:00+08:00"
 * recordedDate = "2025-11-05T10:30:00+08:00"
 * extension[description][+].extension[textType].valueCodeableConcept = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype#desc "事件描述"
 * extension[description][=].extension[text].valueString = "巡視時發現個案暈眩跌坐於地，已聯繫家屬與機構。"
 
 // CS100 個案總查詢 Composition（移除不存在的 identifier slice，補 author）
-Instance: ex-case-summary-cs100
+Instance: ltc-bundle-cs100-example
 InstanceOf: LTCCompositionCS100
+Title: "長照 CS100－個案總查詢（Composition）範例"
 Description: "長照 CS100 個案總查詢的範例，展示如何使用 Composition 資源整合個案的完整資訊。"
 Usage: #example
 * status = #final
 * type = $LOINC#11506-3 "Progress note"
-* subject = Reference(ex-pt)
+* subject = Reference(ltc-patient-cs100-example)
 * date = "2025-11-06T12:00:00+08:00"
 * title = "CS100 個案總查詢 - 王小明"
-* author[0] = Reference(ex-prac)
+* author[0] = Reference(ltc-practitioner-cs100-example)
 
 * identifier.system = "https://ltc-ig.fhir.tw/identifier/cs100/report-id"
 * identifier.value  = "CS-20251106-0001"
@@ -141,70 +152,70 @@ Usage: #example
 // A 基本
 * section[patient].code = $LOINC#8716-3 "Vital signs note"
 * section[patient].title = "CS100-個案基本"
-* section[patient].entry[0] = Reference(ex-pt)
+* section[patient].entry[0] = Reference(ltc-patient-cs100-example)
 
 // B 案件
 * section[case].code = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code#case "CS100-案件資訊"
 * section[case].title = "CS100-案件資訊"
-* section[case].entry[0] = Reference(ex-case-cs100)
+* section[case].entry[0] = Reference(ltc-episodeofcare-cs100-example)
 
 // C 評估摘要
 * section[assessment].code = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code#assessment "CS100-評估核定摘要"
 * section[assessment].title = "CS100-評估核定摘要"
-* section[assessment].entry[0] = Reference(ex-assessment)
+* section[assessment].entry[0] = Reference(ltc-observation-assessment-cs100-example)
 
 // D 照顧計畫
 * section[careplan].code = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code#careplan "CS100-照顧計畫"
 * section[careplan].title = "CS100-照顧計畫"
-* section[careplan].entry[0] = Reference(ex-plan)
+* section[careplan].entry[0] = Reference(ltc-careplan-cs100-example)
 
 // E 核定額度
 * section[eligibility].code = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code#eligibility "CS100-核定額度"
 * section[eligibility].title = "CS100-核定額度"
-* section[eligibility].entry[0] = Reference(ex-elig)
+* section[eligibility].entry[0] = Reference(ltc-coverageeligibilityresponse-cs100-example)
 
 // F 近期通報
 * section[incidents].code = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code#incidents "CS100-近期異動/通報"
 * section[incidents].title = "CS100-近期異動/通報"
-* section[incidents].entry[0] = Reference(ex-incident)
+* section[incidents].entry[0] = Reference(ltc-adverseevent-cs100-example)
 
 
-// Instance: ex-pt
+// Instance: ltc-patient-cs100-example
 // InstanceOf: Patient
 // Usage: #example
 // * identifier.system = "https://example.org/mrn"
 // * identifier.value = "A0001"
 // * name.text = "王小明"
 
-// Instance: ex-org
+// Instance: ltc-organization-cs100-example
 // InstanceOf: Organization
 // Usage: #example
 // * name = "某某長照管理中心"
 
-// Instance: ex-prac
+// Instance: ltc-practitioner-cs100-example
 // InstanceOf: Practitioner
 // Usage: #example
 // * name.text = "張個管"
 
 // // r1: 案件（CS100）
-// Instance: ex-case-cs100
+// Instance: ltc-episodeofcare-cs100-example
 // InstanceOf: LTCEpisodeOfCareCS100
 // Usage: #example
 // * status = #active
 // * period.start = "2025-10-01"
-// * patient = Reference(ex-pt)
-// * managingOrganization = Reference(ex-org)
-// * careManager = Reference(ex-prac)
+// * patient = Reference(ltc-patient-cs100-example)
+// * managingOrganization = Reference(ltc-organization-cs100-example)
+// * careManager = Reference(ltc-practitioner-cs100-example)
 // * identifier[caseId].system = "https://ltc-ig.fhir.tw/identifier/cs100/case-id"
 // * identifier[caseId].value  = "CASE-00001"
 
 // // r2: 評估核定摘要
-// Instance: ex-assessment
+// Instance: ltc-observation-assessment-cs100-example
 // InstanceOf: LTCObservationAssessmentCS100
 // Usage: #example
 // * status = #final
 // * code = $LOINC#8357-6 "Blood pressure method"
-// * subject = Reference(ex-pt)
+// * subject = Reference(ltc-patient-cs100-example)
 // * effectiveDateTime = "2025-10-02"
 // * component[0].code = CS_TW_LTC_AssessmentComponent#cms-level
 // * component[0].valueCodeableConcept.text = "1a"
@@ -212,13 +223,13 @@ Usage: #example
 // * component[=].valueCodeableConcept.text = "第3類"
 
 // // r3: 核定額度
-// Instance: ex-elig
+// Instance: ltc-coverageeligibilityresponse-cs100-example
 // InstanceOf: LTCCoverageEligibilityResponse
 // Usage: #example
 // * status = #active
 // * purpose = #benefits
 // * created = "2025-10-05"
-// * patient = Reference(ex-pt)
+// * patient = Reference(ltc-patient-cs100-example)
 // * insurance.item[0].category = CS_TW_LTC_ServiceGroup#care-pro
 // * insurance.item[0].benefit[0].type = CS_TW_LTC_BenefitType#total
 // * insurance.item[0].benefit[0].allowedMoney.value = 15460
@@ -231,35 +242,35 @@ Usage: #example
 // * insurance.item[0].benefit[=].allowedMoney.currency = #TWD
 
 // // r4: 計畫
-// Instance: ex-plan
+// Instance: ltc-careplan-cs100-example
 // InstanceOf: LTCCarePlanPayload
 // Usage: #example
 // * status = #active
 // * intent = #plan
-// * subject = Reference(ex-pt)
+// * subject = Reference(ltc-patient-cs100-example)
 // * period.start = "2025-10-10"
 // * activity[0].detail.code = CS_TW_LTC_ServiceItem#BA13 "陪同外出"
 // * activity[0].detail.scheduledTiming.repeat.frequency = 8
 // * activity[0].detail.scheduledTiming.repeat.period = 1
 // * activity[0].detail.scheduledTiming.repeat.periodUnit = #wk
-// * supportingInfo = Reference(ex-elig)
+// * supportingInfo = Reference(ltc-coverageeligibilityresponse-cs100-example)
 
 // // 通報（已遷移至 LTCAdverseEvent）
-// Instance: ex-incident
+// Instance: ltc-adverseevent-cs100-example
 // InstanceOf: LTCAdverseEvent
 // Usage: #example
 // * actuality = #actual
-// * subject = Reference(ex-pt)
+// * subject = Reference(ltc-patient-cs100-example)
 // * date = "2025-11-05T10:20:00+08:00"
 // * recordedDate = "2025-11-05T10:30:00+08:00"
 
 // // CS100 個案總查詢 Composition
-// Instance: ex-case-summary-cs100
+// Instance: ltc-bundle-cs100-example
 // InstanceOf: LTCCompositionCS100
 // Usage: #example
 // * status = #final
 // * type = $LOINC#11506-3 "Progress note"
-// * subject = Reference(ex-pt)
+// * subject = Reference(ltc-patient-cs100-example)
 // * date = "2025-11-06T12:00:00+08:00"
 // * title = "CS100 個案總查詢 - 王小明"
 // * identifier[reportId].system = "https://ltc-ig.fhir.tw/identifier/cs100/report-id"
@@ -268,29 +279,29 @@ Usage: #example
 // // A
 // * section[0].code = $LOINC#8716-3 "Vital signs note"
 // * section[0].title = "CS100-個案基本"
-// * section[0].entry[0] = Reference(ex-pt)
+// * section[0].entry[0] = Reference(ltc-patient-cs100-example)
 
 // // B
 // * section[+].code.text = "CS100-LTC Case (EpisodeOfCare)"
 // * section[=].title = "CS100-案件資訊"
-// * section[=].entry[0] = Reference(ex-case-cs100)
+// * section[=].entry[0] = Reference(ltc-episodeofcare-cs100-example)
 
 // // C
 // * section[+].code.text = "CS100-Assessment Summary"
 // * section[=].title = "CS100-評估核定摘要"
-// * section[=].entry[0] = Reference(ex-assessment)
+// * section[=].entry[0] = Reference(ltc-observation-assessment-cs100-example)
 
 // // D
 // * section[+].code.text = "CS100-CarePlan"
 // * section[=].title = "CS100-照顧計畫"
-// * section[=].entry[0] = Reference(ex-plan)
+// * section[=].entry[0] = Reference(ltc-careplan-cs100-example)
 
 // // E
 // * section[+].code.text = "CS100-Eligibility/Benefit"
 // * section[=].title = "CS100-核定額度"
-// * section[=].entry[0] = Reference(ex-elig)
+// * section[=].entry[0] = Reference(ltc-coverageeligibilityresponse-cs100-example)
 
 // // F
 // * section[+].code.text = "CS100-Recent Incidents"
 // * section[=].title = "CS100-近期異動/通報"
-// * section[=].entry[0] = Reference(ex-incident)
+// * section[=].entry[0] = Reference(ltc-adverseevent-cs100-example)

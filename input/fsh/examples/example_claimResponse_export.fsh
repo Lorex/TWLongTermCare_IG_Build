@@ -1,15 +1,15 @@
-Instance: ex-claim-response-export
+Instance: ltc-claimresponse-export-example
 InstanceOf: LTCClaimResponseExport
-Title: "長照 SDK－照管全量匯出（ClaimResponse）範例"
+Title: "長照－照管全量匯出審核結果（ClaimResponse）範例"
 Description: "長照照管全量匯出之審核結果與檢核錯誤資訊範例，展示如何使用 LTCClaimResponseExport Profile。"
 Usage: #example
 
 * status = #active
 * type = http://terminology.hl7.org/CodeSystem/claim-type#professional
 * use = #preauthorization
-* patient = Reference(ex-pt)
+* patient = Reference(ltc-patient-cs100-example)
 * created = "2025-07-04"
-* insurer = Reference(ex-org)
+* insurer = Reference(ltc-organization-cs100-example)
 * outcome = #complete
 * disposition = "審核通過"
 
