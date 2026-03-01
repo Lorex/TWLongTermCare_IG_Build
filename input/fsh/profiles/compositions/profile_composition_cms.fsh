@@ -4,12 +4,12 @@ Alias: $TWCorePractitioner = https://twcore.mohw.gov.tw/ig/twcore/StructureDefin
 Alias: $TWCoreCondition = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Condition-twcore
 
 Profile: LTCCompositionCMS
-Parent: $TWCoreComposition
+Parent: LTCCompositionBase
 Id: LTCCompositionCMS
 Title: "照顧管理評估量表文件架構"
 Description: "此 Composition 以衛生福利部長期照顧管理中心照顧管理評估量表為基礎，用以表述照顧管理評估量表的文件結構。"
 
-* subject 1..1 MS
+* subject
 * subject ^short = "照顧管理評估量表描述的個案"
 * subject only Reference(LTCPatientCMS)
 * subject.reference 1..1 MS

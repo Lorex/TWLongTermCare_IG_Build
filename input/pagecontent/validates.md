@@ -57,7 +57,7 @@ body{font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !impor
 <img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-10.jpg" alt="終端機視窗" style="display: block;margin-left: auto;margin-right: auto;width: 55%;"/>
 <div style="clear:both;"></div>
 
-<p>如下圖所示，請於「終端機」輸入 FHIR 提供的驗證程式－<span style="font-weight:bold; color:#ff0000">紅色1</span>『<b><i>java -jar validator_cli.jar</i></b>』、要驗證的Profile實例-<span style="font-weight:bold; color:#0000ff">藍色2</span>『<b><i>Patient-pat-example.json</i></b>』，以及驗證的規格依據-<span style="font-weight:bold; color:#fa8072">橘色3</span> 『<b><i>-version 4.0 -ig fhir.twltc</i></b>』，「Enter鍵入」，即可查看驗證結果。</p>
+<p>如下圖所示，請於「終端機」輸入 FHIR 提供的驗證程式－<span style="font-weight:bold; color:#ff0000">紅色1</span>『<b><i>java -jar validator_cli.jar</i></b>』、要驗證的Profile實例-<span style="font-weight:bold; color:#0000ff">藍色2</span>『<b><i>Patient-pat-example.json</i></b>』，以及驗證的規格依據-<span style="font-weight:bold; color:#fa8072">橘色3</span> 『<b><i>-version 4.0 -ig tw.iii.ltc</i></b>』，「Enter鍵入」，即可查看驗證結果。</p>
 <img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-11.jpg" alt="java -jar validator_cli.jar Patient-pat-example.json -version 4.0 -ig tw.gov.mohw.twcore" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
 <div style="clear:both;"></div>
 <p>若驗證「通過」，如下圖所示，可看到「Success: 0 errors, 0 warnings, 1 notes」。</p>
@@ -109,7 +109,7 @@ body{font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !impor
 <img class="figure-img img-responsive img-rounded center-block" src="validates/1-2-9.jpg" alt="命令列環境" style="display: block;margin-left: auto;margin-right: auto;width: 40%;"/>
 <div style="clear:both;"></div>
 
-<p>如下圖所示，請於指向TW LTC IG資料夾命令列環境，輸入FHIR提供的驗證程式－<span style="font-weight:bold; color:#ff0000">紅色1</span>『 <b><i>java -jar validator_cli.jar</i></b>』 、所要驗證之Profile-<span style="font-weight:bold; color:#0000ff">藍色2</span>『<b><i>Patient-pat-example.json</i></b>』，以及所要驗證之依據-<span style="font-weight:bold; color:#fa8072">橘色3</span>  『<b><i>-version 4.0 -ig fhir.twltc</i></b>』，「Enter鍵入」。</p>
+<p>如下圖所示，請於指向TW LTC IG資料夾命令列環境，輸入FHIR提供的驗證程式－<span style="font-weight:bold; color:#ff0000">紅色1</span>『 <b><i>java -jar validator_cli.jar</i></b>』 、所要驗證之Profile-<span style="font-weight:bold; color:#0000ff">藍色2</span>『<b><i>Patient-pat-example.json</i></b>』，以及所要驗證之依據-<span style="font-weight:bold; color:#fa8072">橘色3</span>  『<b><i>-version 4.0 -ig tw.iii.ltc</i></b>』，「Enter鍵入」。</p>
 <img class="figure-img img-responsive img-rounded center-block" src="validates/1-2-10.jpg" alt="命令列語法" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
 <div style="clear:both;"></div>
 

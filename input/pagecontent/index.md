@@ -1,3 +1,22 @@
+### 重要異動公告
+
+<div class="bg-warning" markdown="1">
+
+**STU 1.0.0 重大變更（Breaking Changes）**
+
+本版為首個正式試用版（Standard for Trial Use），包含以下與先前版本不相容的異動：
+
+1. **Profile 命名統一**：所有 Profile 統一採用 `LTC[ResourceType][Purpose]` 命名規範（如 `LTCCarePlanPayload`、`LTCBundlePayload`），舊名稱（如 `CarePlanTWLTCPlanSDK`、`BundleTWLTCSDKPayload`）不再使用。
+2. **CodeSystem/ValueSet 去除 SDK 後綴**：`CS-TW-LTC-CMSLevel-SDK`、`CS-TW-LTC-CaseStatus-SDK` 等已改為 `CS-TW-LTC-CMSLevel`、`CS-TW-LTC-CaseStatus`。
+3. **Extension 整併**：`Export-PlanId`、`FrequencyLabel-SDK` 已改用 FHIR 原生欄位取代；Incident 系列 Extension 已廢棄，改用 `LTCAdverseEvent` Profile。
+4. **異常事件通報**：原 `Communication`-based Incident Profile 已全面遷移至 `LTCAdverseEvent`，並新增 `AdverseEventDescription`、`AdverseEventNotifMethod`、`AdverseEventAbout` 三個 Extension。
+5. **Common Base Profile 導入**：新增 `LTCCompositionBase`、`LTCObservationAssessmentBase`、`LTCEpisodeOfCareBase` 作為共用基礎 Profile。
+6. **CoverageEligibilityResponse 合併**：SDK 版與 CS100 版合併為單一 `LTCCoverageEligibilityResponse`。
+
+實作者請參照新版 Profile 名稱與結構進行調整。
+
+</div>
+
 ### 介紹
 
 <div style="padding-left: 10px;">
@@ -23,7 +42,38 @@
 
 <p>TW LTC IG 中所有Profiles的FMM等級如下：
   <ol>
-    <li>0.4.1 版本的所有 Profiles 均為 FMM0</li>
+    <li><strong>FMM 2</strong>：以下 Profiles 已在 2025 專案聯測松中由至少 3 套獨立系統成功實作互操作：
+      <ul>
+        <li>LTCPatient（5 系統）</li>
+        <li>LTCObservationVitalSigns（5 系統）</li>
+        <li>LTCObservationVitalSignsPanel（5 系統）</li>
+        <li>LTCOrganization（5 系統）</li>
+        <li>LTCPractitioner（5 系統）</li>
+        <li>LTCQuestionnaireResponseMMSE（4 系統）</li>
+        <li>LTCQuestionnaire（4 系統）</li>
+        <li>LTCQuestionnaireResponse（4 系統）</li>
+        <li>LTCQuestionnaireResponseCDR（3 系統）</li>
+      </ul>
+    </li>
+    <li><strong>FMM 1</strong>：以下 Profiles 已在聯測中由至少 1 套系統實作，工作小組認為可供實作使用：
+      <ul>
+        <li>LTCMedicationAdministration（2 系統）</li>
+        <li>LTCBundleCMS（2 系統）</li>
+        <li>LTCCompositionCMS（2 系統）</li>
+        <li>LTCPatientCMS（2 系統）</li>
+        <li>LTCCondition（2 系統）</li>
+        <li>LTCQuestionnaireResponseADL（2 系統）</li>
+        <li>LTCQuestionnaireResponseIADL（2 系統）</li>
+        <li>LTCQuestionnaireResponseAA01（2 系統）</li>
+        <li>LTCQuestionnaireResponseAA02（2 系統）</li>
+        <li>LTCObservationFallingHistory（2 系統）</li>
+        <li>LTCGoal（2 系統）</li>
+        <li>LTCCarePlan（2 系統）</li>
+        <li>LTCQuestionnaireResponseAA12（2 系統）</li>
+        <li>LTCPractitionerRole（2 系統）</li>
+      </ul>
+    </li>
+    <li><strong>FMM 0 (DRAFT)</strong>：其餘所有 Profiles 為草稿版本。</li>
   </ol>
 </p>
 </div>

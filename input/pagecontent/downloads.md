@@ -1,6 +1,6 @@
 ### 下載整個 IG
 - TW LTC IG：[下載](full-ig.zip)
-- TW LTC Package：[下載](fhir.twltc.r4.tgz)
+- TW LTC Package：[下載](package.tgz)
 
 ### 文件定義
 - XML：[下載](expansions.xml.zip)

@@ -4,12 +4,12 @@ Alias: $TWCorePractitioner = https://twcore.mohw.gov.tw/ig/twcore/StructureDefin
 Alias: $TWCoreCondition = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Condition-twcore
 
 Profile: LTCCompositionReferral
-Parent: $TWCoreComposition
+Parent: LTCCompositionBase
 Id: LTCCompositionReferral
 Title: "長期照護管理中心個案服務初篩表/轉介單文件架構"
 Description: "此 Composition 以臺北市長期照顧管理中心個案服務初篩表/轉介單為基礎，用以表述長期照顧管理中心個案服務初篩表/轉介單的文件結構。"
 
-* subject 1..1 MS
+* subject
 * subject ^short = "轉介單描述的個案"
 * subject only Reference(LTCPatientReferral)
 * subject.reference 1..1 MS

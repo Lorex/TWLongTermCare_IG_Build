@@ -2,7 +2,7 @@ Profile: LTCAdverseEvent
 Parent: AdverseEvent
 Id: AdverseEvent-twltc
 Title: "長期照顧－異常事件警報"
-Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 AdverseEvent Resource，以呈現失智症個案異常事件警報的資料，包括事件類型、嚴重程度、發生時間、位置等資訊。"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 AdverseEvent Resource，以呈現長照個案異常事件的資料，包括事件類型、嚴重程度、發生時間、位置、通報方式、多段文字描述與關聯案件等資訊。同時適用於失智照顧及 SDK 異常服務通報場景。"
 
 * . ^short = "異常事件警報的資訊"
 
@@ -20,7 +20,9 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 AdverseEve
 
 * event 0..1 MS
 * event ^short = "異常事件類型"
-* event.text 1..1 MS
+* event from VS_TW_LTC_Incident_Category (extensible)
+* event.coding 0..* MS
+* event.text 0..1 MS
 * event.text ^short = "異常事件類型的描述"
 
 * subject 1..1 MS
@@ -65,8 +67,20 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 AdverseEve
 * recorder 0..1 MS
 * recorder ^short = "記錄異常事件的人員"
 
-* contributor 0..1 MS
+* contributor 0..* MS
 * contributor ^short = "涉及此異常事件的人員或設備"
+
+// SDK 場景擴充：通報方式
+* extension contains ExtTWLTCAdverseEventNotifMethod named notifMethod 0..* MS
+* extension[notifMethod] ^short = "通報方式（如電話、機構通報等）"
+
+// SDK 場景擴充：多段文字描述
+* extension contains ExtTWLTCAdverseEventDescription named description 0..* MS
+* extension[description] ^short = "多段文字描述（事件描述、過程、處理、建議）"
+
+// SDK 場景擴充：關聯案件/計畫
+* extension contains ExtTWLTCAdverseEventAbout named about 0..* MS
+* extension[about] ^short = "關聯的案件（EpisodeOfCare）或照顧計畫（CarePlan）"
 
 
 // Example

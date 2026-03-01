@@ -25,7 +25,7 @@ sushi .
 |------|------|
 | Canonical URL | `http://ltc-ig.fhir.tw` |
 | Package ID | `tw.iii.ltc` |
-| 版本 | 0.4.1 |
+| 版本 | 1.0.0 |
 | FHIR 版本 | R4.0.1 |
 | 上層依賴 | TW Core IG 0.3.2 |
 
