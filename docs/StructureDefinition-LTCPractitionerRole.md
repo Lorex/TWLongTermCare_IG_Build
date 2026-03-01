@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitionerRole | *Version*:1.0.0 |
-| Active as of 2026-03-01 | *Computable Name*:LTCPractitionerRole |
+| Active as of 2026-03-02 | *Computable Name*:LTCPractitionerRole |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 PractitionerRole Resource，以呈現長期照顧服務人員的角色資料。 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCPractitionerRole.
   "name" : "LTCPractitionerRole",
   "title" : "長期照顧－服務人員角色",
   "status" : "active",
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

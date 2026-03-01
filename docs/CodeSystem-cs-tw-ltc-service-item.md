@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item | *Version*:1.0.0 |
-| Active as of 2026-03-01 | *Computable Name*:CS_TW_LTC_ServiceItem |
+| Active as of 2026-03-02 | *Computable Name*:CS_TW_LTC_ServiceItem |
 
  
 對應 r4.* 臺灣長照給付『照顧組合／輔具／無障礙修繕』服務項目代碼（AA..FA 系列），來源：清單.xlsx。 
@@ -32,7 +32,7 @@
   "title" : "長照 SDK－服務項目代碼",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

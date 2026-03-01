@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Organization-twltc | *Version*:1.0.0 |
-| Active as of 2026-03-01 | *Computable Name*:LTCOrganization |
+| Active as of 2026-03-02 | *Computable Name*:LTCOrganization |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Organization Resource，以呈現機構的資料。這裡的機構包含但不限於醫院、診所、長照機構、社區服務單位等。 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-Organization-twltc.c
   "name" : "LTCOrganization",
   "title" : "長期照顧－機構",
   "status" : "active",
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

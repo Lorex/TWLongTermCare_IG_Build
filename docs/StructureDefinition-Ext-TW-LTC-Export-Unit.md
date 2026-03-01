@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-Unit | *Version*:1.0.0 |
-| Active as of 2026-03-01 | *Computable Name*:ExtTWLTCExportUnit |
+| Active as of 2026-03-02 | *Computable Name*:ExtTWLTCExportUnit |
 
 此 Extension 用於表示長照 SDK 的單位資訊，包含特約單位、照管中心、個管員等相關資訊，適用於 Claim 及 ClaimResponse 資源。
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-Ext-TW-LTC-Export-Un
   "name" : "ExtTWLTCExportUnit",
   "title" : "長照 SDK－單位資訊（PIA/PIB/CENTER/MAN_*）",
   "status" : "active",
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

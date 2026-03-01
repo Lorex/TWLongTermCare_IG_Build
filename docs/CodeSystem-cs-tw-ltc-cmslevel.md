@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel | *Version*:1.0.0 |
-| Active as of 2026-03-01 | *Computable Name*:CS_TW_LTC_CMSLevel |
+| Active as of 2026-03-02 | *Computable Name*:CS_TW_LTC_CMSLevel |
 
  
 對應 r2.5：1, 1a, 1b, 2..8。 
@@ -32,7 +32,7 @@
   "title" : "長照 SDK－CMS 等級",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

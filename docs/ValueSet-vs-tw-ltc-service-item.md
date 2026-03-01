@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-service-item | *Version*:1.0.0 |
-| Active as of 2026-03-01 | *Computable Name*:VS_TW_LTC_ServiceItem |
+| Active as of 2026-03-02 | *Computable Name*:VS_TW_LTC_ServiceItem |
 
  
 此 ValueSet 用於表示長照 SDK 中的服務項目（計畫）。 
@@ -52,7 +52,7 @@
   "title" : "長照 SDK－服務項目（計畫）",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

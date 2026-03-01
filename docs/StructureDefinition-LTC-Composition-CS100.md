@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-Composition-CS100 | *Version*:1.0.0 |
-| Draft as of 2026-03-01 | *Computable Name*:LTCCompositionCS100 |
+| Draft as of 2026-03-02 | *Computable Name*:LTCCompositionCS100 |
 
  
 本文件為『個案總查詢（Case Summary）』之 CS100 專用版本， 其內容與章節配置對應衛生福利部照顧服務管理資訊平臺功能 《CS100 個案總查詢》之查詢結果欄位與區塊。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-LTC-Composition-CS10
   "name" : "LTCCompositionCS100",
   "title" : "個案總查詢（CS100 對應版）Case Summary",
   "status" : "draft",
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

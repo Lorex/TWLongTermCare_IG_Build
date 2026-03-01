@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/PASportConditionMedicalHistory | *Version*:1.0.0 |
-| Active as of 2026-03-01 | *Computable Name*:PASportConditionMedicalHistory |
+| Active as of 2026-03-02 | *Computable Name*:PASportConditionMedicalHistory |
 
  
 長照機構住民運動處方的病史資料，本 Profile 繼承自身體活動量測 (Physical Activity Measure) 的 Sport Data Condition Profile。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-PASportConditionMedi
   "name" : "PASportConditionMedicalHistory",
   "title" : "運動處方－病史",
   "status" : "active",
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

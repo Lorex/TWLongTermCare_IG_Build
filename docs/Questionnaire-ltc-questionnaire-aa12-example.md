@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-aa12-example | *Version*:1.0.0 |
-| Active as of 2026-03-01 | *Computable Name*:AA12 |
+| Active as of 2026-03-02 | *Computable Name*:AA12 |
 | *Other Identifiers:*http://ltc-ig.fhir.tw/questionnaire-id#AA12 | |
 
 
@@ -32,7 +32,7 @@
   "name" : "AA12",
   "title" : "長期照護醫師意見書 (AA12)",
   "status" : "active",
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

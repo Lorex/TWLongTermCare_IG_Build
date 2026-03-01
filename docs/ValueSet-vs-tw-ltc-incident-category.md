@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-incident-category | *Version*:1.0.0 |
-| Active as of 2026-03-01 | *Computable Name*:VS_TW_LTC_Incident_Category |
+| Active as of 2026-03-02 | *Computable Name*:VS_TW_LTC_Incident_Category |
 
  
 此 ValueSet 用於表示長照 SDK 異常紀錄的異常類別。 
@@ -51,7 +51,7 @@
   "title" : "長照 SDK－異常紀錄－異常類別",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-Claim-Export | *Version*:1.0.0 |
-| Draft as of 2026-03-01 | *Computable Name*:LTCClaimExport |
+| Draft as of 2026-03-02 | *Computable Name*:LTCClaimExport |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Claim Resource，以呈現長照照管全量匯出之服務代碼、數量、單價及小計等申報資料。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-LTC-Claim-Export.csv
   "name" : "LTCClaimExport",
   "title" : "長照 SDK－照管全量匯出（Claim）",
   "status" : "draft",
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

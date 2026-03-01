@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisabilityType | *Version*:1.0.0 |
-| Active as of 2026-03-01 | *Computable Name*:LTCConditionDisabilityType |
+| Active as of 2026-03-02 | *Computable Name*:LTCConditionDisabilityType |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的身心障礙類型。 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCConditionDisabili
   "name" : "LTCConditionDisabilityType",
   "title" : "長期照顧－身心障礙類型",
   "status" : "active",
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

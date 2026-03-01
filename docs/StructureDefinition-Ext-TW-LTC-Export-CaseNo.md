@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-CaseNo | *Version*:1.0.0 |
-| Active as of 2026-03-01 | *Computable Name*:ExtTWLTCExportCaseNo |
+| Active as of 2026-03-02 | *Computable Name*:ExtTWLTCExportCaseNo |
 
 此 Extension 用於表示長照 SDK 的案件編號（CASENO），適用於 Claim、CarePlan、Communication 或 OperationOutcome 資源。
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-Ext-TW-LTC-Export-Ca
   "name" : "ExtTWLTCExportCaseNo",
   "title" : "長照 SDK－案件編號（CASENO）",
   "status" : "active",
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description | *Version*:1.0.0 |
-| Active as of 2026-03-01 | *Computable Name*:ExtTWLTCAdverseEventDescription |
+| Active as of 2026-03-02 | *Computable Name*:ExtTWLTCAdverseEventDescription |
 
 記錄異常事件的多段文字描述，包含事件描述、發生過程、後續處理、改善建議等
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-Ext-TW-LTC-AdverseEv
   "name" : "ExtTWLTCAdverseEventDescription",
   "title" : "長期照顧－異常事件文字描述",
   "status" : "active",
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

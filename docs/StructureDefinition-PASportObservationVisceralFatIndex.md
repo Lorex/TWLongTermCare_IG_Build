@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationVisceralFatIndex | *Version*:1.0.0 |
-| Active as of 2026-03-01 | *Computable Name*:PASportObservationVisceralFatIndex |
+| Active as of 2026-03-02 | *Computable Name*:PASportObservationVisceralFatIndex |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之內臟脂肪指數資料。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-PASportObservationVi
   "name" : "PASportObservationVisceralFatIndex",
   "title" : "身體組成分析儀－內臟脂肪指數",
   "status" : "active",
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

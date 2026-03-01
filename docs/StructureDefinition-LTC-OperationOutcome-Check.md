@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-OperationOutcome-Check | *Version*:1.0.0 |
-| Draft as of 2026-03-01 | *Computable Name*:LTCOperationOutcomeCheck |
+| Draft as of 2026-03-02 | *Computable Name*:LTCOperationOutcomeCheck |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 OperationOutcome Resource，以呈現長照 SDK 跨月金額與月份檢核之錯誤旗標與訊息。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-LTC-OperationOutcome
   "name" : "LTCOperationOutcomeCheck",
   "title" : "長照 SDK－跨月檢核結果（QP_O）",
   "status" : "draft",
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

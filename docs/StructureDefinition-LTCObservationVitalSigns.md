@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationVitalSigns | *Version*:1.0.0 |
-| Active as of 2026-03-01 | *Computable Name*:LTCObservationVitalSigns |
+| Active as of 2026-03-02 | *Computable Name*:LTCObservationVitalSigns |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現長照機構住民的生命體徵資料。 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCObservationVitalS
   "name" : "LTCObservationVitalSigns",
   "title" : "長期照顧－生命體徵",
   "status" : "active",
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

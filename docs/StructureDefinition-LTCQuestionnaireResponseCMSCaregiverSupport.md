@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverSupport | *Version*:1.0.0 |
-| Active as of 2026-03-01 | *Computable Name*:LTCQuestionnaireResponseCMSCaregiverSupport |
+| Active as of 2026-03-02 | *Computable Name*:LTCQuestionnaireResponseCMSCaregiverSupport |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－主要照顧者工作與支持的回覆資料。 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCQuestionnaireResp
   "name" : "LTCQuestionnaireResponseCMSCaregiverSupport",
   "title" : "照顧管理評估量表－主要照顧者工作與支持",
   "status" : "active",
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

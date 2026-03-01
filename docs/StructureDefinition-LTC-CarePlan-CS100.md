@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-CarePlan-CS100 | *Version*:1.0.0 |
-| Draft as of 2026-03-01 | *Computable Name*:LTCCarePlanCS100 |
+| Draft as of 2026-03-02 | *Computable Name*:LTCCarePlanCS100 |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現 CS100 個案總查詢之照顧計畫資料，規則同 LTCCarePlanPayload。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-LTC-CarePlan-CS100.c
   "name" : "LTCCarePlanCS100",
   "title" : "長照 SDK－照顧計畫（CS100）",
   "status" : "draft",
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-Observation-Assessment-CS100 | *Version*:1.0.0 |
-| Draft as of 2026-03-01 | *Computable Name*:LTCObservationAssessmentCS100 |
+| Draft as of 2026-03-02 | *Computable Name*:LTCObservationAssessmentCS100 |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現 CS100 個案總查詢之評估核定摘要，包含 CMS 等級、福利身分及評估類型等資訊。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-LTC-Observation-Asse
   "name" : "LTCObservationAssessmentCS100",
   "title" : "長照 SDK－評估核定摘要（Observation）",
   "status" : "draft",
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

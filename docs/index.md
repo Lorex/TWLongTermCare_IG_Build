@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ImplementationGuide/tw.iii.ltc | *Version*:1.0.0 |
-| Active as of 2026-03-01 | *Computable Name*:TaiwanLongTermCareImplementationGuide |
+| Active as of 2026-03-02 | *Computable Name*:TaiwanLongTermCareImplementationGuide |
 
 ### 重要異動公告
 
@@ -112,11 +112,11 @@ TW LTC IG 中所有Profiles的FMM等級如下：
 
 | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 作者 | v0.0.1 ~ v0.4.1 | 經濟部產業發展署（Industrial Development Administration, Ministry of Economic Affairs） | 楊宇凡（Yu-Fan Yang） | 矽塔資訊服務有限公司（Sitatech Information Services Co., Ltd） | [ceo@sita.tech](mailto:ceo@sita.tech) |
+| 作者 | v0.0.1 ~ v1.0.0 | 經濟部產業發展署（Industrial Development Administration, Ministry of Economic Affairs） | 楊宇凡（Yu-Fan Yang） | 矽塔資訊服務有限公司（Sitatech Information Services Co., Ltd） | [ceo@sita.tech](mailto:ceo@sita.tech) |
 | 貢獻者 | v0.4.0 | 曹軒寧（Hsuan-Ning Tsao） | 矽塔資訊服務有限公司（Sitatech Information Services Co., Ltd） | [shannontsao@sita.tech](mailto:shannontsao@sita.tech) | |
 | 貢獻者 | v0.0.1 ~ v0.2.1 | 李修安（Hsiu-An Lee） | 國家衛生研究院 - 癌症研究所（National Health Research Institutes - The National Institute of Cancer Research） | [billy72325@gmail.com](mailto:billy72325@gmail.com) | |
-| 貢獻者 | v0.0.1 ~ v0.4.0 | 李祥豪（Siang-Hao Lee） | 九日生行動健康科技公司（9Rise International Mobile Health Technology Co., Ltd.） | [shvoidlee@gmail.com](mailto:shvoidlee@gmail.com) | |
-| 貢獻者 | v0.3.0 ~ v0.4.0 | 楊宗翰（Chung-Han Yang） | 九日生行動健康科技公司（9Rise International Mobile Health Technology Co., Ltd.） |  | |
+| 貢獻者 | v0.0.1 ~ v1.0.0 | 李祥豪（Siang-Hao Lee） | 九日生行動健康科技公司（9Rise International Mobile Health Technology Co., Ltd.） | [shvoidlee@gmail.com](mailto:shvoidlee@gmail.com) | |
+| 貢獻者 | v0.3.0 ~ v1.0.0 | 楊宗翰（Chung-Han Yang） | 九日生行動健康科技公司（9Rise International Mobile Health Technology Co., Ltd.） |  | |
 | 貢獻者 | v0.0.1 ~ v0.4.0 | 黃薰慧（Hsun-Hui Huang） | 財團法人資訊工業策進會 - 數位轉型研究院（Institute for Information Industry - Digital Transformation Research Institute） | [beatrice@iii.org.tw](mailto:beatrice@iii.org.tw) | |
 | 貢獻者 | v0.3.0 | 張鈞亮 (Chun-Liang Chang) | 財團法人資訊工業策進會 - 數位轉型研究院（Institute for Information Industry - Digital Transformation Research Institute） | [liangglchang@iii.org.tw](mailto:liangglchang@iii.org.tw) | |
 | 貢獻者 | v0.3.0 | 崔智萱 (Nicole Tsui) | 財團法人資訊工業策進會 - 數位轉型研究院（Institute for Information Industry - Digital Transformation Research Institute） | [nicolechtsui@iii.org.tw](mailto:nicolechtsui@iii.org.tw) | |
@@ -134,7 +134,7 @@ TW LTC IG 中所有Profiles的FMM等級如下：
   "name" : "TaiwanLongTermCareImplementationGuide",
   "title" : "臺灣長期照顧實作指引(TW LTC IG)",
   "status" : "active",
-  "date" : "2026-03-01T19:25:35+08:00",
+  "date" : "2026-03-02T02:26:08+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
