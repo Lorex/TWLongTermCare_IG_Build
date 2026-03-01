@@ -7,6 +7,7 @@ Alias:   $SNOMEDCT = http://snomed.info/sct
 Alias:   $SNOMEDCT20240901 = http://snomed.info/sct
 Alias:   $AddressUseCS = http://ltc-ig.fhir.tw/CodeSystem/AddressUseCS-TWLTC
 Alias:   $LOINC = http://loinc.org
+Alias:   $twJurisdiction = urn:iso:std:iso:3166#TW
 
 // TW Core Profiles
 Alias: $TWCoreBundle = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Bundle-twcore

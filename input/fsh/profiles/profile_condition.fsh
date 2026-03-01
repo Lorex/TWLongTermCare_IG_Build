@@ -54,7 +54,7 @@ Profile: LTCConditionProblem
 Parent: LTCCondition
 Id: LTCConditionProblem
 Title: "長期照顧－主要疾病"
-Description: "用於表述案主(家)主要疾病的 Condition Profile。"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現案主或其家庭之主要疾病資料。"
 
 * category 1..1
 * category.coding 1..1
@@ -66,7 +66,7 @@ Profile: LTCConditionNeed
 Parent: LTCCondition
 Id: LTCConditionNeed
 Title: "長期照顧－主要問題及需求"
-Description: "用於表述案主(家)主要問題及需求的 Condition Profile。"
+Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現案主或其家庭之主要問題及照護需求。"
 
 * category 1..1
 * category.coding 1..1
