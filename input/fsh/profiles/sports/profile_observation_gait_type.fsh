@@ -59,7 +59,7 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observatio
 * component[normal].code.coding.system 1..1 MS
 * component[normal].code.coding.system = $SNOMED
 * component[normal].code.coding.code 1..1 MS
-* component[normal].code.coding.code = #811702
+* component[normal].code.coding.code = #8117002
 * component[normal].code.coding.display 1..1 MS
 * component[normal].code.coding.display = "Gait normal"
 * component[normal].valueQuantity 0..1 MS
@@ -104,4 +104,59 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observatio
 * component[lateral].valueQuantity.system 1..1 MS
 * component[lateral].valueQuantity.system = "http://unitsofmeasure.org"
 * component[lateral].valueQuantity.code 1..1 MS
+* component[lateral].valueQuantity.code = #%
+
+// Example
+Instance: pasport-observation-gait-type-example
+InstanceOf: PASportObservationGaitType
+Title: "步態分析測量範例"
+Description: "一個步態分析測量的範例，展示如何使用 PASportObservationGaitType Profile 來記錄步態類型分析"
+Usage: #example
+
+* status = #final
+
+* category[twcore].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[twcore].coding.code = #activity
+* category[twcore].coding.display = "Activity"
+
+* code.coding.system = "http://snomed.info/sct"
+* code.coding.code = #298302000
+* code.coding.display = "Finding of gait"
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* effectiveDateTime = "2024-01-15T10:15:00+08:00"
+
+* performer = Reference(ltc-practitioner-example)
+
+* bodySite.coding.system = "http://snomed.info/sct"
+* bodySite.coding.code = #56459004
+* bodySite.coding.display = "Foot structure"
+
+* valueCodeableConcept.coding.system = "http://snomed.info/sct"
+* valueCodeableConcept.coding.code = #8117002
+* valueCodeableConcept.coding.display = "Gait normal"
+
+* component[normal].code.coding.system = "http://snomed.info/sct"
+* component[normal].code.coding.code = #8117002
+* component[normal].code.coding.display = "Gait normal"
+* component[normal].valueQuantity.value = 75
+* component[normal].valueQuantity.unit = "%"
+* component[normal].valueQuantity.system = "http://unitsofmeasure.org"
+* component[normal].valueQuantity.code = #%
+
+* component[medial].code.coding.system = "http://snomed.info/sct"
+* component[medial].code.coding.code = #264739002
+* component[medial].code.coding.display = "Medial rotation - action"
+* component[medial].valueQuantity.value = 15
+* component[medial].valueQuantity.unit = "%"
+* component[medial].valueQuantity.system = "http://unitsofmeasure.org"
+* component[medial].valueQuantity.code = #%
+
+* component[lateral].code.coding.system = "http://snomed.info/sct"
+* component[lateral].code.coding.code = #264730003
+* component[lateral].code.coding.display = "Lateral rotation - action"
+* component[lateral].valueQuantity.value = 10
+* component[lateral].valueQuantity.unit = "%"
+* component[lateral].valueQuantity.system = "http://unitsofmeasure.org"
 * component[lateral].valueQuantity.code = #%

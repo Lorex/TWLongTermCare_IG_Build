@@ -1,0 +1,91 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/ValueSet/GoalDescriptionVS-TWLTC> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "GoalDescriptionVS-TWLTC"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet GoalDescriptionVS-TWLTC</b></p><a name=\"GoalDescriptionVS-TWLTC\"> </a><a name=\"hcGoalDescriptionVS-TWLTC\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/710950005\">710950005</a></td><td>Advancing mobility</td></tr><tr><td><a href=\"http://snomed.info/id/370885003\">370885003</a></td><td>Manage activities of daily living (ADLS)</td></tr><tr><td><a href=\"http://snomed.info/id/386373004\">386373004</a></td><td>Nutrition therapy</td></tr><tr><td><a href=\"http://snomed.info/id/718361005\">718361005</a></td><td>Weight management program</td></tr><tr><td><a href=\"http://snomed.info/id/278414003\">278414003</a></td><td>Pain management</td></tr><tr><td><a href=\"http://snomed.info/id/386296001\">386296001</a></td><td>Fall prevention</td></tr><tr><td><a href=\"http://snomed.info/id/702474001\">702474001</a></td><td>Cognitive rehabilitation therapy</td></tr><tr><td><a href=\"http://snomed.info/id/5154007\">5154007</a></td><td>Speech therapy</td></tr><tr><td><a href=\"http://snomed.info/id/385942004\">385942004</a></td><td>Wound care management</td></tr><tr><td><a href=\"http://snomed.info/id/710054004\">710054004</a></td><td>Maintaining skin integrity</td></tr><tr><td><a href=\"http://snomed.info/id/385991005\">385991005</a></td><td>Wellness promotion</td></tr><tr><td><a href=\"http://snomed.info/id/182832007\">182832007</a></td><td>Drug administration</td></tr><tr><td><a href=\"http://snomed.info/id/430193006\">430193006</a></td><td>Medication reconciliation</td></tr><tr><td><a href=\"http://snomed.info/id/133921002\">133921002</a></td><td>Emotional support</td></tr><tr><td><a href=\"http://snomed.info/id/129008009\">129008009</a></td><td>Bowel control</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://ltc-ig.fhir.tw/ValueSet/GoalDescriptionVS-TWLTC"^^xsd:anyURI ;
+     fhir:l <http://ltc-ig.fhir.tw/ValueSet/GoalDescriptionVS-TWLTC>
+  ] ; # 
+  fhir:version [ fhir:v "0.4.1"] ; # 
+  fhir:name [ fhir:v "GoalDescriptionVSTWLTC"] ; # 
+  fhir:title [ fhir:v "照顧目標描述值集"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2024-08-25"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "經濟部產業發展署"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "經濟部產業發展署" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.ida.gov.tw/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "照顧目標的描述值集，用以表述長期照顧情境中涉及之照顧目標描述內容。本值集列舉臺灣長期照顧情境常用之 SNOMED CT 照顧目標代碼，綁定強度為 extensible，實作者可依需求使用其他 SNOMED CT 或 LOINC 代碼。"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "710950005" ] ;
+         fhir:display [ fhir:v "Advancing mobility" ]
+       ] [
+         fhir:code [ fhir:v "370885003" ] ;
+         fhir:display [ fhir:v "Manage activities of daily living (ADLS)" ]
+       ] [
+         fhir:code [ fhir:v "386373004" ] ;
+         fhir:display [ fhir:v "Nutrition therapy" ]
+       ] [
+         fhir:code [ fhir:v "718361005" ] ;
+         fhir:display [ fhir:v "Weight management program" ]
+       ] [
+         fhir:code [ fhir:v "278414003" ] ;
+         fhir:display [ fhir:v "Pain management" ]
+       ] [
+         fhir:code [ fhir:v "386296001" ] ;
+         fhir:display [ fhir:v "Fall prevention" ]
+       ] [
+         fhir:code [ fhir:v "702474001" ] ;
+         fhir:display [ fhir:v "Cognitive rehabilitation therapy" ]
+       ] [
+         fhir:code [ fhir:v "5154007" ] ;
+         fhir:display [ fhir:v "Speech therapy" ]
+       ] [
+         fhir:code [ fhir:v "385942004" ] ;
+         fhir:display [ fhir:v "Wound care management" ]
+       ] [
+         fhir:code [ fhir:v "710054004" ] ;
+         fhir:display [ fhir:v "Maintaining skin integrity" ]
+       ] [
+         fhir:code [ fhir:v "385991005" ] ;
+         fhir:display [ fhir:v "Wellness promotion" ]
+       ] [
+         fhir:code [ fhir:v "182832007" ] ;
+         fhir:display [ fhir:v "Drug administration" ]
+       ] [
+         fhir:code [ fhir:v "430193006" ] ;
+         fhir:display [ fhir:v "Medication reconciliation" ]
+       ] [
+         fhir:code [ fhir:v "133921002" ] ;
+         fhir:display [ fhir:v "Emotional support" ]
+       ] [
+         fhir:code [ fhir:v "129008009" ] ;
+         fhir:display [ fhir:v "Bowel control" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -19,13 +19,29 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observatio
 
 * code 1..1 MS
 * code ^short = "安靜心率"
-* code.coding 1..1 MS
-* code.coding.system 1..1 MS
-* code.coding.system = $LOINC
-* code.coding.code 1..1 MS
-* code.coding.code = #40443-4
-* code.coding.display 1..1 MS
-* code.coding.display = "Heart rate --resting"
+* code.coding 1..* MS
+* code.coding ^slicing.discriminator.type = #pattern
+* code.coding ^slicing.discriminator.path = "$this"
+* code.coding ^slicing.rules = #open
+* code.coding contains
+    HeartRateCode 1..1 MS and
+    RestingHeartRateCode 1..1 MS
+* code.coding[HeartRateCode] ^patternCoding.system = $LOINC
+* code.coding[HeartRateCode] ^patternCoding.code = #8867-4
+* code.coding[HeartRateCode].system 1..1 MS
+* code.coding[HeartRateCode].system = $LOINC
+* code.coding[HeartRateCode].code 1..1 MS
+* code.coding[HeartRateCode].code = #8867-4
+* code.coding[HeartRateCode].display 1..1 MS
+* code.coding[HeartRateCode].display = "Heart rate"
+* code.coding[RestingHeartRateCode] ^patternCoding.system = $LOINC
+* code.coding[RestingHeartRateCode] ^patternCoding.code = #40443-4
+* code.coding[RestingHeartRateCode].system 1..1 MS
+* code.coding[RestingHeartRateCode].system = $LOINC
+* code.coding[RestingHeartRateCode].code 1..1 MS
+* code.coding[RestingHeartRateCode].code = #40443-4
+* code.coding[RestingHeartRateCode].display 1..1 MS
+* code.coding[RestingHeartRateCode].display = "Heart rate --resting"
 
 * subject 1..1 MS
 * subject ^short = "量測對象"
@@ -55,3 +71,35 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observatio
 
 * method 0..1 MS
 * method from http://hl7.org/fhir/ValueSet/observation-methods (extensible)
+
+// Example
+Instance: pasport-observation-resting-heart-rate-example
+InstanceOf: PASportObservationRestingHeartRate
+Title: "安靜心率測量範例"
+Description: "一個安靜心率測量的範例，展示如何使用 PASportObservationRestingHeartRate Profile 來記錄安靜心率資料"
+Usage: #example
+
+* status = #final
+
+* category[twcore].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[twcore].coding.code = #vital-signs
+* category[twcore].coding.display = "Vital Signs"
+
+* code.coding[HeartRateCode].system = "http://loinc.org"
+* code.coding[HeartRateCode].code = #8867-4
+* code.coding[HeartRateCode].display = "Heart rate"
+
+* code.coding[RestingHeartRateCode].system = "http://loinc.org"
+* code.coding[RestingHeartRateCode].code = #40443-4
+* code.coding[RestingHeartRateCode].display = "Heart rate --resting"
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* effectiveDateTime = "2024-01-15T08:45:00+08:00"
+
+* performer = Reference(ltc-practitioner-example)
+
+* valueQuantity.value = 68
+* valueQuantity.unit = "/min"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #/min

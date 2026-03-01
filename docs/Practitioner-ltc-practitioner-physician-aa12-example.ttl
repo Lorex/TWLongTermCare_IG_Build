@@ -1,0 +1,89 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Practitioner/ltc-practitioner-physician-aa12-example> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-practitioner-physician-aa12-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ltc-practitioner-physician-aa12-example</b></p><a name=\"ltc-practitioner-physician-aa12-example\"> </a><a name=\"hcltc-practitioner-physician-aa12-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCPractitioner.html\">長期照顧－照顧服務提供者</a></p></div><p><b>identifier</b>: <code>https://www.tph.mohw.gov.tw</code>/DR001234 (use: official, ), <code>http://www.immigration.gov.tw</code>/A123456789 (use: official, )</p><p><b>name</b>: 王醫師</p><p><b>telecom</b>: ph: 02-23123456(Work), <a href=\"mailto:dr.wang@hospital.tw\">dr.wang@hospital.tw</a></p><p><b>address</b>: 台北市中正區重慶南路一段122號</p><p><b>gender</b>: Male</p><p><b>birthDate</b>: 1975-06-15</p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Identifier</b></td><td><b>Code</b></td><td><b>Period</b></td><td><b>Issuer</b></td></tr><tr><td style=\"display: none\">*</td><td><code>https://www.mohw.gov.tw</code>/MD123456</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0360 MD}\">Doctor of Medicine</span></td><td>2000-07-01 --&gt; (ongoing)</td><td>台灣大學醫學院</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [
+       fhir:v "https://www.tph.mohw.gov.tw"^^xsd:anyURI ;
+       fhir:l <https://www.tph.mohw.gov.tw>
+     ] ;
+     fhir:value [ fhir:v "DR001234" ]
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [
+       fhir:v "http://www.immigration.gov.tw"^^xsd:anyURI ;
+       fhir:l <http://www.immigration.gov.tw>
+     ] ;
+     fhir:value [ fhir:v "A123456789" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:text [ fhir:v "王醫師" ] ;
+     fhir:family [ fhir:v "王" ] ;
+     fhir:given ( [ fhir:v "志明" ] ) ;
+     fhir:prefix ( [ fhir:v "Dr." ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "02-23123456" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "dr.wang@hospital.tw" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:text [ fhir:v "台北市中正區重慶南路一段122號" ] ;
+     fhir:line ( [ fhir:v "重慶南路一段122號" ] ) ;
+     fhir:city [ fhir:v "台北市" ] ;
+     fhir:district [ fhir:v "中正區" ] ;
+     fhir:postalCode [ fhir:v "100" ] ;
+     fhir:country [ fhir:v "TW" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1975-06-15"^^xsd:date] ; # 
+  fhir:qualification ( [
+     fhir:identifier ( [
+       fhir:system [
+         fhir:v "https://www.mohw.gov.tw"^^xsd:anyURI ;
+         fhir:l <https://www.mohw.gov.tw>
+       ] ;
+       fhir:value [ fhir:v "MD123456" ]
+     ] ) ;
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0360"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0360>
+         ] ;
+         fhir:code [ fhir:v "MD" ] ;
+         fhir:display [ fhir:v "Doctor of Medicine" ]
+       ] )
+     ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2000-07-01"^^xsd:date ]
+     ] ;
+     fhir:issuer [
+       fhir:display [ fhir:v "台灣大學醫學院" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

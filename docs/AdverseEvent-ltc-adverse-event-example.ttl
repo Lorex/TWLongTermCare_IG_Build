@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/AdverseEvent/ltc-adverse-event-example> a fhir:AdverseEvent ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-adverse-event-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: AdverseEvent ltc-adverse-event-example</b></p><a name=\"ltc-adverse-event-example\"> </a><a name=\"hcltc-adverse-event-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-AdverseEvent-twltc.html\">長期照顧－異常事件警報</a></p></div><p><b>identifier</b>: <code>http://ltc-ig.fhir.tw/adverse-event</code>/AE-2024-001 (use: official, )</p><p><b>actuality</b>: Adverse Event</p><p><b>event</b>: <span title=\"Codes:\">離開安全區域</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-chen-ming-hui.html\">陳明慧 Female, DoB: 1945-03-15 ( National Person Identifier (TWN): A123456789 (use: official, ))</a></p><p><b>date</b>: 2024-01-15 14:30:00+0800</p><p><b>detected</b>: 2024-01-15 14:32:00+0800</p><p><b>recordedDate</b>: 2024-01-15 14:35:00+0800</p><p><b>location</b>: <a href=\"Location-ltc-location-example.html\">Location 新北市私立安康老人長期照顧中心（養護型）</a></p><p><b>seriousness</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/adverse-event-seriousness serious}\">Serious</span></p><p><b>severity</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/adverse-event-severity moderate}\">Moderate</span></p><p><b>outcome</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/adverse-event-outcome recovering}\">Recovering</span></p><p><b>recorder</b>: <a href=\"Practitioner-ltc-practitioner-example.html\">Practitioner 王美玲(official)</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [
+       fhir:v "http://ltc-ig.fhir.tw/adverse-event"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/adverse-event>
+     ] ;
+     fhir:value [ fhir:v "AE-2024-001" ]
+  ] ; # 
+  fhir:actuality [ fhir:v "actual"] ; # 
+  fhir:event [
+     fhir:text [ fhir:v "離開安全區域" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-chen-ming-hui> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-chen-ming-hui" ]
+  ] ; # 
+  fhir:date [ fhir:v "2024-01-15T14:30:00+08:00"^^xsd:dateTime] ; # 
+  fhir:detected [ fhir:v "2024-01-15T14:32:00+08:00"^^xsd:dateTime] ; # 
+  fhir:recordedDate [ fhir:v "2024-01-15T14:35:00+08:00"^^xsd:dateTime] ; # 
+  fhir:location [
+     fhir:l <http://ltc-ig.fhir.tw/Location/ltc-location-example> ;
+     fhir:reference [ fhir:v "Location/ltc-location-example" ]
+  ] ; # 
+  fhir:seriousness [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/adverse-event-seriousness>
+       ] ;
+       fhir:code [ fhir:v "serious" ] ;
+       fhir:display [ fhir:v "Serious" ]
+     ] )
+  ] ; # 
+  fhir:severity [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/adverse-event-severity"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/adverse-event-severity>
+       ] ;
+       fhir:code [ fhir:v "moderate" ] ;
+       fhir:display [ fhir:v "Moderate" ]
+     ] )
+  ] ; # 
+  fhir:outcome [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/adverse-event-outcome"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/adverse-event-outcome>
+       ] ;
+       fhir:code [ fhir:v "recovering" ] ;
+       fhir:display [ fhir:v "Recovering" ]
+     ] )
+  ] ; # 
+  fhir:recorder [
+     fhir:l <http://ltc-ig.fhir.tw/Practitioner/ltc-practitioner-example> ;
+     fhir:reference [ fhir:v "Practitioner/ltc-practitioner-example" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

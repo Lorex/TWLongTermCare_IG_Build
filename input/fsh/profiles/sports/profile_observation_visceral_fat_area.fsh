@@ -55,3 +55,31 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observatio
 
 * method 0..1 MS
 * method from http://hl7.org/fhir/ValueSet/observation-methods (extensible)
+
+// Example
+Instance: pasport-observation-visceral-fat-area-example
+InstanceOf: PASportObservationVisceralFatArea
+Title: "內臟脂肪面積測量範例"
+Description: "一個內臟脂肪面積測量的範例，展示如何使用 PASportObservationVisceralFatArea Profile 來記錄身體組成分析"
+Usage: #example
+
+* status = #final
+
+* category[twcore].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[twcore].coding.code = #vital-signs
+* category[twcore].coding.display = "Vital Signs"
+
+* code.coding.system = "http://loinc.org"
+* code.coding.code = #73707-2
+* code.coding.display = "Visceral fat [Area] Measured"
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* effectiveDateTime = "2024-01-15T08:45:00+08:00"
+
+* performer = Reference(ltc-practitioner-example)
+
+* valueQuantity.value = 85.3
+* valueQuantity.unit = "cm2"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #cm2

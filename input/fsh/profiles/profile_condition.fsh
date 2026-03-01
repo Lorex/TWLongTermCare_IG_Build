@@ -21,6 +21,34 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition 
 * asserter.reference 1..1 MS
 * asserter.reference ^short = "聲稱有此病情、問題或診斷的人員。[應輸入 Practitioner/PractitionerRole/Patient/RelatedPerson Resource ID]"
 
+// Example
+Instance: ltc-condition-example
+InstanceOf: LTCCondition
+Title: "病情、問題或診斷範例"
+Description: "一個病情的範例，展示如何使用 LTCCondition Profile 來記錄住民的病情資料"
+Usage: #example
+
+* clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
+* clinicalStatus.coding.code = #active
+
+* verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+* verificationStatus.coding.code = #confirmed
+
+* category[0].coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"
+* category[0].coding.code = #encounter-diagnosis
+* category[0].coding.display = "Encounter Diagnosis"
+
+* code.coding.system = "http://snomed.info/sct"
+* code.coding.code = #38341003
+* code.coding.display = "Hypertensive disorder"
+* code.text = "高血壓"
+
+* subject = Reference(ltc-patient-referral-chen-ming-hui-example)
+
+* onsetDateTime = "2019-03-10"
+
+* recorder = Reference(ltc-practitioner-role-nurse-example)
+
 // 子類：主要疾病
 Profile: LTCConditionProblem
 Parent: LTCCondition

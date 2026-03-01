@@ -1,0 +1,564 @@
+{
+  "package": "tw.iii.ltc",
+  "version": "0.4.1",
+  "fhirVersion": "4.0.1",
+  "extensions": [
+    {
+      "url": "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEconomyStatus-TWLTC",
+      "title": "長照機構住民經濟狀況",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEducationStatus-TWLTC",
+      "title": "長照機構住民教育程度",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientIdentity-TWLTC",
+      "title": "個案身分別",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "http://ltc-ig.fhir.tw/StructureDefinition/ExtRelatedPersonIsPrimary-TWLTC",
+      "title": "是否為主要照顧者",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://ltc-ig.fhir.tw/StructureDefinition/cdr-total-score",
+      "title": "CDR 總分",
+      "types": [
+        "integer"
+      ]
+    },
+    {
+      "url": "http://ltc-ig.fhir.tw/StructureDefinition/mmse-total-score",
+      "title": "MMSE 總分",
+      "types": [
+        "integer"
+      ]
+    }
+  ],
+  "profiles": {
+    "AdverseEvent": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc",
+        "title": "長期照顧－異常事件警報"
+      }
+    ],
+    "Bundle": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleCMS",
+        "title": "照顧管理評估量表文件打包"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleReferral",
+        "title": "長期照顧管理中心個案服務初篩表/轉介單文件打包"
+      }
+    ],
+    "CarePlan": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportCarePlan",
+        "title": "運動處方－運動計畫"
+      }
+    ],
+    "CareTeam": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCCareTeam",
+        "title": "長期照顧－照顧團隊"
+      }
+    ],
+    "Composition": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionCMS",
+        "title": "照顧管理評估量表文件架構"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionReferral",
+        "title": "長期照護管理中心個案服務初篩表/轉介單文件架構"
+      }
+    ],
+    "Condition": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportConditionExerciseHistory",
+        "title": "運動處方－運動史"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportConditionMedicalHistory",
+        "title": "運動處方－病史"
+      }
+    ],
+    "Goal": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportGoal",
+        "title": "運動處方－運動目標"
+      }
+    ],
+    "MedicationAdministration": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCMedicationAdministration",
+        "title": "長期照顧－用藥資料"
+      }
+    ],
+    "Observation": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationBasalMetabolicRate",
+        "title": "身體組成分析儀－基礎代謝率"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationBloodPressure",
+        "title": "基礎生理量測－血壓"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationBodyAge",
+        "title": "身體組成分析儀－體內年齡"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationBodyBoneMass",
+        "title": "身體組成分析儀－推定骨量"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationBodyFatMass",
+        "title": "身體組成分析儀－體脂肪重"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationBodyFatPercentage",
+        "title": "身體組成分析儀－體脂率"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationBodyMassIndex",
+        "title": "身體組成分析儀－身體質量指數"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationBodyTemperature",
+        "title": "基礎生理量測－體溫"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationCellMass",
+        "title": "身體組成分析儀－細胞量"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationExtracellularWater",
+        "title": "身體組成分析儀－細胞外水分"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationExtracellularWaterRatio",
+        "title": "身體組成分析儀－水腫指數"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationFatFreeMass",
+        "title": "身體組成分析儀－去脂體重"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationGaitCycle",
+        "title": "穿戴裝置－步態週期"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationGaitType",
+        "title": "穿戴裝置－步態分析"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationGlucose",
+        "title": "基礎生理量測－血糖"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationHeartRate",
+        "title": "基礎生理量測－心率"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationHeartRateVariability",
+        "title": "基礎生理量測－心率變異性"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationHeight",
+        "title": "基礎生理量測－身高"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationIntracellularWater",
+        "title": "身體組成分析儀－細胞內水分"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationMeanHeartRate",
+        "title": "基礎生理量測－平均心率"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationMineral",
+        "title": "身體組成分析儀－礦物質重"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationObesityDegree",
+        "title": "身體組成分析儀－肥胖度"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationPeripheralOxygenSaturation",
+        "title": "基礎生理量測－脈搏血氧飽和度"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationProtein",
+        "title": "身體組成分析儀－蛋白質重"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationRespiratoryRate",
+        "title": "基礎生理量測－呼吸速率"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationRestingHeartRate",
+        "title": "基礎生理量測－安靜心率"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationSkeletalMuscleMass",
+        "title": "身體組成分析儀－骨骼肌重"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationSkeletalMuscleMassIndex",
+        "title": "身體組成分析儀－肌肉質量指數"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationSoftLeanMass",
+        "title": "身體組成分析儀－肌肉量"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationTotalBodyWater",
+        "title": "身體組成分析儀－身體總水分"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationTreadmill",
+        "title": "運動項目－跑步機"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationVisceralFatArea",
+        "title": "身體組成分析儀－內臟脂肪面積"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationVisceralFatIndex",
+        "title": "身體組成分析儀－內臟脂肪指數"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationWaist",
+        "title": "基礎生理量測－腰圍"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationWaistHipRate",
+        "title": "身體組成分析儀－腰臀圍比"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationWeight",
+        "title": "基礎生理量測－體重"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationWeightTraining",
+        "title": "運動項目－重量訓練"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCPatient",
+        "title": "長期照顧－住民基本資料"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientCMS",
+        "title": "照顧管理評估量表－個案基本資料"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientReferral",
+        "title": "轉介單－個案基本資料"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner",
+        "title": "長期照顧－照顧服務提供者"
+      }
+    ],
+    "PractitionerRole": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitionerRole",
+        "title": "長期照顧－服務人員角色"
+      }
+    ],
+    "Procedure": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCProcedureCareActivity",
+        "title": "長期照顧－照護活動"
+      }
+    ],
+    "Questionnaire": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire",
+        "title": "長期照顧－問卷"
+      }
+    ],
+    "QuestionnaireResponse": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponse",
+        "title": "長期照顧－問卷回覆"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseAA01",
+        "title": "長期照顧－AA01照顧計畫擬訂與服務連結問卷回應"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseAA02",
+        "title": "長期照顧－AA02照顧管理追蹤問卷回覆"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseAA12",
+        "title": "長期照護醫師意見書問卷回覆 (AA12)"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseADL",
+        "title": "ADL 問卷回覆"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCDR",
+        "title": "長期照顧－臨床失智評估量表回覆"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverLoad",
+        "title": "照顧管理評估量表－主要照顧者負荷問卷回覆"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCaregiverSupport",
+        "title": "照顧管理評估量表－主要照顧者工作與支持"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSCommunication",
+        "title": "照顧管理評估量表－個案溝通能力問卷回覆"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMemory",
+        "title": "照顧管理評估量表－個案短期記憶力問卷回覆"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSMental",
+        "title": "照顧管理評估量表－情緒及行為型態問卷回覆"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSociety",
+        "title": "照顧管理評估量表－居家環境與社會參與問卷回覆"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSpecialCare",
+        "title": "照顧管理評估量表－特殊複雜照護需要問卷回覆"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseIADL",
+        "title": "IADL 問卷回覆"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseMMSE",
+        "title": "長期照顧－簡易智能狀態測驗回覆"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralCaregiver",
+        "title": "轉介單－照顧者問卷回覆"
+      },
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseReferralSOF",
+        "title": "轉介單－衰弱評估問卷回覆"
+      }
+    ],
+    "RelatedPerson": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson",
+        "title": "長期照顧－關係人"
+      }
+    ],
+    "Location": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/Location-twltc",
+        "title": "長期照顧－個案位置監測"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/Organization-twltc",
+        "title": "長期照顧－機構"
+      }
+    ],
+    "ServiceRequest": [
+      {
+        "url": "http://ltc-ig.fhir.tw/StructureDefinition/PASportServiceRequest",
+        "title": "運動處方－服務請求"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support": [
+      "StructureDefinition.differential.element.type",
+      "StructureDefinition.differential.element.type.targetProfile",
+      "StructureDefinition.snapshot.element.type",
+      "StructureDefinition.snapshot.element.type.targetProfile"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-nationality": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/regex": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/rendering-style": [
+      "Questionnaire.item.answerOption"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.differential.element.type",
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ],
+    "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEconomyStatus-TWLTC": [
+      "Bundle.entry.resource",
+      "Patient"
+    ],
+    "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEducationStatus-TWLTC": [
+      "Bundle.entry.resource",
+      "Patient"
+    ],
+    "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientIdentity-TWLTC": [
+      "Bundle.entry.resource",
+      "Patient"
+    ],
+    "http://ltc-ig.fhir.tw/StructureDefinition/ExtRelatedPersonIsPrimary-TWLTC": [
+      "Bundle.entry.resource",
+      "RelatedPerson"
+    ],
+    "http://ltc-ig.fhir.tw/StructureDefinition/cdr-total-score": [
+      "QuestionnaireResponse"
+    ],
+    "http://ltc-ig.fhir.tw/StructureDefinition/mmse-total-score": [
+      "QuestionnaireResponse"
+    ],
+    "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/identifier-suffix": [
+      "Patient.identifier.type.coding.code",
+      "Practitioner.identifier.type.coding.code"
+    ],
+    "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/person-age": [
+      "Patient"
+    ],
+    "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-alley": [
+      "Location.address",
+      "Organization.address",
+      "Patient.address"
+    ],
+    "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-floor": [
+      "Location.address",
+      "Organization.address",
+      "Patient.address"
+    ],
+    "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-lane": [
+      "Location.address",
+      "Organization.address",
+      "Patient.address"
+    ],
+    "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-neighborhood": [
+      "Location.address",
+      "Organization.address",
+      "Patient.address"
+    ],
+    "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-number": [
+      "Location.address",
+      "Organization.address",
+      "Patient.address"
+    ],
+    "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-postal-code": [
+      "Location.address.postalCode",
+      "Organization.address.postalCode",
+      "Patient.address.postalCode"
+    ],
+    "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-room": [
+      "Location.address",
+      "Organization.address",
+      "Patient.address"
+    ],
+    "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-section": [
+      "Location.address",
+      "Organization.address",
+      "Patient.address"
+    ],
+    "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-village": [
+      "Location.address",
+      "Organization.address",
+      "Patient.address"
+    ]
+  }
+}

@@ -56,3 +56,31 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observatio
 
 * method 0..1 MS
 * method from http://hl7.org/fhir/ValueSet/observation-methods (extensible)
+
+// Example
+Instance: pasport-observation-intracellular-water-example
+InstanceOf: PASportObservationIntracellularWater
+Title: "細胞內水分測量範例"
+Description: "一個細胞內水分測量的範例，展示如何使用 PASportObservationIntracellularWater Profile 來記錄身體組成分析"
+Usage: #example
+
+* status = #final
+
+* category[twcore].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[twcore].coding.code = #vital-signs
+* category[twcore].coding.display = "Vital Signs"
+
+* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport"
+* code.coding.code = #ICW
+* code.coding.display = "細胞內水分"
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* effectiveDateTime = "2024-01-15T08:45:00+08:00"
+
+* performer = Reference(ltc-practitioner-example)
+
+* valueQuantity.value = 22.8
+* valueQuantity.unit = "kg"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #kg

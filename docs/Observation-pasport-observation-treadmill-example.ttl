@@ -1,0 +1,215 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Observation/pasport-observation-treadmill-example> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pasport-observation-treadmill-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationTreadmill"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationTreadmill>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation pasport-observation-treadmill-example</b></p><a name=\"pasport-observation-treadmill-example\"> </a><a name=\"hcpasport-observation-treadmill-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-PASportObservationTreadmill.html\">運動項目－跑步機</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category activity}\">Activity</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 466021001}\">Treadmill, powered</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-chen-ming-hui.html\">陳明慧 Female, DoB: 1945-03-15 ( National Person Identifier (TWN): A123456789 (use: official, ))</a></p><p><b>effective</b>: 2024-01-15 10:30:00+0800</p><p><b>performer</b>: <a href=\"Practitioner-ltc-practitioner-example.html\">Practitioner 王美玲(official)</a></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 55411-3}\">Exercise duration</span></p><p><b>value</b>: 30 min<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemin = 'min')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 55412-1}\">Exercise distance unspecified time</span></p><p><b>value</b>: 3.5 km<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codekm = 'km')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 55421-2}\">Calories burned Machine estimate</span></p><p><b>value</b>: 250 kcal<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codekcal = 'kcal')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 252141006}\">Treadmill speed achieved</span></p><p><b>value</b>: 7 km/h<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codekm/h = 'km/h')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 101692-2}\">Maximum heart rate</span></p><p><b>value</b>: 145 /min<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/min = '/min')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 103205-1}\">Mean heart rate</span></p><p><b>value</b>: 128 /min<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/min = '/min')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 252140007}\">Treadmill gradient achieved</span></p><p><b>value</b>: 5 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "activity" ] ;
+       fhir:display [ fhir:v "Activity" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:466021001 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "466021001" ] ;
+       fhir:display [ fhir:v "Treadmill, powered" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-chen-ming-hui> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-chen-ming-hui" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2024-01-15T10:30:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <http://ltc-ig.fhir.tw/Practitioner/ltc-practitioner-example> ;
+     fhir:reference [ fhir:v "Practitioner/ltc-practitioner-example" ]
+  ] ) ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:55411-3 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "55411-3" ] ;
+         fhir:display [ fhir:v "Exercise duration" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "30"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "min" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "min" ]
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:55412-1 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "55412-1" ] ;
+         fhir:display [ fhir:v "Exercise distance unspecified time" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v 3.5 ] ;
+       fhir:unit [ fhir:v "km" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "km" ]
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:55421-2 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "55421-2" ] ;
+         fhir:display [ fhir:v "Calories burned Machine estimate" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "250"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "kcal" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "kcal" ]
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a sct:252141006 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "252141006" ] ;
+         fhir:display [ fhir:v "Treadmill speed achieved" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "7"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "km/h" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "km/h" ]
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:101692-2 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "101692-2" ] ;
+         fhir:display [ fhir:v "Maximum heart rate" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "145"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "/min" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "/min" ]
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:103205-1 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "103205-1" ] ;
+         fhir:display [ fhir:v "Mean heart rate" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "128"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "/min" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "/min" ]
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a sct:252140007 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "252140007" ] ;
+         fhir:display [ fhir:v "Treadmill gradient achieved" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "%" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "%" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

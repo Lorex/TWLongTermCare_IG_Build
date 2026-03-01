@@ -21,7 +21,7 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observatio
 * code ^short = "肥胖度"
 * code.coding 1..1 MS
 * code.coding.system 1..1 MS
-* code.coding.system = $LOINC
+* code.coding.system = $TempCodeCS
 * code.coding.code 1..1 MS
 * code.coding.code = #ObesityDegree
 * code.coding.display 1..1 MS
@@ -55,3 +55,31 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observatio
 
 * method 0..1 MS
 * method from http://hl7.org/fhir/ValueSet/observation-methods (extensible)
+
+// Example
+Instance: pasport-observation-obesity-degree-example
+InstanceOf: PASportObservationObesityDegree
+Title: "肥胖度測量範例"
+Description: "一個肥胖度測量的範例，展示如何使用 PASportObservationObesityDegree Profile 來記錄肥胖度資料"
+Usage: #example
+
+* status = #final
+
+* category[twcore].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[twcore].coding.code = #vital-signs
+* category[twcore].coding.display = "Vital Signs"
+
+* code.coding.system = "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport"
+* code.coding.code = #ObesityDegree
+* code.coding.display = "肥胖度"
+
+* subject = Reference(ltc-patient-chen-ming-hui)
+
+* effectiveDateTime = "2024-01-15T08:45:00+08:00"
+
+* performer = Reference(ltc-practitioner-example)
+
+* valueQuantity.value = 15.3
+* valueQuantity.unit = "%"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #%

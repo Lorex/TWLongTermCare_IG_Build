@@ -1,0 +1,56 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Procedure/ltc-procedure-bathing-example> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ltc-procedure-bathing-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCProcedureCareActivity"^^xsd:anyURI ;
+       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCProcedureCareActivity>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Procedure ltc-procedure-bathing-example</b></p><a name=\"ltc-procedure-bathing-example\"> </a><a name=\"hcltc-procedure-bathing-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCProcedureCareActivity.html\">長期照顧－照護活動</a></p></div><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 60369001}\">沐浴/擦澡</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-chen-ming-hui.html\">陳明慧 Female, DoB: 1945-03-15 ( National Person Identifier (TWN): A123456789 (use: official, ))</a></p><p><b>performed</b>: 2024-01-15 14:30:00+0800</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"PractitionerRole-ltc-practitioner-role-nurse-example.html\">PractitionerRole Registered nurse</a></td></tr></table><p><b>note</b>: @2024-01-15 14:30:00+0800</p><blockquote><div><p>住民配合度良好，無特殊狀況</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:60369001 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "60369001" ] ;
+       fhir:display [ fhir:v "Bathing patient" ]
+     ] ) ;
+     fhir:text [ fhir:v "沐浴/擦澡" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-chen-ming-hui> ;
+     fhir:reference [ fhir:v "Patient/ltc-patient-chen-ming-hui" ]
+  ] ; # 
+  fhir:performed [
+     a fhir:DateTime ;
+     fhir:v "2024-01-15T14:30:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:actor [
+       fhir:l <http://ltc-ig.fhir.tw/PractitionerRole/ltc-practitioner-role-nurse-example> ;
+       fhir:reference [ fhir:v "PractitionerRole/ltc-practitioner-role-nurse-example" ]
+     ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:time [ fhir:v "2024-01-15T14:30:00+08:00"^^xsd:dateTime ] ;
+     fhir:text [ fhir:v "住民配合度良好，無特殊狀況" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
