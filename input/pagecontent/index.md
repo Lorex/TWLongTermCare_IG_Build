@@ -141,7 +141,7 @@
 	<tbody>
 			<tr>
         <td style="vertical-align: middle;">作者</td>
-            <td style="vertical-align: middle;">v0.0.1 ~ v0.4.1</td>
+            <td style="vertical-align: middle;">v0.0.1 ~ v1.0.0</td>
         <td rowspan="8" style="vertical-align: middle;">經濟部產業發展署<br />
         （Industrial Development Administration, Ministry of Economic Affairs）</td>
         <td style="vertical-align: middle;">楊宇凡（Yu-Fan Yang）</td>
@@ -171,7 +171,7 @@
 			</tr>
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
-            <td style="vertical-align: middle;">v0.0.1 ~ v0.4.0</td>
+            <td style="vertical-align: middle;">v0.0.1 ~ v1.0.0</td>
         <td style="vertical-align: middle;">李祥豪（Siang-Hao Lee）</td>
         <td style="vertical-align: middle;">九日生行動健康科技公司<br >（9Rise International Mobile Health Technology Co., Ltd.）</td>
         <td style="vertical-align: middle;">
@@ -180,7 +180,7 @@
 			</tr>
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
-            <td style="vertical-align: middle;">v0.3.0 ~ v0.4.0</td>
+            <td style="vertical-align: middle;">v0.3.0 ~ v1.0.0</td>
         <td style="vertical-align: middle;">楊宗翰（Chung-Han Yang）</td>
         <td style="vertical-align: middle;">九日生行動健康科技公司<br >（9Rise International Mobile Health Technology Co., Ltd.）</td>
         <td style="vertical-align: middle;">
