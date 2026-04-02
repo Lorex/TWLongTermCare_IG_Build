@@ -1,11 +1,11 @@
 ### 介紹
 <div style="padding-left: 10px;">
-<p>臺灣牙醫實作指引（Taiwan Dental Implementation Guide，簡稱TW Dental IG）採用HL7® FHIR® standard（Fast Healthcare Interoperability Resources）IG建置方法，在<a href="http://hl7.org/fhir/R4/" target="_blank">FHIR R4.0.1</a>之標準基礎上，參考了<a href="https://twcore.mohw.gov.tw/ig/twcore/index.html" target="_blank">臺灣核心實作指引（TW Core Implementation Guide）0.3.2</a>，進一步定義適用於臺灣牙醫資料交換需求的Resources（類似資料表）、其中的資料項目（意即欄位）、基數（意即0..1、0..*、1..1或1..*）、資料類型（文字、日期時間、代碼等）、可綁定的代碼（及其綁定的強制程度）及查詢參數等。</p>
+<p>臺灣牙醫實作指引（Taiwan Dental Implementation Guide，簡稱TW Dental IG）採用HL7® FHIR® standard（Fast Healthcare Interoperability Resources）IG建置方法，在<a href="http://hl7.org/fhir/R4/" target="_blank">FHIR R4.0.1</a>之標準基礎上，參考了<a href="https://twcore.mohw.gov.tw/ig/twcore/index.html" target="_blank">臺灣核心實作指引（TW Core Implementation Guide）1.0.0</a>，進一步定義適用於臺灣牙醫資料交換需求的Resources（類似資料表）、其中的資料項目（意即欄位）、基數（意即0..1、0..*、1..1或1..*）、資料類型（文字、日期時間、代碼等）、可綁定的代碼（及其綁定的強制程度）及查詢參數等。</p>
 </div>
 
 ### 背景
 <div style="padding-left: 10px;">
-<p>金屬工業研究發展中心於 2025 年推動「Smile Guard智慧口腔平台系統建置及FHIR規範導入」研究計畫，與國內醫療院所及資通訊服務供應商合作，建立統一的口腔健康資料交換標準。鑒於牙醫機構端與醫院及衛生福利部電子病歷資料交換需求，故此版本 Taiwan Dental IG 以 FHIR R4.0.1 為基礎，同時繼承自 TW Core Profiles/ValueSet，以最大程度滿足對電子病歷資料交換的相容性，並分別參考來自其他國家牙醫實作指引、衛生福利部電子病歷相關規範，使制定之 IG 在除了符合聯測需求外，也盡可能符合臺灣的實作需求。</p>
+<p>金屬工業研究發展中心於 2025 年推動「Smile Guard智慧口腔平台系統建置及FHIR規範導入」研究計畫，與國內醫療院所及資通訊服務供應商合作，建立統一的口腔健康資料交換標準。鑒於牙醫機構端與醫院及衛生福利部電子病歷資料交換需求，故此版本 Taiwan Dental IG 以 FHIR R4.0.1 為基礎，同時繼承自 TW Core 1.0.0 Profiles/ValueSet，以最大程度滿足對電子病歷資料交換的相容性，並分別參考來自其他國家牙醫實作指引、衛生福利部電子病歷相關規範，使制定之 IG 在除了符合聯測需求外，也盡可能符合臺灣的實作需求。</p>
 
 <p>TW Dental IG內容將在未來的版本中持續更新，各版本亦將附有版本異動說明。所有經進一步定義的 Resources 或 Profiles，皆稱為Profiles，各 Profiles 依據其可被在地實際採用的程度與不再修改的程度，將標記其「成熟度（Maturity Level）」，被稱之為 FMM（根據眾所周知的CMM级別）。FMM 等級（level）可被實作者用来判斷一個規範文件的進階程度，也就是穩定度。以下是已被定義的 FMM 等級，實務上會視情況調整以符合定義：</p>
 
