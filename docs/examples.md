@@ -79,4 +79,6 @@
 * [長期照護醫師意見書問卷回覆範例](QuestionnaireResponse-ltc-questionnaire-response-aa12-example.md)
 * [長期照護醫師範例](Practitioner-ltc-practitioner-physician-aa12-example.md)
 * [長期照護醫療機構範例](Organization-twcore-organization-hospital-aa12-example.md)
+* [長照轉介服務請求範例](ServiceRequest-ltc-servicerequest-referral-example.md)
+* [轉介確認任務範例](Task-ltc-task-referral-acceptance-example.md)
 

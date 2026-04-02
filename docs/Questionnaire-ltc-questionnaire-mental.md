@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-mental | *Version*:1.0.0 |
-| Active as of 2026-03-02 | *Computable Name*:LTCQuestionnaireMental |
+| Active as of 2026-04-02 | *Computable Name*:LTCQuestionnaireMental |
 
 
 
@@ -26,7 +26,7 @@
   "version" : "1.0.0",
   "name" : "LTCQuestionnaireMental",
   "status" : "active",
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

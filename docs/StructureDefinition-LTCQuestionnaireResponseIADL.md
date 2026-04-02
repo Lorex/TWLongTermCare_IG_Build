@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseIADL | *Version*:1.0.0 |
-| Active as of 2026-03-02 | *Computable Name*:LTCQuestionnaireResponseIADL |
+| Active as of 2026-04-02 | *Computable Name*:LTCQuestionnaireResponseIADL |
 
  
 此 Profile 定義 FHIR 的 QuestionnaireResponse Resource，以呈現工具性日常活動功能問卷 (IADLs) 的回覆資料。 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCQuestionnaireResp
   "name" : "LTCQuestionnaireResponseIADL",
   "title" : "IADL 問卷回覆",
   "status" : "active",
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

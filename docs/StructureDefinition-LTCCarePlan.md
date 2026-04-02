@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCarePlan | *Version*:1.0.0 |
-| Active as of 2026-03-02 | *Computable Name*:LTCCarePlan |
+| Active as of 2026-04-02 | *Computable Name*:LTCCarePlan |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現長期照顧情境中涉及之照顧計畫內容。 
@@ -17,7 +17,7 @@
 **Usages:**
 
 * Derived from this Profile: [轉介單－服務種類](StructureDefinition-LTCCarePlanReferral.md)
-* Refer to this Profile: [長期照顧－照顧計畫](StructureDefinition-LTCCarePlan.md)
+* Refer to this Profile: [長期照顧－照顧計畫](StructureDefinition-LTCCarePlan.md) and [長期照顧－任務管理](StructureDefinition-LTCTask.md)
 * Examples for this Profile: [CarePlan/ltc-careplan-mobility-example](CarePlan-ltc-careplan-mobility-example.md)
 * CapabilityStatements using this Profile: [臺灣長期照顧實作指引 - 用戶端能力聲明](CapabilityStatement-CapabilityStatementLTCClient.md) and [臺灣長期照顧實作指引 - 伺服端能力聲明](CapabilityStatement-CapabilityStatementLTCServer.md)
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCCarePlan.csv), [E
   "name" : "LTCCarePlan",
   "title" : "長期照顧－照顧計畫",
   "status" : "active",
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -10,7 +10,7 @@
   "name" : "LTCPatientReferral",
   "title" : "轉介單－個案基本資料",
   "status" : "active",
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -391,7 +391,8 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mustSupport" : true,
-      "isModifier" : false
+      "isModifier" : false,
+      "isSummary" : false
     },
     {
       "id" : "Patient.extension:nationality",
@@ -425,7 +426,8 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mustSupport" : true,
-      "isModifier" : false
+      "isModifier" : false,
+      "isSummary" : false
     },
     {
       "id" : "Patient.extension:economyStatus",
@@ -1261,9 +1263,9 @@
     {
       "id" : "Patient.identifier.type",
       "path" : "Patient.identifier.type",
-      "short" : "概念（Concept）— 參照一個專門術語或只是文字表述",
-      "definition" : "A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.",
-      "comment" : "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
+      "short" : "Description of identifier",
+      "definition" : "A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.",
+      "comment" : "This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.",
       "requirements" : "Allows users to make use of identifiers when the identifier system is not known.",
       "min" : 0,
       "max" : "1",
@@ -1276,7 +1278,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -1286,6 +1287,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : true,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -1293,23 +1295,15 @@
         }],
         "strength" : "extensible",
         "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/identifier-type"
+        "valueSet" : "http://hl7.org/fhir/ValueSet/identifier-type|4.0.1"
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "CE/CNE/CWE"
+        "map" : "CX.5"
       },
       {
         "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "map" : "Role.code or implied by context"
       }]
     },
     {
@@ -1669,7 +1663,8 @@
         "max" : "1"
       },
       "type" : [{
-        "code" : "CodeableConcept"
+        "code" : "CodeableConcept",
+        "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -1700,8 +1695,8 @@
       "id" : "Patient.identifier:idCardNumber.type.id",
       "path" : "Patient.identifier.type.id",
       "representation" : ["xmlAttr"],
-      "short" : "Unique id for inter-element referencing",
-      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "short" : "唯一可識別ID，以供資料項目間相互參照。",
+      "definition" : "resource中資料項目的唯一ID（用於內部參照）。這可以是任何不含空格的字串。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -1734,11 +1729,8 @@
         "description" : "Extensions are always sliced by (at least) url",
         "rules" : "open"
       },
-      "short" : "Additional content defined by implementations",
-      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-      "alias" : ["extensions",
-      "user content"],
+      "short" : "擴充的資料項目",
+      "definition" : "擴充的資料項目",
       "min" : 0,
       "max" : "*",
       "base" : {
@@ -1766,19 +1758,15 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "isModifier" : false,
-      "isSummary" : false,
-      "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      }]
+      "isSummary" : false
     },
     {
       "id" : "Patient.identifier:idCardNumber.type.coding",
       "path" : "Patient.identifier.type.coding",
-      "short" : "Code defined by a terminology system",
-      "definition" : "A reference to a code defined by a terminology system.",
+      "short" : "由專門術語系統（terminology system）定義的代碼",
+      "definition" : "由專門術語系統（terminology system）所定義之代碼的參照",
       "comment" : "代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。",
-      "requirements" : "Allows for alternative encodings within a code system, and translations to other code systems.",
+      "requirements" : "允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。",
       "min" : 1,
       "max" : "*",
       "base" : {
@@ -1787,7 +1775,8 @@
         "max" : "*"
       },
       "type" : [{
-        "code" : "Coding"
+        "code" : "Coding",
+        "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -1797,6 +1786,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -1816,8 +1806,8 @@
       "id" : "Patient.identifier:idCardNumber.type.coding.id",
       "path" : "Patient.identifier.type.coding.id",
       "representation" : ["xmlAttr"],
-      "short" : "Unique id for inter-element referencing",
-      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "short" : "唯一可識別ID，以供資料項目間相互參照。",
+      "definition" : "resource中資料項目的唯一ID（用於內部參照），這可以是任何不含空格的字串。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -1850,11 +1840,9 @@
         "description" : "Extensions are always sliced by (at least) url",
         "rules" : "open"
       },
-      "short" : "Additional content defined by implementations",
-      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-      "alias" : ["extensions",
-      "user content"],
+      "short" : "擴充的資料項目",
+      "definition" : "可用於表示不屬於此資料項目基本定義的附加資訊。為了擴充的使用安全和可管理，對擴充的定義和使用有一套嚴格的管理。儘管任何實作者都可以定義一個擴充，但作為擴充定義的一部分，有一套要求 **必須（SHALL）** 滿足。",
+      "comment" : "無論使用或定義擴充的機構或管轄區，任何應用程式、專案或標準使用擴充都不背負任何污名（stigma）。使用擴充是允許FHIR規範為每個人保留一個核心的簡易性。",
       "min" : 0,
       "max" : "*",
       "base" : {
@@ -1882,19 +1870,15 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "isModifier" : false,
-      "isSummary" : false,
-      "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      }]
+      "isSummary" : false
     },
     {
       "id" : "Patient.identifier:idCardNumber.type.coding.system",
       "path" : "Patient.identifier.type.coding.system",
-      "short" : "Identity of the terminology system",
-      "definition" : "The identification of the code system that defines the meaning of the symbol in the code.",
-      "comment" : "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously.",
-      "requirements" : "Need to be unambiguous about the source of the definition of the symbol.",
+      "short" : "專門術語系統（terminology system）的識別",
+      "definition" : "定義代碼中符號意義的代碼系統識別",
+      "comment" : "URI可以是一個OID（urn:oid:...）或一個UUID（urn:uuid:...）；OID和UUID **必須（SHALL）** 參照HL7 OID註冊中心；否則，URI應該來自HL7的FHIR定義的特殊URI列表，或者它應該參照一些明確建立的系统定義。",
+      "requirements" : "需要明確說明符號定義的來源",
       "min" : 1,
       "max" : "1",
       "base" : {
@@ -1914,6 +1898,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -1932,9 +1917,9 @@
     {
       "id" : "Patient.identifier:idCardNumber.type.coding.version",
       "path" : "Patient.identifier.type.coding.version",
-      "short" : "Version of the system - if relevant",
-      "definition" : "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
-      "comment" : "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
+      "short" : "系統的版本—如果相關的話",
+      "definition" : "選擇此代碼時使用的代碼系統版本；請注意，一個維護良好的代碼系統不需要版本報告，因為代碼的意義在不同系統版本中是一致的；然而，不能始終保證這點，當不能保證意義一致時， **必須（SHALL）** 將版本資訊也一併作交換。",
+      "comment" : "如果專門術語沒有明確定義應該使用什麼字串來識別代碼系統的版本，建議使用版本正式發布的日期（用FHIR日期格式表示）作為版本日期。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -1971,9 +1956,9 @@
     {
       "id" : "Patient.identifier:idCardNumber.type.coding.code",
       "path" : "Patient.identifier.type.coding.code",
-      "short" : "Symbol in syntax defined by the system",
-      "definition" : "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
-      "requirements" : "Need to refer to a particular code in the system.",
+      "short" : "系統定義的語法之符號",
+      "definition" : "系統定義的語法之符號；符號可能是一個預先定義的代碼，也可能是代碼系統定義的語法中的表達式（如後組合配對／後組合式）。",
+      "requirements" : "需要參照系統中的一個特定代碼",
       "min" : 1,
       "max" : "1",
       "base" : {
@@ -1993,6 +1978,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -2108,7 +2094,8 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mustSupport" : true,
-      "isModifier" : false
+      "isModifier" : false,
+      "isSummary" : false
     },
     {
       "id" : "Patient.identifier:idCardNumber.type.coding.code.value",
@@ -2144,9 +2131,9 @@
         "valueBoolean" : true
       }],
       "path" : "Patient.identifier.type.coding.display",
-      "short" : "Representation defined by the system",
-      "definition" : "A representation of the meaning of the code in the system, following the rules of the system.",
-      "requirements" : "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
+      "short" : "由系統定義的表示法",
+      "definition" : "遵循系統的規則以呈現代碼含義的表示法",
+      "requirements" : "需要能為不了解此系統的讀者呈現可讀的代碼含義",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -2165,6 +2152,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -2183,10 +2171,10 @@
     {
       "id" : "Patient.identifier:idCardNumber.type.coding.userSelected",
       "path" : "Patient.identifier.type.coding.userSelected",
-      "short" : "If this coding was chosen directly by the user",
-      "definition" : "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
-      "comment" : "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
-      "requirements" : "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
+      "short" : "此編碼是否由使用者直接選擇？",
+      "definition" : "表明此編碼是由使用者直接選擇，例如：從可用項目（代碼或顯示名稱）的清單中選擇。",
+      "comment" : "在一系列備選方案中，直接選擇的代碼是新翻譯最合適的起點；關於「直接選擇」的確切意義，存在模糊不清之處，可能需要貿易夥伴的同意，以更完整澄清此資料項目的使用及其後果。",
+      "requirements" : "已被確定為一個臨床安全準則—此確切的系統／代碼對(code pair)是被明確選擇的，而不是由系統根據一些規則或是程式語言處理判斷。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -2227,10 +2215,10 @@
         "valueBoolean" : true
       }],
       "path" : "Patient.identifier.type.text",
-      "short" : "Plain text representation of the concept",
-      "definition" : "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-      "comment" : "Very often the text is the same as a displayName of one of the codings.",
-      "requirements" : "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
+      "short" : "概念的文字表示法",
+      "definition" : "輸入資料的使用者所見／所選／所說的人類可讀文字表述，和（或）其代表使用者的預期含義。",
+      "comment" : "很多時候，此文字表述與其中一個代碼的顯示名稱相同。",
+      "requirements" : "專門術語中的代碼並不總是能捕捉人類使用的細微差別的正確意義，或者根本就沒有合適的代碼；這些情況下，文字表述被用來捕捉來源的全部意義。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -2249,6 +2237,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -2271,7 +2260,7 @@
       "definition" : "建立值的命名空間－即一個描述一組值的唯一URL",
       "comment" : "Identifier.system總是區分大小寫",
       "requirements" : "有許多識別碼的集合。為了進行兩個識別碼的對應，我們需要知道我們處理的是哪一組。系統指明了一個特定的唯一識別碼集。",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "base" : {
         "path" : "Identifier.system",
@@ -2616,7 +2605,8 @@
         "max" : "1"
       },
       "type" : [{
-        "code" : "CodeableConcept"
+        "code" : "CodeableConcept",
+        "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -2647,8 +2637,8 @@
       "id" : "Patient.identifier:passportNumber.type.id",
       "path" : "Patient.identifier.type.id",
       "representation" : ["xmlAttr"],
-      "short" : "Unique id for inter-element referencing",
-      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "short" : "唯一可識別ID，以供資料項目間相互參照。",
+      "definition" : "resource中資料項目的唯一ID（用於內部參照）。這可以是任何不含空格的字串。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -2681,11 +2671,8 @@
         "description" : "Extensions are always sliced by (at least) url",
         "rules" : "open"
       },
-      "short" : "Additional content defined by implementations",
-      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-      "alias" : ["extensions",
-      "user content"],
+      "short" : "擴充的資料項目",
+      "definition" : "擴充的資料項目",
       "min" : 0,
       "max" : "*",
       "base" : {
@@ -2713,19 +2700,15 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "isModifier" : false,
-      "isSummary" : false,
-      "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      }]
+      "isSummary" : false
     },
     {
       "id" : "Patient.identifier:passportNumber.type.coding",
       "path" : "Patient.identifier.type.coding",
-      "short" : "Code defined by a terminology system",
-      "definition" : "A reference to a code defined by a terminology system.",
+      "short" : "由專門術語系統（terminology system）定義的代碼",
+      "definition" : "由專門術語系統（terminology system）所定義之代碼的參照",
       "comment" : "代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。",
-      "requirements" : "Allows for alternative encodings within a code system, and translations to other code systems.",
+      "requirements" : "允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。",
       "min" : 1,
       "max" : "*",
       "base" : {
@@ -2734,7 +2717,8 @@
         "max" : "*"
       },
       "type" : [{
-        "code" : "Coding"
+        "code" : "Coding",
+        "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -2744,6 +2728,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -2763,8 +2748,8 @@
       "id" : "Patient.identifier:passportNumber.type.coding.id",
       "path" : "Patient.identifier.type.coding.id",
       "representation" : ["xmlAttr"],
-      "short" : "Unique id for inter-element referencing",
-      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "short" : "唯一可識別ID，以供資料項目間相互參照。",
+      "definition" : "resource中資料項目的唯一ID（用於內部參照），這可以是任何不含空格的字串。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -2797,11 +2782,9 @@
         "description" : "Extensions are always sliced by (at least) url",
         "rules" : "open"
       },
-      "short" : "Additional content defined by implementations",
-      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-      "alias" : ["extensions",
-      "user content"],
+      "short" : "擴充的資料項目",
+      "definition" : "可用於表示不屬於此資料項目基本定義的附加資訊。為了擴充的使用安全和可管理，對擴充的定義和使用有一套嚴格的管理。儘管任何實作者都可以定義一個擴充，但作為擴充定義的一部分，有一套要求 **必須（SHALL）** 滿足。",
+      "comment" : "無論使用或定義擴充的機構或管轄區，任何應用程式、專案或標準使用擴充都不背負任何污名（stigma）。使用擴充是允許FHIR規範為每個人保留一個核心的簡易性。",
       "min" : 0,
       "max" : "*",
       "base" : {
@@ -2829,19 +2812,15 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "isModifier" : false,
-      "isSummary" : false,
-      "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      }]
+      "isSummary" : false
     },
     {
       "id" : "Patient.identifier:passportNumber.type.coding.system",
       "path" : "Patient.identifier.type.coding.system",
-      "short" : "Identity of the terminology system",
-      "definition" : "The identification of the code system that defines the meaning of the symbol in the code.",
-      "comment" : "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously.",
-      "requirements" : "Need to be unambiguous about the source of the definition of the symbol.",
+      "short" : "專門術語系統（terminology system）的識別",
+      "definition" : "定義代碼中符號意義的代碼系統識別",
+      "comment" : "URI可以是一個OID（urn:oid:...）或一個UUID（urn:uuid:...）；OID和UUID **必須（SHALL）** 參照HL7 OID註冊中心；否則，URI應該來自HL7的FHIR定義的特殊URI列表，或者它應該參照一些明確建立的系统定義。",
+      "requirements" : "需要明確說明符號定義的來源",
       "min" : 1,
       "max" : "1",
       "base" : {
@@ -2861,6 +2840,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -2879,9 +2859,9 @@
     {
       "id" : "Patient.identifier:passportNumber.type.coding.version",
       "path" : "Patient.identifier.type.coding.version",
-      "short" : "Version of the system - if relevant",
-      "definition" : "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
-      "comment" : "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
+      "short" : "系統的版本—如果相關的話",
+      "definition" : "選擇此代碼時使用的代碼系統版本；請注意，一個維護良好的代碼系統不需要版本報告，因為代碼的意義在不同系統版本中是一致的；然而，不能始終保證這點，當不能保證意義一致時， **必須（SHALL）** 將版本資訊也一併作交換。",
+      "comment" : "如果專門術語沒有明確定義應該使用什麼字串來識別代碼系統的版本，建議使用版本正式發布的日期（用FHIR日期格式表示）作為版本日期。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -2918,9 +2898,9 @@
     {
       "id" : "Patient.identifier:passportNumber.type.coding.code",
       "path" : "Patient.identifier.type.coding.code",
-      "short" : "Symbol in syntax defined by the system",
-      "definition" : "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
-      "requirements" : "Need to refer to a particular code in the system.",
+      "short" : "系統定義的語法之符號",
+      "definition" : "系統定義的語法之符號；符號可能是一個預先定義的代碼，也可能是代碼系統定義的語法中的表達式（如後組合配對／後組合式）。",
+      "requirements" : "需要參照系統中的一個特定代碼",
       "min" : 1,
       "max" : "1",
       "base" : {
@@ -2940,6 +2920,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -2962,9 +2943,9 @@
         "valueBoolean" : true
       }],
       "path" : "Patient.identifier.type.coding.display",
-      "short" : "Representation defined by the system",
-      "definition" : "A representation of the meaning of the code in the system, following the rules of the system.",
-      "requirements" : "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
+      "short" : "由系統定義的表示法",
+      "definition" : "遵循系統的規則以呈現代碼含義的表示法",
+      "requirements" : "需要能為不了解此系統的讀者呈現可讀的代碼含義",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -2983,6 +2964,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -3001,10 +2983,10 @@
     {
       "id" : "Patient.identifier:passportNumber.type.coding.userSelected",
       "path" : "Patient.identifier.type.coding.userSelected",
-      "short" : "If this coding was chosen directly by the user",
-      "definition" : "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
-      "comment" : "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
-      "requirements" : "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
+      "short" : "此編碼是否由使用者直接選擇？",
+      "definition" : "表明此編碼是由使用者直接選擇，例如：從可用項目（代碼或顯示名稱）的清單中選擇。",
+      "comment" : "在一系列備選方案中，直接選擇的代碼是新翻譯最合適的起點；關於「直接選擇」的確切意義，存在模糊不清之處，可能需要貿易夥伴的同意，以更完整澄清此資料項目的使用及其後果。",
+      "requirements" : "已被確定為一個臨床安全準則—此確切的系統／代碼對(code pair)是被明確選擇的，而不是由系統根據一些規則或是程式語言處理判斷。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -3045,10 +3027,10 @@
         "valueBoolean" : true
       }],
       "path" : "Patient.identifier.type.text",
-      "short" : "Plain text representation of the concept",
-      "definition" : "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-      "comment" : "Very often the text is the same as a displayName of one of the codings.",
-      "requirements" : "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
+      "short" : "概念的文字表示法",
+      "definition" : "輸入資料的使用者所見／所選／所說的人類可讀文字表述，和（或）其代表使用者的預期含義。",
+      "comment" : "很多時候，此文字表述與其中一個代碼的顯示名稱相同。",
+      "requirements" : "專門術語中的代碼並不總是能捕捉人類使用的細微差別的正確意義，或者根本就沒有合適的代碼；這些情況下，文字表述被用來捕捉來源的全部意義。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -3067,6 +3049,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -3089,7 +3072,7 @@
       "definition" : "建立值的命名空間－即一個描述一組值的唯一URL",
       "comment" : "Identifier.system總是區分大小寫",
       "requirements" : "有許多識別碼的集合。為了進行兩個識別碼的對應，我們需要知道我們處理的是哪一組。系統指明了一個特定的唯一識別碼集。",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "base" : {
         "path" : "Identifier.system",
@@ -3434,7 +3417,8 @@
         "max" : "1"
       },
       "type" : [{
-        "code" : "CodeableConcept"
+        "code" : "CodeableConcept",
+        "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -3465,8 +3449,8 @@
       "id" : "Patient.identifier:residentNumber.type.id",
       "path" : "Patient.identifier.type.id",
       "representation" : ["xmlAttr"],
-      "short" : "Unique id for inter-element referencing",
-      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "short" : "唯一可識別ID，以供資料項目間相互參照。",
+      "definition" : "resource中資料項目的唯一ID（用於內部參照）。這可以是任何不含空格的字串。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -3499,11 +3483,8 @@
         "description" : "Extensions are always sliced by (at least) url",
         "rules" : "open"
       },
-      "short" : "Additional content defined by implementations",
-      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-      "alias" : ["extensions",
-      "user content"],
+      "short" : "擴充的資料項目",
+      "definition" : "擴充的資料項目",
       "min" : 0,
       "max" : "*",
       "base" : {
@@ -3531,19 +3512,15 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "isModifier" : false,
-      "isSummary" : false,
-      "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      }]
+      "isSummary" : false
     },
     {
       "id" : "Patient.identifier:residentNumber.type.coding",
       "path" : "Patient.identifier.type.coding",
-      "short" : "Code defined by a terminology system",
-      "definition" : "A reference to a code defined by a terminology system.",
+      "short" : "由專門術語系統（terminology system）定義的代碼",
+      "definition" : "由專門術語系統（terminology system）所定義之代碼的參照",
       "comment" : "代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。",
-      "requirements" : "Allows for alternative encodings within a code system, and translations to other code systems.",
+      "requirements" : "允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。",
       "min" : 1,
       "max" : "*",
       "base" : {
@@ -3552,7 +3529,8 @@
         "max" : "*"
       },
       "type" : [{
-        "code" : "Coding"
+        "code" : "Coding",
+        "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -3562,6 +3540,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -3581,8 +3560,8 @@
       "id" : "Patient.identifier:residentNumber.type.coding.id",
       "path" : "Patient.identifier.type.coding.id",
       "representation" : ["xmlAttr"],
-      "short" : "Unique id for inter-element referencing",
-      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "short" : "唯一可識別ID，以供資料項目間相互參照。",
+      "definition" : "resource中資料項目的唯一ID（用於內部參照），這可以是任何不含空格的字串。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -3615,11 +3594,9 @@
         "description" : "Extensions are always sliced by (at least) url",
         "rules" : "open"
       },
-      "short" : "Additional content defined by implementations",
-      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-      "alias" : ["extensions",
-      "user content"],
+      "short" : "擴充的資料項目",
+      "definition" : "可用於表示不屬於此資料項目基本定義的附加資訊。為了擴充的使用安全和可管理，對擴充的定義和使用有一套嚴格的管理。儘管任何實作者都可以定義一個擴充，但作為擴充定義的一部分，有一套要求 **必須（SHALL）** 滿足。",
+      "comment" : "無論使用或定義擴充的機構或管轄區，任何應用程式、專案或標準使用擴充都不背負任何污名（stigma）。使用擴充是允許FHIR規範為每個人保留一個核心的簡易性。",
       "min" : 0,
       "max" : "*",
       "base" : {
@@ -3647,19 +3624,15 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "isModifier" : false,
-      "isSummary" : false,
-      "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      }]
+      "isSummary" : false
     },
     {
       "id" : "Patient.identifier:residentNumber.type.coding.system",
       "path" : "Patient.identifier.type.coding.system",
-      "short" : "Identity of the terminology system",
-      "definition" : "The identification of the code system that defines the meaning of the symbol in the code.",
-      "comment" : "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously.",
-      "requirements" : "Need to be unambiguous about the source of the definition of the symbol.",
+      "short" : "專門術語系統（terminology system）的識別",
+      "definition" : "定義代碼中符號意義的代碼系統識別",
+      "comment" : "URI可以是一個OID（urn:oid:...）或一個UUID（urn:uuid:...）；OID和UUID **必須（SHALL）** 參照HL7 OID註冊中心；否則，URI應該來自HL7的FHIR定義的特殊URI列表，或者它應該參照一些明確建立的系统定義。",
+      "requirements" : "需要明確說明符號定義的來源",
       "min" : 1,
       "max" : "1",
       "base" : {
@@ -3679,6 +3652,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -3697,9 +3671,9 @@
     {
       "id" : "Patient.identifier:residentNumber.type.coding.version",
       "path" : "Patient.identifier.type.coding.version",
-      "short" : "Version of the system - if relevant",
-      "definition" : "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
-      "comment" : "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
+      "short" : "系統的版本—如果相關的話",
+      "definition" : "選擇此代碼時使用的代碼系統版本；請注意，一個維護良好的代碼系統不需要版本報告，因為代碼的意義在不同系統版本中是一致的；然而，不能始終保證這點，當不能保證意義一致時， **必須（SHALL）** 將版本資訊也一併作交換。",
+      "comment" : "如果專門術語沒有明確定義應該使用什麼字串來識別代碼系統的版本，建議使用版本正式發布的日期（用FHIR日期格式表示）作為版本日期。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -3736,9 +3710,9 @@
     {
       "id" : "Patient.identifier:residentNumber.type.coding.code",
       "path" : "Patient.identifier.type.coding.code",
-      "short" : "Symbol in syntax defined by the system",
-      "definition" : "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
-      "requirements" : "Need to refer to a particular code in the system.",
+      "short" : "系統定義的語法之符號",
+      "definition" : "系統定義的語法之符號；符號可能是一個預先定義的代碼，也可能是代碼系統定義的語法中的表達式（如後組合配對／後組合式）。",
+      "requirements" : "需要參照系統中的一個特定代碼",
       "min" : 1,
       "max" : "1",
       "base" : {
@@ -3758,6 +3732,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -3780,9 +3755,9 @@
         "valueBoolean" : true
       }],
       "path" : "Patient.identifier.type.coding.display",
-      "short" : "Representation defined by the system",
-      "definition" : "A representation of the meaning of the code in the system, following the rules of the system.",
-      "requirements" : "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
+      "short" : "由系統定義的表示法",
+      "definition" : "遵循系統的規則以呈現代碼含義的表示法",
+      "requirements" : "需要能為不了解此系統的讀者呈現可讀的代碼含義",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -3801,6 +3776,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -3819,10 +3795,10 @@
     {
       "id" : "Patient.identifier:residentNumber.type.coding.userSelected",
       "path" : "Patient.identifier.type.coding.userSelected",
-      "short" : "If this coding was chosen directly by the user",
-      "definition" : "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
-      "comment" : "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
-      "requirements" : "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
+      "short" : "此編碼是否由使用者直接選擇？",
+      "definition" : "表明此編碼是由使用者直接選擇，例如：從可用項目（代碼或顯示名稱）的清單中選擇。",
+      "comment" : "在一系列備選方案中，直接選擇的代碼是新翻譯最合適的起點；關於「直接選擇」的確切意義，存在模糊不清之處，可能需要貿易夥伴的同意，以更完整澄清此資料項目的使用及其後果。",
+      "requirements" : "已被確定為一個臨床安全準則—此確切的系統／代碼對(code pair)是被明確選擇的，而不是由系統根據一些規則或是程式語言處理判斷。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -3863,10 +3839,10 @@
         "valueBoolean" : true
       }],
       "path" : "Patient.identifier.type.text",
-      "short" : "Plain text representation of the concept",
-      "definition" : "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-      "comment" : "Very often the text is the same as a displayName of one of the codings.",
-      "requirements" : "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
+      "short" : "概念的文字表示法",
+      "definition" : "輸入資料的使用者所見／所選／所說的人類可讀文字表述，和（或）其代表使用者的預期含義。",
+      "comment" : "很多時候，此文字表述與其中一個代碼的顯示名稱相同。",
+      "requirements" : "專門術語中的代碼並不總是能捕捉人類使用的細微差別的正確意義，或者根本就沒有合適的代碼；這些情況下，文字表述被用來捕捉來源的全部意義。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -3885,6 +3861,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -3907,7 +3884,7 @@
       "definition" : "建立值的命名空間－即一個描述一組值的唯一URL",
       "comment" : "Identifier.system總是區分大小寫",
       "requirements" : "有許多識別碼的集合。為了進行兩個識別碼的對應，我們需要知道我們處理的是哪一組。系統指明了一個特定的唯一識別碼集。",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "base" : {
         "path" : "Identifier.system",
@@ -4252,7 +4229,8 @@
         "max" : "1"
       },
       "type" : [{
-        "code" : "CodeableConcept"
+        "code" : "CodeableConcept",
+        "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -4283,8 +4261,8 @@
       "id" : "Patient.identifier:medicalRecord.type.id",
       "path" : "Patient.identifier.type.id",
       "representation" : ["xmlAttr"],
-      "short" : "Unique id for inter-element referencing",
-      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "short" : "唯一可識別ID，以供資料項目間相互參照。",
+      "definition" : "resource中資料項目的唯一ID（用於內部參照）。這可以是任何不含空格的字串。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -4317,11 +4295,8 @@
         "description" : "Extensions are always sliced by (at least) url",
         "rules" : "open"
       },
-      "short" : "Additional content defined by implementations",
-      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-      "alias" : ["extensions",
-      "user content"],
+      "short" : "擴充的資料項目",
+      "definition" : "擴充的資料項目",
       "min" : 0,
       "max" : "*",
       "base" : {
@@ -4349,19 +4324,15 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "isModifier" : false,
-      "isSummary" : false,
-      "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      }]
+      "isSummary" : false
     },
     {
       "id" : "Patient.identifier:medicalRecord.type.coding",
       "path" : "Patient.identifier.type.coding",
-      "short" : "Code defined by a terminology system",
-      "definition" : "A reference to a code defined by a terminology system.",
+      "short" : "由專門術語系統（terminology system）定義的代碼",
+      "definition" : "由專門術語系統（terminology system）所定義之代碼的參照",
       "comment" : "代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。",
-      "requirements" : "Allows for alternative encodings within a code system, and translations to other code systems.",
+      "requirements" : "允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。",
       "min" : 1,
       "max" : "*",
       "base" : {
@@ -4370,7 +4341,8 @@
         "max" : "*"
       },
       "type" : [{
-        "code" : "Coding"
+        "code" : "Coding",
+        "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -4380,6 +4352,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -4399,8 +4372,8 @@
       "id" : "Patient.identifier:medicalRecord.type.coding.id",
       "path" : "Patient.identifier.type.coding.id",
       "representation" : ["xmlAttr"],
-      "short" : "Unique id for inter-element referencing",
-      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "short" : "唯一可識別ID，以供資料項目間相互參照。",
+      "definition" : "resource中資料項目的唯一ID（用於內部參照），這可以是任何不含空格的字串。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -4433,11 +4406,9 @@
         "description" : "Extensions are always sliced by (at least) url",
         "rules" : "open"
       },
-      "short" : "Additional content defined by implementations",
-      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-      "alias" : ["extensions",
-      "user content"],
+      "short" : "擴充的資料項目",
+      "definition" : "可用於表示不屬於此資料項目基本定義的附加資訊。為了擴充的使用安全和可管理，對擴充的定義和使用有一套嚴格的管理。儘管任何實作者都可以定義一個擴充，但作為擴充定義的一部分，有一套要求 **必須（SHALL）** 滿足。",
+      "comment" : "無論使用或定義擴充的機構或管轄區，任何應用程式、專案或標準使用擴充都不背負任何污名（stigma）。使用擴充是允許FHIR規範為每個人保留一個核心的簡易性。",
       "min" : 0,
       "max" : "*",
       "base" : {
@@ -4465,19 +4436,15 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "isModifier" : false,
-      "isSummary" : false,
-      "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      }]
+      "isSummary" : false
     },
     {
       "id" : "Patient.identifier:medicalRecord.type.coding.system",
       "path" : "Patient.identifier.type.coding.system",
-      "short" : "Identity of the terminology system",
-      "definition" : "The identification of the code system that defines the meaning of the symbol in the code.",
-      "comment" : "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously.",
-      "requirements" : "Need to be unambiguous about the source of the definition of the symbol.",
+      "short" : "專門術語系統（terminology system）的識別",
+      "definition" : "定義代碼中符號意義的代碼系統識別",
+      "comment" : "URI可以是一個OID（urn:oid:...）或一個UUID（urn:uuid:...）；OID和UUID **必須（SHALL）** 參照HL7 OID註冊中心；否則，URI應該來自HL7的FHIR定義的特殊URI列表，或者它應該參照一些明確建立的系统定義。",
+      "requirements" : "需要明確說明符號定義的來源",
       "min" : 1,
       "max" : "1",
       "base" : {
@@ -4497,6 +4464,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -4515,9 +4483,9 @@
     {
       "id" : "Patient.identifier:medicalRecord.type.coding.version",
       "path" : "Patient.identifier.type.coding.version",
-      "short" : "Version of the system - if relevant",
-      "definition" : "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
-      "comment" : "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
+      "short" : "系統的版本—如果相關的話",
+      "definition" : "選擇此代碼時使用的代碼系統版本；請注意，一個維護良好的代碼系統不需要版本報告，因為代碼的意義在不同系統版本中是一致的；然而，不能始終保證這點，當不能保證意義一致時， **必須（SHALL）** 將版本資訊也一併作交換。",
+      "comment" : "如果專門術語沒有明確定義應該使用什麼字串來識別代碼系統的版本，建議使用版本正式發布的日期（用FHIR日期格式表示）作為版本日期。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -4554,9 +4522,9 @@
     {
       "id" : "Patient.identifier:medicalRecord.type.coding.code",
       "path" : "Patient.identifier.type.coding.code",
-      "short" : "Symbol in syntax defined by the system",
-      "definition" : "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
-      "requirements" : "Need to refer to a particular code in the system.",
+      "short" : "系統定義的語法之符號",
+      "definition" : "系統定義的語法之符號；符號可能是一個預先定義的代碼，也可能是代碼系統定義的語法中的表達式（如後組合配對／後組合式）。",
+      "requirements" : "需要參照系統中的一個特定代碼",
       "min" : 1,
       "max" : "1",
       "base" : {
@@ -4576,6 +4544,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -4598,9 +4567,9 @@
         "valueBoolean" : true
       }],
       "path" : "Patient.identifier.type.coding.display",
-      "short" : "Representation defined by the system",
-      "definition" : "A representation of the meaning of the code in the system, following the rules of the system.",
-      "requirements" : "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
+      "short" : "由系統定義的表示法",
+      "definition" : "遵循系統的規則以呈現代碼含義的表示法",
+      "requirements" : "需要能為不了解此系統的讀者呈現可讀的代碼含義",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -4619,6 +4588,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -4637,10 +4607,10 @@
     {
       "id" : "Patient.identifier:medicalRecord.type.coding.userSelected",
       "path" : "Patient.identifier.type.coding.userSelected",
-      "short" : "If this coding was chosen directly by the user",
-      "definition" : "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
-      "comment" : "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
-      "requirements" : "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
+      "short" : "此編碼是否由使用者直接選擇？",
+      "definition" : "表明此編碼是由使用者直接選擇，例如：從可用項目（代碼或顯示名稱）的清單中選擇。",
+      "comment" : "在一系列備選方案中，直接選擇的代碼是新翻譯最合適的起點；關於「直接選擇」的確切意義，存在模糊不清之處，可能需要貿易夥伴的同意，以更完整澄清此資料項目的使用及其後果。",
+      "requirements" : "已被確定為一個臨床安全準則—此確切的系統／代碼對(code pair)是被明確選擇的，而不是由系統根據一些規則或是程式語言處理判斷。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -4681,10 +4651,10 @@
         "valueBoolean" : true
       }],
       "path" : "Patient.identifier.type.text",
-      "short" : "Plain text representation of the concept",
-      "definition" : "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-      "comment" : "Very often the text is the same as a displayName of one of the codings.",
-      "requirements" : "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
+      "short" : "概念的文字表示法",
+      "definition" : "輸入資料的使用者所見／所選／所說的人類可讀文字表述，和（或）其代表使用者的預期含義。",
+      "comment" : "很多時候，此文字表述與其中一個代碼的顯示名稱相同。",
+      "requirements" : "專門術語中的代碼並不總是能捕捉人類使用的細微差別的正確意義，或者根本就沒有合適的代碼；這些情況下，文字表述被用來捕捉來源的全部意義。",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -4703,6 +4673,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -4725,7 +4696,7 @@
       "definition" : "建立值的命名空間－即一個描述一組值的唯一URL",
       "comment" : "Identifier.system總是區分大小寫",
       "requirements" : "有許多識別碼的集合。為了進行兩個識別碼的對應，我們需要知道我們處理的是哪一組。系統指明了一個特定的唯一識別碼集。",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "base" : {
         "path" : "Identifier.system",
@@ -7951,7 +7922,6 @@
         "code" : "Address",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Address-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -7962,21 +7932,18 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "XAD"
+        "map" : "PID-11"
       },
       {
         "identity" : "rim",
-        "map" : "AD"
+        "map" : "addr"
       },
       {
-        "identity" : "servd",
-        "map" : "Address"
+        "identity" : "cda",
+        "map" : ".addr"
       }]
     },
     {
@@ -7998,7 +7965,6 @@
         "code" : "Address",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Address-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -8009,21 +7975,18 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "XAD"
+        "map" : "PID-11"
       },
       {
         "identity" : "rim",
-        "map" : "AD"
+        "map" : "addr"
       },
       {
-        "identity" : "servd",
-        "map" : "Address"
+        "identity" : "cda",
+        "map" : ".addr"
       }]
     },
     {
@@ -8892,7 +8855,8 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mustSupport" : true,
-      "isModifier" : false
+      "isModifier" : false,
+      "isSummary" : false
     },
     {
       "id" : "Patient.address:home.postalCode.extension:PostalCode.id",
@@ -9009,7 +8973,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -9020,21 +8983,10 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : false,
       "mapping" : [{
         "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "map" : "N/A"
       }]
     },
     {
@@ -9133,7 +9085,6 @@
         "code" : "Coding",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -9144,21 +9095,18 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "CE/CNE/CWE subset one of the sets of component 1-3 or 4-6"
+        "map" : "C*E.1-8, C*E.10-22"
       },
       {
         "identity" : "rim",
-        "map" : "CV"
+        "map" : "union(., ./translation)"
       },
       {
         "identity" : "orim",
-        "map" : "fhir:Coding rdfs:subClassOf dt:CDCoding"
+        "map" : "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
       }]
     },
     {
@@ -9180,7 +9128,6 @@
         "code" : "Coding",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -9191,26 +9138,23 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : true,
       "binding" : {
         "strength" : "required",
         "description" : "應填入所綁定值集中的其中一個代碼",
         "valueSet" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/postal-code3-tw"
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "CE/CNE/CWE subset one of the sets of component 1-3 or 4-6"
+        "map" : "C*E.1-8, C*E.10-22"
       },
       {
         "identity" : "rim",
-        "map" : "CV"
+        "map" : "union(., ./translation)"
       },
       {
         "identity" : "orim",
-        "map" : "fhir:Coding rdfs:subClassOf dt:CDCoding"
+        "map" : "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
       }]
     },
     {
@@ -9507,7 +9451,6 @@
         "code" : "Coding",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -9518,26 +9461,23 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : true,
       "binding" : {
         "strength" : "required",
         "description" : "應填入所綁定值集中的其中一個代碼",
         "valueSet" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/postal-code5-tw"
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "CE/CNE/CWE subset one of the sets of component 1-3 or 4-6"
+        "map" : "C*E.1-8, C*E.10-22"
       },
       {
         "identity" : "rim",
-        "map" : "CV"
+        "map" : "union(., ./translation)"
       },
       {
         "identity" : "orim",
-        "map" : "fhir:Coding rdfs:subClassOf dt:CDCoding"
+        "map" : "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
       }]
     },
     {
@@ -9834,7 +9774,6 @@
         "code" : "Coding",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -9845,26 +9784,23 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : true,
       "binding" : {
         "strength" : "required",
         "description" : "應填入所綁定值集中的其中一個代碼",
         "valueSet" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/postal-code6-tw"
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "CE/CNE/CWE subset one of the sets of component 1-3 or 4-6"
+        "map" : "C*E.1-8, C*E.10-22"
       },
       {
         "identity" : "rim",
-        "map" : "CV"
+        "map" : "union(., ./translation)"
       },
       {
         "identity" : "orim",
-        "map" : "fhir:Coding rdfs:subClassOf dt:CDCoding"
+        "map" : "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
       }]
     },
     {
@@ -10324,7 +10260,6 @@
         "code" : "Address",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Address-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -10335,21 +10270,18 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "XAD"
+        "map" : "PID-11"
       },
       {
         "identity" : "rim",
-        "map" : "AD"
+        "map" : "addr"
       },
       {
-        "identity" : "servd",
-        "map" : "Address"
+        "identity" : "cda",
+        "map" : ".addr"
       }]
     },
     {
@@ -11218,7 +11150,8 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mustSupport" : true,
-      "isModifier" : false
+      "isModifier" : false,
+      "isSummary" : false
     },
     {
       "id" : "Patient.address:billing.postalCode.extension:PostalCode.id",
@@ -11335,7 +11268,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -11346,21 +11278,10 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : false,
       "mapping" : [{
         "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "map" : "N/A"
       }]
     },
     {
@@ -11459,7 +11380,6 @@
         "code" : "Coding",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -11470,21 +11390,18 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "CE/CNE/CWE subset one of the sets of component 1-3 or 4-6"
+        "map" : "C*E.1-8, C*E.10-22"
       },
       {
         "identity" : "rim",
-        "map" : "CV"
+        "map" : "union(., ./translation)"
       },
       {
         "identity" : "orim",
-        "map" : "fhir:Coding rdfs:subClassOf dt:CDCoding"
+        "map" : "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
       }]
     },
     {
@@ -11506,7 +11423,6 @@
         "code" : "Coding",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -11517,26 +11433,23 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : true,
       "binding" : {
         "strength" : "required",
         "description" : "應填入所綁定值集中的其中一個代碼",
         "valueSet" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/postal-code3-tw"
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "CE/CNE/CWE subset one of the sets of component 1-3 or 4-6"
+        "map" : "C*E.1-8, C*E.10-22"
       },
       {
         "identity" : "rim",
-        "map" : "CV"
+        "map" : "union(., ./translation)"
       },
       {
         "identity" : "orim",
-        "map" : "fhir:Coding rdfs:subClassOf dt:CDCoding"
+        "map" : "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
       }]
     },
     {
@@ -11833,7 +11746,6 @@
         "code" : "Coding",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -11844,26 +11756,23 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : true,
       "binding" : {
         "strength" : "required",
         "description" : "應填入所綁定值集中的其中一個代碼",
         "valueSet" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/postal-code5-tw"
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "CE/CNE/CWE subset one of the sets of component 1-3 or 4-6"
+        "map" : "C*E.1-8, C*E.10-22"
       },
       {
         "identity" : "rim",
-        "map" : "CV"
+        "map" : "union(., ./translation)"
       },
       {
         "identity" : "orim",
-        "map" : "fhir:Coding rdfs:subClassOf dt:CDCoding"
+        "map" : "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
       }]
     },
     {
@@ -12160,7 +12069,6 @@
         "code" : "Coding",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -12171,26 +12079,23 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : true,
       "binding" : {
         "strength" : "required",
         "description" : "應填入所綁定值集中的其中一個代碼",
         "valueSet" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/postal-code6-tw"
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "CE/CNE/CWE subset one of the sets of component 1-3 or 4-6"
+        "map" : "C*E.1-8, C*E.10-22"
       },
       {
         "identity" : "rim",
-        "map" : "CV"
+        "map" : "union(., ./translation)"
       },
       {
         "identity" : "orim",
-        "map" : "fhir:Coding rdfs:subClassOf dt:CDCoding"
+        "map" : "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
       }]
     },
     {
@@ -12636,7 +12541,6 @@
       "path" : "Patient.maritalStatus",
       "short" : "病人的婚姻狀態",
       "definition" : "這個欄位包含病人的目前婚姻（民事）狀態",
-      "comment" : "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
       "requirements" : "如果不是所有的系統都能取得此資訊",
       "min" : 0,
       "max" : "1",
@@ -12649,7 +12553,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -12660,6 +12563,7 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -12670,20 +12574,16 @@
         "valueSet" : "http://hl7.org/fhir/ValueSet/marital-status"
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "CE/CNE/CWE"
+        "map" : "PID-16"
       },
       {
         "identity" : "rim",
-        "map" : "CD"
+        "map" : "player[classCode=PSN]/maritalStatusCode"
       },
       {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "cda",
+        "map" : ".patient.maritalStatusCode"
       }]
     },
     {
@@ -12932,7 +12832,6 @@
       "path" : "Patient.contact.relationship",
       "short" : "緊急連絡人與住民的關係",
       "definition" : "可以透過正式參照一個專門術語或知識本體來定義一個概念，或者也可以文字表述此概念。",
-      "comment" : "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
       "requirements" : "根據情況決定哪位聯絡人最有關聯以作聯繫",
       "min" : 1,
       "max" : "1",
@@ -12945,7 +12844,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -12956,26 +12854,23 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "strength" : "required",
         "description" : "應填入所綁定值集中的其中一個代碼。",
         "valueSet" : "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype"
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "CE/CNE/CWE"
+        "map" : "NK1-7, NK1-3"
       },
       {
         "identity" : "rim",
-        "map" : "CD"
+        "map" : "code"
       },
       {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "cda",
+        "map" : "n/a"
       }]
     },
     {
@@ -13715,7 +13610,6 @@
       "path" : "Patient.contact.address",
       "short" : "聯絡人的地址",
       "definition" : "聯絡人的地址",
-      "comment" : "注意：地址的目的是描述用於管理目的之郵政地址，而不是描述絕對的地理座標。郵政地址經常被用作實體位置的代表（亦可見[Location](http://hl7.org/fhir/R4/location.html#)resource）。",
       "requirements" : "需要紀錄用以聯絡聯絡人的郵件地址或到訪地址",
       "min" : 0,
       "max" : "1",
@@ -13728,7 +13622,6 @@
         "code" : "Address",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Address-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -13738,21 +13631,18 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "XAD"
+        "map" : "NK1-4"
       },
       {
         "identity" : "rim",
-        "map" : "AD"
+        "map" : "addr"
       },
       {
-        "identity" : "servd",
-        "map" : "Address"
+        "identity" : "cda",
+        "map" : "n/a"
       }]
     },
     {
@@ -14050,7 +13940,6 @@
         "label" : "Value",
         "valueString" : "zh-TW"
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -14061,6 +13950,7 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
@@ -14075,20 +13965,16 @@
         "valueSet" : "http://hl7.org/fhir/ValueSet/languages"
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "CE/CNE/CWE"
+        "map" : "PID-15, LAN-2"
       },
       {
         "identity" : "rim",
-        "map" : "CD"
+        "map" : "player[classCode=PSN|ANM and determinerCode=INSTANCE]/languageCommunication/code"
       },
       {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "cda",
+        "map" : ".languageCode"
       }]
     },
     {

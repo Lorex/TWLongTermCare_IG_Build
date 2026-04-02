@@ -101,29 +101,25 @@ Reference is intended to point to a structure that can potentially be expressed 
 "PractitionerRole.organization.display","PractitionerRole.organization.display","","","",0,1,"","","Y","string {[]} {[]}
 ","Text alternative for the resource","Plain text narrative that identifies the resource in addition to the resource reference.","This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.","","","","","","","","",,,,,"",,,,"Reference.display",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A"
-"PractitionerRole.code","PractitionerRole.code","","","",0,*,"Y","","","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
-","此健康照護服務提供者可能執行的角色","此健康照護服務提供者被授權為機構執行的角色","一個人可能有不止一個角色","需要了解健康照護服務提供者的權限 - 他們可以做什麽？","","","","","","","",,"extensible","應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/health-professional-sct-tw","",,,,"PractitionerRole.code",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE","n/a","CD"
-"PractitionerRole.specialty","PractitionerRole.specialty","","","",0,*,"Y","","","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
-","健康照護服務提供者的特定專業","健康照護服務提供者的特定專業","Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.","","","","","","","","",,"preferred","應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","http://hl7.org/fhir/ValueSet/c80-practice-codes","",,,,"PractitionerRole.specialty",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE","n/a","CD"
+"PractitionerRole.code","PractitionerRole.code","","","",0,*,"Y","","Y","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
+","此健康照護服務提供者可能執行的角色","此健康照護服務提供者被授權為機構執行的角色","一個人可能有不止一個角色","需要了解健康照護服務提供者的權限 - 他們可以做什麽？","","","","","","","",,"extensible","應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/health-professional-sct-tw","",,,,"PractitionerRole.code",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","PRD-1 / STF-18  / PRA-3  / PRT-4  / ROL-3 / ORC-12 / OBR-16 / PV1-7 / PV1-8 / PV1-9 / PV1-17",".code","(ServD maps Practitioners and Organizations via another entity, so this concept is not available)"
+"PractitionerRole.specialty","PractitionerRole.specialty","","","",0,*,"Y","","Y","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
+","健康照護服務提供者的特定專業","健康照護服務提供者的特定專業","","","","","","","","","",,"preferred","應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","http://hl7.org/fhir/ValueSet/c80-practice-codes","",,,,"PractitionerRole.specialty",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","PRA-5",".player.HealthCareProvider[@classCode = 'PROV'].code","./Specialty"
 "PractitionerRole.specialty.id","PractitionerRole.specialty.id","","","",0,1,"","","","string {[]} {[]}
 ","唯一可識別ID，以供資料項目間相互參照。","resource中資料項目的唯一ID（用於內部參照）。這可以是任何不含空格的字串。","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "PractitionerRole.specialty.extension","PractitionerRole.specialty.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","擴充的資料項目","擴充的資料項目","","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"PractitionerRole.specialty.coding","PractitionerRole.specialty.coding","","","",0,*,"Y","","","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
+"PractitionerRole.specialty.coding","PractitionerRole.specialty.coding","","","",0,*,"Y","","Y","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
 ","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles ）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,,,,"","pattern:system}
-","",,"open","CodeableConcept.coding",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","n/a","CV"
-"PractitionerRole.specialty.coding:TWMedicalDepartmentSCT","PractitionerRole.specialty.coding","TWMedicalDepartmentSCT","","",0,1,"Y","","","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
-","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles ）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,"required","","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/medical-department-sct-tw","",,,,"CodeableConcept.coding",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","n/a","CV"
+","",,"open","CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","C*E.1-8, C*E.10-22","union(., ./translation)"
+"PractitionerRole.specialty.coding:TWMedicalDepartmentSCT","PractitionerRole.specialty.coding","TWMedicalDepartmentSCT","","",0,1,"Y","","Y","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
+","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles ）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,"required","","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/medical-department-sct-tw","",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","C*E.1-8, C*E.10-22","union(., ./translation)"
 "PractitionerRole.specialty.coding:TWMedicalDepartmentSCT.id","PractitionerRole.specialty.coding.id","","","",0,1,"","","","string {[]} {[]}
 ","唯一可識別ID，以供資料項目間相互參照。","resource中資料項目的唯一ID（用於內部參照），這可以是任何不含空格的字串。","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "PractitionerRole.specialty.coding:TWMedicalDepartmentSCT.extension","PractitionerRole.specialty.coding.extension","","","",0,*,"","","","Extension {[]} {[]}
@@ -145,10 +141,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "PractitionerRole.specialty.coding:TWMedicalDepartmentSCT.userSelected","PractitionerRole.specialty.coding.userSelected","","","",0,1,"","","Y","boolean {[]} {[]}
 ","此編碼是否由使用者直接選擇？","表明此編碼是由使用者直接選擇，例如：從可用項目（代碼或顯示名稱）的清單中選擇。","在一系列備選方案中，直接選擇的代碼是新翻譯最合適的起點；關於「直接選擇」的確切意義，存在模糊不清之處，可能需要貿易夥伴的同意，以更完整澄清此資料項目的使用及其後果。","已被確定為一個臨床安全準則—此確切的系統／代碼對(code pair)是被明確選擇的，而不是由系統根據一些規則或是程式語言處理判斷。","","","","","","","",,,,,"",,,,"Coding.userSelected",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Sometimes implied by being first","CD.codingRationale"
-"PractitionerRole.specialty.coding:TWMedicalConsultationDepartment","PractitionerRole.specialty.coding","TWMedicalConsultationDepartment","","",0,1,"Y","","","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
-","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles ）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,"required","","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/medical-consultation-department-tw","",,,,"CodeableConcept.coding",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","n/a","CV"
+"PractitionerRole.specialty.coding:TWMedicalConsultationDepartment","PractitionerRole.specialty.coding","TWMedicalConsultationDepartment","","",0,1,"Y","","Y","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
+","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles ）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,"required","","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/medical-consultation-department-tw","",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","C*E.1-8, C*E.10-22","union(., ./translation)"
 "PractitionerRole.specialty.coding:TWMedicalConsultationDepartment.id","PractitionerRole.specialty.coding.id","","","",0,1,"","","","string {[]} {[]}
 ","唯一可識別ID，以供資料項目間相互參照。","resource中資料項目的唯一ID（用於內部參照），這可以是任何不含空格的字串。","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "PractitionerRole.specialty.coding:TWMedicalConsultationDepartment.extension","PractitionerRole.specialty.coding.extension","","","",0,*,"","","","Extension {[]} {[]}
@@ -170,10 +165,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "PractitionerRole.specialty.coding:TWMedicalConsultationDepartment.userSelected","PractitionerRole.specialty.coding.userSelected","","","",0,1,"","","Y","boolean {[]} {[]}
 ","此編碼是否由使用者直接選擇？","表明此編碼是由使用者直接選擇，例如：從可用項目（代碼或顯示名稱）的清單中選擇。","在一系列備選方案中，直接選擇的代碼是新翻譯最合適的起點；關於「直接選擇」的確切意義，存在模糊不清之處，可能需要貿易夥伴的同意，以更完整澄清此資料項目的使用及其後果。","已被確定為一個臨床安全準則—此確切的系統／代碼對(code pair)是被明確選擇的，而不是由系統根據一些規則或是程式語言處理判斷。","","","","","","","",,,,,"",,,,"Coding.userSelected",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Sometimes implied by being first","CD.codingRationale"
-"PractitionerRole.specialty.coding:TWMedicalTreatmentDepartment","PractitionerRole.specialty.coding","TWMedicalTreatmentDepartment","","",0,1,"Y","","","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
-","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles ）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,"required","","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/medical-treatment-department-tw","",,,,"CodeableConcept.coding",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","n/a","CV"
+"PractitionerRole.specialty.coding:TWMedicalTreatmentDepartment","PractitionerRole.specialty.coding","TWMedicalTreatmentDepartment","","",0,1,"Y","","Y","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
+","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles ）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,"required","","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/medical-treatment-department-tw","",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","C*E.1-8, C*E.10-22","union(., ./translation)"
 "PractitionerRole.specialty.coding:TWMedicalTreatmentDepartment.id","PractitionerRole.specialty.coding.id","","","",0,1,"","","","string {[]} {[]}
 ","唯一可識別ID，以供資料項目間相互參照。","resource中資料項目的唯一ID（用於內部參照），這可以是任何不含空格的字串。","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "PractitionerRole.specialty.coding:TWMedicalTreatmentDepartment.extension","PractitionerRole.specialty.coding.extension","","","",0,*,"","","","Extension {[]} {[]}
@@ -229,7 +223,7 @@ Reference is intended to point to a structure that can potentially be expressed 
 "PractitionerRole.location.display","PractitionerRole.location.display","","","",0,1,"","","Y","string {[]} {[]}
 ","Text alternative for the resource","Plain text narrative that identifies the resource in addition to the resource reference.","This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.","","","","","","","","",,,,,"",,,,"Reference.display",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A"
-"PractitionerRole.healthcareService","PractitionerRole.healthcareService","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/HealthcareService]]}
+"PractitionerRole.healthcareService","PractitionerRole.healthcareService","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/HealthcareService|4.0.1]]}
 ","此工作者為此角色的機構（Organizatoin）/地點（Location）提供的健康照護服務清單","此工作者為此角色的機構（Organizatoin）/地點（Location）提供的健康照護服務清單","","","","","","","","","",,,,,"",,,,"PractitionerRole.healthcareService",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","EDU-2 / AFF-3",".player.QualifiedEntity[@classCode = 'QUAL'].code"
 "PractitionerRole.telecom","PractitionerRole.telecom","","","",0,*,"Y","","Y","ContactPoint {[]} {[]}
@@ -309,6 +303,6 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "PractitionerRole.availabilityExceptions","PractitionerRole.availabilityExceptions","","","",0,1,"","","","string {[]} {[]}
 ","描述在特定情況下服務不可用的特例","對於服務地點可用性的所有例外情況進行描述，例如國定假日的可用性。簡要描述了所有可能影響可用性的例外情況，包括可用時間和不可用時間的細節。","","","","","","","","","",,,,,"",,,,"PractitionerRole.availabilityExceptions",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".effectiveTime"
-"PractitionerRole.endpoint","PractitionerRole.endpoint","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Endpoint]]}
+"PractitionerRole.endpoint","PractitionerRole.endpoint","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Endpoint|4.0.1]]}
 ","提供用於此健康照護服務提供者角色運營服務的技術端點","提供用於此健康照護服務提供者角色運營服務的技術端點","","機構在不同健康照護服務提供者角色有提供各種服務的不同系統，需要明確怎樣以及為了什麼目的來連接這些系統的技術詳情。","","","","","","","",,,,,"",,,,"PractitionerRole.endpoint",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a"

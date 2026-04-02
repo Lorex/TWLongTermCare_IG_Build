@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseAA12 | *Version*:1.0.0 |
-| Active as of 2026-03-02 | *Computable Name*:LTCQuestionnaireResponseAA12 |
+| Active as of 2026-04-02 | *Computable Name*:LTCQuestionnaireResponseAA12 |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現長期照護醫師意見書的問卷回覆內容。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCQuestionnaireResp
   "name" : "LTCQuestionnaireResponseAA12",
   "title" : "長期照護醫師意見書問卷回覆 (AA12)",
   "status" : "active",
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

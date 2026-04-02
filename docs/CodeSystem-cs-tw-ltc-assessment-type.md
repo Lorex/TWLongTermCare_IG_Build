@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-type | *Version*:1.0.0 |
-| Active as of 2026-03-02 | *Computable Name*:CS_TW_LTC_AssessmentType |
+| Active as of 2026-04-02 | *Computable Name*:CS_TW_LTC_AssessmentType |
 
  
 對應 r2.8 / r3.21：出院銜接、初評、複評、計畫異動、舊系統無評估轉入、身障居服匯入、AA計劃異動。 
@@ -32,7 +32,7 @@
   "title" : "長照 SDK－評估類型",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

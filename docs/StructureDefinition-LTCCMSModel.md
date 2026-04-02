@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCMSModel | *Version*:1.0.0 |
-| Active as of 2026-03-02 | *Computable Name*:LTCCMSModel |
+| Active as of 2026-04-02 | *Computable Name*:LTCCMSModel |
 
  
 此邏輯模型以衛生福利部長期照顧管理中心照顧管理評估量表為基礎，用以描述照顧管理評估量表的資料結構與欄位準備指引。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCCMSModel.csv), [E
   "name" : "LTCCMSModel",
   "title" : "照顧管理評估量表邏輯模型",
   "status" : "active",
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

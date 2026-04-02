@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientReferral | *Version*:1.0.0 |
-| Active as of 2026-03-02 | *Computable Name*:LTCPatientReferral |
+| Active as of 2026-04-02 | *Computable Name*:LTCPatientReferral |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Patient Resource，以呈現適用於長期照護管理中心個案服務初篩表/轉介單的長照機構住民基本資料。 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCPatientReferral.c
   "name" : "LTCPatientReferral",
   "title" : "轉介單－個案基本資料",
   "status" : "active",
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

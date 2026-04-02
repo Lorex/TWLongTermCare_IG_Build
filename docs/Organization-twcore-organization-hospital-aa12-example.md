@@ -6,7 +6,7 @@
 
 ## Example Organization: 長期照護醫師意見書醫院範例 (AA12)
 
-Profile: [TW Core Organization](https://twcore.mohw.gov.tw/ig/twcore/0.3.2/StructureDefinition-Organization-twcore.html)
+Profile: [TW Core Organization](https://twcore.mohw.gov.tw/ig/twcore/1.0.0/StructureDefinition-Organization-twcore.html)
 
 **identifier**: `https://www.nhi.gov.tw`/1234567890 (use: official, ), `https://www.mohw.gov.tw`/HOSP001 (use: official, )
 

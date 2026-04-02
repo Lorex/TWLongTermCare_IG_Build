@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCondition | *Version*:1.0.0 |
-| Active as of 2026-03-02 | *Computable Name*:LTCCondition |
+| Active as of 2026-04-02 | *Computable Name*:LTCCondition |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的病情、問題或診斷資料。 
@@ -17,7 +17,7 @@
 **Usages:**
 
 * Derived from this Profile: [長期照顧－身心障礙手冊持有狀態](StructureDefinition-LTCConditionDisability.md), [長期照顧－身心障礙類型](StructureDefinition-LTCConditionDisabilityType.md), [長期照顧－主要問題及需求](StructureDefinition-LTCConditionNeed.md), [長期照顧－主要疾病](StructureDefinition-LTCConditionProblem.md)... Show 2 more, [運動處方－運動史](StructureDefinition-PASportConditionExerciseHistory.md) and [運動處方－病史](StructureDefinition-PASportConditionMedicalHistory.md)
-* Refer to this Profile: [長期照顧－照顧計畫](StructureDefinition-LTCCarePlan.md)
+* Refer to this Profile: [長期照顧－照顧計畫](StructureDefinition-LTCCarePlan.md) and [長期照顧－服務請求](StructureDefinition-LTCServiceRequest.md)
 * Examples for this Profile: [Condition/ltc-condition-example](Condition-ltc-condition-example.md)
 * CapabilityStatements using this Profile: [臺灣長期照顧實作指引 - 用戶端能力聲明](CapabilityStatement-CapabilityStatementLTCClient.md) and [臺灣長期照顧實作指引 - 伺服端能力聲明](CapabilityStatement-CapabilityStatementLTCServer.md)
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCCondition.csv), [
   "name" : "LTCCondition",
   "title" : "長期照顧－病情、問題或診斷",
   "status" : "active",
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -79,6 +79,11 @@ Other representations of profile: [CSV](StructureDefinition-LTCCondition.csv), [
     "identity" : "w5",
     "uri" : "http://hl7.org/fhir/fivews",
     "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "sct-attr",
+    "uri" : "http://snomed.org/attributebinding",
+    "name" : "SNOMED CT Attribute Binding"
   }],
   "kind" : "resource",
   "abstract" : false,

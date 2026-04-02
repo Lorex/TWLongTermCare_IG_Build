@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-case-status | *Version*:1.0.0 |
-| Active as of 2026-03-02 | *Computable Name*:VS_TW_LTC_CaseStatus |
+| Active as of 2026-04-02 | *Computable Name*:VS_TW_LTC_CaseStatus |
 
  
 此 ValueSet 用於表示長照 SDK 中個案的狀態，使用 FHIR EpisodeOfCare status 對應碼：active（服務中）、onhold（暫停服務）、finished（已結案）。 
@@ -51,7 +51,7 @@
   "title" : "長照 SDK－個案狀態",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

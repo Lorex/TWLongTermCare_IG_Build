@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-CS100 | *Version*:1.0.0 |
-| Draft as of 2026-03-02 | *Computable Name*:LTCEpisodeOfCareCS100 |
+| Draft as of 2026-04-02 | *Computable Name*:LTCEpisodeOfCareCS100 |
 
  
 對應衛生福利部照顧服務管理資訊平臺『CS100 個案總查詢』之案件列資料。 作為 CS100 匯出資料列的病例/案件載體，提供個案管理之基礎欄位（案件編號、狀態、期間、主責機構、個管等）。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-LTC-EpisodeOfCare-CS
   "name" : "LTCEpisodeOfCareCS100",
   "title" : "長照案件（CS100 專用版）",
   "status" : "draft",
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

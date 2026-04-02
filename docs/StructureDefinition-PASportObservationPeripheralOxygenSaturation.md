@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationPeripheralOxygenSaturation | *Version*:1.0.0 |
-| Active as of 2026-03-02 | *Computable Name*:PASportObservationPeripheralOxygenSaturation |
+| Active as of 2026-04-02 | *Computable Name*:PASportObservationPeripheralOxygenSaturation |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之脈搏血氧飽和度資料。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-PASportObservationPe
   "name" : "PASportObservationPeripheralOxygenSaturation",
   "title" : "基礎生理量測－脈搏血氧飽和度",
   "status" : "active",
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ImplementationGuide/tw.iii.ltc | *Version*:1.0.0 |
-| Active as of 2026-03-02 | *Computable Name*:TaiwanLongTermCareImplementationGuide |
+| Active as of 2026-04-02 | *Computable Name*:TaiwanLongTermCareImplementationGuide |
 
 ### 重要異動公告
 
@@ -27,7 +27,7 @@
 
 ### 介紹
 
-臺灣長期照顧實作指引（Taiwan Long Term Care Implementation Guide，簡稱TW LTC IG）採用HL7® FHIR® standard（Fast Healthcare Interoperability Resources）IG建置方法，在[FHIR R4.0.1](http://hl7.org/fhir/R4/)之標準基礎上，參考了[臺灣核心實作指引 （TW Core Implementation Guide）0.3.2](https://twcore.mohw.gov.tw/ig/twcore/index.html)、[美國長期照顧實作指引（Electronic Long-Term Services and Supports (eLTSS) Release 1 - US Realm, eLTSS） 2.0.0 - STU2](https://hl7.org/fhir/us/eltss/index.html) ，進一步定義適用於臺灣長期照顧資料交換需求的Resources（類似資料表）、其中的資料項目（意即欄位）、基數（意即0..1、0..*、1..1或1..*）、資料類型（文字、日期時間、代碼等）、可綁定的代碼（及其綁定的強制程度）及查詢參數等，旨在提供健康照護資訊系統開發與實作者以TW LTC IG為基礎，再進一步訂定其實務專案所需之資料交換格式以應用於專案中。TW LTC IG的實作方式有兩種：
+臺灣長期照顧實作指引（Taiwan Long Term Care Implementation Guide，簡稱TW LTC IG）採用HL7® FHIR® standard（Fast Healthcare Interoperability Resources）IG建置方法，在[FHIR R4.0.1](http://hl7.org/fhir/R4/)之標準基礎上，參考了[臺灣核心實作指引 （TW Core Implementation Guide）1.0.0](https://twcore.mohw.gov.tw/ig/twcore/index.html)、[美國長期照顧實作指引（Electronic Long-Term Services and Supports (eLTSS) Release 1 - US Realm, eLTSS） 2.0.0 - STU2](https://hl7.org/fhir/us/eltss/index.html) ，進一步定義適用於臺灣長期照顧資料交換需求的Resources（類似資料表）、其中的資料項目（意即欄位）、基數（意即0..1、0..*、1..1或1..*）、資料類型（文字、日期時間、代碼等）、可綁定的代碼（及其綁定的強制程度）及查詢參數等，旨在提供健康照護資訊系統開發與實作者以TW LTC IG為基礎，再進一步訂定其實務專案所需之資料交換格式以應用於專案中。TW LTC IG的實作方式有兩種：
 
 1. **僅支援Profiles**：系統僅支援TW LTC Profiles以呈現健康照護相關資料。
 1. **支援Profiles + RESTful互動**：系統支援TW LTC Profiles及RESTful互動以呈現健康照護相關資料。
@@ -134,7 +134,7 @@ TW LTC IG 中所有Profiles的FMM等級如下：
   "name" : "TaiwanLongTermCareImplementationGuide",
   "title" : "臺灣長期照顧實作指引(TW LTC IG)",
   "status" : "active",
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -154,7 +154,7 @@ TW LTC IG 中所有Profiles的FMM等級如下：
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.0.1"
+    "version" : "7.1.0"
   },
   {
     "id" : "hl7ext",
@@ -170,7 +170,7 @@ TW LTC IG 中所有Profiles的FMM等級如下：
     "id" : "tw_gov_mohw_twcore",
     "uri" : "https://twcore.mohw.gov.tw/ig/twcore/ImplementationGuide/tw.gov.mohw.twcore",
     "packageId" : "tw.gov.mohw.twcore",
-    "version" : "0.3.2"
+    "version" : "1.0.0"
   }],
   "definition" : {
     "extension" : [{
@@ -483,7 +483,7 @@ TW LTC IG 中所有Profiles的FMM等級如下：
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#0.9.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#1.1.2"
     },
     {
       "extension" : [{
@@ -3212,6 +3212,18 @@ TW LTC IG 中所有Profiles的FMM等級如下：
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/ltc-task-referral-acceptance-example"
+      },
+      "name" : "轉介確認任務範例",
+      "description" : "展示長照機構接受轉介個案的任務確認範例",
+      "exampleCanonical" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCTask"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Condition"
       }],
       "reference" : {
@@ -3683,6 +3695,18 @@ TW LTC IG 中所有Profiles的FMM等級如下：
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
+        "reference" : "StructureDefinition/LTCTask"
+      },
+      "name" : "長期照顧－任務管理",
+      "description" : "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Task Resource，以呈現長期照顧情境中的轉介確認、照顧計畫狀態更新等任務管理需求。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
         "reference" : "StructureDefinition/LTCPatient"
       },
       "name" : "長期照顧－住民基本資料",
@@ -3771,6 +3795,18 @@ TW LTC IG 中所有Profiles的FMM等級如下：
       },
       "name" : "長期照顧－服務人員角色",
       "description" : "此 Profile 說明本 IG 如何進一步定義 FHIR 的 PractitionerRole Resource，以呈現長期照顧服務人員的角色資料。\n\n有關 PractitionerRole 與 Practitioner 的差異及相關解釋，請參照 [TW Core IG](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-PractitionerRole-twcore.html) 中的說明。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/LTCServiceRequest"
+      },
+      "name" : "長期照顧－服務請求",
+      "description" : "此 Profile 說明本 IG 如何進一步定義 FHIR 的 ServiceRequest Resource，以呈現長期照顧情境中的轉介申請及服務請求需求。",
       "exampleBoolean" : false
     },
     {
@@ -4852,6 +4888,18 @@ TW LTC IG 中所有Profiles的FMM等級如下：
       "name" : "長照機構住民經濟狀況",
       "description" : "此 Extension 用以表述長照機構住民的經濟狀況。",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ltc-servicerequest-referral-example"
+      },
+      "name" : "長照轉介服務請求範例",
+      "description" : "展示醫療院所向長照機構發送轉介服務請求的範例",
+      "exampleCanonical" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCServiceRequest"
     },
     {
       "extension" : [{

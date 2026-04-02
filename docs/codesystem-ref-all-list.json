@@ -1,5 +1,17 @@
 {
   "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/CodeSystem/task-code",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "TaskCode",
+    "title" : "Task Codes",
+    "description" : "Codes indicating the type of action that is expected to be performed",
+    "oids" : ["2.16.840.1.113883.4.642.4.1397"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-task-code.html" : "Task Codes"
+  },
+  {
     "url" : "http://hl7.org/fhir/address-type",
     "version" : "4.0.1",
     "status" : "active",
@@ -189,8 +201,8 @@
     "oids" : ["2.16.840.1.113883.4.642.4.665"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-episode-of-care-status.html" : "EpisodeOfCareStatus",
-    "ValueSet-vs-tw-ltc-case-status.html" : "長照 SDK－個案狀態"
+    "ValueSet-vs-tw-ltc-case-status.html" : "長照 SDK－個案狀態",
+    "http://hl7.org/fhir/R4/valueset-episode-of-care-status.html" : "EpisodeOfCareStatus"
   },
   {
     "url" : "http://hl7.org/fhir/event-status",
@@ -358,7 +370,7 @@
     "oids" : ["2.16.840.1.113883.4.642.4.56"],
     "uses" : {
     },
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-narrative-status.html" : "臺灣衛福部資訊處Narrative狀態值集"
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-narrative-status.html" : "臺灣衛福部資訊處Narrative狀態值集"
   },
   {
     "url" : "http://hl7.org/fhir/note-type",
@@ -466,8 +478,9 @@
     "oids" : ["2.16.840.1.113883.4.642.4.114"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-care-plan-intent.html" : "Care Plan Intent",
-    "http://hl7.org/fhir/R4/valueset-request-intent.html" : "RequestIntent"
+    "http://hl7.org/fhir/R4/valueset-task-intent.html" : "TaskIntent",
+    "http://hl7.org/fhir/R4/valueset-request-intent.html" : "RequestIntent",
+    "http://hl7.org/fhir/R4/valueset-care-plan-intent.html" : "Care Plan Intent"
   },
   {
     "url" : "http://hl7.org/fhir/request-priority",
@@ -502,8 +515,8 @@
     "description" : "One of the resource types defined as part of this version of FHIR.",
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-care-plan-activity-kind.html" : "Care Plan Activity Kind",
-    "http://hl7.org/fhir/R4/valueset-resource-types.html" : "ResourceType"
+    "http://hl7.org/fhir/R4/valueset-resource-types.html" : "ResourceType",
+    "http://hl7.org/fhir/R4/valueset-care-plan-activity-kind.html" : "Care Plan Activity Kind"
   },
   {
     "url" : "http://hl7.org/fhir/search-entry-mode",
@@ -542,6 +555,30 @@
     "http://hl7.org/fhir/R4/valueset-icd-10.html" : "ICD-10 Codes"
   },
   {
+    "url" : "http://hl7.org/fhir/task-intent",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "TaskIntent",
+    "title" : "TaskIntent",
+    "description" : "Distinguishes whether the task is a proposal, plan or full order.",
+    "oids" : ["2.16.840.1.113883.4.642.4.1241"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-task-intent.html" : "TaskIntent"
+  },
+  {
+    "url" : "http://hl7.org/fhir/task-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "TaskStatus",
+    "title" : "TaskStatus",
+    "description" : "The current status of the task.",
+    "oids" : ["2.16.840.1.113883.4.642.4.791"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-task-status.html" : "TaskStatus"
+  },
+  {
     "url" : "http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips",
     "version" : "1.1.0",
     "status" : "active",
@@ -554,7 +591,7 @@
   },
   {
     "url" : "http://loinc.org",
-    "version" : "3.1.0",
+    "version" : "3.0.1",
     "status" : "active",
     "name" : "LOINC",
     "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
@@ -562,14 +599,14 @@
     "oids" : ["2.16.840.1.113883.6.1"],
     "uses" : {
     },
-    "ValueSet-FallHistoryResultVS-TWLTC.html" : "跌倒紀錄結果值集",
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-vital-signs-tw.html" : "LOINC生命體徵值集",
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-loinc-document-classcodes.html" : "LOINC Document Class值集",
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-loinc-type-doc-code.html" : "LOINC Code Document Type值集",
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-loinc-doc-section-code.html" : "LOINC Code Document Section值集",
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-loinc-document-classcodes.html" : "LOINC Document Class值集",
     "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-loinc-doc-section-code.html" : "LOINC Code Document Section值集",
-    "http://hl7.org/fhir/R4/valueset-care-team-category.html" : "Care Team category",
     "http://hl7.org/fhir/R4/valueset-observation-vitalsignresult.html" : "Vital Signs",
+    "http://hl7.org/fhir/R4/valueset-care-team-category.html" : "Care Team category",
+    "ValueSet-FallHistoryResultVS-TWLTC.html" : "跌倒紀錄結果值集",
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-vital-signs-tw.html" : "LOINC生命體徵值集",
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-loinc-type-doc-code.html" : "LOINC Code Document Type值集",
     "http://hl7.org/fhir/R4/valueset-questionnaire-questions.html" : "Questionnaire Question Codes"
   },
   {
@@ -901,48 +938,48 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "ValueSet-ServiceRequestPAVS-Sport.html" : "身體活動量測-適用運動處方之服務請求代碼值集",
-    "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
-    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
-    "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
+    "ValueSet-TreadmillTypeVS-Sport.html" : "身體活動量測-跑步機類型值集",
+    "http://hl7.org/fhir/R4/valueset-procedure-outcome.html" : "Procedure Outcome Codes (SNOMED CT)",
+    "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
+    "http://hl7.org/fhir/R4/valueset-goal-start-event.html" : "Goal start event",
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-health-professional-sct-tw.html" : "SNOMED CT + 臺灣醫事司醫事人員類別值集",
+    "http://hl7.org/fhir/R4/valueset-participant-role.html" : "Participant Roles",
     "http://hl7.org/fhir/R4/valueset-approach-site-codes.html" : "SNOMED CT Anatomical Structure for Administration Site Codes",
-    "http://hl7.org/fhir/R4/valueset-servicerequest-category.html" : "Service Request Category Codes",
-    "http://hl7.org/fhir/R4/valueset-administration-method-codes.html" : "SNOMED CT Administration Method Codes",
+    "http://hl7.org/fhir/R4/valueset-procedure-not-performed-reason.html" : "Procedure Not Performed Reason (SNOMED-CT)",
     "http://hl7.org/fhir/R4/valueset-questionnaire-answers.html" : "Questionnaire Answer Codes",
     "ValueSet-GaitTypeVS-Sport.html" : "身體活動量測-步態分析值集",
-    "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
-    "http://hl7.org/fhir/R4/valueset-procedure-followup.html" : "Procedure Follow up Codes (SNOMED CT)",
-    "http://hl7.org/fhir/R4/valueset-device-kind.html" : "FHIR Device Types",
-    "http://hl7.org/fhir/R4/valueset-device-action.html" : "Procedure Device Action Codes",
-    "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
-    "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
-    "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
-    "http://hl7.org/fhir/R4/valueset-participant-role.html" : "Participant Roles",
-    "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
-    "ValueSet-TreadmillTypeVS-Sport.html" : "身體活動量測-跑步機類型值集",
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-condition-code-sct-tw.html" : "SNOMED CT診斷代碼值集",
     "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
-    "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity",
-    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
-    "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-medical-department-sct-tw.html" : "對應至 SNOMED CT之就醫科別 + 診療科別值集",
-    "http://hl7.org/fhir/R4/valueset-procedure-category.html" : "Procedure Category Codes (SNOMED CT)",
-    "ValueSet-ConditionSeverityVS-TWLTC.html" : "疾病嚴重度擴展值集",
-    "http://hl7.org/fhir/R4/valueset-route-codes.html" : "SNOMED CT Route Codes",
-    "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes",
-    "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
-    "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
-    "http://hl7.org/fhir/R4/valueset-goal-start-event.html" : "Goal start event",
-    "http://hl7.org/fhir/R4/valueset-procedure-outcome.html" : "Procedure Outcome Codes (SNOMED CT)",
+    "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
     "http://hl7.org/fhir/R4/valueset-condition-stage-type.html" : "Condition Stage Type",
-    "http://hl7.org/fhir/R4/valueset-procedure-not-performed-reason.html" : "Procedure Not Performed Reason (SNOMED-CT)",
+    "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity",
+    "http://hl7.org/fhir/R4/valueset-device-action.html" : "Procedure Device Action Codes",
+    "ValueSet-ConditionSeverityVS-TWLTC.html" : "疾病嚴重度擴展值集",
+    "http://hl7.org/fhir/R4/valueset-procedure-category.html" : "Procedure Category Codes (SNOMED CT)",
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-condition-code-sct-tw.html" : "SNOMED CT診斷代碼值集",
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-serviceRequest-category.html" : "臺灣衛福部資訊處ServiceRequest類型值集",
     "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
-    "http://hl7.org/fhir/R4/valueset-condition-stage.html" : "Condition Stage",
+    "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
+    "http://hl7.org/fhir/R4/valueset-procedure-followup.html" : "Procedure Follow up Codes (SNOMED CT)",
     "ValueSet-GoalDescriptionVS-TWLTC.html" : "照顧目標描述值集",
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-health-professional-sct-tw.html" : "SNOMED CT + 臺灣醫事司醫事人員類別值集",
-    "ValueSet-ExerciseHistoryVS-Sport.html" : "身體活動量測-最近(目前)運動史值集",
+    "http://hl7.org/fhir/R4/valueset-administration-method-codes.html" : "SNOMED CT Administration Method Codes",
+    "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
+    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
+    "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes",
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-medical-department-sct-tw.html" : "對應至 SNOMED CT之就醫科別 + 診療科別值集",
+    "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
+    "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
     "http://hl7.org/fhir/R4/valueset-reason-medication-not-given-codes.html" : "SNOMED CT Reason Medication Not Given Codes",
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-serviceRequest-category.html" : "臺灣衛福部資訊處ServiceRequest類型值集"
+    "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
+    "ValueSet-ServiceRequestPAVS-Sport.html" : "身體活動量測-適用運動處方之服務請求代碼值集",
+    "http://hl7.org/fhir/R4/valueset-device-kind.html" : "FHIR Device Types",
+    "http://hl7.org/fhir/R4/valueset-condition-stage.html" : "Condition Stage",
+    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+    "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
+    "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
+    "http://hl7.org/fhir/R4/valueset-servicerequest-category.html" : "Service Request Category Codes",
+    "http://hl7.org/fhir/R4/valueset-route-codes.html" : "SNOMED CT Route Codes",
+    "ValueSet-ExerciseHistoryVS-Sport.html" : "身體活動量測-最近(目前)運動史值集"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/FDI-surface",
@@ -1054,8 +1091,8 @@
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/adverse-event-severity",
-    "version" : "1.0.0",
-    "status" : "draft",
+    "version" : "2.0.0",
+    "status" : "active",
     "name" : "AdverseEventSeverity",
     "title" : "AdverseEventSeverity",
     "description" : "The severity of the adverse event itself, in direct relation to the subject.",
@@ -1210,8 +1247,8 @@
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/contactentity-type",
-    "version" : "1.0.0",
-    "status" : "draft",
+    "version" : "2.0.0",
+    "status" : "active",
     "name" : "ContactEntityType",
     "title" : "Contact entity type",
     "description" : "This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.",
@@ -1602,13 +1639,13 @@
     "oids" : ["2.16.840.1.113883.4.642.1.1125"],
     "uses" : {
     },
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-category-code-tw.html" : "臺灣衛福部資訊處類型代碼值集",
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-category-code-tw.html" : "臺灣衛福部資訊處類型代碼值集",
     "http://hl7.org/fhir/R4/valueset-observation-category.html" : "Observation Category Codes"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/operation-outcome",
-    "version" : "3.0.0",
-    "status" : "draft",
+    "version" : "4.0.0",
+    "status" : "active",
     "name" : "OperationOutcomeCodes",
     "title" : "Operation Outcome Codes",
     "description" : "Operation Outcome codes used by FHIR test servers (see Implementation file translations.xml)",
@@ -1699,7 +1736,7 @@
     "oids" : ["2.16.840.1.113883.18.47"],
     "uses" : {
     },
-    "http://terminology.hl7.org/7.0.1/ValueSet-v2-0116.html" : "hl7VS-bedStatus"
+    "http://terminology.hl7.org/7.1.0/ValueSet-v2-0116.html" : "hl7VS-bedStatus"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v2-0131",
@@ -1725,11 +1762,11 @@
     "uses" : {
     },
     "http://hl7.org/fhir/R4/valueset-identifier-type.html" : "IdentifierType",
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-identifier-type-tw.html" : "IdentifierType + 臺灣衛福部資訊處識別碼類型值集"
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-identifier-type-tw.html" : "IdentifierType + 臺灣衛福部資訊處識別碼類型值集"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-    "version" : "9.0.0",
+    "version" : "10.0.0",
     "status" : "active",
     "name" : "ActCode",
     "title" : "ActCode",
@@ -1737,12 +1774,12 @@
     "oids" : ["2.16.840.1.113883.5.4"],
     "uses" : {
     },
-    "http://terminology.hl7.org/7.0.1/ValueSet-v3-ActIncidentCode.html" : "ActIncidentCode",
-    "http://terminology.hl7.org/7.0.1/ValueSet-v3-ActCode.html" : "v3 Code System ActCode"
+    "http://terminology.hl7.org/7.1.0/ValueSet-v3-ActIncidentCode.html" : "ActIncidentCode",
+    "http://terminology.hl7.org/7.1.0/ValueSet-v3-ActCode.html" : "v3 Code System ActCode"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
-    "version" : "3.0.0",
+    "version" : "4.0.0",
     "status" : "active",
     "name" : "Confidentiality",
     "title" : "Confidentiality",
@@ -1754,7 +1791,7 @@
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-    "version" : "3.0.0",
+    "version" : "4.0.0",
     "status" : "active",
     "name" : "MaritalStatus",
     "title" : "MaritalStatus",
@@ -1766,7 +1803,7 @@
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
-    "version" : "3.0.0",
+    "version" : "4.0.0",
     "status" : "active",
     "name" : "NullFlavor",
     "title" : "NullFlavor",
@@ -1778,7 +1815,7 @@
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
-    "version" : "3.0.0",
+    "version" : "4.0.0",
     "status" : "active",
     "name" : "ObservationInterpretation",
     "title" : "ObservationInterpretation",
@@ -1790,7 +1827,7 @@
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode",
-    "version" : "4.0.0",
+    "version" : "5.0.0",
     "status" : "active",
     "name" : "ParticipationMode",
     "title" : "ParticipationMode",
@@ -1798,11 +1835,11 @@
     "oids" : ["2.16.840.1.113883.5.1064"],
     "uses" : {
     },
-    "http://terminology.hl7.org/7.0.1/ValueSet-v3-ParticipationMode.html" : "ParticipationMode"
+    "http://terminology.hl7.org/7.1.0/ValueSet-v3-ParticipationMode.html" : "ParticipationMode"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-    "version" : "3.0.0",
+    "version" : "4.0.0",
     "status" : "active",
     "name" : "RoleCode",
     "title" : "RoleCode",
@@ -1810,9 +1847,9 @@
     "oids" : ["2.16.840.1.113883.5.111"],
     "uses" : {
     },
+    "http://terminology.hl7.org/7.1.0/ValueSet-v3-ServiceDeliveryLocationRoleType.html" : "ServiceDeliveryLocationRoleType",
     "http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html" : "Patient relationship type",
-    "ValueSet-RelationshipTypeVS-TWLTC.html" : "關係類型擴展值集",
-    "http://terminology.hl7.org/7.0.1/ValueSet-v3-ServiceDeliveryLocationRoleType.html" : "ServiceDeliveryLocationRoleType"
+    "ValueSet-RelationshipTypeVS-TWLTC.html" : "關係類型擴展值集"
   },
   {
     "url" : "http://unitsofmeasure.org",
@@ -1835,8 +1872,8 @@
     "description" : "臺灣衛福部資訊處類型代碼， \n代碼出版日期：2024-08-31；資料所屬單位：衛生福利部資訊處。",
     "uses" : {
     },
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-category-code-tw.html" : "臺灣衛福部資訊處類型代碼值集",
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-serviceRequest-category.html" : "臺灣衛福部資訊處ServiceRequest類型值集"
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-category-code-tw.html" : "臺灣衛福部資訊處類型代碼值集",
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-serviceRequest-category.html" : "臺灣衛福部資訊處ServiceRequest類型值集"
   },
   {
     "url" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/health-professional-tw",
@@ -1847,7 +1884,7 @@
     "description" : "臺灣醫事司醫事人員類別，參照至[醫事人員基本資料檔](https://www.google.com/url?client=internal-element-cse&cx=012254495936870409035:lzvyrg0mtim&q=https://www.mohw.gov.tw/dl-40452-1441ca2e-cde9-4345-b681-f9a20d5176b5.html&sa=U&ved=2ahUKEwjg5MCYrZn5AhUTI6YKHV6mC_s4FBAWegQIBBAC&usg=AOvVaw1q62t2W0hhdi0WC6e_nh1m)中的「人員類別（2022/01/28修訂）」。\n\n代碼出版日期：2022-01-28；資料所屬單位：衛生福利部醫事司。\n\n*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*",
     "uses" : {
     },
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-health-professional-sct-tw.html" : "SNOMED CT + 臺灣醫事司醫事人員類別值集"
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-health-professional-sct-tw.html" : "SNOMED CT + 臺灣醫事司醫事人員類別值集"
   },
   {
     "url" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2014-tw",
@@ -1855,10 +1892,10 @@
     "status" : "active",
     "name" : "TW2014ICD10CM",
     "title" : "臺灣健保署2014年中文版ICD-10-CM",
-    "description" : "臺灣健保署2014年中文版ICD-10-CM，參照至[https://www.nhi.gov.tw/Content_List.aspx?n=3C0BD93EC042CC67&topn=23C660CAACAA159D](https://www.nhi.gov.tw/Content_List.aspx?n=3C0BD93EC042CC67&topn=23C660CAACAA159D)。  \r\n代碼出版日期：2022-07-29；資料所屬單位：衛生福利部中央健康保險署。\r\n\r\n*因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。*\r\n\r\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－臺灣健保署2014年中文版ICD-10-CM](https://fhir.mohw.gov.tw/ts/codesystemRead.jsp?id=icd-10-cm-2014-tw&status=active&version=2017-07-19&metaId=1&codeStatus=use&show=Y)查閱",
+    "description" : "臺灣健保署2014年中文版ICD-10-CM，參照至[國際疾病分類第 10 版](https://www.nhi.gov.tw/ch/np-3049-1.html)，由於資料會隨代碼更新而變動，本資料的來源位置可能已更新為最新版代碼，原資料已被覆蓋。    \n代碼出版日期：2022-07-19；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。*\n\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－代碼系統(Code System)](https://fhir.mohw.gov.tw/ts/codesystem.jsp)查閱",
     "uses" : {
     },
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-icd-10-cm-2014-tw.html" : "臺灣健保署2014年中文版ICD-10-CM值集"
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-icd-10-cm-2014-tw.html" : "臺灣健保署2014年中文版ICD-10-CM值集"
   },
   {
     "url" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2021-tw",
@@ -1866,10 +1903,21 @@
     "status" : "active",
     "name" : "TW2021ICD10CM",
     "title" : "臺灣健保署2021年中文版ICD-10-CM",
-    "description" : "臺灣健保署2021年中文版ICD-10-CM，參照至[https://www.nhi.gov.tw/Content_List.aspx?n=3C0BD93EC042CC67&topn=23C660CAACAA159D](https://www.nhi.gov.tw/Content_List.aspx?n=3C0BD93EC042CC67&topn=23C660CAACAA159D)。    \r\n代碼出版日期：2022-07-29；資料所屬單位：衛生福利部中央健康保險署。\r\n\r\n*因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。*\r\n\r\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－臺灣健保署2021年中文版ICD-10-CM](https://fhir.mohw.gov.tw/ts/codesystemRead.jsp?id=icd-10-cm-2021-tw&status=active&version=2022-07-29&metaId=1&codeStatus=use&show=Y)查閱",
+    "description" : "臺灣健保署2021年中文版ICD-10-CM，參照至[國際疾病分類第 10 版](https://www.nhi.gov.tw/ch/np-3049-1.html)，由於資料會隨代碼更新而變動，本資料的來源位置可能已更新為最新版代碼，原資料已被覆蓋。      \n代碼出版日期：2022-07-29；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。*\n\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－代碼系統(Code System)](https://fhir.mohw.gov.tw/ts/codesystem.jsp)查閱",
     "uses" : {
     },
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-icd-10-cm-2021-tw.html" : "臺灣健保署2021年中文版ICD-10-CM值集"
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-icd-10-cm-2021-tw.html" : "臺灣健保署2021年中文版ICD-10-CM值集"
+  },
+  {
+    "url" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2023-tw",
+    "version" : "2024-11-18",
+    "status" : "active",
+    "name" : "TW2023ICD10CM",
+    "title" : "臺灣健保署2023年中文版ICD-10-CM",
+    "description" : "臺灣健保署2023年中文版ICD-10-CM，參照至[國際疾病分類第 10 版](https://www.nhi.gov.tw/ch/np-3049-1.html)，由於資料會隨代碼更新而變動，本資料的來源位置可能已更新為最新版代碼，原資料已被覆蓋。      \n代碼出版日期：2024-01-31；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。*\n\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－代碼系統(Code System)](https://fhir.mohw.gov.tw/ts/codesystem.jsp)查閱",
+    "uses" : {
+    },
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-icd-10-cm-2023-tw.html" : "臺灣健保署2023年中文版ICD-10-CM值集"
   },
   {
     "url" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2014-tw",
@@ -1877,21 +1925,32 @@
     "status" : "active",
     "name" : "TW2014ICD10PCS",
     "title" : "臺灣健保署2014年中文版ICD-10-PCS",
-    "description" : "臺灣健保署2014年中文版ICD-10-PCS，參照至[2014年版_中文版ICD-10-CM/PCS](https://www.nhi.gov.tw/ch/cp-6073-50654-3053-1.html)中的「中文版ICD-10-PCS(112.05.09更新)」。  \n代碼出版日期：2014-07-17；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。*\n\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－臺灣健保署2014年中文版ICD-10-PCS](https://fhir.mohw.gov.tw/ts/codesystemRead.jsp?id=icd-10-pcs-2014-tw&version=2017-07-19&metaId=1&status=active&codeStatus=use&show=Y)查閱",
+    "description" : "臺灣健保署2014年中文版ICD-10-PCS，參照至[國際疾病分類第 10 版](https://www.nhi.gov.tw/ch/np-3049-1.html)，由於資料會隨代碼更新而變動，本資料的來源位置可能已更新為最新版代碼，原資料已被覆蓋。  \n代碼出版日期：2017-07-19；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。*\n\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－代碼系統(Code System)](https://fhir.mohw.gov.tw/ts/codesystem.jsp)查閱",
     "uses" : {
     },
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-icd-10-pcs-2014-tw.html" : "臺灣健保署2014年中文版ICD-10-PCS值集"
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-icd-10-pcs-2014-tw.html" : "臺灣健保署2014年中文版ICD-10-PCS值集"
   },
   {
     "url" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2021-tw",
     "version" : "2022-07-29",
     "status" : "active",
     "name" : "TW2021ICD10PCS",
-    "title" : "臺灣2021年中文版ICD-10-PCS",
-    "description" : "臺灣2021年中文版ICD-10-PCS，參照至[https://www.nhi.gov.tw/Content_List.aspx?n=3C0BD93EC042CC67&topn=23C660CAACAA159D](https://www.nhi.gov.tw/Content_List.aspx?n=3C0BD93EC042CC67&topn=23C660CAACAA159D)。    \r\n代碼出版日期：2022-07-29；資料所屬單位：衛生福利部中央健康保險署。\r\n\r\n*因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。*\r\n\r\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－臺灣健保署2021年中文版ICD-10-PCS](https://fhir.mohw.gov.tw/ts/codesystemRead.jsp?id=icd-10-pcs-2021-tw&status=active&version=2022-07-29&metaId=1&codeStatus=use&show=Y)查閱",
+    "title" : "臺灣健保署2021年中文版ICD-10-PCS",
+    "description" : "臺灣健保署2021年中文版ICD-10-PCS，參照至[國際疾病分類第 10 版](https://www.nhi.gov.tw/ch/np-3049-1.html)，由於資料會隨代碼更新而變動，本資料的來源位置可能已更新為最新版代碼，原資料已被覆蓋。       \n代碼出版日期：2022-07-29；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。*\n\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－代碼系統(Code System)](https://fhir.mohw.gov.tw/ts/codesystem.jsp)查閱",
     "uses" : {
     },
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-icd-10-pcs-2021-tw.html" : "臺灣健保署2021年中文版ICD-10-PCS值集"
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-icd-10-pcs-2021-tw.html" : "臺灣健保署2021年中文版ICD-10-PCS值集"
+  },
+  {
+    "url" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2023-tw",
+    "version" : "2024-11-18",
+    "status" : "active",
+    "name" : "TW2023ICD10PCS",
+    "title" : "臺灣健保署2023年中文版ICD-10-PCS",
+    "description" : "臺灣健保署2023年中文版ICD-10-PCS，參照至[國際疾病分類第 10 版](https://www.nhi.gov.tw/ch/np-3049-1.html)，由於資料會隨代碼更新而變動，本資料的來源位置可能已更新為最新版代碼，原資料已被覆蓋。      \n代碼出版日期：2024-01-31；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。*\n\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－代碼系統(Code System)](https://fhir.mohw.gov.tw/ts/codesystem.jsp)查閱",
+    "uses" : {
+    },
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-icd-10-pcs-2023-tw.html" : "臺灣健保署2023年中文版ICD-10-PCS值集"
   },
   {
     "url" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-9-cm-2001-tw",
@@ -1899,10 +1958,10 @@
     "status" : "active",
     "name" : "TW2001ICD9CM",
     "title" : "臺灣健保署2001年中文版ICD-9-CM",
-    "description" : "臺灣健保署2001年中文版ICD-9-CM，參照至[https://www.nhi.gov.tw/Content_List.aspx?n=C1C92AB9ED30A9FD&topn=23C660CAACAA159D](https://www.nhi.gov.tw/Content_List.aspx?n=C1C92AB9ED30A9FD&topn=23C660CAACAA159D)。  \r\n代碼出版日期：2023-05-09；資料所屬單位：衛生福利部中央健康保險署。\r\n\r\n*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*\r\n\r\n\r\n\r\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－臺灣健保署2001年中文版ICD-9-CM](https://twcore.mohw.gov.tw/ts/codesystemRead.jsp?id=icd-9-cm-2001-tw&status=active&version=2023-05-09&metaId=1&codeStatus=use&show=Y)查閱",
+    "description" : "臺灣健保署2001年中文版ICD-9-CM，參照至[國際疾病分類第 10 版](https://www.nhi.gov.tw/ch/np-3049-1.html)，由於資料會隨代碼更新而變動，本資料的來源位置可能已更新為最新版代碼，原資料已被覆蓋。  \n代碼出版日期：2023-05-09；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*\n\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－代碼系統(Code System)](https://fhir.mohw.gov.tw/ts/codesystem.jsp)查閱",
     "uses" : {
     },
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-icd-9-cm-2001-tw.html" : "臺灣健保署2001年中文版ICD-9-CM值集"
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-icd-9-cm-2001-tw.html" : "臺灣健保署2001年中文版ICD-9-CM值集"
   },
   {
     "url" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medical-consultation-department-nhi-tw",
@@ -1913,7 +1972,7 @@
     "description" : "臺灣健保署就醫科別，參照至[健保署檔案譯碼簿](https://www.nhi.gov.tw/ch/cp-1880-20811-3142-1.html)中的「就醫科別（2022/8/2版本）」。\n\n代碼出版日期：2024-05-27；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*",
     "uses" : {
     },
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-medical-consultation-department-tw.html" : "無法對應至SNOMED CT之臺灣健保署就醫科別值集"
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-medical-consultation-department-tw.html" : "無法對應至SNOMED CT之臺灣健保署就醫科別值集"
   },
   {
     "url" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medical-service-payment-tw",
@@ -1924,7 +1983,7 @@
     "description" : "臺灣健保署醫療服務給付項目，參照至[全民健康保險醫療服務給付項目及支付標準](https://www.nhi.gov.tw/ch/cp-5943-f1cce-2821-1.html)中的「醫療服務給付項目(113.05.01生效) (113.04.23更新)」。  \n\n代碼出版日期：2022-07-01；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其「生效日期」作為版本資訊。*\n\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－代碼系統(Code System)](https://fhir.mohw.gov.tw/ts/codesystem.jsp)查閱",
     "uses" : {
     },
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-procedure-tw.html" : "臺灣健保署醫療服務給付項目-處置或手術值集"
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-procedure-tw.html" : "臺灣健保署醫療服務給付項目-處置或手術值集"
   },
   {
     "url" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medical-treatment-department-nhi-tw",
@@ -1935,18 +1994,18 @@
     "description" : "臺灣健保署診療科別，參照至[健保署檔案譯碼簿](https://www.nhi.gov.tw/ch/cp-1880-20811-3142-1.html)中的「診療科別（2022/8/2版本）」。   \n\n代碼出版日期：2024-05-27；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*",
     "uses" : {
     },
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-medical-treatment-department-tw.html" : "無法對應至SNOMED CT之臺灣健保署診療科別值集"
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-medical-treatment-department-tw.html" : "無法對應至SNOMED CT之臺灣健保署診療科別值集"
   },
   {
     "url" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/postal-code3-tw",
-    "version" : "2023-12-28",
+    "version" : "2015-01-22",
     "status" : "active",
     "name" : "TWPostalCode3",
     "title" : "臺灣中華郵政3碼郵遞區號",
-    "description" : "臺灣中華郵政3碼郵遞區號，參照自[https://www.post.gov.tw/post/internet/Download/index.jsp?ID=2292](https://www.post.gov.tw/post/internet/Download/index.jsp?ID=2292)。屬性命名以與國際的等級一致為主，未採用中華郵政提供之英文名稱。   \\n代碼出版日期：2015-01-22；資料所屬單位：中華郵政。",
+    "description" : "臺灣中華郵政3碼郵遞區號，參照自[郵遞區號(含轉碼軟體)](https://www.post.gov.tw/post/internet/Download/index.jsp?ID=220306)中的「臺灣地區郵遞區號前3碼一覽表 103/12(Excel版)」。屬性命名以與國際的等級一致為主，未採用中華郵政提供之英文名稱。   \n代碼出版日期：2015-01-22；資料所屬單位：中華郵政。\n\n*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*\n\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－代碼系統(Code System)](https://fhir.mohw.gov.tw/ts/codesystem.jsp)查閱",
     "uses" : {
     },
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-postal-code3-tw.html" : "臺灣中華郵政3碼郵遞區號值集"
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-postal-code3-tw.html" : "臺灣中華郵政3碼郵遞區號值集"
   },
   {
     "url" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/postal-code5-tw",
@@ -1954,21 +2013,21 @@
     "status" : "active",
     "name" : "TWPostalCode5",
     "title" : "臺灣中華郵政5碼郵遞區號",
-    "description" : "臺灣中華郵政5碼郵遞區號，參照自[郵遞區號(含轉碼軟體)](https://www.post.gov.tw/post/internet/Download/index.jsp?ID=220306)中的『3+3郵遞區號查詢應用系統』。屬性命名以與國際的等級一致為主，未採用中華郵政提供之英文名稱。  \n代碼出版日期：2022-06-21；資料所屬單位：中華郵政。\n\n*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*\n\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－臺灣中華郵政5碼郵遞區號](https://fhir.mohw.gov.tw/ts/codesystemRead.jsp?id=postal-code5-tw&status=active&version=2022-06-21&metaId=1&codeStatus=use&show=Y)查閱",
+    "description" : "臺灣中華郵政5碼郵遞區號，參照自[郵遞區號(含轉碼軟體)](https://www.post.gov.tw/post/internet/Download/index.jsp?ID=220306)中的『3+3郵遞區號查詢應用系統』。屬性命名以與國際的等級一致為主，未採用中華郵政提供之英文名稱。  \n代碼出版日期：2022-06-21；資料所屬單位：中華郵政。\n\n*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*\n\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－代碼系統(Code System)](https://fhir.mohw.gov.tw/ts/codesystem.jsp)查閱",
     "uses" : {
     },
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-postal-code5-tw.html" : "臺灣中華郵政5碼郵遞區號值集"
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-postal-code5-tw.html" : "臺灣中華郵政5碼郵遞區號值集"
   },
   {
     "url" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/postal-code6-tw",
     "version" : "2024-06-28",
     "status" : "active",
     "name" : "TWPostalCode6",
-    "title" : "臺灣6碼郵遞區號",
-    "description" : "臺灣中華郵政6碼郵遞區號，參照自[郵遞區號(含轉碼軟體)](https://www.post.gov.tw/post/internet/Download/index.jsp?ID=220306)中的『3+3郵遞區號查詢應用系統』。屬性命名以與國際的等級一致為主，未採用中華郵政提供之英文名稱。    \n代碼出版日期：2020-10-22；資料所屬單位：中華郵政。\n\n*因原始資料無代碼版本資訊，故使用其公開授權聲明之「更新日期」作為版本資訊。*\n\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－臺灣中華郵政6碼郵遞區號](https://fhir.mohw.gov.tw/ts/codesystemRead.jsp?id=postal-code6-tw&status=active&version=2022-06-21&metaId=1&codeStatus=use&show=Y)查閱。\n\n\n* 2024/7/8異動說明：2024-06-28版的6碼郵遞區號代碼中新增、刪除、修改代碼量較大會使載入頁面時間較長，完整異動代碼說明請至[全國專門術語服務平臺－臺灣中華郵政6碼郵遞區號](https://fhir.mohw.gov.tw/ts/codesystemRead.jsp?id=postal-code6-tw&status=active&version=2022-06-21&metaId=5&codeStatus=use&show=Y)查閱。",
+    "title" : "臺灣中華郵政6碼郵遞區號",
+    "description" : "臺灣中華郵政6碼郵遞區號，參照自[郵遞區號(含轉碼軟體)](https://www.post.gov.tw/post/internet/Download/index.jsp?ID=220306)中的『3+3郵遞區號查詢應用系統』。屬性命名以與國際的等級一致為主，未採用中華郵政提供之英文名稱。    \n代碼出版日期：2020-10-22；資料所屬單位：中華郵政。\n\n*因原始資料無代碼版本資訊，故使用其公開授權聲明之「更新日期」作為版本資訊。*\n\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－代碼系統(Code System)](https://fhir.mohw.gov.tw/ts/codesystem.jsp)查閱。",
     "uses" : {
     },
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-postal-code6-tw.html" : "臺灣中華郵政6碼郵遞區號值集"
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-postal-code6-tw.html" : "臺灣中華郵政6碼郵遞區號值集"
   },
   {
     "url" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/v2-0203",
@@ -1979,7 +2038,7 @@
     "description" : "臺灣衛福部資訊處識別碼類型，  \n代碼出版日期：2022-07-31；資料所屬單位：衛生福利部資訊處。",
     "uses" : {
     },
-    "https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-identifier-type-tw.html" : "IdentifierType + 臺灣衛福部資訊處識別碼類型值集"
+    "https://twcore.mohw.gov.tw/ig/twcore/1.0.0/ValueSet-identifier-type-tw.html" : "IdentifierType + 臺灣衛福部資訊處識別碼類型值集"
   },
   {
     "url" : "urn:ietf:bcp:47",
@@ -1995,7 +2054,7 @@
   },
   {
     "url" : "urn:iso:std:iso:3166",
-    "version" : "1.0.1",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "ISO3166Part1",
     "title" : "ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code",
@@ -2007,7 +2066,7 @@
   },
   {
     "url" : "urn:iso:std:iso:3166:-2",
-    "version" : "1.0.1",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "ISO3166Part2",
     "title" : "ISO 3166-2 Codes for the representation of names of countries and their subdivisions — Part 2: Country subdivision code",

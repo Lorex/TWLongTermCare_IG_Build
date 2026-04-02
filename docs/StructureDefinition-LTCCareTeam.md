@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCareTeam | *Version*:1.0.0 |
-| Active as of 2026-03-02 | *Computable Name*:LTCCareTeam |
+| Active as of 2026-04-02 | *Computable Name*:LTCCareTeam |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 CareTeam Resource，以呈現長期照顧情境中涉及之照顧團隊資訊。 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCCareTeam.csv), [E
   "name" : "LTCCareTeam",
   "title" : "長期照顧－照顧團隊",
   "status" : "active",
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

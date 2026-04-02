@@ -113,6 +113,7 @@ These define constraints on FHIR resources for systems conforming to this implem
 | [長期照顧－一組生命徵象檢驗檢查](StructureDefinition-LTCObservationVitalSignsPanel.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現長照機構住民的一組生命徵象檢驗檢查資料。 |
 | [長期照顧－主要問題及需求](StructureDefinition-LTCConditionNeed.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現案主或其家庭之主要問題及照護需求。 |
 | [長期照顧－主要疾病](StructureDefinition-LTCConditionProblem.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現案主或其家庭之主要疾病資料。 |
+| [長期照顧－任務管理](StructureDefinition-LTCTask.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Task Resource，以呈現長期照顧情境中的轉介確認、照顧計畫狀態更新等任務管理需求。 |
 | [長期照顧－住民基本資料](StructureDefinition-LTCPatient.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Patient Resource，以呈現長照機構住民的基本資料。 |
 | [長期照顧－個案位置監測](StructureDefinition-Location-twltc.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Location Resource，以呈現失智症個案的位置監測資料，包括所在地名稱與經緯度座標資訊。 |
 | [長期照顧－問卷](StructureDefinition-LTCQuestionnaire.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Questionnaire Resource，以呈現長期照顧情境中涉及之問卷或量表內容。 |
@@ -121,6 +122,7 @@ These define constraints on FHIR resources for systems conforming to this implem
 | [長期照顧－居住狀況](StructureDefinition-LTCConditionResidence.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的居住狀況。 |
 | [長期照顧－文件組成基礎](StructureDefinition-LTCCompositionBase.md) | 此 Profile 為所有長期照顧 Composition Profile 的共用基礎，定義文件組成之基本結構與共用欄位。 |
 | [長期照顧－服務人員角色](StructureDefinition-LTCPractitionerRole.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 PractitionerRole Resource，以呈現長期照顧服務人員的角色資料。有關 PractitionerRole 與 Practitioner 的差異及相關解釋，請參照 [TW Core IG](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-PractitionerRole-twcore.html) 中的說明。 |
+| [長期照顧－服務請求](StructureDefinition-LTCServiceRequest.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 ServiceRequest Resource，以呈現長期照顧情境中的轉介申請及服務請求需求。 |
 | [長期照顧－案件管理基礎](StructureDefinition-LTCEpisodeOfCareBase.md) | 此 Profile 為所有長期照顧 EpisodeOfCare Profile 的共用基礎，定義案件管理之基本結構與共用欄位。 |
 | [長期照顧－機構](StructureDefinition-Organization-twltc.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Organization Resource，以呈現機構的資料。這裡的機構包含但不限於醫院、診所、長照機構、社區服務單位等。 |
 | [長期照顧－照護活動](StructureDefinition-LTCProcedureCareActivity.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Procedure Resource，以呈現長照機構住民的照護活動紀錄。 |
@@ -358,6 +360,7 @@ These are example instances that show what data produced and consumed by systems
 | [轉介單文件架構範例](Composition-ltc-composition-referral-example.md) | 一個轉介單文件架構的範例，展示如何使用 LTCCompositionReferral Profile |
 | [轉介單邏輯模型範例](Binary-ltc-referral-model-example.md) | 一個轉介單邏輯模型的範例，展示如何準備欄位資料 |
 | [轉介照顧者問卷回應範例](QuestionnaireResponse-ltc-questionnaire-response-caregiver-referral-example.md) | 轉介流程中照顧者問卷的回應範例 |
+| [轉介確認任務範例](Task-ltc-task-referral-acceptance-example.md) | 展示長照機構接受轉介個案的任務確認範例 |
 | [轉介－身心障礙手冊持有狀態範例](Condition-ltc-condition-disability-referral-example.md) | 供轉介單使用的身心障礙手冊持有狀態 Condition 範例 |
 | [轉介－身心障礙類型（肢體）範例](Condition-ltc-condition-disability-type-limb-referral-example.md) | 供轉介單使用的身心障礙類型（肢體） Condition 範例 |
 | [運動史記錄範例](Condition-pasport-condition-exercise-history-example.md) | 一個運動史記錄的範例，展示如何使用 PASportConditionExerciseHistory Profile 來記錄患者的運動背景 |
@@ -402,6 +405,7 @@ These are example instances that show what data produced and consumed by systems
 | [長照 SDK－評估核定摘要（Observation）範例](Observation-ltc-observation-assessment-sdk-example.md) | 長照 SDK 範例用的評估核定摘要（Observation）資源。 |
 | [長照 SDK－長照案件（EpisodeOfCare）範例](EpisodeOfCare-ltc-episodeofcare-sdk-example.md) | 長照 SDK 範例用的長照案件（EpisodeOfCare）資源。 |
 | [長照 SDK－長照管理中心（Organization）範例](Organization-ltc-organization-sdk-example.md) | 長照 SDK 範例用的長期照顧管理中心（Organization）資源。 |
+| [長照轉介服務請求範例](ServiceRequest-ltc-servicerequest-referral-example.md) | 展示醫療院所向長照機構發送轉介服務請求的範例 |
 | [長照醫事人員範例](Practitioner-ltc-practitioner-example.md) | 一個執行長照服務和運動處方的醫事人員範例 |
 | [長照－照管全量匯出審核結果（ClaimResponse）範例](ClaimResponse-ltc-claimresponse-export-example.md) | 長照照管全量匯出之審核結果與檢核錯誤資訊範例，展示如何使用 LTCClaimResponseExport Profile。 |
 | [長照－照管可提供服務（Claim）範例](Claim-ltc-claim-export-dispatch-example.md) | 長照 SDK 照管CASE可提供服務的範例，展示如何使用 Claim 資源記錄個案可提供的服務項目。 |

@@ -25,6 +25,8 @@
 - [關係人（LTC RelatedPerson）](StructureDefinition-LTCRelatedPerson.html)
 - [個案位置監測（LTC Location）](StructureDefinition-Location-twltc.html)
 - [異常事件警報（LTC AdverseEvent）](StructureDefinition-AdverseEvent-twltc.html)
+- [服務請求（LTC ServiceRequest）](StructureDefinition-LTCServiceRequest.html)
+- [任務管理（LTC Task）](StructureDefinition-LTCTask.html)
 
 #### 照顧管理評估量表
 - [照顧管理評估量表文件打包（LTC Bundle CMS）](StructureDefinition-LTCBundleCMS.html)

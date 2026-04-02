@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "TaiwanLongTermCareImplementationGuide"] ; # 
   fhir:title [ fhir:v "臺灣長期照顧實作指引(TW LTC IG)"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-03-02T02:26:08+08:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-04-02T13:32:15+08:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "經濟部產業發展署"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "經濟部產業發展署" ] ;
@@ -50,7 +50,7 @@
        fhir:l <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "7.0.1" ]
+     fhir:version [ fhir:v "7.1.0" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -76,7 +76,7 @@
        fhir:l <https://twcore.mohw.gov.tw/ig/twcore/ImplementationGuide/tw.gov.mohw.twcore>
      ] ;
      fhir:packageId [ fhir:v "tw.gov.mohw.twcore" ] ;
-     fhir:version [ fhir:v "0.3.2" ]
+     fhir:version [ fhir:v "1.0.0" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -758,7 +758,7 @@
        ] ;
        fhir:value [
          a fhir:Code ;
-         fhir:v "hl7.fhir.uv.tools.r4#0.9.0"
+         fhir:v "hl7.fhir.uv.tools.r4#1.1.2"
        ]
      ] [
        fhir:extension ( [
@@ -5772,6 +5772,28 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "Task"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/Task/ltc-task-referral-acceptance-example> ;
+         fhir:reference [ fhir:v "Task/ltc-task-referral-acceptance-example" ]
+       ] ;
+       fhir:name [ fhir:v "轉介確認任務範例" ] ;
+       fhir:description [ fhir:v "展示長照機構接受轉介個案的任務確認範例" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCTask"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCTask>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "Condition"
          ]
        ] ) ;
@@ -6615,6 +6637,27 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCTask> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCTask" ]
+       ] ;
+       fhir:name [ fhir:v "長期照顧－任務管理" ] ;
+       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Task Resource，以呈現長期照顧情境中的轉介確認、照顧計畫狀態更新等任務管理需求。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCPatient> ;
          fhir:reference [ fhir:v "StructureDefinition/LTCPatient" ]
        ] ;
@@ -6767,6 +6810,27 @@
        ] ;
        fhir:name [ fhir:v "長期照顧－服務人員角色" ] ;
        fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 PractitionerRole Resource，以呈現長期照顧服務人員的角色資料。\n\n有關 PractitionerRole 與 Practitioner 的差異及相關解釋，請參照 [TW Core IG](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-PractitionerRole-twcore.html) 中的說明。" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCServiceRequest> ;
+         fhir:reference [ fhir:v "StructureDefinition/LTCServiceRequest" ]
+       ] ;
+       fhir:name [ fhir:v "長期照顧－服務請求" ] ;
+       fhir:description [ fhir:v "此 Profile 說明本 IG 如何進一步定義 FHIR 的 ServiceRequest Resource，以呈現長期照顧情境中的轉介申請及服務請求需求。" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -8675,6 +8739,28 @@
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ServiceRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://ltc-ig.fhir.tw/ServiceRequest/ltc-servicerequest-referral-example> ;
+         fhir:reference [ fhir:v "ServiceRequest/ltc-servicerequest-referral-example" ]
+       ] ;
+       fhir:name [ fhir:v "長照轉介服務請求範例" ] ;
+       fhir:description [ fhir:v "展示醫療院所向長照機構發送轉介服務請求的範例" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCServiceRequest"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCServiceRequest>
        ]
      ] [
        fhir:extension ( [

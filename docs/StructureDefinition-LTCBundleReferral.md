@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleReferral | *Version*:1.0.0 |
-| Active as of 2026-03-02 | *Computable Name*:LTCBundleReferral |
+| Active as of 2026-04-02 | *Computable Name*:LTCBundleReferral |
 
  
 此 Bundle 以臺北市長期照顧管理中心個案服務初篩表/轉介單為基礎，用以表述長期照顧管理中心個案服務初篩表/轉介單的文件打包結構。 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCBundleReferral.cs
   "name" : "LTCBundleReferral",
   "title" : "長期照顧管理中心個案服務初篩表/轉介單文件打包",
   "status" : "active",
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-mmse | *Version*:1.0.0 |
-| Active as of 2026-03-02 | *Computable Name*:MMSE |
+| Active as of 2026-04-02 | *Computable Name*:MMSE |
 | *Other Identifiers:*http://ltc-ig.fhir.tw/questionnaire-id#MMSE-001 (use: official, ) | |
 
  
@@ -37,7 +37,7 @@ Mini-Mental State Examination [MMSE] - 簡易智能狀態測驗
   "title" : "簡易智能狀態測驗",
   "status" : "active",
   "subjectType" : ["Patient"],
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -10,7 +10,7 @@
   <name value="TaiwanLongTermCareImplementationGuide"/>
   <title value="臺灣長期照顧實作指引(TW LTC IG)"/>
   <status value="active"/>
-  <date value="2026-03-02T02:26:08+08:00"/>
+  <date value="2026-04-02T13:32:15+08:00"/>
   <publisher value="經濟部產業發展署"/>
   <contact>
     <name value="經濟部產業發展署"/>
@@ -28,7 +28,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="7.0.1"/>
+    <version value="7.1.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -41,7 +41,7 @@
   <dependsOn id="tw_gov_mohw_twcore">
     <uri value="https://twcore.mohw.gov.tw/ig/twcore/ImplementationGuide/tw.gov.mohw.twcore"/>
     <packageId value="tw.gov.mohw.twcore"/>
-    <version value="0.3.2"/>
+    <version value="1.0.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -269,7 +269,7 @@
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-      <valueCode value="hl7.fhir.uv.tools.r4#0.9.0"/>
+      <valueCode value="hl7.fhir.uv.tools.r4#1.1.2"/>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
@@ -2709,6 +2709,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Task"/>
+      </extension>
+      <reference>
+        <reference value="Task/ltc-task-referral-acceptance-example"/>
+      </reference>
+      <name value="轉介確認任務範例"/>
+      <description value="展示長照機構接受轉介個案的任務確認範例"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCTask"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Condition"/>
       </extension>
       <reference>
@@ -3141,6 +3152,17 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/LTCTask"/>
+      </reference>
+      <name value="長期照顧－任務管理"/>
+      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 Task Resource，以呈現長期照顧情境中的轉介確認、照顧計畫狀態更新等任務管理需求。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/LTCPatient"/>
       </reference>
       <name value="長期照顧－住民基本資料"/>
@@ -3222,6 +3244,17 @@
       </reference>
       <name value="長期照顧－服務人員角色"/>
       <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 PractitionerRole Resource，以呈現長期照顧服務人員的角色資料。&#xA;&#xA;有關 PractitionerRole 與 Practitioner 的差異及相關解釋，請參照 [TW Core IG](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-PractitionerRole-twcore.html) 中的說明。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LTCServiceRequest"/>
+      </reference>
+      <name value="長期照顧－服務請求"/>
+      <description value="此 Profile 說明本 IG 如何進一步定義 FHIR 的 ServiceRequest Resource，以呈現長期照顧情境中的轉介申請及服務請求需求。"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -4213,6 +4246,17 @@
       <name value="長照機構住民經濟狀況"/>
       <description value="此 Extension 用以表述長照機構住民的經濟狀況。"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ltc-servicerequest-referral-example"/>
+      </reference>
+      <name value="長照轉介服務請求範例"/>
+      <description value="展示醫療院所向長照機構發送轉介服務請求的範例"/>
+      <exampleCanonical value="http://ltc-ig.fhir.tw/StructureDefinition/LTCServiceRequest"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

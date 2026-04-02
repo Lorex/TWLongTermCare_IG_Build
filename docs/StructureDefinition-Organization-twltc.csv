@@ -43,10 +43,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Organization.identifier.use","Organization.identifier.use","","","",0,1,"Y","Y","Y","code {[]} {[]}
 ","usual ｜ official ｜ temp ｜ secondary ｜ old （如果知道）","這個唯一識別碼（identifier）的用途","應用程式可以假定一個識別碼是永久的，除非它明確說它是暫時的。","允許從一組識別碼中為特定的使用情境選擇適當的識別碼","","","","","","","",,"required","如果已知，請說明此識別碼的目的；應填入所綁定值集中的其中一個代碼。","http://hl7.org/fhir/ValueSet/identifier-use|4.0.1","",,,,"Identifier.use",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A","Role.code or implied by context"
-"Organization.identifier.type","Organization.identifier.type","","","",0,1,"Y","","","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
-","機構識別碼（identifier）的型別說明","識別碼的代碼型別，用於決定特定目適用的識別碼。","這個資料項目只涉及識別碼的一般類別。它 **必須沒有（SHALL NOT）** 被用於與Identifier.system 1..1對應的代碼。一些識別碼可能由於常見的用法而屬於多個類別。在系統是已知的情況下，型別是不必要的，因為型別總是系統定義的一部分。然而，系統經常需要處理系統不為人知的識別碼。型別和系統之間不是1:1的關係，因為許多不同的系統有相同的型別。","允許使用者在不知道識別碼系統的情況下利用識別碼","","","","","","","",,"extensible","識別碼的型別，用於決定特定目的所適用的識別碼；應填入所綁定值集中的其中一個代碼。","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/identifier-type-tw","",,,,"Identifier.type",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE","n/a","CD"
+"Organization.identifier.type","Organization.identifier.type","","","",0,1,"Y","","Y","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
+","機構識別碼（identifier）的型別說明","識別碼的代碼型別，用於決定特定目適用的識別碼。","這個資料項目只涉及識別碼的一般類別。它 **必須沒有（SHALL NOT）** 被用於與Identifier.system 1..1對應的代碼。一些識別碼可能由於常見的用法而屬於多個類別。在系統是已知的情況下，型別是不必要的，因為型別總是系統定義的一部分。然而，系統經常需要處理系統不為人知的識別碼。型別和系統之間不是1:1的關係，因為許多不同的系統有相同的型別。","允許使用者在不知道識別碼系統的情況下利用識別碼","","","","","","","",,"extensible","識別碼的型別，用於決定特定目的所適用的識別碼；應填入所綁定值集中的其中一個代碼。","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/identifier-type-tw","",,,,"Identifier.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","CX.5","Role.code or implied by context"
 "Organization.identifier.system","Organization.identifier.system","","","",0,1,"Y","","Y","uri {[]} {[]}
 ","機構識別碼（identifier）的命名空間（namespace），可至[twTerminology](https://fhir.mohw.gov.tw/ts/namingsystem.jsp?status=active&amp;type=0)申請或查詢命名系統。","建立值的命名空間－即一個描述一組值的唯一URL","Identifier.system總是區分大小寫","有許多識別碼的集合。為了進行兩個識別碼的對應，我們需要知道我們處理的是哪一組。系統指明了一個特定的唯一識別碼集。","","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://www.acme.com/identifiers/patient""/>","","",,,,,"",,,,"Identifier.system",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","CX.4 / EI-2-4","II.root or Role.id.root","./IdentifierType"
@@ -64,14 +63,13 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 
 這個資料項目被標記為修飾語／修飾用，因為它可用來標記resource是錯誤建立的。","需要一個標記表明此記錄不再被使用，一般來說應會在使用者界面中隱藏此資料項目。","","This resource is generally assumed to be active if no value is provided for the active element","","","","","",,,,,"",,,,"Organization.active",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","No equivalent in HL7 v2",".status","./Status (however this concept in ServD more covers why the organization is active or not, could be delisted, deregistered, not operational yet) this could alternatively be derived from ./StartDate and ./EndDate and given a context date.","FiveWs.status"
-"Organization.type","Organization.type","","","",1,1,"Y","","","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
+"Organization.type","Organization.type","","","",1,1,"Y","","Y","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
 ","機構類型","機構的型別","機構可以是公司、病房、科室、臨床團隊、政府部門等。請注意，代碼通常是機構型別的分類；在許多應用程式中，若代碼是用來指明一個特定機構（例如：病房），而不是另一個相同型別的機構，那麼這些算是識別碼代碼，而不是型別代碼。
 
 當考慮多個型別是否合適時，你應該評估子機構是否是一個更合適的概念使用，因為不同的型別可能在不同子區域的機構。這最有可能用於型別值不相關（orthogonal values）的地方，像是一個宗教的、學術的和醫學中心。
 
-我們期望一些行政管轄區設計此資料項目為可選填且基數設定為1。","需要能夠追踪這是哪種機構－不同機構型別有不同的用途。","","","","","","","",,"example","用於分類機構；可參考所綁定值集，但此值集只是針對這個欄位的一個可能值的範例，不預期也不鼓勵使用者一定要使用此值集的代碼。","http://hl7.org/fhir/ValueSet/organization-type","",,,,"Organization.type",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE","n/a","CD"
+我們期望一些行政管轄區設計此資料項目為可選填且基數設定為1。","需要能夠追踪這是哪種機構－不同機構型別有不同的用途。","","","","","","","",,"example","用於分類機構；可參考所綁定值集，但此值集只是針對這個欄位的一個可能值的範例，不預期也不鼓勵使用者一定要使用此值集的代碼。","http://hl7.org/fhir/ValueSet/organization-type","",,,,"Organization.type",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","No equivalent in v2",".code","n/a","FiveWs.class"
 "Organization.name","Organization.name","","","",1,1,"Y","","Y","string {[]} {[]}
 ","機構名稱。[應填入機構名稱]","與此機構相關名稱","如果一個機構改變名稱，可以考慮把舊的名稱放在別名（alias）資料項目中，這樣仍然可以透過查詢找到它。","需要使用名稱作為機構的標籤","","","","","","","",,,,,"",,,,"Organization.name",0,1,"org-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -108,9 +106,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","此聯絡方式的使用效期","此聯絡方式的使用效期","","","","","","","","","",,,,,"",,,,"ContactPoint.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A","./usablePeriod[type=""IVL<TS>""]","./StartDate and ./EndDate"
 "Organization.address","Organization.address","","","",0,1,"Y","","","Address {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Address-tw]]} {[]}
-","機構所在地址。","此機構的地址","機構可能有多個地址，有不同的用途或適用期。不使用代碼「home」。","為了聯絡、計費或通報要求而可能需要追踪機構的地址","","","","","","","",,,,,"",,,,"Organization.address",0,*,"ele-1
+","機構所在地址。","此機構的地址","機構可能有多個地址，有不同的用途或適用期。不使用代碼「home」。","為了聯絡、計費或通報要求而可能需要追踪機構的地址","","","","","","","",,,,,"",,,,"Organization.address",0,*,"org-2
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-org-2:An address of an organization can never be of use 'home' {where(use = 'home').empty()}","XAD","n/a","AD","Address"
+org-2:An address of an organization can never be of use 'home' {where(use = 'home').empty()}","ORC-23?",".address","./PrimaryAddress and ./OtherAddresses"
 "Organization.address.id","Organization.address.id","","","",0,1,"","","","string {[]} {[]}
 ","唯一可識別ID，以供資料項目間相互參照。","resource中資料項目的唯一ID（用於內部參照）。這可以是任何不含空格的字串。","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Organization.address.extension","Organization.address.extension","","extensions
@@ -192,24 +190,21 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Organization.address.postalCode.extension:PostalCode.url","Organization.address.postalCode.extension.url","","","",1,1,"","","","uri {[]} {[]}
 ","擴充的資料項目名稱","擴充的資料項目之定義連結—一個邏輯名稱或URL","此定義可直接指向可計算的或人類可讀的擴充資料項目的定義，也可以是其他規範中聲明的邏輯URI。此定義**必須（SHALL）** 定義擴充的結構定義的URI。","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-postal-code""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
 "Organization.address.postalCode.extension:PostalCode.value[x]","Organization.address.postalCode.extension.value[x]","","","",0,1,"Y","","","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
-","擴充的資料項目的內容值","擴充的資料項目的內容值—必須是一組受限制的data type中的一個（清單請見[Extensibility](http://hl7.org/fhir/2021Mar/extensibility.html)）","並非所有的專門術語使用都符合這個一般模式。在某些情況下，資料模型不應該使用CodeableConcept，而應直接使用Coding，並提供他們自己的結構來管理文字、編碼、翻譯、資料項目之間的關係、先組合配對（pre-）和後組合配對（post-coordination）。","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE","n/a","CD"
+","擴充的資料項目的內容值","擴充的資料項目的內容值—必須是一組受限制的data type中的一個（清單請見[Extensibility](http://hl7.org/fhir/2021Mar/extensibility.html)）","並非所有的專門術語使用都符合這個一般模式。在某些情況下，資料模型不應該使用CodeableConcept，而應直接使用Coding，並提供他們自己的結構來管理文字、編碼、翻譯、資料項目之間的關係、先組合配對（pre-）和後組合配對（post-coordination）。","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"
 "Organization.address.postalCode.extension:PostalCode.value[x].id","Organization.address.postalCode.extension.value[x].id","","","",0,1,"","","","string {[]} {[]}
 ","唯一可識別ID，以供資料項目間相互參照。","resource中資料項目的唯一ID（用於內部參照）。這可以是任何不含空格的字串。","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Organization.address.postalCode.extension:PostalCode.value[x].extension","Organization.address.postalCode.extension.value[x].extension","","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","可用於表示不屬於此資料項目基本定義的附加資訊。為了擴充的使用安全和可管理，對擴充的定義和使用有一套嚴格的管理。儘管任何實作者都可以定義一個擴充，但作為擴充定義的一部分，有一套要求 **必須（SHALL）** 滿足。","無論使用或定義擴充的機構或管轄區，任何應用程式、專案或標準使用擴充都不背負任何污名（stigma）。使用擴充是允許FHIR規範為每個人保留一個核心的簡易性。","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Organization.address.postalCode.extension:PostalCode.value[x].coding","Organization.address.postalCode.extension.value[x].coding","","","",0,*,"Y","","","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
+"Organization.address.postalCode.extension:PostalCode.value[x].coding","Organization.address.postalCode.extension.value[x].coding","","","",0,*,"Y","","Y","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
 ","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,,,,"","pattern:system}
-","",,"open","CodeableConcept.coding",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","n/a","CV"
-"Organization.address.postalCode.extension:PostalCode.value[x].coding:PostalCode3","Organization.address.postalCode.extension.value[x].coding","PostalCode3","","",0,1,"Y","","","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
-","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,"required","應填入所綁定值集中的其中一個代碼","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/postal-code3-tw","",,,,"CodeableConcept.coding",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","n/a","CV"
+","",,"open","CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","C*E.1-8, C*E.10-22","union(., ./translation)"
+"Organization.address.postalCode.extension:PostalCode.value[x].coding:PostalCode3","Organization.address.postalCode.extension.value[x].coding","PostalCode3","","",0,1,"Y","","Y","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
+","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,"required","應填入所綁定值集中的其中一個代碼","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/postal-code3-tw","",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","C*E.1-8, C*E.10-22","union(., ./translation)"
 "Organization.address.postalCode.extension:PostalCode.value[x].coding:PostalCode3.id","Organization.address.postalCode.extension.value[x].coding.id","","","",0,1,"","","","string {[]} {[]}
 ","唯一可識別ID，以供資料項目間相互參照。","resource中資料項目的唯一ID（用於內部參照）。這可以是任何不含空格的字串。","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Organization.address.postalCode.extension:PostalCode.value[x].coding:PostalCode3.extension","Organization.address.postalCode.extension.value[x].coding.extension","","","",0,*,"","","","Extension {[]} {[]}
@@ -231,10 +226,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Organization.address.postalCode.extension:PostalCode.value[x].coding:PostalCode3.userSelected","Organization.address.postalCode.extension.value[x].coding.userSelected","","","",0,1,"","","Y","boolean {[]} {[]}
 ","此編碼是否由使用者直接選擇？","表明此編碼是由使用者直接選擇，例如：從可用項目（代碼或顯示名稱）的清單中選擇。","在一系列備選方案中，直接選擇的代碼是新翻譯最合適的起點；關於「直接選擇」的確切意義，存在模糊不清之處，可能需要貿易夥伴的同意，以更完整澄清此資料項目的使用及其後果。","已被確定為一個臨床安全準則—此確切的系統／代碼對(code pair)是被明確選擇的，而不是由系統根據一些規則或是程式語言處理判斷。","","","","","","","",,,,,"",,,,"Coding.userSelected",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Sometimes implied by being first","CD.codingRationale"
-"Organization.address.postalCode.extension:PostalCode.value[x].coding:PostalCode5","Organization.address.postalCode.extension.value[x].coding","PostalCode5","","",0,1,"Y","","","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
-","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,"required","應填入所綁定值集中的其中一個代碼","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/postal-code5-tw","",,,,"CodeableConcept.coding",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","n/a","CV"
+"Organization.address.postalCode.extension:PostalCode.value[x].coding:PostalCode5","Organization.address.postalCode.extension.value[x].coding","PostalCode5","","",0,1,"Y","","Y","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
+","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,"required","應填入所綁定值集中的其中一個代碼","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/postal-code5-tw","",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","C*E.1-8, C*E.10-22","union(., ./translation)"
 "Organization.address.postalCode.extension:PostalCode.value[x].coding:PostalCode5.id","Organization.address.postalCode.extension.value[x].coding.id","","","",0,1,"","","","string {[]} {[]}
 ","唯一可識別ID，以供資料項目間相互參照。","resource中資料項目的唯一ID（用於內部參照）。這可以是任何不含空格的字串。","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Organization.address.postalCode.extension:PostalCode.value[x].coding:PostalCode5.extension","Organization.address.postalCode.extension.value[x].coding.extension","","","",0,*,"","","","Extension {[]} {[]}
@@ -256,10 +250,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Organization.address.postalCode.extension:PostalCode.value[x].coding:PostalCode5.userSelected","Organization.address.postalCode.extension.value[x].coding.userSelected","","","",0,1,"","","Y","boolean {[]} {[]}
 ","此編碼是否由使用者直接選擇？","表明此編碼是由使用者直接選擇，例如：從可用項目（代碼或顯示名稱）的清單中選擇。","在一系列備選方案中，直接選擇的代碼是新翻譯最合適的起點；關於「直接選擇」的確切意義，存在模糊不清之處，可能需要貿易夥伴的同意，以更完整澄清此資料項目的使用及其後果。","已被確定為一個臨床安全準則—此確切的系統／代碼對(code pair)是被明確選擇的，而不是由系統根據一些規則或是程式語言處理判斷。","","","","","","","",,,,,"",,,,"Coding.userSelected",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Sometimes implied by being first","CD.codingRationale"
-"Organization.address.postalCode.extension:PostalCode.value[x].coding:PostalCode6","Organization.address.postalCode.extension.value[x].coding","PostalCode6","","",0,1,"Y","","","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
-","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,"required","應填入所綁定值集中的其中一個代碼","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/postal-code6-tw","",,,,"CodeableConcept.coding",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","n/a","CV"
+"Organization.address.postalCode.extension:PostalCode.value[x].coding:PostalCode6","Organization.address.postalCode.extension.value[x].coding","PostalCode6","","",0,1,"Y","","Y","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
+","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,"required","應填入所綁定值集中的其中一個代碼","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/postal-code6-tw","",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","C*E.1-8, C*E.10-22","union(., ./translation)"
 "Organization.address.postalCode.extension:PostalCode.value[x].coding:PostalCode6.id","Organization.address.postalCode.extension.value[x].coding.id","","","",0,1,"","","","string {[]} {[]}
 ","唯一可識別ID，以供資料項目間相互參照。","resource中資料項目的唯一ID（用於內部參照）。這可以是任何不含空格的字串。","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Organization.address.postalCode.extension:PostalCode.value[x].coding:PostalCode6.extension","Organization.address.postalCode.extension.value[x].coding.extension","","","",0,*,"","","","Extension {[]} {[]}
@@ -312,9 +305,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 修飾用的擴充資料項目 **必須沒有（SHALL NOT）** 改變resource或DomainResource上任何資料項目的含義（包括不能改變modifierExtension本身的含義）。","無論使用或定義擴充的機構或管轄區，任何應用程式、專案或標準使用擴充都不背負任何污名（stigma）。使用擴充是允許FHIR規範為每個人保留一個核心的簡易性。","修飾用的資料項目擴充將不能安全地忽略的擴充與絕大多數可以安全地忽略的擴充明確區分開來。透過消除禁止實作者擴充存在的需求來促進可互操作性。更多訊息，請參見修飾用的資料項目擴充之定義。","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Organization.contact.purpose","Organization.contact.purpose","","","",0,1,"","","","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
-","聯絡的型別","表明可聯絡到此聯絡人的聯絡方式之用途","Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.","需要對多個聯絡人進行區分","","","","","","","",,"extensible","你所聯絡之聯絡人的聯絡方式用途；應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","http://hl7.org/fhir/ValueSet/contactentity-type","",,,,"Organization.contact.purpose",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE","n/a","CD"
+","聯絡的型別","表明可聯絡到此聯絡人的聯絡方式之用途","","需要對多個聯絡人進行區分","","","","","","","",,"extensible","你所聯絡之聯絡人的聯絡方式用途；應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","http://hl7.org/fhir/ValueSet/contactentity-type","",,,,"Organization.contact.purpose",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","./type"
 "Organization.contact.name","Organization.contact.name","","","",0,1,"","","","HumanName {[]} {[]}
 ","聯絡人名字","聯絡人名字","","需能透過名字來追綜此聯絡人","","","","","","","",,,,,"",,,,"Organization.contact.name",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","PID-5, PID-9","./name"
@@ -322,9 +314,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","聯絡人的詳細聯絡方式（例如：電話、電子郵件等）。","可與此人聯絡的詳細聯絡方式（如電話或電子郵件地址等）","","人們有（主要）方式與他們聯絡，如電話、電子郵件。","","","","","","","",,,,,"",,,,"Organization.contact.telecom",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","PID-13, PID-14","./telecom"
 "Organization.contact.address","Organization.contact.address","","","",0,1,"","","","Address {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Address-tw]]} {[]}
-","聯絡人的到訪或郵政地址","可到訪及郵寄聯絡人的地址","注意：地址的目的是描述用於管理目的之郵政地址，而不是描述絕對的地理座標。郵政地址經常被用作實體位置的代表（亦可見[Location](http://hl7.org/fhir/R4/location.html#)resource）。","為了聯絡、計費或通報要求而可能需要追踪機構的地址","","","","","","","",,,,,"",,,,"Organization.contact.address",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","XAD","n/a","AD","Address"
-"Organization.endpoint","Organization.endpoint","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Endpoint]]}
+","聯絡人的到訪或郵政地址","可到訪及郵寄聯絡人的地址","","為了聯絡、計費或通報要求而可能需要追踪機構的地址","","","","","","","",,,,,"",,,,"Organization.contact.address",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","PID-11","./addr"
+"Organization.endpoint","Organization.endpoint","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Endpoint|4.0.1]]}
 ","存取此Organization的技術服務的終端（endpoints）","存取此Organization的技術服務的終端（endpoints）","","機構有多個提供各種服務的系統，需要能夠定義技術連接的細節，如何連接到這些系統，以及為了什麼目的。","","","","","","","",,,,,"",,,,"Organization.endpoint",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a"

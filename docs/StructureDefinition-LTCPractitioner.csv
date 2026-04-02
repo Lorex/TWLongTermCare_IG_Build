@@ -47,20 +47,18 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Practitioner.identifier:idCardNumber.use","Practitioner.identifier.use","","","",0,1,"Y","Y","Y","code {[]} {[]}
 ","usual ｜ official ｜ temp ｜ secondary ｜ old （如果知道）","這個唯一識別碼（identifier）的用途","應用程式可以假定一個識別碼是永久的，除非它明確說它是暫時的。","允許從一組識別碼中為特定的使用情境選擇適當的識別碼","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""official""/>","","","",,"required","如果知道，請說明此識別碼的目的；應填入所綁定值集中的其中一個代碼。","http://hl7.org/fhir/ValueSet/identifier-use|4.0.1","",,,,"Identifier.use",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A","Role.code or implied by context"
-"Practitioner.identifier:idCardNumber.type","Practitioner.identifier.type","","","",1,1,"Y","","","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
-","身份識別碼（identifier）的型別說明","識別碼的代碼型別，用於決定特定目適用的識別碼。","這個資料項目只涉及識別碼的一般類別。它 **必須沒有（SHALL NOT）** 被用於與Identifier.system 1..1對應的代碼。一些識別碼可能由於常見的用法而屬於多個類別。在系統是已知的情況下，型別是不必要的，因為型別總是系統定義的一部分。然而，系統經常需要處理系統不為人知的識別碼。型別和系統之間不是1:1的關係，因為許多不同的系統有相同的型別。","允許使用者在不知道識別碼系統的情況下利用識別碼","","","","","","","",,"extensible","識別碼的型別，用於決定特定目的所適用的識別碼；應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/identifier-type-tw","",,,,"Identifier.type",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE","n/a","CD"
+"Practitioner.identifier:idCardNumber.type","Practitioner.identifier.type","","","",1,1,"Y","","Y","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
+","身份識別碼（identifier）的型別說明","識別碼的代碼型別，用於決定特定目適用的識別碼。","這個資料項目只涉及識別碼的一般類別。它 **必須沒有（SHALL NOT）** 被用於與Identifier.system 1..1對應的代碼。一些識別碼可能由於常見的用法而屬於多個類別。在系統是已知的情況下，型別是不必要的，因為型別總是系統定義的一部分。然而，系統經常需要處理系統不為人知的識別碼。型別和系統之間不是1:1的關係，因為許多不同的系統有相同的型別。","允許使用者在不知道識別碼系統的情況下利用識別碼","","","","","","","",,"extensible","識別碼的型別，用於決定特定目的所適用的識別碼；應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/identifier-type-tw","",,,,"Identifier.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","CX.5","Role.code or implied by context"
 "Practitioner.identifier:idCardNumber.type.id","Practitioner.identifier.type.id","","","",0,1,"","","","string {[]} {[]}
 ","唯一可識別ID，以供資料項目間相互參照。","resource中資料項目的唯一ID（用於內部參照）。這可以是任何不含空格的字串。","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Practitioner.identifier:idCardNumber.type.extension","Practitioner.identifier.type.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","擴充的資料項目","擴充的資料項目","","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Practitioner.identifier:idCardNumber.type.coding","Practitioner.identifier.type.coding","","","",1,*,"Y","","","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
-","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","n/a","CV"
+"Practitioner.identifier:idCardNumber.type.coding","Practitioner.identifier.type.coding","","","",1,*,"Y","","Y","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
+","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","C*E.1-8, C*E.10-22","union(., ./translation)"
 "Practitioner.identifier:idCardNumber.type.coding.id","Practitioner.identifier.type.coding.id","","","",0,1,"","","","string {[]} {[]}
 ","唯一可識別ID，以供資料項目間相互參照。","resource中資料項目的唯一ID（用於內部參照），這可以是任何不含空格的字串。","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Practitioner.identifier:idCardNumber.type.coding.extension","Practitioner.identifier.type.coding.extension","","","",0,*,"","","","Extension {[]} {[]}
@@ -127,20 +125,18 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Practitioner.identifier:passportNumber.use","Practitioner.identifier.use","","","",0,1,"Y","Y","Y","code {[]} {[]}
 ","usual ｜ official ｜ temp ｜ secondary ｜ old （如果知道）","這個唯一識別碼（identifier）的用途","應用程式可以假定一個識別碼是永久的，除非它明確說它是暫時的。","允許從一組識別碼中為特定的使用情境選擇適當的識別碼","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""official""/>","","","",,"required","如果知道，請說明此識別碼的目的；應填入所綁定值集中的其中一個代碼。","http://hl7.org/fhir/ValueSet/identifier-use|4.0.1","",,,,"Identifier.use",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A","Role.code or implied by context"
-"Practitioner.identifier:passportNumber.type","Practitioner.identifier.type","","","",1,1,"Y","","","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
-","身份識別碼（identifier）的型別說明","識別碼的代碼型別，用於決定特定目適用的識別碼。","這個資料項目只涉及識別碼的一般類別。它 **必須沒有（SHALL NOT）** 被用於與Identifier.system 1..1對應的代碼。一些識別碼可能由於常見的用法而屬於多個類別。在系統是已知的情況下，型別是不必要的，因為型別總是系統定義的一部分。然而，系統經常需要處理系統不為人知的識別碼。型別和系統之間不是1:1的關係，因為許多不同的系統有相同的型別。","允許使用者在不知道識別碼系統的情況下利用識別碼","","","","","","","",,"extensible","識別碼的型別，用於決定特定目的所適用的識別碼；應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/identifier-type-tw","",,,,"Identifier.type",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE","n/a","CD"
+"Practitioner.identifier:passportNumber.type","Practitioner.identifier.type","","","",1,1,"Y","","Y","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
+","身份識別碼（identifier）的型別說明","識別碼的代碼型別，用於決定特定目適用的識別碼。","這個資料項目只涉及識別碼的一般類別。它 **必須沒有（SHALL NOT）** 被用於與Identifier.system 1..1對應的代碼。一些識別碼可能由於常見的用法而屬於多個類別。在系統是已知的情況下，型別是不必要的，因為型別總是系統定義的一部分。然而，系統經常需要處理系統不為人知的識別碼。型別和系統之間不是1:1的關係，因為許多不同的系統有相同的型別。","允許使用者在不知道識別碼系統的情況下利用識別碼","","","","","","","",,"extensible","識別碼的型別，用於決定特定目的所適用的識別碼；應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/identifier-type-tw","",,,,"Identifier.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","CX.5","Role.code or implied by context"
 "Practitioner.identifier:passportNumber.type.id","Practitioner.identifier.type.id","","","",0,1,"","","","string {[]} {[]}
 ","唯一可識別ID，以供資料項目間相互參照。","resource中資料項目的唯一ID（用於內部參照）。這可以是任何不含空格的字串。","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Practitioner.identifier:passportNumber.type.extension","Practitioner.identifier.type.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","擴充的資料項目","擴充的資料項目","","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Practitioner.identifier:passportNumber.type.coding","Practitioner.identifier.type.coding","","","",1,*,"Y","","","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
-","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","n/a","CV"
+"Practitioner.identifier:passportNumber.type.coding","Practitioner.identifier.type.coding","","","",1,*,"Y","","Y","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
+","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","C*E.1-8, C*E.10-22","union(., ./translation)"
 "Practitioner.identifier:passportNumber.type.coding.id","Practitioner.identifier.type.coding.id","","","",0,1,"","","","string {[]} {[]}
 ","唯一可識別ID，以供資料項目間相互參照。","resource中資料項目的唯一ID（用於內部參照），這可以是任何不含空格的字串。","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Practitioner.identifier:passportNumber.type.coding.extension","Practitioner.identifier.type.coding.extension","","","",0,*,"","","","Extension {[]} {[]}
@@ -191,20 +187,18 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Practitioner.identifier:residentNumber.use","Practitioner.identifier.use","","","",0,1,"Y","Y","Y","code {[]} {[]}
 ","usual ｜ official ｜ temp ｜ secondary ｜ old （如果知道）","這個唯一識別碼（identifier）的用途","應用程式可以假定一個識別碼是永久的，除非它明確說它是暫時的。","允許從一組識別碼中為特定的使用情境選擇適當的識別碼","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""official""/>","","","",,"required","如果知道，請說明此識別碼的目的；應填入所綁定值集中的其中一個代碼。","http://hl7.org/fhir/ValueSet/identifier-use|4.0.1","",,,,"Identifier.use",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A","Role.code or implied by context"
-"Practitioner.identifier:residentNumber.type","Practitioner.identifier.type","","","",1,1,"Y","","","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
-","身份識別碼（identifier）的型別說明","識別碼的代碼型別，用於決定特定目適用的識別碼。","這個資料項目只涉及識別碼的一般類別。它 **必須沒有（SHALL NOT）** 被用於與Identifier.system 1..1對應的代碼。一些識別碼可能由於常見的用法而屬於多個類別。在系統是已知的情況下，型別是不必要的，因為型別總是系統定義的一部分。然而，系統經常需要處理系統不為人知的識別碼。型別和系統之間不是1:1的關係，因為許多不同的系統有相同的型別。","允許使用者在不知道識別碼系統的情況下利用識別碼","","","","","","","",,"extensible","識別碼的型別，用於決定特定目的所適用的識別碼；應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/identifier-type-tw","",,,,"Identifier.type",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE","n/a","CD"
+"Practitioner.identifier:residentNumber.type","Practitioner.identifier.type","","","",1,1,"Y","","Y","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
+","身份識別碼（identifier）的型別說明","識別碼的代碼型別，用於決定特定目適用的識別碼。","這個資料項目只涉及識別碼的一般類別。它 **必須沒有（SHALL NOT）** 被用於與Identifier.system 1..1對應的代碼。一些識別碼可能由於常見的用法而屬於多個類別。在系統是已知的情況下，型別是不必要的，因為型別總是系統定義的一部分。然而，系統經常需要處理系統不為人知的識別碼。型別和系統之間不是1:1的關係，因為許多不同的系統有相同的型別。","允許使用者在不知道識別碼系統的情況下利用識別碼","","","","","","","",,"extensible","識別碼的型別，用於決定特定目的所適用的識別碼；應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/identifier-type-tw","",,,,"Identifier.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","CX.5","Role.code or implied by context"
 "Practitioner.identifier:residentNumber.type.id","Practitioner.identifier.type.id","","","",0,1,"","","","string {[]} {[]}
 ","唯一可識別ID，以供資料項目間相互參照。","resource中資料項目的唯一ID（用於內部參照）。這可以是任何不含空格的字串。","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Practitioner.identifier:residentNumber.type.extension","Practitioner.identifier.type.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","擴充的資料項目","擴充的資料項目","","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Practitioner.identifier:residentNumber.type.coding","Practitioner.identifier.type.coding","","","",1,*,"Y","","","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
-","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","n/a","CV"
+"Practitioner.identifier:residentNumber.type.coding","Practitioner.identifier.type.coding","","","",1,*,"Y","","Y","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
+","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","C*E.1-8, C*E.10-22","union(., ./translation)"
 "Practitioner.identifier:residentNumber.type.coding.id","Practitioner.identifier.type.coding.id","","","",0,1,"","","","string {[]} {[]}
 ","唯一可識別ID，以供資料項目間相互參照。","resource中資料項目的唯一ID（用於內部參照），這可以是任何不含空格的字串。","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Practitioner.identifier:residentNumber.type.coding.extension","Practitioner.identifier.type.coding.extension","","","",0,*,"","","","Extension {[]} {[]}
@@ -255,20 +249,18 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Practitioner.identifier:medicalLicenseNumber.use","Practitioner.identifier.use","","","",0,1,"Y","Y","Y","code {[]} {[]}
 ","usual ｜ official ｜ temp ｜ secondary ｜ old （如果知道）","這個唯一識別碼（identifier）的用途","應用程式可以假定一個識別碼是永久的，除非它明確說它是暫時的。","允許從一組識別碼中為特定的使用情境選擇適當的識別碼","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""official""/>","","","",,"required","如果知道，請說明此識別碼的目的；應填入所綁定值集中的其中一個代碼。","http://hl7.org/fhir/ValueSet/identifier-use|4.0.1","",,,,"Identifier.use",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A","Role.code or implied by context"
-"Practitioner.identifier:medicalLicenseNumber.type","Practitioner.identifier.type","","","",1,1,"Y","","","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
-","身份識別碼（identifier）的型別說明","識別碼的代碼型別，用於決定特定目適用的識別碼。","這個資料項目只涉及識別碼的一般類別。它 **必須沒有（SHALL NOT）** 被用於與Identifier.system 1..1對應的代碼。一些識別碼可能由於常見的用法而屬於多個類別。在系統是已知的情況下，型別是不必要的，因為型別總是系統定義的一部分。然而，系統經常需要處理系統不為人知的識別碼。型別和系統之間不是1:1的關係，因為許多不同的系統有相同的型別。","允許使用者在不知道識別碼系統的情況下利用識別碼","","","","","","","",,"extensible","識別碼的型別，用於決定特定目的所適用的識別碼；應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/identifier-type-tw","",,,,"Identifier.type",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE","n/a","CD"
+"Practitioner.identifier:medicalLicenseNumber.type","Practitioner.identifier.type","","","",1,1,"Y","","Y","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
+","身份識別碼（identifier）的型別說明","識別碼的代碼型別，用於決定特定目適用的識別碼。","這個資料項目只涉及識別碼的一般類別。它 **必須沒有（SHALL NOT）** 被用於與Identifier.system 1..1對應的代碼。一些識別碼可能由於常見的用法而屬於多個類別。在系統是已知的情況下，型別是不必要的，因為型別總是系統定義的一部分。然而，系統經常需要處理系統不為人知的識別碼。型別和系統之間不是1:1的關係，因為許多不同的系統有相同的型別。","允許使用者在不知道識別碼系統的情況下利用識別碼","","","","","","","",,"extensible","識別碼的型別，用於決定特定目的所適用的識別碼；應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/identifier-type-tw","",,,,"Identifier.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","CX.5","Role.code or implied by context"
 "Practitioner.identifier:medicalLicenseNumber.type.id","Practitioner.identifier.type.id","","","",0,1,"","","","string {[]} {[]}
 ","唯一可識別ID，以供資料項目間相互參照。","resource中資料項目的唯一ID（用於內部參照）。這可以是任何不含空格的字串。","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Practitioner.identifier:medicalLicenseNumber.type.extension","Practitioner.identifier.type.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","擴充的資料項目","擴充的資料項目","","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Practitioner.identifier:medicalLicenseNumber.type.coding","Practitioner.identifier.type.coding","","","",1,*,"Y","","","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
-","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","n/a","CV"
+"Practitioner.identifier:medicalLicenseNumber.type.coding","Practitioner.identifier.type.coding","","","",1,*,"Y","","Y","Coding {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coding-tw]]} {[]}
+","由專門術語系統（terminology system）定義的代碼","由專門術語系統（terminology system）所定義之代碼的參照","代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。","允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","C*E.1-8, C*E.10-22","union(., ./translation)"
 "Practitioner.identifier:medicalLicenseNumber.type.coding.id","Practitioner.identifier.type.coding.id","","","",0,1,"","","","string {[]} {[]}
 ","唯一可識別ID，以供資料項目間相互參照。","resource中資料項目的唯一ID（用於內部參照），這可以是任何不含空格的字串。","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Practitioner.identifier:medicalLicenseNumber.type.coding.extension","Practitioner.identifier.type.coding.extension","","","",0,*,"","","","Extension {[]} {[]}
@@ -380,10 +372,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Practitioner.telecom.period","Practitioner.telecom.period","","","",0,1,"Y","","Y","Period {[]} {[]}
 ","此聯絡方式的使用效期","此聯絡方式的使用效期","","","","","","","","","",,,,,"",,,,"ContactPoint.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A","./usablePeriod[type=""IVL<TS>""]","./StartDate and ./EndDate"
-"Practitioner.address","Practitioner.address","","","",0,*,"Y","","","Address {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Address-tw]]} {[]}
-","不限特定角色的照護服務提供人員的地址（通常是住家地址）","不限特定角色的健康照護服務提供者的地址（通常是住家地址），工作地址通常不在此屬性中輸入，因為它們通常取決於此人員的角色。","PractitionerRole上沒有address但有location屬性（它有一個地址）用於這個目的。","Administrative Gender為行政管理的及保存紀錄目的之健康照護服務提供者性別","","","","","","","",,,,,"",,,,"Practitioner.address",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","XAD","n/a","AD","Address"
+"Practitioner.address","Practitioner.address","","","",0,*,"Y","","Y","Address {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Address-tw]]} {[]}
+","不限特定角色的照護服務提供人員的地址（通常是住家地址）","不限特定角色的健康照護服務提供者的地址（通常是住家地址），工作地址通常不在此屬性中輸入，因為它們通常取決於此人員的角色。","PractitionerRole上沒有address但有location屬性（它有一個地址）用於這個目的。","Administrative Gender為行政管理的及保存紀錄目的之健康照護服務提供者性別","","","","","","","",,,,,"",,,,"Practitioner.address",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","ORC-24, STF-11, ROL-11, PRT-14","./addr","./Addresses"
 "Practitioner.gender","Practitioner.gender","","","",0,1,"Y","","Y","code {[]} {[]}
 ","male ｜ female ｜ other ｜ unknown","Administrative Gender為行政管理的及保存紀錄目的之健康照護服務提供者性別","","用以正確稱呼健康照護服務提供者","","","","","","","",,"required","性別；應填入所綁定值集中的其中一個代碼。","http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1","",,,,"Practitioner.gender",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","STF-5","./administrativeGender","./GenderCode"
@@ -412,9 +403,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","照護服務提供人員的資格證書識別碼","此人在此角色的資格證書之識別碼","","通常此資格證書會被指定特定識別碼","","","","","","","",,,,,"",,,,"Practitioner.qualification.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".playingEntity.playingRole[classCode=QUAL].id"
 "Practitioner.qualification.code","Practitioner.qualification.code","","","",1,1,"","","","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
-","資格證書的編碼表示法","資格證書的編碼表示法","Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.","","","","","","","","",,"extensible","照護服務提供人員提供服務所具有的具體資格證書；應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/health-professional-sct-tw","",,,,"Practitioner.qualification.code",1,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE","n/a","CD"
+","資格證書的編碼表示法","資格證書的編碼表示法","","","","","","","","","",,"extensible","照護服務提供人員提供服務所具有的具體資格證書；應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。","https://twcore.mohw.gov.tw/ig/twcore/ValueSet/health-professional-sct-tw","",,,,"Practitioner.qualification.code",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".playingEntity.playingRole[classCode=QUAL].code","./Qualifications.Value"
 "Practitioner.qualification.period","Practitioner.qualification.period","","","",0,1,"","","","Period {[]} {[]}
 ","資格證書的有效期限","資格證書的有效期限","","資格證書通常是有期限的，並且可以被撤銷。","","","","","","","",,,,,"",,,,"Practitioner.qualification.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".playingEntity.playingRole[classCode=QUAL].effectiveTime","./Qualifications.StartDate and ./Qualifications.EndDate"
@@ -422,6 +412,5 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","監管和頒發資格證書的機構","監管和頒發資格證書的機構","","","","","","","","","",,,,,"",,,,"Practitioner.qualification.issuer",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".playingEntity.playingRole[classCode=QUAL].scoper"
 "Practitioner.communication","Practitioner.communication","","","",0,*,"","","","CodeableConcept {[CanonicalType[https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw]]} {[]}
-","健康照護服務提供者與病人溝通時可使用的語言","健康照護服務提供者與病人溝通時可使用的語言","帶有這種精確字母大小寫的aa-BB結構是最廣泛使用的地方性符號之一。但並不是所有的系統都對其進行編碼，而是將其作為純文字表述。因此，data type為CodeableConcept而不是code。","知道照護服務提供人員講哪種語言有助於促進與病人的溝通","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""zh-TW""/>","","",,"preferred","人類語言；鼓勵使用所綁定值集中的代碼，但不強制一定要使用此值集，你也可使用其他值集的代碼或單純以文字表示。","http://hl7.org/fhir/ValueSet/languages","",,,,"Practitioner.communication",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE","n/a","CD"
+","健康照護服務提供者與病人溝通時可使用的語言","健康照護服務提供者與病人溝通時可使用的語言","帶有這種精確字母大小寫的aa-BB結構是最廣泛使用的地方性符號之一。但並不是所有的系統都對其進行編碼，而是將其作為純文字表述。因此，data type為CodeableConcept而不是code。","知道照護服務提供人員講哪種語言有助於促進與病人的溝通","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""zh-TW""/>","","",,"preferred","人類語言；鼓勵使用所綁定值集中的代碼，但不強制一定要使用此值集，你也可使用其他值集的代碼或單純以文字表示。","http://hl7.org/fhir/ValueSet/languages","",,,,"Practitioner.communication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","PID-15, NK1-20, LAN-2","./languageCommunication","./Languages.LanguageSpokenCode"

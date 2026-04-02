@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-adl-assessment-example | *Version*:1.0.0 |
-| Active as of 2026-03-02 | *Computable Name*:ADLAssessment |
+| Active as of 2026-04-02 | *Computable Name*:ADLAssessment |
 | *Other Identifiers:*http://ltc-ig.fhir.tw/questionnaire-id#ADL-001 (use: official, ) | |
 
 
@@ -33,7 +33,7 @@
   "name" : "ADLAssessment",
   "title" : "日常生活能力評估量表",
   "status" : "active",
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

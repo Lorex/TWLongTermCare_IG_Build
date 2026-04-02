@@ -10,7 +10,7 @@
   "name" : "LTCCompositionCMS",
   "title" : "照顧管理評估量表文件架構",
   "status" : "active",
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -506,7 +506,7 @@
       "path" : "Composition.type",
       "short" : "Composition的種類（如果可能請使用LOINC）",
       "definition" : "指定特定類型的composition（如病史和體檢、出院摘要、病程紀錄）。這通常等同於製作composition的目的。",
-      "comment" : "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
+      "comment" : "For Composition type, LOINC is ubiquitous and strongly endorsed by HL7. Most implementation guides will require a specific LOINC code, or use LOINC as an extensible binding.",
       "requirements" : "描述composition的關鍵metadata資料項目，用於查詢/篩選。",
       "min" : 1,
       "max" : "1",
@@ -519,7 +519,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -530,26 +529,31 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : true,
       "binding" : {
         "strength" : "extensible",
         "description" : "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。",
         "valueSet" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/loinc-type-doc-code"
       },
       "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Event.code"
+      },
+      {
+        "identity" : "w5",
+        "map" : "FiveWs.class"
+      },
+      {
         "identity" : "rim",
-        "map" : "n/a"
+        "map" : "./code"
       },
       {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
+        "identity" : "cda",
+        "map" : ".code"
       },
       {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "fhirdocumentreference",
+        "map" : "DocumentReference.type"
       }]
     },
     {
@@ -570,7 +574,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -580,26 +583,31 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : true,
       "binding" : {
         "strength" : "extensible",
         "description" : "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。",
         "valueSet" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/loinc-document-classcodes"
       },
       "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Event.subject"
+      },
+      {
+        "identity" : "w5",
+        "map" : "FiveWs.class"
+      },
+      {
         "identity" : "rim",
+        "map" : ".outboundRelationship[typeCode=\"COMP].target[classCode=\"LIST\", moodCode=\"EVN\"].code"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
       },
       {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "fhirdocumentreference",
+        "map" : "DocumenttReference.category"
       }]
     },
     {
@@ -1640,7 +1648,7 @@
       },
       {
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Composition"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Composition|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -1834,7 +1842,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -1844,6 +1851,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : true,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -1855,19 +1863,15 @@
       },
       "mapping" : [{
         "identity" : "rim",
-        "map" : "n/a"
+        "map" : ".code"
       },
       {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
+        "identity" : "cda",
+        "map" : ".code"
       },
       {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "fhirdocumentreference",
+        "map" : "DocumentReference.event.code"
       }]
     },
     {
@@ -1923,7 +1927,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -2158,7 +2162,7 @@
       "path" : "Composition.section.code",
       "short" : "小節分類(建議)",
       "definition" : "一個用於指明小節中所含內容種類的代碼，這個代碼必須與小節的標題相一致。",
-      "comment" : "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
+      "comment" : "The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   \n\nIf the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code.",
       "requirements" : "提供給文件中主題的標籤是標準化的，並且可以被電腦程式識別和處理。",
       "min" : 0,
       "max" : "1",
@@ -2171,7 +2175,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -2182,6 +2185,7 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "strength" : "extensible",
         "description" : "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。",
@@ -2189,19 +2193,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
-        "map" : "n/a"
+        "map" : "./code"
       },
       {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "cda",
+        "map" : ".code"
       }]
     },
     {
@@ -2264,7 +2260,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -2385,7 +2381,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -2395,6 +2390,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -2406,19 +2402,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".outboundRelationship[typeCode=COMP].sequenceNumber > 1"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -2436,7 +2424,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"]
       }],
       "condition" : ["cmp-2"],
       "constraint" : [{
@@ -2477,7 +2465,7 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
+      "condition" : ["cmp-2"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -2487,6 +2475,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -2498,19 +2487,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".inboundRelationship[typeCode=SUBJ,code<ListEmptyReason].value[type=CD]"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -2757,7 +2738,7 @@
       "path" : "Composition.section.code",
       "short" : "小節分類(建議)",
       "definition" : "一個用於指明小節中所含內容種類的代碼，這個代碼必須與小節的標題相一致。",
-      "comment" : "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
+      "comment" : "The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   \n\nIf the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code.",
       "requirements" : "提供給文件中主題的標籤是標準化的，並且可以被電腦程式識別和處理。",
       "min" : 0,
       "max" : "1",
@@ -2770,7 +2751,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -2781,6 +2761,7 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "strength" : "extensible",
         "description" : "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。",
@@ -2788,19 +2769,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
-        "map" : "n/a"
+        "map" : "./code"
       },
       {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "cda",
+        "map" : ".code"
       }]
     },
     {
@@ -2863,7 +2836,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -2984,7 +2957,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -2994,6 +2966,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -3005,19 +2978,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".outboundRelationship[typeCode=COMP].sequenceNumber > 1"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -3293,7 +3258,7 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
+      "condition" : ["cmp-2"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -3303,6 +3268,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -3314,19 +3280,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".inboundRelationship[typeCode=SUBJ,code<ListEmptyReason].value[type=CD]"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -3573,7 +3531,7 @@
       "path" : "Composition.section.code",
       "short" : "小節分類(建議)",
       "definition" : "一個用於指明小節中所含內容種類的代碼，這個代碼必須與小節的標題相一致。",
-      "comment" : "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
+      "comment" : "The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   \n\nIf the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code.",
       "requirements" : "提供給文件中主題的標籤是標準化的，並且可以被電腦程式識別和處理。",
       "min" : 0,
       "max" : "1",
@@ -3586,7 +3544,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -3597,6 +3554,7 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "strength" : "extensible",
         "description" : "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。",
@@ -3604,19 +3562,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
-        "map" : "n/a"
+        "map" : "./code"
       },
       {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "cda",
+        "map" : ".code"
       }]
     },
     {
@@ -3679,7 +3629,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -3800,7 +3750,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -3810,6 +3759,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -3821,19 +3771,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".outboundRelationship[typeCode=COMP].sequenceNumber > 1"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -4109,7 +4051,7 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
+      "condition" : ["cmp-2"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -4119,6 +4061,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -4130,19 +4073,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".inboundRelationship[typeCode=SUBJ,code<ListEmptyReason].value[type=CD]"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -4389,7 +4324,7 @@
       "path" : "Composition.section.code",
       "short" : "小節分類(建議)",
       "definition" : "一個用於指明小節中所含內容種類的代碼，這個代碼必須與小節的標題相一致。",
-      "comment" : "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
+      "comment" : "The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   \n\nIf the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code.",
       "requirements" : "提供給文件中主題的標籤是標準化的，並且可以被電腦程式識別和處理。",
       "min" : 0,
       "max" : "1",
@@ -4402,7 +4337,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -4413,6 +4347,7 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "strength" : "extensible",
         "description" : "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。",
@@ -4420,19 +4355,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
-        "map" : "n/a"
+        "map" : "./code"
       },
       {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "cda",
+        "map" : ".code"
       }]
     },
     {
@@ -4495,7 +4422,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -4616,7 +4543,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -4626,6 +4552,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -4637,19 +4564,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".outboundRelationship[typeCode=COMP].sequenceNumber > 1"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -4923,7 +4842,7 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
+      "condition" : ["cmp-2"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -4933,6 +4852,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -4944,19 +4864,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".inboundRelationship[typeCode=SUBJ,code<ListEmptyReason].value[type=CD]"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -5203,7 +5115,7 @@
       "path" : "Composition.section.code",
       "short" : "小節分類(建議)",
       "definition" : "一個用於指明小節中所含內容種類的代碼，這個代碼必須與小節的標題相一致。",
-      "comment" : "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
+      "comment" : "The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   \n\nIf the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code.",
       "requirements" : "提供給文件中主題的標籤是標準化的，並且可以被電腦程式識別和處理。",
       "min" : 0,
       "max" : "1",
@@ -5216,7 +5128,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -5227,6 +5138,7 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "strength" : "extensible",
         "description" : "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。",
@@ -5234,19 +5146,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
-        "map" : "n/a"
+        "map" : "./code"
       },
       {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "cda",
+        "map" : ".code"
       }]
     },
     {
@@ -5309,7 +5213,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -5430,7 +5334,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -5440,6 +5343,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -5451,19 +5355,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".outboundRelationship[typeCode=COMP].sequenceNumber > 1"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -5737,7 +5633,7 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
+      "condition" : ["cmp-2"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -5747,6 +5643,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -5758,19 +5655,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".inboundRelationship[typeCode=SUBJ,code<ListEmptyReason].value[type=CD]"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -6017,7 +5906,7 @@
       "path" : "Composition.section.code",
       "short" : "小節分類(建議)",
       "definition" : "一個用於指明小節中所含內容種類的代碼，這個代碼必須與小節的標題相一致。",
-      "comment" : "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
+      "comment" : "The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   \n\nIf the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code.",
       "requirements" : "提供給文件中主題的標籤是標準化的，並且可以被電腦程式識別和處理。",
       "min" : 0,
       "max" : "1",
@@ -6030,7 +5919,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -6041,6 +5929,7 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "strength" : "extensible",
         "description" : "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。",
@@ -6048,19 +5937,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
-        "map" : "n/a"
+        "map" : "./code"
       },
       {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "cda",
+        "map" : ".code"
       }]
     },
     {
@@ -6123,7 +6004,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -6244,7 +6125,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -6254,6 +6134,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -6265,19 +6146,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".outboundRelationship[typeCode=COMP].sequenceNumber > 1"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -6551,7 +6424,7 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
+      "condition" : ["cmp-2"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -6561,6 +6434,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -6572,19 +6446,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".inboundRelationship[typeCode=SUBJ,code<ListEmptyReason].value[type=CD]"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -6831,7 +6697,7 @@
       "path" : "Composition.section.code",
       "short" : "小節分類(建議)",
       "definition" : "一個用於指明小節中所含內容種類的代碼，這個代碼必須與小節的標題相一致。",
-      "comment" : "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
+      "comment" : "The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   \n\nIf the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code.",
       "requirements" : "提供給文件中主題的標籤是標準化的，並且可以被電腦程式識別和處理。",
       "min" : 0,
       "max" : "1",
@@ -6844,7 +6710,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -6855,6 +6720,7 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "strength" : "extensible",
         "description" : "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。",
@@ -6862,19 +6728,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
-        "map" : "n/a"
+        "map" : "./code"
       },
       {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "cda",
+        "map" : ".code"
       }]
     },
     {
@@ -6937,7 +6795,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -7058,7 +6916,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -7068,6 +6925,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -7079,19 +6937,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".outboundRelationship[typeCode=COMP].sequenceNumber > 1"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -7365,7 +7215,7 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
+      "condition" : ["cmp-2"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -7375,6 +7225,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -7386,19 +7237,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".inboundRelationship[typeCode=SUBJ,code<ListEmptyReason].value[type=CD]"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -7645,7 +7488,7 @@
       "path" : "Composition.section.code",
       "short" : "小節分類(建議)",
       "definition" : "一個用於指明小節中所含內容種類的代碼，這個代碼必須與小節的標題相一致。",
-      "comment" : "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
+      "comment" : "The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   \n\nIf the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code.",
       "requirements" : "提供給文件中主題的標籤是標準化的，並且可以被電腦程式識別和處理。",
       "min" : 0,
       "max" : "1",
@@ -7658,7 +7501,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -7669,6 +7511,7 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "strength" : "extensible",
         "description" : "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。",
@@ -7676,19 +7519,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
-        "map" : "n/a"
+        "map" : "./code"
       },
       {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "cda",
+        "map" : ".code"
       }]
     },
     {
@@ -7751,7 +7586,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -7872,7 +7707,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -7882,6 +7716,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -7893,19 +7728,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".outboundRelationship[typeCode=COMP].sequenceNumber > 1"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -8179,7 +8006,7 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
+      "condition" : ["cmp-2"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -8189,6 +8016,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -8200,19 +8028,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".inboundRelationship[typeCode=SUBJ,code<ListEmptyReason].value[type=CD]"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -8459,7 +8279,7 @@
       "path" : "Composition.section.code",
       "short" : "小節分類(建議)",
       "definition" : "一個用於指明小節中所含內容種類的代碼，這個代碼必須與小節的標題相一致。",
-      "comment" : "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
+      "comment" : "The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   \n\nIf the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code.",
       "requirements" : "提供給文件中主題的標籤是標準化的，並且可以被電腦程式識別和處理。",
       "min" : 0,
       "max" : "1",
@@ -8472,7 +8292,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -8483,6 +8302,7 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "strength" : "extensible",
         "description" : "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。",
@@ -8490,19 +8310,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
-        "map" : "n/a"
+        "map" : "./code"
       },
       {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "cda",
+        "map" : ".code"
       }]
     },
     {
@@ -8565,7 +8377,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -8686,7 +8498,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -8696,6 +8507,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -8707,19 +8519,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".outboundRelationship[typeCode=COMP].sequenceNumber > 1"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -8993,7 +8797,7 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
+      "condition" : ["cmp-2"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -9003,6 +8807,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -9014,19 +8819,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".inboundRelationship[typeCode=SUBJ,code<ListEmptyReason].value[type=CD]"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -9273,7 +9070,7 @@
       "path" : "Composition.section.code",
       "short" : "小節分類(建議)",
       "definition" : "一個用於指明小節中所含內容種類的代碼，這個代碼必須與小節的標題相一致。",
-      "comment" : "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
+      "comment" : "The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   \n\nIf the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code.",
       "requirements" : "提供給文件中主題的標籤是標準化的，並且可以被電腦程式識別和處理。",
       "min" : 0,
       "max" : "1",
@@ -9286,7 +9083,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -9297,6 +9093,7 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "strength" : "extensible",
         "description" : "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。",
@@ -9304,19 +9101,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
-        "map" : "n/a"
+        "map" : "./code"
       },
       {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "cda",
+        "map" : ".code"
       }]
     },
     {
@@ -9379,7 +9168,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -9500,7 +9289,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -9510,6 +9298,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -9521,19 +9310,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".outboundRelationship[typeCode=COMP].sequenceNumber > 1"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -9807,7 +9588,7 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
+      "condition" : ["cmp-2"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -9817,6 +9598,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -9828,19 +9610,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".inboundRelationship[typeCode=SUBJ,code<ListEmptyReason].value[type=CD]"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -10087,7 +9861,7 @@
       "path" : "Composition.section.code",
       "short" : "小節分類(建議)",
       "definition" : "一個用於指明小節中所含內容種類的代碼，這個代碼必須與小節的標題相一致。",
-      "comment" : "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
+      "comment" : "The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   \n\nIf the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code.",
       "requirements" : "提供給文件中主題的標籤是標準化的，並且可以被電腦程式識別和處理。",
       "min" : 0,
       "max" : "1",
@@ -10100,7 +9874,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -10111,6 +9884,7 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "strength" : "extensible",
         "description" : "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。",
@@ -10118,19 +9892,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
-        "map" : "n/a"
+        "map" : "./code"
       },
       {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "cda",
+        "map" : ".code"
       }]
     },
     {
@@ -10193,7 +9959,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -10314,7 +10080,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -10324,6 +10089,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -10335,19 +10101,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".outboundRelationship[typeCode=COMP].sequenceNumber > 1"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -10621,7 +10379,7 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
+      "condition" : ["cmp-2"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -10631,6 +10389,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -10642,19 +10401,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".inboundRelationship[typeCode=SUBJ,code<ListEmptyReason].value[type=CD]"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -10901,7 +10652,7 @@
       "path" : "Composition.section.code",
       "short" : "小節分類(建議)",
       "definition" : "一個用於指明小節中所含內容種類的代碼，這個代碼必須與小節的標題相一致。",
-      "comment" : "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
+      "comment" : "The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   \n\nIf the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code.",
       "requirements" : "提供給文件中主題的標籤是標準化的，並且可以被電腦程式識別和處理。",
       "min" : 0,
       "max" : "1",
@@ -10914,7 +10665,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -10925,6 +10675,7 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "strength" : "extensible",
         "description" : "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。",
@@ -10932,19 +10683,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
-        "map" : "n/a"
+        "map" : "./code"
       },
       {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+        "identity" : "cda",
+        "map" : ".code"
       }]
     },
     {
@@ -11007,7 +10750,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -11128,7 +10871,6 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -11138,6 +10880,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -11149,19 +10892,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".outboundRelationship[typeCode=COMP].sequenceNumber > 1"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {
@@ -11435,7 +11170,7 @@
         "code" : "CodeableConcept",
         "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"]
       }],
-      "condition" : ["ele-1"],
+      "condition" : ["cmp-2"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -11445,6 +11180,7 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : false,
+      "isSummary" : false,
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -11456,19 +11192,11 @@
       },
       "mapping" : [{
         "identity" : "rim",
+        "map" : ".inboundRelationship[typeCode=SUBJ,code<ListEmptyReason].value[type=CD]"
+      },
+      {
+        "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "CE/CNE/CWE"
-      },
-      {
-        "identity" : "rim",
-        "map" : "CD"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept rdfs:subClassOf dt:CD"
       }]
     },
     {

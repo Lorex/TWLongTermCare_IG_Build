@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-Observation-Assessment-Payload | *Version*:1.0.0 |
-| Draft as of 2026-03-02 | *Computable Name*:LTCObservationAssessmentPayload |
+| Draft as of 2026-04-02 | *Computable Name*:LTCObservationAssessmentPayload |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現長照 SDK 回傳之評估核定摘要，包含福利身分、CMS 等級、評估類型及計畫起訖等資訊。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-LTC-Observation-Asse
   "name" : "LTCObservationAssessmentPayload",
   "title" : "長照 SDK－評估核定摘要",
   "status" : "draft",
-  "date" : "2026-03-02T02:26:08+08:00",
+  "date" : "2026-04-02T13:32:15+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
