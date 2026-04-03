@@ -14,7 +14,7 @@ Profile: [長期照顧－服務請求](StructureDefinition-LTCServiceRequest.md)
 
 **category**: Patient referral
 
-**code**: 轉介至日間照護中心
+**code**: 轉介至日間照護中心接受日間照顧服務
 
 **subject**: [陳明慧 Female, DoB: 1945-03-15 ( National Person Identifier (TWN): A123456789 (use: official, ))](Patient-ltc-patient-chen-ming-hui.md)
 
@@ -55,11 +55,11 @@ Profile: [長期照顧－服務請求](StructureDefinition-LTCServiceRequest.md)
   }],
   "code" : {
     "coding" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "306206005",
-      "display" : "Referral to service"
+      "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item",
+      "code" : "BB03",
+      "display" : "日間照顧（全日）--第2型"
     }],
-    "text" : "轉介至日間照護中心"
+    "text" : "轉介至日間照護中心接受日間照顧服務"
   },
   "subject" : {
     "reference" : "Patient/ltc-patient-chen-ming-hui"

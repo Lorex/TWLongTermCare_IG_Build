@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCProcedureCareActivity | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:LTCProcedureCareActivity |
+| Active as of 2026-04-03 | *Computable Name*:LTCProcedureCareActivity |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Procedure Resource，以呈現長照機構住民的照護活動紀錄。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCProcedureCareActi
   "name" : "LTCProcedureCareActivity",
   "title" : "長期照顧－照護活動",
   "status" : "active",
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -102,19 +102,27 @@ Other representations of profile: [CSV](StructureDefinition-LTCProcedureCareActi
       "min" : 1
     },
     {
-      "id" : "Procedure.code.coding.system",
+      "id" : "Procedure.code.coding:ltcServiceItem",
+      "path" : "Procedure.code.coding",
+      "sliceName" : "ltcServiceItem",
+      "short" : "臺灣長照服務項目代碼（AA..GA 系列）",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-service-item"
+      }
+    },
+    {
+      "id" : "Procedure.code.coding:ltcServiceItem.system",
       "path" : "Procedure.code.coding.system",
       "min" : 1,
-      "patternUri" : "http://snomed.info/sct"
+      "patternUri" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item"
     },
     {
-      "id" : "Procedure.code.coding.code",
+      "id" : "Procedure.code.coding:ltcServiceItem.code",
       "path" : "Procedure.code.coding.code",
-      "min" : 1
-    },
-    {
-      "id" : "Procedure.code.coding.display",
-      "path" : "Procedure.code.coding.display",
       "min" : 1
     },
     {

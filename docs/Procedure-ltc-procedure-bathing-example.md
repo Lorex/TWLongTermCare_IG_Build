@@ -44,6 +44,11 @@ Profile: [長期照顧－照護活動](StructureDefinition-LTCProcedureCareActiv
   "status" : "completed",
   "code" : {
     "coding" : [{
+      "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item",
+      "code" : "BA07",
+      "display" : "協助沐浴及洗頭"
+    },
+    {
       "system" : "http://snomed.info/sct",
       "code" : "60369001",
       "display" : "Bathing patient"

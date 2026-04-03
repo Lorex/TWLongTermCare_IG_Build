@@ -17,6 +17,13 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 ServiceReq
 
 * code 1..1 MS
 * code ^short = "服務項目代碼"
+* code.coding contains ltcServiceItem 0..1 MS
+* code.coding[ltcServiceItem] from http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-service-item (required)
+* code.coding[ltcServiceItem] ^short = "臺灣長照服務項目代碼（AA..GA 系列）"
+* code.coding[ltcServiceItem].system 1..1 MS
+* code.coding[ltcServiceItem].system = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item"
+* code.coding[ltcServiceItem].code 1..1 MS
+* code.coding[ltcServiceItem].display 0..1 MS
 
 * subject 1..1 MS
 * subject only Reference(LTCPatient)
@@ -54,10 +61,10 @@ Usage: #example
 * category.coding.code = #3457005
 * category.coding.display = "Patient referral"
 
-* code.coding.system = "http://snomed.info/sct"
-* code.coding.code = #306206005
-* code.coding.display = "Referral to service"
-* code.text = "轉介至日間照護中心"
+* code.coding[ltcServiceItem].system = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item"
+* code.coding[ltcServiceItem].code = #BB03
+* code.coding[ltcServiceItem].display = "日間照顧（全日）--第2型"
+* code.text = "轉介至日間照護中心接受日間照顧服務"
 
 * subject = Reference(ltc-patient-chen-ming-hui)
 

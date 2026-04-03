@@ -18,7 +18,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest ltc-servicerequest-referral-example</b></p><a name=\"ltc-servicerequest-referral-example\"> </a><a name=\"hcltc-servicerequest-referral-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCServiceRequest.html\">長期照顧－服務請求</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 3457005}\">Patient referral</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 306206005}\">轉介至日間照護中心</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-chen-ming-hui.html\">陳明慧 Female, DoB: 1945-03-15 ( National Person Identifier (TWN): A123456789 (use: official, ))</a></p><p><b>authoredOn</b>: 2024-01-20 14:30:00+0800</p><p><b>requester</b>: <a href=\"Practitioner-ltc-practitioner-example.html\">Practitioner 王美玲(official)</a></p><p><b>performer</b>: <a href=\"Organization-ltc-organization-example.html\">Organization 新北市私立安康老人長期照顧中心（養護型）</a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 26929004}\">失智症照護需求</span></p><p><b>note</b>: </p><blockquote><div><p>個案因失智症需轉介至日間照護中心接受日間照護服務，含認知訓練與生活照顧。</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest ltc-servicerequest-referral-example</b></p><a name=\"ltc-servicerequest-referral-example\"> </a><a name=\"hcltc-servicerequest-referral-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCServiceRequest.html\">長期照顧－服務請求</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 3457005}\">Patient referral</span></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item BB03}\">轉介至日間照護中心接受日間照顧服務</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-chen-ming-hui.html\">陳明慧 Female, DoB: 1945-03-15 ( National Person Identifier (TWN): A123456789 (use: official, ))</a></p><p><b>authoredOn</b>: 2024-01-20 14:30:00+0800</p><p><b>requester</b>: <a href=\"Practitioner-ltc-practitioner-example.html\">Practitioner 王美玲(official)</a></p><p><b>performer</b>: <a href=\"Organization-ltc-organization-example.html\">Organization 新北市私立安康老人長期照顧中心（養護型）</a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 26929004}\">失智症照護需求</span></p><p><b>note</b>: </p><blockquote><div><p>個案因失智症需轉介至日間照護中心接受日間照護服務，含認知訓練與生活照顧。</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:intent [ fhir:v "order"] ; # 
@@ -35,15 +35,14 @@
   ] ) ; # 
   fhir:code [
      fhir:coding ( [
-       a sct:306206005 ;
        fhir:system [
-         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-         fhir:l <http://snomed.info/sct>
+         fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item"^^xsd:anyURI ;
+         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item>
        ] ;
-       fhir:code [ fhir:v "306206005" ] ;
-       fhir:display [ fhir:v "Referral to service" ]
+       fhir:code [ fhir:v "BB03" ] ;
+       fhir:display [ fhir:v "日間照顧（全日）--第2型" ]
      ] ) ;
-     fhir:text [ fhir:v "轉介至日間照護中心" ]
+     fhir:text [ fhir:v "轉介至日間照護中心接受日間照顧服務" ]
   ] ; # 
   fhir:subject [
      fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-chen-ming-hui> ;

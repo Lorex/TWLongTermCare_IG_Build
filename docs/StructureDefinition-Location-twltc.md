@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Location-twltc | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:LTCLocation |
+| Active as of 2026-04-03 | *Computable Name*:LTCLocation |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Location Resource，以呈現失智症個案的位置監測資料，包括所在地名稱與經緯度座標資訊。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-Location-twltc.csv),
   "name" : "LTCLocation",
   "title" : "長期照顧－個案位置監測",
   "status" : "active",
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:LTCPractitioner |
+| Active as of 2026-04-03 | *Computable Name*:LTCPractitioner |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Practitioner Resource，以呈現照顧服務提供者的資料。這裡的照顧服務提供者係指醫事人員、照顧服務員、其他經過專業訓練的照顧服務提供者，領域包含但不限於長期照顧與運動。 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCPractitioner.csv)
   "name" : "LTCPractitioner",
   "title" : "長期照顧－照顧服務提供者",
   "status" : "active",
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

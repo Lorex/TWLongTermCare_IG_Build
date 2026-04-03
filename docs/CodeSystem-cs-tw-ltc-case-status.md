@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-status | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:CS_TW_LTC_CaseStatus |
+| Active as of 2026-04-03 | *Computable Name*:CS_TW_LTC_CaseStatus |
 
  
 對應 r1.3：服務中、暫停服務、已結案。使用 FHIR EpisodeOfCare status 對應碼。 
@@ -32,7 +32,7 @@
   "title" : "長照 SDK－個案狀態",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

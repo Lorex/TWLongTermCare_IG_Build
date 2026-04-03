@@ -1,18 +1,18 @@
-# 長照 SDK－服務項目代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 臺灣長照服務項目代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **長照 SDK－服務項目代碼**
+* **臺灣長照服務項目代碼**
 
-## CodeSystem: 長照 SDK－服務項目代碼 
+## CodeSystem: 臺灣長照服務項目代碼 
 
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:CS_TW_LTC_ServiceItem |
+| Active as of 2026-04-03 | *Computable Name*:CS_TW_LTC_ServiceItem |
 
  
-對應 r4.* 臺灣長照給付『照顧組合／輔具／無障礙修繕』服務項目代碼（AA..FA 系列），來源：清單.xlsx。 
+臺灣長照 2.0 給付之服務項目代碼（AA..GA 系列），涵蓋照顧組合、專業服務、交通接送、喘息服務等項目，適用於長照服務之申請、核定與使用紀錄。 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -29,10 +29,10 @@
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item",
   "version" : "1.0.0",
   "name" : "CS_TW_LTC_ServiceItem",
-  "title" : "長照 SDK－服務項目代碼",
+  "title" : "臺灣長照服務項目代碼",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -41,7 +41,7 @@
       "value" : "https://www.ida.gov.tw/"
     }]
   }],
-  "description" : "對應 r4.* 臺灣長照給付『照顧組合／輔具／無障礙修繕』服務項目代碼（AA..FA 系列），來源：清單.xlsx。",
+  "description" : "臺灣長照 2.0 給付之服務項目代碼（AA..GA 系列），涵蓋照顧組合、專業服務、交通接送、喘息服務等項目，適用於長照服務之申請、核定與使用紀錄。",
   "caseSensitive" : true,
   "content" : "complete",
   "count" : 86,

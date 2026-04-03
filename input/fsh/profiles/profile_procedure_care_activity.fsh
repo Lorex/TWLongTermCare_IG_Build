@@ -13,10 +13,13 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Procedure 
 * code 1..1 MS
 * code ^short = "照護活動項目"
 * code.coding 1..* MS
-* code.coding.system 1..1 MS
-* code.coding.system = "http://snomed.info/sct"
-* code.coding.code 1..1 MS
-* code.coding.display 1..1 MS
+* code.coding contains ltcServiceItem 0..1 MS
+* code.coding[ltcServiceItem] from http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-service-item (required)
+* code.coding[ltcServiceItem] ^short = "臺灣長照服務項目代碼（AA..GA 系列）"
+* code.coding[ltcServiceItem].system 1..1 MS
+* code.coding[ltcServiceItem].system = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item"
+* code.coding[ltcServiceItem].code 1..1 MS
+* code.coding[ltcServiceItem].display 0..1 MS
 
 * subject 1..1 MS
 * subject ^short = "接受照護活動的住民"
@@ -54,9 +57,12 @@ Usage: #example
 
 * status = #completed
 
-* code.coding.system = "http://snomed.info/sct"
-* code.coding.code = #60369001
-* code.coding.display = "Bathing patient"
+* code.coding[ltcServiceItem].system = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item"
+* code.coding[ltcServiceItem].code = #BA07
+* code.coding[ltcServiceItem].display = "協助沐浴及洗頭"
+* code.coding[sct-procedures].system = "http://snomed.info/sct"
+* code.coding[sct-procedures].code = #60369001
+* code.coding[sct-procedures].display = "Bathing patient"
 * code.text = "沐浴/擦澡"
 
 * subject = Reference(ltc-patient-chen-ming-hui)

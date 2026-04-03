@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-group | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:CS_TW_LTC_ServiceGroup |
+| Active as of 2026-04-03 | *Computable Name*:CS_TW_LTC_ServiceGroup |
 
  
 此 CodeSystem 定義長照 SDK 中的服務別（核定用）代碼。 
@@ -32,7 +32,7 @@
   "title" : "長照 SDK－服務別（核定用）",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

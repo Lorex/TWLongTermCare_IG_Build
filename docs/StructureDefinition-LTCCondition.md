@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCondition | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:LTCCondition |
+| Active as of 2026-04-03 | *Computable Name*:LTCCondition |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的病情、問題或診斷資料。 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCCondition.csv), [
   "name" : "LTCCondition",
   "title" : "長期照顧－病情、問題或診斷",
   "status" : "active",
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

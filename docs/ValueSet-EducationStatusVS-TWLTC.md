@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/EducationStatusVS-TWLTC | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:EducationStatusVSTWLTC |
+| Active as of 2026-04-03 | *Computable Name*:EducationStatusVSTWLTC |
 
  
 用以表述教育程度之值集，包含教育程度之描述內容。 
@@ -51,7 +51,7 @@
   "title" : "教育程度值集",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

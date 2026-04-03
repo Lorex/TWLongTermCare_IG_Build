@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-Bundle-Payload | *Version*:1.0.0 |
-| Draft as of 2026-04-02 | *Computable Name*:LTCBundlePayload |
+| Draft as of 2026-04-03 | *Computable Name*:LTCBundlePayload |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Bundle Resource，以呈現長照 SDK 回傳之資料包，包含案件、評估、核定額度及照顧計畫等資源之集合。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-LTC-Bundle-Payload.c
   "name" : "LTCBundlePayload",
   "title" : "長照 SDK－回傳包（4合1）",
   "status" : "draft",
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

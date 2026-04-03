@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/PASportConditionExerciseHistory | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:PASportConditionExerciseHistory |
+| Active as of 2026-04-03 | *Computable Name*:PASportConditionExerciseHistory |
 
  
 長照機構住民運動處方的運動史資料，本 Profile 繼承自身體活動量測 (Physical Activity Measure) 的 Sport Data Condition Profile。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-PASportConditionExer
   "name" : "PASportConditionExerciseHistory",
   "title" : "運動處方－運動史",
   "status" : "active",
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

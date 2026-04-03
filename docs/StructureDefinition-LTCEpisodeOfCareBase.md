@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCEpisodeOfCareBase | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:LTCEpisodeOfCareBase |
+| Active as of 2026-04-03 | *Computable Name*:LTCEpisodeOfCareBase |
 
  
 此 Profile 為所有長期照顧 EpisodeOfCare Profile 的共用基礎，定義案件管理之基本結構與共用欄位。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCEpisodeOfCareBase
   "name" : "LTCEpisodeOfCareBase",
   "title" : "長期照顧－案件管理基礎",
   "status" : "active",
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

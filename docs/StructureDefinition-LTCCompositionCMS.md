@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionCMS | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:LTCCompositionCMS |
+| Active as of 2026-04-03 | *Computable Name*:LTCCompositionCMS |
 
  
 此 Composition 以衛生福利部長期照顧管理中心照顧管理評估量表為基礎，用以表述照顧管理評估量表的文件結構。 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCCompositionCMS.cs
   "name" : "LTCCompositionCMS",
   "title" : "照顧管理評估量表文件架構",
   "status" : "active",
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

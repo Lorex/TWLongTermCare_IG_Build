@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-incident-notifmethod | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:VS_TW_LTC_Incident_NotificationMethod |
+| Active as of 2026-04-03 | *Computable Name*:VS_TW_LTC_Incident_NotificationMethod |
 
  
 此 ValueSet 用於表示長照 SDK 異常紀錄的通報方式。 
@@ -51,7 +51,7 @@
   "title" : "長照 SDK－異常紀錄－通報方式",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

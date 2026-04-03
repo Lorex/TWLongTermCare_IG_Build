@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCAdverseEventModel | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:LTCAdverseEventModel |
+| Active as of 2026-04-03 | *Computable Name*:LTCAdverseEventModel |
 
  
 此邏輯模型以失智症照護監測賽道的情境3為基礎，用以描述異常事件警報的資料結構與欄位準備指引。支援記錄異常事件類型、嚴重程度、發生時間、位置等資訊。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCAdverseEventModel
   "name" : "LTCAdverseEventModel",
   "title" : "異常事件警報邏輯模型",
   "status" : "active",
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

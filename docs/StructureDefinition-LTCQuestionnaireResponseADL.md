@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseADL | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:LTCQuestionnaireResponseADL |
+| Active as of 2026-04-03 | *Computable Name*:LTCQuestionnaireResponseADL |
 
  
 此 Profile 定義 FHIR 的 QuestionnaireResponse Resource，以呈現日常生活活動量表 (ADL) 的回覆資料。回覆採用整數分數（依題目配分），文字說明由問卷提供。 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCQuestionnaireResp
   "name" : "LTCQuestionnaireResponseADL",
   "title" : "ADL 問卷回覆",
   "status" : "active",
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

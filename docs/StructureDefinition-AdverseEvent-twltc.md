@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:LTCAdverseEvent |
+| Active as of 2026-04-03 | *Computable Name*:LTCAdverseEvent |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 AdverseEvent Resource，以呈現長照個案異常事件的資料，包括事件類型、嚴重程度、發生時間、位置、通報方式、多段文字描述與關聯案件等資訊。同時適用於失智照顧及 SDK 異常服務通報場景。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-AdverseEvent-twltc.c
   "name" : "LTCAdverseEvent",
   "title" : "長期照顧－異常事件警報",
   "status" : "active",
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

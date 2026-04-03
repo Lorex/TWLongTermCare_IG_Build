@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse | *Version*:1.0.0 |
-| Draft as of 2026-04-02 | *Computable Name*:LTCCoverageEligibilityResponse |
+| Draft as of 2026-04-03 | *Computable Name*:LTCCoverageEligibilityResponse |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 CoverageEligibilityResponse Resource，以呈現長照各服務別之核定額度摘要，包含總額、補助金額、自付額及比率等資料。 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-LTC-CoverageEligibil
   "name" : "LTCCoverageEligibilityResponse",
   "title" : "長照－核定額度（CoverageEligibilityResponse）",
   "status" : "draft",
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

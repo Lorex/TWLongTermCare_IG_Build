@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-YYYMM-ROC | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:ExtTWLTCExportYYYMMROC |
+| Active as of 2026-04-03 | *Computable Name*:ExtTWLTCExportYYYMMROC |
 
 此 Extension 用於表示長照 SDK 的民國年月（YYYMM 格式），適用於 Claim、ClaimResponse 或 OperationOutcome 資源。
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-Ext-TW-LTC-Export-YY
   "name" : "ExtTWLTCExportYYYMMROC",
   "title" : "長照 SDK－民國年月（YYYMM）",
   "status" : "active",
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

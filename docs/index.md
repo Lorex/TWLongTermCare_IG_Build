@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ImplementationGuide/tw.iii.ltc | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:TaiwanLongTermCareImplementationGuide |
+| Active as of 2026-04-03 | *Computable Name*:TaiwanLongTermCareImplementationGuide |
 
 ### 重要異動公告
 
@@ -134,7 +134,7 @@ TW LTC IG 中所有Profiles的FMM等級如下：
   "name" : "TaiwanLongTermCareImplementationGuide",
   "title" : "臺灣長期照顧實作指引(TW LTC IG)",
   "status" : "active",
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -2392,6 +2392,30 @@ TW LTC IG 中所有Profiles的FMM等級如下：
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-tw-ltc-service-item"
+      },
+      "name" : "臺灣長照服務項目",
+      "description" : "此 ValueSet 涵蓋臺灣長照 2.0 給付之所有服務項目代碼，適用於長照服務之申請、核定與使用紀錄，包含照顧組合、專業服務、交通接送、喘息服務等項目。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/cs-tw-ltc-service-item"
+      },
+      "name" : "臺灣長照服務項目代碼",
+      "description" : "臺灣長照 2.0 給付之服務項目代碼（AA..GA 系列），涵蓋照顧組合、專業服務、交通接送、喘息服務等項目，適用於長照服務之申請、核定與使用紀錄。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Condition"
       }],
       "reference" : {
@@ -4395,30 +4419,6 @@ TW LTC IG 中所有Profiles的FMM等級如下：
       },
       "name" : "長照 SDK－服務活動紀錄（SERVICE_A）",
       "description" : "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Communication Resource，以呈現長照服務活動紀錄，包含電訪、家訪等過程資料。",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/cs-tw-ltc-service-item"
-      },
-      "name" : "長照 SDK－服務項目代碼",
-      "description" : "對應 r4.* 臺灣長照給付『照顧組合／輔具／無障礙修繕』服務項目代碼（AA..FA 系列），來源：清單.xlsx。",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/vs-tw-ltc-service-item"
-      },
-      "name" : "長照 SDK－服務項目（計畫）",
-      "description" : "此 ValueSet 用於表示長照 SDK 中的服務項目（計畫）。",
       "exampleBoolean" : false
     },
     {

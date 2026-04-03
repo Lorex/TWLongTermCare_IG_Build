@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCServiceRequest | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:LTCServiceRequest |
+| Active as of 2026-04-03 | *Computable Name*:LTCServiceRequest |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 ServiceRequest Resource，以呈現長期照顧情境中的轉介申請及服務請求需求。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCServiceRequest.cs
   "name" : "LTCServiceRequest",
   "title" : "長期照顧－服務請求",
   "status" : "active",
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -102,6 +102,30 @@ Other representations of profile: [CSV](StructureDefinition-LTCServiceRequest.cs
       "id" : "ServiceRequest.code",
       "path" : "ServiceRequest.code",
       "short" : "服務項目代碼"
+    },
+    {
+      "id" : "ServiceRequest.code.coding:ltcServiceItem",
+      "path" : "ServiceRequest.code.coding",
+      "sliceName" : "ltcServiceItem",
+      "short" : "臺灣長照服務項目代碼（AA..GA 系列）",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-service-item"
+      }
+    },
+    {
+      "id" : "ServiceRequest.code.coding:ltcServiceItem.system",
+      "path" : "ServiceRequest.code.coding.system",
+      "min" : 1,
+      "patternUri" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item"
+    },
+    {
+      "id" : "ServiceRequest.code.coding:ltcServiceItem.code",
+      "path" : "ServiceRequest.code.coding.code",
+      "min" : 1
     },
     {
       "id" : "ServiceRequest.subject",

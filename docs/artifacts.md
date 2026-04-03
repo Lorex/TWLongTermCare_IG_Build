@@ -195,6 +195,7 @@ These define sets of codes used by systems conforming to this implementation gui
 | [看護狀況值集](ValueSet-ReferralConditionCaregiverVS-TWLTC.md) | 個案雇用看護的狀況 |
 | [管路狀況值集](ValueSet-ReferralConditionTubeVS-TWLTC.md) | 個案持有管路的狀況 |
 | [臺灣 2023 年中文版 ICD-10-PCS-F 值集](ValueSet-ICD-10-PCS-2023-TW-F-VS.md) | 臺灣 2023 年中文版 ICD-10-PCS 復健及診斷性聽力學(Physical Rehabilitation and Diagnostic Audiology)，章節數值為「F」。 包括：復健、診斷性聽力學。 代碼出版日期：2023-11-10；資料所屬單位：衛生福利部中央健康保險署。 因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。 |
+| [臺灣長照服務項目](ValueSet-vs-tw-ltc-service-item.md) | 此 ValueSet 涵蓋臺灣長照 2.0 給付之所有服務項目代碼，適用於長照服務之申請、核定與使用紀錄，包含照顧組合、專業服務、交通接送、喘息服務等項目。 |
 | [跌倒紀錄結果值集](ValueSet-FallHistoryResultVS-TWLTC.md) | 紀錄住民跌倒的偵測結果。 |
 | [身心障礙手冊持有狀況值集](ValueSet-ConditionDisabilityVS-TWLTC.md) | 個案持有身心障礙手冊的狀況 |
 | [身心障礙類型值集](ValueSet-ConditionDisabilityTypeVS-TWLTC.md) | 個案身心障礙類型 |
@@ -210,7 +211,6 @@ These define sets of codes used by systems conforming to this implementation gui
 | [長照 SDK－個案狀態](ValueSet-vs-tw-ltc-case-status.md) | 此 ValueSet 用於表示長照 SDK 中個案的狀態，使用 FHIR EpisodeOfCare status 對應碼：active（服務中）、onhold（暫停服務）、finished（已結案）。 |
 | [長照 SDK－服務別（核定）](ValueSet-vs-tw-ltc-service-group.md) | 此 ValueSet 用於表示長照 SDK 中的服務別（核定）。 |
 | [長照 SDK－服務活動](ValueSet-vs-tw-ltc-service-activity.md) | 此 ValueSet 彙整長照照管服務活動紀錄使用之代碼。 |
-| [長照 SDK－服務項目（計畫）](ValueSet-vs-tw-ltc-service-item.md) | 此 ValueSet 用於表示長照 SDK 中的服務項目（計畫）。 |
 | [長照 SDK－核定額度欄位](ValueSet-vs-tw-ltc-benefit-type.md) | 此 ValueSet 用於表示長照 SDK 中的核定額度欄位。 |
 | [長照 SDK－申請來源](ValueSet-vs-tw-ltc-case-source.md) | 此 ValueSet 用於表示長照 SDK 中個案的申請來源。 |
 | [長照 SDK－異常紀錄－文字區塊類型](ValueSet-vs-tw-ltc-incident-texttype.md) | 此 ValueSet 用於表示長照 SDK 異常紀錄中的文字區塊類型。 |
@@ -235,6 +235,7 @@ These define new code systems used by systems conforming to this implementation 
 | [教育程度代碼](CodeSystem-EducationStatusCS-TWLTC.md) | 用於表述個案的教育程度，在長照機構住民教育程度 Extension 中使用。 |
 | [經濟狀況代碼](CodeSystem-EconomyStatusCS-TWLTC.md) | 用於表述個案的經濟狀況，在長照機構住民經濟狀況 Extension 中使用。 此代碼比照警政署偵查筆錄制式格式之選項進行設計。 |
 | [臺灣 2023 年中文版 ICD-10-PCS-F-復健及診斷性聽力學](CodeSystem-ICD-10-PCS-2023-TW-F-CS.md) | 臺灣 2023 年中文版 ICD-10-PCS 復健及診斷性聽力學(Physical Rehabilitation and Diagnostic Audiology)，章節數值為「F」。 包括：復健、診斷性聽力學。 代碼出版日期：2023-11-10；資料所屬單位：衛生福利部中央健康保險署。 因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。本 CodeSystem 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。 |
+| [臺灣長照服務項目代碼](CodeSystem-cs-tw-ltc-service-item.md) | 臺灣長照 2.0 給付之服務項目代碼（AA..GA 系列），涵蓋照顧組合、專業服務、交通接送、喘息服務等項目，適用於長照服務之申請、核定與使用紀錄。 |
 | [身體活動量測-暫用代碼](CodeSystem-TempCodeCS-Sport.md) | 身體活動量測暫時使用的代碼，目前無官方代碼。本 CodeSystem 繼承自身體活動量測 IG，後續將配合官方代碼更新。 |
 | [身體活動量測-步態週期](CodeSystem-GaitCycleCS-Sport.md) | 一個步伐的完整過程，從一隻腳接觸地面開始到同一隻腳再次接觸地面結束。這個過程可以分為兩個主要階段：支撐期（stance phase）和擺動期（swing phase）。本 CodeSystem 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。 |
 | [身體活動量測-重量訓練代碼系統](CodeSystem-SportTrainingCS-Sport.md) | 此代碼系統定義重量訓練各個方面的代碼，包括使用的重量、執行的組數以及每組的重複次數。本 CodeSystem 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。 |
@@ -248,7 +249,6 @@ These define new code systems used by systems conforming to this implementation 
 | [長照 SDK－個案狀態](CodeSystem-cs-tw-ltc-case-status.md) | 對應 r1.3：服務中、暫停服務、已結案。使用 FHIR EpisodeOfCare status 對應碼。 |
 | [長照 SDK－服務別（核定用）](CodeSystem-cs-tw-ltc-service-group.md) | 此 CodeSystem 定義長照 SDK 中的服務別（核定用）代碼。 |
 | [長照 SDK－服務活動代碼](CodeSystem-cs-tw-ltc-service-activity.md) | 此 CodeSystem 定義長照照管服務活動紀錄所使用之代碼。 |
-| [長照 SDK－服務項目代碼](CodeSystem-cs-tw-ltc-service-item.md) | 對應 r4.* 臺灣長照給付『照顧組合／輔具／無障礙修繕』服務項目代碼（AA..FA 系列），來源：清單.xlsx。 |
 | [長照 SDK－核定額度－金流欄位](CodeSystem-cs-tw-ltc-benefit-type.md) | 此 CodeSystem 定義長照 SDK 核定額度中的金流欄位代碼。 |
 | [長照 SDK－申請來源（暫行）](CodeSystem-cs-tw-ltc-case-source.md) | 申請來源常見分類（待以 Excel 實值更新）。 |
 | [長照 SDK－異常紀錄－文字區塊類型](CodeSystem-cs-tw-ltc-incident-texttype.md) | 區分各段文字（描述、過程、後續處理、改善建議）。 |

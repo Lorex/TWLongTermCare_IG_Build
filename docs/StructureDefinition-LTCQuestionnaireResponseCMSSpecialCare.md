@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaireResponseCMSSpecialCare | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:LTCQuestionnaireResponseCMSSpecialCare |
+| Active as of 2026-04-03 | *Computable Name*:LTCQuestionnaireResponseCMSSpecialCare |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 QuestionnaireResponse Resource，以呈現照顧管理評估量表－特殊複雜照護需要問卷的回覆資料。 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCQuestionnaireResp
   "name" : "LTCQuestionnaireResponseCMSSpecialCare",
   "title" : "照顧管理評估量表－特殊複雜照護需要問卷回覆",
   "status" : "active",
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

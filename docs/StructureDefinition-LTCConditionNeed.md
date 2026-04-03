@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionNeed | *Version*:1.0.0 |
-| Active as of 2026-04-02 | *Computable Name*:LTCConditionNeed |
+| Active as of 2026-04-03 | *Computable Name*:LTCConditionNeed |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現案主或其家庭之主要問題及照護需求。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCConditionNeed.csv
   "name" : "LTCConditionNeed",
   "title" : "長期照顧－主要問題及需求",
   "status" : "active",
-  "date" : "2026-04-02T13:32:15+08:00",
+  "date" : "2026-04-03T21:17:06+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
