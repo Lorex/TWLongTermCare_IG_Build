@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-caregiver-support | *Version*:1.0.0 |
-| Active as of 2026-04-03 | *Computable Name*:LTCQuestionnaireCaregiverSupport |
+| Active as of 2026-06-25 | *Computable Name*:LTCQuestionnaireCaregiverSupport |
 
 
 
@@ -26,7 +26,7 @@
   "version" : "1.0.0",
   "name" : "LTCQuestionnaireCaregiverSupport",
   "status" : "active",
-  "date" : "2026-04-03T21:17:06+08:00",
+  "date" : "2026-06-25T08:48:04+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

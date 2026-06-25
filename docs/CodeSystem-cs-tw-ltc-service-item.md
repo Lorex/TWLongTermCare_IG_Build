@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item | *Version*:1.0.0 |
-| Active as of 2026-04-03 | *Computable Name*:CS_TW_LTC_ServiceItem |
+| Active as of 2026-06-25 | *Computable Name*:CS_TW_LTC_ServiceItem |
 
  
 臺灣長照 2.0 給付之服務項目代碼（AA..GA 系列），涵蓋照顧組合、專業服務、交通接送、喘息服務等項目，適用於長照服務之申請、核定與使用紀錄。 
@@ -32,7 +32,7 @@
   "title" : "臺灣長照服務項目代碼",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-04-03T21:17:06+08:00",
+  "date" : "2026-06-25T08:48:04+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

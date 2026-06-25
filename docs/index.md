@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ImplementationGuide/tw.iii.ltc | *Version*:1.0.0 |
-| Active as of 2026-04-03 | *Computable Name*:TaiwanLongTermCareImplementationGuide |
+| Active as of 2026-06-25 | *Computable Name*:TaiwanLongTermCareImplementationGuide |
 
 ### 重要異動公告
 
@@ -134,7 +134,7 @@ TW LTC IG 中所有Profiles的FMM等級如下：
   "name" : "TaiwanLongTermCareImplementationGuide",
   "title" : "臺灣長期照顧實作指引(TW LTC IG)",
   "status" : "active",
-  "date" : "2026-04-03T21:17:06+08:00",
+  "date" : "2026-06-25T08:48:04+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -154,7 +154,7 @@ TW LTC IG 中所有Profiles的FMM等級如下：
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.1.0"
+    "version" : "7.2.0"
   },
   {
     "id" : "hl7ext",
@@ -164,7 +164,7 @@ TW LTC IG 中所有Profiles的FMM等級如下：
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.2.0"
+    "version" : "5.3.0"
   },
   {
     "id" : "tw_gov_mohw_twcore",

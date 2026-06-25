@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code | *Version*:1.0.0 |
-| Active as of 2026-04-03 | *Computable Name*:CS_TW_LTC_SectionCode |
+| Active as of 2026-06-25 | *Computable Name*:CS_TW_LTC_SectionCode |
 
  
 用於長照 Composition 資源中各章節（section）的區段識別代碼。 
@@ -32,7 +32,7 @@
   "title" : "長照 SDK－Composition 章節代碼",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-04-03T21:17:06+08:00",
+  "date" : "2026-06-25T08:48:04+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

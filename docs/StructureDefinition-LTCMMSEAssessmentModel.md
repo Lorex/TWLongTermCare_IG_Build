@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCMMSEAssessmentModel | *Version*:1.0.0 |
-| Active as of 2026-04-03 | *Computable Name*:LTCMMSEAssessmentModel |
+| Active as of 2026-06-25 | *Computable Name*:LTCMMSEAssessmentModel |
 | **Copyright/Legal**: Copyright © 2024 Taiwan Long-Term Care Implementation Guide | |
 
  
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCMMSEAssessmentMod
   "title" : "簡易智能狀態測驗評估",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-04-03T21:17:06+08:00",
+  "date" : "2026-06-25T08:48:04+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

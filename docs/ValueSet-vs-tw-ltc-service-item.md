@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-service-item | *Version*:1.0.0 |
-| Active as of 2026-04-03 | *Computable Name*:VS_TW_LTC_ServiceItem |
+| Active as of 2026-06-25 | *Computable Name*:VS_TW_LTC_ServiceItem |
 
  
 此 ValueSet 涵蓋臺灣長照 2.0 給付之所有服務項目代碼，適用於長照服務之申請、核定與使用紀錄，包含照顧組合、專業服務、交通接送、喘息服務等項目。 
@@ -54,7 +54,7 @@
   "title" : "臺灣長照服務項目",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-04-03T21:17:06+08:00",
+  "date" : "2026-06-25T08:48:04+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

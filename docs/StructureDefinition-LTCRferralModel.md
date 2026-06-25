@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCRferralModel | *Version*:1.0.0 |
-| Active as of 2026-04-03 | *Computable Name*:LTCRferralModel |
+| Active as of 2026-06-25 | *Computable Name*:LTCRferralModel |
 
  
 此邏輯模型以臺北市長期照顧管理中心個案服務初篩表/轉介單為基礎，用以描述轉介單的資料結構與欄位準備指引。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCRferralModel.csv)
   "name" : "LTCRferralModel",
   "title" : "長期照顧管理中心個案服務初篩表/轉介單邏輯模型",
   "status" : "active",
-  "date" : "2026-04-03T21:17:06+08:00",
+  "date" : "2026-06-25T08:48:04+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

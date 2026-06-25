@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-assessment-component | *Version*:1.0.0 |
-| Active as of 2026-04-03 | *Computable Name*:VS_TW_LTC_AssessmentComponent |
+| Active as of 2026-06-25 | *Computable Name*:VS_TW_LTC_AssessmentComponent |
 
  
 此 ValueSet 用於表示長照 SDK 評估核定摘要的欄位碼。 
@@ -51,7 +51,7 @@
   "title" : "長照 SDK－評估核定摘要欄位碼",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-04-03T21:17:06+08:00",
+  "date" : "2026-06-25T08:48:04+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-Error | *Version*:1.0.0 |
-| Active as of 2026-04-03 | *Computable Name*:ExtTWLTCExportError |
+| Active as of 2026-06-25 | *Computable Name*:ExtTWLTCExportError |
 
 此 Extension 用於表示長照 SDK 回傳的錯誤訊息，適用於 ClaimResponse 或 OperationOutcome.issue。
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-Ext-TW-LTC-Export-Er
   "name" : "ExtTWLTCExportError",
   "title" : "長照 SDK－錯誤訊息",
   "status" : "active",
-  "date" : "2026-04-03T21:17:06+08:00",
+  "date" : "2026-06-25T08:48:04+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
