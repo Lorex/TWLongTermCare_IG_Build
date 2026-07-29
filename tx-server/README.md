@@ -111,6 +111,30 @@ curl -s -D - -o /dev/null http://localhost:3000/tx/r4/metadata | grep -i keep-al
 # 應顯示 Keep-Alive: timeout=600
 ```
 
+## 已知問題：完整建置仍會停住
+
+**本地 server 尚未能跑完一次完整的 IG 建置。** 補上 keep-alive patch 並載入
+TW Core 之後，IG Publisher 仍會在某個 `CodeSystem/$validate-code` 請求上無限期
+等待。目前的觀察：
+
+- 請求（約 700 bytes）已完整送達，socket 統計顯示對端已 ACK、`rx_queue` 為 0，
+  代表 server 應用層已讀走該請求
+- server CPU 閒置，但始終不送出回應；IG Publisher 每次重試都卡在同一個請求
+- 已排除網路傳輸、payload 大小、`Expect: 100-continue`、keep-alive、TW Core 缺失
+
+亦即 FHIRsmith 在應用層 hang 住，而非環境問題。由於 FHIRsmith 的 log 是在**回應
+之後**才寫入，卡住的那筆請求不會出現在 log 中。要找出是哪個請求，開啟 trace：
+
+```bash
+TX_TRACE_REQUESTS=1 docker compose -f tx-server/docker-compose.yml up -d --force-recreate
+```
+
+trace 會在**收到請求當下**就記錄方法、URL 與 body 前 2 KB，並在回應完成時回報耗時；
+只有 `IN` 沒有對應 `OUT` 的那筆，就是 hang 住的請求。
+
+在此問題解決前，完整建置請照常使用 `./_genonce.sh`（走 tx.fhir.org）。本地 server
+仍可用於單獨查詢 terminology，例如手動 `$validate-code` 或 `$expand`。
+
 ## 疑難排解
 
 **server 起不來或記憶體不足** — SNOMED CT 與 LOINC 會全載入記憶體，`NODE_OPTIONS`

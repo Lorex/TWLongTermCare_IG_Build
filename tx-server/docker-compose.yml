@@ -19,6 +19,8 @@ services:
       # SNOMED CT 與 LOINC 全載入記憶體，需較大的 Node heap。
       # keepalive-patch 拉長 idle timeout，避免 IG Publisher 重用已關閉的連線（見該檔說明）。
       NODE_OPTIONS: --max-old-space-size=8192 --require /app/keepalive-patch.js
+      # 設為 1 可記錄每個進站請求，用於排查 server 疑似 hang 在哪一筆請求
+      TX_TRACE_REQUESTS: ${TX_TRACE_REQUESTS:-0}
     volumes:
       - ${LTC_TX_DATA_DIR:-${HOME}/fhirsmith/data}:/app/data
       - ./config.json:/app/data/config.json:ro
