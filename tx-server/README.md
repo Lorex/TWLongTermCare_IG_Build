@@ -111,29 +111,41 @@ curl -s -D - -o /dev/null http://localhost:3000/tx/r4/metadata | grep -i keep-al
 # 應顯示 Keep-Alive: timeout=600
 ```
 
-## 已知問題：完整建置仍會停住
+## cacheTimeout 必須涵蓋整場建置
 
-**本地 server 尚未能跑完一次完整的 IG 建置。** 補上 keep-alive patch 並載入
-TW Core 之後，IG Publisher 仍會在某個 `CodeSystem/$validate-code` 請求上無限期
-等待。目前的觀察：
+`config.json` 的 `cacheTimeout` 設為 **1440 分鐘（24 小時）**，這是刻意的，不要調小。
 
-- 請求（約 700 bytes）已完整送達，socket 統計顯示對端已 ACK、`rx_queue` 為 0，
-  代表 server 應用層已讀走該請求
-- server CPU 閒置，但始終不送出回應；IG Publisher 每次重試都卡在同一個請求
-- 已排除網路傳輸、payload 大小、`Expect: 100-continue`、keep-alive、TW Core 缺失
+IG Publisher 會先以 `$cache-control?mode=start` 建立一個 cache session，之後所有
+terminology 請求都帶著該 cache-id，server 藉此保存上下文。但完整建置可長達數小時，
+且期間經常有很長一段時間只做本地驗證運算而完全不呼叫 tx。只要這段間隔超過
+`cacheTimeout`，FHIRsmith 就會把 cache 清除，此後每個請求都會失敗：
 
-亦即 FHIRsmith 在應用層 hang 住，而非環境問題。由於 FHIRsmith 的 log 是在**回應
-之後**才寫入，卡住的那筆請求不會出現在 log 中。要找出是哪個請求，開啟 trace：
+```
+Error from http://localhost:3000/tx/r4: Error: The cache '<uuid>' is not known to
+this server. Caches are created with $cache-control?mode=start; this one was never
+created, or has expired or been released
+```
+
+實測以預設的 30 分鐘跑完整建置，結果是 **274 個 errors**（全部源自此錯誤導致
+ValueSet 無法展開）、耗時 5 小時 13 分；同一份原始碼在 CI（走 tx.fhir.org）則是
+0 errors。server 啟動時會把此設定寫進日誌，可用來確認：
+
+```bash
+docker compose -f tx-server/docker-compose.yml logs | grep 'cache pruning'
+# Resource cache pruning enabled for /tx/r4: timeout 1440 minutes
+```
+
+同一個 cache 失效路徑也會讓 server 對某些請求收下卻不回應，表現為 IG Publisher
+卡在 `Net.poll` / `readResponseHeaders` 而 server CPU 閒置。排查這類停滯可開啟
+trace，它會在**收到請求當下**就記錄方法、URL 與 body 前 2 KB，只有 `IN` 沒有對應
+`OUT` 的那筆即為停住的請求：
 
 ```bash
 TX_TRACE_REQUESTS=1 docker compose -f tx-server/docker-compose.yml up -d --force-recreate
 ```
 
-trace 會在**收到請求當下**就記錄方法、URL 與 body 前 2 KB，並在回應完成時回報耗時；
-只有 `IN` 沒有對應 `OUT` 的那筆，就是 hang 住的請求。
-
-在此問題解決前，完整建置請照常使用 `./_genonce.sh`（走 tx.fhir.org）。本地 server
-仍可用於單獨查詢 terminology，例如手動 `$validate-code` 或 `$expand`。
+> 上述修正尚未經完整建置驗證。以本地 server 跑第一次完整建置時，建議比對
+> CI 的 QA 結果，確認沒有殘留的 terminology 假錯誤。
 
 ## 疑難排解
 

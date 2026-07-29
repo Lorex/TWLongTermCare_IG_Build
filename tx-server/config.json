@@ -11,7 +11,8 @@
     "tx": {
       "enabled": true,
       "librarySource": "/app/data/library.yml",
-      "cacheTimeout": 30,
+      "_comment_cacheTimeout": "IG Publisher 以 $cache-control?mode=start 建立 cache session，後續請求皆帶該 cache-id。完整建置可長達數小時，且期間常有長時間只做本地驗證而不呼叫 tx；若此值短於該間隔，server 會把 cache 清掉，之後所有請求回報 'cache is not known to this server'。單位為分鐘，設為 24 小時以涵蓋整場建置。",
+      "cacheTimeout": 1440,
       "internalLimit": 10000,
       "externalLimit": 5000,
       "expansionCacheSize": 1000,
