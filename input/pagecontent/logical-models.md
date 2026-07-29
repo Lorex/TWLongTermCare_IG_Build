@@ -97,6 +97,56 @@
 
 **使用場景**: 適用於失智症照護監測中的異常事件警報管理，作為異常事件資料準備的參考指南。
 
+#### 6. 支付審查－服務記錄申報邏輯模型 (LTCFeeApplyModel)
+
+<a href="StructureDefinition-LTCFeeApplyModel.html">長照支付審查－服務記錄申報邏輯模型</a>
+
+**用途**: 描述服務提供單位向衛生福利部支付審核系統（照管平台）執行「服務記錄申報（FeeApply）」時所傳送之完整資料結構，逐欄保留規格書之中文欄位名稱、英文欄位名稱、型態、長度與必填規則。
+
+**主要組成部分**:
+- **申報批次資料 (apply_info)**: 包含支審年月、交易序號、服務記錄筆數、服務紀錄金額、申請個案數
+- **個案服務紀錄 (case_svc_records)**: 包含識別碼、個案身分證字號、服務日期與起訖時段、照顧組合代碼、服務類別、單價、數量、照顧服務員身分證字號
+- **AA00 個管紀錄組**: 包含服務項目、服務對象、服務內容、服務重點、追蹤服務適應與介入情形、服務目標達成情形、整體計畫適切性
+- **C 碼專業服務組**: 包含提供專業服務單位、專業服務復能目標及其達成情形、指導對象、服務內容、指導建議摘要
+- **交通接送組 (BD03／DA01)**: 包含出發地、目的地及其經緯度、里程數、車號、駕駛員、BD03 服務使用類型
+- **申報旗標組**: 包含臨終日照顧、訪視／服務未遇、陪同施打 COVID-19 疫苗、是否申報 AA03／AA09、AA10 申報狀態
+
+**Mapping 目標**: <a href="StructureDefinition-LTCClaimFeeApply.html">LTCClaimFeeApply</a>
+
+**使用場景**: 適用於服務提供單位或系統商準備支付審查申報電文時，作為欄位齊備性檢查與 FHIR 對應的參考指南。
+
+#### 7. 支付審查－分案審核明細邏輯模型 (LTCFeeAuditDetailModel)
+
+<a href="StructureDefinition-LTCFeeAuditDetailModel.html">長照支付審查－分案審核明細邏輯模型</a>
+
+**用途**: 描述「(查詢B)分案審核明細查詢」之傳送資料與回覆明細的完整資料結構。
+
+**主要組成部分**:
+- **查詢輸入資訊 (app_result_query_info)**: 包含支審年月、交易序號、查詢類別、縣市代碼、核銷案號
+- **分案審核明細表頭**: 包含核銷案號、服務記錄筆數、個案數、申請核銷金額、承辦人員與審核意見、總表版次與版次時間、核定個案數與核定服務記錄數、核定金額、政策鼓勵金額、暫付申請狀態與分案暫付金額、核增／核減金額與原因
+- **各式總表與清冊下載路徑**: 包含暫付總表、總表、清冊、清冊 EXCEL、A 碼清冊、A 碼清冊 EXCEL、申請記錄不通過清冊與其 EXCEL 版
+- **審核通過服務記錄 (approve_records)**、**錯誤服務記錄 (err_records)**、**A 碼加成資料區 (a_svc_records)**
+
+**Mapping 目標**: <a href="StructureDefinition-LTCClaimResponseFeeAudit.html">LTCClaimResponseFeeAudit</a>
+
+**使用場景**: 適用於服務提供單位解讀支付審核系統回覆之分案審核結果時，作為欄位對照的參考指南。
+
+#### 8. 支付審查－分案審核狀態與交易處理結果邏輯模型 (LTCFeeAuditStatusModel)
+
+<a href="StructureDefinition-LTCFeeAuditStatusModel.html">長照支付審查－分案審核狀態與交易處理結果邏輯模型</a>
+
+**用途**: 描述「(查詢A)服務單位各分案審核狀態查詢」之回覆明細，以及服務紀錄刪除、申報確認通知、撤回服務記錄、取消交易單處理結果回報等異動類 API 之傳送資料。
+
+**主要組成部分**:
+- **查詢輸入資訊**: 包含支審年月、交易序號、查詢類別
+- **縣市案件資訊 (city_info)**: 包含縣市代碼、核銷案號、核銷狀況、總表版次、簽證編號
+- **API 執行結果資料 (webapi_process_info)**: 包含 API Function、來源系統別、交易序號、API 執行狀態、批次處理結果與筆數、分案異常資料、服務紀錄刪除成功／失敗資料
+- **異動類作業傳送資料**: 包含服務紀錄刪除 (ObjDel)、申報確認通知 (appCompletionNotice)、撤回服務記錄 (appCancel)、取消交易單處理結果回報 (CancelResultResponse)
+
+**Mapping 目標**: <a href="StructureDefinition-LTCTaskFeeAudit.html">LTCTaskFeeAudit</a>
+
+**使用場景**: 適用於追蹤申報交易單處理狀態與各分案核銷進度時，作為欄位對照的參考指南。
+
 #### 邏輯模型與 FHIR Profile 的關係
 
 邏輯模型提供高層次的資料結構視圖，而 FHIR Profile 則定義具體的 FHIR 資源結構。兩者相輔相成：

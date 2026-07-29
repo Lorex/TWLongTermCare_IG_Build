@@ -15,3 +15,10 @@ Alias: $TWCoreBundleDocument = https://twcore.mohw.gov.tw/ig/twcore/StructureDef
 Alias: $TWCoreComposition = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Composition-twcore
 // LTC IG Profiles
 Alias: $LTCQuestionnaire = http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire
+
+// 支付審查模組共用（HL7 標準 CodeSystem）
+Alias: $ClaimType = http://terminology.hl7.org/CodeSystem/claim-type
+Alias: $ProcessPriority = http://terminology.hl7.org/CodeSystem/processpriority
+Alias: $OrganizationType = http://terminology.hl7.org/CodeSystem/organization-type
+Alias: $V3RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
+Alias: $UCUM = http://unitsofmeasure.org
