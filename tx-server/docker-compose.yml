@@ -1,0 +1,33 @@
+# 本地 FHIR terminology server（FHIRsmith），供 IG 建置時驗證 terminology 使用。
+#
+# 設定檔（config.json / library.yml）由本目錄掛入並納入版控；
+# 下載的 terminology 資料庫約 1.6 GB，存放於 LTC_TX_DATA_DIR，不進版控。
+#
+#   啟動：docker compose -f tx-server/docker-compose.yml up -d
+#   停止：docker compose -f tx-server/docker-compose.yml down
+#   日誌：docker compose -f tx-server/docker-compose.yml logs -f
+
+services:
+  tx:
+    image: ghcr.io/healthintersections/fhirsmith:latest
+    container_name: fhirsmith-tx
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      FHIRSMITH_DATA_DIR: /app/data
+      # SNOMED CT 與 LOINC 全載入記憶體，需較大的 Node heap。
+      # keepalive-patch 拉長 idle timeout，避免 IG Publisher 重用已關閉的連線（見該檔說明）。
+      NODE_OPTIONS: --max-old-space-size=8192 --require /app/keepalive-patch.js
+    volumes:
+      - ${LTC_TX_DATA_DIR:-${HOME}/fhirsmith/data}:/app/data
+      - ./config.json:/app/data/config.json:ro
+      - ./library.yml:/app/data/library.yml:ro
+      - ./keepalive-patch.js:/app/keepalive-patch.js:ro
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/tx/r4/metadata"]
+      # SNOMED CT 載入需數分鐘，start_period 給足緩衝
+      start_period: 10m
+      interval: 30s
+      timeout: 10s
+      retries: 3

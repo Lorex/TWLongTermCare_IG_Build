@@ -1,0 +1,37 @@
+# FHIRsmith terminology library — 供 TW LTC IG 本地建置使用
+#
+# base.url 為 tx.fhir.org 的預建資料庫來源；sources 中未在本機快取的檔案
+# 會在伺服器首次啟動時自動下載到 FHIRSMITH_DATA_DIR。
+#
+# 「!」= 標記為該 code system 的預設版本（未指定版本時使用）。
+#
+# 本清單只涵蓋 TW LTC IG 實際引用的 terminology：
+#   SNOMED CT、LOINC、UCUM、HL7 標準 code system、本土 CS（由 IG 自帶）。
+# 刻意排除 RxNorm / NDC / UNII / CPT / OMOP / 各國 SNOMED edition，
+# 以節省約 3 GB 下載與記憶體。日後有需要再加回。
+
+base:
+  url: https://storage.googleapis.com/tx-fhir-org
+
+sources:
+  # 內建 code system（無需下載）
+  - internal:lang
+  - internal:country
+  - internal:currency
+  - internal:mimetypes
+  - internal:urls
+
+  # 度量衡單位
+  - ucum:tx/data/ucum-essence.xml
+
+  # 臨床 terminology（自 base.url 下載，各約 0.8 GB）
+  - loinc!:Loinc_2.82.db
+  - snomed!:sct_intl_20250201.cache
+
+  # HL7 標準 code system / ValueSet（自 packages.fhir.org 取得）
+  - npm:hl7.terminology
+  - npm:fhir.tx.support.r4
+
+  # 本 IG 的依賴。缺少時 server 會對 TW Core 的 ValueSet 回 404，
+  # 而 IG Publisher 每遇一次 404 會空轉數分鐘重試，建置時間暴增。
+  - npm:tw.gov.mohw.twcore

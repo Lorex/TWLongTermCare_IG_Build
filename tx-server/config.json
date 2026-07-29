@@ -1,0 +1,38 @@
+{
+  "hostName": "local-tx",
+  "server": {
+    "port": 3000,
+    "cors": {
+      "origin": true,
+      "credentials": true
+    }
+  },
+  "modules": {
+    "tx": {
+      "enabled": true,
+      "librarySource": "/app/data/library.yml",
+      "cacheTimeout": 30,
+      "internalLimit": 10000,
+      "externalLimit": 5000,
+      "expansionCacheSize": 1000,
+      "expansionCacheMemoryThreshold": 0,
+      "endpoints": [
+        {
+          "path": "/tx/r4",
+          "fhirVersion": "4.0",
+          "context": null
+        }
+      ]
+    },
+    "shl": { "enabled": false },
+    "vcl": { "enabled": false },
+    "xig": { "enabled": false },
+    "packages": { "enabled": false },
+    "registry": { "enabled": false },
+    "publisher": { "enabled": false },
+    "npmprojector": { "enabled": false },
+    "token": { "enabled": false },
+    "folder": { "enabled": false },
+    "ext-tracker": { "enabled": false }
+  }
+}
