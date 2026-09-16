@@ -2,6 +2,9 @@ CodeSystem: CS_TW_LTC_FeeAuditSvcItem
 Id: cs-tw-ltc-feeaudit-svc-item
 Title: "支付審查－服務項目"
 Description: "支付審核系統（照管平台）個案服務紀錄之「服務項目」（svc_item）代碼，申報 AA00 必填寫，可複選（原始電文以「|」分隔多個選項）。"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.13080140402475534747811958664981694751"
+
 * ^url = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-svc-item"
 * ^version = "0.1.0"
 * ^status = #active

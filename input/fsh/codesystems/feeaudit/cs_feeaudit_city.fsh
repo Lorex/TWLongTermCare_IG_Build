@@ -2,6 +2,9 @@ CodeSystem: CS_TW_LTC_FeeAuditCity
 Id: cs-tw-ltc-feeaudit-city
 Title: "支付審查－縣市代碼"
 Description: "衛生福利部支付審核系統（照管平台）API 規格說明書 v2.2.1 之 city_cd（縣市名稱）代碼表，共 22 個直轄市、縣（市），用於標示分案、申請單與服務紀錄所屬之縣市。本代碼系統為支付審核系統專用代碼，與 TW Core IG 之郵遞區號代碼系統（TWPostalCode3／TWPostalCode5／TWPostalCode6，https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/postal-code3-tw 等）用途不同，郵遞區號用於表述地址之投遞區域，本代碼系統則用於表述支付審核業務之行政轄區歸屬，兩者不可互相替代。"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.324481967880524752564801350693465141904"
+
 * ^url = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-city"
 * ^version = "0.1.0"
 * ^status = #active

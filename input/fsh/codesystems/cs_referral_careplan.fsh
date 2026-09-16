@@ -4,6 +4,9 @@ Title: "轉介單申請服務種類代碼"
 Description: "用於表述個案欲申請的服務項目。"
 
 //* ^url = "http://ltc-ig.fhir.tw/CodeSystem/ReferralCarePlanCS-TWLTC"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.331038000319735660568566000808774671113"
+
 * ^status = #active
 * ^caseSensitive = true
 * ^experimental = false

@@ -4,6 +4,9 @@ Title: "個案身分別值集"
 Description: "個案身分別的值集"
 
 //* ^url = "http://ltc-ig.fhir.tw/ValueSet/PatientIdentityVS-TWLTC"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.305024746164004866710557731153486000865"
+
 * ^version = "2024-09-02"
 * ^status = #active
 * ^experimental = false

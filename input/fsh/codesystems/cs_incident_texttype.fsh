@@ -2,6 +2,9 @@ CodeSystem: CS_TW_LTC_Incident_TextType
 Id: cs-tw-ltc-incident-texttype
 Title: "長照 SDK－異常紀錄－文字區塊類型"
 Description: "區分各段文字（描述、過程、後續處理、改善建議）。"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.33099249899855646668458219133359883971"
+
 * ^url = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype"
 * ^version = "0.1.0"
 * ^status = #active

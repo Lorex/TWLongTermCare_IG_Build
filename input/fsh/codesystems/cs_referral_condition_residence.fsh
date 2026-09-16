@@ -4,6 +4,9 @@ Title: "轉介單居住狀況代碼"
 Description: "用於表述個案的居住狀況"
 
 //* ^url = "http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionResidenceCS-TWLTC"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.41808680126746010032435683244941033829"
+
 * ^status = #active
 * ^caseSensitive = true
 * ^experimental = false

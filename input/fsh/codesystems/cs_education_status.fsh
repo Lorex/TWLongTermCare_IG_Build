@@ -4,6 +4,9 @@ Title: "教育程度代碼"
 Description: "用於表述個案的教育程度，在長照機構住民教育程度 Extension 中使用。"
 
 //* ^url = "http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.181683246953841207407143680486179519716"
+
 * ^status = #active
 * ^caseSensitive = true
 * ^experimental = false

@@ -3,6 +3,9 @@ Id: TempCodeVS-Sport
 Title: "身體活動量測-暫用代碼值集"
 Description: "身體活動量測暫時使用的代碼，目前無官方代碼。本 ValueSet 繼承自身體活動量測 IG，後續將配合官方代碼更新。"
 
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.274626690570919936419037161228615609864"
+
 * ^version = "2024-06-04"
 * ^status = #active
 * ^experimental = false

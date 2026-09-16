@@ -4,6 +4,9 @@ Title: "個案身心障礙手冊持有狀態代碼"
 Description: "用於表述個案的身心障礙手冊持有狀態代碼。"
 
 //* ^url = "http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityCS-TWLTC"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.225229437710867438450785443264078907768"
+
 * ^status = #active
 * ^caseSensitive = true
 * ^experimental = false

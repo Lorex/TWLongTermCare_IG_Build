@@ -2,6 +2,9 @@ CodeSystem: CS_TW_LTC_FeeAuditDocType
 Id: cs-tw-ltc-feeaudit-doc-type
 Title: "支付審查－清冊文件類別"
 Description: "此 CodeSystem 定義《衛生福利部 支付審核系統 API 規格說明書（照管平台）》「(查詢B)分案審核明細查詢」回覆明細中各項下載路徑所對應的清冊與總表文件類別代碼。"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.317166629504320931196084751276735561505"
+
 * ^url = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-doc-type"
 * ^version = "0.1.0"
 * ^status = #active

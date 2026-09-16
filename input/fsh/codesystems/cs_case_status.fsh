@@ -2,6 +2,9 @@ CodeSystem: CS_TW_LTC_CaseStatus
 Id: cs-tw-ltc-case-status
 Title: "長照 SDK－個案狀態"
 Description: "對應 r1.3：服務中、暫停服務、已結案。使用 FHIR EpisodeOfCare status 對應碼。"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.329600686398508123680338960293654731351"
+
 * ^url = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-status"
 * ^version = "0.1.0"
 * ^status = #active

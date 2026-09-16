@@ -2,6 +2,9 @@ CodeSystem: CS_TW_LTC_AssessmentType
 Id: cs-tw-ltc-assessment-type
 Title: "長照 SDK－評估類型"
 Description: "對應 r2.8 / r3.21：出院銜接、初評、複評、計畫異動、舊系統無評估轉入、身障居服匯入、AA計劃異動。"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.66954549705417428801000181231177345055"
+
 * ^url = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-type"
 * ^version = "0.1.0"
 * ^status = #active

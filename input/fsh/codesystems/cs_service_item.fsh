@@ -2,6 +2,9 @@ CodeSystem: CS_TW_LTC_ServiceItem
 Id: cs-tw-ltc-service-item
 Title: "臺灣長照服務項目代碼"
 Description: "臺灣長照 2.0 給付之服務項目代碼（AA..GA 系列），涵蓋照顧組合、專業服務、交通接送、喘息服務等項目，適用於長照服務之申請、核定與使用紀錄。"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.184348551961769739743694697916095980152"
+
 * ^url = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item"
 * ^version = "0.1.0"
 * ^status = #active

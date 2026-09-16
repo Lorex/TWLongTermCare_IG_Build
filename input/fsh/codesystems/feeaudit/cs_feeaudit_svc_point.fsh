@@ -2,6 +2,9 @@ CodeSystem: CS_TW_LTC_FeeAuditSvcPoint
 Id: cs-tw-ltc-feeaudit-svc-point
 Title: "支付審查－服務重點"
 Description: "支付審核系統（照管平台）個案服務紀錄之「服務重點」（svc_point）代碼，申報 AA00 填寫，可複選（原始電文以「|」分隔多個選項）。"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.272718911806665048437219954271657783529"
+
 * ^url = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-svc-point"
 * ^version = "0.1.0"
 * ^status = #active

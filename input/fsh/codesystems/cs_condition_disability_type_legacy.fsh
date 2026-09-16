@@ -4,6 +4,9 @@ Title: "個案身心障礙類型代碼（舊制）"
 Description: "用於表述個案的身心障礙類型代碼（舊制）。"
 
 //* ^url = "http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityLegacyTypeCS-TWLTC"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.300571435625343201286057205693650208225"
+
 * ^status = #active
 * ^caseSensitive = true
 * ^experimental = false

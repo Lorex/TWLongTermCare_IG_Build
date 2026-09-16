@@ -2,6 +2,9 @@ CodeSystem: CS_TW_LTC_ServiceActivity
 Id: cs-tw-ltc-service-activity
 Title: "長照 SDK－服務活動代碼"
 Description: "此 CodeSystem 定義長照照管服務活動紀錄所使用之代碼。"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.21072938616033997982953682109239736427"
+
 * ^url = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-activity"
 * ^version = "0.1.0"
 * ^status = #active

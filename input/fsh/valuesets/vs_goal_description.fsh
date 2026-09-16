@@ -4,6 +4,9 @@ Title: "照顧目標描述值集"
 Description: "照顧目標的描述值集，用以表述長期照顧情境中涉及之照顧目標描述內容。本值集列舉臺灣長期照顧情境常用之 SNOMED CT 照顧目標代碼，綁定強度為 extensible，實作者可依需求使用其他 SNOMED CT 或 LOINC 代碼。"
 
 //* ^url = "http://ltc-ig.fhir.tw/ValueSet/GoalDescriptionVS-TWLTC"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.178125711072361151936479110609637557300"
+
 * ^version = "2024-08-25"
 * ^status = #active
 * ^experimental = false

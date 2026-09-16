@@ -2,6 +2,9 @@ CodeSystem: CS_TW_LTC_FeeAuditAA10Status
 Id: cs-tw-ltc-feeaudit-aa10-status
 Title: "支付審查－AA10 申報狀態"
 Description: "衛生福利部支付審核系統 API（照管平台）服務記錄申報之「AA10 申報狀態」（aa10_status）代碼，用以表示夜間緊急服務（AA10）之申報與確認情形，預設為 0（未申報）。"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.1861194063152264927680515498655853192"
+
 * ^url = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-aa10-status"
 * ^version = "0.1.0"
 * ^status = #active

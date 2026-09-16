@@ -146,6 +146,7 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Claim Reso
 * supportingInfo ^short = "隨照顧組合代碼（gov_item_cd）而特化之補充資訊，依規格書「表1: 支付碼必填欄位一覽表」條件填寫。"
 * supportingInfo.category from VS_TW_LTC_FeeAuditSupportingInfo (extensible)
 * supportingInfo.category ^short = "補充資訊類別，取值自支付審查服務紀錄補充資訊類別代碼系統。"
+* supportingInfo.code ^short = "支付碼特化欄位的代碼值；依 supportingInfo.category 對應至各 Slice 的值集"
 * supportingInfo contains
     svcItem 0..* MS and
     svcItemOther 0..1 MS and

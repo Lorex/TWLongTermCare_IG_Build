@@ -19,6 +19,22 @@ sushi .
 ./_genonce.sh
 ```
 
+## 術語 OID
+
+本 IG 的 CodeSystem 與 ValueSet 在 FSH 原始檔中明確指定 OID，以供 CDA 等使用 OID 的系統識別。
+OID 採用 [UUID 對應的 `2.25` 格式](https://profiles.ihe.net/ITI/TF/Volume2/ch-B.html)，以資源的 canonical URL 產生 UUIDv5，再轉為十進位整數。相同 canonical 的不同版本共用 OID。
+
+新增術語資源時，可用以下方式產生 OID，並將結果寫入 `^identifier[0].value`，其 `^identifier[0].system` 設為 `urn:ietf:rfc:3986`：
+
+```python
+import uuid
+
+canonical = "http://ltc-ig.fhir.tw/CodeSystem/YourCodeSystem"
+print(f"urn:oid:2.25.{uuid.uuid5(uuid.NAMESPACE_URL, canonical).int}")
+```
+
+已指定的 OID 應保留，勿因重新建置或調整版本而重新分配。
+
 ## 專案資訊
 
 | 項目 | 說明 |

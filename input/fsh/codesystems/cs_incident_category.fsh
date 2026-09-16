@@ -2,6 +2,9 @@ CodeSystem: CS_TW_LTC_Incident_Category
 Id: cs-tw-ltc-incident-category
 Title: "長照 SDK－異常紀錄－異常類別"
 Description: "表單『異常類別』多選。"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.33230317116842733930145531322860065530"
+
 * ^url = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-category"
 * ^version = "0.1.0"
 * ^status = #active

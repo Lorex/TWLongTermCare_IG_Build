@@ -2,6 +2,9 @@ CodeSystem: CS_TW_LTC_FeeAuditErrorCode
 Id: cs-tw-ltc-feeaudit-error-code
 Title: "支付審查－錯誤代碼"
 Description: "此 CodeSystem 定義《衛生福利部 支付審核系統 API 規格說明書（照管平台）》代碼說明章節中「err_code－錯誤代碼與訊息」之代碼，用於表示服務紀錄申報、審查與回覆過程中所產生之各項錯誤原因，涵蓋欄位必填與長度檢核（E1xxx）、格式檢核（E2xxx）、資料查詢與寫入異常（E4xxx）、審核規則檢核（E5xxx）及各支付碼專屬檢核（EBA、EBC、ECB、EGA、EOT、ESC 系列）。"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.154081174417565057576308580299251643194"
+
 * ^url = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-error-code"
 * ^version = "0.1.0"
 * ^status = #active

@@ -3,6 +3,9 @@ Id: ICD-10-PCS-2023-TW-F-CS
 Title: "臺灣 2023 年中文版 ICD-10-PCS-F-復健及診斷性聽力學"
 Description: "臺灣 2023 年中文版 ICD-10-PCS 復健及診斷性聽力學(Physical Rehabilitation and Diagnostic Audiology)，章節數值為「F」。 包括：復健、診斷性聽力學。 代碼出版日期：2023-11-10；資料所屬單位：衛生福利部中央健康保險署。 因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。本 CodeSystem 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。"
 
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.173002229864480078980852196617798676431"
+
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-06-04"

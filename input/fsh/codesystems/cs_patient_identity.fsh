@@ -3,6 +3,9 @@ Id: PatientIdentityCS-TWLTC
 Title: "個案身分別代碼"
 Description: "個案身分別代碼"
 
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.183908346030576353341425982526024496690"
+
 * ^status = #active
 * ^caseSensitive = true
 * ^experimental = false

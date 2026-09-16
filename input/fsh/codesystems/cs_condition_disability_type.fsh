@@ -3,6 +3,9 @@ Id: ConditionDisabilityTypeCS-TWLTC
 Title: "個案身心障礙類型代碼（新制）"
 Description: "用於表述個案的身心障礙類型代碼（新制）。"
 
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.131122855440392965155245925877657820192"
+
 * ^status = #active
 * ^caseSensitive = true
 * ^experimental = false

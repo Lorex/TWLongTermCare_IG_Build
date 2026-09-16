@@ -2,6 +2,9 @@ CodeSystem: CS_TW_LTC_FeeAuditRtnCode
 Id: cs-tw-ltc-feeaudit-rtncode
 Title: "支付審查－API 回覆結果代碼"
 Description: "此 CodeSystem 定義《衛生福利部 支付審核系統 API 規格說明書（照管平台）》Response 格式中「rtncode－回覆結果代碼」之代碼，用於表示支付審核系統對服務提供單位所送 API 請求之處理結果，包含成功回傳、參數檢核錯誤、權限與流量限制及系統異常等情形。"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.323019679525679610215400809518030217916"
+
 * ^url = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-rtncode"
 * ^version = "0.1.0"
 * ^status = #active

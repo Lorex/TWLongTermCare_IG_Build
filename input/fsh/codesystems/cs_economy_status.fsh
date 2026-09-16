@@ -6,6 +6,9 @@ Description: "用於表述個案的經濟狀況，在長照機構住民經濟狀
 
 
 //* ^url = "http://ltc-ig.fhir.tw/CodeSystem/EconomyStatusCS-TWLTC"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.141362374403667798643111529984595511128"
+
 * ^status = #active
 * ^caseSensitive = true
 * ^experimental = false

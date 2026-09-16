@@ -2,6 +2,9 @@ CodeSystem: CS_TW_LTC_CMSLevel
 Id: cs-tw-ltc-cmslevel
 Title: "長照 SDK－CMS 等級"
 Description: "對應 r2.5：1, 1a, 1b, 2..8。"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.75074889836106109751005844669027341181"
+
 * ^url = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel"
 * ^version = "0.1.0"
 * ^status = #active

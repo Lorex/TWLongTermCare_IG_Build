@@ -2,6 +2,9 @@ CodeSystem: CS_TW_LTC_FeeAuditSupportingInfo
 Id: cs-tw-ltc-feeaudit-supporting-info
 Title: "支付審查－服務紀錄補充資訊類別"
 Description: "《衛生福利部 支付審核系統 API 規格說明書（照管平台）v2.2.1》「服務記錄申報（FeeApply）」中，隨照顧組合代碼（gov_item_cd）而特化之欄位分類碼，作為 Claim.supportingInfo.category 之取值，用以承載 AA00 個管服務、C 碼專業服務、交通接送（BD03、DA01）及各項申報旗標等補充資訊。"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.241334038473382339597409760065494505023"
+
 * ^url = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-supporting-info"
 * ^version = "0.1.0"
 * ^status = #active

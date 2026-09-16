@@ -2,6 +2,9 @@ CodeSystem: CS_TW_LTC_FeeAuditCaseStatus
 Id: cs-tw-ltc-feeaudit-case-status
 Title: "支付審查－核銷狀況"
 Description: "此 CodeSystem 定義《衛生福利部 支付審核系統 API 規格說明書（照管平台）》代碼說明章節中「status－核銷狀況」之代碼，用於表示分案在支付審核流程中的核銷處理狀況。"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.294566398219796456696657442940868771796"
+
 * ^url = "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-case-status"
 * ^version = "0.1.0"
 * ^status = #active
