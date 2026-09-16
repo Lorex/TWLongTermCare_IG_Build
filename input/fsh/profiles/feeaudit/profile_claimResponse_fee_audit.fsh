@@ -1,164 +1,180 @@
 // 長照支付審查－分案審核明細
 // 資料來源：衛生福利部 支付審核系統 API 規格說明書（照管平台）v2.2.1
-//           五、(查詢B)分案審核明細查詢 (……/appResultQuery)，回覆明細 Response.result
 
 Profile: LTCClaimResponseFeeAudit
 Parent: ClaimResponse
 Id: LTCClaimResponseFeeAudit
 Title: "長照支付審查－分案審核明細"
-Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 ClaimResponse Resource，以呈現支付審核系統「(查詢B)分案審核明細查詢」（……/appResultQuery，query_type = B）所回覆之單一核銷案號分案審核明細。一份 ClaimResponse 代表一個核銷案號（case_no）之審核結果，內容包含核銷案號、總表版次與版次時間、承辦人員與承辦審核意見、申請核銷金額、核定金額、政策鼓勵金額、核增／核減金額與原因、暫付申請狀態與分案暫付金額、各式總表與清冊下載路徑、審核通過服務記錄（approve_records）、A 碼加成資料區（a_svc_records）以及錯誤服務記錄（err_records）。"
+Description: "此 ClaimResponse 以衛生福利部支付審核系統的分案審核明細查詢結果為基礎，用以表述一個核銷案號的審核結果。"
 * ^url = "http://ltc-ig.fhir.tw/StructureDefinition/LTCClaimResponseFeeAudit"
 * ^version = "0.1.0"
 * ^status = #draft
+* ^purpose = "每份 ClaimResponse 填寫一個核銷案號的審核結果，包含總表版次、審核意見、各項金額、通過與未通過的服務紀錄，以及 A 碼加成資料。相關統計資料與清冊下載網址可一併填寫。"
 
 // ---------------------------------------------------------------
 // 一、基本欄位
 // ---------------------------------------------------------------
 * status 1..1 MS
 * status = #active
-* status ^short = "資源狀態，分案審核明細固定為 active（有效）"
+* status ^short = "審核明細的狀態。[應填入 active]"
 
 * type 1..1 MS
 * type = $ClaimType#professional
-* type ^short = "核銷申報類別，長照支付審查固定為 professional（專業服務申報）"
+* type ^short = "核銷申報的類別。[應填入 professional]"
 
 * use 1..1 MS
 * use = #claim
-* use ^short = "申報用途，分案審核明細固定為 claim（費用申報核銷）"
+* use ^short = "申報單的用途。[應填入 claim]"
 
 * patient 1..1 MS
 * patient only Reference(LTCPatient)
-* patient ^short = "本分案所對應之服務對象（個案）；FHIR R4 基底 ClaimResponse.patient 為必填 1..1，故本 Profile 無法放寬為 0..1。若一個核銷案號涵蓋多位個案（cases 個案數 > 1），請以代表個案或分案受理之個案填入，實際個案數另以審核通過服務記錄逐筆表達"
+* patient ^short = "本分案的個案。[應填入對應 Patient 的 Reference]"
+* patient ^definition = "應參照符合 LTCPatient 的個案資料。如本核銷案號包含多位個案，此處填入代表個案或分案受理的個案；各筆服務紀錄的個案資料應依該筆紀錄填寫。"
 
 * created 1..1 MS
-* created ^short = "版次時間（ver_dt），總表版次之產生時間，原電文格式為 yyyyMMddhhmmss，於本 Profile 以 dateTime 表達"
+* created ^short = "總表版次的產生時間。[應填入日期時間]"
+* created ^definition = "應填入此版總表產生的日期與時間，例如 2026-09-17T09:30:00+08:00。"
 
 * insurer 1..1 MS
 * insurer only Reference(LTCOrganization)
-* insurer ^short = "支付審查之保險人／給付機關，即受理本分案之縣市主管機關（city_cd 縣市代碼）"
+* insurer ^short = "受理本分案的縣市主管機關。[應填入對應 Organization 的 Reference]"
+* insurer ^definition = "應參照符合 LTCOrganization 的主管機關資料。"
 
 * outcome 1..1 MS
 * outcome ^short = "審核處理結果。[應填入以下字串之一：queued | complete | error | partial]"
 
 * disposition 0..1 MS
-* disposition ^short = "承辦審核意見（audit_reason），長度上限 4000"
+* disposition ^short = "承辦人員的審核意見。[應填入最長 4000 個字元的字串]"
 
 * requestor 0..1 MS
-* requestor ^short = "提出本次申報之服務提供方（FHIR R4 定義：The provider which is responsible for the claim）。承辦人員（audit_man）為審查機關之審核承辦人，語意方向相反，不得填於本元素，應以 extension[auditSummary].auditMan 表達。"
+* requestor ^short = "提出申報的服務提供單位或人員。[應填入對應 Organization、Practitioner 或 PractitionerRole 的 Reference]"
+* requestor ^definition = "應填入負責提出申報的服務提供方。審核承辦人員的姓名或代號應填在審核摘要的承辦人員欄位。"
 
 // ---------------------------------------------------------------
-// 二、業務識別碼（以 identifier slicing 承載，不使用 Extension）
+// 二、分案資料識別碼
 // ---------------------------------------------------------------
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier 1..* MS
-* identifier ^short = "分案審核明細之業務識別碼，包含核銷案號、總表版次、簽證編號與支審年月"
+* identifier ^short = "分案資料的識別碼，包含核銷案號、總表版次、簽證編號與支審年月。"
 * identifier contains
     caseNo 1..1 MS and
     docVer 0..1 MS and
     accNum 0..1 MS and
     yyyymm 0..1 MS
 
-* identifier[caseNo] ^short = "核銷案號（case_no），長度上限 30"
+* identifier[caseNo] ^short = "核銷案號。[應填入 Identifier]"
 * identifier[caseNo].system 1..1 MS
 * identifier[caseNo].system = "http://ltc-ig.fhir.tw/identifier/feeaudit/case-no"
 * identifier[caseNo].value 1..1 MS
-* identifier[caseNo].value ^short = "核銷案號值"
+* identifier[caseNo].value ^short = "核銷案號。[應填入最長 30 個字元的字串]"
 
-* identifier[docVer] ^short = "總表版次（doc_ver），長度上限 15"
+* identifier[docVer] ^short = "總表版次。[應填入 Identifier]"
 * identifier[docVer].system 1..1 MS
 * identifier[docVer].system = "http://ltc-ig.fhir.tw/identifier/feeaudit/doc-ver"
 * identifier[docVer].value 1..1 MS
-* identifier[docVer].value ^short = "總表版次值"
+* identifier[docVer].value ^short = "總表版次。[應填入最長 15 個字元的字串]"
 
-* identifier[accNum] ^short = "簽證編號（acc_num），長度上限 20"
+* identifier[accNum] ^short = "簽證編號。[應填入 Identifier]"
 * identifier[accNum].system 1..1 MS
 * identifier[accNum].system = "http://ltc-ig.fhir.tw/identifier/feeaudit/acc-num"
 * identifier[accNum].value 1..1 MS
-* identifier[accNum].value ^short = "簽證編號值"
+* identifier[accNum].value ^short = "簽證編號。[應填入最長 20 個字元的字串]"
 
-* identifier[yyyymm] ^short = "支審年月（writeoff_yyyymm），格式 yyyyMM，長度 6"
+* identifier[yyyymm] ^short = "支審年月。[應填入 Identifier]"
 * identifier[yyyymm].system 1..1 MS
 * identifier[yyyymm].system = "http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm"
 * identifier[yyyymm].value 1..1 MS
-* identifier[yyyymm].value ^short = "支審年月值，格式 yyyyMM"
+* identifier[yyyymm].value ^short = "支審年月。[應填入 6 碼西元年月，格式為 yyyyMM]"
 
 // ---------------------------------------------------------------
-// 三、分案層級金額（total）
+// 三、分案金額
 // ---------------------------------------------------------------
 * total 0..* MS
-* total ^short = "分案層級之各項金額。以 total.category 區分：申請核銷金額（amount，submitted）、核定金額（approve_fee，approveFee）、政策鼓勵金額（a_svc_fee，aSvcFee）、核增金額（inc_in_acc，incInAcc）、核減金額（dec_in_acc，decInAcc）、分案暫付金額（temp_payment_fee，tempPaymentFee，有申請暫付才顯示）"
+* total ^short = "本分案的各項金額"
+* total ^definition = "每類金額分別填寫一筆。category 填入金額類別：submitted 申請核銷、approveFee 核定、aSvcFee 政策鼓勵、incInAcc 核增、decInAcc 核減、tempPaymentFee 暫付。amount 填入該類別的新臺幣金額。"
 * total.category 1..1 MS
 * total.category from VS_TW_LTC_FeeAuditAdjudication (extensible)
-* total.category ^short = "金額類別代碼，用以區分申請核銷金額、核定金額、政策鼓勵金額、核增金額、核減金額與分案暫付金額"
+* total.category ^short = "金額的類別，用以區分申請核銷、核定、政策鼓勵、核增、核減與暫付金額。"
 * total.amount 1..1 MS
-* total.amount ^short = "該類別之金額，幣別為新臺幣（TWD）"
+* total.amount ^short = "金額的內容。[應填入新臺幣金額，幣別為 TWD]"
 
 // ---------------------------------------------------------------
-// 四、審核通過服務記錄（approve_records）
+// 四、審核通過服務記錄
 // ---------------------------------------------------------------
 * item 0..* MS
-* item ^short = "審核通過服務記錄（approve_records），逐筆對應一筆通過審核之服務紀錄。本元素之筆數等於核定服務記錄數（approve_record_count）；服務記錄筆數（records，即本分案申請之總筆數）則須合計本元素與 ClaimResponse.error（err_records）之筆數，另亦得以 extension[auditSummary].records 明示"
+* item ^short = "審核通過的服務紀錄，每筆服務紀錄應分別填寫。"
+* item ^definition = "每筆審核通過的服務紀錄分別填寫，筆數應與審核摘要的核定服務紀錄數一致。通過與未通過的紀錄筆數合計，應等於本分案申請的服務紀錄總筆數。"
 * item.itemSequence 1..1 MS
-* item.itemSequence ^short = "審核通過服務記錄於本資源內之流水序號（1、2、3……）。FHIR R4 此元素之原始語意為指向 ClaimResponse.request 所參照之單一 Claim 內的 item.sequence；惟本模組一份 ClaimResponse 涵蓋多筆各自獨立之服務紀錄申報（LTCClaimFeeApply，其 item.sequence 固定為 1），且未定義 request，故本序號僅供本資源內部引用（例如 addItem 之對照說明），不具跨 Claim 之指向能力。實際服務記錄一律以 extension[recordRef].objid 識別。"
+* item.itemSequence ^short = "審核通過的服務紀錄序號。[應依序填入 1、2、3 等整數]"
+* item.itemSequence ^definition = "應填入本份審核結果內的紀錄序號。服務紀錄識別碼另填在該筆紀錄的 recordRef Extension。"
 * item.extension contains
     ExtTWLTCFeeAuditRecordRef named recordRef 1..1 MS
-* item.extension[recordRef] ^short = "該筆審核通過服務記錄之識別資訊：識別碼（objid）、來源系統別（source_system）與交易序號（trans_no）"
+* item.extension[recordRef] ^short = "審核通過的服務紀錄識別資料"
+* item.extension[recordRef] ^definition = "應填入該筆服務紀錄的識別碼，並可續填來源系統與申報交易序號。識別碼應與原申報 Claim 的服務紀錄識別碼相同。"
 * item.noteNumber 0..* MS
-* item.noteNumber ^short = "指向 ClaimResponse.processNote.number 之編號，用以補充該筆服務記錄之審核附註文字"
+* item.noteNumber ^short = "審核附註的編號。[應填入 processNote.number 的內容]"
 * item.adjudication 1..* MS
-* item.adjudication ^short = "該筆服務記錄之核定金額明細，至少包含單價（price）與自付額（copayment）"
+* item.adjudication ^short = "服務紀錄的核定金額明細，至少應包含單價與自付額。"
 * item.adjudication.category 1..1 MS
 * item.adjudication.category from VS_TW_LTC_FeeAuditAdjudication (extensible)
-* item.adjudication.category ^short = "金額類別代碼。[單價填入 price；自付額填入 copayment]"
+* item.adjudication.category ^short = "金額的類別。[單價填入 price，自付額填入 copayment]"
 * item.adjudication.amount 0..1 MS
-* item.adjudication.amount ^short = "該類別之金額，幣別為新臺幣（TWD）"
+* item.adjudication.amount ^short = "金額的內容。[應填入新臺幣金額，幣別為 TWD]"
 
 // ---------------------------------------------------------------
-// 五、A 碼加成資料區（a_svc_records）
+// 五、A 碼加成資料
 // ---------------------------------------------------------------
 * addItem 0..* MS
-* addItem ^short = "A 碼加成資料區（a_svc_records），為審查機關於審核後另行加計之政策鼓勵給付項目，非由服務單位原申報"
+* addItem ^short = "A 碼加成的服務資料"
+* addItem ^definition = "應填入審核後另行加計的政策鼓勵給付項目，每筆加成分別填寫。"
 * addItem.itemSequence 0..* MS
-* addItem.itemSequence ^short = "FHIR R4 定義為「本服務項目所欲取代之原申請單（Claim）項目序號」。本模組每筆服務紀錄申報（LTCClaimFeeApply）僅一個 item 且 item.sequence 固定為 1，故本元素僅能填 1，不具區辨力。所加成之審核通過服務記錄（ref_objid、ref_source_system）一律以 addItem.extension[recordRef] 識別。"
+* addItem.itemSequence ^short = "原申報服務明細的序號。[如需填寫，應填入 1]"
+* addItem.itemSequence ^definition = "每筆申報 Claim 僅有一筆服務明細，因此填入 1。加成所依據的服務紀錄，應另在 recordRef Extension 填寫識別資料。"
 * addItem.extension contains
     ExtTWLTCFeeAuditRecordRef named recordRef 0..1 MS
-* addItem.extension[recordRef] ^short = "所加成之審核通過服務記錄之識別資訊：識別碼（ref_objid）與來源系統別（ref_source_system）"
+* addItem.extension[recordRef] ^short = "加成所對應的服務紀錄識別資料"
+* addItem.extension[recordRef] ^definition = "應填入加成所依據的審核通過服務紀錄識別碼，並可續填該紀錄的來源系統。"
 * addItem.productOrService 1..1 MS
 * addItem.productOrService from VS_TW_LTC_ServiceItem (extensible)
-* addItem.productOrService ^short = "A 碼加成之給付項目代碼（a_gov_item_cd），長度上限 10，如 AA05"
+* addItem.productOrService ^short = "A 碼加成的給付項目。[應填入最長 10 個字元的代碼，例如 AA05]"
 * addItem.adjudication 1..* MS
-* addItem.adjudication ^short = "A 碼加成之金額明細，至少包含單價（price）"
+* addItem.adjudication ^short = "A 碼加成的金額明細，至少應包含單價。"
 * addItem.adjudication.category 1..1 MS
 * addItem.adjudication.category from VS_TW_LTC_FeeAuditAdjudication (extensible)
-* addItem.adjudication.category ^short = "金額類別代碼。[單價填入 price]"
+* addItem.adjudication.category ^short = "金額的類別。[單價填入 price]"
 * addItem.adjudication.amount 0..1 MS
-* addItem.adjudication.amount ^short = "該類別之金額，幣別為新臺幣（TWD）"
+* addItem.adjudication.amount ^short = "金額的內容。[應填入新臺幣金額，幣別為 TWD]"
 
 // ---------------------------------------------------------------
-// 六、錯誤服務記錄（err_records）
+// 六、錯誤服務記錄
 // ---------------------------------------------------------------
 * error 0..* MS
-* error ^short = "錯誤服務記錄（err_records），逐筆對應一筆審核不通過之服務紀錄及其檢核錯誤"
+* error ^short = "審核未通過的服務紀錄及錯誤內容"
+* error ^definition = "每筆審核未通過的服務紀錄分別填寫，並提供錯誤代碼與原因。"
 * error.itemSequence 0..1 MS
-* error.itemSequence ^short = "錯誤服務記錄於本資源內之流水序號。同 item.itemSequence，本序號不具跨 Claim 之指向能力；實際服務記錄一律以 error.extension[recordRef].objid 識別。"
+* error.itemSequence ^short = "錯誤服務紀錄的序號。[應填入正整數]"
+* error.itemSequence ^definition = "應填入本份審核結果內的紀錄序號。服務紀錄識別碼另填在該筆紀錄的 recordRef Extension。"
 * error.extension contains
     ExtTWLTCFeeAuditRecordRef named recordRef 0..1 MS
-* error.extension[recordRef] ^short = "該筆錯誤服務記錄之識別資訊：識別碼（objid）、來源系統別（source_system）與交易序號（trans_no）"
+* error.extension[recordRef] ^short = "錯誤服務紀錄的識別資料"
+* error.extension[recordRef] ^definition = "應填入發生錯誤的服務紀錄識別碼，並可續填來源系統與申報交易序號。"
 * error.code 1..1 MS
 * error.code from VS_TW_LTC_FeeAuditErrorCode (extensible)
-* error.code ^short = "檢核錯誤代碼（err_code），長度 5；錯誤原因（err_message，長度上限 200）以 error.code.text 表達"
+* error.code ^short = "檢核錯誤代碼。[應填入 5 個字元的代碼]"
+* error.code ^definition = "應在 coding 填入支付審查錯誤代碼，在 text 填入錯誤原因，錯誤原因最長 200 個字元。"
 
 // ---------------------------------------------------------------
-// 七、審核附註（核增原因、核減原因、暫付申請狀態）
+// 七、審核附註
 // ---------------------------------------------------------------
 * processNote 0..* MS
-* processNote ^short = "審核附註，用以承載核增原因（inc_in_reason）與核減原因（dec_in_reason）等自由文字說明；亦供 item.noteNumber 或 addItem.noteNumber 引用。統計值、暫付申請狀態、分案已處理之單號與承辦人員請改以 extension[auditSummary] 承載，服務記錄識別碼請改以 extension[recordRef] 承載，以確保可運算性"
+* processNote ^short = "審核結果的附註，例如核增或核減原因。"
+* processNote ^definition = "核增或核減原因應分別填寫附註，並給予編號，供服務紀錄的 noteNumber 引用。"
 * processNote.number 1..1 MS
-* processNote.number ^short = "附註編號，供 ClaimResponse.item.noteNumber 或 ClaimResponse.addItem.noteNumber 引用"
+* processNote.number ^short = "審核附註的編號。[應填入正整數，供服務紀錄的 noteNumber 引用]"
 * processNote.text 1..1 MS
-* processNote.text ^short = "附註內容，如核增原因、核減原因、暫付申請狀態或服務記錄識別資訊"
+* processNote.text ^short = "審核附註的內容"
 
 // ---------------------------------------------------------------
 // 八、總表與清冊下載路徑
@@ -166,5 +182,7 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 ClaimRespo
 * extension contains
     ExtTWLTCFeeAuditDocUrl named docUrl 0..* MS and
     ExtTWLTCFeeAuditAuditSummary named auditSummary 0..1 MS
-* extension[docUrl] ^short = "總表與清冊下載路徑，逐份文件一筆，涵蓋暫付總表（temp_payment_doc_url）、總表（case_summary_notice_url）、清冊（case_svc_list_url）、清冊 EXCEL（case_svc_list_excel_url）、A 碼清冊（case_a_svc_list_url）、A 碼清冊 EXCEL（case_a_svc_list_excel_url）、申請記錄不通過清冊（case_err_list_url）與申請記錄不通過 EXCEL 清冊（case_err_list_excel_url）"
-* extension[auditSummary] ^short = "分案審核統計與承辦資訊：服務記錄筆數（records）、個案數（cases）、核定個案數（approve_case_num）、核定服務記錄數（approve_record_count）、暫付申請狀態（temp_payment_status）、分案已處理之單號（trans_nos）與承辦人員（audit_man）"
+* extension[docUrl] ^short = "總表與清冊的下載路徑，如有多份文件，則分別填寫。"
+* extension[docUrl] ^definition = "每份文件應填寫文件類別與下載網址。文件類別填在 docType 子項目，網址填在 url 子項目。可提供總表、暫付總表、服務清冊、A 碼清冊與未通過申請清冊，含各類 Excel 檔。"
+* extension[auditSummary] ^short = "分案的統計資料與承辦人員資訊"
+* extension[auditSummary] ^definition = "應依審核結果填寫服務紀錄總筆數、個案數、核定個案數與核定服務紀錄數。如有暫付申請或已處理的申報交易，則續填暫付狀態與交易序號。承辦人員填入姓名或代號。"

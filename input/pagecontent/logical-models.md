@@ -2,13 +2,11 @@
 
 本頁面說明台灣長期照顧實作指引（TW LTC IG）中定義的邏輯模型，這些模型提供資料結構的概覽，幫助使用者了解如何準備欄位資料。
 
-#### 邏輯模型概述
+#### 邏輯模型
 
 邏輯模型是 FHIR 中用來描述資料結構的概念模型，它們不直接對應到 FHIR 資源，而是提供一個高層次的資料結構視圖，幫助使用者理解如何組織和準備資料。
 
-#### 可用的邏輯模型
-
-#### 1. 照顧管理評估量表邏輯模型 (LTC-CMS-Model)
+##### 照顧管理評估量表邏輯模型 (LTC-CMS-Model)
 
 <a href="StructureDefinition-LTCCMSModel.html">照顧管理評估量表邏輯模型</a>
 
@@ -22,7 +20,7 @@
 
 **使用場景**: 適用於長期照顧管理中心進行個案評估時，作為資料準備的參考指南。
 
-#### 2. 轉介單邏輯模型 (LTC-Referral-Model)
+##### 轉介單邏輯模型 (LTC-Referral-Model)
 
 <a href="StructureDefinition-LTCRferralModel.html">轉介單邏輯模型</a>
 
@@ -44,7 +42,7 @@
 
 **使用場景**: 適用於醫療機構或相關單位向長期照顧管理中心轉介個案時，作為轉介單資料準備的參考指南。
 
-#### 3. 長期照護醫師意見書邏輯模型 (LTC-AA12-Model)
+##### 長期照護醫師意見書邏輯模型 (LTC-AA12-Model)
 
 <a href="StructureDefinition-AA12Model.html">長期照護醫師意見書邏輯模型</a>
 
@@ -62,7 +60,7 @@
 
 **使用場景**: 適用於醫師對個案進行專業醫療評估後，製作長期照護醫師意見書時，作為資料準備的參考指南。
 
-#### 4. 個案位置監測邏輯模型 (LTC-Location-Model)
+##### 個案位置監測邏輯模型 (LTC-Location-Model)
 
 <a href="StructureDefinition-LTCLocationModel.html">個案位置監測邏輯模型</a>
 
@@ -77,7 +75,7 @@
 
 **使用場景**: 適用於失智症照護監測中的個案位置追蹤與監測，作為位置資料準備的參考指南。
 
-#### 5. 異常事件警報邏輯模型 (LTC-AdverseEvent-Model)
+##### 異常事件警報邏輯模型 (LTC-AdverseEvent-Model)
 
 <a href="StructureDefinition-LTCAdverseEventModel.html">異常事件警報邏輯模型</a>
 
@@ -97,7 +95,7 @@
 
 **使用場景**: 適用於失智症照護監測中的異常事件警報管理，作為異常事件資料準備的參考指南。
 
-#### 6. 支付審查－服務記錄申報邏輯模型 (LTCFeeApplyModel)
+##### 支付審查－服務記錄申報邏輯模型 (LTCFeeApplyModel)
 
 <a href="StructureDefinition-LTCFeeApplyModel.html">長照支付審查－服務記錄申報邏輯模型</a>
 
@@ -115,7 +113,7 @@
 
 **使用場景**: 適用於服務提供單位或系統商準備支付審查申報電文時，作為欄位齊備性檢查與 FHIR 對應的參考指南。
 
-#### 7. 支付審查－分案審核明細邏輯模型 (LTCFeeAuditDetailModel)
+##### 支付審查－分案審核明細邏輯模型 (LTCFeeAuditDetailModel)
 
 <a href="StructureDefinition-LTCFeeAuditDetailModel.html">長照支付審查－分案審核明細邏輯模型</a>
 
@@ -131,7 +129,7 @@
 
 **使用場景**: 適用於服務提供單位解讀支付審核系統回覆之分案審核結果時，作為欄位對照的參考指南。
 
-#### 8. 支付審查－分案審核狀態與交易處理結果邏輯模型 (LTCFeeAuditStatusModel)
+##### 支付審查－分案審核狀態與交易處理結果邏輯模型 (LTCFeeAuditStatusModel)
 
 <a href="StructureDefinition-LTCFeeAuditStatusModel.html">長照支付審查－分案審核狀態與交易處理結果邏輯模型</a>
 

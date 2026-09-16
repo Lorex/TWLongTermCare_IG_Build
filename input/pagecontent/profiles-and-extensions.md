@@ -5,7 +5,7 @@
 1. **共用資料元素**：跨所有業務端共同引用的基礎資料，包括個案、關係人、服務人員、機構與問卷架構。
 2. **醫院端**：醫事機構產出的診斷與病情、失智與認知評估及醫師專業意見資料。
 3. **臨床端（長照機構／照護現場）**：長照機構日常照護紀錄、照護狀況、安全監測、照護規劃與運動復能資料。
-4. **行政與申報端（照顧協調／核定申報）**：照顧管理中心評估收案文件、照顧管理流程、長照 SDK 系統介接與申報資料，以及支付審查（照管平台服務記錄申報與分案審核）資料。
+4. **行政與申報端（照顧協調／核定申報）**：照顧管理中心評估收案文件、照顧管理流程，以及長照 SDK 系統介接與申報資料。
 
 ### Resources 之 Profiles
 以下為台灣長期照顧實作指引（TW LTC IG）使用到的所有 Profiles。
@@ -202,30 +202,6 @@
 - [服務活動紀錄 SERVICE_A（LTC Communication ServiceA）](StructureDefinition-LTC-Communication-ServiceA.html)
 - [跨月檢核結果 QP_O（LTC OperationOutcome Check）](StructureDefinition-LTC-OperationOutcome-Check.html)
 
-##### 支付審查（照管平台申報）
-
-服務提供單位向照管平台申報服務記錄、支付審核系統回覆分案審核結果，以及申報交易狀態查詢之資料。詳細情境說明請參閱[長照支付審查](fee-audit.html)頁面。
-
-###### 服務記錄申報
-
-- [個案服務紀錄申報（LTC Claim Fee Apply）](StructureDefinition-LTCClaimFeeApply.html)
-- [服務記錄申報文件打包（LTC Bundle Fee Apply）](StructureDefinition-LTCBundleFeeApply.html)
-- [交通接送起訖地（LTC Location Fee Audit Place）](StructureDefinition-LTCLocationFeeAuditPlace.html)
-
-###### 分案審核回覆
-
-- [分案審核明細（LTC ClaimResponse Fee Audit）](StructureDefinition-LTCClaimResponseFeeAudit.html)
-- [分案審核明細回覆打包（LTC Bundle Fee Audit Response）](StructureDefinition-LTCBundleFeeAuditResponse.html)
-
-###### 申報交易與工作流
-
-- [申報交易任務（LTC Task Fee Audit）](StructureDefinition-LTCTaskFeeAudit.html)
-- [分案審核狀態回覆打包（LTC Bundle Fee Audit Status）](StructureDefinition-LTCBundleFeeAuditStatus.html)
-
-###### 申報檢核結果
-
-- [申報檢核結果（LTC OperationOutcome Fee Audit）](StructureDefinition-LTCOperationOutcomeFeeAudit.html)
-
 ### Extensions
 以下 [Extensions]({{site.data.fhir.path}}extensibility.html) 已定義為台灣長期照顧實作指引（TW LTC IG）的一部分，同樣依業務類別劃分。
 
@@ -256,9 +232,3 @@
 - [單位資訊 PIA/PIB/CENTER/MAN_*（Export Unit）](StructureDefinition-Ext-TW-LTC-Export-Unit.html)
 - [錯誤訊息（Export Error）](StructureDefinition-Ext-TW-LTC-Export-Error.html)
 - [單價（Unit Price）](StructureDefinition-Ext-TW-LTC-UnitPrice.html)
-
-#### 行政與申報端（支付審查）
-
-- [清冊文件下載路徑（FeeAudit DocUrl）](StructureDefinition-Ext-TW-LTC-FeeAudit-DocUrl.html)
-- [分案審核統計與承辦資訊（FeeAudit AuditSummary）](StructureDefinition-Ext-TW-LTC-FeeAudit-AuditSummary.html)
-- [服務記錄識別資訊（FeeAudit RecordRef）](StructureDefinition-Ext-TW-LTC-FeeAudit-RecordRef.html)
