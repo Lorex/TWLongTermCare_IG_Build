@@ -1,30 +1,36 @@
 #!/bin/bash
-publisher_jar=publisher.jar
-input_cache_path=./input-cache/
-echo Checking internet connection...
-curl -sSf tx.fhir.org > /dev/null
+set -e
 
-if [ $? -eq 0 ]; then
-	echo "Online"
-	txoption=""
-else
-	echo "Offline"
-	txoption="-tx n/a"
+publisher="./input-cache/publisher.jar"
+tx_server="https://tx.fhir.org"
+publisher_args=()
+
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    -tx)
+      if [ "$#" -lt 2 ] || { [ "$2" != "$tx_server" ] && [ "$2" != "$tx_server/" ]; }; then
+        echo "ERROR: This project requires terminology validation at $tx_server." >&2
+        exit 1
+      fi
+      shift 2
+      ;;
+    *) publisher_args+=("$1"); shift ;;
+  esac
+done
+
+if [ ! -f "$publisher" ]; then
+  publisher="../publisher.jar"
+  if [ ! -f "$publisher" ]; then
+    echo "ERROR: IG Publisher not found. Run ./_updatePublisher.sh first." >&2
+    exit 1
+  fi
 fi
 
-echo "$txoption"
-
-export JAVA_TOOL_OPTIONS="$JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8"
-
-publisher=$input_cache_path/$publisher_jar
-if test -f "$publisher"; then
-	java -jar $publisher -ig . $txoption $*
-
-else
-	publisher=../$publisher_jar
-	if test -f "$publisher"; then
-		java -jar $publisher -ig . $txoption $*
-	else
-		echo IG Publisher NOT FOUND in input-cache or parent folder.  Please run _updatePublisher.  Aborting...
-	fi
+echo "Checking terminology server: $tx_server"
+if ! curl --fail --silent --show-error --location --connect-timeout 10 --max-time 30 \
+    "$tx_server/r4/metadata" --output /dev/null; then
+  echo "ERROR: Terminology server is unavailable. Build stopped; validation will not be skipped." >&2
+  exit 1
 fi
+
+exec java -Dfile.encoding=UTF-8 -jar "$publisher" -ig . -tx "$tx_server" "${publisher_args[@]}"

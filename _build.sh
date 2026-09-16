@@ -1,16 +1,12 @@
 #!/bin/bash
 
 set -e
+set -o pipefail
 
 # Variables
-dlurl="https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar"
 publisher_jar="publisher.jar"
 input_cache_path="$(pwd)/input-cache/"
-skipPrompts=false
 upper_path="../"
-scriptdlroot="https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main"
-build_bat_url="${scriptdlroot}/_build.bat"
-build_sh_url="${scriptdlroot}/_build.sh"
 
 function check_jar_location() {
   if [ -f "${input_cache_path}${publisher_jar}" ]; then
@@ -26,73 +22,27 @@ function check_jar_location() {
 }
 
 function check_internet_connection() {
-  if ping -c 1 tx.fhir.org &>/dev/null; then
+  if latest_version=$(curl --fail --silent --show-error --location --connect-timeout 10 --max-time 30 https://api.github.com/repos/HL7/fhir-ig-publisher/releases/latest | sed -n 's/.*"tag_name": *"\([^"]*\)".*/\1/p'); then
     online=true
-    echo "We're online and tx.fhir.org is available."
-    latest_version=$(curl -s https://api.github.com/repos/HL7/fhir-ig-publisher/releases/latest | grep tag_name | cut -d'"' -f4)
+    echo "Publisher release information is available."
   else
     online=false
-    echo "We're offline or tx.fhir.org is unavailable."
+    latest_version=""
+    echo "Unable to check the latest Publisher release."
   fi
 }
 
 
 function update_publisher() {
-  echo "Publisher jar location: ${input_cache_path}${publisher_jar}"
-  read -p "Download or update publisher.jar? (Y/N): " confirm
-  if [[ "$confirm" =~ ^[Yy]$ ]]; then
-    echo "Downloading latest publisher.jar (~200 MB)..."
-    mkdir -p "$input_cache_path"
-    curl -L "$dlurl" -o "${input_cache_path}${publisher_jar}"
-  else
-    echo "Skipped downloading publisher.jar"
-  fi
-
-  update_scripts_prompt
+  "$(dirname "$0")/_updatePublisher.sh" "$@"
 }
-
-
-function update_scripts_prompt() {
-  read -p "Update scripts (_build.bat and _build.sh)? (Y/N): " update_confirm
-  if [[ "$update_confirm" =~ ^[Yy]$ ]]; then
-    echo "Updating scripts..."
-    curl -L "$build_bat_url" -o "_build.new.bat" && mv "_build.new.bat" "_build.bat"
-    curl -L "$build_sh_url" -o "_build.new.sh" && mv "_build.new.sh" "_build.sh"
-    chmod +x _build.sh
-    echo "Scripts updated."
-  else
-    echo "Skipped updating scripts."
-  fi
-}
-
 
 function build_ig() {
-  if [ "$jar_location" != "not_found" ]; then
-    args=()
-    if [ "$online" = "false" ]; then
-      args+=("-tx" "n/a")
-    fi
-    java -Dfile.encoding=UTF-8 -jar "$jar_location" -ig . "${args[@]}" "$@"
-  else
-    echo "publisher.jar not found. Please run update."
-  fi
+  "$(dirname "$0")/_genonce.sh" "$@"
 }
-
 
 function build_nosushi() {
-  if [ "$jar_location" != "not_found" ]; then
-    java -Dfile.encoding=UTF-8 -jar "$jar_location" -ig . -no-sushi "$@"
-  else
-    echo "publisher.jar not found. Please run update."
-  fi
-}
-
-function build_notx() {
-  if [ "$jar_location" != "not_found" ]; then
-    java -Dfile.encoding=UTF-8 -jar "$jar_location" -ig . -tx n/a "$@"
-  else
-    echo "publisher.jar not found. Please run update."
-  fi
+  build_ig -no-sushi "$@"
 }
 
 function jekyll_build() {
@@ -113,25 +63,23 @@ function cleanup() {
 }
 
 check_jar_location
-check_internet_connection
 
 # Handle command-line argument or menu
 case "$1" in
-  update) update_publisher ;;
-  build) build_ig ;;
-  nosushi) build_nosushi ;;
-  notx) build_notx ;;
+  update) shift; update_publisher "$@" ;;
+  build) shift; build_ig "$@" ;;
+  nosushi) shift; build_nosushi "$@" ;;
+  notx) echo "ERROR: Builds without terminology validation are no longer supported." >&2; exit 1 ;;
   jekyll) jekyll_build ;;
   clean) cleanup ;;
   exit) exit 0 ;;
   *)
+    check_internet_connection
     # Compute default choice
     default_choice=2 # Build by default
 
     if [ "$jar_location" = "not_found" ]; then
       default_choice=1 # Download if jar is missing
-    elif [ "$online" = "false" ]; then
-      default_choice=4 # Offline build
     elif [ -n "$latest_version" ]; then
       current_version=$(java -jar "$jar_location" -v 2>/dev/null | tr -d '\r')
       if [ "$current_version" != "$latest_version" ]; then
@@ -149,9 +97,8 @@ case "$1" in
     echo "1) Download or update publisher"
     echo "2) Build IG"
     echo "3) Build IG without Sushi"
-    echo "4) Build IG without TX server"
-    echo "5) Jekyll build"
-    echo "6) Cleanup temp directories"
+    echo "4) Jekyll build"
+    echo "5) Cleanup temp directories"
     echo "0) Exit"
     echo
 
@@ -165,9 +112,8 @@ case "$1" in
       1) update_publisher ;;
       2) build_ig ;;
       3) build_nosushi ;;
-      4) build_notx ;;
-      5) jekyll_build ;;
-      6) cleanup ;;
+      4) jekyll_build ;;
+      5) cleanup ;;
       0) exit 0 ;;
       *) echo "Invalid option." ;;
     esac

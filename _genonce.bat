@@ -1,27 +1,34 @@
 @ECHO OFF
-SET publisher_jar=publisher.jar
-SET input_cache_path=%CD%\input-cache
+SETLOCAL
+SET "publisher=%CD%\input-cache\publisher.jar"
+SET "tx_server=https://tx.fhir.org"
 
-ECHO Checking internet connection...
-PING tx.fhir.org -4 -n 1 -w 1000 | FINDSTR TTL && GOTO isonline
-ECHO We're offline...
-SET txoption=-tx n/a
-GOTO igpublish
+:parseargs
+IF "%~1"=="" GOTO checkpublisher
+IF /I "%~1"=="-tx" (
+    IF NOT "%~2"=="%tx_server%" IF NOT "%~2"=="%tx_server%/" (
+        ECHO ERROR: This project requires terminology validation at %tx_server%.
+        EXIT /B 1
+    )
+    SHIFT
+)
+SHIFT
+GOTO parseargs
 
-:isonline
-ECHO We're online
-SET txoption=
+:checkpublisher
+IF EXIST "%publisher%" GOTO checkconnection
+SET "publisher=..\publisher.jar"
+IF EXIST "%publisher%" GOTO checkconnection
+ECHO ERROR: IG Publisher not found. Run _updatePublisher.bat first.
+EXIT /B 1
 
-:igpublish
-
-SET JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
-
-IF EXIST "%input_cache_path%\%publisher_jar%" (
-	JAVA -jar "%input_cache_path%\%publisher_jar%" -ig . %txoption% %*
-) ELSE If exist "..\%publisher_jar%" (
-	JAVA -jar "..\%publisher_jar%" -ig . %txoption% %*
-) ELSE (
-	ECHO IG Publisher NOT FOUND in input-cache or parent folder.  Please run _updatePublisher.  Aborting...
+:checkconnection
+ECHO Checking terminology server: %tx_server%
+curl --fail --silent --show-error --location --connect-timeout 10 --max-time 30 "%tx_server%/r4/metadata" --output NUL
+IF ERRORLEVEL 1 (
+    ECHO ERROR: Terminology server is unavailable. Build stopped; validation will not be skipped.
+    EXIT /B 1
 )
 
-PAUSE
+java -Dfile.encoding=UTF-8 -jar "%publisher%" -ig . -tx "%tx_server%" %*
+EXIT /B %ERRORLEVEL%

@@ -1,2 +1,3 @@
 @ECHO OFF
-CALL ./_genonce.bat -watch
+CALL "%~dp0_genonce.bat" -watch %*
+EXIT /B %ERRORLEVEL%

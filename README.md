@@ -19,6 +19,12 @@ sushi .
 ./_genonce.sh
 ```
 
+完整建置統一使用 `https://tx.fhir.org` 進行術語驗證。建置前會檢查 R4 術語服務；連線失敗時停止，不會略過驗證。Windows 使用 `_genonce.bat`，持續建置使用 `_gencontinuous.sh` 或 `_gencontinuous.bat`。
+
+`_build.sh` 與 `_build.bat` 的 `build`、`nosushi` 也使用相同檢查。已移除 `notx` 模式及本地 FHIRsmith 設定，不再使用 `LTC_TX_SERVER`。建置腳本只接受 `https://tx.fhir.org` 作為 `-tx` 參數。
+
+`_updatePublisher.sh` 與 `_updatePublisher.bat` 只更新 Publisher，不會以官方通用腳本覆寫本專案的建置設定。`jekyll` 選項只重新渲染既有產物，不能取代完整驗證。
+
 ## 術語 OID
 
 本 IG 的 CodeSystem 與 ValueSet 在 FSH 原始檔中明確指定 OID，以供 CDA 等使用 OID 的系統識別。

@@ -13,9 +13,11 @@ This repository defines the Taiwan Long-Term Care FHIR R4 Implementation Guide u
 
 - `sushi .`: compile FSH and check syntax.
 - `./_updatePublisher.sh`: update the local IG Publisher.
-- `./_genonce.sh`: build and validate the IG; may fall back to offline terminology validation.
+- `./_genonce.sh`: build and validate the IG using `https://tx.fhir.org`; stop if the terminology service is unavailable. Do not skip terminology validation or use a local terminology server.
 - `java -Dfile.encoding=UTF-8 -jar input-cache/publisher.jar -ig . -tx https://tx.fhir.org`: explicitly build with online terminology validation.
 - `./_gencontinuous.sh`: continuously rebuild during development.
+
+Publisher updates must preserve this repository's build scripts so the required terminology validation remains enabled.
 
 ## Coding Style & Naming Conventions
 
