@@ -74,3 +74,13 @@
 - [長期照護醫療機構範例](Organization-twcore-organization-hospital-aa12-example.html)
 - [長照轉介服務請求範例](ServiceRequest-ltc-servicerequest-referral-example.html)
 - [轉介確認任務範例](Task-ltc-task-referral-acceptance-example.html)
+
+#### 居家護理照護管理系統
+
+提供收案、評估、照護計畫、共照、多筆傷口、生命徵象及處理結果查詢範例。請參考 [居家護理主題](home-nursing.html)。
+
+### 在宅急症照護
+
+- [完成療程與結案文件](Bundle-hah-document.html)。
+- [再次收案與轉院文件](Bundle-hah-transfer-document.html)。
+- [情境說明及更多範例](hah.html)。

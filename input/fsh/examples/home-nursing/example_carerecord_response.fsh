@@ -1,0 +1,45 @@
+Instance: hn-carerecord-example
+InstanceOf: QuestionnaireResponse
+Usage: #example
+Title: "居家護理－照護紀錄範例"
+Description: "示範照護紀錄結構與未作答欄位。資料為虛構。"
+* meta.profile[0] = Canonical(HNCareRecordResponse)
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/hn-carerecord"
+* status = #in-progress
+* authored = "2025-12-08T09:00:00+08:00"
+* subject = Reference(hn-patient-example)
+* extension[0].url = Canonical(ExtHNEpisode)
+* extension[0].valueReference = Reference(hn-episode-example)
+* item[0].linkId = "CaseID"
+* item[0].answer[0].valueString = "A123456789"
+* item[1].linkId = "EndDate"
+* item[1].answer[0].valueDate = "2025-12-08"
+* item[2].linkId = "Date"
+* item[2].answer[0].valueDate = "2025-12-08"
+* item[3].linkId = "NurseID"
+* item[3].answer[0].valueString = "B123456789"
+* item[4].linkId = "Time"
+* item[4].answer[0].valueTime = "09:00:00"
+* item[5].linkId = "Time2"
+* item[5].answer[0].valueTime = "09:00:00"
+* item[6].linkId = "RecordSource"
+* item[6].item[0].linkId = "RecordSource.Value"
+* item[6].item[0].answer[0].valueCoding = HNAnswerCS#ca753660e0cb0 "電訪"
+* item[7].linkId = "Live"
+* item[7].item[0].linkId = "Live.Value"
+* item[7].item[0].answer[0].valueCoding = HNAnswerCS#c2a2ebf7eedcb "在宅(居家)"
+* item[8].linkId = "LiveArea"
+* item[8].item[0].linkId = "LiveArea.City"
+* item[8].item[0].answer[0].valueString = "臺北市"
+* item[8].item[1].linkId = "LiveArea.Area"
+* item[8].item[1].answer[0].valueString = "中正區"
+* item[9].linkId = "IsUnplanned"
+* item[9].answer[0].valueCoding = HNAnswerCS#c0c70665b6eb6 "否"
+* item[10].linkId = "IsEmergency"
+* item[10].answer[0].valueCoding = HNAnswerCS#c0c70665b6eb6 "否"
+* item[11].linkId = "IsSkinDamages"
+* item[11].answer[0].valueCoding = HNAnswerCS#c0c70665b6eb6 "否"
+* item[12].linkId = "IsEmergencyEvents"
+* item[12].answer[0].valueCoding = HNAnswerCS#c0c70665b6eb6 "否"
+* item[13].linkId = "Statement"
+* item[13].answer[0].valueString = "照護紀錄範例"

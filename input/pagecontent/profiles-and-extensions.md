@@ -232,3 +232,12 @@
 - [單位資訊 PIA/PIB/CENTER/MAN_*（Export Unit）](StructureDefinition-Ext-TW-LTC-Export-Unit.html)
 - [錯誤訊息（Export Error）](StructureDefinition-Ext-TW-LTC-Export-Error.html)
 - [單價（Unit Price）](StructureDefinition-Ext-TW-LTC-UnitPrice.html)
+
+
+#### 居家護理照護管理系統
+
+居護 Profile 沿用長照個案、收案、照護計畫、目標、問卷回覆與任務，並補充來源表單、收案關聯及措施停止資訊。請參考 [居家護理主題](home-nursing.html)。
+
+#### 在宅急症照護
+
+在宅急症子主題優先重用既有 LTC 與 TW Core 定義，新增的臨床限制、繼承理由與三個 Extension 請見[在宅急症主題](hah.html)。

@@ -1,0 +1,47 @@
+Instance: hn-medicalhistories-example
+InstanceOf: QuestionnaireResponse
+Usage: #example
+Title: "居家護理－疾病史評估範例"
+Description: "示範疾病史評估結構與未作答欄位。資料為虛構。"
+* meta.profile[0] = Canonical(HNMedicalHistoriesResponse)
+* questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/hn-medicalhistories"
+* status = #in-progress
+* authored = "2025-12-08T09:00:00+08:00"
+* subject = Reference(hn-patient-example)
+* extension[0].url = Canonical(ExtHNEpisode)
+* extension[0].valueReference = Reference(hn-episode-example)
+* item[0].linkId = "Date"
+* item[0].answer[0].valueDate = "2025-12-08"
+* item[1].linkId = "NurseID"
+* item[1].answer[0].valueString = "B123456789"
+* item[2].linkId = "AnsOther_1"
+* item[2].answer[0].valueString = "主要診斷範例"
+* item[3].linkId = "MedicalHistoryQuestions"
+* item[3].item[0].linkId = "MedicalHistoryQuestions.q32e5fad7"
+* item[3].item[0].item[0].linkId = "MedicalHistoryQuestions.q32e5fad7.Answer"
+* item[3].item[1].linkId = "MedicalHistoryQuestions.qbeda0dd8"
+* item[3].item[1].item[0].linkId = "MedicalHistoryQuestions.qbeda0dd8.Answer"
+* item[3].item[2].linkId = "MedicalHistoryQuestions.q628b2adc"
+* item[3].item[2].item[0].linkId = "MedicalHistoryQuestions.q628b2adc.Answer"
+* item[3].item[3].linkId = "MedicalHistoryQuestions.q7e61f4f9"
+* item[3].item[3].item[0].linkId = "MedicalHistoryQuestions.q7e61f4f9.Answer"
+* item[3].item[4].linkId = "MedicalHistoryQuestions.q958e3479"
+* item[3].item[4].item[0].linkId = "MedicalHistoryQuestions.q958e3479.Answer"
+* item[3].item[5].linkId = "MedicalHistoryQuestions.q5713fd48"
+* item[3].item[5].item[0].linkId = "MedicalHistoryQuestions.q5713fd48.Answer"
+* item[3].item[6].linkId = "MedicalHistoryQuestions.q486b7939"
+* item[3].item[6].item[0].linkId = "MedicalHistoryQuestions.q486b7939.Answer"
+* item[3].item[7].linkId = "MedicalHistoryQuestions.qb7ad0283"
+* item[3].item[7].item[0].linkId = "MedicalHistoryQuestions.qb7ad0283.Answer"
+* item[3].item[8].linkId = "MedicalHistoryQuestions.qc62d7017"
+* item[3].item[8].item[0].linkId = "MedicalHistoryQuestions.qc62d7017.Answer"
+* item[3].item[9].linkId = "MedicalHistoryQuestions.qa92ba1d3"
+* item[3].item[9].item[0].linkId = "MedicalHistoryQuestions.qa92ba1d3.Answer"
+* item[3].item[10].linkId = "MedicalHistoryQuestions.q48138ed7"
+* item[3].item[10].item[0].linkId = "MedicalHistoryQuestions.q48138ed7.Answer"
+* item[3].item[11].linkId = "MedicalHistoryQuestions.q24f8809f"
+* item[3].item[11].item[0].linkId = "MedicalHistoryQuestions.q24f8809f.Answer"
+* item[3].item[12].linkId = "MedicalHistoryQuestions.qe34cc85c"
+* item[3].item[12].item[0].linkId = "MedicalHistoryQuestions.qe34cc85c.Answer"
+* item[3].item[13].linkId = "MedicalHistoryQuestions.q2c808271"
+* item[3].item[13].item[0].linkId = "MedicalHistoryQuestions.q2c808271.Answer"

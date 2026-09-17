@@ -1,0 +1,77 @@
+Logical: HNDrugSafetiesModel
+Id: HNDrugSafetiesModel
+Title: "居家護理－藥物安全性評估邏輯模型"
+Description: "描述居家護理藥物安全性評估的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。"
+* ^status = #draft
+* ^version = "5.0.16"
+* date 1..1 date "紀錄日期" "紀錄日期"
+* nurseID 1..1 string "護理人員身分證字號" "護理人員身分證字號"
+* statement 0..1 string "無法評估原因或備註" "無法評估原因或備註"
+* questions 0..1 BackboneElement "評估項目" "評估項目"
+* questions.q1b200653 0..1 BackboneElement "是否有長期使用藥物" "是否有長期使用藥物"
+* questions.q1b200653.answer 1..1 Coding "評估答案" "評估答案"
+* questions.q1b200653.answer from hn-vs-49fe20230ec3 (required)
+* questions.q1b200653.statement1 0..1 string "補充說明" "補充說明"
+* questions.qb5202c4c 0..1 BackboneElement "目前使用中的藥物種類" "目前使用中的藥物種類"
+* questions.qb5202c4c.answer 1..1 Coding "評估答案" "評估答案"
+* questions.qb5202c4c.answer from hn-vs-19264db8df7b (required)
+* questions.qb5202c4c.statement1 0..1 string "補充說明" "補充說明"
+* questions.q023931ae 0..1 BackboneElement "使用精神用藥" "使用精神用藥"
+* questions.q023931ae.answer 1..1 Coding "評估答案" "評估答案"
+* questions.q023931ae.answer from hn-vs-19264db8df7b (required)
+* questions.q023931ae.statement1 0..1 string "補充說明" "補充說明"
+* questions.qc7a63c2d 0..1 BackboneElement "使用止痛用藥" "使用止痛用藥"
+* questions.qc7a63c2d.answer 1..1 Coding "評估答案" "評估答案"
+* questions.qc7a63c2d.answer from hn-vs-19264db8df7b (required)
+* questions.qc7a63c2d.statement1 0..1 string "補充說明" "補充說明"
+* questions.q0482b7eb 0..1 BackboneElement "是否存在多重用藥問題" "是否存在多重用藥問題"
+* questions.q0482b7eb.answer 1..1 Coding "評估答案" "評估答案"
+* questions.q0482b7eb.answer from hn-vs-523a43c4a46a (required)
+* questions.q0482b7eb.statement1 0..1 string "補充說明" "補充說明"
+* questions.qc67400fe 0..1 BackboneElement "目前是否使用有自行購藥(電台、他人介紹..等非醫療院所取得)" "目前是否使用有自行購藥(電台、他人介紹..等非醫療院所取得)"
+* questions.qc67400fe.answer 1..1 Coding "評估答案" "評估答案"
+* questions.qc67400fe.answer from hn-vs-19264db8df7b (required)
+* questions.qc67400fe.statement1 0..1 string "補充說明" "補充說明"
+* drugInUses 0..* BackboneElement "使用中的藥物" "使用中的藥物"
+* drugInUses.name 1..1 string "藥物品項" "藥物品項"
+* drugInUses.volume 1..1 string "劑量" "劑量"
+* drugInUses.frequency 1..1 string "頻率" "頻率"
+* drugInUses.purpose 1..1 string "用途" "用途"
+* drugInUses.remark 0..1 string "備註" "備註"
+* isTemporary 0..1 Coding "是否暫存" "是否暫存"
+* isTemporary from hn-vs-58e4d598f859 (required)
+
+Mapping: HNDrugSafetiesModelToFHIR
+Id: hn-drugsafeties-fhir
+Title: "居家護理－藥物安全性評估欄位對應"
+Source: HNDrugSafetiesModel
+Target: "http://ltc-ig.fhir.tw/StructureDefinition/HNDrugSafetiesResponse"
+* date -> "QuestionnaireResponse.item.where(linkId='Date')" "來源欄位／題目：Date"
+* nurseID -> "QuestionnaireResponse.item.where(linkId='NurseID')" "來源欄位／題目：NurseID"
+* statement -> "QuestionnaireResponse.item.where(linkId='Statement')" "來源欄位／題目：Statement"
+* questions -> "QuestionnaireResponse.item.where(linkId='Questions')" "來源欄位／題目：Questions"
+* questions.q1b200653 -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.q1b200653')" "來源欄位／題目：Questions[Question='是否有長期使用藥物']"
+* questions.q1b200653.answer -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.q1b200653').item.where(linkId='Questions.q1b200653.Answer')" "來源欄位／題目：Questions[Question='是否有長期使用藥物'].Answer"
+* questions.q1b200653.statement1 -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.q1b200653').item.where(linkId='Questions.q1b200653.Statement1')" "來源欄位／題目：Questions[Question='是否有長期使用藥物'].Statement1"
+* questions.qb5202c4c -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.qb5202c4c')" "來源欄位／題目：Questions[Question='目前使用中的藥物種類']"
+* questions.qb5202c4c.answer -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.qb5202c4c').item.where(linkId='Questions.qb5202c4c.Answer')" "來源欄位／題目：Questions[Question='目前使用中的藥物種類'].Answer"
+* questions.qb5202c4c.statement1 -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.qb5202c4c').item.where(linkId='Questions.qb5202c4c.Statement1')" "來源欄位／題目：Questions[Question='目前使用中的藥物種類'].Statement1"
+* questions.q023931ae -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.q023931ae')" "來源欄位／題目：Questions[Question='使用精神用藥']"
+* questions.q023931ae.answer -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.q023931ae').item.where(linkId='Questions.q023931ae.Answer')" "來源欄位／題目：Questions[Question='使用精神用藥'].Answer"
+* questions.q023931ae.statement1 -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.q023931ae').item.where(linkId='Questions.q023931ae.Statement1')" "來源欄位／題目：Questions[Question='使用精神用藥'].Statement1"
+* questions.qc7a63c2d -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.qc7a63c2d')" "來源欄位／題目：Questions[Question='使用止痛用藥']"
+* questions.qc7a63c2d.answer -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.qc7a63c2d').item.where(linkId='Questions.qc7a63c2d.Answer')" "來源欄位／題目：Questions[Question='使用止痛用藥'].Answer"
+* questions.qc7a63c2d.statement1 -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.qc7a63c2d').item.where(linkId='Questions.qc7a63c2d.Statement1')" "來源欄位／題目：Questions[Question='使用止痛用藥'].Statement1"
+* questions.q0482b7eb -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.q0482b7eb')" "來源欄位／題目：Questions[Question='是否存在多重用藥問題']"
+* questions.q0482b7eb.answer -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.q0482b7eb').item.where(linkId='Questions.q0482b7eb.Answer')" "來源欄位／題目：Questions[Question='是否存在多重用藥問題'].Answer"
+* questions.q0482b7eb.statement1 -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.q0482b7eb').item.where(linkId='Questions.q0482b7eb.Statement1')" "來源欄位／題目：Questions[Question='是否存在多重用藥問題'].Statement1"
+* questions.qc67400fe -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.qc67400fe')" "來源欄位／題目：Questions[Question='目前是否使用有自行購藥(電台、他人介紹..等非醫療院所取得)']"
+* questions.qc67400fe.answer -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.qc67400fe').item.where(linkId='Questions.qc67400fe.Answer')" "來源欄位／題目：Questions[Question='目前是否使用有自行購藥(電台、他人介紹..等非醫療院所取得)'].Answer"
+* questions.qc67400fe.statement1 -> "QuestionnaireResponse.item.where(linkId='Questions').item.where(linkId='Questions.qc67400fe').item.where(linkId='Questions.qc67400fe.Statement1')" "來源欄位／題目：Questions[Question='目前是否使用有自行購藥(電台、他人介紹..等非醫療院所取得)'].Statement1"
+* drugInUses -> "QuestionnaireResponse.item.where(linkId='DrugInUses')" "來源欄位／題目：DrugInUses"
+* drugInUses.name -> "QuestionnaireResponse.item.where(linkId='DrugInUses').item.where(linkId='DrugInUses.Name')" "來源欄位／題目：DrugInUses.Name"
+* drugInUses.volume -> "QuestionnaireResponse.item.where(linkId='DrugInUses').item.where(linkId='DrugInUses.Volume')" "來源欄位／題目：DrugInUses.Volume"
+* drugInUses.frequency -> "QuestionnaireResponse.item.where(linkId='DrugInUses').item.where(linkId='DrugInUses.Frequency')" "來源欄位／題目：DrugInUses.Frequency"
+* drugInUses.purpose -> "QuestionnaireResponse.item.where(linkId='DrugInUses').item.where(linkId='DrugInUses.Purpose')" "來源欄位／題目：DrugInUses.Purpose"
+* drugInUses.remark -> "QuestionnaireResponse.item.where(linkId='DrugInUses').item.where(linkId='DrugInUses.Remark')" "來源欄位／題目：DrugInUses.Remark"
+* isTemporary -> "QuestionnaireResponse.item.where(linkId='IsTemporary')" "來源欄位／題目：IsTemporary"

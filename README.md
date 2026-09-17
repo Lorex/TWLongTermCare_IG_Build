@@ -47,9 +47,9 @@ print(f"urn:oid:2.25.{uuid.uuid5(uuid.NAMESPACE_URL, canonical).int}")
 |------|------|
 | Canonical URL | `http://ltc-ig.fhir.tw` |
 | Package ID | `tw.iii.ltc` |
-| 版本 | 1.0.0 |
+| 版本 | 1.1.0 |
 | FHIR 版本 | R4.0.1 |
-| 上層依賴 | TW Core IG 0.3.2 |
+| 上層依賴 | TW Core IG 1.0.0 |
 
 ## 授權
 

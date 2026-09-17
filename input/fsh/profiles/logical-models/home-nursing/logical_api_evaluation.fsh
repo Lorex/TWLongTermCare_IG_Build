@@ -1,0 +1,23 @@
+Logical: HNEvaluationAPIModel
+Id: HNEvaluationAPIModel
+Title: "居家護理－全人評估 API 邏輯模型"
+Description: "描述全人評估 API 的請求資料。來源為 V5.0.16 印刷頁 14–70，所有 API 採 POST。SecretKey 僅用於傳輸驗證，不存入 FHIR。"
+* ^status = #draft
+* ^version = "5.0.16"
+* agency 1..1 Identifier "機構識別" "填入 AGENCY_ID 對應的機構識別。"
+* dataList 1..* BackboneElement "個案評估批次" "每筆資料包含個案識別與不同日期的評估。"
+* dataList.caseID 1..1 string "個案身分證字號"
+* dataList.endDate 1..1 date "收案日期"
+* dataList.healthyHabits 0..* HNHealthyHabitsModel "健康紀錄評估"
+* dataList.medicalHistories 0..* HNMedicalHistoriesModel "疾病史評估"
+* dataList.drugSafeties 0..* HNDrugSafetiesModel "藥物安全性評估"
+* dataList.bodyEvaluations 0..* HNBodyEvaluationsModel "身體評估評估"
+* dataList.pressureInjuries 0..* HNPressureInjuriesModel "壓力性損傷危險評估"
+* dataList.fallRisks 0..* HNFallRisksModel "跌倒危險性評估"
+* dataList.aDLs 0..* HNADLsModel "日常生活功能評估"
+* dataList.iADLs 0..* HNIADLsModel "工具性日常生活活動功能評估"
+* dataList.dementias 0..* HNDementiasModel "認知功能評估"
+* dataList.geriatricDepressionScales 0..* HNGeriatricDepressionScalesModel "情緒問題評估"
+* dataList.mNASFs 0..* HNMNASFsModel "簡易營養評估"
+* dataList.painEvaluations 0..* HNPainEvaluationsModel "疼痛評估"
+* dataList.sOFs 0..* HNSOFsModel "衰弱評估"
