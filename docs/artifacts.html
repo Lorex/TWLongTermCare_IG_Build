@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Artifacts Summary - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0</title>
+    <title>Artifacts Summary - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -41,8 +41,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"20"}
-    h3,h4,h5,h6{--heading-prefix:"20.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"25"}
+    h3,h4,h5,h6{--heading-prefix:"25.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -52,7 +52,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引(TW LTC IG)</span>
             <br/>
-            <span style="display:inline-block;">1.0.0 - STU 1.0.0
+            <span style="display:inline-block;">1.1.0 - STU 1.1.0
 
 
             </span>
@@ -79,6 +79,22 @@
               <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li><a href="index.html">應用說明</a></li>
   <li><a href="toc.html">目錄</a></li>
+  <li class="dropdown">
+		<a href="#">主題說明<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="fee-audit.html">長照支付審查</a>
+			</li>
+			<li>
+				<a href="home-nursing.html">居家護理照護管理系統</a>
+			</li>
+			<li>
+				<a href="hah.html">在宅急症照護</a>
+			</li>
+		</ul>
+	</li>
 	<li class="dropdown">
 		<a href="artifacts.html">規範文件<b class="caret">
 			</b>
@@ -180,7 +196,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引(TW LTC IG) - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引(TW LTC IG) - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Artifacts Summary</h2>
   
   
@@ -264,6 +280,348 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-HAHCareDataset.html"
+                  title="StructureDefinition/HAHCareDataset">在宅急症－照護資料集</a>
+            </td>
+            <td>
+<p>依在宅急症系統盤點建立的資料交換模型，涵蓋正式收案、訪視、照護、檢驗、給藥與轉銜。新增的臨床結構不代表來源系統已實作；來源差異見專用對照表。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNUploadAcknowledgementModel.html"
+                  title="StructureDefinition/HNUploadAcknowledgementModel">居家護理－上傳接收回覆邏輯模型</a>
+            </td>
+            <td>
+<p>描述規範各上傳 API 列出的成功回覆。此回覆表示檔案已接收，尚不表示排程匯入成功。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNStaffEgyAPIModel.html"
+                  title="StructureDefinition/HNStaffEgyAPIModel">居家護理－人員緊急事件 API 邏輯模型</a>
+            </td>
+            <td>
+<p>描述人員緊急事件 API 的請求資料。來源為 V5.0.16 印刷頁 126–129，所有 API 採 POST。SecretKey 僅用於傳輸驗證，不存入 FHIR。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNStaffEgyModel.html"
+                  title="StructureDefinition/HNStaffEgyModel">居家護理－人員緊急事件邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理人員緊急事件的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNGetLogAPIModel.html"
+                  title="StructureDefinition/HNGetLogAPIModel">居家護理－依日期查詢處理結果 API 邏輯模型</a>
+            </td>
+            <td>
+<p>描述依日期查詢處理結果 API 的請求資料。來源為 V5.0.16 印刷頁 139，所有 API 採 POST。SecretKey 僅用於傳輸驗證，不存入 FHIR。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNGetLogByTicketAPIModel.html"
+                  title="StructureDefinition/HNGetLogByTicketAPIModel">居家護理－依追蹤碼查詢處理結果 API 邏輯模型</a>
+            </td>
+            <td>
+<p>描述依追蹤碼查詢處理結果 API 的請求資料。來源為 V5.0.16 印刷頁 139，所有 API 採 POST。SecretKey 僅用於傳輸驗證，不存入 FHIR。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNBaseDataAPIModel.html"
+                  title="StructureDefinition/HNBaseDataAPIModel">居家護理－個案基本資料 API 邏輯模型</a>
+            </td>
+            <td>
+<p>描述個案基本資料 API 的請求資料。來源為 V5.0.16 印刷頁 1–13，所有 API 採 POST。SecretKey 僅用於傳輸驗證，不存入 FHIR。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNBaseDataModel.html"
+                  title="StructureDefinition/HNBaseDataModel">居家護理－個案基本資料邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理個案基本資料的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCaseCloseAPIModel.html"
+                  title="StructureDefinition/HNCaseCloseAPIModel">居家護理－個案結案 API 邏輯模型</a>
+            </td>
+            <td>
+<p>描述個案結案 API 的請求資料。來源為 V5.0.16 印刷頁 130–132，所有 API 採 POST。SecretKey 僅用於傳輸驗證，不存入 FHIR。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCaseCloseModel.html"
+                  title="StructureDefinition/HNCaseCloseModel">居家護理－個案結案邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理個案結案的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNHealthyHabitsModel.html"
+                  title="StructureDefinition/HNHealthyHabitsModel">居家護理－健康紀錄評估邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理健康紀錄評估的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNEvaluationAPIModel.html"
+                  title="StructureDefinition/HNEvaluationAPIModel">居家護理－全人評估 API 邏輯模型</a>
+            </td>
+            <td>
+<p>描述全人評估 API 的請求資料。來源為 V5.0.16 印刷頁 14–70，所有 API 採 POST。SecretKey 僅用於傳輸驗證，不存入 FHIR。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCaseDescAPIModel.html"
+                  title="StructureDefinition/HNCaseDescAPIModel">居家護理－共照紀錄 API 邏輯模型</a>
+            </td>
+            <td>
+<p>描述共照紀錄 API 的請求資料。來源為 V5.0.16 印刷頁 122–125，所有 API 採 POST。SecretKey 僅用於傳輸驗證，不存入 FHIR。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCaseDescModel.html"
+                  title="StructureDefinition/HNCaseDescModel">居家護理－共照紀錄邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理共照紀錄的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNPressureInjuriesModel.html"
+                  title="StructureDefinition/HNPressureInjuriesModel">居家護理－壓力性損傷危險評估邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理壓力性損傷危險評估的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNIADLsModel.html"
+                  title="StructureDefinition/HNIADLsModel">居家護理－工具性日常生活活動功能評估邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理工具性日常生活活動功能評估的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNGeriatricDepressionScalesModel.html"
+                  title="StructureDefinition/HNGeriatricDepressionScalesModel">居家護理－情緒問題評估邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理情緒問題評估的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNADLsModel.html"
+                  title="StructureDefinition/HNADLsModel">居家護理－日常生活功能評估邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理日常生活功能評估的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCareRecordAPIModel.html"
+                  title="StructureDefinition/HNCareRecordAPIModel">居家護理－照護紀錄 API 邏輯模型</a>
+            </td>
+            <td>
+<p>描述照護紀錄 API 的請求資料。來源為 V5.0.16 印刷頁 81–121，所有 API 採 POST。SecretKey 僅用於傳輸驗證，不存入 FHIR。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCareRecordModel.html"
+                  title="StructureDefinition/HNCareRecordModel">居家護理－照護紀錄邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理照護紀錄的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCarePlanAPIModel.html"
+                  title="StructureDefinition/HNCarePlanAPIModel">居家護理－照護計畫 API 邏輯模型</a>
+            </td>
+            <td>
+<p>描述照護計畫 API 的請求資料。來源為 V5.0.16 印刷頁 75–80，所有 API 採 POST。SecretKey 僅用於傳輸驗證，不存入 FHIR。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNMeasuresModel.html"
+                  title="StructureDefinition/HNMeasuresModel">居家護理－照護計畫措施邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理照護計畫措施的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNTargetsModel.html"
+                  title="StructureDefinition/HNTargetsModel">居家護理－照護計畫目標邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理照護計畫目標的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCarePlanCloseAPIModel.html"
+                  title="StructureDefinition/HNCarePlanCloseAPIModel">居家護理－照護計畫結案 API 邏輯模型</a>
+            </td>
+            <td>
+<p>描述照護計畫結案 API 的請求資料。來源為 V5.0.16 印刷頁 133–135，所有 API 採 POST。SecretKey 僅用於傳輸驗證，不存入 FHIR。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCarePlanCloseModel.html"
+                  title="StructureDefinition/HNCarePlanCloseModel">居家護理－照護計畫結案邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理照護計畫結案的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNEvaluationsModel.html"
+                  title="StructureDefinition/HNEvaluationsModel">居家護理－照護計畫評值紀錄邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理照護計畫評值紀錄的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNVitalSignAPIModel.html"
+                  title="StructureDefinition/HNVitalSignAPIModel">居家護理－生命徵象 API 邏輯模型</a>
+            </td>
+            <td>
+<p>描述生命徵象 API 的請求資料。來源為 V5.0.16 印刷頁 136–138，所有 API 採 POST。SecretKey 僅用於傳輸驗證，不存入 FHIR。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNVitalSignModel.html"
+                  title="StructureDefinition/HNVitalSignModel">居家護理－生命徵象邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理生命徵象的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNPainEvaluationsModel.html"
+                  title="StructureDefinition/HNPainEvaluationsModel">居家護理－疼痛評估邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理疼痛評估的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNMedicalHistoriesModel.html"
+                  title="StructureDefinition/HNMedicalHistoriesModel">居家護理－疾病史評估邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理疾病史評估的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNMNASFsModel.html"
+                  title="StructureDefinition/HNMNASFsModel">居家護理－簡易營養評估邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理簡易營養評估的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNDrugSafetiesModel.html"
+                  title="StructureDefinition/HNDrugSafetiesModel">居家護理－藥物安全性評估邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理藥物安全性評估的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNSOFsModel.html"
+                  title="StructureDefinition/HNSOFsModel">居家護理－衰弱評估邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理衰弱評估的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNDementiasModel.html"
+                  title="StructureDefinition/HNDementiasModel">居家護理－認知功能評估邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理認知功能評估的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNFallRisksModel.html"
+                  title="StructureDefinition/HNFallRisksModel">居家護理－跌倒危險性評估邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理跌倒危險性評估的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNBodyEvaluationsModel.html"
+                  title="StructureDefinition/HNBodyEvaluationsModel">居家護理－身體評估評估邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理身體評估評估的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCaseSummaryAPIModel.html"
+                  title="StructureDefinition/HNCaseSummaryAPIModel">居家護理－需求摘要 API 邏輯模型</a>
+            </td>
+            <td>
+<p>描述需求摘要 API 的請求資料。來源為 V5.0.16 印刷頁 71–74，所有 API 採 POST。SecretKey 僅用於傳輸驗證，不存入 FHIR。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCaseSummaryModel.html"
+                  title="StructureDefinition/HNCaseSummaryModel">居家護理－需求摘要邏輯模型</a>
+            </td>
+            <td>
+<p>描述居家護理需求摘要的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-LTCCMSModel.html"
                   title="StructureDefinition/LTCCMSModel">照顧管理評估量表邏輯模型</a>
             </td>
@@ -318,6 +676,33 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>注意：各縣市轉介單格式可能有所不同，此邏輯模型將於後續版本逐步納入各縣市初篩表/轉介單格式並進行整合。</p>
 </td>
          </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCFeeAuditDetailModel.html"
+                  title="StructureDefinition/LTCFeeAuditDetailModel">長照支付審查－分案審核明細邏輯模型</a>
+            </td>
+            <td>
+<p>此邏輯模型以《衛生福利部 支付審核系統 API 規格說明書（照管平台）v2.2.1》「五、(查詢B)分案審核明細查詢」為基礎，用以描述分案審核明細查詢之傳送資料與回覆明細的資料結構與欄位準備指引。需先執行（查詢A）取得案件之核銷案號、核銷狀況與總表版次，當為新核銷案號或核銷狀況、總表版次有異動時，才執行（查詢B）取得該案件之明細資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCFeeAuditStatusModel.html"
+                  title="StructureDefinition/LTCFeeAuditStatusModel">長照支付審查－分案審核狀態與交易處理結果邏輯模型</a>
+            </td>
+            <td>
+<p>此邏輯模型以衛生福利部支付審核系統（照管平台）API 規格說明書為基礎，用以描述服務單位各分案審核狀態查詢（查詢A）、服務紀錄刪除（ObjDel）、申報確認通知（appCompletionNotice）、撤回服務記錄（appCancel）及取消交易單處理結果回報（CancelResultResponse）之資料結構與欄位準備指引。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCFeeApplyModel.html"
+                  title="StructureDefinition/LTCFeeApplyModel">長照支付審查－服務記錄申報邏輯模型</a>
+            </td>
+            <td>
+<p>此邏輯模型以衛生福利部「支付審核系統 API 規格說明書（照管平台）v2.2.1」之「服務記錄申報 (FeeApply)」傳送資料為基礎，完整描述服務提供單位向支付審核系統申報個案服務紀錄時所需的資料結構與欄位準備指引。每個交易序號每次申報最多 5000 筆個案服務紀錄；每筆服務記錄具唯一的識別碼 (objid)，識別碼不存在時新增服務紀錄，已存在時更新服務紀錄。欄位之必填規則除傳送資料表所標示者外，另依規格書「表1: 支付碼必填欄位一覽表」隨照顧組合代碼 (govItemCd) 而異，屬條件必填，故於本模型中一律以 0..1 表示並於定義中說明條件。</p>
+</td>
+         </tr>
       </tbody>
    </table>
    <a name="3"> </a>
@@ -326,6 +711,222 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hah-intake-assessment.html"
+                  title="Questionnaire/hah-intake-assessment">在宅急症收案評估問卷</a>
+            </td>
+            <td>
+<p>本 IG 定義的收案資料交換表單；正式計畫條件須依實際採用的版本評估。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-staffegy.html" title="Questionnaire/hn-staffegy">居家護理－人員緊急事件問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 人員緊急事件的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-basedata.html" title="Questionnaire/hn-basedata">居家護理－個案基本資料問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 個案基本資料的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-caseclose.html"
+                  title="Questionnaire/hn-caseclose">居家護理－個案結案問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 個案結案的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-healthyhabits.html"
+                  title="Questionnaire/hn-healthyhabits">居家護理－健康紀錄評估問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 健康紀錄評估的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-casedesc.html" title="Questionnaire/hn-casedesc">居家護理－共照紀錄問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 共照紀錄的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-pressureinjuries.html"
+                  title="Questionnaire/hn-pressureinjuries">居家護理－壓力性損傷危險評估問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 壓力性損傷危險評估的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-iadls.html" title="Questionnaire/hn-iadls">居家護理－工具性日常生活活動功能評估問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 工具性日常生活活動功能評估的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-geriatricdepressionscales.html"
+                  title="Questionnaire/hn-geriatricdepressionscales">居家護理－情緒問題評估問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 情緒問題評估的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-adls.html" title="Questionnaire/hn-adls">居家護理－日常生活功能評估問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 日常生活功能評估的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-carerecord.html"
+                  title="Questionnaire/hn-carerecord">居家護理－照護紀錄問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 照護紀錄的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-measures.html" title="Questionnaire/hn-measures">居家護理－照護計畫措施問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 照護計畫措施的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-targets.html" title="Questionnaire/hn-targets">居家護理－照護計畫目標問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 照護計畫目標的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-careplanclose.html"
+                  title="Questionnaire/hn-careplanclose">居家護理－照護計畫結案問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 照護計畫結案的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-evaluations.html"
+                  title="Questionnaire/hn-evaluations">居家護理－照護計畫評值紀錄問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 照護計畫評值紀錄的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-vitalsign.html"
+                  title="Questionnaire/hn-vitalsign">居家護理－生命徵象問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 生命徵象的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-painevaluations.html"
+                  title="Questionnaire/hn-painevaluations">居家護理－疼痛評估問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 疼痛評估的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-medicalhistories.html"
+                  title="Questionnaire/hn-medicalhistories">居家護理－疾病史評估問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 疾病史評估的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-mnasfs.html" title="Questionnaire/hn-mnasfs">居家護理－簡易營養評估問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 簡易營養評估的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-drugsafeties.html"
+                  title="Questionnaire/hn-drugsafeties">居家護理－藥物安全性評估問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 藥物安全性評估的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-sofs.html" title="Questionnaire/hn-sofs">居家護理－衰弱評估問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 衰弱評估的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-dementias.html"
+                  title="Questionnaire/hn-dementias">居家護理－認知功能評估問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 認知功能評估的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-fallrisks.html"
+                  title="Questionnaire/hn-fallrisks">居家護理－跌倒危險性評估問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 跌倒危險性評估的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-bodyevaluations.html"
+                  title="Questionnaire/hn-bodyevaluations">居家護理－身體評估評估問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 身體評估評估的問題結構與輸入型態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-hn-casesummary.html"
+                  title="Questionnaire/hn-casesummary">居家護理－需求摘要問卷</a>
+            </td>
+            <td>
+<p>V5.0.16 需求摘要的問題結構與輸入型態。</p>
+</td>
+         </tr>
          <tr>
             <td style="column-width:30%">
                <a href="Questionnaire-questionnaire-aa02-example.html"
@@ -379,6 +980,231 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>本文件為『個案總查詢（Case Summary）』之 CS100 專用版本，
 其內容與章節配置對應衛生福利部照顧服務管理資訊平臺功能
 《CS100 個案總查詢》之查詢結果欄位與區塊。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHPatient.html"
+                  title="StructureDefinition/HAHPatient">在宅急症－個案</a>
+            </td>
+            <td>
+<p>正式收案個案的身分與聯絡資料。沿用長照個案識別、地址與緊急聯絡人；收案狀態另記錄於 EpisodeOfCare。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHVisitEncounter.html"
+                  title="StructureDefinition/HAHVisitEncounter">在宅急症－單次訪視</a>
+            </td>
+            <td>
+<p>每次實地、視訊或電話評估建立一筆訪視，參照整段照護與收案療程。預約或通知不能當成已完成訪視。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHEncounter.html"
+                  title="StructureDefinition/HAHEncounter">在宅急症－就診基礎</a>
+            </td>
+            <td>
+<p>在宅急症的共同就診資料，包含個案、療程、服務機構與實際照護期間。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHBundleSummary.html"
+                  title="StructureDefinition/HAHBundleSummary">在宅急症－摘要文件 Bundle</a>
+            </td>
+            <td>
+<p>以文件 Bundle 交換結案或轉銜摘要。第一筆為 Composition，並包含個案、療程、整段照護及所有文件內參照的資源。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHEpisodeOfCare.html"
+                  title="StructureDefinition/HAHEpisodeOfCare">在宅急症－收案療程</a>
+            </td>
+            <td>
+<p>每次收案建立一筆療程，記錄負責機構、期間、診斷與團隊。再次收案建立新的療程，仍參照同一個案。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHAssessmentResponse.html"
+                  title="StructureDefinition/HAHAssessmentResponse">在宅急症－收案評估回覆</a>
+            </td>
+            <td>
+<p>記錄評估依據、居家環境、照顧者支援與收案建議。此為本 IG 的交換表單，不宣稱為健保署官方收案表。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHAdmissionEncounter.html"
+                  title="StructureDefinition/HAHAdmissionEncounter">在宅急症－整段照護</a>
+            </td>
+            <td>
+<p>表達本次在宅急症的整段照護，供每次訪視透過 partOf 參照。IMP 表示本資料集的在宅住院照護分類，不代表照護地點在醫院。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHServiceRequest.html"
+                  title="StructureDefinition/HAHServiceRequest">在宅急症－服務請求</a>
+            </td>
+            <td>
+<p>沿用長照服務請求，表達照會、檢驗、處置或轉介。項目應使用適切標準代碼，無適切概念時才使用本地分類並補充文字。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHDiagnosticReport.html"
+                  title="StructureDefinition/HAHDiagnosticReport">在宅急症－檢驗報告</a>
+            </td>
+            <td>
+<p>以一份報告串聯醫囑、檢體與檢驗結果，可附原始報告檔案。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHObservationLab.html"
+                  title="StructureDefinition/HAHObservationLab">在宅急症－檢驗結果</a>
+            </td>
+            <td>
+<p>一筆檢驗項目一筆結果。保留檢體、方法、單位與參考區間；缺少結果時填 dataAbsentReason，不填零值代替。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHCommunication.html"
+                  title="StructureDefinition/HAHCommunication">在宅急症－照會與交班</a>
+            </td>
+            <td>
+<p>沿用服務活動紀錄，交換照會回覆、交班與衛教內容。接收訊息不代表已完成待辦工作。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHConsent.html"
+                  title="StructureDefinition/HAHConsent">在宅急症－照護同意</a>
+            </td>
+            <td>
+<p>記錄照護同意的狀態、範圍、時間及來源文件。此資源不取代可執行的醫囑，也不以一般同意代替 DNR 決定。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHCareTeam.html"
+                  title="StructureDefinition/HAHCareTeam">在宅急症－照護團隊</a>
+            </td>
+            <td>
+<p>記錄主責及共照人員、機構、角色與參與期間。既有長照團隊不允許機構成員，因此由共同 TW Core 父層衍生。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHVisitTask.html"
+                  title="StructureDefinition/HAHVisitTask">在宅急症－照護工作</a>
+            </td>
+            <td>
+<p>記錄訪視、送藥等執行工作。因長照任務的 owner 不允許 CareTeam，此處由 FHIR Task 衍生以支援團隊指派。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHGoal.html"
+                  title="StructureDefinition/HAHGoal">在宅急症－照護目標</a>
+            </td>
+            <td>
+<p>記錄個案預期達到的結果、期限及評值。照護問題應另記錄於 Condition，不以目標取代問題。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHCarePlan.html"
+                  title="StructureDefinition/HAHCarePlan">在宅急症－照護計畫</a>
+            </td>
+            <td>
+<p>沿用長照照顧計畫，串聯本次療程的病情、目標、服務請求及給藥處方。實際執行結果另以臨床資源記錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHDocumentReference.html"
+                  title="StructureDefinition/HAHDocumentReference">在宅急症－照護附件</a>
+            </td>
+            <td>
+<p>記錄照片、同意文件、報告或其他照護附件的索引、作者與就診脈絡。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHCompositionSummary.html"
+                  title="StructureDefinition/HAHCompositionSummary">在宅急症－結案與轉銜摘要</a>
+            </td>
+            <td>
+<p>彙整本次療程與接續照護所需的資訊。每個章節均提供可閱讀文字，資料不足時說明未知或未評估，不得推定為無。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHMedicationAdministration.html"
+                  title="StructureDefinition/HAHMedicationAdministration">在宅急症－給藥與輸注</a>
+            </td>
+            <td>
+<p>記錄實際給藥時間點或輸注期間。既有長照給藥強制 effectiveDateTime，因此由 FHIR 父層衍生以支援 effectivePeriod 及未給藥。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHMedicationRequest.html"
+                  title="StructureDefinition/HAHMedicationRequest">在宅急症－給藥處方</a>
+            </td>
+            <td>
+<p>記錄藥品、用法、劑量、途徑、頻率與處方狀態。實際是否給藥由給藥紀錄表達。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHClinicalImpression.html"
+                  title="StructureDefinition/HAHClinicalImpression">在宅急症－臨床評估</a>
+            </td>
+            <td>
+<p>記錄評估人員對病情的判斷、發現與摘要。生命徵象、檢驗、已執行處置及費用不應只以 JSON 字串塞入 note。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHProcedure.html"
+                  title="StructureDefinition/HAHProcedure">在宅急症－處置紀錄</a>
+            </td>
+            <td>
+<p>沿用長照照護活動，記錄抽痰、傷口照護或管路更換等實際處置。給藥事件使用 MedicationAdministration。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHCondition.html"
+                  title="StructureDefinition/HAHCondition">在宅急症－診斷與照護問題</a>
+            </td>
+            <td>
+<p>記錄本次急症、共病或照護問題。主次診斷的角色與順位記錄在 Encounter 或 EpisodeOfCare 的 diagnosis。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHAllergyIntolerance.html"
+                  title="StructureDefinition/HAHAllergyIntolerance">在宅急症－過敏資訊</a>
+            </td>
+            <td>
+<p>記錄過敏物質、確認狀態及反應。無紀錄不能推定無過敏；未評估與已確認無過敏應分開表達。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HAHDevice.html"
+                  title="StructureDefinition/HAHDevice">在宅急症－量測設備</a>
+            </td>
+            <td>
+<p>記錄居家量測設備的識別與類型。一般設備編號使用 identifier；只有正式 UDI 才填入 udiCarrier。</p>
 </td>
          </tr>
          <tr>
@@ -496,6 +1322,321 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現長照機構住民的跌倒紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNStaffEgyResponse.html"
+                  title="StructureDefinition/HNStaffEgyResponse">居家護理－人員緊急事件表單</a>
+            </td>
+            <td>
+<p>記錄人員緊急事件的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNAPITask.html"
+                  title="StructureDefinition/HNAPITask">居家護理－介接作業</a>
+            </td>
+            <td>
+<p>記錄上傳及查詢工作。上傳成功僅表示已接收；須依後續處理結果另行更新任務狀態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNOperationOutcome.html"
+                  title="StructureDefinition/HNOperationOutcome">居家護理－介接訊息</a>
+            </td>
+            <td>
+<p>表達接收或處理訊息。原規範未列出 GetLog 回覆結構及完整錯誤碼，因此不自訂假定的錯誤碼表。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNPatient.html"
+                  title="StructureDefinition/HNPatient">居家護理－個案</a>
+            </td>
+            <td>
+<p>沿用長照個案基本資料。機構另配發住民識別碼，來源表單記錄居護社會背景與共照名單。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNBaseDataResponse.html"
+                  title="StructureDefinition/HNBaseDataResponse">居家護理－個案基本資料表單</a>
+            </td>
+            <td>
+<p>記錄個案基本資料的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCaseCloseResponse.html"
+                  title="StructureDefinition/HNCaseCloseResponse">居家護理－個案結案表單</a>
+            </td>
+            <td>
+<p>記錄個案結案的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNHealthyHabitsResponse.html"
+                  title="StructureDefinition/HNHealthyHabitsResponse">居家護理－健康紀錄評估表單</a>
+            </td>
+            <td>
+<p>記錄健康紀錄評估的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNWound.html"
+                  title="StructureDefinition/HNWound">居家護理－傷口紀錄</a>
+            </td>
+            <td>
+<p>每個傷口建立一筆紀錄。沿用 TW Core 簡易觀察，因既有壓傷 Condition 不適用失禁性皮膚炎及其他傷口。原規範未明訂尺寸單位，不從來源數字推定單位。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCommunication.html"
+                  title="StructureDefinition/HNCommunication">居家護理－共照紀錄</a>
+            </td>
+            <td>
+<p>記錄共照人員提供的照護紀錄。沿用既有服務活動 Communication，新增收案與來源表單關聯。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCaseDescResponse.html"
+                  title="StructureDefinition/HNCaseDescResponse">居家護理－共照紀錄表單</a>
+            </td>
+            <td>
+<p>記錄共照紀錄的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNPressureInjuriesResponse.html"
+                  title="StructureDefinition/HNPressureInjuriesResponse">居家護理－壓力性損傷危險評估表單</a>
+            </td>
+            <td>
+<p>記錄壓力性損傷危險評估的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNIADLsResponse.html"
+                  title="StructureDefinition/HNIADLsResponse">居家護理－工具性日常生活活動功能評估表單</a>
+            </td>
+            <td>
+<p>記錄工具性日常生活活動功能評估的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNGeriatricDepressionScalesResponse.html"
+                  title="StructureDefinition/HNGeriatricDepressionScalesResponse">居家護理－情緒問題評估表單</a>
+            </td>
+            <td>
+<p>記錄情緒問題評估的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNEpisodeOfCare.html"
+                  title="StructureDefinition/HNEpisodeOfCare">居家護理－收案歷程</a>
+            </td>
+            <td>
+<p>以機構、個案與收案日期識別一次居護收案，結案時記錄結束日期及來源表單。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNADLsResponse.html"
+                  title="StructureDefinition/HNADLsResponse">居家護理－日常生活功能評估表單</a>
+            </td>
+            <td>
+<p>記錄日常生活功能評估的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNGoal.html"
+                  title="StructureDefinition/HNGoal">居家護理－照護目標</a>
+            </td>
+            <td>
+<p>沿用長照照顧目標，記錄目標敘述、預期達到日期及是否為主要目標。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCareRecordResponse.html"
+                  title="StructureDefinition/HNCareRecordResponse">居家護理－照護紀錄表單</a>
+            </td>
+            <td>
+<p>記錄照護紀錄的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCarePlan.html"
+                  title="StructureDefinition/HNCarePlan">居家護理－照護計畫</a>
+            </td>
+            <td>
+<p>沿用長照照顧計畫，串聯需求摘要、目標、措施與評值表單。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCarePlanTransaction.html"
+                  title="StructureDefinition/HNCarePlanTransaction">居家護理－照護計畫交易</a>
+            </td>
+            <td>
+<p>以 FHIR transaction 一次提交目標、措施、評值及其臨床資源。任一 entry 失敗時不得僅儲存部分資料。原 API 的檔案仍須依其格式另外轉換。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNMeasuresResponse.html"
+                  title="StructureDefinition/HNMeasuresResponse">居家護理－照護計畫措施表單</a>
+            </td>
+            <td>
+<p>記錄照護計畫措施的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNTargetsResponse.html"
+                  title="StructureDefinition/HNTargetsResponse">居家護理－照護計畫目標表單</a>
+            </td>
+            <td>
+<p>記錄照護計畫目標的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCarePlanCloseResponse.html"
+                  title="StructureDefinition/HNCarePlanCloseResponse">居家護理－照護計畫結案表單</a>
+            </td>
+            <td>
+<p>記錄照護計畫結案的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNEvaluationsResponse.html"
+                  title="StructureDefinition/HNEvaluationsResponse">居家護理－照護計畫評值紀錄表單</a>
+            </td>
+            <td>
+<p>記錄照護計畫評值紀錄的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNVitalSigns.html"
+                  title="StructureDefinition/HNVitalSigns">居家護理－生命徵象</a>
+            </td>
+            <td>
+<p>沿用 FHIR R4 生命徵象量測組，以 hasMember 連結既有體溫、心率、呼吸、血壓與血氧 Profile；血糖以既有血糖 Profile 與共同來源表單串聯。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNVitalSignsBundle.html"
+                  title="StructureDefinition/HNVitalSignsBundle">居家護理－生命徵象交換集合</a>
+            </td>
+            <td>
+<p>彙集同一次量測的生命徵象與血糖。量測組的 hasMember 限生命徵象 Profile，故以 Bundle 串聯既有血糖 Profile。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNVitalSignResponse.html"
+                  title="StructureDefinition/HNVitalSignResponse">居家護理－生命徵象表單</a>
+            </td>
+            <td>
+<p>記錄生命徵象的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNPainEvaluationsResponse.html"
+                  title="StructureDefinition/HNPainEvaluationsResponse">居家護理－疼痛評估表單</a>
+            </td>
+            <td>
+<p>記錄疼痛評估的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNMedicalHistoriesResponse.html"
+                  title="StructureDefinition/HNMedicalHistoriesResponse">居家護理－疾病史評估表單</a>
+            </td>
+            <td>
+<p>記錄疾病史評估的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNMNASFsResponse.html"
+                  title="StructureDefinition/HNMNASFsResponse">居家護理－簡易營養評估表單</a>
+            </td>
+            <td>
+<p>記錄簡易營養評估的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNDrugSafetiesResponse.html"
+                  title="StructureDefinition/HNDrugSafetiesResponse">居家護理－藥物安全性評估表單</a>
+            </td>
+            <td>
+<p>記錄藥物安全性評估的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNSOFsResponse.html"
+                  title="StructureDefinition/HNSOFsResponse">居家護理－衰弱評估表單</a>
+            </td>
+            <td>
+<p>記錄衰弱評估的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNDementiasResponse.html"
+                  title="StructureDefinition/HNDementiasResponse">居家護理－認知功能評估表單</a>
+            </td>
+            <td>
+<p>記錄認知功能評估的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNFallRisksResponse.html"
+                  title="StructureDefinition/HNFallRisksResponse">居家護理－跌倒危險性評估表單</a>
+            </td>
+            <td>
+<p>記錄跌倒危險性評估的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNBodyEvaluationsResponse.html"
+                  title="StructureDefinition/HNBodyEvaluationsResponse">居家護理－身體評估評估表單</a>
+            </td>
+            <td>
+<p>記錄身體評估評估的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-HNCaseSummaryResponse.html"
+                  title="StructureDefinition/HNCaseSummaryResponse">居家護理－需求摘要表單</a>
+            </td>
+            <td>
+<p>記錄需求摘要的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。</p>
 </td>
          </tr>
          <tr>
@@ -1323,6 +2464,78 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-LTCLocationFeeAuditPlace.html"
+                  title="StructureDefinition/LTCLocationFeeAuditPlace">長照支付審查－交通接送起訖地</a>
+            </td>
+            <td>
+<p>此 Location 以衛生福利部支付審核系統的交通接送資料為基礎，用以表述個案接送的出發地、目的地及經緯度。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCClaimFeeApply.html"
+                  title="StructureDefinition/LTCClaimFeeApply">長照支付審查－個案服務紀錄申報</a>
+            </td>
+            <td>
+<p>此 Claim 以衛生福利部支付審核系統的服務記錄申報資料為基礎，用以表述一筆個案服務紀錄的申報內容。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCClaimResponseFeeAudit.html"
+                  title="StructureDefinition/LTCClaimResponseFeeAudit">長照支付審查－分案審核明細</a>
+            </td>
+            <td>
+<p>此 ClaimResponse 以衛生福利部支付審核系統的分案審核明細查詢結果為基礎，用以表述一個核銷案號的審核結果。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCBundleFeeAuditResponse.html"
+                  title="StructureDefinition/LTCBundleFeeAuditResponse">長照支付審查－分案審核明細回覆打包</a>
+            </td>
+            <td>
+<p>此 Bundle 以衛生福利部支付審核系統的分案審核明細查詢結果為基礎，用以表述單一核銷案號的審核明細回覆結構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCBundleFeeAuditStatus.html"
+                  title="StructureDefinition/LTCBundleFeeAuditStatus">長照支付審查－分案審核狀態回覆打包</a>
+            </td>
+            <td>
+<p>此 Bundle 以衛生福利部支付審核系統的服務單位各分案審核狀態查詢結果為基礎，用以表述申報交易與分案審核狀態的回覆結構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCBundleFeeApply.html"
+                  title="StructureDefinition/LTCBundleFeeApply">長照支付審查－服務記錄申報文件打包</a>
+            </td>
+            <td>
+<p>此 Bundle 以衛生福利部支付審核系統的服務記錄申報資料為基礎，用以表述一次申報交易的資料打包結構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCTaskFeeAudit.html"
+                  title="StructureDefinition/LTCTaskFeeAudit">長照支付審查－申報交易任務</a>
+            </td>
+            <td>
+<p>此 Task 以衛生福利部支付審核系統的申報交易資料為基礎，用以表述申報確認、服務紀錄刪除、撤回與取消結果回報等任務及處理狀態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LTCOperationOutcomeFeeAudit.html"
+                  title="StructureDefinition/LTCOperationOutcomeFeeAudit">長照支付審查－申報檢核結果</a>
+            </td>
+            <td>
+<p>此 OperationOutcome 以衛生福利部支付審核系統的回覆資料為基礎，用以表述服務紀錄的檢核錯誤與申報處理結果。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-LTC-EpisodeOfCare-CS100.html"
                   title="StructureDefinition/LTC-EpisodeOfCare-CS100">長照案件（CS100 專用版）</a>
             </td>
@@ -1382,6 +2595,78 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>此 Extension 用於表示長照服務項目的單價金額。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ExtHAHOutcome.html"
+                  title="StructureDefinition/ExtHAHOutcome">在宅急症－療程結束原因</a>
+            </td>
+            <td>
+<p>療程結束時填入原因。其他原因應另填文字說明。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ExtHAHEpisode.html"
+                  title="StructureDefinition/ExtHAHEpisode">在宅急症－療程關聯</a>
+            </td>
+            <td>
+<p>參照本次在宅急症收案。用於沒有原生 EpisodeOfCare 欄位的資源；不同次收案應參照不同資源。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ExtHAHVisitMode.html"
+                  title="StructureDefinition/ExtHAHVisitMode">在宅急症－訪視方式</a>
+            </td>
+            <td>
+<p>填入此次訪視為實地、視訊或電話評估。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ExtHNMainTarget.html"
+                  title="StructureDefinition/ExtHNMainTarget">居家護理－主要目標</a>
+            </td>
+            <td>
+<p>填入此目標是否為主要照護目標。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ExtHNSourceForm.html"
+                  title="StructureDefinition/ExtHNSourceForm">居家護理－來源表單</a>
+            </td>
+            <td>
+<p>參照提供此資源內容的結構化表單。保留原始評估、來源身分及補充說明。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ExtHNCollectionUpdate.html"
+                  title="StructureDefinition/ExtHNCollectionUpdate">居家護理－共照團隊更新指示</a>
+            </td>
+            <td>
+<p>記錄來源要求保留、取代或清空共照名單。接收端先讀取指示，再更新指定名單。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ExtHNMeasureStop.html"
+                  title="StructureDefinition/ExtHNMeasureStop">居家護理－措施停止資訊</a>
+            </td>
+            <td>
+<p>措施停止時填入停止日期、原因與護理人員。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ExtHNEpisode.html"
+                  title="StructureDefinition/ExtHNEpisode">居家護理－收案關聯</a>
+            </td>
+            <td>
+<p>參照此次收案的 EpisodeOfCare。以機構、個案身分證字號及收案日期區分不同次收案。</p>
 </td>
          </tr>
          <tr>
@@ -1476,6 +2761,33 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-Ext-TW-LTC-FeeAudit-AuditSummary.html"
+                  title="StructureDefinition/Ext-TW-LTC-FeeAudit-AuditSummary">長照支付審查－分案審核統計與承辦資訊</a>
+            </td>
+            <td>
+<p>此 Extension 用於在長照支付審查之分案審核明細（ClaimResponse）中，結構化承載「(查詢B)分案審核明細查詢」回覆明細之分案層級統計值、暫付申請狀態、分案已處理之單號與承辦人員：服務記錄筆數（records）、個案數（cases）、核定個案數（approve_case_num）、核定服務記錄數（approve_record_count）、暫付申請狀態（temp_payment_status）、分案已處理之單號（trans_nos，多筆）與承辦人員（audit_man）。上述欄位於 FHIR R4 之 ClaimResponse 均無語意相符之標準元素，故以本 Extension 承載。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Ext-TW-LTC-FeeAudit-RecordRef.html"
+                  title="StructureDefinition/Ext-TW-LTC-FeeAudit-RecordRef">長照支付審查－服務記錄識別資訊</a>
+            </td>
+            <td>
+<p>此 Extension 用於在長照支付審查之分案審核明細（ClaimResponse）中，結構化承載每一筆服務記錄的識別資訊：服務記錄識別碼（objid／ref_objid，長度 20）、來源系統別（source_system／ref_source_system，長度 20）與申報交易序號（trans_no，長度 10）。適用於審核通過服務記錄（ClaimResponse.item）、錯誤服務記錄（ClaimResponse.error）與 A 碼加成資料區（ClaimResponse.addItem，此時承載所加成之審核通過服務記錄之 ref_objid 與 ref_source_system）。因 ClaimResponse 之各 itemSequence 元素於 FHIR R4 為 positiveInt 且語意上僅能指向單一 Claim 內之項目序號，無法承載跨 Claim 之字串識別碼，故以本 Extension 表達。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Ext-TW-LTC-FeeAudit-DocUrl.html"
+                  title="StructureDefinition/Ext-TW-LTC-FeeAudit-DocUrl">長照支付審查－清冊文件下載路徑</a>
+            </td>
+            <td>
+<p>此 Extension 用於表示長照支付審查「(查詢B)分案審核明細查詢」回覆明細中各式總表與清冊檔案的下載路徑，包含暫付總表（temp_payment_doc_url）、總表（case_summary_notice_url）、清冊（case_svc_list_url）、清冊 EXCEL（case_svc_list_excel_url）、A 碼清冊（case_a_svc_list_url）、A 碼清冊 EXCEL（case_a_svc_list_excel_url）、申請記錄不通過清冊（case_err_list_url）及申請記錄不通過 EXCEL 清冊（case_err_list_excel_url）。每一份文件以一個本 Extension 實例表達，並以子元素 docType 標示文件類別、url 標示下載路徑。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-ExtPatientEducationStatus-TWLTC.html"
                   title="StructureDefinition/ExtPatientEducationStatus-TWLTC">長照機構住民教育程度</a>
             </td>
@@ -1520,6 +2832,63 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="ValueSet-hah-summary-type.html" title="ValueSet/hah-summary-type">在宅急症－摘要種類值集</a>
+            </td>
+            <td>
+<p>結案或轉銜摘要。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hah-section.html" title="ValueSet/hah-section">在宅急症－摘要章節值集</a>
+            </td>
+            <td>
+<p>摘要文件中的臨床章節。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hah-eligibility.html" title="ValueSet/hah-eligibility">在宅急症－收案評估結果值集</a>
+            </td>
+            <td>
+<p>本次收案評估的建議結果。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hah-service.html" title="ValueSet/hah-service">在宅急症－服務項目值集</a>
+            </td>
+            <td>
+<p>服務請求與工作可用的本地分類；詳細檢驗或處置仍應使用適切標準代碼。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hah-communication.html"
+                  title="ValueSet/hah-communication">在宅急症－溝通類型值集</a>
+            </td>
+            <td>
+<p>區分照會、交班與衛教內容。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hah-outcome.html" title="ValueSet/hah-outcome">在宅急症－療程結束原因值集</a>
+            </td>
+            <td>
+<p>本次療程已結束時填寫的原因。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hah-visit-mode.html" title="ValueSet/hah-visit-mode">在宅急症－訪視方式值集</a>
+            </td>
+            <td>
+<p>實地、視訊或電話評估。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ValueSet-AddressUseVS-TWLTC.html"
                   title="ValueSet/AddressUseVS-TWLTC">地址用途擴展值集</a>
             </td>
@@ -1543,6 +2912,1226 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>個案的居住狀況</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-api.html" title="ValueSet/hn-api">居家護理－API 作業值集</a>
+            </td>
+            <td>
+<p>限定 V5.0.16 的十二支 API 名稱。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-a946985c2125.html"
+                  title="ValueSet/hn-vs-a946985c2125">居家護理－主要照顧時間選項</a>
+            </td>
+            <td>
+<p>限定主要照顧時間可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-738f974cf008.html"
+                  title="ValueSet/hn-vs-738f974cf008">居家護理－主要照顧者關係選項</a>
+            </td>
+            <td>
+<p>限定主要照顧者關係可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-9bf58092b1d4.html"
+                  title="ValueSet/hn-vs-9bf58092b1d4">居家護理－主要職業選項</a>
+            </td>
+            <td>
+<p>限定主要職業可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-b63e1293c409.html"
+                  title="ValueSet/hn-vs-b63e1293c409">居家護理－主要醫療決定者關係選項</a>
+            </td>
+            <td>
+<p>限定主要醫療決定者關係可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-4abebe47a94c.html"
+                  title="ValueSet/hn-vs-4abebe47a94c">居家護理－事件類型選項</a>
+            </td>
+            <td>
+<p>限定事件類型可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-543807b1d856.html"
+                  title="ValueSet/hn-vs-543807b1d856">居家護理－交通選項</a>
+            </td>
+            <td>
+<p>限定交通可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-2a3bd76ba6eb.html"
+                  title="ValueSet/hn-vs-2a3bd76ba6eb">居家護理－今天是幾年幾月幾日？__年__月__日選項</a>
+            </td>
+            <td>
+<p>限定今天是幾年幾月幾日？__年__月__日可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-38762eb1c742.html"
+                  title="ValueSet/hn-vs-38762eb1c742">居家護理－使用資源多選選項</a>
+            </td>
+            <td>
+<p>限定使用資源多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-082869c8d896.html"
+                  title="ValueSet/hn-vs-082869c8d896">居家護理－個案類型選項</a>
+            </td>
+            <td>
+<p>限定個案類型可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-eee6be407d0e.html"
+                  title="ValueSet/hn-vs-eee6be407d0e">居家護理－假牙狀況多選選項</a>
+            </td>
+            <td>
+<p>限定假牙狀況多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-a051b2c062af.html"
+                  title="ValueSet/hn-vs-a051b2c062af">居家護理－假牙狀況選項</a>
+            </td>
+            <td>
+<p>限定假牙狀況可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-15ba9c15ead1.html"
+                  title="ValueSet/hn-vs-15ba9c15ead1">居家護理－備食選項</a>
+            </td>
+            <td>
+<p>限定備食可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-wound-category.html"
+                  title="ValueSet/hn-wound-category">居家護理－傷口分類</a>
+            </td>
+            <td>
+<p>V5.0.16 傷口分類；依分類選擇等級。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-ab16e9d81e7b.html"
+                  title="ValueSet/hn-vs-ab16e9d81e7b">居家護理－傷口分類選項</a>
+            </td>
+            <td>
+<p>限定傷口分類可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-wound-level.html" title="ValueSet/hn-wound-level">居家護理－傷口等級</a>
+            </td>
+            <td>
+<p>V5.0.16 傷口等級；依分類選擇等級。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-de533dbea66c.html"
+                  title="ValueSet/hn-vs-de533dbea66c">居家護理－傷口等級選項</a>
+            </td>
+            <td>
+<p>限定傷口等級可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-update-action.html" title="ValueSet/hn-update-action">居家護理－共照名單更新方式</a>
+            </td>
+            <td>
+<p>區分未填或 null 的保留、非空陣列的取代及空陣列的清空。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-collection.html" title="ValueSet/hn-collection">居家護理－共照名單種類</a>
+            </td>
+            <td>
+<p>指定需更新的共照名單。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-415683173294.html"
+                  title="ValueSet/hn-vs-415683173294">居家護理－口腔外觀多選選項</a>
+            </td>
+            <td>
+<p>限定口腔外觀多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-7c98e63372ac.html"
+                  title="ValueSet/hn-vs-7c98e63372ac">居家護理－口腔外觀選項</a>
+            </td>
+            <td>
+<p>限定口腔外觀可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-85c814c9b8ba.html"
+                  title="ValueSet/hn-vs-85c814c9b8ba">居家護理－吸菸狀態選項</a>
+            </td>
+            <td>
+<p>限定吸菸狀態可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-a5f17d46becb.html"
+                  title="ValueSet/hn-vs-a5f17d46becb">居家護理－嚼食檳榔狀態選項</a>
+            </td>
+            <td>
+<p>限定嚼食檳榔狀態可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-8c7bcb320a01.html"
+                  title="ValueSet/hn-vs-8c7bcb320a01">居家護理－大便選項</a>
+            </td>
+            <td>
+<p>限定大便可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-5a0da2e50fde.html"
+                  title="ValueSet/hn-vs-5a0da2e50fde">居家護理－如廁選項</a>
+            </td>
+            <td>
+<p>限定如廁可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-924b837448d2.html"
+                  title="ValueSet/hn-vs-924b837448d2">居家護理－婚姻狀況選項</a>
+            </td>
+            <td>
+<p>限定婚姻狀況可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-f6130a2de850.html"
+                  title="ValueSet/hn-vs-f6130a2de850">居家護理－宗教信仰選項</a>
+            </td>
+            <td>
+<p>限定宗教信仰可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-b455f8b9ce05.html"
+                  title="ValueSet/hn-vs-b455f8b9ce05">居家護理－家務選項</a>
+            </td>
+            <td>
+<p>限定家務可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-4a8dcdb04d9b.html"
+                  title="ValueSet/hn-vs-4a8dcdb04d9b">居家護理－家庭經濟狀況選項</a>
+            </td>
+            <td>
+<p>限定家庭經濟狀況可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-d20974b4a161.html"
+                  title="ValueSet/hn-vs-d20974b4a161">居家護理－小便選項</a>
+            </td>
+            <td>
+<p>限定小便可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-d93b34f7b736.html"
+                  title="ValueSet/hn-vs-d93b34f7b736">居家護理－居住所選項</a>
+            </td>
+            <td>
+<p>限定居住所可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-00697b86a7bc.html"
+                  title="ValueSet/hn-vs-00697b86a7bc">居家護理－左上肢選項</a>
+            </td>
+            <td>
+<p>限定左上肢可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-d782d810cfdd.html"
+                  title="ValueSet/hn-vs-d782d810cfdd">居家護理－心臟問題(只包含心臟)選項</a>
+            </td>
+            <td>
+<p>限定心臟問題(只包含心臟)可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-c8f650cb37b1.html"
+                  title="ValueSet/hn-vs-c8f650cb37b1">居家護理－性別選項</a>
+            </td>
+            <td>
+<p>限定性別可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-94d2d2fdf018.html"
+                  title="ValueSet/hn-vs-94d2d2fdf018">居家護理－成員職稱選項</a>
+            </td>
+            <td>
+<p>限定成員職稱可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-7f8a5cfdf9c9.html"
+                  title="ValueSet/hn-vs-7f8a5cfdf9c9">居家護理－排便型態選項</a>
+            </td>
+            <td>
+<p>限定排便型態可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-0467df08a056.html"
+                  title="ValueSet/hn-vs-0467df08a056">居家護理－排便輔助多選選項</a>
+            </td>
+            <td>
+<p>限定排便輔助多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-a88d0ac6ee1a.html"
+                  title="ValueSet/hn-vs-a88d0ac6ee1a">居家護理－排便顏色選項</a>
+            </td>
+            <td>
+<p>限定排便顏色可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-b5e899beaa3a.html"
+                  title="ValueSet/hn-vs-b5e899beaa3a">居家護理－排尿型態多選選項</a>
+            </td>
+            <td>
+<p>限定排尿型態多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-5cb9bbd6d620.html"
+                  title="ValueSet/hn-vs-5cb9bbd6d620">居家護理－排尿型態選項</a>
+            </td>
+            <td>
+<p>限定排尿型態可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-ec686161641f.html"
+                  title="ValueSet/hn-vs-ec686161641f">居家護理－排尿輔助多選選項</a>
+            </td>
+            <td>
+<p>限定排尿輔助多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-c0e4f2d08eec.html"
+                  title="ValueSet/hn-vs-c0e4f2d08eec">居家護理－排尿顏色選項</a>
+            </td>
+            <td>
+<p>限定排尿顏色可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-b0ba220a4535.html"
+                  title="ValueSet/hn-vs-b0ba220a4535">居家護理－損傷類型選項</a>
+            </td>
+            <td>
+<p>限定損傷類型可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-bcd0a25d02b9.html"
+                  title="ValueSet/hn-vs-bcd0a25d02b9">居家護理－摩擦力/剪力選項</a>
+            </td>
+            <td>
+<p>限定摩擦力/剪力可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-dfa44a5bba0b.html"
+                  title="ValueSet/hn-vs-dfa44a5bba0b">居家護理－操作項目與流程選項</a>
+            </td>
+            <td>
+<p>限定操作項目與流程可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-ef3233b113ad.html"
+                  title="ValueSet/hn-vs-ef3233b113ad">居家護理－收案來源選項</a>
+            </td>
+            <td>
+<p>限定收案來源可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-8bcd09f153b7.html"
+                  title="ValueSet/hn-vs-8bcd09f153b7">居家護理－教育程度選項</a>
+            </td>
+            <td>
+<p>限定教育程度可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-523a43c4a46a.html"
+                  title="ValueSet/hn-vs-523a43c4a46a">居家護理－是否存在多重用藥問題選項</a>
+            </td>
+            <td>
+<p>限定是否存在多重用藥問題可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-58e4d598f859.html"
+                  title="ValueSet/hn-vs-58e4d598f859">居家護理－是否選項</a>
+            </td>
+            <td>
+<p>限定是否可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-19264db8df7b.html"
+                  title="ValueSet/hn-vs-19264db8df7b">居家護理－有無與未知選項</a>
+            </td>
+            <td>
+<p>限定有無與未知可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-49fe20230ec3.html"
+                  title="ValueSet/hn-vs-49fe20230ec3">居家護理－有無選項</a>
+            </td>
+            <td>
+<p>限定有無可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-1c644096303f.html"
+                  title="ValueSet/hn-vs-1c644096303f">居家護理－有輔助器多選選項</a>
+            </td>
+            <td>
+<p>限定有輔助器多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-8aa8b9aed3b2.html"
+                  title="ValueSet/hn-vs-8aa8b9aed3b2">居家護理－有輔助器選項</a>
+            </td>
+            <td>
+<p>限定有輔助器可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-c8a0ace9ffad.html"
+                  title="ValueSet/hn-vs-c8a0ace9ffad">居家護理－服務項目多選選項</a>
+            </td>
+            <td>
+<p>限定服務項目多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-cf479df80e62.html"
+                  title="ValueSet/hn-vs-cf479df80e62">居家護理－服用頻率選項</a>
+            </td>
+            <td>
+<p>限定服用頻率可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-1c0dbbd93870.html"
+                  title="ValueSet/hn-vs-1c0dbbd93870">居家護理－服藥選項</a>
+            </td>
+            <td>
+<p>限定服藥可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-076f2d014436.html"
+                  title="ValueSet/hn-vs-076f2d014436">居家護理－樓梯選項</a>
+            </td>
+            <td>
+<p>限定樓梯可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-c93d67023284.html"
+                  title="ValueSet/hn-vs-c93d67023284">居家護理－水腫等級選項</a>
+            </td>
+            <td>
+<p>限定水腫等級可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-3c038851248f.html"
+                  title="ValueSet/hn-vs-3c038851248f">居家護理－洗澡選項</a>
+            </td>
+            <td>
+<p>限定洗澡可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-3435e7a5a84d.html"
+                  title="ValueSet/hn-vs-3435e7a5a84d">居家護理－洗衣選項</a>
+            </td>
+            <td>
+<p>限定洗衣可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-78444472aa70.html"
+                  title="ValueSet/hn-vs-78444472aa70">居家護理－活動能力選項</a>
+            </td>
+            <td>
+<p>限定活動能力可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-7ce3f119b854.html"
+                  title="ValueSet/hn-vs-7ce3f119b854">居家護理－消化狀態選項</a>
+            </td>
+            <td>
+<p>限定消化狀態可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-d9301962abbf.html"
+                  title="ValueSet/hn-vs-d9301962abbf">居家護理－溝通-影響日常活動選項</a>
+            </td>
+            <td>
+<p>限定溝通-影響日常活動可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-0655870f5454.html"
+                  title="ValueSet/hn-vs-0655870f5454">居家護理－溝通選項</a>
+            </td>
+            <td>
+<p>限定溝通可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-13d13792ca45.html"
+                  title="ValueSet/hn-vs-13d13792ca45">居家護理－溫度選項</a>
+            </td>
+            <td>
+<p>限定溫度可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-548098d5ace2.html"
+                  title="ValueSet/hn-vs-548098d5ace2">居家護理－潮溼程度選項</a>
+            </td>
+            <td>
+<p>限定潮溼程度可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-acfe4f6c5f3a.html"
+                  title="ValueSet/hn-vs-acfe4f6c5f3a">居家護理－濕度選項</a>
+            </td>
+            <td>
+<p>限定濕度可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-9d4f84a14066.html"
+                  title="ValueSet/hn-vs-9d4f84a14066">居家護理－營養攝取選項</a>
+            </td>
+            <td>
+<p>限定營養攝取可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-3435b7eace88.html"
+                  title="ValueSet/hn-vs-3435b7eace88">居家護理－特殊進食多選選項</a>
+            </td>
+            <td>
+<p>限定特殊進食多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-dc054900d0e6.html"
+                  title="ValueSet/hn-vs-dc054900d0e6">居家護理－理解選項</a>
+            </td>
+            <td>
+<p>限定理解可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-41cb9f76208c.html"
+                  title="ValueSet/hn-vs-41cb9f76208c">居家護理－理財選項</a>
+            </td>
+            <td>
+<p>限定理財可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-7d118ae5ad21.html"
+                  title="ValueSet/hn-vs-7d118ae5ad21">居家護理－發生時段選項</a>
+            </td>
+            <td>
+<p>限定發生時段可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-6380f9a50deb.html"
+                  title="ValueSet/hn-vs-6380f9a50deb">居家護理－睜眼選項</a>
+            </td>
+            <td>
+<p>限定睜眼可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-c34dc3f43d82.html"
+                  title="ValueSet/hn-vs-c34dc3f43d82">居家護理－睡眠多選選項</a>
+            </td>
+            <td>
+<p>限定睡眠多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-66dfb92df102.html"
+                  title="ValueSet/hn-vs-66dfb92df102">居家護理－知覺感受選項</a>
+            </td>
+            <td>
+<p>限定知覺感受可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-5f4a5d3ebea4.html"
+                  title="ValueSet/hn-vs-5f4a5d3ebea4">居家護理－神經精神問題選項</a>
+            </td>
+            <td>
+<p>限定神經精神問題可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-40193bb109d6.html"
+                  title="ValueSet/hn-vs-40193bb109d6">居家護理－福利種類多選選項</a>
+            </td>
+            <td>
+<p>限定福利種類多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-5509cc9b0f4c.html"
+                  title="ValueSet/hn-vs-5509cc9b0f4c">居家護理－移位選項</a>
+            </td>
+            <td>
+<p>限定移位可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-f466b3393017.html"
+                  title="ValueSet/hn-vs-f466b3393017">居家護理－移動能力選項</a>
+            </td>
+            <td>
+<p>限定移動能力可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-723d296bd93d.html"
+                  title="ValueSet/hn-vs-723d296bd93d">居家護理－穿脫選項</a>
+            </td>
+            <td>
+<p>限定穿脫可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-04e9c37073f4.html"
+                  title="ValueSet/hn-vs-04e9c37073f4">居家護理－紀錄來源選項</a>
+            </td>
+            <td>
+<p>限定紀錄來源可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-75dc5876369b.html"
+                  title="ValueSet/hn-vs-75dc5876369b">居家護理－結案原因選項</a>
+            </td>
+            <td>
+<p>限定結案原因可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-6892f4f30c24.html"
+                  title="ValueSet/hn-vs-6892f4f30c24">居家護理－緊急事件類型選項</a>
+            </td>
+            <td>
+<p>限定緊急事件類型可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-2029890a4c12.html"
+                  title="ValueSet/hn-vs-2029890a4c12">居家護理－緊急聯絡人關係選項</a>
+            </td>
+            <td>
+<p>限定緊急聯絡人關係可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-f0b4522906b6.html"
+                  title="ValueSet/hn-vs-f0b4522906b6">居家護理－聽力-輔具多選選項</a>
+            </td>
+            <td>
+<p>限定聽力-輔具多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-7bc89358fe37.html"
+                  title="ValueSet/hn-vs-7bc89358fe37">居家護理－聽力-部位多選選項</a>
+            </td>
+            <td>
+<p>限定聽力-部位多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-1a72d15a5965.html"
+                  title="ValueSet/hn-vs-1a72d15a5965">居家護理－肌力-輔具多選選項</a>
+            </td>
+            <td>
+<p>限定肌力-輔具多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-3d4ed1f2575b.html"
+                  title="ValueSet/hn-vs-3d4ed1f2575b">居家護理－腸蠕動選項</a>
+            </td>
+            <td>
+<p>限定腸蠕動可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-b42a51b1139e.html"
+                  title="ValueSet/hn-vs-b42a51b1139e">居家護理－腹部狀態選項</a>
+            </td>
+            <td>
+<p>限定腹部狀態可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-5d29c89b2d60.html"
+                  title="ValueSet/hn-vs-5d29c89b2d60">居家護理－若BMI 無法取得，用小腿圍或臂中圍代替(公分)選項</a>
+            </td>
+            <td>
+<p>限定若BMI 無法取得，用小腿圍或臂中圍代替(公分)可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-6d733f47d6f4.html"
+                  title="ValueSet/hn-vs-6d733f47d6f4">居家護理－藥物類別多選選項</a>
+            </td>
+            <td>
+<p>限定藥物類別多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-3baefb430e5b.html"
+                  title="ValueSet/hn-vs-3baefb430e5b">居家護理－行動力選項</a>
+            </td>
+            <td>
+<p>限定行動力可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-1ffa1d5d3bef.html"
+                  title="ValueSet/hn-vs-1ffa1d5d3bef">居家護理－行動能力問題選項</a>
+            </td>
+            <td>
+<p>限定行動能力問題可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-46c8866533a0.html"
+                  title="ValueSet/hn-vs-46c8866533a0">居家護理－行為多選選項</a>
+            </td>
+            <td>
+<p>限定行為多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-365bfce838bb.html"
+                  title="ValueSet/hn-vs-365bfce838bb">居家護理－行為選項</a>
+            </td>
+            <td>
+<p>限定行為可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-c1223cdffc0c.html"
+                  title="ValueSet/hn-vs-c1223cdffc0c">居家護理－衛生選項</a>
+            </td>
+            <td>
+<p>限定衛生可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-afadc3bb2a88.html"
+                  title="ValueSet/hn-vs-afadc3bb2a88">居家護理－視力-輔具多選選項</a>
+            </td>
+            <td>
+<p>限定視力-輔具多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-2fd20e6427ff.html"
+                  title="ValueSet/hn-vs-2fd20e6427ff">居家護理－視力-部位多選選項</a>
+            </td>
+            <td>
+<p>限定視力-部位多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-ef4daeacd99a.html"
+                  title="ValueSet/hn-vs-ef4daeacd99a">居家護理－視力選項</a>
+            </td>
+            <td>
+<p>限定視力可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-a370027f399e.html"
+                  title="ValueSet/hn-vs-a370027f399e">居家護理－言語狀態選項</a>
+            </td>
+            <td>
+<p>限定言語狀態可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-14764e5914f7.html"
+                  title="ValueSet/hn-vs-14764e5914f7">居家護理－評估項目選項</a>
+            </td>
+            <td>
+<p>限定評估項目可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-d2f289370ed0.html"
+                  title="ValueSet/hn-vs-d2f289370ed0">居家護理－語言選項</a>
+            </td>
+            <td>
+<p>限定語言可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-3330cbe2f937.html"
+                  title="ValueSet/hn-vs-3330cbe2f937">居家護理－說話選項</a>
+            </td>
+            <td>
+<p>限定說話可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-cbfa2194bae7.html"
+                  title="ValueSet/hn-vs-cbfa2194bae7">居家護理－購物選項</a>
+            </td>
+            <td>
+<p>限定購物可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-9a2ed66b6061.html"
+                  title="ValueSet/hn-vs-9a2ed66b6061">居家護理－走動選項</a>
+            </td>
+            <td>
+<p>限定走動可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-5154109e8985.html"
+                  title="ValueSet/hn-vs-5154109e8985">居家護理－足部護理評估狀態選項</a>
+            </td>
+            <td>
+<p>限定足部護理評估狀態可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-3bbfa4b4f8db.html"
+                  title="ValueSet/hn-vs-3bbfa4b4f8db">居家護理－跌倒多選選項</a>
+            </td>
+            <td>
+<p>限定跌倒多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-disability-type.html"
+                  title="ValueSet/hn-disability-type">居家護理－身障類別</a>
+            </td>
+            <td>
+<p>重用長照新制身心障礙類型代碼，限居護 V5.0.16 的第一至第八類。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-b8e0b67e2012.html"
+                  title="ValueSet/hn-vs-b8e0b67e2012">居家護理－身體質量指數(BMI)=體重(公斤)/身高(公尺)2選項</a>
+            </td>
+            <td>
+<p>限定身體質量指數(BMI)=體重(公斤)/身高(公尺)2可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-bff7df80c996.html"
+                  title="ValueSet/hn-vs-bff7df80c996">居家護理－近三個月體重變化選項</a>
+            </td>
+            <td>
+<p>限定近三個月體重變化可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-c020bc6f582f.html"
+                  title="ValueSet/hn-vs-c020bc6f582f">居家護理－進食選項</a>
+            </td>
+            <td>
+<p>限定進食可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-784e3567e13b.html"
+                  title="ValueSet/hn-vs-784e3567e13b">居家護理－運動選項</a>
+            </td>
+            <td>
+<p>限定運動可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-cfb0b454818b.html"
+                  title="ValueSet/hn-vs-cfb0b454818b">居家護理－過去三個月之中，是否因食慾不佳、消化問題、咀嚼或吞嚥困難，以致進食量減少？選項</a>
+            </td>
+            <td>
+<p>限定過去三個月之中，是否因食慾不佳、消化問題、咀嚼或吞嚥困難，以致進食量減少？可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-fe3736bbd09e.html"
+                  title="ValueSet/hn-vs-fe3736bbd09e">居家護理－重大事件項目多選選項</a>
+            </td>
+            <td>
+<p>限定重大事件項目多選可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-9570830f5a60.html"
+                  title="ValueSet/hn-vs-9570830f5a60">居家護理－關係選項</a>
+            </td>
+            <td>
+<p>限定關係可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-fa9ab3cef6b1.html"
+                  title="ValueSet/hn-vs-fa9ab3cef6b1">居家護理－電話選項</a>
+            </td>
+            <td>
+<p>限定電話可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-bc943cb432ce.html"
+                  title="ValueSet/hn-vs-bc943cb432ce">居家護理－需求類型選項</a>
+            </td>
+            <td>
+<p>限定需求類型可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-0a65df60cccf.html"
+                  title="ValueSet/hn-vs-0a65df60cccf">居家護理－項目分類選項</a>
+            </td>
+            <td>
+<p>限定項目分類可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-ed3fafa578d2.html"
+                  title="ValueSet/hn-vs-ed3fafa578d2">居家護理－顏色選項</a>
+            </td>
+            <td>
+<p>限定顏色可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-hn-vs-5f96e05811ec.html"
+                  title="ValueSet/hn-vs-5f96e05811ec">居家護理－飲酒狀態選項</a>
+            </td>
+            <td>
+<p>限定飲酒狀態可填入的 V5.0.16 選項。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-tw-ltc-feeaudit-aa10-status.html"
+                  title="ValueSet/vs-tw-ltc-feeaudit-aa10-status">支付審查－AA10 申報狀態</a>
+            </td>
+            <td>
+<p>此 ValueSet 用於表示支付審核系統服務記錄申報之 AA10（夜間緊急服務）申報狀態（aa10_status）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-tw-ltc-feeaudit-api-function.html"
+                  title="ValueSet/vs-tw-ltc-feeaudit-api-function">支付審查－API 功能</a>
+            </td>
+            <td>
+<p>此 ValueSet 用於表示支付審核系統的 API 功能名稱，代碼包含：FeeApply（服務記錄申報）、ObjDel（服務紀錄刪除）、appCompletionNotice（申報確認通知）、appCancel（服務單位撤回）、CancelResultResponse（取消交易單處理結果回報）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-tw-ltc-feeaudit-rtncode.html"
+                  title="ValueSet/vs-tw-ltc-feeaudit-rtncode">支付審查－API 回覆結果代碼</a>
+            </td>
+            <td>
+<p>此 ValueSet 涵蓋《衛生福利部 支付審核系統 API 規格說明書（照管平台）》Response 格式所定義之回覆結果代碼（rtncode），用於表示 API 交易之處理結果，代碼包含：0（成功回傳）、1～14（請求參數與申報條件檢核錯誤）、20（無訪問權限）、25（執行頻率限制）、30（輸入參數錯誤）、40（查無資料）、50（DB 錯誤）、90（發生無法預期錯誤）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-tw-ltc-feeaudit-api-status.html"
+                  title="ValueSet/vs-tw-ltc-feeaudit-api-status">支付審查－API 執行狀況</a>
+            </td>
+            <td>
+<p>此 ValueSet 用於表示支付審核系統 API 交易單的執行狀況，代碼包含：0（待處理）、1（處理中）、3（錯誤）、4（處理完成）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-tw-ltc-feeaudit-svcc-goal-type.html"
+                  title="ValueSet/vs-tw-ltc-feeaudit-svcc-goal-type">支付審查－專業服務復能目標達成情形</a>
+            </td>
+            <td>
+<p>此 ValueSet 用於表示支付審核系統（照管平台）個案服務紀錄之「專業服務復能目標達成情形」（svcc_goal_type），申報 C 碼時填寫。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-tw-ltc-feeaudit-svc-people.html"
+                  title="ValueSet/vs-tw-ltc-feeaudit-svc-people">支付審查－服務對象</a>
+            </td>
+            <td>
+<p>此 ValueSet 用於表示支付審核系統（照管平台）個案服務紀錄之「服務對象」（svc_people），申報 AA00 必填寫。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-tw-ltc-feeaudit-supporting-info.html"
+                  title="ValueSet/vs-tw-ltc-feeaudit-supporting-info">支付審查－服務紀錄補充資訊類別</a>
+            </td>
+            <td>
+<p>此 ValueSet 涵蓋支付審核系統「服務記錄申報（FeeApply）」中隨照顧組合代碼特化之補充資訊分類碼，適用於 Claim.supportingInfo.category，包含 AA00 個管服務、C 碼專業服務、交通接送（BD03、DA01）及各項申報旗標等類別。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-tw-ltc-feeaudit-svc-point.html"
+                  title="ValueSet/vs-tw-ltc-feeaudit-svc-point">支付審查－服務重點</a>
+            </td>
+            <td>
+<p>此 ValueSet 用於表示支付審核系統（照管平台）個案服務紀錄之「服務重點」（svc_point），申報 AA00 填寫。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-tw-ltc-feeaudit-svc-item.html"
+                  title="ValueSet/vs-tw-ltc-feeaudit-svc-item">支付審查－服務項目</a>
+            </td>
+            <td>
+<p>此 ValueSet 用於表示支付審核系統（照管平台）個案服務紀錄之「服務項目」（svc_item），申報 AA00 必填寫。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-tw-ltc-feeaudit-fee-type.html"
+                  title="ValueSet/vs-tw-ltc-feeaudit-fee-type">支付審查－服務類別</a>
+            </td>
+            <td>
+<p>此 ValueSet 用於表示支付審核系統服務記錄申報之服務類別（svc_fee_tp），區分補助與自費。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-tw-ltc-feeaudit-adjudication.html"
+                  title="ValueSet/vs-tw-ltc-feeaudit-adjudication">支付審查－核定金額類別</a>
+            </td>
+            <td>
+<p>此 ValueSet 用於表示支付審核分案審核明細中各項金額的類別，代碼包含：approveFee（核定金額）、incInAcc（核增金額）、decInAcc（核減金額）、copayment（自付額）、aSvcFee（政策鼓勵金額）、tempPaymentFee（分案暫付金額）、price（單價）、submitted（申請核銷金額）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-tw-ltc-feeaudit-case-status.html"
+                  title="ValueSet/vs-tw-ltc-feeaudit-case-status">支付審查－核銷狀況</a>
+            </td>
+            <td>
+<p>此 ValueSet 用於表示支付審核系統中分案的核銷狀況，代碼包含：0（已分案待電腦審核處理）、1（待通知收件）、2（已通知待收件）、3（審核中）、4（等待總表）、5（審計待審）、6（結案）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-tw-ltc-feeaudit-doc-type.html"
+                  title="ValueSet/vs-tw-ltc-feeaudit-doc-type">支付審查－清冊文件類別</a>
+            </td>
+            <td>
+<p>此 ValueSet 用於表示支付審核分案審核明細所提供之清冊與總表文件類別，代碼包含：tempPaymentDoc（暫付總表）、caseSummaryNotice（總表）、caseSvcList（清冊）、caseSvcListExcel（清冊EXCEL）、caseASvcList（A碼清冊）、caseASvcListExcel（A碼清冊EXCEL）、caseErrList（申請記錄不通過清冊）、caseErrListExcel（申請記錄不通過EXCEL清冊）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-tw-ltc-feeaudit-bd03-type.html"
+                  title="ValueSet/vs-tw-ltc-feeaudit-bd03-type">支付審查－社區式服務交通接送服務使用類型</a>
+            </td>
+            <td>
+<p>此 ValueSet 用於表示支付審核系統服務記錄申報之社區式服務交通接送（BD03）服務使用類型（bd03_type）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-tw-ltc-feeaudit-city.html"
+                  title="ValueSet/vs-tw-ltc-feeaudit-city">支付審查－縣市代碼</a>
+            </td>
+            <td>
+<p>此 ValueSet 用於表示支付審核系統中分案、申請單與服務紀錄所屬之縣市，代碼取自 city_cd 代碼表，共 22 個直轄市、縣（市）：09007（連江縣）、09020（金門縣）、10002（宜蘭縣）、10004（新竹縣）、10005（苗栗縣）、10007（彰化縣）、10008（南投縣）、10009（雲林縣）、10010（嘉義縣）、10013（屏東縣）、10014（臺東縣）、10015（花蓮縣）、10016（澎湖縣）、10017（基隆市）、10018（新竹市）、10020（嘉義市）、63000（臺北市）、64000（高雄市）、65000（新北市）、66000（臺中市）、67000（臺南市）、68000（桃園市）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-tw-ltc-feeaudit-error-code.html"
+                  title="ValueSet/vs-tw-ltc-feeaudit-error-code">支付審查－錯誤代碼</a>
+            </td>
+            <td>
+<p>此 ValueSet 涵蓋《衛生福利部 支付審核系統 API 規格說明書（照管平台）》所定義之全部錯誤代碼（err_code），用於服務紀錄申報、撤回、審查結果回覆等交易之錯誤原因表達，包含欄位必填與長度檢核（E1xxx）、格式檢核（E2xxx）、資料查詢與寫入異常（E4xxx）、審核規則檢核（E5xxx）及各支付碼專屬檢核（EBA、EBC、ECB、EGA、EOT、ESC 系列）共 176 項代碼。</p>
 </td>
          </tr>
          <tr>
@@ -1868,11 +4457,233 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="CodeSystem-hah-document.html" title="CodeSystem/hah-document">在宅急症－摘要種類與章節代碼</a>
+            </td>
+            <td>
+<p>本 IG 的結案與轉銜摘要種類及章節。各欄位使用對應值集。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-hah-eligibility.html"
+                  title="CodeSystem/hah-eligibility">在宅急症－收案評估結果代碼</a>
+            </td>
+            <td>
+<p>評估人員的收案建議；不代表已符合任何特定健保計畫的給付條件。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-hah-activity.html" title="CodeSystem/hah-activity">在宅急症－照護活動代碼</a>
+            </td>
+            <td>
+<p>本 IG 用於區分在宅急症照護、服務與工作類型的本地代碼。不是健保支付項目或收案資格。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-hah-outcome.html" title="CodeSystem/hah-outcome">在宅急症－療程結束原因代碼</a>
+            </td>
+            <td>
+<p>區分療程結束的結果。暫停照護應使用 EpisodeOfCare.status=onhold，不以結束原因取代狀態。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-hah-visit-mode.html" title="CodeSystem/hah-visit-mode">在宅急症－訪視方式代碼</a>
+            </td>
+            <td>
+<p>記錄實際提供診療或評估的方式。單純排程或通知不算完成訪視。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="CodeSystem-AddressUseCS-TWLTC.html"
                   title="CodeSystem/AddressUseCS-TWLTC">地址用途擴展識別碼</a>
             </td>
             <td>
 <p>地址用途的擴展識別碼，新增戶籍地與現居地等代碼</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-hn-workflow.html" title="CodeSystem/hn-workflow">居家護理－介接作業代碼</a>
+            </td>
+            <td>
+<p>居家護理 API 作業名稱及本 IG 的更新指示。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-hn-answer.html" title="CodeSystem/hn-answer">居家護理－表單選項代碼</a>
+            </td>
+            <td>
+<p>依 V5.0.16 有效選項定義；代碼由本 IG 配發，原 API 傳輸中文顯示文字。相同選項共用代碼，各 ValueSet 限定適用欄位。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-tw-ltc-feeaudit-aa10-status.html"
+                  title="CodeSystem/cs-tw-ltc-feeaudit-aa10-status">支付審查－AA10 申報狀態</a>
+            </td>
+            <td>
+<p>衛生福利部支付審核系統 API（照管平台）服務記錄申報之「AA10 申報狀態」（aa10_status）代碼，用以表示夜間緊急服務（AA10）之申報與確認情形，預設為 0（未申報）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-tw-ltc-feeaudit-api-function.html"
+                  title="CodeSystem/cs-tw-ltc-feeaudit-api-function">支付審查－API 功能</a>
+            </td>
+            <td>
+<p>此 CodeSystem 定義《衛生福利部 支付審核系統 API 規格說明書（照管平台）》代碼說明章節中「API Function－API Function 名稱」之代碼，用於表示交易單所對應的支付審核系統 API 功能。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-tw-ltc-feeaudit-rtncode.html"
+                  title="CodeSystem/cs-tw-ltc-feeaudit-rtncode">支付審查－API 回覆結果代碼</a>
+            </td>
+            <td>
+<p>此 CodeSystem 定義《衛生福利部 支付審核系統 API 規格說明書（照管平台）》Response 格式中「rtncode－回覆結果代碼」之代碼，用於表示支付審核系統對服務提供單位所送 API 請求之處理結果，包含成功回傳、參數檢核錯誤、權限與流量限制及系統異常等情形。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-tw-ltc-feeaudit-api-status.html"
+                  title="CodeSystem/cs-tw-ltc-feeaudit-api-status">支付審查－API 執行狀況</a>
+            </td>
+            <td>
+<p>此 CodeSystem 定義《衛生福利部 支付審核系統 API 規格說明書（照管平台）》代碼說明章節中「status－API執行狀況」之代碼，用於表示服務單位所送交易單於支付審核系統之處理狀況。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-tw-ltc-feeaudit-svcc-goal-type.html"
+                  title="CodeSystem/cs-tw-ltc-feeaudit-svcc-goal-type">支付審查－專業服務復能目標達成情形</a>
+            </td>
+            <td>
+<p>支付審核系統（照管平台）個案服務紀錄之「專業服務復能目標達成情形」（svcc_goal_type）代碼，申報 C 碼（專業服務）時填寫，單選。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-tw-ltc-feeaudit-svc-people.html"
+                  title="CodeSystem/cs-tw-ltc-feeaudit-svc-people">支付審查－服務對象</a>
+            </td>
+            <td>
+<table>
+  <tbody>
+    <tr>
+      <td>支付審核系統（照管平台）個案服務紀錄之「服務對象」（svc_people）代碼，申報 AA00 必填寫，可複選（原始電文以「</td>
+      <td>」分隔多個選項）。</td>
+    </tr>
+  </tbody>
+</table>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-tw-ltc-feeaudit-supporting-info.html"
+                  title="CodeSystem/cs-tw-ltc-feeaudit-supporting-info">支付審查－服務紀錄補充資訊類別</a>
+            </td>
+            <td>
+<p>《衛生福利部 支付審核系統 API 規格說明書（照管平台）v2.2.1》「服務記錄申報（FeeApply）」中，隨照顧組合代碼（gov_item_cd）而特化之欄位分類碼，作為 Claim.supportingInfo.category 之取值，用以承載 AA00 個管服務、C 碼專業服務、交通接送（BD03、DA01）及各項申報旗標等補充資訊。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-tw-ltc-feeaudit-svc-point.html"
+                  title="CodeSystem/cs-tw-ltc-feeaudit-svc-point">支付審查－服務重點</a>
+            </td>
+            <td>
+<table>
+  <tbody>
+    <tr>
+      <td>支付審核系統（照管平台）個案服務紀錄之「服務重點」（svc_point）代碼，申報 AA00 填寫，可複選（原始電文以「</td>
+      <td>」分隔多個選項）。</td>
+    </tr>
+  </tbody>
+</table>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-tw-ltc-feeaudit-svc-item.html"
+                  title="CodeSystem/cs-tw-ltc-feeaudit-svc-item">支付審查－服務項目</a>
+            </td>
+            <td>
+<table>
+  <tbody>
+    <tr>
+      <td>支付審核系統（照管平台）個案服務紀錄之「服務項目」（svc_item）代碼，申報 AA00 必填寫，可複選（原始電文以「</td>
+      <td>」分隔多個選項）。</td>
+    </tr>
+  </tbody>
+</table>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-tw-ltc-feeaudit-fee-type.html"
+                  title="CodeSystem/cs-tw-ltc-feeaudit-fee-type">支付審查－服務類別</a>
+            </td>
+            <td>
+<p>衛生福利部支付審核系統 API（照管平台）服務記錄申報之「服務類別」（svc_fee_tp）代碼，用以區分該筆個案服務紀錄係由政府補助或由民眾自費支付。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-tw-ltc-feeaudit-adjudication.html"
+                  title="CodeSystem/cs-tw-ltc-feeaudit-adjudication">支付審查－核定金額類別</a>
+            </td>
+            <td>
+<p>此 CodeSystem 定義《衛生福利部 支付審核系統 API 規格說明書（照管平台）》「(查詢B)分案審核明細查詢」回覆明細中各項金額欄位之類別代碼，供 ClaimResponse.total.category 與 ClaimResponse.item.adjudication.category 使用。其中核定金額（approveFee）、核增金額（incInAcc）、核減金額（decInAcc）、政策鼓勵金額（aSvcFee）、分案暫付金額（tempPaymentFee）為長照支付審查特有、國際標準無對應者；申請核銷金額（submitted）、自付額（copayment）與單價（price）則與 HL7 標準代碼系統 http://terminology.hl7.org/CodeSystem/adjudication 之 submitted、copay、eligible 語意相近，本 CodeSystem 為保持同一組金額類別代碼之一致性而一併收錄，實作者於跨國情境交換時得改用該標準代碼。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-tw-ltc-feeaudit-case-status.html"
+                  title="CodeSystem/cs-tw-ltc-feeaudit-case-status">支付審查－核銷狀況</a>
+            </td>
+            <td>
+<p>此 CodeSystem 定義《衛生福利部 支付審核系統 API 規格說明書（照管平台）》代碼說明章節中「status－核銷狀況」之代碼，用於表示分案在支付審核流程中的核銷處理狀況。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-tw-ltc-feeaudit-doc-type.html"
+                  title="CodeSystem/cs-tw-ltc-feeaudit-doc-type">支付審查－清冊文件類別</a>
+            </td>
+            <td>
+<p>此 CodeSystem 定義《衛生福利部 支付審核系統 API 規格說明書（照管平台）》「(查詢B)分案審核明細查詢」回覆明細中各項下載路徑所對應的清冊與總表文件類別代碼。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-tw-ltc-feeaudit-bd03-type.html"
+                  title="CodeSystem/cs-tw-ltc-feeaudit-bd03-type">支付審查－社區式服務交通接送服務使用類型</a>
+            </td>
+            <td>
+<p>衛生福利部支付審核系統 API（照管平台）服務記錄申報之「社區式服務交通接送（BD03）服務使用類型」（bd03_type）代碼，申報 BD03 照顧組合時必填，預設為 1（社區式長照機構）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-tw-ltc-feeaudit-city.html"
+                  title="CodeSystem/cs-tw-ltc-feeaudit-city">支付審查－縣市代碼</a>
+            </td>
+            <td>
+<p>衛生福利部支付審核系統（照管平台）API 規格說明書 v2.2.1 之 city_cd（縣市名稱）代碼表，共 22 個直轄市、縣（市），用於標示分案、申請單與服務紀錄所屬之縣市。本代碼系統為支付審核系統專用代碼，與 TW Core IG 之郵遞區號代碼系統（TWPostalCode3／TWPostalCode5／TWPostalCode6，https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/postal-code3-tw 等）用途不同，郵遞區號用於表述地址之投遞區域，本代碼系統則用於表述支付審核業務之行政轄區歸屬，兩者不可互相替代。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-tw-ltc-feeaudit-error-code.html"
+                  title="CodeSystem/cs-tw-ltc-feeaudit-error-code">支付審查－錯誤代碼</a>
+            </td>
+            <td>
+<p>此 CodeSystem 定義《衛生福利部 支付審核系統 API 規格說明書（照管平台）》代碼說明章節中「err_code－錯誤代碼與訊息」之代碼，用於表示服務紀錄申報、審查與回覆過程中所產生之各項錯誤原因，涵蓋欄位必填與長度檢核（E1xxx）、格式檢核（E2xxx）、資料查詢與寫入異常（E4xxx）、審核規則檢核（E5xxx）及各支付碼專屬檢核（EBA、EBC、ECB、EGA、EOT、ESC 系列）。</p>
 </td>
          </tr>
          <tr>
@@ -2228,6 +5039,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="EpisodeOfCare-hah-transfer-episode.html"
+                  title="EpisodeOfCare/hah-transfer-episode">再次收案後轉院的療程範例</a>
+            </td>
+            <td>
+<p>同一個案再次收案建立新療程，以轉院結束。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-pasport-observation-fat-free-mass-example.html"
                   title="Observation/pasport-observation-fat-free-mass-example">去脂體重測量範例</a>
             </td>
@@ -2251,6 +5071,312 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>一個問卷回覆的範例，展示如何使用 LTCQuestionnaireResponse Profile 來記錄問卷回覆</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-hah-patient.html" title="Patient/hah-patient">在宅急症個案範例</a>
+            </td>
+            <td>
+<p>合成個案，供本主題所有臨床範例參照。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DocumentReference-hah-attachment.html"
+                  title="DocumentReference/hah-attachment">在宅急症同意文件附件範例</a>
+            </td>
+            <td>
+<p>以內嵌文字示範附件交換，內容為合成資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="EpisodeOfCare-hah-episode.html" title="EpisodeOfCare/hah-episode">在宅急症完成療程範例</a>
+            </td>
+            <td>
+<p>本次合成療程完成治療後結案。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-hah-visit.html" title="Encounter/hah-visit">在宅急症實地訪視範例</a>
+            </td>
+            <td>
+<p>實地訪視，參照同一收案與整段照護。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-hah-task.html" title="Task/hah-task">在宅急症工作完成範例</a>
+            </td>
+            <td>
+<p>團隊負責的檢驗工作，區分預定期限與實際執行時間。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationAdministration-hah-infusion.html"
+                  title="MedicationAdministration/hah-infusion">在宅急症持續輸注範例</a>
+            </td>
+            <td>
+<p>示範 effectivePeriod 與給藥速率，數值為合成資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hah-assessment.html"
+                  title="QuestionnaireResponse/hah-assessment">在宅急症收案評估範例</a>
+            </td>
+            <td>
+<p>合成評估內容，只示範資料結構，不代表任何給付資格判定。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-hah-admission.html" title="Encounter/hah-admission">在宅急症整段照護範例</a>
+            </td>
+            <td>
+<p>整段在宅照護，與多次實地及遠距訪視分開。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-hah-organization.html"
+                  title="Organization/hah-organization">在宅急症服務機構範例</a>
+            </td>
+            <td>
+<p>合成機構，重用長照機構 Profile。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationAdministration-hah-medication-not-done.html"
+                  title="MedicationAdministration/hah-medication-not-done">在宅急症未給藥範例</a>
+            </td>
+            <td>
+<p>未執行時保留原因，不虛構給藥劑量。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-hah-report.html"
+                  title="DiagnosticReport/hah-report">在宅急症檢驗報告範例</a>
+            </td>
+            <td>
+<p>檢驗報告參照單項結果、醫囑與檢體。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-hah-lab-request.html"
+                  title="ServiceRequest/hah-lab-request">在宅急症檢驗請求範例</a>
+            </td>
+            <td>
+<p>示範檢驗醫囑與後續檢驗報告連結。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-hah-specimen.html" title="Specimen/hah-specimen">在宅急症檢體範例</a>
+            </td>
+            <td>
+<p>直接重用 TW Core 檢體 Profile。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Communication-hah-communication.html"
+                  title="Communication/hah-communication">在宅急症照會回覆範例</a>
+            </td>
+            <td>
+<p>示範照會請求、回覆與接續工作之區別。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-hah-consult-request.html"
+                  title="ServiceRequest/hah-consult-request">在宅急症照會請求範例</a>
+            </td>
+            <td>
+<p>示範專業照會與回覆的關聯。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Consent-hah-consent.html" title="Consent/hah-consent">在宅急症照護同意範例</a>
+            </td>
+            <td>
+<p>示範病人同意、來源文件及療程關聯，不代表 DNR 醫囑。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-hah-location.html" title="Location/hah-location">在宅急症照護地點範例</a>
+            </td>
+            <td>
+<p>重用個案位置 Profile 表達個案自宅。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Goal-hah-goal.html" title="Goal/hah-goal">在宅急症照護目標範例</a>
+            </td>
+            <td>
+<p>示範個別照護目標與預期完成日期。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CarePlan-hah-plan.html" title="CarePlan/hah-plan">在宅急症照護計畫範例</a>
+            </td>
+            <td>
+<p>計畫參照結構化服務請求、診斷與目標。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-hah-summary.html" title="Composition/hah-summary">在宅急症結案摘要範例</a>
+            </td>
+            <td>
+<p>以七個章節整理完成療程的合成資料。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-hah-document.html" title="Bundle/hah-document">在宅急症結案文件範例</a>
+            </td>
+            <td>
+<p>包含摘要與所有參照資源的合成文件。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ClinicalImpression-hah-impression.html"
+                  title="ClinicalImpression/hah-impression">在宅急症臨床評估範例</a>
+            </td>
+            <td>
+<p>以資源參照連結實測資料，避免重複塞入 note JSON。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-hah-procedure.html" title="Procedure/hah-procedure">在宅急症處置範例</a>
+            </td>
+            <td>
+<p>示範已完成的照護處置及實際執行者。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-hah-glucose.html" title="Observation/hah-glucose">在宅急症血糖檢驗範例</a>
+            </td>
+            <td>
+<p>血糖使用檢驗結果 Profile，不套用生命徵象分類。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-hah-condition.html" title="Condition/hah-condition">在宅急症診斷範例</a>
+            </td>
+            <td>
+<p>合成案例中的呼吸道感染診斷，不代表收案資格或治療建議。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CareTeam-hah-team.html" title="CareTeam/hah-team">在宅急症跨機構團隊範例</a>
+            </td>
+            <td>
+<p>示範同一團隊可包含人員與機構成員。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-hah-medication-order.html"
+                  title="MedicationRequest/hah-medication-order">在宅急症輸注處方範例</a>
+            </td>
+            <td>
+<p>僅示範資料結構的合成處方，不作臨床治療或劑量建議。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-hah-transfer-summary.html"
+                  title="Composition/hah-transfer-summary">在宅急症轉院摘要範例</a>
+            </td>
+            <td>
+<p>資訊不足的章節明確標示未提供，不能解讀為無疾病或無用藥。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-hah-transfer-admission.html"
+                  title="Encounter/hah-transfer-admission">在宅急症轉院整段照護範例</a>
+            </td>
+            <td>
+<p>將轉出時間與目的機構記錄在本次整段照護。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-hah-transfer-document.html"
+                  title="Bundle/hah-transfer-document">在宅急症轉院文件範例</a>
+            </td>
+            <td>
+<p>包含摘要與所有參照資源的合成文件。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-hah-transfer-request.html"
+                  title="ServiceRequest/hah-transfer-request">在宅急症轉院申請範例</a>
+            </td>
+            <td>
+<p>申請轉院與接收機構，不將申請狀態視為對方已完成就醫。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="AllergyIntolerance-hah-allergy.html"
+                  title="AllergyIntolerance/hah-allergy">在宅急症過敏資訊範例</a>
+            </td>
+            <td>
+<p>示範已確認的物質與反應，不能由原始過敏布林旗標直接產生。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-hah-video-visit.html" title="Encounter/hah-video-visit">在宅急症遠距訪視範例</a>
+            </td>
+            <td>
+<p>已完成的視訊評估，並非視訊會議邀請。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-hah-practitioner.html"
+                  title="Practitioner/hah-practitioner">在宅急症醫療人員範例</a>
+            </td>
+            <td>
+<p>合成人員，重用長照醫事人員 Profile。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Device-hah-device.html" title="Device/hah-device">在宅急症體溫計範例</a>
+            </td>
+            <td>
+<p>設備編號使用 identifier，不宣稱為正式 UDI。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-hah-temperature.html"
+                  title="Observation/hah-temperature">在宅急症體溫量測範例</a>
+            </td>
+            <td>
+<p>直接重用既有基礎生理量測 Profile，補上在宅急症就診與設備參照。</p>
 </td>
          </tr>
          <tr>
@@ -2305,6 +5431,491 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>CMS評估表中居家環境與社會參與問卷的回應範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-hn-upload-task-example.html"
+                  title="Task/hn-upload-task-example">居家護理上傳已接收範例</a>
+            </td>
+            <td>
+<p>code 200 表示檔案已上傳，任務仍等待排程匯入；另示範只清空親友名單。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-hn-getlog-task-example.html"
+                  title="Task/hn-getlog-task-example">居家護理依日期查詢範例</a>
+            </td>
+            <td>
+<p>指定起始日，省略結束日，由來源 API 採起始日隔天。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-hn-ticket-task-example.html"
+                  title="Task/hn-ticket-task-example">居家護理依追蹤碼查詢範例</a>
+            </td>
+            <td>
+<p>示範保留追蹤碼前導零；此虛構追蹤碼不表示規範已定義其回傳欄位。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-hn-patient-example.html"
+                  title="Patient/hn-patient-example">居家護理個案範例</a>
+            </td>
+            <td>
+<p>虛構個案，沿用長照識別、聯絡方式及緊急聯絡人結構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Communication-hn-communication-example.html"
+                  title="Communication/hn-communication-example">居家護理共照紀錄資源範例</a>
+            </td>
+            <td>
+<p>將共照紀錄文字與提供者表達為 Communication，保留完整來源表單。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-hn-wound-other-example.html"
+                  title="Observation/hn-wound-other-example">居家護理其他範例</a>
+            </td>
+            <td>
+<p>示範 V5.0.16 分類與等級的搭配。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-hn-wound-pressure-example.html"
+                  title="Observation/hn-wound-pressure-example">居家護理壓傷範例</a>
+            </td>
+            <td>
+<p>示範 V5.0.16 分類與等級的搭配。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-hn-wound-iad-example.html"
+                  title="Observation/hn-wound-iad-example">居家護理失禁性皮膚炎範例</a>
+            </td>
+            <td>
+<p>示範 V5.0.16 分類與等級的搭配。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-hn-staff-example.html"
+                  title="Practitioner/hn-staff-example">居家護理工作人員範例</a>
+            </td>
+            <td>
+<p>虛構非醫事人員，用於人員緊急事件。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="OperationOutcome-hn-outcome-example.html"
+                  title="OperationOutcome/hn-outcome-example">居家護理接收訊息範例</a>
+            </td>
+            <td>
+<p>上傳成功的資訊訊息，並未宣告資料匯入完成。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="EpisodeOfCare-hn-episode-example.html"
+                  title="EpisodeOfCare/hn-episode-example">居家護理收案範例</a>
+            </td>
+            <td>
+<p>一次居護收案，以機構內識別碼串聯各次評估及照護紀錄。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-hn-organization-example.html"
+                  title="Organization/hn-organization-example">居家護理機構範例</a>
+            </td>
+            <td>
+<p>沿用長照機構 Profile，虛構機構代碼對應表單建立者與 API 機構標頭。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Goal-hn-goal-example.html" title="Goal/hn-goal-example">居家護理照護目標範例</a>
+            </td>
+            <td>
+<p>記錄目標、預期達到日期與主要目標旗標。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-hn-careplan-transaction-example.html"
+                  title="Bundle/hn-careplan-transaction-example">居家護理照護計畫交易範例</a>
+            </td>
+            <td>
+<p>將目標、措施、評值表單及臨床資源一起更新，所有 entry 成功才完成交易。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CarePlan-hn-careplan-example.html"
+                  title="CarePlan/hn-careplan-example">居家護理照護計畫範例</a>
+            </td>
+            <td>
+<p>串聯需求、目標、措施與評值；示範措施停止時保留原因及停止人員。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-hn-vital-bundle-example.html"
+                  title="Bundle/hn-vital-bundle-example">居家護理生命徵象與血糖集合範例</a>
+            </td>
+            <td>
+<p>同一次量測的生命徵象與血糖使用不同的既有資源基礎，共同放入集合。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-hn-vital-signs-example.html"
+                  title="Observation/hn-vital-signs-example">居家護理生命徵象資源範例</a>
+            </td>
+            <td>
+<p>同一次量測的生命徵象，血糖重用既有基礎生理量測 Profile。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-hn-glucose-example.html"
+                  title="Observation/hn-glucose-example">居家護理血糖範例</a>
+            </td>
+            <td>
+<p>沿用既有血糖 Profile，數值以 mg/dL 表達。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-hn-nurse-example.html"
+                  title="Practitioner/hn-nurse-example">居家護理護理人員範例</a>
+            </td>
+            <td>
+<p>虛構護理人員，身分證字號用於對應居護表單。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="EpisodeOfCare-hn-episode-foot-example.html"
+                  title="EpisodeOfCare/hn-episode-foot-example">居家護理足部護理收案範例</a>
+            </td>
+            <td>
+<p>同一個案的另一次足部護理收案，使用不同收案日期。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-staffegy-example.html"
+                  title="QuestionnaireResponse/hn-staffegy-example">居家護理－人員緊急事件範例</a>
+            </td>
+            <td>
+<p>示範人員緊急事件結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-basedata-example.html"
+                  title="QuestionnaireResponse/hn-basedata-example">居家護理－個案基本資料範例</a>
+            </td>
+            <td>
+<p>示範個案基本資料結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-basedata-foot-example.html"
+                  title="QuestionnaireResponse/hn-basedata-foot-example">居家護理－個案基本資料範例</a>
+            </td>
+            <td>
+<p>示範個案基本資料結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-caseclose-example.html"
+                  title="QuestionnaireResponse/hn-caseclose-example">居家護理－個案結案範例</a>
+            </td>
+            <td>
+<p>示範個案結案結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-healthyhabits-example.html"
+                  title="QuestionnaireResponse/hn-healthyhabits-example">居家護理－健康紀錄評估範例</a>
+            </td>
+            <td>
+<p>示範健康紀錄評估結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-casedesc-example.html"
+                  title="QuestionnaireResponse/hn-casedesc-example">居家護理－共照紀錄範例</a>
+            </td>
+            <td>
+<p>示範共照紀錄結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-hn-respiration-example.html"
+                  title="Observation/hn-respiration-example">居家護理－呼吸量測範例</a>
+            </td>
+            <td>
+<p>直接重用既有基礎生理量測 Profile。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-pressureinjuries-example.html"
+                  title="QuestionnaireResponse/hn-pressureinjuries-example">居家護理－壓力性損傷危險評估範例</a>
+            </td>
+            <td>
+<p>示範壓力性損傷危險評估結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-carerecord-wounds-example.html"
+                  title="QuestionnaireResponse/hn-carerecord-wounds-example">居家護理－多筆傷口照護紀錄範例</a>
+            </td>
+            <td>
+<p>示範照護紀錄結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-foot-record-example.html"
+                  title="QuestionnaireResponse/hn-foot-record-example">居家護理－完整足部護理範例</a>
+            </td>
+            <td>
+<p>示範照護紀錄結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-iadls-example.html"
+                  title="QuestionnaireResponse/hn-iadls-example">居家護理－工具性日常生活活動功能評估範例</a>
+            </td>
+            <td>
+<p>示範工具性日常生活活動功能評估結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-geriatricdepressionscales-example.html"
+                  title="QuestionnaireResponse/hn-geriatricdepressionscales-example">居家護理－情緒問題評估範例</a>
+            </td>
+            <td>
+<p>示範情緒問題評估結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-adls-example.html"
+                  title="QuestionnaireResponse/hn-adls-example">居家護理－日常生活功能評估範例</a>
+            </td>
+            <td>
+<p>示範日常生活功能評估結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-carerecord-example.html"
+                  title="QuestionnaireResponse/hn-carerecord-example">居家護理－照護紀錄範例</a>
+            </td>
+            <td>
+<p>示範照護紀錄結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-measures-example.html"
+                  title="QuestionnaireResponse/hn-measures-example">居家護理－照護計畫措施範例</a>
+            </td>
+            <td>
+<p>示範照護計畫措施結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-targets-example.html"
+                  title="QuestionnaireResponse/hn-targets-example">居家護理－照護計畫目標範例</a>
+            </td>
+            <td>
+<p>示範照護計畫目標結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-careplanclose-example.html"
+                  title="QuestionnaireResponse/hn-careplanclose-example">居家護理－照護計畫結案範例</a>
+            </td>
+            <td>
+<p>示範照護計畫結案結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-evaluations-example.html"
+                  title="QuestionnaireResponse/hn-evaluations-example">居家護理－照護計畫評值紀錄範例</a>
+            </td>
+            <td>
+<p>示範照護計畫評值紀錄結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-vitalsign-example.html"
+                  title="QuestionnaireResponse/hn-vitalsign-example">居家護理－生命徵象範例</a>
+            </td>
+            <td>
+<p>示範生命徵象結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-pain-verbal-example.html"
+                  title="QuestionnaireResponse/hn-pain-verbal-example">居家護理－疼痛評估可以言語範例</a>
+            </td>
+            <td>
+<p>示範疼痛評估結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-pain-nonverbal-example.html"
+                  title="QuestionnaireResponse/hn-pain-nonverbal-example">居家護理－疼痛評估無法言語範例</a>
+            </td>
+            <td>
+<p>示範疼痛評估結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-painevaluations-example.html"
+                  title="QuestionnaireResponse/hn-painevaluations-example">居家護理－疼痛評估範例</a>
+            </td>
+            <td>
+<p>示範疼痛評估結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-medicalhistories-example.html"
+                  title="QuestionnaireResponse/hn-medicalhistories-example">居家護理－疾病史評估範例</a>
+            </td>
+            <td>
+<p>示範疾病史評估結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-mnasfs-example.html"
+                  title="QuestionnaireResponse/hn-mnasfs-example">居家護理－簡易營養評估範例</a>
+            </td>
+            <td>
+<p>示範簡易營養評估結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-hn-pulse-example.html"
+                  title="Observation/hn-pulse-example">居家護理－脈搏量測範例</a>
+            </td>
+            <td>
+<p>直接重用既有基礎生理量測 Profile。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-drugsafeties-example.html"
+                  title="QuestionnaireResponse/hn-drugsafeties-example">居家護理－藥物安全性評估範例</a>
+            </td>
+            <td>
+<p>示範藥物安全性評估結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-hn-bloodpressure-example.html"
+                  title="Observation/hn-bloodpressure-example">居家護理－血壓量測範例</a>
+            </td>
+            <td>
+<p>直接重用既有基礎生理量測 Profile。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-hn-oxygen-example.html"
+                  title="Observation/hn-oxygen-example">居家護理－血氧量測範例</a>
+            </td>
+            <td>
+<p>直接重用既有基礎生理量測 Profile。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-sofs-example.html"
+                  title="QuestionnaireResponse/hn-sofs-example">居家護理－衰弱評估範例</a>
+            </td>
+            <td>
+<p>示範衰弱評估結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-dementias-example.html"
+                  title="QuestionnaireResponse/hn-dementias-example">居家護理－認知功能評估範例</a>
+            </td>
+            <td>
+<p>示範認知功能評估結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-fallrisks-example.html"
+                  title="QuestionnaireResponse/hn-fallrisks-example">居家護理－跌倒危險性評估範例</a>
+            </td>
+            <td>
+<p>示範跌倒危險性評估結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-bodyevaluations-example.html"
+                  title="QuestionnaireResponse/hn-bodyevaluations-example">居家護理－身體評估評估範例</a>
+            </td>
+            <td>
+<p>示範身體評估評估結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-hn-casesummary-example.html"
+                  title="QuestionnaireResponse/hn-casesummary-example">居家護理－需求摘要範例</a>
+            </td>
+            <td>
+<p>示範需求摘要結構與未作答欄位。資料為虛構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-hn-temperature-example.html"
+                  title="Observation/hn-temperature-example">居家護理－體溫量測範例</a>
+            </td>
+            <td>
+<p>直接重用既有基礎生理量測 Profile。</p>
 </td>
          </tr>
          <tr>
@@ -3002,6 +6613,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Organization-hah-receiving-hospital.html"
+                  title="Organization/hah-receiving-hospital">轉院接收機構範例</a>
+            </td>
+            <td>
+<p>合成的轉院接收機構。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Condition-pasport-condition-exercise-history-example.html"
                   title="Condition/pasport-condition-exercise-history-example">運動史記錄範例</a>
             </td>
@@ -3380,6 +7000,195 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Claim-ltc-claim-feeapply-aa00-example.html"
+                  title="Claim/ltc-claim-feeapply-aa00-example">長照支付審查－A 單位服務紀錄（AA00）申報範例</a>
+            </td>
+            <td>
+<table>
+  <tbody>
+    <tr>
+      <td>A 個管單位向衛生福利部支付審核系統（照管平台）執行「服務記錄申報（FeeApply）」之單筆個案服務紀錄範例。照顧組合代碼（gov_item_cd）為 AA00（A 單位服務紀錄）；AA00 已收錄於臺灣長照服務項目代碼系統（CS_TW_LTC_ServiceItem），故以 item.productOrService.coding 承載，使本 IG 之條件必填檢核（invariant ltc-feeaudit-3）得以觸發。本範例示範 AA00 之必填特化欄位：服務項目（svc_item = 1</td>
+      <td>2，電訪與家訪，以兩個 supportingInfo 切片表示）、服務對象（svc_people = 1</td>
+      <td>2，服務使用者與家庭照顧者）與服務內容（svc_content）；並示範選填欄位：服務重點（svc_point = 1</td>
+      <td>2）、追蹤服務適應與介入情形（svc_trace）、各項服務目標及整體計畫目標達成情形（svc_goal）、整體計畫的適切性及需求異動（svc_suitable）、備註（remark）與各項預設旗標。照顧服務員身分證字號 1（svc_user_no1）依規格書表 1 為必填，於 AA00 應帶入 A 個管之身分證字號，以 careTeam.sequence = 1 之 careTeam 呈現。</td>
+    </tr>
+  </tbody>
+</table>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Claim-ltc-claim-feeapply-c-code-example.html"
+                  title="Claim/ltc-claim-feeapply-c-code-example">長照支付審查－C 碼專業服務紀錄申報範例</a>
+            </td>
+            <td>
+<p>C 單位（專業服務提供單位）向衛生福利部支付審核系統（照管平台）執行「服務記錄申報（FeeApply）」之單筆個案服務紀錄範例。照顧組合代碼（gov_item_cd）為 CA03（ADLs 復能照護－居家）。本範例示範規格書中申報 C 碼時填寫之五個專業服務欄位：專業服務復能目標達成情形（svcc_goal_type）、專業服務復能目標（svcc_goal）、專業服務指導對象（svcc_content_target）、專業服務服務內容（svcc_content）與專業服務指導建議摘要（svcc_suggest）。依規格書表 1，申報 C 碼時照顧服務員身分證字號 1（svc_user_no1）、數量與起訖時段為必填，服務項目（svc_item）、服務對象（svc_people）與服務內容（svc_content）則不填寫。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-ltc-location-feeapply-home-example.html"
+                  title="Location/ltc-location-feeapply-home-example">長照支付審查－交通接送出發地（個案住家）範例</a>
+            </td>
+            <td>
+<p>服務記錄申報（FeeApply）DA01 交通接送之出發地範例，對應規格書欄位 addr1（出發地）「個案住家」，並以 Location.position 承載出發地緯度（addrlat1）與出發地經度（addrlng1）。地點類型為個案住所（PTRES）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-ltc-location-feeapply-hospital-example.html"
+                  title="Location/ltc-location-feeapply-hospital-example">長照支付審查－交通接送目的地（亞東醫院）範例</a>
+            </td>
+            <td>
+<p>服務記錄申報（FeeApply）DA01 交通接送之目的地範例，對應規格書欄位 addr2（目的地）「亞東醫院」，並以 Location.position 承載目的地緯度（addrlat2）與目的地經度（addrlng2）。地點類型為醫院（HOSP），非個案住所。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Claim-ltc-claim-feeapply-da01-example.html"
+                  title="Claim/ltc-claim-feeapply-da01-example">長照支付審查－個案服務紀錄申報（DA01 交通接送）範例</a>
+            </td>
+            <td>
+<p>服務記錄申報（FeeApply）之單筆個案服務紀錄範例，對應規格書 PAGE 14-15 範例電文之 case_svc_records[0]：服務紀錄識別碼（objid）00000000000000000006、個案身分證字號（idn）A123456789、服務日期（svc_dt）2019 年 1 月 5 日、照顧組合代碼（gov_item_cd）DA01 交通接送、服務類別（svc_fee_tp）補助、單價（price）430 元、數量（amount）1、服務時段 13:30 至 14:00、出發地（addr1）個案住家、目的地（addr2）亞東醫院、車號（car_no）1111-AA、駕駛員（driver）黃OO。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-ltc-bundle-feeaudit-response-example.html"
+                  title="Bundle/ltc-bundle-feeaudit-response-example">長照支付審查－分案審核明細回覆打包（Bundle）範例</a>
+            </td>
+            <td>
+<p>支付審核系統「(查詢B)分案審核明細查詢」（……/appResultQuery，query_type = B）回覆之 searchset Bundle 範例，收納核銷案號 201907C010163 之分案審核明細（ClaimResponse）一筆，以及該分案錯誤服務記錄之申報檢核結果（OperationOutcome）一筆。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ClaimResponse-ltc-claimresponse-feeaudit-example.html"
+                  title="ClaimResponse/ltc-claimresponse-feeaudit-example">長照支付審查－分案審核明細（ClaimResponse）範例</a>
+            </td>
+            <td>
+<p>支付審核系統「(查詢B)分案審核明細查詢」（……/appResultQuery，query_type = B）之回覆明細範例。核銷案號 201907C010163、支審年月 201907、總表版次 006、版次時間 20190723154351，申請核銷金額 4500 元、核定金額 1596 元、政策鼓勵金額 400 元、核增 4000 元（因個案身分異動）、核減 500 元（因個案CMS等級異動）、分案暫付金額 17500 元；含審核通過服務記錄一筆（單價 400 元、自付額 85 元）與 A 碼加成資料一筆（AA05，單價 200 元），並示範八份總表與清冊下載路徑；分案層級統計值（服務記錄筆數 3、個案數 2、核定個案數 2、核定服務記錄數 1）、暫付申請狀態、分案已處理之單號與承辦人員則以 auditSummary Extension 承載。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-ltc-bundle-feeaudit-status-example.html"
+                  title="Bundle/ltc-bundle-feeaudit-status-example">長照支付審查－分案審核狀態回覆打包範例</a>
+            </td>
+            <td>
+<p>(查詢A)服務單位各分案審核狀態查詢（……/appResultQuery，query_type = A）之回覆打包範例。以 searchset 型態彙整支審年月 201901 各交易單之 API 執行結果（webapi_process_info），包含服務記錄申報（FeeApply）、申報確認通知（appCompletionNotice，依縣市拆為兩筆）、服務紀錄刪除（ObjDel）、服務單位撤回（appCancel）與取消交易單處理結果回報（CancelResultResponse）共六筆交易任務，並一併回傳分案異常資料（exception_records）與服務紀錄刪除失敗資料（delete_exception_records）之錯誤訊息（search.mode = outcome，不計入 total）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="OperationOutcome-ltc-operationoutcome-feeaudit-exception-example.html"
+                  title="OperationOutcome/ltc-operationoutcome-feeaudit-exception-example">長照支付審查－分案異常資料範例</a>
+            </td>
+            <td>
+<p>(查詢A)服務單位各分案審核狀態查詢回覆之分案異常資料（exception_records）範例。展示服務紀錄識別碼 19260121 因錯誤碼 E4015 而分案失敗之錯誤訊息，該筆服務紀錄可修改後重新上傳至支審系統。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-ltc-task-cancel-result-response-example.html"
+                  title="Task/ltc-task-cancel-result-response-example">長照支付審查－取消交易單處理結果回報交易任務範例</a>
+            </td>
+            <td>
+<p>取消交易單處理結果回報（CancelResultResponse）之交易任務範例。服務單位以本作業取消 (查詢A)服務單位各分案審核狀態查詢之 API 執行結果資料中，某一交易單的處理結果回報。本範例以本次作業之交易序號（trans_no）CR001 為 groupIdentifier，並以 input[cancelTransNo] 承載所要取消結果回報之交易序號 TranQ00083，同時以 partOf 參照該原交易單之 Task（ltc-task-feeapply-example）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-ltc-task-cancel-example.html"
+                  title="Task/ltc-task-cancel-example">長照支付審查－服務單位撤回交易任務範例</a>
+            </td>
+            <td>
+<p>服務單位撤回（appCancel）之交易任務範例。傳入縣市代碼與核銷案號時，表示將指定核銷案號該來源系統別所申報之服務記錄撤回；未傳入者則將該服務單位本月該來源系統別所申報之服務記錄一併撤回。若承辦人已收件處理，則不允許執行撤回。本範例對應規格書傳送資料範例 2，並以 output 記錄「服務紀錄撤回完成!」之批次處理結果。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-ltc-task-objdel-example.html"
+                  title="Task/ltc-task-objdel-example">長照支付審查－服務紀錄刪除交易任務範例</a>
+            </td>
+            <td>
+<p>服務紀錄刪除（ObjDel）之交易任務範例。刪除該系統商指定識別碼（objid）之服務紀錄；若該服務紀錄之案件已執行申報確認通知，則不允許刪除。本範例以 input 承載所要刪除之服務紀錄識別碼，並以 output 呈現批次處理 6 筆、成功 4 筆、失敗 2 筆之結果，包含刪除成功資料（delete_records）之識別碼清單，以及刪除失敗資料（delete_exception_records）所參照之錯誤訊息（錯誤碼 E4032）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="OperationOutcome-ltc-operationoutcome-feeaudit-objdel-example.html"
+                  title="OperationOutcome/ltc-operationoutcome-feeaudit-objdel-example">長照支付審查－服務紀錄刪除失敗資料範例（一）</a>
+            </td>
+            <td>
+<p>服務紀錄刪除（ObjDel）之刪除失敗資料（delete_exception_records）範例。展示服務紀錄識別碼 123456789 因錯誤碼 E4032（此筆服務紀錄不存在）而刪除失敗之錯誤訊息。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="OperationOutcome-ltc-operationoutcome-feeaudit-objdel-2-example.html"
+                  title="OperationOutcome/ltc-operationoutcome-feeaudit-objdel-2-example">長照支付審查－服務紀錄刪除失敗資料範例（二）</a>
+            </td>
+            <td>
+<p>服務紀錄刪除（ObjDel）之刪除失敗資料（delete_exception_records）範例。展示服務紀錄識別碼 987654321 因錯誤碼 E4032（此筆服務紀錄不存在）而刪除失敗之錯誤訊息。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-ltc-task-feeapply-example.html"
+                  title="Task/ltc-task-feeapply-example">長照支付審查－服務記錄申報交易任務範例</a>
+            </td>
+            <td>
+<p>服務記錄申報（FeeApply）交易單之處理狀態範例。展示以 (查詢A)服務單位各分案審核狀態查詢所取得之交易單資訊：交易序號 TranQ00083、API 執行狀況為 4:處理完成、分案核銷狀況為 1:待通知收件，批次處理 3000 筆、成功 2999 筆、失敗 1 筆，並以 output 參照分案異常資料（exception_records）之錯誤訊息。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-ltc-bundle-feeapply-da01-example.html"
+                  title="Bundle/ltc-bundle-feeapply-da01-example">長照支付審查－服務記錄申報交易（DA01 交通接送）範例</a>
+            </td>
+            <td>
+<p>服務記錄申報（FeeApply）一次申報交易之打包範例，對應規格書 PAGE 14-15 範例電文：交易序號（trans_no）A0001、支審年月（writeoff_yyyymm）201901、服務紀錄筆數（records）1 筆、個案數（cases）1 位。Bundle 以 collection 型態收納該次申報之個案服務紀錄（Claim）、服務對象（Patient）、服務提供單位（Organization）、照顧服務員（Practitioner）及交通接送之出發地與目的地（Location）。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="OperationOutcome-ltc-operationoutcome-feeaudit-example.html"
+                  title="OperationOutcome/ltc-operationoutcome-feeaudit-example">長照支付審查－申報檢核結果（OperationOutcome）範例</a>
+            </td>
+            <td>
+<p>支付審核系統回覆之服務紀錄檢核錯誤範例，對應核銷案號 201907C010163 之錯誤服務記錄（err_records），示範錯誤碼 E4015「單位已執行申報確認通知，不在受理新的服務紀錄申報」，錯誤服務記錄識別碼（objid）為 882601914，來源系統別 TranCareCenter、交易序號 00106。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-ltc-task-completion-notice-city2-example.html"
+                  title="Task/ltc-task-completion-notice-city2-example">長照支付審查－申報確認通知交易任務範例（縣市 10020）</a>
+            </td>
+            <td>
+<p>申報確認通知（appCompletionNotice）之交易任務範例（規格書 PAGE 19-20 傳送資料範例之第二個縣市）。以 input 承載縣市代碼 10020 及其下之兩筆案件編號（case_no：C12345678、D12345678）。本筆與 ltc-task-completion-notice-example 共用同一交易序號（trans_no = CN001），共同構成規格書範例中 city_info 之完整內容。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-ltc-task-completion-notice-example.html"
+                  title="Task/ltc-task-completion-notice-example">長照支付審查－申報確認通知交易任務範例（縣市 65000）</a>
+            </td>
+            <td>
+<p>申報確認通知（appCompletionNotice）之交易任務範例（規格書 PAGE 19-20 傳送資料範例之第一個縣市）。服務單位確認服務紀錄無誤後執行本作業，以通知縣市承辦人員收件並審查服務紀錄；執行後支審系統不再受理服務紀錄申報及異動。本範例以 input 承載縣市代碼 65000 及其下之兩筆案件編號（case_no：A12345678、B12345678），並以 output 記錄「申報確認通知完成!」之批次處理結果。同一次作業之另一個縣市（10020）另見 ltc-task-completion-notice-city2-example。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-ltc-organization-feeaudit-authority-example.html"
+                  title="Organization/ltc-organization-feeaudit-authority-example">長照支付審查－縣市主管機關（Organization）範例</a>
+            </td>
+            <td>
+<p>受理「(查詢B)分案審核明細查詢」該分案之縣市主管機關範例，對應規格書縣市代碼（city_cd）65000 新北市，供 LTCClaimResponseFeeAudit 之 insurer 元素參照。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ServiceRequest-ltc-servicerequest-referral-example.html"
                   title="ServiceRequest/ltc-servicerequest-referral-example">長照轉介服務請求範例</a>
             </td>
@@ -3533,7 +7342,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 25, 2026 08:48+0800">2026-06-25</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 17, 2026 17:33+0800">2026-09-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

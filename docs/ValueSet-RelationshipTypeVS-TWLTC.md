@@ -1,4 +1,4 @@
-# 關係類型擴展值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 關係類型擴展值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/RelationshipTypeVS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/RelationshipTypeVS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-09-02 | *Computable Name*:RelationshipTypeVSTWLTC |
+| *Other Identifiers:*OID:2.25.201597545885992489564101901823159969635 | |
 
  
 關係人與個案的關係類型擴展代碼值集，新增孫媳婦、孫女婿、聘用看護-本國籍、聘用看護-外國籍等代碼 
@@ -46,7 +47,11 @@
   "resourceType" : "ValueSet",
   "id" : "RelationshipTypeVS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/RelationshipTypeVS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.201597545885992489564101901823159969635"
+  }],
+  "version" : "1.1.0",
   "name" : "RelationshipTypeVSTWLTC",
   "title" : "關係類型擴展值集",
   "status" : "active",

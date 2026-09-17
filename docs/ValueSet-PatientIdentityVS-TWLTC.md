@@ -1,4 +1,4 @@
-# 個案身分別值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 個案身分別值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/PatientIdentityVS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/PatientIdentityVS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-09-02 | *Computable Name*:PatientIdentityVSTWLTC |
+| *Other Identifiers:*OID:2.25.305024746164004866710557731153486000865 | |
 
  
 個案身分別的值集 
@@ -46,7 +47,11 @@
   "resourceType" : "ValueSet",
   "id" : "PatientIdentityVS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/PatientIdentityVS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.305024746164004866710557731153486000865"
+  }],
+  "version" : "1.1.0",
   "name" : "PatientIdentityVSTWLTC",
   "title" : "個案身分別值集",
   "status" : "active",

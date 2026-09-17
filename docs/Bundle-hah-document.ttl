@@ -1,0 +1,1898 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Bundle/hah-document> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hah-document"] ;
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2026-09-05T12:01:00+08:00"^^xsd:dateTime ] ;
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHBundleSummary" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHBundleSummary>
+     ]
+  ] ;
+  fhir:Bundle.identifier [
+     fhir:Identifier.system [ fhir:value "https://example.org/hah/documents" ] ;
+     fhir:Identifier.value [ fhir:value "hah-document-v1" ]
+  ] ;
+  fhir:Bundle.type [ fhir:value "document"] ;
+  fhir:Bundle.timestamp [ fhir:value "2026-09-05T12:01:00+08:00"^^xsd:dateTime] ;
+  fhir:Bundle.entry [
+     fhir:index 0 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Composition/hah-summary" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Composition/hah-summary>
+  ], [
+     fhir:index 1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Patient/hah-patient" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Patient/hah-patient>
+  ], [
+     fhir:index 2 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/EpisodeOfCare/hah-episode" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/EpisodeOfCare/hah-episode>
+  ], [
+     fhir:index 3 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Encounter/hah-admission" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Encounter/hah-admission>
+  ], [
+     fhir:index 4 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Organization/hah-organization" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Organization/hah-organization>
+  ], [
+     fhir:index 5 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Practitioner/hah-practitioner" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Practitioner/hah-practitioner>
+  ], [
+     fhir:index 6 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Location/hah-location" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Location/hah-location>
+  ], [
+     fhir:index 7 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Encounter/hah-visit" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Encounter/hah-visit>
+  ], [
+     fhir:index 8 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Encounter/hah-video-visit" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Encounter/hah-video-visit>
+  ], [
+     fhir:index 9 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Condition/hah-condition" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Condition/hah-condition>
+  ], [
+     fhir:index 10 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/CareTeam/hah-team" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/CareTeam/hah-team>
+  ], [
+     fhir:index 11 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Goal/hah-goal" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Goal/hah-goal>
+  ], [
+     fhir:index 12 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/CarePlan/hah-plan" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/CarePlan/hah-plan>
+  ], [
+     fhir:index 13 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/ServiceRequest/hah-lab-request" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/ServiceRequest/hah-lab-request>
+  ], [
+     fhir:index 14 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/ServiceRequest/hah-consult-request" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/ServiceRequest/hah-consult-request>
+  ], [
+     fhir:index 15 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Task/hah-task" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Task/hah-task>
+  ], [
+     fhir:index 16 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Specimen/hah-specimen" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Specimen/hah-specimen>
+  ], [
+     fhir:index 17 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Observation/hah-glucose" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Observation/hah-glucose>
+  ], [
+     fhir:index 18 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/DiagnosticReport/hah-report" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/DiagnosticReport/hah-report>
+  ], [
+     fhir:index 19 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Observation/hah-temperature" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Observation/hah-temperature>
+  ], [
+     fhir:index 20 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Device/hah-device" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Device/hah-device>
+  ], [
+     fhir:index 21 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/QuestionnaireResponse/hah-assessment" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/QuestionnaireResponse/hah-assessment>
+  ], [
+     fhir:index 22 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/ClinicalImpression/hah-impression" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/ClinicalImpression/hah-impression>
+  ], [
+     fhir:index 23 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Procedure/hah-procedure" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Procedure/hah-procedure>
+  ], [
+     fhir:index 24 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/MedicationRequest/hah-medication-order" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/MedicationRequest/hah-medication-order>
+  ], [
+     fhir:index 25 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/MedicationAdministration/hah-infusion" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/MedicationAdministration/hah-infusion>
+  ], [
+     fhir:index 26 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/MedicationAdministration/hah-medication-not-done" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/MedicationAdministration/hah-medication-not-done>
+  ], [
+     fhir:index 27 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/AllergyIntolerance/hah-allergy" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/AllergyIntolerance/hah-allergy>
+  ], [
+     fhir:index 28 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/DocumentReference/hah-attachment" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/DocumentReference/hah-attachment>
+  ], [
+     fhir:index 29 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Consent/hah-consent" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Consent/hah-consent>
+  ], [
+     fhir:index 30 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://example.org/fhir/Communication/hah-communication" ] ;
+     fhir:Bundle.entry.resource <https://example.org/fhir/Communication/hah-communication>
+  ] .
+
+<https://example.org/fhir/Composition/hah-summary> a fhir:Composition ;
+  fhir:Resource.id [ fhir:value "hah-summary"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHCompositionSummary" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHCompositionSummary>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Composition_hah-summary\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition hah-summary</b></p><a name=\"hah-summary\"> </a><a name=\"hchah-summary\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHCompositionSummary.html\">在宅急症－結案與轉銜摘要</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-document discharge-summary}\">結案摘要</span></p><p><b>encounter</b>: <a href=\"Encounter-hah-admission.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><p><b>date</b>: 2026-09-05 12:00:00+0800</p><p><b>author</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><p><b>title</b>: 王測試在宅急症結案摘要</p><p><b>custodian</b>: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></p></div>"
+  ] ;
+  fhir:Composition.status [ fhir:value "final"] ;
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document" ] ;
+       fhir:Coding.code [ fhir:value "discharge-summary" ]
+     ]
+  ] ;
+  fhir:Composition.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Composition.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-admission> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-admission" ]
+  ] ;
+  fhir:Composition.date [ fhir:value "2026-09-05T12:00:00+08:00"^^xsd:dateTime] ;
+  fhir:Composition.author [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+  ] ;
+  fhir:Composition.title [ fhir:value "王測試在宅急症結案摘要"] ;
+  fhir:Composition.custodian [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/hah-organization> ;
+     fhir:Reference.reference [ fhir:value "Organization/hah-organization" ]
+  ] ;
+  fhir:Composition.section [
+     fhir:index 0 ;
+     fhir:Composition.section.title [ fhir:value "療程經過" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document" ] ;
+         fhir:Coding.code [ fhir:value "course" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>本次在宅照護完成；包含實地與視訊訪視。</p></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/EpisodeOfCare/hah-episode> ;
+       fhir:Reference.reference [ fhir:value "EpisodeOfCare/hah-episode" ]
+     ], [
+       fhir:index 1 ;
+       fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-admission> ;
+       fhir:Reference.reference [ fhir:value "Encounter/hah-admission" ]
+     ], [
+       fhir:index 2 ;
+       fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-visit> ;
+       fhir:Reference.reference [ fhir:value "Encounter/hah-visit" ]
+     ], [
+       fhir:index 3 ;
+       fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-video-visit> ;
+       fhir:Reference.reference [ fhir:value "Encounter/hah-video-visit" ]
+     ], [
+       fhir:index 4 ;
+       fhir:link <http://ltc-ig.fhir.tw/ClinicalImpression/hah-impression> ;
+       fhir:Reference.reference [ fhir:value "ClinicalImpression/hah-impression" ]
+     ], [
+       fhir:index 5 ;
+       fhir:link <http://ltc-ig.fhir.tw/QuestionnaireResponse/hah-assessment> ;
+       fhir:Reference.reference [ fhir:value "QuestionnaireResponse/hah-assessment" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Composition.section.title [ fhir:value "診斷與問題" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document" ] ;
+         fhir:Coding.code [ fhir:value "problems" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>呼吸道感染，療程結束時已解除。</p></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/Condition/hah-condition> ;
+       fhir:Reference.reference [ fhir:value "Condition/hah-condition" ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:Composition.section.title [ fhir:value "過敏資訊" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document" ] ;
+         fhir:Coding.code [ fhir:value "allergies" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>已記錄青黴素過敏及皮疹反應。</p></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/AllergyIntolerance/hah-allergy> ;
+       fhir:Reference.reference [ fhir:value "AllergyIntolerance/hah-allergy" ]
+     ]
+  ], [
+     fhir:index 3 ;
+     fhir:Composition.section.title [ fhir:value "藥物與給藥" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document" ] ;
+         fhir:Coding.code [ fhir:value "medications" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>示範輸注與取消給藥；不是臨床處方建議。</p></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/MedicationRequest/hah-medication-order> ;
+       fhir:Reference.reference [ fhir:value "MedicationRequest/hah-medication-order" ]
+     ], [
+       fhir:index 1 ;
+       fhir:link <http://ltc-ig.fhir.tw/MedicationAdministration/hah-infusion> ;
+       fhir:Reference.reference [ fhir:value "MedicationAdministration/hah-infusion" ]
+     ], [
+       fhir:index 2 ;
+       fhir:link <http://ltc-ig.fhir.tw/MedicationAdministration/hah-medication-not-done> ;
+       fhir:Reference.reference [ fhir:value "MedicationAdministration/hah-medication-not-done" ]
+     ]
+  ], [
+     fhir:index 4 ;
+     fhir:Composition.section.title [ fhir:value "檢查結果" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document" ] ;
+         fhir:Coding.code [ fhir:value "results" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>附體溫與血糖檢驗。</p></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/Observation/hah-temperature> ;
+       fhir:Reference.reference [ fhir:value "Observation/hah-temperature" ]
+     ], [
+       fhir:index 1 ;
+       fhir:link <http://ltc-ig.fhir.tw/DiagnosticReport/hah-report> ;
+       fhir:Reference.reference [ fhir:value "DiagnosticReport/hah-report" ]
+     ]
+  ], [
+     fhir:index 5 ;
+     fhir:Composition.section.title [ fhir:value "照護計畫與措施" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document" ] ;
+         fhir:Coding.code [ fhir:value "care" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>附照護目標、計畫、衛教、同意及設備。</p></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/CarePlan/hah-plan> ;
+       fhir:Reference.reference [ fhir:value "CarePlan/hah-plan" ]
+     ], [
+       fhir:index 1 ;
+       fhir:link <http://ltc-ig.fhir.tw/Goal/hah-goal> ;
+       fhir:Reference.reference [ fhir:value "Goal/hah-goal" ]
+     ], [
+       fhir:index 2 ;
+       fhir:link <http://ltc-ig.fhir.tw/Procedure/hah-procedure> ;
+       fhir:Reference.reference [ fhir:value "Procedure/hah-procedure" ]
+     ], [
+       fhir:index 3 ;
+       fhir:link <http://ltc-ig.fhir.tw/Consent/hah-consent> ;
+       fhir:Reference.reference [ fhir:value "Consent/hah-consent" ]
+     ], [
+       fhir:index 4 ;
+       fhir:link <http://ltc-ig.fhir.tw/Device/hah-device> ;
+       fhir:Reference.reference [ fhir:value "Device/hah-device" ]
+     ]
+  ], [
+     fhir:index 6 ;
+     fhir:Composition.section.title [ fhir:value "後續照護與交班" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document" ] ;
+         fhir:Coding.code [ fhir:value "follow-up" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>已完成本次會診與檢驗工作；後續回診資訊尚未提供。</p></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/ServiceRequest/hah-consult-request> ;
+       fhir:Reference.reference [ fhir:value "ServiceRequest/hah-consult-request" ]
+     ], [
+       fhir:index 1 ;
+       fhir:link <http://ltc-ig.fhir.tw/ServiceRequest/hah-lab-request> ;
+       fhir:Reference.reference [ fhir:value "ServiceRequest/hah-lab-request" ]
+     ], [
+       fhir:index 2 ;
+       fhir:link <http://ltc-ig.fhir.tw/Task/hah-task> ;
+       fhir:Reference.reference [ fhir:value "Task/hah-task" ]
+     ], [
+       fhir:index 3 ;
+       fhir:link <http://ltc-ig.fhir.tw/Communication/hah-communication> ;
+       fhir:Reference.reference [ fhir:value "Communication/hah-communication" ]
+     ], [
+       fhir:index 4 ;
+       fhir:link <http://ltc-ig.fhir.tw/DocumentReference/hah-attachment> ;
+       fhir:Reference.reference [ fhir:value "DocumentReference/hah-attachment" ]
+     ]
+  ] .
+
+<https://example.org/fhir/Patient/hah-patient> a fhir:Patient ;
+  fhir:Resource.id [ fhir:value "hah-patient"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHPatient" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHPatient>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_hah-patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient hah-patient</b></p><a name=\"hah-patient\"> </a><a name=\"hchah-patient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHPatient.html\">在宅急症－個案</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">王測試 Male, DoB: 1945-03-15 ( Provider number)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\">National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code/A123456789</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 02-00000000</li><li>臺北市中正區測試路1號(home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: Emergency Contact\">Emergency Contact:</td><td colspan=\"3\"><ul><li>王家屬</li><li>ph: 02-00000001</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>Managing Organization: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></li></ul></td></tr></table></div>"
+  ] ;
+  fhir:Patient.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "PRN" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "https://example.org/hah/patients" ] ;
+     fhir:Identifier.value [ fhir:value "HAH0001" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "NNxxx" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "http://www.moi.gov.tw" ] ;
+     fhir:Identifier.value [ fhir:value "A123456789" ]
+  ] ;
+  fhir:Patient.name [
+     fhir:index 0 ;
+     fhir:HumanName.use [ fhir:value "usual" ] ;
+     fhir:HumanName.text [ fhir:value "王測試" ]
+  ] ;
+  fhir:Patient.telecom [
+     fhir:index 0 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "02-00000000" ]
+  ] ;
+  fhir:Patient.gender [ fhir:value "male"] ;
+  fhir:Patient.birthDate [ fhir:value "1945-03-15"^^xsd:date] ;
+  fhir:Patient.address [
+     fhir:index 0 ;
+     fhir:Address.use [ fhir:value "home" ] ;
+     fhir:Address.text [ fhir:value "臺北市中正區測試路1號" ]
+  ] ;
+  fhir:Patient.contact [
+     fhir:index 0 ;
+     fhir:Patient.contact.relationship [
+       fhir:index 0 ;
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0131" ] ;
+         fhir:Coding.code [ fhir:value "C" ]
+       ]
+     ] ;
+     fhir:Patient.contact.name [
+       fhir:HumanName.text [ fhir:value "王家屬" ]
+     ] ;
+     fhir:Patient.contact.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "phone" ] ;
+       fhir:ContactPoint.value [ fhir:value "02-00000001" ]
+     ]
+  ] ;
+  fhir:Patient.managingOrganization [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/hah-organization> ;
+     fhir:Reference.reference [ fhir:value "Organization/hah-organization" ]
+  ] .
+
+<https://example.org/fhir/EpisodeOfCare/hah-episode> a fhir:EpisodeOfCare ;
+  fhir:Resource.id [ fhir:value "hah-episode"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHEpisodeOfCare" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHEpisodeOfCare>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"EpisodeOfCare_hah-episode\"> </a><p class=\"res-header-id\"><b>Generated Narrative: EpisodeOfCare hah-episode</b></p><a name=\"hah-episode\"> </a><a name=\"hchah-episode\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHEpisodeOfCare.html\">在宅急症－收案療程</a></p></div><p><b>在宅急症－療程結束原因</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-outcome completed-treatment}\">完成治療</span></p><p><b>identifier</b>: <code>https://example.org/hah/episodes</code>/HAH-20260901-001</p><p><b>status</b>: Finished</p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity acute-home}\">在宅急症照護</span></p><h3>Diagnoses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Condition</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Condition-hah-condition.html\">Condition </a></td></tr></table><p><b>patient</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>managingOrganization</b>: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></p><p><b>period</b>: 2026-09-01 08:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</p><p><b>team</b>: <a href=\"CareTeam-hah-team.html\">CareTeam: status = inactive</a></p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHAHOutcome" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-outcome" ] ;
+         fhir:Coding.code [ fhir:value "completed-treatment" ]
+       ]
+     ]
+  ] ;
+  fhir:EpisodeOfCare.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "https://example.org/hah/episodes" ] ;
+     fhir:Identifier.value [ fhir:value "HAH-20260901-001" ]
+  ] ;
+  fhir:EpisodeOfCare.status [ fhir:value "finished"] ;
+  fhir:EpisodeOfCare.type [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-activity" ] ;
+       fhir:Coding.code [ fhir:value "acute-home" ]
+     ]
+  ] ;
+  fhir:EpisodeOfCare.diagnosis [
+     fhir:index 0 ;
+     fhir:EpisodeOfCare.diagnosis.condition [
+       fhir:link <http://ltc-ig.fhir.tw/Condition/hah-condition> ;
+       fhir:Reference.reference [ fhir:value "Condition/hah-condition" ]
+     ]
+  ] ;
+  fhir:EpisodeOfCare.patient [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:EpisodeOfCare.managingOrganization [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/hah-organization> ;
+     fhir:Reference.reference [ fhir:value "Organization/hah-organization" ]
+  ] ;
+  fhir:EpisodeOfCare.period [
+     fhir:Period.start [ fhir:value "2026-09-01T08:00:00+08:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2026-09-05T12:00:00+08:00"^^xsd:dateTime ]
+  ] ;
+  fhir:EpisodeOfCare.team [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/CareTeam/hah-team> ;
+     fhir:Reference.reference [ fhir:value "CareTeam/hah-team" ]
+  ] .
+
+<https://example.org/fhir/Encounter/hah-admission> a fhir:Encounter ;
+  fhir:Resource.id [ fhir:value "hah-admission"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHAdmissionEncounter" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHAdmissionEncounter>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_hah-admission\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter hah-admission</b></p><a name=\"hah-admission\"> </a><a name=\"hchah-admission\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHAdmissionEncounter.html\">在宅急症－整段照護</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity acute-home}\">在宅急症照護</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>episodeOfCare</b>: <a href=\"EpisodeOfCare-hah-episode.html\">EpisodeOfCare: extension = 完成治療; identifier = https://example.org/hah/episodes#HAH-20260901-001; status = finished; type = 在宅急症照護; period = 2026-09-01 08:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></td></tr></table><p><b>period</b>: 2026-09-01 09:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</p><h3>Diagnoses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Condition</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Condition-hah-condition.html\">Condition </a></td></tr></table><h3>Hospitalizations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>DischargeDisposition</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/discharge-disposition home}\">Home</span></td></tr></table><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Location-hah-location.html\">Location 王測試居住地</a></td></tr></table><p><b>serviceProvider</b>: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></p></div>"
+  ] ;
+  fhir:Encounter.status [ fhir:value "finished"] ;
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+     fhir:Coding.code [ fhir:value "IMP" ]
+  ] ;
+  fhir:Encounter.type [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-activity" ] ;
+       fhir:Coding.code [ fhir:value "acute-home" ]
+     ]
+  ] ;
+  fhir:Encounter.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Encounter.episodeOfCare [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/EpisodeOfCare/hah-episode> ;
+     fhir:Reference.reference [ fhir:value "EpisodeOfCare/hah-episode" ]
+  ] ;
+  fhir:Encounter.participant [
+     fhir:index 0 ;
+     fhir:Encounter.participant.individual [
+       fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+     ]
+  ] ;
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2026-09-01T09:00:00+08:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2026-09-05T12:00:00+08:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Encounter.diagnosis [
+     fhir:index 0 ;
+     fhir:Encounter.diagnosis.condition [
+       fhir:link <http://ltc-ig.fhir.tw/Condition/hah-condition> ;
+       fhir:Reference.reference [ fhir:value "Condition/hah-condition" ]
+     ]
+  ] ;
+  fhir:Encounter.hospitalization [
+     fhir:Encounter.hospitalization.dischargeDisposition [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/discharge-disposition" ] ;
+         fhir:Coding.code [ fhir:value "home" ]
+       ]
+     ]
+  ] ;
+  fhir:Encounter.location [
+     fhir:index 0 ;
+     fhir:Encounter.location.location [
+       fhir:link <http://ltc-ig.fhir.tw/Location/hah-location> ;
+       fhir:Reference.reference [ fhir:value "Location/hah-location" ]
+     ]
+  ] ;
+  fhir:Encounter.serviceProvider [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/hah-organization> ;
+     fhir:Reference.reference [ fhir:value "Organization/hah-organization" ]
+  ] .
+
+<https://example.org/fhir/Organization/hah-organization> a fhir:Organization ;
+  fhir:Resource.id [ fhir:value "hah-organization"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/Organization-twltc" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/Organization-twltc>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_hah-organization\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization hah-organization</b></p><a name=\"hah-organization\"> </a><a name=\"hchah-organization\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Organization-twltc.html\">長期照顧－機構</a></p></div><p><b>identifier</b>: <code>https://example.org/organizations</code>/HAH-ORG-1</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: 在宅急症示範醫療機構</p></div>"
+  ] ;
+  fhir:Organization.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "https://example.org/organizations" ] ;
+     fhir:Identifier.value [ fhir:value "HAH-ORG-1" ]
+  ] ;
+  fhir:Organization.type [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/organization-type" ] ;
+       fhir:Coding.code [ fhir:value "prov" ]
+     ]
+  ] ;
+  fhir:Organization.name [ fhir:value "在宅急症示範醫療機構"] .
+
+<https://example.org/fhir/Practitioner/hah-practitioner> a fhir:Practitioner ;
+  fhir:Resource.id [ fhir:value "hah-practitioner"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_hah-practitioner\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner hah-practitioner</b></p><a name=\"hah-practitioner\"> </a><a name=\"hchah-practitioner\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCPractitioner.html\">長期照顧－照顧服務提供者</a></p></div><p><b>identifier</b>: <code>https://example.org/practitioners</code>/HAH-STAFF-1</p><p><b>name</b>: 李示範</p></div>"
+  ] ;
+  fhir:Practitioner.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "https://example.org/practitioners" ] ;
+     fhir:Identifier.value [ fhir:value "HAH-STAFF-1" ]
+  ] ;
+  fhir:Practitioner.name [
+     fhir:index 0 ;
+     fhir:HumanName.use [ fhir:value "usual" ] ;
+     fhir:HumanName.text [ fhir:value "李示範" ]
+  ] .
+
+<https://example.org/fhir/Location/hah-location> a fhir:Location ;
+  fhir:Resource.id [ fhir:value "hah-location"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/Location-twltc" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/Location-twltc>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Location_hah-location\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Location hah-location</b></p><a name=\"hah-location\"> </a><a name=\"hchah-location\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Location-twltc.html\">長期照顧－個案位置監測</a></p></div><p><b>status</b>: Active</p><p><b>name</b>: 王測試居住地</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode PTRES}\">Patient's Residence</span></p><p><b>address</b>: 臺北市中正區測試路1號</p></div>"
+  ] ;
+  fhir:Location.status [ fhir:value "active"] ;
+  fhir:Location.name [ fhir:value "王測試居住地"] ;
+  fhir:Location.type [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ] ;
+       fhir:Coding.code [ fhir:value "PTRES" ] ;
+       fhir:Coding.display [ fhir:value "Patient's Residence" ]
+     ]
+  ] ;
+  fhir:Location.address [
+     fhir:Address.text [ fhir:value "臺北市中正區測試路1號" ]
+  ] .
+
+<https://example.org/fhir/Encounter/hah-visit> a fhir:Encounter ;
+  fhir:Resource.id [ fhir:value "hah-visit"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHVisitEncounter" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHVisitEncounter>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_hah-visit\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter hah-visit</b></p><a name=\"hah-visit\"> </a><a name=\"hchah-visit\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHVisitEncounter.html\">在宅急症－單次訪視</a></p></div><p><b>在宅急症－訪視方式</b>: in-person</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-HH\">ActCode: HH</a> (home health)</p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity visit}\">訪視</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>episodeOfCare</b>: <a href=\"EpisodeOfCare-hah-episode.html\">EpisodeOfCare: extension = 完成治療; identifier = https://example.org/hah/episodes#HAH-20260901-001; status = finished; type = 在宅急症照護; period = 2026-09-01 08:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></td></tr></table><p><b>period</b>: 2026-09-01 09:00:00+0800 --&gt; 2026-09-01 10:00:00+0800</p><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Location-hah-location.html\">Location 王測試居住地</a></td></tr></table><p><b>serviceProvider</b>: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></p><p><b>partOf</b>: <a href=\"Encounter-hah-admission.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHAHVisitMode" ] ;
+     fhir:Extension.valueCode [ fhir:value "in-person" ]
+  ] ;
+  fhir:Encounter.status [ fhir:value "finished"] ;
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+     fhir:Coding.code [ fhir:value "HH" ]
+  ] ;
+  fhir:Encounter.type [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-activity" ] ;
+       fhir:Coding.code [ fhir:value "visit" ]
+     ]
+  ] ;
+  fhir:Encounter.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Encounter.episodeOfCare [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/EpisodeOfCare/hah-episode> ;
+     fhir:Reference.reference [ fhir:value "EpisodeOfCare/hah-episode" ]
+  ] ;
+  fhir:Encounter.participant [
+     fhir:index 0 ;
+     fhir:Encounter.participant.individual [
+       fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+     ]
+  ] ;
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2026-09-01T09:00:00+08:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2026-09-01T10:00:00+08:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Encounter.location [
+     fhir:index 0 ;
+     fhir:Encounter.location.location [
+       fhir:link <http://ltc-ig.fhir.tw/Location/hah-location> ;
+       fhir:Reference.reference [ fhir:value "Location/hah-location" ]
+     ]
+  ] ;
+  fhir:Encounter.serviceProvider [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/hah-organization> ;
+     fhir:Reference.reference [ fhir:value "Organization/hah-organization" ]
+  ] ;
+  fhir:Encounter.partOf [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-admission> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-admission" ]
+  ] .
+
+<https://example.org/fhir/Encounter/hah-video-visit> a fhir:Encounter ;
+  fhir:Resource.id [ fhir:value "hah-video-visit"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHVisitEncounter" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHVisitEncounter>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_hah-video-visit\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter hah-video-visit</b></p><a name=\"hah-video-visit\"> </a><a name=\"hchah-video-visit\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHVisitEncounter.html\">在宅急症－單次訪視</a></p></div><p><b>在宅急症－訪視方式</b>: video</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-VR\">ActCode: VR</a> (virtual)</p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity visit}\">訪視</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>episodeOfCare</b>: <a href=\"EpisodeOfCare-hah-episode.html\">EpisodeOfCare: extension = 完成治療; identifier = https://example.org/hah/episodes#HAH-20260901-001; status = finished; type = 在宅急症照護; period = 2026-09-01 08:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></td></tr></table><p><b>period</b>: 2026-09-02 09:00:00+0800 --&gt; 2026-09-02 09:15:00+0800</p><p><b>serviceProvider</b>: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></p><p><b>partOf</b>: <a href=\"Encounter-hah-admission.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHAHVisitMode" ] ;
+     fhir:Extension.valueCode [ fhir:value "video" ]
+  ] ;
+  fhir:Encounter.status [ fhir:value "finished"] ;
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+     fhir:Coding.code [ fhir:value "VR" ]
+  ] ;
+  fhir:Encounter.type [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-activity" ] ;
+       fhir:Coding.code [ fhir:value "visit" ]
+     ]
+  ] ;
+  fhir:Encounter.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Encounter.episodeOfCare [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/EpisodeOfCare/hah-episode> ;
+     fhir:Reference.reference [ fhir:value "EpisodeOfCare/hah-episode" ]
+  ] ;
+  fhir:Encounter.participant [
+     fhir:index 0 ;
+     fhir:Encounter.participant.individual [
+       fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+     ]
+  ] ;
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2026-09-02T09:00:00+08:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2026-09-02T09:15:00+08:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Encounter.serviceProvider [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/hah-organization> ;
+     fhir:Reference.reference [ fhir:value "Organization/hah-organization" ]
+  ] ;
+  fhir:Encounter.partOf [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-admission> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-admission" ]
+  ] .
+
+<https://example.org/fhir/Condition/hah-condition> a fhir:Condition ;
+  fhir:Resource.id [ fhir:value "hah-condition"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHCondition" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHCondition>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_hah-condition\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition hah-condition</b></p><a name=\"hah-condition\"> </a><a name=\"hchah-condition\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHCondition.html\">在宅急症－診斷與照護問題</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical resolved}\">Resolved</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:\">呼吸道感染</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>encounter</b>: <a href=\"Encounter-hah-admission.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><p><b>recordedDate</b>: 2026-09-01 09:00:00+0800</p></div>"
+  ] ;
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ] ;
+       fhir:Coding.code [ fhir:value "resolved" ]
+     ]
+  ] ;
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ] ;
+       fhir:Coding.code [ fhir:value "confirmed" ]
+     ]
+  ] ;
+  fhir:Condition.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-category" ] ;
+       fhir:Coding.code [ fhir:value "encounter-diagnosis" ]
+     ]
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.text [ fhir:value "呼吸道感染" ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Condition.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-admission> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-admission" ]
+  ] ;
+  fhir:Condition.recordedDate [ fhir:value "2026-09-01T09:00:00+08:00"^^xsd:dateTime] .
+
+<https://example.org/fhir/CareTeam/hah-team> a fhir:CareTeam ;
+  fhir:Resource.id [ fhir:value "hah-team"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHCareTeam" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHCareTeam>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"CareTeam_hah-team\"> </a><p class=\"res-header-id\"><b>Generated Narrative: CareTeam hah-team</b></p><a name=\"hah-team\"> </a><a name=\"hchah-team\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHCareTeam.html\">在宅急症－照護團隊</a></p></div><p><b>status</b>: Inactive</p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>encounter</b>: <a href=\"Encounter-hah-admission.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><blockquote><p><b>participant</b></p><p><b>role</b>: <span title=\"Codes:\">主責醫療人員</span></p><p><b>member</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><p><b>period</b>: 2026-09-01 --&gt; 2026-09-05</p></blockquote><blockquote><p><b>participant</b></p><p><b>role</b>: <span title=\"Codes:\">共照機構</span></p><p><b>member</b>: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></p></blockquote></div>"
+  ] ;
+  fhir:CareTeam.status [ fhir:value "inactive"] ;
+  fhir:CareTeam.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:CareTeam.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-admission> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-admission" ]
+  ] ;
+  fhir:CareTeam.participant [
+     fhir:index 0 ;
+     fhir:CareTeam.participant.role [
+       fhir:index 0 ;
+       fhir:CodeableConcept.text [ fhir:value "主責醫療人員" ]
+     ] ;
+     fhir:CareTeam.participant.member [
+       fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+     ] ;
+     fhir:CareTeam.participant.period [
+       fhir:Period.start [ fhir:value "2026-09-01"^^xsd:date ] ;
+       fhir:Period.end [ fhir:value "2026-09-05"^^xsd:date ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:CareTeam.participant.role [
+       fhir:index 0 ;
+       fhir:CodeableConcept.text [ fhir:value "共照機構" ]
+     ] ;
+     fhir:CareTeam.participant.member [
+       fhir:link <http://ltc-ig.fhir.tw/Organization/hah-organization> ;
+       fhir:Reference.reference [ fhir:value "Organization/hah-organization" ]
+     ]
+  ] .
+
+<https://example.org/fhir/Goal/hah-goal> a fhir:Goal ;
+  fhir:Resource.id [ fhir:value "hah-goal"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHGoal" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHGoal>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Goal_hah-goal\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Goal hah-goal</b></p><a name=\"hah-goal\"> </a><a name=\"hchah-goal\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHGoal.html\">在宅急症－照護目標</a></p></div><p><b>在宅急症－療程關聯</b>: <a href=\"EpisodeOfCare-hah-episode.html\">EpisodeOfCare: extension = 完成治療; identifier = https://example.org/hah/episodes#HAH-20260901-001; status = finished; type = 在宅急症照護; period = 2026-09-01 08:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><p><b>lifecycleStatus</b>: Completed</p><p><b>description</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity care-goal}\">本次照護期間能由照顧者協助完成居家量測並回報不適情形</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><h3>Targets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Due[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2026-09-05</td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHAHEpisode" ] ;
+     fhir:Extension.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/EpisodeOfCare/hah-episode> ;
+       fhir:Reference.reference [ fhir:value "EpisodeOfCare/hah-episode" ]
+     ]
+  ] ;
+  fhir:Goal.lifecycleStatus [ fhir:value "completed"] ;
+  fhir:Goal.description [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-activity" ] ;
+       fhir:Coding.code [ fhir:value "care-goal" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "本次照護期間能由照顧者協助完成居家量測並回報不適情形" ]
+  ] ;
+  fhir:Goal.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Goal.target [
+     fhir:index 0 ;
+     fhir:Goal.target.dueDate [ fhir:value "2026-09-05"^^xsd:date ]
+  ] .
+
+<https://example.org/fhir/CarePlan/hah-plan> a fhir:CarePlan ;
+  fhir:Resource.id [ fhir:value "hah-plan"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHCarePlan" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHCarePlan>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"CarePlan_hah-plan\"> </a><p>王測試的在宅急症照護計畫，所屬療程 HAH-20260901-001，期間為 2026 年 9 月 1 日至 9 月 5 日，狀態為已完成。處理呼吸道感染問題，目標為協助完成每日量測紀錄；包含血糖檢驗醫囑。</p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHAHEpisode" ] ;
+     fhir:Extension.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/EpisodeOfCare/hah-episode> ;
+       fhir:Reference.reference [ fhir:value "EpisodeOfCare/hah-episode" ]
+     ]
+  ] ;
+  fhir:CarePlan.status [ fhir:value "completed"] ;
+  fhir:CarePlan.intent [ fhir:value "plan"] ;
+  fhir:CarePlan.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw" ] ;
+       fhir:Coding.code [ fhir:value "assess-plan" ]
+     ]
+  ] ;
+  fhir:CarePlan.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:CarePlan.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-admission> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-admission" ]
+  ] ;
+  fhir:CarePlan.period [
+     fhir:Period.start [ fhir:value "2026-09-01"^^xsd:date ] ;
+     fhir:Period.end [ fhir:value "2026-09-05"^^xsd:date ]
+  ] ;
+  fhir:CarePlan.addresses [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Condition/hah-condition> ;
+     fhir:Reference.reference [ fhir:value "Condition/hah-condition" ]
+  ] ;
+  fhir:CarePlan.goal [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Goal/hah-goal> ;
+     fhir:Reference.reference [ fhir:value "Goal/hah-goal" ]
+  ] ;
+  fhir:CarePlan.activity [
+     fhir:index 0 ;
+     fhir:CarePlan.activity.reference [
+       fhir:link <http://ltc-ig.fhir.tw/ServiceRequest/hah-lab-request> ;
+       fhir:Reference.reference [ fhir:value "ServiceRequest/hah-lab-request" ]
+     ]
+  ] .
+
+<https://example.org/fhir/ServiceRequest/hah-lab-request> a fhir:ServiceRequest ;
+  fhir:Resource.id [ fhir:value "hah-lab-request"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHServiceRequest" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHServiceRequest>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_hah-lab-request\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest hah-lab-request</b></p><a name=\"hah-lab-request\"> </a><a name=\"hchah-lab-request\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHServiceRequest.html\">在宅急症－服務請求</a></p></div><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity laboratory}\">檢驗</span></p><p><b>code</b>: <span title=\"Codes:\">血液葡萄糖檢驗</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>encounter</b>: <a href=\"Encounter-hah-visit.html\">Encounter: extension = in-person; status = finished; class = home health (ActCode#HH); type = 訪視; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-01 10:00:00+0800</a></p><p><b>authoredOn</b>: 2026-09-01 09:05:00+0800</p><p><b>requester</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><p><b>reasonReference</b>: <a href=\"Condition-hah-condition.html\">Condition </a></p></div>"
+  ] ;
+  fhir:ServiceRequest.status [ fhir:value "completed"] ;
+  fhir:ServiceRequest.intent [ fhir:value "order"] ;
+  fhir:ServiceRequest.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-activity" ] ;
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.code [
+     fhir:CodeableConcept.text [ fhir:value "血液葡萄糖檢驗" ]
+  ] ;
+  fhir:ServiceRequest.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:ServiceRequest.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-visit> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-visit" ]
+  ] ;
+  fhir:ServiceRequest.authoredOn [ fhir:value "2026-09-01T09:05:00+08:00"^^xsd:dateTime] ;
+  fhir:ServiceRequest.requester [
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+  ] ;
+  fhir:ServiceRequest.reasonReference [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Condition/hah-condition> ;
+     fhir:Reference.reference [ fhir:value "Condition/hah-condition" ]
+  ] .
+
+<https://example.org/fhir/ServiceRequest/hah-consult-request> a fhir:ServiceRequest ;
+  fhir:Resource.id [ fhir:value "hah-consult-request"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHServiceRequest" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHServiceRequest>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_hah-consult-request\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest hah-consult-request</b></p><a name=\"hah-consult-request\"> </a><a name=\"hchah-consult-request\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHServiceRequest.html\">在宅急症－服務請求</a></p></div><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity consultation}\">專科照會</span></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity consultation}\">專科照會</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>encounter</b>: <a href=\"Encounter-hah-visit.html\">Encounter: extension = in-person; status = finished; class = home health (ActCode#HH); type = 訪視; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-01 10:00:00+0800</a></p><p><b>authoredOn</b>: 2026-09-01 09:05:00+0800</p><p><b>requester</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><p><b>performer</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><p><b>reasonReference</b>: <a href=\"Condition-hah-condition.html\">Condition </a></p></div>"
+  ] ;
+  fhir:ServiceRequest.status [ fhir:value "completed"] ;
+  fhir:ServiceRequest.intent [ fhir:value "order"] ;
+  fhir:ServiceRequest.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-activity" ] ;
+       fhir:Coding.code [ fhir:value "consultation" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-activity" ] ;
+       fhir:Coding.code [ fhir:value "consultation" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:ServiceRequest.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-visit> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-visit" ]
+  ] ;
+  fhir:ServiceRequest.authoredOn [ fhir:value "2026-09-01T09:05:00+08:00"^^xsd:dateTime] ;
+  fhir:ServiceRequest.requester [
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+  ] ;
+  fhir:ServiceRequest.performer [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+  ] ;
+  fhir:ServiceRequest.reasonReference [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Condition/hah-condition> ;
+     fhir:Reference.reference [ fhir:value "Condition/hah-condition" ]
+  ] .
+
+<https://example.org/fhir/Task/hah-task> a fhir:Task ;
+  fhir:Resource.id [ fhir:value "hah-task"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHVisitTask" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHVisitTask>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Task_hah-task\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Task hah-task</b></p><a name=\"hah-task\"> </a><a name=\"hchah-task\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHVisitTask.html\">在宅急症－照護工作</a></p></div><p><b>status</b>: Completed</p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity laboratory}\">檢驗</span></p><p><b>focus</b>: <a href=\"ServiceRequest-hah-lab-request.html\">ServiceRequest </a></p><p><b>for</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>encounter</b>: <a href=\"Encounter-hah-visit.html\">Encounter: extension = in-person; status = finished; class = home health (ActCode#HH); type = 訪視; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-01 10:00:00+0800</a></p><p><b>executionPeriod</b>: 2026-09-01 09:10:00+0800 --&gt; 2026-09-01 09:20:00+0800</p><p><b>authoredOn</b>: 2026-09-01 09:05:00+0800</p><p><b>requester</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><p><b>owner</b>: <a href=\"CareTeam-hah-team.html\">CareTeam: status = inactive</a></p><p><b>location</b>: <a href=\"Location-hah-location.html\">Location 王測試居住地</a></p><h3>Restrictions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td>2026-09-01 09:05:00+0800 --&gt; 2026-09-01 10:00:00+0800</td></tr></table><h3>Outputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">檢驗報告</span></td><td><a href=\"DiagnosticReport-hah-report.html\">Diagnostic Report for '' for '-&gt;王測試 Male, DoB: 1945-03-15 ( Provider number)'</a></td></tr></table></div>"
+  ] ;
+  fhir:Task.status [ fhir:value "completed"] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-activity" ] ;
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ] ;
+  fhir:Task.focus [
+     fhir:link <http://ltc-ig.fhir.tw/ServiceRequest/hah-lab-request> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/hah-lab-request" ]
+  ] ;
+  fhir:Task.for [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Task.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-visit> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-visit" ]
+  ] ;
+  fhir:Task.executionPeriod [
+     fhir:Period.start [ fhir:value "2026-09-01T09:10:00+08:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2026-09-01T09:20:00+08:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2026-09-01T09:05:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+  ] ;
+  fhir:Task.owner [
+     fhir:link <http://ltc-ig.fhir.tw/CareTeam/hah-team> ;
+     fhir:Reference.reference [ fhir:value "CareTeam/hah-team" ]
+  ] ;
+  fhir:Task.location [
+     fhir:link <http://ltc-ig.fhir.tw/Location/hah-location> ;
+     fhir:Reference.reference [ fhir:value "Location/hah-location" ]
+  ] ;
+  fhir:Task.restriction [
+     fhir:Task.restriction.period [
+       fhir:Period.start [ fhir:value "2026-09-01T09:05:00+08:00"^^xsd:dateTime ] ;
+       fhir:Period.end [ fhir:value "2026-09-01T10:00:00+08:00"^^xsd:dateTime ]
+     ]
+  ] ;
+  fhir:Task.output [
+     fhir:index 0 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "檢驗報告" ]
+     ] ;
+     fhir:Task.output.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/DiagnosticReport/hah-report> ;
+       fhir:Reference.reference [ fhir:value "DiagnosticReport/hah-report" ]
+     ]
+  ] .
+
+<https://example.org/fhir/Specimen/hah-specimen> a fhir:Specimen ;
+  fhir:Resource.id [ fhir:value "hah-specimen"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Specimen-twcore" ;
+       fhir:index 0 ;
+       fhir:link <https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Specimen-twcore>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_hah-specimen\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen hah-specimen</b></p><a name=\"hah-specimen\"> </a><a name=\"hchah-specimen\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://twcore.mohw.gov.tw/ig/twcore/1.0.0/StructureDefinition-Specimen-twcore.html\">TW Core Specimen</a></p></div><p><b>identifier</b>: <code>https://example.org/specimens</code>/HAH-SPECIMEN-1</p><p><b>type</b>: <span title=\"Codes:\">血液</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></td><td>2026-09-01 09:10:00+0800</td></tr></table></div>"
+  ] ;
+  fhir:Specimen.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "https://example.org/specimens" ] ;
+     fhir:Identifier.value [ fhir:value "HAH-SPECIMEN-1" ]
+  ] ;
+  fhir:Specimen.type [
+     fhir:CodeableConcept.text [ fhir:value "血液" ]
+  ] ;
+  fhir:Specimen.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Specimen.collection [
+     fhir:Specimen.collection.collector [
+       fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+     ] ;
+     fhir:Specimen.collection.collectedDateTime [ fhir:value "2026-09-01T09:10:00+08:00"^^xsd:dateTime ]
+  ] .
+
+<https://example.org/fhir/Observation/hah-glucose> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "hah-glucose"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHObservationLab" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHObservationLab>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_hah-glucose\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation hah-glucose</b></p><a name=\"hah-glucose\"> </a><a name=\"hchah-glucose\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHObservationLab.html\">在宅急症－檢驗結果</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-hah-lab-request.html\">ServiceRequest </a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 2339-0}\">Glucose [Mass/volume] in Blood</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>encounter</b>: <a href=\"Encounter-hah-visit.html\">Encounter: extension = in-person; status = finished; class = home health (ActCode#HH); type = 訪視; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-01 10:00:00+0800</a></p><p><b>effective</b>: 2026-09-01 09:10:00+0800</p><p><b>performer</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><p><b>value</b>: 110 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></p><p><b>specimen</b>: <a href=\"Specimen-hah-specimen.html\">Specimen: identifier = https://example.org/specimens#HAH-SPECIMEN-1; type = </a></p></div>"
+  ] ;
+  fhir:Observation.basedOn [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/ServiceRequest/hah-lab-request> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/hah-lab-request" ]
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ] ;
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a loinc:2339-0 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "2339-0" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-visit> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-visit" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2026-09-01T09:10:00+08:00"^^xsd:dateTime] ;
+  fhir:Observation.performer [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+  ] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "110"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "mg/dL" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "mg/dL" ]
+  ] ;
+  fhir:Observation.specimen [
+     fhir:link <http://ltc-ig.fhir.tw/Specimen/hah-specimen> ;
+     fhir:Reference.reference [ fhir:value "Specimen/hah-specimen" ]
+  ] .
+
+<https://example.org/fhir/DiagnosticReport/hah-report> a fhir:DiagnosticReport ;
+  fhir:Resource.id [ fhir:value "hah-report"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHDiagnosticReport" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHDiagnosticReport>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DiagnosticReport_hah-report\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport hah-report</b></p><a name=\"hah-report\"> </a><a name=\"hchah-report\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHDiagnosticReport.html\">在宅急症－檢驗報告</a></p></div><h2><span title=\"Codes:\">血糖檢驗報告</span> </h2><table class=\"grid\"><tr><td>Subject</td><td>王測試 Male, DoB: 1945-03-15 ( Provider number)</td></tr><tr><td>Relevant Time</td><td>2026-09-01 09:10:00+0800</td></tr><tr><td>Reported</td><td>2026-09-01 09:20:00+0800</td></tr><tr><td>Performer</td><td> <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td></tr><tr><td><a href=\"Observation-hah-glucose.html\"><span title=\"Codes:{http://loinc.org 2339-0}\">Glucose [Mass/volume] in Blood</span></a></td><td>110 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td><td>Final</td></tr></table></div>"
+  ] ;
+  fhir:DiagnosticReport.basedOn [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/ServiceRequest/hah-lab-request> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/hah-lab-request" ]
+  ] ;
+  fhir:DiagnosticReport.status [ fhir:value "final"] ;
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.text [ fhir:value "血糖檢驗報告" ]
+  ] ;
+  fhir:DiagnosticReport.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:DiagnosticReport.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-visit> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-visit" ]
+  ] ;
+  fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2026-09-01T09:10:00+08:00"^^xsd:dateTime] ;
+  fhir:DiagnosticReport.issued [ fhir:value "2026-09-01T09:20:00+08:00"^^xsd:dateTime] ;
+  fhir:DiagnosticReport.performer [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Organization/hah-organization> ;
+     fhir:Reference.reference [ fhir:value "Organization/hah-organization" ]
+  ] ;
+  fhir:DiagnosticReport.specimen [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Specimen/hah-specimen> ;
+     fhir:Reference.reference [ fhir:value "Specimen/hah-specimen" ]
+  ] ;
+  fhir:DiagnosticReport.result [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Observation/hah-glucose> ;
+     fhir:Reference.reference [ fhir:value "Observation/hah-glucose" ]
+  ] .
+
+<https://example.org/fhir/Observation/hah-temperature> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "hah-temperature"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationBodyTemperature" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationBodyTemperature>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_hah-temperature\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation hah-temperature</b></p><a name=\"hah-temperature\"> </a><a name=\"hchah-temperature\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-PASportObservationBodyTemperature.html\">基礎生理量測－體溫</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8310-5}\">Body temperature</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>encounter</b>: <a href=\"Encounter-hah-visit.html\">Encounter: extension = in-person; status = finished; class = home health (ActCode#HH); type = 訪視; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-01 10:00:00+0800</a></p><p><b>effective</b>: 2026-09-01 09:10:00+0800</p><p><b>performer</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><p><b>value</b>: 37.2 Cel<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeCel = 'Cel')</span></p><p><b>device</b>: <a href=\"Device-hah-device.html\">Device: identifier = https://example.org/devices#THERMOMETER-001; status = active; type = </a></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ] ;
+       fhir:Coding.code [ fhir:value "vital-signs" ]
+     ]
+  ] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a loinc:8310-5 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "8310-5" ] ;
+       fhir:Coding.display [ fhir:value "Body temperature" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-visit> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-visit" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2026-09-01T09:10:00+08:00"^^xsd:dateTime] ;
+  fhir:Observation.performer [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+  ] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "37.2"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "Cel" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "Cel" ]
+  ] ;
+  fhir:Observation.device [
+     fhir:link <http://ltc-ig.fhir.tw/Device/hah-device> ;
+     fhir:Reference.reference [ fhir:value "Device/hah-device" ]
+  ] .
+
+<https://example.org/fhir/Device/hah-device> a fhir:Device ;
+  fhir:Resource.id [ fhir:value "hah-device"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHDevice" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHDevice>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Device_hah-device\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Device hah-device</b></p><a name=\"hah-device\"> </a><a name=\"hchah-device\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHDevice.html\">在宅急症－量測設備</a></p></div><p><b>identifier</b>: <code>https://example.org/devices</code>/THERMOMETER-001</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:\">體溫計</span></p><p><b>patient</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>owner</b>: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></p></div>"
+  ] ;
+  fhir:Device.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "https://example.org/devices" ] ;
+     fhir:Identifier.value [ fhir:value "THERMOMETER-001" ]
+  ] ;
+  fhir:Device.status [ fhir:value "active"] ;
+  fhir:Device.type [
+     fhir:CodeableConcept.text [ fhir:value "體溫計" ]
+  ] ;
+  fhir:Device.patient [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Device.owner [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/hah-organization> ;
+     fhir:Reference.reference [ fhir:value "Organization/hah-organization" ]
+  ] .
+
+<https://example.org/fhir/QuestionnaireResponse/hah-assessment> a fhir:QuestionnaireResponse ;
+  fhir:Resource.id [ fhir:value "hah-assessment"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHAssessmentResponse" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHAssessmentResponse>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"QuestionnaireResponse_hah-assessment\"> </a><p class=\"res-header-id\"><b>Generated Narrative: QuestionnaireResponse hah-assessment</b></p><a name=\"hah-assessment\"> </a><a name=\"hchah-assessment\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHAssessmentResponse.html\">在宅急症－收案評估回覆</a></p></div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 2px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"The linkID for the item\">LinkID</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Text for the item\">Text</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Minimum and Maximum # of times the item can appear in the instance\">Definition</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"The type of the item\">Answer</a><span style=\"float: right\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_q_root.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"QuestionnaireResponseRoot\" class=\"hierarchy\"/> hah-assessment</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Questionnaire:<a href=\"Questionnaire-hah-intake-assessment.html\">在宅急症收案評估</a></td></tr>#xD;\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> criteria</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">示範機構收案程序 1.0；本例不作給付判定</td></tr>#xD;\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> home-safety</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">已確認照護空間及聯絡設備</td></tr>#xD;\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> caregiver-support</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">照顧者可協助量測並聯繫團隊</td></tr>#xD;\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> decision</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"CodeSystem-hah-eligibility.html#hah-eligibility-eligible\">在宅急症－收案評估結果代碼: eligible</a> (建議收案)</span></span></td></tr>#xD;\n<tr><td colspan=\"4\" class=\"hierarchy\"><br/><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHAHEpisode" ] ;
+     fhir:Extension.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/EpisodeOfCare/hah-episode> ;
+       fhir:Reference.reference [ fhir:value "EpisodeOfCare/hah-episode" ]
+     ]
+  ] ;
+  fhir:QuestionnaireResponse.questionnaire [
+     fhir:value "http://ltc-ig.fhir.tw/Questionnaire/hah-intake-assessment|1.1.0" ;
+     fhir:link <http://ltc-ig.fhir.tw/Questionnaire/hah-intake-assessment|1.1.0>
+  ] ;
+  fhir:QuestionnaireResponse.status [ fhir:value "completed"] ;
+  fhir:QuestionnaireResponse.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:QuestionnaireResponse.authored [ fhir:value "2026-09-01T08:00:00+08:00"^^xsd:dateTime] ;
+  fhir:QuestionnaireResponse.author [
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+  ] ;
+  fhir:QuestionnaireResponse.item [
+     fhir:index 0 ;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "criteria" ] ;
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0 ;
+       fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "示範機構收案程序 1.0；本例不作給付判定" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "home-safety" ] ;
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0 ;
+       fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "已確認照護空間及聯絡設備" ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "caregiver-support" ] ;
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0 ;
+       fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "照顧者可協助量測並聯繫團隊" ]
+     ]
+  ], [
+     fhir:index 3 ;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "decision" ] ;
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0 ;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-eligibility" ] ;
+         fhir:Coding.code [ fhir:value "eligible" ]
+       ]
+     ]
+  ] .
+
+<https://example.org/fhir/ClinicalImpression/hah-impression> a fhir:ClinicalImpression ;
+  fhir:Resource.id [ fhir:value "hah-impression"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHClinicalImpression" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHClinicalImpression>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ClinicalImpression_hah-impression\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ClinicalImpression hah-impression</b></p><a name=\"hah-impression\"> </a><a name=\"hchah-impression\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHClinicalImpression.html\">在宅急症－臨床評估</a></p></div><p><b>status</b>: Completed</p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>encounter</b>: <a href=\"Encounter-hah-visit.html\">Encounter: extension = in-person; status = finished; class = home health (ActCode#HH); type = 訪視; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-01 10:00:00+0800</a></p><p><b>effective</b>: 2026-09-01 09:30:00+0800</p><p><b>date</b>: 2026-09-01 09:35:00+0800</p><p><b>assessor</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><p><b>problem</b>: <a href=\"Condition-hah-condition.html\">Condition </a></p><p><b>summary</b>: 已完成本次病情與居家照護需求評估，後續依照護計畫追蹤。</p><p><b>supportingInfo</b>: </p><ul><li><a href=\"Observation-hah-temperature.html\">Observation Body temperature</a></li><li><a href=\"DiagnosticReport-hah-report.html\">Diagnostic Report for '' for '-&gt;王測試 Male, DoB: 1945-03-15 ( Provider number)'</a></li></ul></div>"
+  ] ;
+  fhir:ClinicalImpression.status [ fhir:value "completed"] ;
+  fhir:ClinicalImpression.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:ClinicalImpression.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-visit> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-visit" ]
+  ] ;
+  fhir:ClinicalImpression.effectiveDateTime [ fhir:value "2026-09-01T09:30:00+08:00"^^xsd:dateTime] ;
+  fhir:ClinicalImpression.date [ fhir:value "2026-09-01T09:35:00+08:00"^^xsd:dateTime] ;
+  fhir:ClinicalImpression.assessor [
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+  ] ;
+  fhir:ClinicalImpression.problem [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Condition/hah-condition> ;
+     fhir:Reference.reference [ fhir:value "Condition/hah-condition" ]
+  ] ;
+  fhir:ClinicalImpression.summary [ fhir:value "已完成本次病情與居家照護需求評估，後續依照護計畫追蹤。"] ;
+  fhir:ClinicalImpression.supportingInfo [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Observation/hah-temperature> ;
+     fhir:Reference.reference [ fhir:value "Observation/hah-temperature" ]
+  ], [
+     fhir:index 1 ;
+     fhir:link <http://ltc-ig.fhir.tw/DiagnosticReport/hah-report> ;
+     fhir:Reference.reference [ fhir:value "DiagnosticReport/hah-report" ]
+  ] .
+
+<https://example.org/fhir/Procedure/hah-procedure> a fhir:Procedure ;
+  fhir:Resource.id [ fhir:value "hah-procedure"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHProcedure" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHProcedure>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Procedure_hah-procedure\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure hah-procedure</b></p><a name=\"hah-procedure\"> </a><a name=\"hchah-procedure\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHProcedure.html\">在宅急症－處置紀錄</a></p></div><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity education}\">照護者衛教</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>encounter</b>: <a href=\"Encounter-hah-visit.html\">Encounter: extension = in-person; status = finished; class = home health (ActCode#HH); type = 訪視; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-01 10:00:00+0800</a></p><p><b>performed</b>: 2026-09-01 09:40:00+0800</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>已向照顧者說明量測紀錄與聯繫方式。</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-activity" ] ;
+       fhir:Coding.code [ fhir:value "education" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "照護者衛教" ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Procedure.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-visit> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-visit" ]
+  ] ;
+  fhir:Procedure.performedDateTime [ fhir:value "2026-09-01T09:40:00+08:00"^^xsd:dateTime] ;
+  fhir:Procedure.performer [
+     fhir:index 0 ;
+     fhir:Procedure.performer.actor [
+       fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+     ]
+  ] ;
+  fhir:Procedure.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "已向照顧者說明量測紀錄與聯繫方式。" ]
+  ] .
+
+<https://example.org/fhir/MedicationRequest/hah-medication-order> a fhir:MedicationRequest ;
+  fhir:Resource.id [ fhir:value "hah-medication-order"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHMedicationRequest" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHMedicationRequest>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_hah-medication-order\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest hah-medication-order</b></p><a name=\"hah-medication-order\"> </a><a name=\"hchah-medication-order\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHMedicationRequest.html\">在宅急症－給藥處方</a></p></div><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>medication</b>: <span title=\"Codes:\">示範用輸注液</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>encounter</b>: <a href=\"Encounter-hah-visit.html\">Encounter: extension = in-person; status = finished; class = home health (ActCode#HH); type = 訪視; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-01 10:00:00+0800</a></p><p><b>authoredOn</b>: 2026-09-01 09:10:00+0800</p><p><b>requester</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><h3>DosageInstructions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Text</b></td></tr><tr><td style=\"display: none\">*</td><td>本例僅示範輸注期間及速率欄位。</td></tr></table></div>"
+  ] ;
+  fhir:MedicationRequest.status [ fhir:value "completed"] ;
+  fhir:MedicationRequest.intent [ fhir:value "order"] ;
+  fhir:MedicationRequest.medicationCodeableConcept [
+     fhir:CodeableConcept.text [ fhir:value "示範用輸注液" ]
+  ] ;
+  fhir:MedicationRequest.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:MedicationRequest.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-visit> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-visit" ]
+  ] ;
+  fhir:MedicationRequest.authoredOn [ fhir:value "2026-09-01T09:10:00+08:00"^^xsd:dateTime] ;
+  fhir:MedicationRequest.requester [
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+  ] ;
+  fhir:MedicationRequest.dosageInstruction [
+     fhir:index 0 ;
+     fhir:Dosage.text [ fhir:value "本例僅示範輸注期間及速率欄位。" ]
+  ] .
+
+<https://example.org/fhir/MedicationAdministration/hah-infusion> a fhir:MedicationAdministration ;
+  fhir:Resource.id [ fhir:value "hah-infusion"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHMedicationAdministration" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHMedicationAdministration>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationAdministration_hah-infusion\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationAdministration hah-infusion</b></p><a name=\"hah-infusion\"> </a><a name=\"hchah-infusion\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHMedicationAdministration.html\">在宅急症－給藥與輸注</a></p></div><p><b>status</b>: Completed</p><p><b>medication</b>: <span title=\"Codes:\">示範用輸注液</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>context</b>: <a href=\"Encounter-hah-visit.html\">Encounter: extension = in-person; status = finished; class = home health (ActCode#HH); type = 訪視; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-01 10:00:00+0800</a></p><p><b>effective</b>: 2026-09-01 09:15:00+0800 --&gt; 2026-09-01 09:45:00+0800</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></td></tr></table><p><b>request</b>: <a href=\"MedicationRequest-hah-medication-order.html\">MedicationRequest: status = completed; intent = order; medication[x] = ; authoredOn = 2026-09-01 09:10:00+0800</a></p><h3>Dosages</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Route</b></td><td><b>Rate[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">靜脈</span></td><td>100 mL/h<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemL/h = 'mL/h')</span></td></tr></table></div>"
+  ] ;
+  fhir:MedicationAdministration.status [ fhir:value "completed"] ;
+  fhir:MedicationAdministration.medicationCodeableConcept [
+     fhir:CodeableConcept.text [ fhir:value "示範用輸注液" ]
+  ] ;
+  fhir:MedicationAdministration.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:MedicationAdministration.context [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-visit> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-visit" ]
+  ] ;
+  fhir:MedicationAdministration.effectivePeriod [
+     fhir:Period.start [ fhir:value "2026-09-01T09:15:00+08:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2026-09-01T09:45:00+08:00"^^xsd:dateTime ]
+  ] ;
+  fhir:MedicationAdministration.performer [
+     fhir:index 0 ;
+     fhir:MedicationAdministration.performer.actor [
+       fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+     ]
+  ] ;
+  fhir:MedicationAdministration.request [
+     fhir:link <http://ltc-ig.fhir.tw/MedicationRequest/hah-medication-order> ;
+     fhir:Reference.reference [ fhir:value "MedicationRequest/hah-medication-order" ]
+  ] ;
+  fhir:MedicationAdministration.dosage [
+     fhir:MedicationAdministration.dosage.route [
+       fhir:CodeableConcept.text [ fhir:value "靜脈" ]
+     ] ;
+     fhir:MedicationAdministration.dosage.rateQuantity [
+       fhir:Quantity.value [ fhir:value "100"^^xsd:decimal ] ;
+       fhir:Quantity.unit [ fhir:value "mL/h" ] ;
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+       fhir:Quantity.code [ fhir:value "mL/h" ]
+     ]
+  ] .
+
+<https://example.org/fhir/MedicationAdministration/hah-medication-not-done> a fhir:MedicationAdministration ;
+  fhir:Resource.id [ fhir:value "hah-medication-not-done"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHMedicationAdministration" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHMedicationAdministration>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationAdministration_hah-medication-not-done\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationAdministration hah-medication-not-done</b></p><a name=\"hah-medication-not-done\"> </a><a name=\"hchah-medication-not-done\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHMedicationAdministration.html\">在宅急症－給藥與輸注</a></p></div><p><b>status</b>: Not Done</p><p><b>statusReason</b>: <span title=\"Codes:\">本次給藥經評估取消</span></p><p><b>medication</b>: <span title=\"Codes:\">示範用輸注液</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>context</b>: <a href=\"Encounter-hah-visit.html\">Encounter: extension = in-person; status = finished; class = home health (ActCode#HH); type = 訪視; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-01 10:00:00+0800</a></p><p><b>effective</b>: 2026-09-01 09:50:00+0800</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></td></tr></table><p><b>request</b>: <a href=\"MedicationRequest-hah-medication-order.html\">MedicationRequest: status = completed; intent = order; medication[x] = ; authoredOn = 2026-09-01 09:10:00+0800</a></p></div>"
+  ] ;
+  fhir:MedicationAdministration.status [ fhir:value "not-done"] ;
+  fhir:MedicationAdministration.statusReason [
+     fhir:index 0 ;
+     fhir:CodeableConcept.text [ fhir:value "本次給藥經評估取消" ]
+  ] ;
+  fhir:MedicationAdministration.medicationCodeableConcept [
+     fhir:CodeableConcept.text [ fhir:value "示範用輸注液" ]
+  ] ;
+  fhir:MedicationAdministration.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:MedicationAdministration.context [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-visit> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-visit" ]
+  ] ;
+  fhir:MedicationAdministration.effectiveDateTime [ fhir:value "2026-09-01T09:50:00+08:00"^^xsd:dateTime] ;
+  fhir:MedicationAdministration.performer [
+     fhir:index 0 ;
+     fhir:MedicationAdministration.performer.actor [
+       fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+     ]
+  ] ;
+  fhir:MedicationAdministration.request [
+     fhir:link <http://ltc-ig.fhir.tw/MedicationRequest/hah-medication-order> ;
+     fhir:Reference.reference [ fhir:value "MedicationRequest/hah-medication-order" ]
+  ] .
+
+<https://example.org/fhir/AllergyIntolerance/hah-allergy> a fhir:AllergyIntolerance ;
+  fhir:Resource.id [ fhir:value "hah-allergy"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHAllergyIntolerance" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHAllergyIntolerance>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"AllergyIntolerance_hah-allergy\"> </a><p class=\"res-header-id\"><b>Generated Narrative: AllergyIntolerance hah-allergy</b></p><a name=\"hah-allergy\"> </a><a name=\"hchah-allergy\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHAllergyIntolerance.html\">在宅急症－過敏資訊</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-verification confirmed}\">Confirmed</span></p><p><b>code</b>: <span title=\"Codes:\">青黴素</span></p><p><b>patient</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>encounter</b>: <a href=\"Encounter-hah-visit.html\">Encounter: extension = in-person; status = finished; class = home health (ActCode#HH); type = 訪視; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-01 10:00:00+0800</a></p><p><b>recordedDate</b>: 2026-09-01 09:00:00+0800</p><h3>Reactions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Manifestation</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">皮疹</span></td></tr></table></div>"
+  ] ;
+  fhir:AllergyIntolerance.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" ] ;
+       fhir:Coding.code [ fhir:value "active" ]
+     ]
+  ] ;
+  fhir:AllergyIntolerance.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification" ] ;
+       fhir:Coding.code [ fhir:value "confirmed" ]
+     ]
+  ] ;
+  fhir:AllergyIntolerance.code [
+     fhir:CodeableConcept.text [ fhir:value "青黴素" ]
+  ] ;
+  fhir:AllergyIntolerance.patient [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:AllergyIntolerance.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-visit> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-visit" ]
+  ] ;
+  fhir:AllergyIntolerance.recordedDate [ fhir:value "2026-09-01T09:00:00+08:00"^^xsd:dateTime] ;
+  fhir:AllergyIntolerance.reaction [
+     fhir:index 0 ;
+     fhir:AllergyIntolerance.reaction.manifestation [
+       fhir:index 0 ;
+       fhir:CodeableConcept.text [ fhir:value "皮疹" ]
+     ]
+  ] .
+
+<https://example.org/fhir/DocumentReference/hah-attachment> a fhir:DocumentReference ;
+  fhir:Resource.id [ fhir:value "hah-attachment"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHDocumentReference" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHDocumentReference>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DocumentReference_hah-attachment\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DocumentReference hah-attachment</b></p><a name=\"hah-attachment\"> </a><a name=\"hchah-attachment\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHDocumentReference.html\">在宅急症－照護附件</a></p></div><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes:\">在宅照護同意文件</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>date</b>: 2026-09-01 08:30:00+0800</p><p><b>author</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Data</b></td><td><b>Title</b></td></tr><tr><td style=\"display: none\">*</td><td>text/plain</td><td><code>RXhhbXBsZSBvbmx5</code></td><td>合成同意文件</td></tr></table></blockquote><h3>Contexts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Encounter</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Encounter-hah-admission.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></td></tr></table></div>"
+  ] ;
+  fhir:DocumentReference.status [ fhir:value "current"] ;
+  fhir:DocumentReference.type [
+     fhir:CodeableConcept.text [ fhir:value "在宅照護同意文件" ]
+  ] ;
+  fhir:DocumentReference.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:DocumentReference.date [ fhir:value "2026-09-01T08:30:00+08:00"^^xsd:dateTime] ;
+  fhir:DocumentReference.author [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+  ] ;
+  fhir:DocumentReference.content [
+     fhir:index 0 ;
+     fhir:DocumentReference.content.attachment [
+       fhir:Attachment.contentType [ fhir:value "text/plain" ] ;
+       fhir:Attachment.data [ fhir:value "RXhhbXBsZSBvbmx5"^^xsd:base64Binary ] ;
+       fhir:Attachment.title [ fhir:value "合成同意文件" ]
+     ]
+  ] ;
+  fhir:DocumentReference.context [
+     fhir:DocumentReference.context.encounter [
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-admission> ;
+       fhir:Reference.reference [ fhir:value "Encounter/hah-admission" ]
+     ]
+  ] .
+
+<https://example.org/fhir/Consent/hah-consent> a fhir:Consent ;
+  fhir:Resource.id [ fhir:value "hah-consent"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHConsent" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHConsent>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Consent_hah-consent\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Consent hah-consent</b></p><a name=\"hah-consent\"> </a><a name=\"hchah-consent\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHConsent.html\">在宅急症－照護同意</a></p></div><h2>Participants</h2><table class=\"grid\"><tr><td><b>Role</b></td><td><b>Details</b></td></tr><tr><td title=\"Who the consent applies to\">Patient</td><td><a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></td></tr><tr><td title=\"Who is agreeing to the policy and rules\">Party</td><td><a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></td></tr><tr><td title=\"Who manages the consent through its lifecycle.\">Manager</td><td><a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></td></tr></table><p>This consent is made under the policy <a href=\"https://example.org/policies/hah-care-consent\">https://example.org/policies/hah-care-consent</a> .</p><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 2px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Applicable Rule\">Rule</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Applicable Period\">Time Period</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Other Applicable Rules\">Rules</a><span style=\"float: right\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_extension.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Consent Provision\" class=\"hierarchy\"/> permit</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"></td></tr>#xD;\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_extension.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Consent Provision\" class=\"hierarchy\"/> permit</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><ul><li>Period: 2026-09-01 --&gt; 2026-09-05</li></ul></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"></td></tr>#xD;\n<tr><td colspan=\"3\" class=\"hierarchy\"><br/><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHAHEpisode" ] ;
+     fhir:Extension.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/EpisodeOfCare/hah-episode> ;
+       fhir:Reference.reference [ fhir:value "EpisodeOfCare/hah-episode" ]
+     ]
+  ] ;
+  fhir:Consent.status [ fhir:value "active"] ;
+  fhir:Consent.scope [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentscope" ] ;
+       fhir:Coding.code [ fhir:value "treatment" ]
+     ]
+  ] ;
+  fhir:Consent.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.text [ fhir:value "在宅急症照護同意" ]
+  ] ;
+  fhir:Consent.patient [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Consent.dateTime [ fhir:value "2026-09-01T08:30:00+08:00"^^xsd:dateTime] ;
+  fhir:Consent.performer [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Consent.organization [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Organization/hah-organization> ;
+     fhir:Reference.reference [ fhir:value "Organization/hah-organization" ]
+  ] ;
+  fhir:Consent.sourceReference [
+     fhir:link <http://ltc-ig.fhir.tw/DocumentReference/hah-attachment> ;
+     fhir:Reference.reference [ fhir:value "DocumentReference/hah-attachment" ]
+  ] ;
+  fhir:Consent.policy [
+     fhir:index 0 ;
+     fhir:Consent.policy.uri [ fhir:value "https://example.org/policies/hah-care-consent" ]
+  ] ;
+  fhir:Consent.provision [
+     fhir:Consent.provision.type [ fhir:value "permit" ] ;
+     fhir:Consent.provision.period [
+       fhir:Period.start [ fhir:value "2026-09-01"^^xsd:date ] ;
+       fhir:Period.end [ fhir:value "2026-09-05"^^xsd:date ]
+     ]
+  ] .
+
+<https://example.org/fhir/Communication/hah-communication> a fhir:Communication ;
+  fhir:Resource.id [ fhir:value "hah-communication"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHCommunication" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHCommunication>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Communication_hah-communication\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Communication hah-communication</b></p><a name=\"hah-communication\"> </a><a name=\"hchah-communication\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHCommunication.html\">在宅急症－照會與交班</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-hah-consult-request.html\">ServiceRequest 專科照會</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity consultation}\">專科照會</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>encounter</b>: <a href=\"Encounter-hah-visit.html\">Encounter: extension = in-person; status = finished; class = home health (ActCode#HH); type = 訪視; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-01 10:00:00+0800</a></p><p><b>sent</b>: 2026-09-01 10:00:00+0800</p><p><b>recipient</b>: <a href=\"CareTeam-hah-team.html\">CareTeam: status = inactive</a></p><p><b>sender</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><h3>Payloads</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Content[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>已回覆本次照會，請依照護計畫持續追蹤。</td></tr></table></div>"
+  ] ;
+  fhir:Communication.basedOn [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/ServiceRequest/hah-consult-request> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/hah-consult-request" ]
+  ] ;
+  fhir:Communication.status [ fhir:value "completed"] ;
+  fhir:Communication.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-activity" ] ;
+       fhir:Coding.code [ fhir:value "consultation" ]
+     ]
+  ] ;
+  fhir:Communication.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Communication.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-visit> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-visit" ]
+  ] ;
+  fhir:Communication.sent [ fhir:value "2026-09-01T10:00:00+08:00"^^xsd:dateTime] ;
+  fhir:Communication.recipient [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/CareTeam/hah-team> ;
+     fhir:Reference.reference [ fhir:value "CareTeam/hah-team" ]
+  ] ;
+  fhir:Communication.sender [
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+  ] ;
+  fhir:Communication.payload [
+     fhir:index 0 ;
+     fhir:Communication.payload.contentString [ fhir:value "已回覆本次照會，請依照護計畫持續追蹤。" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Bundle/hah-document.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

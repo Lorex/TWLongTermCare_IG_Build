@@ -1,4 +1,4 @@
-# 長期照顧－照顧計畫 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長期照顧－照顧計畫 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,20 +8,20 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCarePlan | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:LTCCarePlan |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCarePlan | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:LTCCarePlan |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 CarePlan Resource，以呈現長期照顧情境中涉及之照顧計畫內容。 
 
 **Usages:**
 
-* Derived from this Profile: [轉介單－服務種類](StructureDefinition-LTCCarePlanReferral.md)
+* Derived from this Profile: [在宅急症－照護計畫](StructureDefinition-HAHCarePlan.md), [居家護理－照護計畫](StructureDefinition-HNCarePlan.md) and [轉介單－服務種類](StructureDefinition-LTCCarePlanReferral.md)
 * Refer to this Profile: [長期照顧－照顧計畫](StructureDefinition-LTCCarePlan.md) and [長期照顧－任務管理](StructureDefinition-LTCTask.md)
 * Examples for this Profile: [CarePlan/ltc-careplan-mobility-example](CarePlan-ltc-careplan-mobility-example.md)
 * CapabilityStatements using this Profile: [臺灣長期照顧實作指引 - 用戶端能力聲明](CapabilityStatement-CapabilityStatementLTCClient.md) and [臺灣長期照顧實作指引 - 伺服端能力聲明](CapabilityStatement-CapabilityStatementLTCServer.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCCarePlan)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-LTCCarePlan.json)
 
 ### Formal Views of Profile Content
 
@@ -40,11 +40,11 @@ Other representations of profile: [CSV](StructureDefinition-LTCCarePlan.csv), [E
   "resourceType" : "StructureDefinition",
   "id" : "LTCCarePlan",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCCarePlan",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCCarePlan",
   "title" : "長期照顧－照顧計畫",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -82,6 +82,10 @@ Other representations of profile: [CSV](StructureDefinition-LTCCarePlan.csv), [E
   "derivation" : "constraint",
   "differential" : {
     "element" : [{
+      "id" : "CarePlan",
+      "path" : "CarePlan"
+    },
+    {
       "id" : "CarePlan.basedOn",
       "path" : "CarePlan.basedOn",
       "short" : "照顧計畫的來源，即這項照顧計畫是基於哪個照顧計畫？",

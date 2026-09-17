@@ -1,0 +1,66 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/EpisodeOfCare/hah-transfer-episode> a fhir:EpisodeOfCare ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hah-transfer-episode"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHEpisodeOfCare" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHEpisodeOfCare>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: EpisodeOfCare hah-transfer-episode</b></p><a name=\"hah-transfer-episode\"> </a><a name=\"hchah-transfer-episode\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHEpisodeOfCare.html\">在宅急症－收案療程</a></p></div><p><b>在宅急症－療程結束原因</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-outcome hospital-transfer}\">轉急診或住院</span></p><p><b>identifier</b>: <code>https://example.org/hah/episodes</code>/HAH-20260910-002</p><p><b>status</b>: Finished</p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity acute-home}\">在宅急症照護</span></p><p><b>patient</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>managingOrganization</b>: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></p><p><b>period</b>: 2026-09-10 08:00:00+0800 --&gt; 2026-09-11 10:00:00+0800</p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHAHOutcome" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-outcome" ] ;
+         fhir:Coding.code [ fhir:value "hospital-transfer" ]
+       ]
+     ]
+  ] ;
+  fhir:EpisodeOfCare.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "https://example.org/hah/episodes" ] ;
+     fhir:Identifier.value [ fhir:value "HAH-20260910-002" ]
+  ] ;
+  fhir:EpisodeOfCare.status [ fhir:value "finished"] ;
+  fhir:EpisodeOfCare.type [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-activity" ] ;
+       fhir:Coding.code [ fhir:value "acute-home" ]
+     ]
+  ] ;
+  fhir:EpisodeOfCare.patient [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:EpisodeOfCare.managingOrganization [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/hah-organization> ;
+     fhir:Reference.reference [ fhir:value "Organization/hah-organization" ]
+  ] ;
+  fhir:EpisodeOfCare.period [
+     fhir:Period.start [ fhir:value "2026-09-10T08:00:00+08:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2026-09-11T10:00:00+08:00"^^xsd:dateTime ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/EpisodeOfCare/hah-transfer-episode.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

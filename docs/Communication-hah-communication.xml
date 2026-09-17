@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Communication xmlns="http://hl7.org/fhir">
+  <id value="hah-communication"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/HAHCommunication"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Communication hah-communication</b></p><a name="hah-communication"> </a><a name="hchah-communication"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-HAHCommunication.html">在宅急症－照會與交班</a></p></div><p><b>basedOn</b>: <a href="ServiceRequest-hah-consult-request.html">ServiceRequest 專科照會</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity consultation}">專科照會</span></p><p><b>subject</b>: <a href="Patient-hah-patient.html">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>encounter</b>: <a href="Encounter-hah-visit.html">Encounter: extension = in-person; status = finished; class = home health (ActCode#HH); type = 訪視; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-01 10:00:00+0800</a></p><p><b>sent</b>: 2026-09-01 10:00:00+0800</p><p><b>recipient</b>: <a href="CareTeam-hah-team.html">CareTeam: status = inactive</a></p><p><b>sender</b>: <a href="Practitioner-hah-practitioner.html">Practitioner 李示範</a></p><h3>Payloads</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Content[x]</b></td></tr><tr><td style="display: none">*</td><td>已回覆本次照會，請依照護計畫持續追蹤。</td></tr></table></div>
+  </text>
+  <basedOn>
+    <reference value="ServiceRequest/hah-consult-request"/>
+  </basedOn>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://ltc-ig.fhir.tw/CodeSystem/hah-activity"/>
+      <code value="consultation"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/hah-patient"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/hah-visit"/>
+  </encounter>
+  <sent value="2026-09-01T10:00:00+08:00"/>
+  <recipient>
+    <reference value="CareTeam/hah-team"/>
+  </recipient>
+  <sender>
+    <reference value="Practitioner/hah-practitioner"/>
+  </sender>
+  <payload>
+    <contentString value="已回覆本次照會，請依照護計畫持續追蹤。"/>
+  </payload>
+</Communication>

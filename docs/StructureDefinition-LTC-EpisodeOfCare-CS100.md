@@ -1,4 +1,4 @@
-# 長照案件（CS100 專用版） - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長照案件（CS100 專用版） - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-CS100 | *Version*:1.0.0 |
-| Draft as of 2026-06-25 | *Computable Name*:LTCEpisodeOfCareCS100 |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-CS100 | *Version*:1.1.0 |
+| Draft as of 2026-09-17 | *Computable Name*:LTCEpisodeOfCareCS100 |
 
  
 對應衛生福利部照顧服務管理資訊平臺『CS100 個案總查詢』之案件列資料。 作為 CS100 匯出資料列的病例/案件載體，提供個案管理之基礎欄位（案件編號、狀態、期間、主責機構、個管等）。 
@@ -19,7 +19,7 @@
 * Refer to this Profile: [個案總查詢（CS100 對應版）Case Summary](StructureDefinition-LTC-Composition-CS100.md)
 * Examples for this Profile: [EpisodeOfCare/ltc-episodeofcare-cs100-example](EpisodeOfCare-ltc-episodeofcare-cs100-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTC-EpisodeOfCare-CS100)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-LTC-EpisodeOfCare-CS100.json)
 
 ### Formal Views of Profile Content
 
@@ -38,11 +38,11 @@ Other representations of profile: [CSV](StructureDefinition-LTC-EpisodeOfCare-CS
   "resourceType" : "StructureDefinition",
   "id" : "LTC-EpisodeOfCare-CS100",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTC-EpisodeOfCare-CS100",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCEpisodeOfCareCS100",
   "title" : "長照案件（CS100 專用版）",
   "status" : "draft",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

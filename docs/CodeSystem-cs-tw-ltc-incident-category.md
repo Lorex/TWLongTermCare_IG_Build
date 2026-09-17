@@ -1,4 +1,4 @@
-# 長照 SDK－異常紀錄－異常類別 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長照 SDK－異常紀錄－異常類別 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,15 +8,16 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-category | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:CS_TW_LTC_Incident_Category |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-category | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:CS_TW_LTC_Incident_Category |
+| *Other Identifiers:*OID:2.25.33230317116842733930145531322860065530 | |
 
  
 表單『異常類別』多選。 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* [VS_TW_LTC_Incident_Category](ValueSet-vs-tw-ltc-incident-category.md)
+* [長照 SDK－異常紀錄－異常類別](ValueSet-vs-tw-ltc-incident-category.md)
 
 
 
@@ -27,12 +28,16 @@
   "resourceType" : "CodeSystem",
   "id" : "cs-tw-ltc-incident-category",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-category",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.33230317116842733930145531322860065530"
+  }],
+  "version" : "1.1.0",
   "name" : "CS_TW_LTC_Incident_Category",
   "title" : "長照 SDK－異常紀錄－異常類別",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

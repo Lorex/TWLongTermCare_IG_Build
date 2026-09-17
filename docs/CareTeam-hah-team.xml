@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CareTeam xmlns="http://hl7.org/fhir">
+  <id value="hah-team"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/HAHCareTeam"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CareTeam hah-team</b></p><a name="hah-team"> </a><a name="hchah-team"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-HAHCareTeam.html">在宅急症－照護團隊</a></p></div><p><b>status</b>: Inactive</p><p><b>subject</b>: <a href="Patient-hah-patient.html">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>encounter</b>: <a href="Encounter-hah-admission.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><blockquote><p><b>participant</b></p><p><b>role</b>: <span title="Codes:">主責醫療人員</span></p><p><b>member</b>: <a href="Practitioner-hah-practitioner.html">Practitioner 李示範</a></p><p><b>period</b>: 2026-09-01 --&gt; 2026-09-05</p></blockquote><blockquote><p><b>participant</b></p><p><b>role</b>: <span title="Codes:">共照機構</span></p><p><b>member</b>: <a href="Organization-hah-organization.html">Organization 在宅急症示範醫療機構</a></p></blockquote></div>
+  </text>
+  <status value="inactive"/>
+  <subject>
+    <reference value="Patient/hah-patient"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/hah-admission"/>
+  </encounter>
+  <participant>
+    <role>
+      <text value="主責醫療人員"/>
+    </role>
+    <member>
+      <reference value="Practitioner/hah-practitioner"/>
+    </member>
+    <period>
+      <start value="2026-09-01"/>
+      <end value="2026-09-05"/>
+    </period>
+  </participant>
+  <participant>
+    <role>
+      <text value="共照機構"/>
+    </role>
+    <member>
+      <reference value="Organization/hah-organization"/>
+    </member>
+  </participant>
+</CareTeam>

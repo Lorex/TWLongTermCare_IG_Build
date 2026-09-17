@@ -1,4 +1,4 @@
-# 長照－核定額度（CoverageEligibilityResponse） - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長照－核定額度（CoverageEligibilityResponse） - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse | *Version*:1.0.0 |
-| Draft as of 2026-06-25 | *Computable Name*:LTCCoverageEligibilityResponse |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse | *Version*:1.1.0 |
+| Draft as of 2026-09-17 | *Computable Name*:LTCCoverageEligibilityResponse |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 CoverageEligibilityResponse Resource，以呈現長照各服務別之核定額度摘要，包含總額、補助金額、自付額及比率等資料。 
@@ -20,7 +20,7 @@
 * Refer to this Profile: [個案總查詢（CS100 對應版）Case Summary](StructureDefinition-LTC-Composition-CS100.md)
 * Examples for this Profile: [CoverageEligibilityResponse/ltc-coverageeligibilityresponse-cs100-example](CoverageEligibilityResponse-ltc-coverageeligibilityresponse-cs100-example.md) and [CoverageEligibilityResponse/ltc-coverageeligibilityresponse-sdk-example](CoverageEligibilityResponse-ltc-coverageeligibilityresponse-sdk-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTC-CoverageEligibilityResponse)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-LTC-CoverageEligibilityResponse.json)
 
 ### Formal Views of Profile Content
 
@@ -39,11 +39,11 @@ Other representations of profile: [CSV](StructureDefinition-LTC-CoverageEligibil
   "resourceType" : "StructureDefinition",
   "id" : "LTC-CoverageEligibilityResponse",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTC-CoverageEligibilityResponse",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCCoverageEligibilityResponse",
   "title" : "長照－核定額度（CoverageEligibilityResponse）",
   "status" : "draft",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -1,4 +1,4 @@
-# 長照 SDK－錯誤訊息 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長照 SDK－錯誤訊息 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-Error | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:ExtTWLTCExportError |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-Error | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:ExtTWLTCExportError |
 
 此 Extension 用於表示長照 SDK 回傳的錯誤訊息，適用於 ClaimResponse 或 OperationOutcome.issue。
 
@@ -22,7 +22,7 @@
 * Use this Extension: [長照 SDK－照管全量匯出（ClaimResponse）](StructureDefinition-LTC-ClaimResponse-Export.md)
 * Examples for this Extension: [ClaimResponse/ltc-claimresponse-export-example](ClaimResponse-ltc-claimresponse-export-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/Ext-TW-LTC-Export-Error)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-Ext-TW-LTC-Export-Error.json)
 
 ### Formal Views of Extension Content
 
@@ -43,11 +43,11 @@ Other representations of profile: [CSV](StructureDefinition-Ext-TW-LTC-Export-Er
   "resourceType" : "StructureDefinition",
   "id" : "Ext-TW-LTC-Export-Error",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-Error",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "ExtTWLTCExportError",
   "title" : "長照 SDK－錯誤訊息",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

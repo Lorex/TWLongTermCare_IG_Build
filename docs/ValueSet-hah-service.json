@@ -1,0 +1,50 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "hah-service",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet hah-service</b></p><a name=\"hah-service\"> </a><a name=\"hchah-service\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-hah-activity.html\"><code>http://ltc-ig.fhir.tw/CodeSystem/hah-activity</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;1.1.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-hah-activity.html#hah-activity-visit\">visit</a></td><td style=\"color: #cccccc\">訪視</td><td>排定或提供一次照護訪視。</td></tr><tr><td><a href=\"CodeSystem-hah-activity.html#hah-activity-consultation\">consultation</a></td><td style=\"color: #cccccc\">專科照會</td><td>請求其他專業人員評估並回覆。</td></tr><tr><td><a href=\"CodeSystem-hah-activity.html#hah-activity-referral\">referral</a></td><td style=\"color: #cccccc\">轉介</td><td>請求另一個機構接續照護。</td></tr><tr><td><a href=\"CodeSystem-hah-activity.html#hah-activity-laboratory\">laboratory</a></td><td style=\"color: #cccccc\">檢驗</td><td>請求檢體檢驗或現場檢測。</td></tr><tr><td><a href=\"CodeSystem-hah-activity.html#hah-activity-nursing\">nursing</a></td><td style=\"color: #cccccc\">護理處置</td><td>請求或執行護理處置。</td></tr><tr><td><a href=\"CodeSystem-hah-activity.html#hah-activity-medicine-delivery\">medicine-delivery</a></td><td style=\"color: #cccccc\">送藥</td><td>配送或代領藥物，不代表完成給藥。</td></tr><tr><td><a href=\"CodeSystem-hah-activity.html#hah-activity-education\">education</a></td><td style=\"color: #cccccc\">衛教</td><td>提供個案或照顧者照護指導。</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://ltc-ig.fhir.tw/ValueSet/hah-service",
+  "version" : "1.1.0",
+  "name" : "HAHServiceVS",
+  "title" : "在宅急症－服務項目值集",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-09-17T17:33:17+08:00",
+  "publisher" : "經濟部產業發展署",
+  "contact" : [{
+    "name" : "經濟部產業發展署",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.ida.gov.tw/"
+    }]
+  }],
+  "description" : "服務請求與工作可用的本地分類；詳細檢驗或處置仍應使用適切標準代碼。",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-activity",
+      "concept" : [{
+        "code" : "visit"
+      },
+      {
+        "code" : "consultation"
+      },
+      {
+        "code" : "referral"
+      },
+      {
+        "code" : "laboratory"
+      },
+      {
+        "code" : "nursing"
+      },
+      {
+        "code" : "medicine-delivery"
+      },
+      {
+        "code" : "education"
+      }]
+    }]
+  }
+}

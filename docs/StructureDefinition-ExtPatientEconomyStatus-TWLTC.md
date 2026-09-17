@@ -1,4 +1,4 @@
-# 長照機構住民經濟狀況 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長照機構住民經濟狀況 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEconomyStatus-TWLTC | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:ExtPatientEconomyStatusTWLTC |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEconomyStatus-TWLTC | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:ExtPatientEconomyStatusTWLTC |
 
 此 Extension 用以表述長照機構住民的經濟狀況。
 
@@ -22,7 +22,7 @@
 * Use this Extension: [轉介單－個案基本資料](StructureDefinition-LTCPatientReferral.md)
 * Examples for this Extension: [Bundle/ltc-bundle-referral-example](Bundle-ltc-bundle-referral-example.md), [Patient/ltc-patient-referral-chen-ming-hui-example](Patient-ltc-patient-referral-chen-ming-hui-example.md) and [Patient/ltc-patient-referral-example](Patient-ltc-patient-referral-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/ExtPatientEconomyStatus-TWLTC)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-ExtPatientEconomyStatus-TWLTC.json)
 
 ### Formal Views of Extension Content
 
@@ -45,11 +45,11 @@ Other representations of profile: [CSV](StructureDefinition-ExtPatientEconomySta
   "resourceType" : "StructureDefinition",
   "id" : "ExtPatientEconomyStatus-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEconomyStatus-TWLTC",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "ExtPatientEconomyStatusTWLTC",
   "title" : "長照機構住民經濟狀況",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

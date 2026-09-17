@@ -1,4 +1,4 @@
-# 臺灣 2023 年中文版 ICD-10-PCS-F 值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 臺灣 2023 年中文版 ICD-10-PCS-F 值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ICD-10-PCS-2023-TW-F-VS | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ICD-10-PCS-2023-TW-F-VS | *Version*:1.1.0 |
 | Active as of 2024-06-04 | *Computable Name*:ICD10PCS2023TWFVS |
+| *Other Identifiers:*OID:2.25.117037232722564749633108736248946724683 | |
 
  
 臺灣 2023 年中文版 ICD-10-PCS 復健及診斷性聽力學(Physical Rehabilitation and Diagnostic Audiology)，章節數值為「F」。 包括：復健、診斷性聽力學。 代碼出版日期：2023-11-10；資料所屬單位：衛生福利部中央健康保險署。 因原始資料無代碼版本資訊，故使用其法規「公布日期」作為版本資訊。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。 
@@ -46,7 +47,11 @@
   "resourceType" : "ValueSet",
   "id" : "ICD-10-PCS-2023-TW-F-VS",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/ICD-10-PCS-2023-TW-F-VS",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.117037232722564749633108736248946724683"
+  }],
+  "version" : "1.1.0",
   "name" : "ICD10PCS2023TWFVS",
   "title" : "臺灣 2023 年中文版 ICD-10-PCS-F 值集",
   "status" : "active",

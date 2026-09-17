@@ -1,4 +1,4 @@
-# 長照 SDK－服務活動紀錄（SERVICE_A） - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長照 SDK－服務活動紀錄（SERVICE_A） - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,17 +8,18 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-Communication-ServiceA | *Version*:1.0.0 |
-| Draft as of 2026-06-25 | *Computable Name*:LTCCommunicationServiceA |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-Communication-ServiceA | *Version*:1.1.0 |
+| Draft as of 2026-09-17 | *Computable Name*:LTCCommunicationServiceA |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Communication Resource，以呈現長照服務活動紀錄，包含電訪、家訪等過程資料。 
 
 **Usages:**
 
+* Derived from this Profile: [在宅急症－照會與交班](StructureDefinition-HAHCommunication.md) and [居家護理－共照紀錄](StructureDefinition-HNCommunication.md)
 * Examples for this Profile: [Communication/ltc-communication-servicea-example](Communication-ltc-communication-servicea-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTC-Communication-ServiceA)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-LTC-Communication-ServiceA.json)
 
 ### Formal Views of Profile Content
 
@@ -37,11 +38,11 @@ Other representations of profile: [CSV](StructureDefinition-LTC-Communication-Se
   "resourceType" : "StructureDefinition",
   "id" : "LTC-Communication-ServiceA",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTC-Communication-ServiceA",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCCommunicationServiceA",
   "title" : "長照 SDK－服務活動紀錄（SERVICE_A）",
   "status" : "draft",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

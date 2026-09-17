@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,143 +7,142 @@
 
 <http://ltc-ig.fhir.tw/Patient/ltc-patient-cms-example> a fhir:Patient ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ltc-patient-cms-example"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientCMS"^^xsd:anyURI ;
-       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientCMS>
-     ] )
-  ] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ltc-patient-cms-example</b></p><a name=\"ltc-patient-cms-example\"> </a><a name=\"hcltc-patient-cms-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCPatientCMS.html\">照顧管理評估量表－個案基本資料</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">陳明華(official) Female, DoB: 1945-08-15 ( National Person Identifier (TWN): A123456789 (use: official, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known Marital status of Patient\">Marital Status:</td><td colspan=\"3\"><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}\">Married</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\">Provider number/LTC-12345 (use: official, )</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 02-12345678(Home)</li><li>台北市信義區信義路五段7號(home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: Emergency Contact\">Emergency Contact:</td><td colspan=\"3\"><ul><li>陳建國(Official)</li><li>ph: 0912-345-678(Mobile)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"此 Extension 用以表述個案的身分別。\"><a href=\"StructureDefinition-ExtPatientIdentity-TWLTC.html\">個案身分別</a></td><td colspan=\"3\"><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/PatientIdentityCS-TWLTC 1}\">一般戶</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"此 Extension 用以表述長照機構住民的教育程度。\"><a href=\"StructureDefinition-ExtPatientEducationStatus-TWLTC.html\">長照機構住民教育程度</a></td><td colspan=\"3\"><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC elementary}\">國小</span></td></tr></table></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:extension ( [
-     fhir:url [
-       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEducationStatus-TWLTC"^^xsd:anyURI ;
-       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEducationStatus-TWLTC>
-     ] ;
-     fhir:value [
-       a fhir:CodeableConcept ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC"^^xsd:anyURI ;
-           fhir:l <http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC>
-         ] ;
-         fhir:code [ fhir:v "elementary" ] ;
-         fhir:display [ fhir:v "國小" ]
-       ] )
+  fhir:Resource.id [ fhir:value "ltc-patient-cms-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientCMS" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCPatientCMS>
      ]
-  ] [
-     fhir:url [
-       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientIdentity-TWLTC"^^xsd:anyURI ;
-       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientIdentity-TWLTC>
-     ] ;
-     fhir:value [
-       a fhir:CodeableConcept ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://ltc-ig.fhir.tw/CodeSystem/PatientIdentityCS-TWLTC"^^xsd:anyURI ;
-           fhir:l <http://ltc-ig.fhir.tw/CodeSystem/PatientIdentityCS-TWLTC>
-         ] ;
-         fhir:code [ fhir:v "1" ] ;
-         fhir:display [ fhir:v "一般戶" ]
-       ] )
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ltc-patient-cms-example</b></p><a name=\"ltc-patient-cms-example\"> </a><a name=\"hcltc-patient-cms-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCPatientCMS.html\">照顧管理評估量表－個案基本資料</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">陳明華(official) Female, DoB: 1945-08-15 ( National Person Identifier (TWN): A123456789 (use: official, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known Marital status of Patient\">Marital Status:</td><td colspan=\"3\"><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}\">Married</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\">Provider number/LTC-12345 (use: official, )</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 02-12345678(Home)</li><li>台北市信義區信義路五段7號(home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: Emergency Contact\">Emergency Contact:</td><td colspan=\"3\"><ul><li>陳建國(Official)</li><li>ph: 0912-345-678(Mobile)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"此 Extension 用以表述個案的身分別。\"><a href=\"StructureDefinition-ExtPatientIdentity-TWLTC.html\">個案身分別</a></td><td colspan=\"3\"><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/PatientIdentityCS-TWLTC 1}\">一般戶</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"此 Extension 用以表述長照機構住民的教育程度。\"><a href=\"StructureDefinition-ExtPatientEducationStatus-TWLTC.html\">長照機構住民教育程度</a></td><td colspan=\"3\"><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC elementary}\">國小</span></td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEducationStatus-TWLTC" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC" ] ;
+         fhir:Coding.code [ fhir:value "elementary" ] ;
+         fhir:Coding.display [ fhir:value "國小" ]
+       ]
      ]
-  ] ) ; # 
-  fhir:identifier ( [
-     fhir:use [ fhir:v "official" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
-         ] ;
-         fhir:code [ fhir:v "PRN" ] ;
-         fhir:display [ fhir:v "Provider number" ]
-       ] )
+  ], [
+     fhir:index 1 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientIdentity-TWLTC" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/PatientIdentityCS-TWLTC" ] ;
+         fhir:Coding.code [ fhir:value "1" ] ;
+         fhir:Coding.display [ fhir:value "一般戶" ]
+       ]
+     ]
+  ] ;
+  fhir:Patient.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.use [ fhir:value "official" ] ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "PRN" ] ;
+         fhir:Coding.display [ fhir:value "Provider number" ]
+       ]
      ] ;
-     fhir:system [
-       fhir:v "http://ltc-hospital.tw"^^xsd:anyURI ;
-       fhir:l <http://ltc-hospital.tw>
-     ] ;
-     fhir:value [ fhir:v "LTC-12345" ]
-  ] [
-     fhir:use [ fhir:v "official" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
-         ] ;
-         fhir:code [ fhir:v "NNxxx" ] ;
-         fhir:display [ fhir:v "National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code" ]
-       ] ) ;
-       fhir:text [ fhir:v "National Person Identifier (TWN)" ]
-     ] ;
-     fhir:system [
-       fhir:v "http://www.moi.gov.tw"^^xsd:anyURI ;
-       fhir:l <http://www.moi.gov.tw>
-     ] ;
-     fhir:value [ fhir:v "A123456789" ]
-  ] ) ; # 
-  fhir:active [ fhir:v true] ; # 
-  fhir:name ( [
-     fhir:use [ fhir:v "official" ] ;
-     fhir:text [ fhir:v "陳明華" ] ;
-     fhir:family [ fhir:v "陳" ] ;
-     fhir:given ( [ fhir:v "明華" ] )
-  ] ) ; # 
-  fhir:telecom ( [
-     fhir:system [ fhir:v "phone" ] ;
-     fhir:value [ fhir:v "02-12345678" ] ;
-     fhir:use [ fhir:v "home" ]
-  ] ) ; # 
-  fhir:gender [ fhir:v "female"] ; # 
-  fhir:birthDate [ fhir:v "1945-08-15"^^xsd:date] ; # 
-  fhir:address ( [
-     fhir:use [ fhir:v "home" ] ;
-     fhir:type [ fhir:v "both" ] ;
-     fhir:text [ fhir:v "台北市信義區信義路五段7號" ] ;
-     fhir:line ( [ fhir:v "信義路五段7號" ] ) ;
-     fhir:city [ fhir:v "台北市" ] ;
-     fhir:district [ fhir:v "信義區" ] ;
-     fhir:postalCode [ fhir:v "110" ] ;
-     fhir:country [ fhir:v "TW" ]
-  ] ) ; # 
-  fhir:maritalStatus [
-     fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v3-MaritalStatus>
+     fhir:Identifier.system [ fhir:value "http://ltc-hospital.tw" ] ;
+     fhir:Identifier.value [ fhir:value "LTC-12345" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Identifier.use [ fhir:value "official" ] ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "NNxxx" ] ;
+         fhir:Coding.display [ fhir:value "National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code" ]
        ] ;
-       fhir:code [ fhir:v "M" ] ;
-       fhir:display [ fhir:v "Married" ]
-     ] )
-  ] ; # 
-  fhir:contact ( [
-     fhir:relationship ( [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0131"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0131>
-         ] ;
-         fhir:code [ fhir:v "C" ] ;
-         fhir:display [ fhir:v "Emergency Contact" ]
-       ] )
-     ] ) ;
-     fhir:name [
-       fhir:use [ fhir:v "official" ] ;
-       fhir:text [ fhir:v "陳建國" ] ;
-       fhir:family [ fhir:v "陳" ] ;
-       fhir:given ( [ fhir:v "建國" ] )
+       fhir:CodeableConcept.text [ fhir:value "National Person Identifier (TWN)" ]
      ] ;
-     fhir:telecom ( [
-       fhir:system [ fhir:v "phone" ] ;
-       fhir:value [ fhir:v "0912-345-678" ] ;
-       fhir:use [ fhir:v "mobile" ]
-     ] )
-  ] ) . # 
+     fhir:Identifier.system [ fhir:value "http://www.moi.gov.tw" ] ;
+     fhir:Identifier.value [ fhir:value "A123456789" ]
+  ] ;
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean] ;
+  fhir:Patient.name [
+     fhir:index 0 ;
+     fhir:HumanName.use [ fhir:value "official" ] ;
+     fhir:HumanName.text [ fhir:value "陳明華" ] ;
+     fhir:HumanName.family [ fhir:value "陳" ] ;
+     fhir:HumanName.given [
+       fhir:value "明華" ;
+       fhir:index 0
+     ]
+  ] ;
+  fhir:Patient.telecom [
+     fhir:index 0 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "02-12345678" ] ;
+     fhir:ContactPoint.use [ fhir:value "home" ]
+  ] ;
+  fhir:Patient.gender [ fhir:value "female"] ;
+  fhir:Patient.birthDate [ fhir:value "1945-08-15"^^xsd:date] ;
+  fhir:Patient.address [
+     fhir:index 0 ;
+     fhir:Address.use [ fhir:value "home" ] ;
+     fhir:Address.type [ fhir:value "both" ] ;
+     fhir:Address.text [ fhir:value "台北市信義區信義路五段7號" ] ;
+     fhir:Address.line [
+       fhir:value "信義路五段7號" ;
+       fhir:index 0
+     ] ;
+     fhir:Address.city [ fhir:value "台北市" ] ;
+     fhir:Address.district [ fhir:value "信義區" ] ;
+     fhir:Address.postalCode [ fhir:value "110" ] ;
+     fhir:Address.country [ fhir:value "TW" ]
+  ] ;
+  fhir:Patient.maritalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus" ] ;
+       fhir:Coding.code [ fhir:value "M" ] ;
+       fhir:Coding.display [ fhir:value "Married" ]
+     ]
+  ] ;
+  fhir:Patient.contact [
+     fhir:index 0 ;
+     fhir:Patient.contact.relationship [
+       fhir:index 0 ;
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0131" ] ;
+         fhir:Coding.code [ fhir:value "C" ] ;
+         fhir:Coding.display [ fhir:value "Emergency Contact" ]
+       ]
+     ] ;
+     fhir:Patient.contact.name [
+       fhir:HumanName.use [ fhir:value "official" ] ;
+       fhir:HumanName.text [ fhir:value "陳建國" ] ;
+       fhir:HumanName.family [ fhir:value "陳" ] ;
+       fhir:HumanName.given [
+         fhir:value "建國" ;
+         fhir:index 0
+       ]
+     ] ;
+     fhir:Patient.contact.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "phone" ] ;
+       fhir:ContactPoint.value [ fhir:value "0912-345-678" ] ;
+       fhir:ContactPoint.use [ fhir:value "mobile" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Patient/ltc-patient-cms-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

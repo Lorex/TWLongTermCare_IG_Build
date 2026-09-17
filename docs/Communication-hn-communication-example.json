@@ -1,0 +1,34 @@
+{
+  "resourceType" : "Communication",
+  "id" : "hn-communication-example",
+  "meta" : {
+    "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/HNCommunication"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Communication hn-communication-example</b></p><a name=\"hn-communication-example\"> </a><a name=\"hchn-communication-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HNCommunication.html\">居家護理－共照紀錄</a></p></div><p><b>居家護理－收案關聯</b>: <a href=\"EpisodeOfCare-hn-episode-example.html\">EpisodeOfCare: extension = -&gt;Response to Questionnaire '-&gt;居家護理－個案基本資料' about '-&gt;陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)'; identifier = https://example.org/home-nursing/episodes#HN0001-20251208; status = active; period = 2025-12-08 --&gt; (ongoing)</a></p><p><b>居家護理－來源表單</b>: <a href=\"QuestionnaireResponse-hn-casedesc-example.html\">Response to Questionnaire '-&gt;居家護理－共照紀錄' about '-&gt;陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)'</a></p><p><b>status</b>: Completed</p><p><b>subject</b>: <a href=\"Patient-hn-patient-example.html\">陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)</a></p><p><b>sent</b>: 2025-12-08 09:00:00+0800</p><p><b>sender</b>: <a href=\"Practitioner-hn-nurse-example.html\">Practitioner 王美玲</a></p><h3>Payloads</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Content[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>已說明居家照護注意事項</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNEpisode",
+    "valueReference" : {
+      "reference" : "EpisodeOfCare/hn-episode-example"
+    }
+  },
+  {
+    "url" : "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNSourceForm",
+    "valueReference" : {
+      "reference" : "QuestionnaireResponse/hn-casedesc-example"
+    }
+  }],
+  "status" : "completed",
+  "subject" : {
+    "reference" : "Patient/hn-patient-example"
+  },
+  "sent" : "2025-12-08T09:00:00+08:00",
+  "sender" : {
+    "reference" : "Practitioner/hn-nurse-example"
+  },
+  "payload" : [{
+    "contentString" : "已說明居家照護注意事項"
+  }]
+}

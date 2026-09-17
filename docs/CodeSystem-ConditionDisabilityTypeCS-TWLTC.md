@@ -1,4 +1,4 @@
-# 個案身心障礙類型代碼（新制） - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 個案身心障礙類型代碼（新制） - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,15 +8,17 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityTypeCS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityTypeCS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-09-02 | *Computable Name*:ConditionDisabilityTypeCSTWLTC |
+| *Other Identifiers:*OID:2.25.131122855440392965155245925877657820192 | |
 
  
 用於表述個案的身心障礙類型代碼（新制）。 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* [ConditionDisabilityTypeVSTWLTC](ValueSet-ConditionDisabilityTypeVS-TWLTC.md)
+* [身心障礙類型值集](ValueSet-ConditionDisabilityTypeVS-TWLTC.md)
+* [居家護理－身障類別](ValueSet-hn-disability-type.md)
 
 
 
@@ -27,7 +29,11 @@
   "resourceType" : "CodeSystem",
   "id" : "ConditionDisabilityTypeCS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityTypeCS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.131122855440392965155245925877657820192"
+  }],
+  "version" : "1.1.0",
   "name" : "ConditionDisabilityTypeCSTWLTC",
   "title" : "個案身心障礙類型代碼（新制）",
   "status" : "active",

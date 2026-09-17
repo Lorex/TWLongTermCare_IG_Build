@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,46 +7,59 @@
 
 <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype> a fhir:CodeSystem ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "cs-tw-ltc-incident-texttype"] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem cs-tw-ltc-incident-texttype</b></p><a name=\"cs-tw-ltc-incident-texttype\"> </a><a name=\"hccs-tw-ltc-incident-texttype\"> </a><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">desc<a name=\"cs-tw-ltc-incident-texttype-desc\"> </a></td><td>事件描述</td></tr><tr><td style=\"white-space:nowrap\">process<a name=\"cs-tw-ltc-incident-texttype-process\"> </a></td><td>事件發生過程詳述</td></tr><tr><td style=\"white-space:nowrap\">postprocess<a name=\"cs-tw-ltc-incident-texttype-postprocess\"> </a></td><td>事件發生後處理過程詳述</td></tr><tr><td style=\"white-space:nowrap\">advice<a name=\"cs-tw-ltc-incident-texttype-advice\"> </a></td><td>檢討及改善建議</td></tr></table></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:url [
-     fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype"^^xsd:anyURI ;
-     fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype>
-  ] ; # 
-  fhir:version [ fhir:v "1.0.0"] ; # 
-  fhir:name [ fhir:v "CS_TW_LTC_Incident_TextType"] ; # 
-  fhir:title [ fhir:v "長照 SDK－異常紀錄－文字區塊類型"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2026-06-25T08:48:04+08:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "經濟部產業發展署"] ; # 
-  fhir:contact ( [
-     fhir:name [ fhir:v "經濟部產業發展署" ] ;
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "https://www.ida.gov.tw/" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "區分各段文字（描述、過程、後續處理、改善建議）。"] ; # 
-  fhir:caseSensitive [ fhir:v true] ; # 
-  fhir:content [ fhir:v "complete"] ; # 
-  fhir:count [ fhir:v "4"^^xsd:nonNegativeInteger] ; # 
-  fhir:concept ( [
-     fhir:code [ fhir:v "desc" ] ;
-     fhir:display [ fhir:v "事件描述" ]
-  ] [
-     fhir:code [ fhir:v "process" ] ;
-     fhir:display [ fhir:v "事件發生過程詳述" ]
-  ] [
-     fhir:code [ fhir:v "postprocess" ] ;
-     fhir:display [ fhir:v "事件發生後處理過程詳述" ]
-  ] [
-     fhir:code [ fhir:v "advice" ] ;
-     fhir:display [ fhir:v "檢討及改善建議" ]
-  ] ) . # 
+  fhir:Resource.id [ fhir:value "cs-tw-ltc-incident-texttype"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem cs-tw-ltc-incident-texttype</b></p><a name=\"cs-tw-ltc-incident-texttype\"> </a><a name=\"hccs-tw-ltc-incident-texttype\"> </a><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">desc<a name=\"cs-tw-ltc-incident-texttype-desc\"> </a></td><td>事件描述</td></tr><tr><td style=\"white-space:nowrap\">process<a name=\"cs-tw-ltc-incident-texttype-process\"> </a></td><td>事件發生過程詳述</td></tr><tr><td style=\"white-space:nowrap\">postprocess<a name=\"cs-tw-ltc-incident-texttype-postprocess\"> </a></td><td>事件發生後處理過程詳述</td></tr><tr><td style=\"white-space:nowrap\">advice<a name=\"cs-tw-ltc-incident-texttype-advice\"> </a></td><td>檢討及改善建議</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype"] ;
+  fhir:CodeSystem.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ] ;
+     fhir:Identifier.value [ fhir:value "urn:oid:2.25.33099249899855646668458219133359883971" ]
+  ] ;
+  fhir:CodeSystem.version [ fhir:value "1.1.0"] ;
+  fhir:CodeSystem.name [ fhir:value "CS_TW_LTC_Incident_TextType"] ;
+  fhir:CodeSystem.title [ fhir:value "長照 SDK－異常紀錄－文字區塊類型"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-09-17T17:33:17+08:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "經濟部產業發展署"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "經濟部產業發展署" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.ida.gov.tw/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "區分各段文字（描述、過程、後續處理、改善建議）。"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "4"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "desc" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "事件描述" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "process" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "事件發生過程詳述" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "postprocess" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "事件發生後處理過程詳述" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "advice" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "檢討及改善建議" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-incident-texttype.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

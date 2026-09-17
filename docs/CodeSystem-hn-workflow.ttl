@@ -1,0 +1,173 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CodeSystem/hn-workflow> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hn-workflow"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem hn-workflow</b></p><a name=\"hn-workflow\"> </a><a name=\"hchn-workflow\"> </a><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/hn-workflow</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">BaseData<a name=\"hn-workflow-BaseData\"> </a></td><td>個案基本資料</td></tr><tr><td style=\"white-space:nowrap\">Evaluation<a name=\"hn-workflow-Evaluation\"> </a></td><td>全人評估</td></tr><tr><td style=\"white-space:nowrap\">CaseSummary<a name=\"hn-workflow-CaseSummary\"> </a></td><td>需求摘要</td></tr><tr><td style=\"white-space:nowrap\">CarePlan<a name=\"hn-workflow-CarePlan\"> </a></td><td>照護計畫</td></tr><tr><td style=\"white-space:nowrap\">CareRecord<a name=\"hn-workflow-CareRecord\"> </a></td><td>照護紀錄</td></tr><tr><td style=\"white-space:nowrap\">CaseDesc<a name=\"hn-workflow-CaseDesc\"> </a></td><td>共照紀錄</td></tr><tr><td style=\"white-space:nowrap\">StaffEgy<a name=\"hn-workflow-StaffEgy\"> </a></td><td>人員緊急事件</td></tr><tr><td style=\"white-space:nowrap\">CaseClose<a name=\"hn-workflow-CaseClose\"> </a></td><td>個案結案</td></tr><tr><td style=\"white-space:nowrap\">CarePlanClose<a name=\"hn-workflow-CarePlanClose\"> </a></td><td>照護計畫結案</td></tr><tr><td style=\"white-space:nowrap\">VitalSign<a name=\"hn-workflow-VitalSign\"> </a></td><td>生命徵象</td></tr><tr><td style=\"white-space:nowrap\">GetLog<a name=\"hn-workflow-GetLog\"> </a></td><td>依日期查詢處理結果</td></tr><tr><td style=\"white-space:nowrap\">GetLogByTicket<a name=\"hn-workflow-GetLogByTicket\"> </a></td><td>依追蹤碼查詢處理結果</td></tr><tr><td style=\"white-space:nowrap\">Medicals<a name=\"hn-workflow-Medicals\"> </a></td><td>共照醫事人員名單</td></tr><tr><td style=\"white-space:nowrap\">Relatives<a name=\"hn-workflow-Relatives\"> </a></td><td>共照親友名單</td></tr><tr><td style=\"white-space:nowrap\">preserve<a name=\"hn-workflow-preserve\"> </a></td><td>保留原名單</td></tr><tr><td style=\"white-space:nowrap\">replace<a name=\"hn-workflow-replace\"> </a></td><td>取代名單</td></tr><tr><td style=\"white-space:nowrap\">clear<a name=\"hn-workflow-clear\"> </a></td><td>清空名單</td></tr><tr><td style=\"white-space:nowrap\">uploaded<a name=\"hn-workflow-uploaded\"> </a></td><td>已上傳，等待排程匯入</td></tr><tr><td style=\"white-space:nowrap\">care-goal<a name=\"hn-workflow-care-goal\"> </a></td><td>個別照護目標</td></tr><tr><td style=\"white-space:nowrap\">wound<a name=\"hn-workflow-wound\"> </a></td><td>傷口紀錄</td></tr><tr><td style=\"white-space:nowrap\">wound-category<a name=\"hn-workflow-wound-category\"> </a></td><td>傷口分類</td></tr><tr><td style=\"white-space:nowrap\">wound-level<a name=\"hn-workflow-wound-level\"> </a></td><td>傷口等級</td></tr><tr><td style=\"white-space:nowrap\">length<a name=\"hn-workflow-length\"> </a></td><td>長度</td></tr><tr><td style=\"white-space:nowrap\">width<a name=\"hn-workflow-width\"> </a></td><td>寬度</td></tr><tr><td style=\"white-space:nowrap\">depth<a name=\"hn-workflow-depth\"> </a></td><td>深度</td></tr><tr><td style=\"white-space:nowrap\">start-date<a name=\"hn-workflow-start-date\"> </a></td><td>查詢起始日</td></tr><tr><td style=\"white-space:nowrap\">end-date<a name=\"hn-workflow-end-date\"> </a></td><td>查詢結束日</td></tr><tr><td style=\"white-space:nowrap\">ticket<a name=\"hn-workflow-ticket\"> </a></td><td>追蹤碼</td></tr><tr><td style=\"white-space:nowrap\">response-code<a name=\"hn-workflow-response-code\"> </a></td><td>回覆代碼</td></tr><tr><td style=\"white-space:nowrap\">response-message<a name=\"hn-workflow-response-message\"> </a></td><td>回覆訊息</td></tr><tr><td style=\"white-space:nowrap\">source-form<a name=\"hn-workflow-source-form\"> </a></td><td>來源表單</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow"] ;
+  fhir:CodeSystem.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ] ;
+     fhir:Identifier.value [ fhir:value "urn:oid:2.25.233044287078495270027959925539980032688" ]
+  ] ;
+  fhir:CodeSystem.version [ fhir:value "1.1.0"] ;
+  fhir:CodeSystem.name [ fhir:value "HNWorkflowCS"] ;
+  fhir:CodeSystem.title [ fhir:value "居家護理－介接作業代碼"] ;
+  fhir:CodeSystem.status [ fhir:value "draft"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-09-17T17:33:17+08:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "經濟部產業發展署"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "經濟部產業發展署" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.ida.gov.tw/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "居家護理 API 作業名稱及本 IG 的更新指示。"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "31"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "BaseData" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "個案基本資料" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Evaluation" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "全人評估" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CaseSummary" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "需求摘要" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CarePlan" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "照護計畫" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CareRecord" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "照護紀錄" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CaseDesc" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "共照紀錄" ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "StaffEgy" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "人員緊急事件" ]
+  ], [
+     fhir:index 7 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CaseClose" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "個案結案" ]
+  ], [
+     fhir:index 8 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CarePlanClose" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "照護計畫結案" ]
+  ], [
+     fhir:index 9 ;
+     fhir:CodeSystem.concept.code [ fhir:value "VitalSign" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "生命徵象" ]
+  ], [
+     fhir:index 10 ;
+     fhir:CodeSystem.concept.code [ fhir:value "GetLog" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "依日期查詢處理結果" ]
+  ], [
+     fhir:index 11 ;
+     fhir:CodeSystem.concept.code [ fhir:value "GetLogByTicket" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "依追蹤碼查詢處理結果" ]
+  ], [
+     fhir:index 12 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Medicals" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "共照醫事人員名單" ]
+  ], [
+     fhir:index 13 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Relatives" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "共照親友名單" ]
+  ], [
+     fhir:index 14 ;
+     fhir:CodeSystem.concept.code [ fhir:value "preserve" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "保留原名單" ]
+  ], [
+     fhir:index 15 ;
+     fhir:CodeSystem.concept.code [ fhir:value "replace" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "取代名單" ]
+  ], [
+     fhir:index 16 ;
+     fhir:CodeSystem.concept.code [ fhir:value "clear" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "清空名單" ]
+  ], [
+     fhir:index 17 ;
+     fhir:CodeSystem.concept.code [ fhir:value "uploaded" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "已上傳，等待排程匯入" ]
+  ], [
+     fhir:index 18 ;
+     fhir:CodeSystem.concept.code [ fhir:value "care-goal" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "個別照護目標" ]
+  ], [
+     fhir:index 19 ;
+     fhir:CodeSystem.concept.code [ fhir:value "wound" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "傷口紀錄" ]
+  ], [
+     fhir:index 20 ;
+     fhir:CodeSystem.concept.code [ fhir:value "wound-category" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "傷口分類" ]
+  ], [
+     fhir:index 21 ;
+     fhir:CodeSystem.concept.code [ fhir:value "wound-level" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "傷口等級" ]
+  ], [
+     fhir:index 22 ;
+     fhir:CodeSystem.concept.code [ fhir:value "length" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "長度" ]
+  ], [
+     fhir:index 23 ;
+     fhir:CodeSystem.concept.code [ fhir:value "width" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "寬度" ]
+  ], [
+     fhir:index 24 ;
+     fhir:CodeSystem.concept.code [ fhir:value "depth" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "深度" ]
+  ], [
+     fhir:index 25 ;
+     fhir:CodeSystem.concept.code [ fhir:value "start-date" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "查詢起始日" ]
+  ], [
+     fhir:index 26 ;
+     fhir:CodeSystem.concept.code [ fhir:value "end-date" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "查詢結束日" ]
+  ], [
+     fhir:index 27 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ticket" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "追蹤碼" ]
+  ], [
+     fhir:index 28 ;
+     fhir:CodeSystem.concept.code [ fhir:value "response-code" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "回覆代碼" ]
+  ], [
+     fhir:index 29 ;
+     fhir:CodeSystem.concept.code [ fhir:value "response-message" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "回覆訊息" ]
+  ], [
+     fhir:index 30 ;
+     fhir:CodeSystem.concept.code [ fhir:value "source-form" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "來源表單" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CodeSystem/hn-workflow.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Specimen/hah-specimen> a fhir:Specimen ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hah-specimen"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Specimen-twcore" ;
+       fhir:index 0 ;
+       fhir:link <https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Specimen-twcore>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Specimen hah-specimen</b></p><a name=\"hah-specimen\"> </a><a name=\"hchah-specimen\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://twcore.mohw.gov.tw/ig/twcore/1.0.0/StructureDefinition-Specimen-twcore.html\">TW Core Specimen</a></p></div><p><b>identifier</b>: <code>https://example.org/specimens</code>/HAH-SPECIMEN-1</p><p><b>type</b>: <span title=\"Codes:\">血液</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></td><td>2026-09-01 09:10:00+0800</td></tr></table></div>"
+  ] ;
+  fhir:Specimen.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "https://example.org/specimens" ] ;
+     fhir:Identifier.value [ fhir:value "HAH-SPECIMEN-1" ]
+  ] ;
+  fhir:Specimen.type [
+     fhir:CodeableConcept.text [ fhir:value "血液" ]
+  ] ;
+  fhir:Specimen.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Specimen.collection [
+     fhir:Specimen.collection.collector [
+       fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+     ] ;
+     fhir:Specimen.collection.collectedDateTime [ fhir:value "2026-09-01T09:10:00+08:00"^^xsd:dateTime ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Specimen/hah-specimen.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

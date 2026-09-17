@@ -1,4 +1,4 @@
-# 長照 SDK－民國年月（YYYMM） - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長照 SDK－民國年月（YYYMM） - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-YYYMM-ROC | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:ExtTWLTCExportYYYMMROC |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-YYYMM-ROC | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:ExtTWLTCExportYYYMMROC |
 
 此 Extension 用於表示長照 SDK 的民國年月（YYYMM 格式），適用於 Claim、ClaimResponse 或 OperationOutcome 資源。
 
@@ -22,7 +22,7 @@
 * Use this Extension: [長照 SDK－跨月檢核結果（QP_O）](StructureDefinition-LTC-OperationOutcome-Check.md)
 * Examples for this Extension: [OperationOutcome/ltc-operationoutcome-check-example](OperationOutcome-ltc-operationoutcome-check-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/Ext-TW-LTC-Export-YYYMM-ROC)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-Ext-TW-LTC-Export-YYYMM-ROC.json)
 
 ### Formal Views of Extension Content
 
@@ -43,11 +43,11 @@ Other representations of profile: [CSV](StructureDefinition-Ext-TW-LTC-Export-YY
   "resourceType" : "StructureDefinition",
   "id" : "Ext-TW-LTC-Export-YYYMM-ROC",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-YYYMM-ROC",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "ExtTWLTCExportYYYMMROC",
   "title" : "長照 SDK－民國年月（YYYMM）",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -1,0 +1,697 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Bundle/ltc-bundle-feeaudit-status-example> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ltc-bundle-feeaudit-status-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleFeeAuditStatus" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleFeeAuditStatus>
+     ]
+  ] ;
+  fhir:Bundle.type [ fhir:value "searchset"] ;
+  fhir:Bundle.timestamp [ fhir:value "2019-02-15T10:30:00+08:00"^^xsd:dateTime] ;
+  fhir:Bundle.total [ fhir:value "6"^^xsd:nonNegativeInteger] ;
+  fhir:Bundle.link [
+     fhir:index 0 ;
+     fhir:Bundle.link.relation [ fhir:value "self" ] ;
+     fhir:Bundle.link.url [ fhir:value "http://ltc-ig.fhir.tw/fhir/Task?identifier=http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm|201901" ]
+  ] ;
+  fhir:Bundle.entry [
+     fhir:index 0 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://ltc-ig.fhir.tw/Task/ltc-task-feeapply-example" ] ;
+     fhir:Bundle.entry.resource <http://ltc-ig.fhir.tw/Task/ltc-task-feeapply-example> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://ltc-ig.fhir.tw/Task/ltc-task-completion-notice-example" ] ;
+     fhir:Bundle.entry.resource <http://ltc-ig.fhir.tw/Task/ltc-task-completion-notice-example> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://ltc-ig.fhir.tw/Task/ltc-task-completion-notice-city2-example" ] ;
+     fhir:Bundle.entry.resource <http://ltc-ig.fhir.tw/Task/ltc-task-completion-notice-city2-example> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
+     ]
+  ], [
+     fhir:index 3 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://ltc-ig.fhir.tw/Task/ltc-task-objdel-example" ] ;
+     fhir:Bundle.entry.resource <http://ltc-ig.fhir.tw/Task/ltc-task-objdel-example> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
+     ]
+  ], [
+     fhir:index 4 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://ltc-ig.fhir.tw/Task/ltc-task-cancel-example" ] ;
+     fhir:Bundle.entry.resource <http://ltc-ig.fhir.tw/Task/ltc-task-cancel-example> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
+     ]
+  ], [
+     fhir:index 5 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://ltc-ig.fhir.tw/Task/ltc-task-cancel-result-response-example" ] ;
+     fhir:Bundle.entry.resource <http://ltc-ig.fhir.tw/Task/ltc-task-cancel-result-response-example> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
+     ]
+  ], [
+     fhir:index 6 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://ltc-ig.fhir.tw/OperationOutcome/ltc-operationoutcome-feeaudit-exception-example" ] ;
+     fhir:Bundle.entry.resource <http://ltc-ig.fhir.tw/OperationOutcome/ltc-operationoutcome-feeaudit-exception-example> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "outcome" ]
+     ]
+  ], [
+     fhir:index 7 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://ltc-ig.fhir.tw/OperationOutcome/ltc-operationoutcome-feeaudit-objdel-example" ] ;
+     fhir:Bundle.entry.resource <http://ltc-ig.fhir.tw/OperationOutcome/ltc-operationoutcome-feeaudit-objdel-example> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "outcome" ]
+     ]
+  ], [
+     fhir:index 8 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://ltc-ig.fhir.tw/OperationOutcome/ltc-operationoutcome-feeaudit-objdel-2-example" ] ;
+     fhir:Bundle.entry.resource <http://ltc-ig.fhir.tw/OperationOutcome/ltc-operationoutcome-feeaudit-objdel-2-example> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "outcome" ]
+     ]
+  ] .
+
+<http://ltc-ig.fhir.tw/Task/ltc-task-feeapply-example> a fhir:Task ;
+  fhir:Resource.id [ fhir:value "ltc-task-feeapply-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Task_ltc-task-feeapply-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Task ltc-task-feeapply-example</b></p><a name=\"ltc-task-feeapply-example\"> </a><a name=\"hcltc-task-feeapply-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCTaskFeeAudit.html\">長照支付審查－申報交易任務</a></p></div><p><b>identifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm</code>/201901</p><p><b>groupIdentifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no</code>/TranQ00083</p><p><b>status</b>: Completed</p><p><b>businessStatus</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-case-status 1}\">待通知收件</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function FeeApply}\">服務記錄申報</span></p><p><b>authoredOn</b>: 2019-02-10 09:30:00+0800</p><p><b>requester</b>: <a href=\"Organization-ltc-organization-example.html\">Organization 新北市私立安康老人長期照顧中心（養護型）</a></p><p><b>note</b>: </p><blockquote><div><p>來源系統別（source_system）：TranCareCenter</p>\n</div></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">縣市代碼</span></p><p><b>value</b>: 10020</p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">核銷案號</span></p><p><b>value</b>: 201907BA10128</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">批次處理結果</span></p><p><b>value</b>: 分案處理完成!</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">批次處理筆數</span></p><p><b>value</b>: 3000</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">批次處理成功筆數</span></p><p><b>value</b>: 2999</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">批次處理失敗筆數</span></p><p><b>value</b>: 1</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">分案異常資料</span></p><p><b>value</b>: <a href=\"OperationOutcome-ltc-operationoutcome-feeaudit-exception-example.html\">OperationOutcome: extension = 201907BA10128</a></p></blockquote></div>"
+  ] ;
+  fhir:Task.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm" ] ;
+     fhir:Identifier.value [ fhir:value "201901" ]
+  ] ;
+  fhir:Task.groupIdentifier [
+     fhir:Identifier.system [ fhir:value "http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no" ] ;
+     fhir:Identifier.value [ fhir:value "TranQ00083" ]
+  ] ;
+  fhir:Task.status [ fhir:value "completed"] ;
+  fhir:Task.businessStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-case-status" ] ;
+       fhir:Coding.code [ fhir:value "1" ] ;
+       fhir:Coding.display [ fhir:value "待通知收件" ]
+     ]
+  ] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function" ] ;
+       fhir:Coding.code [ fhir:value "FeeApply" ] ;
+       fhir:Coding.display [ fhir:value "服務記錄申報" ]
+     ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2019-02-10T09:30:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/ltc-organization-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/ltc-organization-example" ]
+  ] ;
+  fhir:Task.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "來源系統別（source_system）：TranCareCenter" ]
+  ] ;
+  fhir:Task.input [
+     fhir:index 0 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "縣市代碼" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "10020" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "核銷案號" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "201907BA10128" ]
+  ] ;
+  fhir:Task.output [
+     fhir:index 0 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "批次處理結果" ]
+     ] ;
+     fhir:Task.output.valueString [ fhir:value "分案處理完成!" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "批次處理筆數" ]
+     ] ;
+     fhir:Task.output.valueInteger [ fhir:value "3000"^^xsd:integer ]
+  ], [
+     fhir:index 2 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "批次處理成功筆數" ]
+     ] ;
+     fhir:Task.output.valueInteger [ fhir:value "2999"^^xsd:integer ]
+  ], [
+     fhir:index 3 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "批次處理失敗筆數" ]
+     ] ;
+     fhir:Task.output.valueInteger [ fhir:value "1"^^xsd:integer ]
+  ], [
+     fhir:index 4 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "分案異常資料" ]
+     ] ;
+     fhir:Task.output.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/OperationOutcome/ltc-operationoutcome-feeaudit-exception-example> ;
+       fhir:Reference.reference [ fhir:value "OperationOutcome/ltc-operationoutcome-feeaudit-exception-example" ]
+     ]
+  ] .
+
+<http://ltc-ig.fhir.tw/Task/ltc-task-completion-notice-example> a fhir:Task ;
+  fhir:Resource.id [ fhir:value "ltc-task-completion-notice-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Task_ltc-task-completion-notice-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Task ltc-task-completion-notice-example</b></p><a name=\"ltc-task-completion-notice-example\"> </a><a name=\"hcltc-task-completion-notice-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCTaskFeeAudit.html\">長照支付審查－申報交易任務</a></p></div><p><b>identifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm</code>/201901</p><p><b>groupIdentifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no</code>/CN001</p><p><b>status</b>: Completed</p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function appCompletionNotice}\">申報確認通知</span></p><p><b>authoredOn</b>: 2019-02-11 14:00:00+0800</p><p><b>requester</b>: <a href=\"Organization-ltc-organization-example.html\">Organization 新北市私立安康老人長期照顧中心（養護型）</a></p><p><b>note</b>: </p><blockquote><div><p>來源系統別（source_system）：TranCareCenter</p>\n</div></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">縣市代碼</span></p><p><b>value</b>: 65000</p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">核銷案號</span></p><p><b>value</b>: A12345678</p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">核銷案號</span></p><p><b>value</b>: B12345678</p></blockquote><h3>Outputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">批次處理結果</span></td><td>申報確認通知完成!</td></tr></table></div>"
+  ] ;
+  fhir:Task.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm" ] ;
+     fhir:Identifier.value [ fhir:value "201901" ]
+  ] ;
+  fhir:Task.groupIdentifier [
+     fhir:Identifier.system [ fhir:value "http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no" ] ;
+     fhir:Identifier.value [ fhir:value "CN001" ]
+  ] ;
+  fhir:Task.status [ fhir:value "completed"] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function" ] ;
+       fhir:Coding.code [ fhir:value "appCompletionNotice" ] ;
+       fhir:Coding.display [ fhir:value "申報確認通知" ]
+     ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2019-02-11T14:00:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/ltc-organization-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/ltc-organization-example" ]
+  ] ;
+  fhir:Task.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "來源系統別（source_system）：TranCareCenter" ]
+  ] ;
+  fhir:Task.input [
+     fhir:index 0 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "縣市代碼" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "65000" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "核銷案號" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "A12345678" ]
+  ], [
+     fhir:index 2 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "核銷案號" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "B12345678" ]
+  ] ;
+  fhir:Task.output [
+     fhir:index 0 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "批次處理結果" ]
+     ] ;
+     fhir:Task.output.valueString [ fhir:value "申報確認通知完成!" ]
+  ] .
+
+<http://ltc-ig.fhir.tw/Task/ltc-task-completion-notice-city2-example> a fhir:Task ;
+  fhir:Resource.id [ fhir:value "ltc-task-completion-notice-city2-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Task_ltc-task-completion-notice-city2-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Task ltc-task-completion-notice-city2-example</b></p><a name=\"ltc-task-completion-notice-city2-example\"> </a><a name=\"hcltc-task-completion-notice-city2-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCTaskFeeAudit.html\">長照支付審查－申報交易任務</a></p></div><p><b>identifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm</code>/201901</p><p><b>groupIdentifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no</code>/CN001</p><p><b>status</b>: Completed</p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function appCompletionNotice}\">申報確認通知</span></p><p><b>authoredOn</b>: 2019-02-11 14:00:00+0800</p><p><b>requester</b>: <a href=\"Organization-ltc-organization-example.html\">Organization 新北市私立安康老人長期照顧中心（養護型）</a></p><p><b>note</b>: </p><blockquote><div><p>來源系統別（source_system）：TranCareCenter</p>\n</div></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">縣市代碼</span></p><p><b>value</b>: 10020</p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">核銷案號</span></p><p><b>value</b>: C12345678</p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">核銷案號</span></p><p><b>value</b>: D12345678</p></blockquote><h3>Outputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">批次處理結果</span></td><td>申報確認通知完成!</td></tr></table></div>"
+  ] ;
+  fhir:Task.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm" ] ;
+     fhir:Identifier.value [ fhir:value "201901" ]
+  ] ;
+  fhir:Task.groupIdentifier [
+     fhir:Identifier.system [ fhir:value "http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no" ] ;
+     fhir:Identifier.value [ fhir:value "CN001" ]
+  ] ;
+  fhir:Task.status [ fhir:value "completed"] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function" ] ;
+       fhir:Coding.code [ fhir:value "appCompletionNotice" ] ;
+       fhir:Coding.display [ fhir:value "申報確認通知" ]
+     ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2019-02-11T14:00:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/ltc-organization-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/ltc-organization-example" ]
+  ] ;
+  fhir:Task.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "來源系統別（source_system）：TranCareCenter" ]
+  ] ;
+  fhir:Task.input [
+     fhir:index 0 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "縣市代碼" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "10020" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "核銷案號" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "C12345678" ]
+  ], [
+     fhir:index 2 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "核銷案號" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "D12345678" ]
+  ] ;
+  fhir:Task.output [
+     fhir:index 0 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "批次處理結果" ]
+     ] ;
+     fhir:Task.output.valueString [ fhir:value "申報確認通知完成!" ]
+  ] .
+
+<http://ltc-ig.fhir.tw/Task/ltc-task-objdel-example> a fhir:Task ;
+  fhir:Resource.id [ fhir:value "ltc-task-objdel-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Task_ltc-task-objdel-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Task ltc-task-objdel-example</b></p><a name=\"ltc-task-objdel-example\"> </a><a name=\"hcltc-task-objdel-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCTaskFeeAudit.html\">長照支付審查－申報交易任務</a></p></div><p><b>identifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm</code>/201901</p><p><b>groupIdentifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no</code>/TranQ00082</p><p><b>status</b>: Completed</p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function ObjDel}\">服務紀錄刪除</span></p><p><b>authoredOn</b>: 2019-02-09 11:20:00+0800</p><p><b>requester</b>: <a href=\"Organization-ltc-organization-example.html\">Organization 新北市私立安康老人長期照顧中心（養護型）</a></p><p><b>note</b>: </p><blockquote><div><p>來源系統別（source_system）：TranCareCenter</p>\n</div></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄識別碼</span></p><p><b>value</b>: 123456789</p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄識別碼</span></p><p><b>value</b>: 234567890</p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄識別碼</span></p><p><b>value</b>: 345678901</p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄識別碼</span></p><p><b>value</b>: 456789012</p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄識別碼</span></p><p><b>value</b>: 987654321</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">批次處理結果</span></p><p><b>value</b>: 服務紀錄刪除完成!</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">批次處理筆數</span></p><p><b>value</b>: 6</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">批次處理成功筆數</span></p><p><b>value</b>: 4</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">批次處理失敗筆數</span></p><p><b>value</b>: 2</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄刪除成功資料</span></p><p><b>value</b>: 123456789</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄刪除成功資料</span></p><p><b>value</b>: 234567890</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄刪除成功資料</span></p><p><b>value</b>: 345678901</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄刪除成功資料</span></p><p><b>value</b>: 456789012</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄刪除失敗資料</span></p><p><b>value</b>: <a href=\"OperationOutcome-ltc-operationoutcome-feeaudit-objdel-example.html\">OperationOutcome</a></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄刪除失敗資料</span></p><p><b>value</b>: <a href=\"OperationOutcome-ltc-operationoutcome-feeaudit-objdel-2-example.html\">OperationOutcome</a></p></blockquote></div>"
+  ] ;
+  fhir:Task.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm" ] ;
+     fhir:Identifier.value [ fhir:value "201901" ]
+  ] ;
+  fhir:Task.groupIdentifier [
+     fhir:Identifier.system [ fhir:value "http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no" ] ;
+     fhir:Identifier.value [ fhir:value "TranQ00082" ]
+  ] ;
+  fhir:Task.status [ fhir:value "completed"] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function" ] ;
+       fhir:Coding.code [ fhir:value "ObjDel" ] ;
+       fhir:Coding.display [ fhir:value "服務紀錄刪除" ]
+     ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2019-02-09T11:20:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/ltc-organization-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/ltc-organization-example" ]
+  ] ;
+  fhir:Task.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "來源系統別（source_system）：TranCareCenter" ]
+  ] ;
+  fhir:Task.input [
+     fhir:index 0 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄識別碼" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "123456789" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄識別碼" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "234567890" ]
+  ], [
+     fhir:index 2 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄識別碼" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "345678901" ]
+  ], [
+     fhir:index 3 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄識別碼" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "456789012" ]
+  ], [
+     fhir:index 4 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄識別碼" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "987654321" ]
+  ] ;
+  fhir:Task.output [
+     fhir:index 0 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "批次處理結果" ]
+     ] ;
+     fhir:Task.output.valueString [ fhir:value "服務紀錄刪除完成!" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "批次處理筆數" ]
+     ] ;
+     fhir:Task.output.valueInteger [ fhir:value "6"^^xsd:integer ]
+  ], [
+     fhir:index 2 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "批次處理成功筆數" ]
+     ] ;
+     fhir:Task.output.valueInteger [ fhir:value "4"^^xsd:integer ]
+  ], [
+     fhir:index 3 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "批次處理失敗筆數" ]
+     ] ;
+     fhir:Task.output.valueInteger [ fhir:value "2"^^xsd:integer ]
+  ], [
+     fhir:index 4 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄刪除成功資料" ]
+     ] ;
+     fhir:Task.output.valueString [ fhir:value "123456789" ]
+  ], [
+     fhir:index 5 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄刪除成功資料" ]
+     ] ;
+     fhir:Task.output.valueString [ fhir:value "234567890" ]
+  ], [
+     fhir:index 6 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄刪除成功資料" ]
+     ] ;
+     fhir:Task.output.valueString [ fhir:value "345678901" ]
+  ], [
+     fhir:index 7 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄刪除成功資料" ]
+     ] ;
+     fhir:Task.output.valueString [ fhir:value "456789012" ]
+  ], [
+     fhir:index 8 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄刪除失敗資料" ]
+     ] ;
+     fhir:Task.output.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/OperationOutcome/ltc-operationoutcome-feeaudit-objdel-example> ;
+       fhir:Reference.reference [ fhir:value "OperationOutcome/ltc-operationoutcome-feeaudit-objdel-example" ]
+     ]
+  ], [
+     fhir:index 9 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄刪除失敗資料" ]
+     ] ;
+     fhir:Task.output.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/OperationOutcome/ltc-operationoutcome-feeaudit-objdel-2-example> ;
+       fhir:Reference.reference [ fhir:value "OperationOutcome/ltc-operationoutcome-feeaudit-objdel-2-example" ]
+     ]
+  ] .
+
+<http://ltc-ig.fhir.tw/Task/ltc-task-cancel-example> a fhir:Task ;
+  fhir:Resource.id [ fhir:value "ltc-task-cancel-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Task_ltc-task-cancel-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Task ltc-task-cancel-example</b></p><a name=\"ltc-task-cancel-example\"> </a><a name=\"hcltc-task-cancel-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCTaskFeeAudit.html\">長照支付審查－申報交易任務</a></p></div><p><b>identifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm</code>/201901</p><p><b>groupIdentifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no</code>/C0001</p><p><b>status</b>: Completed</p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function appCancel}\">服務單位撤回</span></p><p><b>authoredOn</b>: 2019-02-12 16:45:00+0800</p><p><b>requester</b>: <a href=\"Organization-ltc-organization-example.html\">Organization 新北市私立安康老人長期照顧中心（養護型）</a></p><p><b>note</b>: </p><blockquote><div><p>來源系統別（source_system）：TranCareCenter</p>\n</div></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">縣市代碼</span></p><p><b>value</b>: 65000</p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">核銷案號</span></p><p><b>value</b>: C01001</p></blockquote><h3>Outputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">批次處理結果</span></td><td>服務紀錄撤回完成!</td></tr></table></div>"
+  ] ;
+  fhir:Task.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm" ] ;
+     fhir:Identifier.value [ fhir:value "201901" ]
+  ] ;
+  fhir:Task.groupIdentifier [
+     fhir:Identifier.system [ fhir:value "http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no" ] ;
+     fhir:Identifier.value [ fhir:value "C0001" ]
+  ] ;
+  fhir:Task.status [ fhir:value "completed"] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function" ] ;
+       fhir:Coding.code [ fhir:value "appCancel" ] ;
+       fhir:Coding.display [ fhir:value "服務單位撤回" ]
+     ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2019-02-12T16:45:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/ltc-organization-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/ltc-organization-example" ]
+  ] ;
+  fhir:Task.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "來源系統別（source_system）：TranCareCenter" ]
+  ] ;
+  fhir:Task.input [
+     fhir:index 0 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "縣市代碼" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "65000" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "核銷案號" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "C01001" ]
+  ] ;
+  fhir:Task.output [
+     fhir:index 0 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "批次處理結果" ]
+     ] ;
+     fhir:Task.output.valueString [ fhir:value "服務紀錄撤回完成!" ]
+  ] .
+
+<http://ltc-ig.fhir.tw/Task/ltc-task-cancel-result-response-example> a fhir:Task ;
+  fhir:Resource.id [ fhir:value "ltc-task-cancel-result-response-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Task_ltc-task-cancel-result-response-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Task ltc-task-cancel-result-response-example</b></p><a name=\"ltc-task-cancel-result-response-example\"> </a><a name=\"hcltc-task-cancel-result-response-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCTaskFeeAudit.html\">長照支付審查－申報交易任務</a></p></div><p><b>identifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm</code>/201901</p><p><b>groupIdentifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no</code>/CR001</p><p><b>partOf</b>: <a href=\"Task-ltc-task-feeapply-example.html\">Task 服務記錄申報</a></p><p><b>status</b>: Completed</p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function CancelResultResponse}\">取消交易單處理結果回報</span></p><p><b>authoredOn</b>: 2019-02-13 09:15:00+0800</p><p><b>requester</b>: <a href=\"Organization-ltc-organization-example.html\">Organization 新北市私立安康老人長期照顧中心（養護型）</a></p><p><b>note</b>: </p><blockquote><div><p>來源系統別（source_system）：TranCareCenter</p>\n</div></blockquote><h3>Inputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">所要取消結果回報之交易序號</span></td><td>TranQ00083</td></tr></table><h3>Outputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">批次處理結果</span></td><td>取消交易單處理結果回報完成!</td></tr></table></div>"
+  ] ;
+  fhir:Task.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm" ] ;
+     fhir:Identifier.value [ fhir:value "201901" ]
+  ] ;
+  fhir:Task.groupIdentifier [
+     fhir:Identifier.system [ fhir:value "http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no" ] ;
+     fhir:Identifier.value [ fhir:value "CR001" ]
+  ] ;
+  fhir:Task.partOf [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Task/ltc-task-feeapply-example> ;
+     fhir:Reference.reference [ fhir:value "Task/ltc-task-feeapply-example" ]
+  ] ;
+  fhir:Task.status [ fhir:value "completed"] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function" ] ;
+       fhir:Coding.code [ fhir:value "CancelResultResponse" ] ;
+       fhir:Coding.display [ fhir:value "取消交易單處理結果回報" ]
+     ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2019-02-13T09:15:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/ltc-organization-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/ltc-organization-example" ]
+  ] ;
+  fhir:Task.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "來源系統別（source_system）：TranCareCenter" ]
+  ] ;
+  fhir:Task.input [
+     fhir:index 0 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "所要取消結果回報之交易序號" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "TranQ00083" ]
+  ] ;
+  fhir:Task.output [
+     fhir:index 0 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "批次處理結果" ]
+     ] ;
+     fhir:Task.output.valueString [ fhir:value "取消交易單處理結果回報完成!" ]
+  ] .
+
+<http://ltc-ig.fhir.tw/OperationOutcome/ltc-operationoutcome-feeaudit-exception-example> a fhir:OperationOutcome ;
+  fhir:Resource.id [ fhir:value "ltc-operationoutcome-feeaudit-exception-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCOperationOutcomeFeeAudit" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCOperationOutcomeFeeAudit>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_ltc-operationoutcome-feeaudit-exception-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome ltc-operationoutcome-feeaudit-exception-example</b></p><a name=\"ltc-operationoutcome-feeaudit-exception-example\"> </a><a name=\"hcltc-operationoutcome-feeaudit-exception-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCOperationOutcomeFeeAudit.html\">長照支付審查－申報檢核結果</a></p></div><p><b>長照 SDK－案件編號（CASENO）</b>: 201907BA10128</p><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>Error</td><td>Processing Failure</td><td><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-error-code E4015}\">此筆服務紀錄已經收件不能分案</span></td><td>分案異常資料（exception_records）：objid = 19260121、err_code = E4015、err_message = 此筆服務紀錄已經收件不能分案</td><td>Claim.identifier.where(system='http://ltc-ig.fhir.tw/identifier/feeaudit/objid' and value='19260121')</td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-CaseNo" ] ;
+     fhir:Extension.valueString [ fhir:value "201907BA10128" ]
+  ] ;
+  fhir:OperationOutcome.issue [
+     fhir:index 0 ;
+     fhir:OperationOutcome.issue.severity [ fhir:value "error" ] ;
+     fhir:OperationOutcome.issue.code [ fhir:value "processing" ] ;
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-error-code" ] ;
+         fhir:Coding.code [ fhir:value "E4015" ] ;
+         fhir:Coding.display [ fhir:value "單位已執行申報確認通知，不在受理新的服務紀錄申報" ]
+       ] ;
+       fhir:CodeableConcept.text [ fhir:value "此筆服務紀錄已經收件不能分案" ]
+     ] ;
+     fhir:OperationOutcome.issue.diagnostics [ fhir:value "分案異常資料（exception_records）：objid = 19260121、err_code = E4015、err_message = 此筆服務紀錄已經收件不能分案" ] ;
+     fhir:OperationOutcome.issue.expression [
+       fhir:value "Claim.identifier.where(system='http://ltc-ig.fhir.tw/identifier/feeaudit/objid' and value='19260121')" ;
+       fhir:index 0
+     ]
+  ] .
+
+<http://ltc-ig.fhir.tw/OperationOutcome/ltc-operationoutcome-feeaudit-objdel-example> a fhir:OperationOutcome ;
+  fhir:Resource.id [ fhir:value "ltc-operationoutcome-feeaudit-objdel-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCOperationOutcomeFeeAudit" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCOperationOutcomeFeeAudit>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_ltc-operationoutcome-feeaudit-objdel-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome ltc-operationoutcome-feeaudit-objdel-example</b></p><a name=\"ltc-operationoutcome-feeaudit-objdel-example\"> </a><a name=\"hcltc-operationoutcome-feeaudit-objdel-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCOperationOutcomeFeeAudit.html\">長照支付審查－申報檢核結果</a></p></div><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>Error</td><td>Not Found</td><td><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-error-code E4032}\">此筆服務紀錄不存在</span></td><td>服務紀錄刪除失敗資料（delete_exception_records）：objid = 123456789、err_code = E4032、err_message = 此筆服務紀錄不存在</td><td>Claim.identifier.where(system='http://ltc-ig.fhir.tw/identifier/feeaudit/objid' and value='123456789')</td></tr></table></div>"
+  ] ;
+  fhir:OperationOutcome.issue [
+     fhir:index 0 ;
+     fhir:OperationOutcome.issue.severity [ fhir:value "error" ] ;
+     fhir:OperationOutcome.issue.code [ fhir:value "not-found" ] ;
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-error-code" ] ;
+         fhir:Coding.code [ fhir:value "E4032" ] ;
+         fhir:Coding.display [ fhir:value "此筆服務紀錄不存在" ]
+       ] ;
+       fhir:CodeableConcept.text [ fhir:value "此筆服務紀錄不存在" ]
+     ] ;
+     fhir:OperationOutcome.issue.diagnostics [ fhir:value "服務紀錄刪除失敗資料（delete_exception_records）：objid = 123456789、err_code = E4032、err_message = 此筆服務紀錄不存在" ] ;
+     fhir:OperationOutcome.issue.expression [
+       fhir:value "Claim.identifier.where(system='http://ltc-ig.fhir.tw/identifier/feeaudit/objid' and value='123456789')" ;
+       fhir:index 0
+     ]
+  ] .
+
+<http://ltc-ig.fhir.tw/OperationOutcome/ltc-operationoutcome-feeaudit-objdel-2-example> a fhir:OperationOutcome ;
+  fhir:Resource.id [ fhir:value "ltc-operationoutcome-feeaudit-objdel-2-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCOperationOutcomeFeeAudit" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCOperationOutcomeFeeAudit>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_ltc-operationoutcome-feeaudit-objdel-2-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome ltc-operationoutcome-feeaudit-objdel-2-example</b></p><a name=\"ltc-operationoutcome-feeaudit-objdel-2-example\"> </a><a name=\"hcltc-operationoutcome-feeaudit-objdel-2-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCOperationOutcomeFeeAudit.html\">長照支付審查－申報檢核結果</a></p></div><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>Error</td><td>Not Found</td><td><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-error-code E4032}\">此筆服務紀錄不存在</span></td><td>服務紀錄刪除失敗資料（delete_exception_records）：objid = 987654321、err_code = E4032、err_message = 此筆服務紀錄不存在</td><td>Claim.identifier.where(system='http://ltc-ig.fhir.tw/identifier/feeaudit/objid' and value='987654321')</td></tr></table></div>"
+  ] ;
+  fhir:OperationOutcome.issue [
+     fhir:index 0 ;
+     fhir:OperationOutcome.issue.severity [ fhir:value "error" ] ;
+     fhir:OperationOutcome.issue.code [ fhir:value "not-found" ] ;
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-error-code" ] ;
+         fhir:Coding.code [ fhir:value "E4032" ] ;
+         fhir:Coding.display [ fhir:value "此筆服務紀錄不存在" ]
+       ] ;
+       fhir:CodeableConcept.text [ fhir:value "此筆服務紀錄不存在" ]
+     ] ;
+     fhir:OperationOutcome.issue.diagnostics [ fhir:value "服務紀錄刪除失敗資料（delete_exception_records）：objid = 987654321、err_code = E4032、err_message = 此筆服務紀錄不存在" ] ;
+     fhir:OperationOutcome.issue.expression [
+       fhir:value "Claim.identifier.where(system='http://ltc-ig.fhir.tw/identifier/feeaudit/objid' and value='987654321')" ;
+       fhir:index 0
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Bundle/ltc-bundle-feeaudit-status-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

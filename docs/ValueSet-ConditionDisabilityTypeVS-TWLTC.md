@@ -1,4 +1,4 @@
-# 身心障礙類型值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 身心障礙類型值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ConditionDisabilityTypeVS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ConditionDisabilityTypeVS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-08-25 | *Computable Name*:ConditionDisabilityTypeVSTWLTC |
+| *Other Identifiers:*OID:2.25.321758608038491974232931062581721483610 | |
 
  
 個案身心障礙類型 
@@ -46,7 +47,11 @@
   "resourceType" : "ValueSet",
   "id" : "ConditionDisabilityTypeVS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/ConditionDisabilityTypeVS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.321758608038491974232931062581721483610"
+  }],
+  "version" : "1.1.0",
   "name" : "ConditionDisabilityTypeVSTWLTC",
   "title" : "身心障礙類型值集",
   "status" : "active",

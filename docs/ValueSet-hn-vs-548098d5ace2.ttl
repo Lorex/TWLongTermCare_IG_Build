@@ -1,0 +1,64 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/ValueSet/hn-vs-548098d5ace2> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hn-vs-548098d5ace2"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet hn-vs-548098d5ace2</b></p><a name=\"hn-vs-548098d5ace2\"> </a><a name=\"hchn-vs-548098d5ace2\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-hn-answer.html\"><code>http://ltc-ig.fhir.tw/CodeSystem/hn-answer</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?1.1.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-c76c4aa75dddb\">c76c4aa75dddb</a></td><td style=\"color: #cccccc\">總是潮溼：皮膚總是被汗水、大小便等浸潤；每兩小時予病人翻身時，都會發現皮膚是潮溼的</td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-c8d37e00811db\">c8d37e00811db</a></td><td style=\"color: #cccccc\">經常潮溼：皮膚經常是浸潤的；衣褲/尿布/看護墊等至少每8小時需更換≧2次</td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-c80c1c9b3a245\">c80c1c9b3a245</a></td><td style=\"color: #cccccc\">偶爾潮溼：皮膚偶爾是浸潤的；衣褲/尿布/看護墊等至少每8小時需更換1次</td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-cc20b48ecd52d\">cc20b48ecd52d</a></td><td style=\"color: #cccccc\">很少潮溼：皮膚通常保持乾燥；衣褲/尿布/看護墊等只需要依常規的時間，每天更換一次</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "http://ltc-ig.fhir.tw/ValueSet/hn-vs-548098d5ace2"] ;
+  fhir:ValueSet.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ] ;
+     fhir:Identifier.value [ fhir:value "urn:oid:2.25.134445305041884122790785731287582888588" ]
+  ] ;
+  fhir:ValueSet.version [ fhir:value "1.1.0"] ;
+  fhir:ValueSet.name [ fhir:value "HNAnswerVS548098d5ace2"] ;
+  fhir:ValueSet.title [ fhir:value "居家護理－潮溼程度選項"] ;
+  fhir:ValueSet.status [ fhir:value "draft"] ;
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-09-17T17:33:17+08:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "經濟部產業發展署"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "經濟部產業發展署" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.ida.gov.tw/" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "限定潮溼程度可填入的 V5.0.16 選項。"] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-answer" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "c76c4aa75dddb" ]
+       ], [
+         fhir:index 1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "c8d37e00811db" ]
+       ], [
+         fhir:index 2 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "c80c1c9b3a245" ]
+       ], [
+         fhir:index 3 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "cc20b48ecd52d" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/ValueSet/hn-vs-548098d5ace2.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

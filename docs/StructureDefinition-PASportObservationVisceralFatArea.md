@@ -1,4 +1,4 @@
-# 身體組成分析儀－內臟脂肪面積 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 身體組成分析儀－內臟脂肪面積 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationVisceralFatArea | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:PASportObservationVisceralFatArea |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationVisceralFatArea | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:PASportObservationVisceralFatArea |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之內臟脂肪面積資料。 
@@ -18,7 +18,7 @@
 
 * Examples for this Profile: [Observation/pasport-observation-visceral-fat-area-example](Observation-pasport-observation-visceral-fat-area-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/PASportObservationVisceralFatArea)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-PASportObservationVisceralFatArea.json)
 
 ### Formal Views of Profile Content
 
@@ -37,11 +37,11 @@ Other representations of profile: [CSV](StructureDefinition-PASportObservationVi
   "resourceType" : "StructureDefinition",
   "id" : "PASportObservationVisceralFatArea",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationVisceralFatArea",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "PASportObservationVisceralFatArea",
   "title" : "身體組成分析儀－內臟脂肪面積",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

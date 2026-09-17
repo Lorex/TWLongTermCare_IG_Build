@@ -1,4 +1,4 @@
-# 簡易智能狀態測驗評估 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 簡易智能狀態測驗評估 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCMMSEAssessmentModel | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:LTCMMSEAssessmentModel |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCMMSEAssessmentModel | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:LTCMMSEAssessmentModel |
 | **Copyright/Legal**: Copyright © 2024 Taiwan Long-Term Care Implementation Guide | |
 
  
@@ -17,9 +17,9 @@
 
 **Usages:**
 
-* This Logical Model is not used by any profiles in this Implementation Guide
+* This Logical Model is not used by any profiles in this Specification
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCMMSEAssessmentModel)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-LTCMMSEAssessmentModel.json)
 
 ### Formal Views of Profile Content
 
@@ -38,12 +38,12 @@ Other representations of profile: [CSV](StructureDefinition-LTCMMSEAssessmentMod
   "resourceType" : "StructureDefinition",
   "id" : "LTCMMSEAssessmentModel",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCMMSEAssessmentModel",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCMMSEAssessmentModel",
   "title" : "簡易智能狀態測驗評估",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

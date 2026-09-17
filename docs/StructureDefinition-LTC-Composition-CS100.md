@@ -1,4 +1,4 @@
-# 個案總查詢（CS100 對應版）Case Summary - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 個案總查詢（CS100 對應版）Case Summary - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-Composition-CS100 | *Version*:1.0.0 |
-| Draft as of 2026-06-25 | *Computable Name*:LTCCompositionCS100 |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-Composition-CS100 | *Version*:1.1.0 |
+| Draft as of 2026-09-17 | *Computable Name*:LTCCompositionCS100 |
 
  
 本文件為『個案總查詢（Case Summary）』之 CS100 專用版本， 其內容與章節配置對應衛生福利部照顧服務管理資訊平臺功能 《CS100 個案總查詢》之查詢結果欄位與區塊。 
@@ -18,7 +18,7 @@
 
 * Examples for this Profile: [Composition/ltc-bundle-cs100-example](Composition-ltc-bundle-cs100-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTC-Composition-CS100)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-LTC-Composition-CS100.json)
 
 ### Formal Views of Profile Content
 
@@ -37,11 +37,11 @@ Other representations of profile: [CSV](StructureDefinition-LTC-Composition-CS10
   "resourceType" : "StructureDefinition",
   "id" : "LTC-Composition-CS100",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTC-Composition-CS100",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCCompositionCS100",
   "title" : "個案總查詢（CS100 對應版）Case Summary",
   "status" : "draft",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

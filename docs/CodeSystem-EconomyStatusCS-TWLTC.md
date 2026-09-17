@@ -1,4 +1,4 @@
-# 經濟狀況代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 經濟狀況代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,15 +8,16 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/EconomyStatusCS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/EconomyStatusCS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-08-25 | *Computable Name*:EconomyStatusCSTWLTC |
+| *Other Identifiers:*OID:2.25.141362374403667798643111529984595511128 | |
 
  
 用於表述個案的經濟狀況，在長照機構住民經濟狀況 Extension 中使用。 此代碼比照警政署偵查筆錄制式格式之選項進行設計。 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* [EconomyStatusVSTWLTC](ValueSet-EconomyStatusVS-TWLTC.md)
+* [個案經濟狀況值集](ValueSet-EconomyStatusVS-TWLTC.md)
 
 
 
@@ -27,7 +28,11 @@
   "resourceType" : "CodeSystem",
   "id" : "EconomyStatusCS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/EconomyStatusCS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.141362374403667798643111529984595511128"
+  }],
+  "version" : "1.1.0",
   "name" : "EconomyStatusCSTWLTC",
   "title" : "經濟狀況代碼",
   "status" : "active",

@@ -1,4 +1,4 @@
-# 照顧計畫擬訂與服務連結問卷 (AA01) - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 照顧計畫擬訂與服務連結問卷 (AA01) - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/Questionnaire/questionnaire-aa01-example | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:AA01 |
+| *Official URL*:http://ltc-ig.fhir.tw/Questionnaire/questionnaire-aa01-example | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:AA01 |
 | *Other Identifiers:*http://ltc-ig.fhir.tw/questionnaire-id#AA01 | |
 
  
@@ -31,11 +31,11 @@ AA01照顧計畫擬訂與服務連結問卷，用於個案管理師擬定個人�
     "system" : "http://ltc-ig.fhir.tw/questionnaire-id",
     "value" : "AA01"
   }],
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "AA01",
   "title" : "照顧計畫擬訂與服務連結問卷 (AA01)",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

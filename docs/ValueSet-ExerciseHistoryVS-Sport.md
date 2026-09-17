@@ -1,4 +1,4 @@
-# 身體活動量測-最近(目前)運動史值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 身體活動量測-最近(目前)運動史值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ExerciseHistoryVS-Sport | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ExerciseHistoryVS-Sport | *Version*:1.1.0 |
 | Active as of 2024-06-04 | *Computable Name*:ExerciseHistoryVSSport |
+| *Other Identifiers:*OID:2.25.339599518222940892970780100406147484135 | |
 
  
 最近(目前)運動史。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。 
@@ -46,7 +47,11 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "resourceType" : "ValueSet",
   "id" : "ExerciseHistoryVS-Sport",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/ExerciseHistoryVS-Sport",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.339599518222940892970780100406147484135"
+  }],
+  "version" : "1.1.0",
   "name" : "ExerciseHistoryVSSport",
   "title" : "身體活動量測-最近(目前)運動史值集",
   "status" : "active",

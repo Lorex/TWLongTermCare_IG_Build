@@ -1,4 +1,4 @@
-# 長照機構住民教育程度 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長照機構住民教育程度 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEducationStatus-TWLTC | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:ExtPatientEducationStatusTWLTC |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEducationStatus-TWLTC | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:ExtPatientEducationStatusTWLTC |
 
 此 Extension 用以表述長照機構住民的教育程度。
 
@@ -22,7 +22,7 @@
 * Use this Extension: [照顧管理評估量表－個案基本資料](StructureDefinition-LTCPatientCMS.md)
 * Examples for this Extension: [Bundle/ltc-bundle-cms-example](Bundle-ltc-bundle-cms-example.md), [Patient/ltc-patient-cms-chen-ming-hui-example](Patient-ltc-patient-cms-chen-ming-hui-example.md) and [Patient/ltc-patient-cms-example](Patient-ltc-patient-cms-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/ExtPatientEducationStatus-TWLTC)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-ExtPatientEducationStatus-TWLTC.json)
 
 ### Formal Views of Extension Content
 
@@ -45,11 +45,11 @@ Other representations of profile: [CSV](StructureDefinition-ExtPatientEducationS
   "resourceType" : "StructureDefinition",
   "id" : "ExtPatientEducationStatus-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/ExtPatientEducationStatus-TWLTC",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "ExtPatientEducationStatusTWLTC",
   "title" : "長照機構住民教育程度",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

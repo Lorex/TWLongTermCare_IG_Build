@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/ValueSet/hn-vs-ab16e9d81e7b> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hn-vs-ab16e9d81e7b"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet hn-vs-ab16e9d81e7b</b></p><a name=\"hn-vs-ab16e9d81e7b\"> </a><a name=\"hchn-vs-ab16e9d81e7b\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-hn-answer.html\"><code>http://ltc-ig.fhir.tw/CodeSystem/hn-answer</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?1.1.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-c7ead2b329689\">c7ead2b329689</a></td><td style=\"color: #cccccc\">壓傷</td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-cc7a2787e9f48\">cc7a2787e9f48</a></td><td style=\"color: #cccccc\">失禁性皮膚炎</td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-cd2909f1647e7\">cd2909f1647e7</a></td><td style=\"color: #cccccc\">其他</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "http://ltc-ig.fhir.tw/ValueSet/hn-vs-ab16e9d81e7b"] ;
+  fhir:ValueSet.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ] ;
+     fhir:Identifier.value [ fhir:value "urn:oid:2.25.335083813568270267033094033846055193881" ]
+  ] ;
+  fhir:ValueSet.version [ fhir:value "1.1.0"] ;
+  fhir:ValueSet.name [ fhir:value "HNAnswerVSab16e9d81e7b"] ;
+  fhir:ValueSet.title [ fhir:value "居家護理－傷口分類選項"] ;
+  fhir:ValueSet.status [ fhir:value "draft"] ;
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-09-17T17:33:17+08:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "經濟部產業發展署"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "經濟部產業發展署" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.ida.gov.tw/" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "限定傷口分類可填入的 V5.0.16 選項。"] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-answer" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "c7ead2b329689" ]
+       ], [
+         fhir:index 1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "cc7a2787e9f48" ]
+       ], [
+         fhir:index 2 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "cd2909f1647e7" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/ValueSet/hn-vs-ab16e9d81e7b.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

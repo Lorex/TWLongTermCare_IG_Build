@@ -1,4 +1,4 @@
-# 教育程度代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 教育程度代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,15 +8,16 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-09-02 | *Computable Name*:EducationStatusCSTWLTC |
+| *Other Identifiers:*OID:2.25.181683246953841207407143680486179519716 | |
 
  
 用於表述個案的教育程度，在長照機構住民教育程度 Extension 中使用。 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* [EducationStatusVSTWLTC](ValueSet-EducationStatusVS-TWLTC.md)
+* [教育程度值集](ValueSet-EducationStatusVS-TWLTC.md)
 
 
 
@@ -27,7 +28,11 @@
   "resourceType" : "CodeSystem",
   "id" : "EducationStatusCS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.181683246953841207407143680486179519716"
+  }],
+  "version" : "1.1.0",
   "name" : "EducationStatusCSTWLTC",
   "title" : "教育程度代碼",
   "status" : "active",

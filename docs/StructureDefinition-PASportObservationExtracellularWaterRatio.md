@@ -1,4 +1,4 @@
-# 身體組成分析儀－水腫指數 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 身體組成分析儀－水腫指數 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationExtracellularWaterRatio | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:PASportObservationExtracellularWaterRatio |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationExtracellularWaterRatio | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:PASportObservationExtracellularWaterRatio |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之水腫指數資料。 
@@ -18,7 +18,7 @@
 
 * Examples for this Profile: [Observation/pasport-observation-extracellular-water-ratio-example](Observation-pasport-observation-extracellular-water-ratio-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/PASportObservationExtracellularWaterRatio)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-PASportObservationExtracellularWaterRatio.json)
 
 ### Formal Views of Profile Content
 
@@ -37,11 +37,11 @@ Other representations of profile: [CSV](StructureDefinition-PASportObservationEx
   "resourceType" : "StructureDefinition",
   "id" : "PASportObservationExtracellularWaterRatio",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationExtracellularWaterRatio",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "PASportObservationExtracellularWaterRatio",
   "title" : "身體組成分析儀－水腫指數",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

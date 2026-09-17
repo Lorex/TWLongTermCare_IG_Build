@@ -1,4 +1,4 @@
-# 身體活動量測-重量訓練代碼系統 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 身體活動量測-重量訓練代碼系統 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,15 +8,16 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/SportTrainingCS-Sport | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/SportTrainingCS-Sport | *Version*:1.1.0 |
 | Active as of 2024-06-04 | *Computable Name*:SportTrainingCS |
+| *Other Identifiers:*OID:2.25.261844103231345183190408424029377248697 | |
 
  
 此代碼系統定義重量訓練各個方面的代碼，包括使用的重量、執行的組數以及每組的重複次數。本 CodeSystem 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* [SportTrainingVSSport](ValueSet-SportTrainingVS-Sport.md)
+* [身體活動量測-重量訓練代碼值集](ValueSet-SportTrainingVS-Sport.md)
 
 
 
@@ -27,7 +28,11 @@
   "resourceType" : "CodeSystem",
   "id" : "SportTrainingCS-Sport",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/SportTrainingCS-Sport",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.261844103231345183190408424029377248697"
+  }],
+  "version" : "1.1.0",
   "name" : "SportTrainingCS",
   "title" : "身體活動量測-重量訓練代碼系統",
   "status" : "active",

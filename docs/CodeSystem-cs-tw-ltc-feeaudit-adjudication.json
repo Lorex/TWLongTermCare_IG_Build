@@ -1,0 +1,65 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-tw-ltc-feeaudit-adjudication",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem cs-tw-ltc-feeaudit-adjudication</b></p><a name=\"cs-tw-ltc-feeaudit-adjudication\"> </a><a name=\"hccs-tw-ltc-feeaudit-adjudication\"> </a><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-adjudication</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">approveFee<a name=\"cs-tw-ltc-feeaudit-adjudication-approveFee\"> </a></td><td>核定金額</td><td/></tr><tr><td style=\"white-space:nowrap\">incInAcc<a name=\"cs-tw-ltc-feeaudit-adjudication-incInAcc\"> </a></td><td>核增金額</td><td/></tr><tr><td style=\"white-space:nowrap\">decInAcc<a name=\"cs-tw-ltc-feeaudit-adjudication-decInAcc\"> </a></td><td>核減金額</td><td/></tr><tr><td style=\"white-space:nowrap\">copayment<a name=\"cs-tw-ltc-feeaudit-adjudication-copayment\"> </a></td><td>自付額</td><td>個案就該筆服務所應自行負擔之金額（copayment）。語意等同 HL7 標準代碼 http://terminology.hl7.org/CodeSystem/adjudication#copay。</td></tr><tr><td style=\"white-space:nowrap\">aSvcFee<a name=\"cs-tw-ltc-feeaudit-adjudication-aSvcFee\"> </a></td><td>政策鼓勵金額</td><td/></tr><tr><td style=\"white-space:nowrap\">tempPaymentFee<a name=\"cs-tw-ltc-feeaudit-adjudication-tempPaymentFee\"> </a></td><td>分案暫付金額</td><td/></tr><tr><td style=\"white-space:nowrap\">price<a name=\"cs-tw-ltc-feeaudit-adjudication-price\"> </a></td><td>單價</td><td/></tr><tr><td style=\"white-space:nowrap\">submitted<a name=\"cs-tw-ltc-feeaudit-adjudication-submitted\"> </a></td><td>申請核銷金額</td><td>服務單位就本分案所申請核銷之總金額（amount）。語意等同 HL7 標準代碼 http://terminology.hl7.org/CodeSystem/adjudication#submitted。</td></tr></table></div>"
+  },
+  "url" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-adjudication",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.234101207453386091746621372782033473905"
+  }],
+  "version" : "1.1.0",
+  "name" : "CS_TW_LTC_FeeAuditAdjudication",
+  "title" : "支付審查－核定金額類別",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-17T17:33:17+08:00",
+  "publisher" : "經濟部產業發展署",
+  "contact" : [{
+    "name" : "經濟部產業發展署",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.ida.gov.tw/"
+    }]
+  }],
+  "description" : "此 CodeSystem 定義《衛生福利部 支付審核系統 API 規格說明書（照管平台）》「(查詢B)分案審核明細查詢」回覆明細中各項金額欄位之類別代碼，供 ClaimResponse.total.category 與 ClaimResponse.item.adjudication.category 使用。其中核定金額（approveFee）、核增金額（incInAcc）、核減金額（decInAcc）、政策鼓勵金額（aSvcFee）、分案暫付金額（tempPaymentFee）為長照支付審查特有、國際標準無對應者；申請核銷金額（submitted）、自付額（copayment）與單價（price）則與 HL7 標準代碼系統 http://terminology.hl7.org/CodeSystem/adjudication 之 submitted、copay、eligible 語意相近，本 CodeSystem 為保持同一組金額類別代碼之一致性而一併收錄，實作者於跨國情境交換時得改用該標準代碼。",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 8,
+  "concept" : [{
+    "code" : "approveFee",
+    "display" : "核定金額"
+  },
+  {
+    "code" : "incInAcc",
+    "display" : "核增金額"
+  },
+  {
+    "code" : "decInAcc",
+    "display" : "核減金額"
+  },
+  {
+    "code" : "copayment",
+    "display" : "自付額",
+    "definition" : "個案就該筆服務所應自行負擔之金額（copayment）。語意等同 HL7 標準代碼 http://terminology.hl7.org/CodeSystem/adjudication#copay。"
+  },
+  {
+    "code" : "aSvcFee",
+    "display" : "政策鼓勵金額"
+  },
+  {
+    "code" : "tempPaymentFee",
+    "display" : "分案暫付金額"
+  },
+  {
+    "code" : "price",
+    "display" : "單價"
+  },
+  {
+    "code" : "submitted",
+    "display" : "申請核銷金額",
+    "definition" : "服務單位就本分案所申請核銷之總金額（amount）。語意等同 HL7 標準代碼 http://terminology.hl7.org/CodeSystem/adjudication#submitted。"
+  }]
+}

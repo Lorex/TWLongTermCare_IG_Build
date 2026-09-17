@@ -1,4 +1,4 @@
-# 轉介單申請服務種類代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 轉介單申請服務種類代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,15 +8,16 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/ReferralCarePlanCS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/ReferralCarePlanCS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-08-25 | *Computable Name*:ReferralCarePlanCSTWLTC |
+| *Other Identifiers:*OID:2.25.331038000319735660568566000808774671113 | |
 
  
 用於表述個案欲申請的服務項目。 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* [ReferralCarePlanVSTWLTC](ValueSet-ReferralCarePlanVS-TWLTC.md)
+* [轉介單申請服務種類值集](ValueSet-ReferralCarePlanVS-TWLTC.md)
 
 
 
@@ -27,7 +28,11 @@
   "resourceType" : "CodeSystem",
   "id" : "ReferralCarePlanCS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/ReferralCarePlanCS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.331038000319735660568566000808774671113"
+  }],
+  "version" : "1.1.0",
   "name" : "ReferralCarePlanCSTWLTC",
   "title" : "轉介單申請服務種類代碼",
   "status" : "active",

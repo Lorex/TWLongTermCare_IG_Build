@@ -1,4 +1,4 @@
-# 臺灣長照服務項目代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 臺灣長照服務項目代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,15 +8,16 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:CS_TW_LTC_ServiceItem |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:CS_TW_LTC_ServiceItem |
+| *Other Identifiers:*OID:2.25.184348551961769739743694697916095980152 | |
 
  
 臺灣長照 2.0 給付之服務項目代碼（AA..GA 系列），涵蓋照顧組合、專業服務、交通接送、喘息服務等項目，適用於長照服務之申請、核定與使用紀錄。 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* [VS_TW_LTC_ServiceItem](ValueSet-vs-tw-ltc-service-item.md)
+* [臺灣長照服務項目](ValueSet-vs-tw-ltc-service-item.md)
 
 
 
@@ -27,12 +28,16 @@
   "resourceType" : "CodeSystem",
   "id" : "cs-tw-ltc-service-item",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.184348551961769739743694697916095980152"
+  }],
+  "version" : "1.1.0",
   "name" : "CS_TW_LTC_ServiceItem",
   "title" : "臺灣長照服務項目代碼",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -44,8 +49,12 @@
   "description" : "臺灣長照 2.0 給付之服務項目代碼（AA..GA 系列），涵蓋照顧組合、專業服務、交通接送、喘息服務等項目，適用於長照服務之申請、核定與使用紀錄。",
   "caseSensitive" : true,
   "content" : "complete",
-  "count" : 86,
+  "count" : 87,
   "concept" : [{
+    "code" : "AA00",
+    "display" : "A 單位服務紀錄"
+  },
+  {
     "code" : "AA01",
     "display" : "照顧計畫擬定與服務連結"
   },

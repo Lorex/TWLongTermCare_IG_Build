@@ -1,4 +1,4 @@
-# 長照 SDK－Composition 章節代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長照 SDK－Composition 章節代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:CS_TW_LTC_SectionCode |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:CS_TW_LTC_SectionCode |
+| *Other Identifiers:*OID:2.25.84085560949791310614098238931249319533 | |
 
  
 用於長照 Composition 資源中各章節（section）的區段識別代碼。 
@@ -27,12 +28,16 @@
   "resourceType" : "CodeSystem",
   "id" : "cs-tw-ltc-section-code",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-section-code",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.84085560949791310614098238931249319533"
+  }],
+  "version" : "1.1.0",
   "name" : "CS_TW_LTC_SectionCode",
   "title" : "長照 SDK－Composition 章節代碼",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

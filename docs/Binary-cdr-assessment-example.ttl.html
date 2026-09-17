@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>CDR 評估範例 - TTL Representation - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0</title>
+    <title>CDR 評估範例 - TTL Representation - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"20.204"}
-    h3,h4,h5,h6{--heading-prefix:"20.204"}</style>
+    <style type="text/css">h2{--heading-prefix:"25.515"}
+    h3,h4,h5,h6{--heading-prefix:"25.515"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -54,7 +54,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引(TW LTC IG)</span>
             <br/>
-            <span style="display:inline-block;">1.0.0 - STU 1.0.0
+            <span style="display:inline-block;">1.1.0 - STU 1.1.0
 
 
             </span>
@@ -81,6 +81,22 @@
               <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li><a href="index.html">應用說明</a></li>
   <li><a href="toc.html">目錄</a></li>
+  <li class="dropdown">
+		<a href="#">主題說明<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="fee-audit.html">長照支付審查</a>
+			</li>
+			<li>
+				<a href="home-nursing.html">居家護理照護管理系統</a>
+			</li>
+			<li>
+				<a href="hah.html">在宅急症照護</a>
+			</li>
+		</ul>
+	</li>
 	<li class="dropdown">
 		<a href="artifacts.html">規範文件<b class="caret">
 			</b>
@@ -175,7 +191,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 9" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引(TW LTC IG) - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引(TW LTC IG) - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -234,17 +250,22 @@
   <pre class="rdf" data-fhir="generated" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 # - resource -------------------------------------------------------------------
 
- a fhir:Binary ;
+&lt;http://hl7.org/fhir/Binary/cdr-assessment-example&gt; a fhir:Binary ;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/R4/resource.html#Binary.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;cdr-assessment-example&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/binary.html#Binary.contentType">fhir:contentType</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;application/fhir+json&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/binary.html#Binary.data">fhir:data</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#base64Binary">fhir:v</a> &quot;ewogICJyZXNvdXJjZVR5cGUiOiAiaHR0cDovL2x0Yy1pZy5maGlyLnR3L1N0cnVjdHVyZURlZmluaXRpb24vTFRDQ0RSQXNzZXNzbWVudE1vZGVsIiwKICAiYXNzZXNzbWVudERhdGUiOiAiMjAyNC0wMS0xNVQxNDozMDowMCswODowMCIsCiAgImFzc2Vzc29yIjogewogICAgInJlZmVyZW5jZSI6ICJQcmFjdGl0aW9uZXIvbHRjLXByYWN0aXRpb25lci1waHlzaWNpYW4tYWExMi1leGFtcGxlIgogIH0sCiAgInN1YmplY3QiOiB7CiAgICAicmVmZXJlbmNlIjogIlBhdGllbnQvbHRjLXBhdGllbnQtY2hlbi1taW5nLWh1aSIKICB9LAogICJtZW1vcnkiOiB7CiAgICAic2NvcmUiOiAxLAogICAgImRlc2NyaXB0aW9uIjogIui8leW6puWBpeW/mO+8jOWPquiomOW+l+S6i+S7tueahOmDqOWIhiIKICB9LAogICJvcmllbnRhdGlvbiI6IHsKICAgICJzY29yZSI6IDEsCiAgICAiZGVzY3JpcHRpb24iOiAi5a6M5YWo5a6a5ZCR77yM5L2G5pmC6ZaTL+aXpeacn+eojeacieWbsOmboyIKICB9LAogICJwcm9ibGVtU29sdmluZyI6IHsKICAgICJzY29yZSI6IDEsCiAgICAiZGVzY3JpcHRpb24iOiAi5ZWP6aGM6Kej5rG66IO95Yqb56iN5pyJ5Zuw6ZujIgogIH0sCiAgImNvbW11bml0eUFjdGl2aXRpZXMiOiB7CiAgICAic2NvcmUiOiAxLAogICAgImRlc2NyaXB0aW9uIjogIuekvuWNgOa0u+WLleiDveWKm+eojeacieWPl+aQjSIKICB9LAogICJob21lSG9iYmllcyI6IHsKICAgICJzY29yZSI6IDEsCiAgICAiZGVzY3JpcHRpb24iOiAi5a625bGF5Zec5aW956iN5pyJ5Y+X5pCNIgogIH0sCiAgInNlbGZDYXJlIjogewogICAgInNjb3JlIjogMCwKICAgICJkZXNjcmlwdGlvbiI6ICLlrozlhajoh6rmiJHnhafmlpkiCiAgfSwKICAidG90YWxTY29yZSI6IDEsCiAgImRlbWVudGlhU3RhZ2UiOiAi6LyV5bqm5aSx5pm6IiwKICAiYXNzZXNzbWVudE5vdGVzIjogIuaCo+iAhemFjeWQiOW6puiJr+Wlve+8jOipleS8sOmBjueoi+mghuWIqeWujOaIkCIKfQo=&quot;^^xsd:base64Binary] . # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Binary.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;cdr-assessment-example&quot;] ;
+  <a href="http://hl7.org/fhir/R4/binary.html#Binary.contentType">fhir:Binary.contentType</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;application/fhir+json&quot;] ;
+  <a href="http://hl7.org/fhir/R4/binary.html#Binary.data">fhir:Binary.data</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#base64Binary">fhir:value</a> &quot;ewogICJyZXNvdXJjZVR5cGUiOiAiaHR0cDovL2x0Yy1pZy5maGlyLnR3L1N0cnVjdHVyZURlZmluaXRpb24vTFRDQ0RSQXNzZXNzbWVudE1vZGVsIiwKICAiYXNzZXNzbWVudERhdGUiOiAiMjAyNC0wMS0xNVQxNDozMDowMCswODowMCIsCiAgImFzc2Vzc29yIjogewogICAgInJlZmVyZW5jZSI6ICJQcmFjdGl0aW9uZXIvbHRjLXByYWN0aXRpb25lci1waHlzaWNpYW4tYWExMi1leGFtcGxlIgogIH0sCiAgInN1YmplY3QiOiB7CiAgICAicmVmZXJlbmNlIjogIlBhdGllbnQvbHRjLXBhdGllbnQtY2hlbi1taW5nLWh1aSIKICB9LAogICJtZW1vcnkiOiB7CiAgICAic2NvcmUiOiAxLAogICAgImRlc2NyaXB0aW9uIjogIui8leW6puWBpeW/mO+8jOWPquiomOW+l+S6i+S7tueahOmDqOWIhiIKICB9LAogICJvcmllbnRhdGlvbiI6IHsKICAgICJzY29yZSI6IDEsCiAgICAiZGVzY3JpcHRpb24iOiAi5a6M5YWo5a6a5ZCR77yM5L2G5pmC6ZaTL+aXpeacn+eojeacieWbsOmboyIKICB9LAogICJwcm9ibGVtU29sdmluZyI6IHsKICAgICJzY29yZSI6IDEsCiAgICAiZGVzY3JpcHRpb24iOiAi5ZWP6aGM6Kej5rG66IO95Yqb56iN5pyJ5Zuw6ZujIgogIH0sCiAgImNvbW11bml0eUFjdGl2aXRpZXMiOiB7CiAgICAic2NvcmUiOiAxLAogICAgImRlc2NyaXB0aW9uIjogIuekvuWNgOa0u+WLleiDveWKm+eojeacieWPl+aQjSIKICB9LAogICJob21lSG9iYmllcyI6IHsKICAgICJzY29yZSI6IDEsCiAgICAiZGVzY3JpcHRpb24iOiAi5a625bGF5Zec5aW956iN5pyJ5Y+X5pCNIgogIH0sCiAgInNlbGZDYXJlIjogewogICAgInNjb3JlIjogMCwKICAgICJkZXNjcmlwdGlvbiI6ICLlrozlhajoh6rmiJHnhafmlpkiCiAgfSwKICAidG90YWxTY29yZSI6IDEsCiAgImRlbWVudGlhU3RhZ2UiOiAi6LyV5bqm5aSx5pm6IiwKICAiYXNzZXNzbWVudE5vdGVzIjogIuaCo+iAhemFjeWQiOW6puiJr+Wlve+8jOipleS8sOmBjueoi+mghuWIqeWujOaIkCIKfQo=&quot;^^xsd:base64Binary] .
+
+# - ontology header ------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/Binary/cdr-assessment-example.ttl&gt; a owl:Ontology ;
+  owl:imports fhir:fhir.ttl ;
+  owl:versionIRI &lt;http://build.fhir.org/Binary/cdr-assessment-example.ttl&gt; .
 
 </code></pre>
 
@@ -271,7 +292,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 25, 2026 08:48+0800">2026-06-25</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 17, 2026 17:33+0800">2026-09-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

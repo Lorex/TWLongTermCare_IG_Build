@@ -1,0 +1,73 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/ValueSet/hn-vs-8bcd09f153b7> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hn-vs-8bcd09f153b7"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet hn-vs-8bcd09f153b7</b></p><a name=\"hn-vs-8bcd09f153b7\"> </a><a name=\"hchn-vs-8bcd09f153b7\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-hn-answer.html\"><code>http://ltc-ig.fhir.tw/CodeSystem/hn-answer</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?1.1.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-c58a2fa9a6b3c\">c58a2fa9a6b3c</a></td><td style=\"color: #cccccc\">不識字</td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-c7eceb430bb5d\">c7eceb430bb5d</a></td><td style=\"color: #cccccc\">識字未就學</td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-c967e97bedfe4\">c967e97bedfe4</a></td><td style=\"color: #cccccc\">小學</td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-c3e51ba33a80c\">c3e51ba33a80c</a></td><td style=\"color: #cccccc\">初中(職)</td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-cf9b0d1d53928\">cf9b0d1d53928</a></td><td style=\"color: #cccccc\">高中(職)</td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-cdc809bc8635e\">cdc809bc8635e</a></td><td style=\"color: #cccccc\">大學(專技)以上</td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-cd2909f1647e7\">cd2909f1647e7</a></td><td style=\"color: #cccccc\">其他</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "http://ltc-ig.fhir.tw/ValueSet/hn-vs-8bcd09f153b7"] ;
+  fhir:ValueSet.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ] ;
+     fhir:Identifier.value [ fhir:value "urn:oid:2.25.164879648753831433890807551302858034422" ]
+  ] ;
+  fhir:ValueSet.version [ fhir:value "1.1.0"] ;
+  fhir:ValueSet.name [ fhir:value "HNAnswerVS8bcd09f153b7"] ;
+  fhir:ValueSet.title [ fhir:value "居家護理－教育程度選項"] ;
+  fhir:ValueSet.status [ fhir:value "draft"] ;
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-09-17T17:33:17+08:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "經濟部產業發展署"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "經濟部產業發展署" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.ida.gov.tw/" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "限定教育程度可填入的 V5.0.16 選項。"] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-answer" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "c58a2fa9a6b3c" ]
+       ], [
+         fhir:index 1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "c7eceb430bb5d" ]
+       ], [
+         fhir:index 2 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "c967e97bedfe4" ]
+       ], [
+         fhir:index 3 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "c3e51ba33a80c" ]
+       ], [
+         fhir:index 4 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "cf9b0d1d53928" ]
+       ], [
+         fhir:index 5 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "cdc809bc8635e" ]
+       ], [
+         fhir:index 6 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "cd2909f1647e7" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/ValueSet/hn-vs-8bcd09f153b7.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

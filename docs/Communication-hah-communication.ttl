@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Communication/hah-communication> a fhir:Communication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hah-communication"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHCommunication" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHCommunication>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Communication hah-communication</b></p><a name=\"hah-communication\"> </a><a name=\"hchah-communication\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHCommunication.html\">在宅急症－照會與交班</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-hah-consult-request.html\">ServiceRequest 專科照會</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity consultation}\">專科照會</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>encounter</b>: <a href=\"Encounter-hah-visit.html\">Encounter: extension = in-person; status = finished; class = home health (ActCode#HH); type = 訪視; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-01 10:00:00+0800</a></p><p><b>sent</b>: 2026-09-01 10:00:00+0800</p><p><b>recipient</b>: <a href=\"CareTeam-hah-team.html\">CareTeam: status = inactive</a></p><p><b>sender</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><h3>Payloads</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Content[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>已回覆本次照會，請依照護計畫持續追蹤。</td></tr></table></div>"
+  ] ;
+  fhir:Communication.basedOn [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/ServiceRequest/hah-consult-request> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/hah-consult-request" ]
+  ] ;
+  fhir:Communication.status [ fhir:value "completed"] ;
+  fhir:Communication.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-activity" ] ;
+       fhir:Coding.code [ fhir:value "consultation" ]
+     ]
+  ] ;
+  fhir:Communication.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Communication.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-visit> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-visit" ]
+  ] ;
+  fhir:Communication.sent [ fhir:value "2026-09-01T10:00:00+08:00"^^xsd:dateTime] ;
+  fhir:Communication.recipient [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/CareTeam/hah-team> ;
+     fhir:Reference.reference [ fhir:value "CareTeam/hah-team" ]
+  ] ;
+  fhir:Communication.sender [
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+  ] ;
+  fhir:Communication.payload [
+     fhir:index 0 ;
+     fhir:Communication.payload.contentString [ fhir:value "已回覆本次照會，請依照護計畫持續追蹤。" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Communication/hah-communication.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

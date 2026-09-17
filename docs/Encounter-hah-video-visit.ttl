@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Encounter/hah-video-visit> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hah-video-visit"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHVisitEncounter" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHVisitEncounter>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter hah-video-visit</b></p><a name=\"hah-video-visit\"> </a><a name=\"hchah-video-visit\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHVisitEncounter.html\">在宅急症－單次訪視</a></p></div><p><b>在宅急症－訪視方式</b>: video</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-VR\">ActCode: VR</a> (virtual)</p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity visit}\">訪視</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>episodeOfCare</b>: <a href=\"EpisodeOfCare-hah-episode.html\">EpisodeOfCare: extension = 完成治療; identifier = https://example.org/hah/episodes#HAH-20260901-001; status = finished; type = 在宅急症照護; period = 2026-09-01 08:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></td></tr></table><p><b>period</b>: 2026-09-02 09:00:00+0800 --&gt; 2026-09-02 09:15:00+0800</p><p><b>serviceProvider</b>: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></p><p><b>partOf</b>: <a href=\"Encounter-hah-admission.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHAHVisitMode" ] ;
+     fhir:Extension.valueCode [ fhir:value "video" ]
+  ] ;
+  fhir:Encounter.status [ fhir:value "finished"] ;
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+     fhir:Coding.code [ fhir:value "VR" ]
+  ] ;
+  fhir:Encounter.type [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-activity" ] ;
+       fhir:Coding.code [ fhir:value "visit" ]
+     ]
+  ] ;
+  fhir:Encounter.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Encounter.episodeOfCare [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/EpisodeOfCare/hah-episode> ;
+     fhir:Reference.reference [ fhir:value "EpisodeOfCare/hah-episode" ]
+  ] ;
+  fhir:Encounter.participant [
+     fhir:index 0 ;
+     fhir:Encounter.participant.individual [
+       fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+     ]
+  ] ;
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2026-09-02T09:00:00+08:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2026-09-02T09:15:00+08:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Encounter.serviceProvider [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/hah-organization> ;
+     fhir:Reference.reference [ fhir:value "Organization/hah-organization" ]
+  ] ;
+  fhir:Encounter.partOf [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-admission> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-admission" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Encounter/hah-video-visit.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

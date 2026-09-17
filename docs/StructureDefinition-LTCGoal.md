@@ -1,4 +1,4 @@
-# 長期照顧－照顧目標 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長期照顧－照顧目標 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,20 +8,21 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCGoal | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:LTCGoal |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCGoal | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:LTCGoal |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Goal Resource，以呈現長期照顧情境中涉及之照顧目標內容。 
 
 **Usages:**
 
+* Derived from this Profile: [在宅急症－照護目標](StructureDefinition-HAHGoal.md) and [居家護理－照護目標](StructureDefinition-HNGoal.md)
 * Use this Profile: [長期照顧管理中心個案服務初篩表/轉介單文件打包](StructureDefinition-LTCBundleReferral.md)
 * Refer to this Profile: [長期照顧－照顧計畫](StructureDefinition-LTCCarePlan.md)
 * Examples for this Profile: [Goal/ltc-goal-mobility-improvement-example](Goal-ltc-goal-mobility-improvement-example.md)
 * CapabilityStatements using this Profile: [臺灣長期照顧實作指引 - 用戶端能力聲明](CapabilityStatement-CapabilityStatementLTCClient.md) and [臺灣長期照顧實作指引 - 伺服端能力聲明](CapabilityStatement-CapabilityStatementLTCServer.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCGoal)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-LTCGoal.json)
 
 ### Formal Views of Profile Content
 
@@ -40,11 +41,11 @@ Other representations of profile: [CSV](StructureDefinition-LTCGoal.csv), [Excel
   "resourceType" : "StructureDefinition",
   "id" : "LTCGoal",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCGoal",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCGoal",
   "title" : "長期照顧－照顧目標",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -77,6 +78,10 @@ Other representations of profile: [CSV](StructureDefinition-LTCGoal.csv), [Excel
   "derivation" : "constraint",
   "differential" : {
     "element" : [{
+      "id" : "Goal",
+      "path" : "Goal"
+    },
+    {
       "id" : "Goal.lifecycleStatus",
       "path" : "Goal.lifecycleStatus",
       "short" : "照顧目標的生命週期狀態。[應填入 proposed / planned / accepted / active / on-hold / completed / cancelled / entered-in-error / rejected]",

@@ -1,0 +1,192 @@
+{
+  "resourceType" : "Composition",
+  "id" : "hah-summary",
+  "meta" : {
+    "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/HAHCompositionSummary"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Composition hah-summary</b></p><a name=\"hah-summary\"> </a><a name=\"hchah-summary\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHCompositionSummary.html\">在宅急症－結案與轉銜摘要</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-document discharge-summary}\">結案摘要</span></p><p><b>encounter</b>: <a href=\"Encounter-hah-admission.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><p><b>date</b>: 2026-09-05 12:00:00+0800</p><p><b>author</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><p><b>title</b>: 王測試在宅急症結案摘要</p><p><b>custodian</b>: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></p></div>"
+  },
+  "status" : "final",
+  "type" : {
+    "coding" : [{
+      "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
+      "code" : "discharge-summary"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/hah-patient"
+  },
+  "encounter" : {
+    "reference" : "Encounter/hah-admission"
+  },
+  "date" : "2026-09-05T12:00:00+08:00",
+  "author" : [{
+    "reference" : "Practitioner/hah-practitioner"
+  }],
+  "title" : "王測試在宅急症結案摘要",
+  "custodian" : {
+    "reference" : "Organization/hah-organization"
+  },
+  "section" : [{
+    "title" : "療程經過",
+    "code" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
+        "code" : "course"
+      }]
+    },
+    "text" : {
+      "status" : "additional",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>本次在宅照護完成；包含實地與視訊訪視。</p></div>"
+    },
+    "entry" : [{
+      "reference" : "EpisodeOfCare/hah-episode"
+    },
+    {
+      "reference" : "Encounter/hah-admission"
+    },
+    {
+      "reference" : "Encounter/hah-visit"
+    },
+    {
+      "reference" : "Encounter/hah-video-visit"
+    },
+    {
+      "reference" : "ClinicalImpression/hah-impression"
+    },
+    {
+      "reference" : "QuestionnaireResponse/hah-assessment"
+    }]
+  },
+  {
+    "title" : "診斷與問題",
+    "code" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
+        "code" : "problems"
+      }]
+    },
+    "text" : {
+      "status" : "additional",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>呼吸道感染，療程結束時已解除。</p></div>"
+    },
+    "entry" : [{
+      "reference" : "Condition/hah-condition"
+    }]
+  },
+  {
+    "title" : "過敏資訊",
+    "code" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
+        "code" : "allergies"
+      }]
+    },
+    "text" : {
+      "status" : "additional",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>已記錄青黴素過敏及皮疹反應。</p></div>"
+    },
+    "entry" : [{
+      "reference" : "AllergyIntolerance/hah-allergy"
+    }]
+  },
+  {
+    "title" : "藥物與給藥",
+    "code" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
+        "code" : "medications"
+      }]
+    },
+    "text" : {
+      "status" : "additional",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>示範輸注與取消給藥；不是臨床處方建議。</p></div>"
+    },
+    "entry" : [{
+      "reference" : "MedicationRequest/hah-medication-order"
+    },
+    {
+      "reference" : "MedicationAdministration/hah-infusion"
+    },
+    {
+      "reference" : "MedicationAdministration/hah-medication-not-done"
+    }]
+  },
+  {
+    "title" : "檢查結果",
+    "code" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
+        "code" : "results"
+      }]
+    },
+    "text" : {
+      "status" : "additional",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>附體溫與血糖檢驗。</p></div>"
+    },
+    "entry" : [{
+      "reference" : "Observation/hah-temperature"
+    },
+    {
+      "reference" : "DiagnosticReport/hah-report"
+    }]
+  },
+  {
+    "title" : "照護計畫與措施",
+    "code" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
+        "code" : "care"
+      }]
+    },
+    "text" : {
+      "status" : "additional",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>附照護目標、計畫、衛教、同意及設備。</p></div>"
+    },
+    "entry" : [{
+      "reference" : "CarePlan/hah-plan"
+    },
+    {
+      "reference" : "Goal/hah-goal"
+    },
+    {
+      "reference" : "Procedure/hah-procedure"
+    },
+    {
+      "reference" : "Consent/hah-consent"
+    },
+    {
+      "reference" : "Device/hah-device"
+    }]
+  },
+  {
+    "title" : "後續照護與交班",
+    "code" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
+        "code" : "follow-up"
+      }]
+    },
+    "text" : {
+      "status" : "additional",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>已完成本次會診與檢驗工作；後續回診資訊尚未提供。</p></div>"
+    },
+    "entry" : [{
+      "reference" : "ServiceRequest/hah-consult-request"
+    },
+    {
+      "reference" : "ServiceRequest/hah-lab-request"
+    },
+    {
+      "reference" : "Task/hah-task"
+    },
+    {
+      "reference" : "Communication/hah-communication"
+    },
+    {
+      "reference" : "DocumentReference/hah-attachment"
+    }]
+  }]
+}

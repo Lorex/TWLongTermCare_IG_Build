@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,82 +7,103 @@
 
 <http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC> a fhir:CodeSystem ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "EducationStatusCS-TWLTC"] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem EducationStatusCS-TWLTC</b></p><a name=\"EducationStatusCS-TWLTC\"> </a><a name=\"hcEducationStatusCS-TWLTC\"> </a><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">illiterate<a name=\"EducationStatusCS-TWLTC-illiterate\"> </a></td><td>不識字</td><td>個案教育程度為不識字。</td></tr><tr><td style=\"white-space:nowrap\">literate<a name=\"EducationStatusCS-TWLTC-literate\"> </a></td><td>識字</td><td>個案教育程度為識字，但未受正規教育（含私塾）。</td></tr><tr><td style=\"white-space:nowrap\">elementary<a name=\"EducationStatusCS-TWLTC-elementary\"> </a></td><td>國小</td><td>個案教育程度為國小。</td></tr><tr><td style=\"white-space:nowrap\">junior<a name=\"EducationStatusCS-TWLTC-junior\"> </a></td><td>國中</td><td>個案教育程度為國中。</td></tr><tr><td style=\"white-space:nowrap\">senior<a name=\"EducationStatusCS-TWLTC-senior\"> </a></td><td>高中（職）</td><td>個案教育程度為高中（職）。</td></tr><tr><td style=\"white-space:nowrap\">special-elementary<a name=\"EducationStatusCS-TWLTC-special-elementary\"> </a></td><td>特教班-國小</td><td>個案教育程度為特教班-國小。</td></tr><tr><td style=\"white-space:nowrap\">special-junior<a name=\"EducationStatusCS-TWLTC-special-junior\"> </a></td><td>特教班-國中</td><td>個案教育程度為特教班-國中。</td></tr><tr><td style=\"white-space:nowrap\">special-senior<a name=\"EducationStatusCS-TWLTC-special-senior\"> </a></td><td>特教班-高中職</td><td>個案教育程度為特教班-高中職。</td></tr><tr><td style=\"white-space:nowrap\">vocational<a name=\"EducationStatusCS-TWLTC-vocational\"> </a></td><td>五專</td><td>個案教育程度為五專。</td></tr><tr><td style=\"white-space:nowrap\">college<a name=\"EducationStatusCS-TWLTC-college\"> </a></td><td>大學（二三專）</td><td>個案教育程度為大學（二三專）。</td></tr><tr><td style=\"white-space:nowrap\">postgraduate<a name=\"EducationStatusCS-TWLTC-postgraduate\"> </a></td><td>研究所以上</td><td>個案教育程度為研究所以上。</td></tr><tr><td style=\"white-space:nowrap\">other<a name=\"EducationStatusCS-TWLTC-other\"> </a></td><td>其他</td><td>個案教育程度為其他。</td></tr></table></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:url [
-     fhir:v "http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC"^^xsd:anyURI ;
-     fhir:l <http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC>
-  ] ; # 
-  fhir:version [ fhir:v "1.0.0"] ; # 
-  fhir:name [ fhir:v "EducationStatusCSTWLTC"] ; # 
-  fhir:title [ fhir:v "教育程度代碼"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2024-09-02"^^xsd:date] ; # 
-  fhir:publisher [ fhir:v "經濟部產業發展署"] ; # 
-  fhir:contact ( [
-     fhir:name [ fhir:v "經濟部產業發展署" ] ;
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "https://www.ida.gov.tw/" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "用於表述個案的教育程度，在長照機構住民教育程度 Extension 中使用。"] ; # 
-  fhir:caseSensitive [ fhir:v true] ; # 
-  fhir:content [ fhir:v "complete"] ; # 
-  fhir:count [ fhir:v "12"^^xsd:nonNegativeInteger] ; # 
-  fhir:concept ( [
-     fhir:code [ fhir:v "illiterate" ] ;
-     fhir:display [ fhir:v "不識字" ] ;
-     fhir:definition [ fhir:v "個案教育程度為不識字。" ]
-  ] [
-     fhir:code [ fhir:v "literate" ] ;
-     fhir:display [ fhir:v "識字" ] ;
-     fhir:definition [ fhir:v "個案教育程度為識字，但未受正規教育（含私塾）。" ]
-  ] [
-     fhir:code [ fhir:v "elementary" ] ;
-     fhir:display [ fhir:v "國小" ] ;
-     fhir:definition [ fhir:v "個案教育程度為國小。" ]
-  ] [
-     fhir:code [ fhir:v "junior" ] ;
-     fhir:display [ fhir:v "國中" ] ;
-     fhir:definition [ fhir:v "個案教育程度為國中。" ]
-  ] [
-     fhir:code [ fhir:v "senior" ] ;
-     fhir:display [ fhir:v "高中（職）" ] ;
-     fhir:definition [ fhir:v "個案教育程度為高中（職）。" ]
-  ] [
-     fhir:code [ fhir:v "special-elementary" ] ;
-     fhir:display [ fhir:v "特教班-國小" ] ;
-     fhir:definition [ fhir:v "個案教育程度為特教班-國小。" ]
-  ] [
-     fhir:code [ fhir:v "special-junior" ] ;
-     fhir:display [ fhir:v "特教班-國中" ] ;
-     fhir:definition [ fhir:v "個案教育程度為特教班-國中。" ]
-  ] [
-     fhir:code [ fhir:v "special-senior" ] ;
-     fhir:display [ fhir:v "特教班-高中職" ] ;
-     fhir:definition [ fhir:v "個案教育程度為特教班-高中職。" ]
-  ] [
-     fhir:code [ fhir:v "vocational" ] ;
-     fhir:display [ fhir:v "五專" ] ;
-     fhir:definition [ fhir:v "個案教育程度為五專。" ]
-  ] [
-     fhir:code [ fhir:v "college" ] ;
-     fhir:display [ fhir:v "大學（二三專）" ] ;
-     fhir:definition [ fhir:v "個案教育程度為大學（二三專）。" ]
-  ] [
-     fhir:code [ fhir:v "postgraduate" ] ;
-     fhir:display [ fhir:v "研究所以上" ] ;
-     fhir:definition [ fhir:v "個案教育程度為研究所以上。" ]
-  ] [
-     fhir:code [ fhir:v "other" ] ;
-     fhir:display [ fhir:v "其他" ] ;
-     fhir:definition [ fhir:v "個案教育程度為其他。" ]
-  ] ) . # 
+  fhir:Resource.id [ fhir:value "EducationStatusCS-TWLTC"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem EducationStatusCS-TWLTC</b></p><a name=\"EducationStatusCS-TWLTC\"> </a><a name=\"hcEducationStatusCS-TWLTC\"> </a><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">illiterate<a name=\"EducationStatusCS-TWLTC-illiterate\"> </a></td><td>不識字</td><td>個案教育程度為不識字。</td></tr><tr><td style=\"white-space:nowrap\">literate<a name=\"EducationStatusCS-TWLTC-literate\"> </a></td><td>識字</td><td>個案教育程度為識字，但未受正規教育（含私塾）。</td></tr><tr><td style=\"white-space:nowrap\">elementary<a name=\"EducationStatusCS-TWLTC-elementary\"> </a></td><td>國小</td><td>個案教育程度為國小。</td></tr><tr><td style=\"white-space:nowrap\">junior<a name=\"EducationStatusCS-TWLTC-junior\"> </a></td><td>國中</td><td>個案教育程度為國中。</td></tr><tr><td style=\"white-space:nowrap\">senior<a name=\"EducationStatusCS-TWLTC-senior\"> </a></td><td>高中（職）</td><td>個案教育程度為高中（職）。</td></tr><tr><td style=\"white-space:nowrap\">special-elementary<a name=\"EducationStatusCS-TWLTC-special-elementary\"> </a></td><td>特教班-國小</td><td>個案教育程度為特教班-國小。</td></tr><tr><td style=\"white-space:nowrap\">special-junior<a name=\"EducationStatusCS-TWLTC-special-junior\"> </a></td><td>特教班-國中</td><td>個案教育程度為特教班-國中。</td></tr><tr><td style=\"white-space:nowrap\">special-senior<a name=\"EducationStatusCS-TWLTC-special-senior\"> </a></td><td>特教班-高中職</td><td>個案教育程度為特教班-高中職。</td></tr><tr><td style=\"white-space:nowrap\">vocational<a name=\"EducationStatusCS-TWLTC-vocational\"> </a></td><td>五專</td><td>個案教育程度為五專。</td></tr><tr><td style=\"white-space:nowrap\">college<a name=\"EducationStatusCS-TWLTC-college\"> </a></td><td>大學（二三專）</td><td>個案教育程度為大學（二三專）。</td></tr><tr><td style=\"white-space:nowrap\">postgraduate<a name=\"EducationStatusCS-TWLTC-postgraduate\"> </a></td><td>研究所以上</td><td>個案教育程度為研究所以上。</td></tr><tr><td style=\"white-space:nowrap\">other<a name=\"EducationStatusCS-TWLTC-other\"> </a></td><td>其他</td><td>個案教育程度為其他。</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC"] ;
+  fhir:CodeSystem.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ] ;
+     fhir:Identifier.value [ fhir:value "urn:oid:2.25.181683246953841207407143680486179519716" ]
+  ] ;
+  fhir:CodeSystem.version [ fhir:value "1.1.0"] ;
+  fhir:CodeSystem.name [ fhir:value "EducationStatusCSTWLTC"] ;
+  fhir:CodeSystem.title [ fhir:value "教育程度代碼"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2024-09-02"^^xsd:date] ;
+  fhir:CodeSystem.publisher [ fhir:value "經濟部產業發展署"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "經濟部產業發展署" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.ida.gov.tw/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "用於表述個案的教育程度，在長照機構住民教育程度 Extension 中使用。"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "12"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "illiterate" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "不識字" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "個案教育程度為不識字。" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "literate" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "識字" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "個案教育程度為識字，但未受正規教育（含私塾）。" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "elementary" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "國小" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "個案教育程度為國小。" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "junior" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "國中" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "個案教育程度為國中。" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "senior" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "高中（職）" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "個案教育程度為高中（職）。" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "special-elementary" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "特教班-國小" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "個案教育程度為特教班-國小。" ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "special-junior" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "特教班-國中" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "個案教育程度為特教班-國中。" ]
+  ], [
+     fhir:index 7 ;
+     fhir:CodeSystem.concept.code [ fhir:value "special-senior" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "特教班-高中職" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "個案教育程度為特教班-高中職。" ]
+  ], [
+     fhir:index 8 ;
+     fhir:CodeSystem.concept.code [ fhir:value "vocational" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "五專" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "個案教育程度為五專。" ]
+  ], [
+     fhir:index 9 ;
+     fhir:CodeSystem.concept.code [ fhir:value "college" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "大學（二三專）" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "個案教育程度為大學（二三專）。" ]
+  ], [
+     fhir:index 10 ;
+     fhir:CodeSystem.concept.code [ fhir:value "postgraduate" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "研究所以上" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "個案教育程度為研究所以上。" ]
+  ], [
+     fhir:index 11 ;
+     fhir:CodeSystem.concept.code [ fhir:value "other" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "其他" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "個案教育程度為其他。" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CodeSystem/EducationStatusCS-TWLTC.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

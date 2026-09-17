@@ -1,0 +1,35 @@
+{
+  "resourceType" : "DiagnosticReport",
+  "id" : "hah-report",
+  "meta" : {
+    "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/HAHDiagnosticReport"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport hah-report</b></p><a name=\"hah-report\"> </a><a name=\"hchah-report\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHDiagnosticReport.html\">在宅急症－檢驗報告</a></p></div><h2><span title=\"Codes:\">血糖檢驗報告</span> </h2><table class=\"grid\"><tr><td>Subject</td><td>王測試 Male, DoB: 1945-03-15 ( Provider number)</td></tr><tr><td>Relevant Time</td><td>2026-09-01 09:10:00+0800</td></tr><tr><td>Reported</td><td>2026-09-01 09:20:00+0800</td></tr><tr><td>Performer</td><td> <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td></tr><tr><td><a href=\"Observation-hah-glucose.html\"><span title=\"Codes:{http://loinc.org 2339-0}\">Glucose [Mass/volume] in Blood</span></a></td><td>110 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td><td>Final</td></tr></table></div>"
+  },
+  "basedOn" : [{
+    "reference" : "ServiceRequest/hah-lab-request"
+  }],
+  "status" : "final",
+  "code" : {
+    "text" : "血糖檢驗報告"
+  },
+  "subject" : {
+    "reference" : "Patient/hah-patient"
+  },
+  "encounter" : {
+    "reference" : "Encounter/hah-visit"
+  },
+  "effectiveDateTime" : "2026-09-01T09:10:00+08:00",
+  "issued" : "2026-09-01T09:20:00+08:00",
+  "performer" : [{
+    "reference" : "Organization/hah-organization"
+  }],
+  "specimen" : [{
+    "reference" : "Specimen/hah-specimen"
+  }],
+  "result" : [{
+    "reference" : "Observation/hah-glucose"
+  }]
+}

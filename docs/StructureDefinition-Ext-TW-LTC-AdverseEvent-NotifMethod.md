@@ -1,4 +1,4 @@
-# 長期照顧－異常事件通報方式 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長期照顧－異常事件通報方式 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-NotifMethod | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:ExtTWLTCAdverseEventNotifMethod |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-NotifMethod | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:ExtTWLTCAdverseEventNotifMethod |
 
 記錄異常事件的通報方式（如電話、機構通報、LINE 等）
 
@@ -22,7 +22,7 @@
 * Use this Extension: [長期照顧－異常事件警報](StructureDefinition-AdverseEvent-twltc.md)
 * Examples for this Extension: [AdverseEvent/ltc-adverse-event-incident-example](AdverseEvent-ltc-adverse-event-incident-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/Ext-TW-LTC-AdverseEvent-NotifMethod)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-Ext-TW-LTC-AdverseEvent-NotifMethod.json)
 
 ### Formal Views of Extension Content
 
@@ -45,11 +45,11 @@ Other representations of profile: [CSV](StructureDefinition-Ext-TW-LTC-AdverseEv
   "resourceType" : "StructureDefinition",
   "id" : "Ext-TW-LTC-AdverseEvent-NotifMethod",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-NotifMethod",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "ExtTWLTCAdverseEventNotifMethod",
   "title" : "長期照顧－異常事件通報方式",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

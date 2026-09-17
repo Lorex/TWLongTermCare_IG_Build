@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,89 +7,71 @@
 
 <http://ltc-ig.fhir.tw/ClaimResponse/ltc-claimresponse-export-example> a fhir:ClaimResponse ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ltc-claimresponse-export-example"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTC-ClaimResponse-Export"^^xsd:anyURI ;
-       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTC-ClaimResponse-Export>
-     ] )
-  ] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "extensions" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ClaimResponse ltc-claimresponse-export-example</b></p><a name=\"ltc-claimresponse-export-example\"> </a><a name=\"hcltc-claimresponse-export-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-ClaimResponse-Export.html\">長照 SDK－照管全量匯出（ClaimResponse）</a></p></div><p><b>長照 SDK－錯誤訊息</b>: 跨月金額超出核定上限</p><blockquote><p><b>長照 SDK－單位資訊（PIA/PIB/CENTER/MAN_*）</b></p><ul><li>type: <span title=\"Codes:\">PIA</span></li><li>name: OOO居家長照機構</li><li>code: A10001</li></ul></blockquote><p><b>identifier</b>: <code>http://ltc-ig.fhir.tw/identifier/export/yyyymm-roc</code>/11407</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/claim-type professional}\">Professional</span></p><p><b>use</b>: Preauthorization</p><p><b>patient</b>: <a href=\"Patient-ltc-patient-cs100-example.html\">王小明 (no stated gender), DoB Unknown ( https://example.org/mrn#A0001)</a></p><p><b>created</b>: 2025-07-04</p><p><b>insurer</b>: <a href=\"Organization-ltc-organization-cs100-example.html\">Organization 某某長照管理中心</a></p><p><b>outcome</b>: Processing Complete</p><p><b>disposition</b>: 審核通過</p></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:extension ( [
-     fhir:url [
-       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-Error"^^xsd:anyURI ;
-       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-Error>
-     ] ;
-     fhir:value [
-       a fhir:String ;
-       fhir:v "跨月金額超出核定上限"
+  fhir:Resource.id [ fhir:value "ltc-claimresponse-export-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTC-ClaimResponse-Export" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTC-ClaimResponse-Export>
      ]
-  ] [
-     fhir:extension ( [
-       fhir:url [
-         fhir:v "type"^^xsd:anyURI ;
-         fhir:l fhir:type
-       ] ;
-       fhir:value [
-         a fhir:CodeableConcept ;
-         fhir:text [ fhir:v "PIA" ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ClaimResponse ltc-claimresponse-export-example</b></p><a name=\"ltc-claimresponse-export-example\"> </a><a name=\"hcltc-claimresponse-export-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTC-ClaimResponse-Export.html\">長照 SDK－照管全量匯出（ClaimResponse）</a></p></div><p><b>長照 SDK－錯誤訊息</b>: 跨月金額超出核定上限</p><blockquote><p><b>長照 SDK－單位資訊（PIA/PIB/CENTER/MAN_*）</b></p><ul><li>type: <span title=\"Codes:\">PIA</span></li><li>name: OOO居家長照機構</li><li>code: A10001</li></ul></blockquote><p><b>identifier</b>: <code>http://ltc-ig.fhir.tw/identifier/export/yyyymm-roc</code>/11407</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/claim-type professional}\">Professional</span></p><p><b>use</b>: Preauthorization</p><p><b>patient</b>: <a href=\"Patient-ltc-patient-cs100-example.html\">王小明 (no stated gender), DoB Unknown ( https://example.org/mrn#A0001)</a></p><p><b>created</b>: 2025-07-04</p><p><b>insurer</b>: <a href=\"Organization-ltc-organization-cs100-example.html\">Organization 某某長照管理中心</a></p><p><b>outcome</b>: Processing Complete</p><p><b>disposition</b>: 審核通過</p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-Error" ] ;
+     fhir:Extension.valueString [ fhir:value "跨月金額超出核定上限" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Extension.url [ fhir:value "type" ] ;
+       fhir:Extension.valueCodeableConcept [
+         fhir:CodeableConcept.text [ fhir:value "PIA" ]
        ]
-     ] [
-       fhir:url [
-         fhir:v "name"^^xsd:anyURI ;
-         fhir:l fhir:name
-       ] ;
-       fhir:value [
-         a fhir:String ;
-         fhir:v "OOO居家長照機構"
-       ]
-     ] [
-       fhir:url [
-         fhir:v "code"^^xsd:anyURI ;
-         fhir:l fhir:code
-       ] ;
-       fhir:value [
-         a fhir:String ;
-         fhir:v "A10001"
-       ]
-     ] ) ;
-     fhir:url [
-       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-Unit"^^xsd:anyURI ;
-       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-Unit>
-     ]
-  ] ) ; # 
-  fhir:identifier ( [
-     fhir:system [
-       fhir:v "http://ltc-ig.fhir.tw/identifier/export/yyyymm-roc"^^xsd:anyURI ;
-       fhir:l <http://ltc-ig.fhir.tw/identifier/export/yyyymm-roc>
+     ], [
+       fhir:index 1 ;
+       fhir:Extension.url [ fhir:value "name" ] ;
+       fhir:Extension.valueString [ fhir:value "OOO居家長照機構" ]
+     ], [
+       fhir:index 2 ;
+       fhir:Extension.url [ fhir:value "code" ] ;
+       fhir:Extension.valueString [ fhir:value "A10001" ]
      ] ;
-     fhir:value [ fhir:v "11407" ]
-  ] ) ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:type [
-     fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/claim-type"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/claim-type>
-       ] ;
-       fhir:code [ fhir:v "professional" ]
-     ] )
-  ] ; # 
-  fhir:use [ fhir:v "preauthorization"] ; # 
-  fhir:patient [
-     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-cs100-example> ;
-     fhir:reference [ fhir:v "Patient/ltc-patient-cs100-example" ]
-  ] ; # 
-  fhir:created [ fhir:v "2025-07-04"^^xsd:date] ; # 
-  fhir:insurer [
-     fhir:l <http://ltc-ig.fhir.tw/Organization/ltc-organization-cs100-example> ;
-     fhir:reference [ fhir:v "Organization/ltc-organization-cs100-example" ]
-  ] ; # 
-  fhir:outcome [ fhir:v "complete"] ; # 
-  fhir:disposition [ fhir:v "審核通過"] . # 
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-Unit" ]
+  ] ;
+  fhir:ClaimResponse.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://ltc-ig.fhir.tw/identifier/export/yyyymm-roc" ] ;
+     fhir:Identifier.value [ fhir:value "11407" ]
+  ] ;
+  fhir:ClaimResponse.status [ fhir:value "active"] ;
+  fhir:ClaimResponse.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/claim-type" ] ;
+       fhir:Coding.code [ fhir:value "professional" ]
+     ]
+  ] ;
+  fhir:ClaimResponse.use [ fhir:value "preauthorization"] ;
+  fhir:ClaimResponse.patient [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/ltc-patient-cs100-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/ltc-patient-cs100-example" ]
+  ] ;
+  fhir:ClaimResponse.created [ fhir:value "2025-07-04"^^xsd:date] ;
+  fhir:ClaimResponse.insurer [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/ltc-organization-cs100-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/ltc-organization-cs100-example" ]
+  ] ;
+  fhir:ClaimResponse.outcome [ fhir:value "complete"] ;
+  fhir:ClaimResponse.disposition [ fhir:value "審核通過"] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/ClaimResponse/ltc-claimresponse-export-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

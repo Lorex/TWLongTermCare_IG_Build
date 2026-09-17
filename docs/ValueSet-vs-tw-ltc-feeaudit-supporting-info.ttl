@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-feeaudit-supporting-info> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "vs-tw-ltc-feeaudit-supporting-info"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet vs-tw-ltc-feeaudit-supporting-info</b></p><a name=\"vs-tw-ltc-feeaudit-supporting-info\"> </a><a name=\"hcvs-tw-ltc-feeaudit-supporting-info\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-tw-ltc-feeaudit-supporting-info.html\"><code>http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-supporting-info</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?1.1.0</span></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-feeaudit-supporting-info"] ;
+  fhir:ValueSet.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ] ;
+     fhir:Identifier.value [ fhir:value "urn:oid:2.25.118212642271467441236280113162067439725" ]
+  ] ;
+  fhir:ValueSet.version [ fhir:value "1.1.0"] ;
+  fhir:ValueSet.name [ fhir:value "VS_TW_LTC_FeeAuditSupportingInfo"] ;
+  fhir:ValueSet.title [ fhir:value "支付審查－服務紀錄補充資訊類別"] ;
+  fhir:ValueSet.status [ fhir:value "active"] ;
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-09-17T17:33:17+08:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "經濟部產業發展署"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "經濟部產業發展署" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.ida.gov.tw/" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "此 ValueSet 涵蓋支付審核系統「服務記錄申報（FeeApply）」中隨照顧組合代碼特化之補充資訊分類碼，適用於 Claim.supportingInfo.category，包含 AA00 個管服務、C 碼專業服務、交通接送（BD03、DA01）及各項申報旗標等類別。"] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-supporting-info" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-feeaudit-supporting-info.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

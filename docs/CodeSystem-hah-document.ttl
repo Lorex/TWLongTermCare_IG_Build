@@ -1,0 +1,89 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CodeSystem/hah-document> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hah-document"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem hah-document</b></p><a name=\"hah-document\"> </a><a name=\"hchah-document\"> </a><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/hah-document</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">discharge-summary<a name=\"hah-document-discharge-summary\"> </a></td><td>結案摘要</td><td>整理完成或結束本次療程的照護經過。</td></tr><tr><td style=\"white-space:nowrap\">transfer-summary<a name=\"hah-document-transfer-summary\"> </a></td><td>轉銜摘要</td><td>提供接續照護所需的臨床資訊。</td></tr><tr><td style=\"white-space:nowrap\">course<a name=\"hah-document-course\"> </a></td><td>照護經過</td><td>收案原因、療程、訪視與評估摘要。</td></tr><tr><td style=\"white-space:nowrap\">problems<a name=\"hah-document-problems\"> </a></td><td>診斷與問題</td><td>本次診斷與仍需處理的問題。</td></tr><tr><td style=\"white-space:nowrap\">allergies<a name=\"hah-document-allergies\"> </a></td><td>過敏資訊</td><td>已知過敏、已確認無過敏或資料缺少的情況。</td></tr><tr><td style=\"white-space:nowrap\">medications<a name=\"hah-document-medications\"> </a></td><td>用藥</td><td>處方、實際給藥與接續用藥資訊。</td></tr><tr><td style=\"white-space:nowrap\">results<a name=\"hah-document-results\"> </a></td><td>檢驗與量測</td><td>與交接有關的檢驗與生命徵象。</td></tr><tr><td style=\"white-space:nowrap\">care<a name=\"hah-document-care\"> </a></td><td>照護與處置</td><td>照護計畫、目標、管路及已執行處置。</td></tr><tr><td style=\"white-space:nowrap\">follow-up<a name=\"hah-document-follow-up\"> </a></td><td>後續照護</td><td>未完成事項、轉介與聯絡窗口。</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document"] ;
+  fhir:CodeSystem.version [ fhir:value "1.1.0"] ;
+  fhir:CodeSystem.name [ fhir:value "HAHDocumentCS"] ;
+  fhir:CodeSystem.title [ fhir:value "在宅急症－摘要種類與章節代碼"] ;
+  fhir:CodeSystem.status [ fhir:value "draft"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-09-17T17:33:17+08:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "經濟部產業發展署"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "經濟部產業發展署" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.ida.gov.tw/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "本 IG 的結案與轉銜摘要種類及章節。各欄位使用對應值集。"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "9"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "discharge-summary" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "結案摘要" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "整理完成或結束本次療程的照護經過。" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "transfer-summary" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "轉銜摘要" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "提供接續照護所需的臨床資訊。" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "course" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "照護經過" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "收案原因、療程、訪視與評估摘要。" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "problems" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "診斷與問題" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "本次診斷與仍需處理的問題。" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "allergies" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "過敏資訊" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "已知過敏、已確認無過敏或資料缺少的情況。" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "medications" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "用藥" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "處方、實際給藥與接續用藥資訊。" ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "results" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "檢驗與量測" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "與交接有關的檢驗與生命徵象。" ]
+  ], [
+     fhir:index 7 ;
+     fhir:CodeSystem.concept.code [ fhir:value "care" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "照護與處置" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "照護計畫、目標、管路及已執行處置。" ]
+  ], [
+     fhir:index 8 ;
+     fhir:CodeSystem.concept.code [ fhir:value "follow-up" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "後續照護" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "未完成事項、轉介與聯絡窗口。" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CodeSystem/hah-document.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

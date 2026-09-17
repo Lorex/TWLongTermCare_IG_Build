@@ -1,4 +1,4 @@
-# 照顧目標描述值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 照顧目標描述值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/GoalDescriptionVS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/GoalDescriptionVS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-08-25 | *Computable Name*:GoalDescriptionVSTWLTC |
+| *Other Identifiers:*OID:2.25.178125711072361151936479110609637557300 | |
 
  
 照顧目標的描述值集，用以表述長期照顧情境中涉及之照顧目標描述內容。本值集列舉臺灣長期照顧情境常用之 SNOMED CT 照顧目標代碼，綁定強度為 extensible，實作者可依需求使用其他 SNOMED CT 或 LOINC 代碼。 
@@ -46,7 +47,11 @@
   "resourceType" : "ValueSet",
   "id" : "GoalDescriptionVS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/GoalDescriptionVS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.178125711072361151936479110609637557300"
+  }],
+  "version" : "1.1.0",
   "name" : "GoalDescriptionVSTWLTC",
   "title" : "照顧目標描述值集",
   "status" : "active",

@@ -1,4 +1,4 @@
-# 個案經濟狀況值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 個案經濟狀況值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/EconomyStatusVS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/EconomyStatusVS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-08-25 | *Computable Name*:EconomyStatusVSTWLTC |
+| *Other Identifiers:*OID:2.25.277024788164347100560362132953014393040 | |
 
  
 用以表述個案經濟狀況之值集，包含個案經濟狀況之描述內容。 
@@ -46,7 +47,11 @@
   "resourceType" : "ValueSet",
   "id" : "EconomyStatusVS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/EconomyStatusVS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.277024788164347100560362132953014393040"
+  }],
+  "version" : "1.1.0",
   "name" : "EconomyStatusVSTWLTC",
   "title" : "個案經濟狀況值集",
   "status" : "active",

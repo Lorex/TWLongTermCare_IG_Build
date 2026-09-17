@@ -1,4 +1,4 @@
-# 穿戴裝置－步態分析 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 穿戴裝置－步態分析 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationGaitType | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:PASportObservationGaitType |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationGaitType | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:PASportObservationGaitType |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現穿戴裝置中涉及之步態分析資料。 
@@ -18,7 +18,7 @@
 
 * Examples for this Profile: [Observation/pasport-observation-gait-type-example](Observation-pasport-observation-gait-type-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/PASportObservationGaitType)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-PASportObservationGaitType.json)
 
 ### Formal Views of Profile Content
 
@@ -37,11 +37,11 @@ Other representations of profile: [CSV](StructureDefinition-PASportObservationGa
   "resourceType" : "StructureDefinition",
   "id" : "PASportObservationGaitType",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationGaitType",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "PASportObservationGaitType",
   "title" : "穿戴裝置－步態分析",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -1,0 +1,429 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "hah-transfer-document",
+  "meta" : {
+    "lastUpdated" : "2026-09-11T10:01:00+08:00",
+    "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/HAHBundleSummary"]
+  },
+  "identifier" : {
+    "system" : "https://example.org/hah/documents",
+    "value" : "hah-transfer-document-v1"
+  },
+  "type" : "document",
+  "timestamp" : "2026-09-11T10:01:00+08:00",
+  "entry" : [{
+    "fullUrl" : "https://example.org/fhir/Composition/hah-transfer-summary",
+    "resource" : {
+      "resourceType" : "Composition",
+      "id" : "hah-transfer-summary",
+      "meta" : {
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/HAHCompositionSummary"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Composition_hah-transfer-summary\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition hah-transfer-summary</b></p><a name=\"hah-transfer-summary\"> </a><a name=\"hchah-transfer-summary\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHCompositionSummary.html\">在宅急症－結案與轉銜摘要</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-document transfer-summary}\">轉銜摘要</span></p><p><b>encounter</b>: <a href=\"Encounter-hah-transfer-admission.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-10 08:00:00+0800 --&gt; 2026-09-11 10:00:00+0800</a></p><p><b>date</b>: 2026-09-11 10:00:00+0800</p><p><b>author</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><p><b>title</b>: 王測試在宅急症轉院摘要</p><p><b>custodian</b>: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></p></div>"
+      },
+      "status" : "final",
+      "type" : {
+        "coding" : [{
+          "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
+          "code" : "transfer-summary"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/hah-patient"
+      },
+      "encounter" : {
+        "reference" : "Encounter/hah-transfer-admission"
+      },
+      "date" : "2026-09-11T10:00:00+08:00",
+      "author" : [{
+        "reference" : "Practitioner/hah-practitioner"
+      }],
+      "title" : "王測試在宅急症轉院摘要",
+      "custodian" : {
+        "reference" : "Organization/hah-organization"
+      },
+      "section" : [{
+        "title" : "療程經過",
+        "code" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
+            "code" : "course"
+          }]
+        },
+        "text" : {
+          "status" : "additional",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>本次療程已轉出，接收醫院就醫結果尚未提供。</p></div>"
+        },
+        "entry" : [{
+          "reference" : "EpisodeOfCare/hah-transfer-episode"
+        },
+        {
+          "reference" : "Encounter/hah-transfer-admission"
+        }]
+      },
+      {
+        "title" : "診斷與問題",
+        "code" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
+            "code" : "problems"
+          }]
+        },
+        "text" : {
+          "status" : "additional",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>本次轉院摘要未提供此項資料，交班時須確認。</p></div>"
+        }
+      },
+      {
+        "title" : "過敏資訊",
+        "code" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
+            "code" : "allergies"
+          }]
+        },
+        "text" : {
+          "status" : "additional",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>本次轉院摘要未提供此項資料，交班時須確認。</p></div>"
+        }
+      },
+      {
+        "title" : "藥物與給藥",
+        "code" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
+            "code" : "medications"
+          }]
+        },
+        "text" : {
+          "status" : "additional",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>本次轉院摘要未提供此項資料，交班時須確認。</p></div>"
+        }
+      },
+      {
+        "title" : "檢查結果",
+        "code" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
+            "code" : "results"
+          }]
+        },
+        "text" : {
+          "status" : "additional",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>本次轉院摘要未提供此項資料，交班時須確認。</p></div>"
+        }
+      },
+      {
+        "title" : "照護計畫與措施",
+        "code" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
+            "code" : "care"
+          }]
+        },
+        "text" : {
+          "status" : "additional",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>本次轉院摘要未提供此項資料，交班時須確認。</p></div>"
+        }
+      },
+      {
+        "title" : "後續照護與交班",
+        "code" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
+            "code" : "follow-up"
+          }]
+        },
+        "text" : {
+          "status" : "additional",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>轉院申請已建立；請接收機構續行評估。</p></div>"
+        },
+        "entry" : [{
+          "reference" : "ServiceRequest/hah-transfer-request"
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "https://example.org/fhir/Patient/hah-patient",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "hah-patient",
+      "meta" : {
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/HAHPatient"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_hah-patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient hah-patient</b></p><a name=\"hah-patient\"> </a><a name=\"hchah-patient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHPatient.html\">在宅急症－個案</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">王測試 Male, DoB: 1945-03-15 ( Provider number)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\">National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code/A123456789</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 02-00000000</li><li>臺北市中正區測試路1號(home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: Emergency Contact\">Emergency Contact:</td><td colspan=\"3\"><ul><li>王家屬</li><li>ph: 02-00000001</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>Managing Organization: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></li></ul></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "PRN"
+          }]
+        },
+        "system" : "https://example.org/hah/patients",
+        "value" : "HAH0001"
+      },
+      {
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "NNxxx"
+          }]
+        },
+        "system" : "http://www.moi.gov.tw",
+        "value" : "A123456789"
+      }],
+      "name" : [{
+        "use" : "usual",
+        "text" : "王測試"
+      }],
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "02-00000000"
+      }],
+      "gender" : "male",
+      "birthDate" : "1945-03-15",
+      "address" : [{
+        "use" : "home",
+        "text" : "臺北市中正區測試路1號"
+      }],
+      "contact" : [{
+        "relationship" : [{
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0131",
+            "code" : "C"
+          }]
+        }],
+        "name" : {
+          "text" : "王家屬"
+        },
+        "telecom" : [{
+          "system" : "phone",
+          "value" : "02-00000001"
+        }]
+      }],
+      "managingOrganization" : {
+        "reference" : "Organization/hah-organization"
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://example.org/fhir/EpisodeOfCare/hah-transfer-episode",
+    "resource" : {
+      "resourceType" : "EpisodeOfCare",
+      "id" : "hah-transfer-episode",
+      "meta" : {
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/HAHEpisodeOfCare"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"EpisodeOfCare_hah-transfer-episode\"> </a><p class=\"res-header-id\"><b>Generated Narrative: EpisodeOfCare hah-transfer-episode</b></p><a name=\"hah-transfer-episode\"> </a><a name=\"hchah-transfer-episode\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHEpisodeOfCare.html\">在宅急症－收案療程</a></p></div><p><b>在宅急症－療程結束原因</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-outcome hospital-transfer}\">轉急診或住院</span></p><p><b>identifier</b>: <code>https://example.org/hah/episodes</code>/HAH-20260910-002</p><p><b>status</b>: Finished</p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity acute-home}\">在宅急症照護</span></p><p><b>patient</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>managingOrganization</b>: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></p><p><b>period</b>: 2026-09-10 08:00:00+0800 --&gt; 2026-09-11 10:00:00+0800</p></div>"
+      },
+      "extension" : [{
+        "url" : "http://ltc-ig.fhir.tw/StructureDefinition/ExtHAHOutcome",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-outcome",
+            "code" : "hospital-transfer"
+          }]
+        }
+      }],
+      "identifier" : [{
+        "system" : "https://example.org/hah/episodes",
+        "value" : "HAH-20260910-002"
+      }],
+      "status" : "finished",
+      "type" : [{
+        "coding" : [{
+          "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-activity",
+          "code" : "acute-home"
+        }]
+      }],
+      "patient" : {
+        "reference" : "Patient/hah-patient"
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/hah-organization"
+      },
+      "period" : {
+        "start" : "2026-09-10T08:00:00+08:00",
+        "end" : "2026-09-11T10:00:00+08:00"
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://example.org/fhir/Encounter/hah-transfer-admission",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "hah-transfer-admission",
+      "meta" : {
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/HAHAdmissionEncounter"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_hah-transfer-admission\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter hah-transfer-admission</b></p><a name=\"hah-transfer-admission\"> </a><a name=\"hchah-transfer-admission\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHAdmissionEncounter.html\">在宅急症－整段照護</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity acute-home}\">在宅急症照護</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>episodeOfCare</b>: <a href=\"EpisodeOfCare-hah-transfer-episode.html\">EpisodeOfCare: extension = 轉急診或住院; identifier = https://example.org/hah/episodes#HAH-20260910-002; status = finished; type = 在宅急症照護; period = 2026-09-10 08:00:00+0800 --&gt; 2026-09-11 10:00:00+0800</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></td></tr></table><p><b>period</b>: 2026-09-10 08:00:00+0800 --&gt; 2026-09-11 10:00:00+0800</p><h3>Hospitalizations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Destination</b></td><td><b>DischargeDisposition</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Organization-hah-receiving-hospital.html\">Organization 轉院接收示範醫院</a></td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/discharge-disposition other-hcf}\">Other healthcare facility</span></td></tr></table><p><b>serviceProvider</b>: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></p></div>"
+      },
+      "status" : "finished",
+      "class" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code" : "IMP"
+      },
+      "type" : [{
+        "coding" : [{
+          "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-activity",
+          "code" : "acute-home"
+        }]
+      }],
+      "subject" : {
+        "reference" : "Patient/hah-patient"
+      },
+      "episodeOfCare" : [{
+        "reference" : "EpisodeOfCare/hah-transfer-episode"
+      }],
+      "participant" : [{
+        "individual" : {
+          "reference" : "Practitioner/hah-practitioner"
+        }
+      }],
+      "period" : {
+        "start" : "2026-09-10T08:00:00+08:00",
+        "end" : "2026-09-11T10:00:00+08:00"
+      },
+      "hospitalization" : {
+        "destination" : {
+          "reference" : "Organization/hah-receiving-hospital"
+        },
+        "dischargeDisposition" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+            "code" : "other-hcf"
+          }]
+        }
+      },
+      "serviceProvider" : {
+        "reference" : "Organization/hah-organization"
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://example.org/fhir/Practitioner/hah-practitioner",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "hah-practitioner",
+      "meta" : {
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/LTCPractitioner"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_hah-practitioner\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner hah-practitioner</b></p><a name=\"hah-practitioner\"> </a><a name=\"hchah-practitioner\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCPractitioner.html\">長期照顧－照顧服務提供者</a></p></div><p><b>identifier</b>: <code>https://example.org/practitioners</code>/HAH-STAFF-1</p><p><b>name</b>: 李示範</p></div>"
+      },
+      "identifier" : [{
+        "system" : "https://example.org/practitioners",
+        "value" : "HAH-STAFF-1"
+      }],
+      "name" : [{
+        "use" : "usual",
+        "text" : "李示範"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "https://example.org/fhir/Organization/hah-organization",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "hah-organization",
+      "meta" : {
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/Organization-twltc"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_hah-organization\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization hah-organization</b></p><a name=\"hah-organization\"> </a><a name=\"hchah-organization\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Organization-twltc.html\">長期照顧－機構</a></p></div><p><b>identifier</b>: <code>https://example.org/organizations</code>/HAH-ORG-1</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: 在宅急症示範醫療機構</p></div>"
+      },
+      "identifier" : [{
+        "system" : "https://example.org/organizations",
+        "value" : "HAH-ORG-1"
+      }],
+      "type" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code" : "prov"
+        }]
+      }],
+      "name" : "在宅急症示範醫療機構"
+    }
+  },
+  {
+    "fullUrl" : "https://example.org/fhir/Organization/hah-receiving-hospital",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "hah-receiving-hospital",
+      "meta" : {
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/Organization-twltc"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_hah-receiving-hospital\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization hah-receiving-hospital</b></p><a name=\"hah-receiving-hospital\"> </a><a name=\"hchah-receiving-hospital\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Organization-twltc.html\">長期照顧－機構</a></p></div><p><b>identifier</b>: <code>https://example.org/organizations</code>/HAH-HOSPITAL-2</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: 轉院接收示範醫院</p></div>"
+      },
+      "identifier" : [{
+        "system" : "https://example.org/organizations",
+        "value" : "HAH-HOSPITAL-2"
+      }],
+      "type" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code" : "prov"
+        }]
+      }],
+      "name" : "轉院接收示範醫院"
+    }
+  },
+  {
+    "fullUrl" : "https://example.org/fhir/ServiceRequest/hah-transfer-request",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "hah-transfer-request",
+      "meta" : {
+        "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/HAHServiceRequest"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_hah-transfer-request\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest hah-transfer-request</b></p><a name=\"hah-transfer-request\"> </a><a name=\"hchah-transfer-request\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHServiceRequest.html\">在宅急症－服務請求</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity referral}\">轉介</span></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity referral}\">轉介</span></p><p><b>subject</b>: <a href=\"Patient-hah-patient.html\">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>encounter</b>: <a href=\"Encounter-hah-transfer-admission.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-10 08:00:00+0800 --&gt; 2026-09-11 10:00:00+0800</a></p><p><b>authoredOn</b>: 2026-09-11 09:30:00+0800</p><p><b>requester</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><p><b>performer</b>: <a href=\"Organization-hah-receiving-hospital.html\">Organization 轉院接收示範醫院</a></p><p><b>reasonCode</b>: <span title=\"Codes:\">本次照護需要超出居家服務能力，安排轉院評估。</span></p></div>"
+      },
+      "status" : "active",
+      "intent" : "order",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-activity",
+          "code" : "referral"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-activity",
+          "code" : "referral"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/hah-patient"
+      },
+      "encounter" : {
+        "reference" : "Encounter/hah-transfer-admission"
+      },
+      "authoredOn" : "2026-09-11T09:30:00+08:00",
+      "requester" : {
+        "reference" : "Practitioner/hah-practitioner"
+      },
+      "performer" : [{
+        "reference" : "Organization/hah-receiving-hospital"
+      }],
+      "reasonCode" : [{
+        "text" : "本次照護需要超出居家服務能力，安排轉院評估。"
+      }]
+    }
+  }]
+}

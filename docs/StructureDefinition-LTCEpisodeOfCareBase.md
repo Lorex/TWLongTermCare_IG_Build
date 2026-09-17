@@ -1,4 +1,4 @@
-# 長期照顧－案件管理基礎 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長期照顧－案件管理基礎 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,17 +8,17 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCEpisodeOfCareBase | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:LTCEpisodeOfCareBase |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCEpisodeOfCareBase | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:LTCEpisodeOfCareBase |
 
  
 此 Profile 為所有長期照顧 EpisodeOfCare Profile 的共用基礎，定義案件管理之基本結構與共用欄位。 
 
 **Usages:**
 
-* Derived from this Profile: [長照案件（CS100 專用版）](StructureDefinition-LTC-EpisodeOfCare-CS100.md) and [長照 SDK－長照案件](StructureDefinition-LTC-EpisodeOfCare-Payload.md)
+* Derived from this Profile: [在宅急症－收案療程](StructureDefinition-HAHEpisodeOfCare.md), [居家護理－收案歷程](StructureDefinition-HNEpisodeOfCare.md), [長照案件（CS100 專用版）](StructureDefinition-LTC-EpisodeOfCare-CS100.md) and [長照 SDK－長照案件](StructureDefinition-LTC-EpisodeOfCare-Payload.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCEpisodeOfCareBase)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-LTCEpisodeOfCareBase.json)
 
 ### Formal Views of Profile Content
 
@@ -37,11 +37,11 @@ Other representations of profile: [CSV](StructureDefinition-LTCEpisodeOfCareBase
   "resourceType" : "StructureDefinition",
   "id" : "LTCEpisodeOfCareBase",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCEpisodeOfCareBase",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCEpisodeOfCareBase",
   "title" : "長期照顧－案件管理基礎",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

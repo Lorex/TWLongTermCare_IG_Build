@@ -1,4 +1,4 @@
-# 單價 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 單價 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-UnitPrice | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:ExtTWLTCUnitPrice |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-UnitPrice | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:ExtTWLTCUnitPrice |
 
 此 Extension 用於表示長照服務項目的單價金額。
 
@@ -22,7 +22,7 @@
 * Use this Extension: [長照 SDK－照顧計畫（不含輔具）](StructureDefinition-LTC-CarePlan-Payload.md)
 * Examples for this Extension: [Bundle/ltc-bundle-payload-example](Bundle-ltc-bundle-payload-example.md) and [CarePlan/ltc-careplan-sdk-example](CarePlan-ltc-careplan-sdk-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/Ext-TW-LTC-UnitPrice)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-Ext-TW-LTC-UnitPrice.json)
 
 ### Formal Views of Extension Content
 
@@ -43,11 +43,11 @@ Other representations of profile: [CSV](StructureDefinition-Ext-TW-LTC-UnitPrice
   "resourceType" : "StructureDefinition",
   "id" : "Ext-TW-LTC-UnitPrice",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-UnitPrice",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "ExtTWLTCUnitPrice",
   "title" : "單價",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

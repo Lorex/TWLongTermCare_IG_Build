@@ -1,0 +1,31 @@
+{
+  "resourceType" : "EpisodeOfCare",
+  "id" : "hn-episode-example",
+  "meta" : {
+    "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/HNEpisodeOfCare"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: EpisodeOfCare hn-episode-example</b></p><a name=\"hn-episode-example\"> </a><a name=\"hchn-episode-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HNEpisodeOfCare.html\">居家護理－收案歷程</a></p></div><p><b>居家護理－來源表單</b>: <a href=\"QuestionnaireResponse-hn-basedata-example.html\">Response to Questionnaire '-&gt;居家護理－個案基本資料' about '-&gt;陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)'</a></p><p><b>identifier</b>: <code>https://example.org/home-nursing/episodes</code>/HN0001-20251208</p><p><b>status</b>: Active</p><p><b>patient</b>: <a href=\"Patient-hn-patient-example.html\">陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)</a></p><p><b>managingOrganization</b>: <a href=\"Organization-hn-organization-example.html\">Organization 示範居家護理所</a></p><p><b>period</b>: 2025-12-08 --&gt; (ongoing)</p></div>"
+  },
+  "extension" : [{
+    "url" : "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNSourceForm",
+    "valueReference" : {
+      "reference" : "QuestionnaireResponse/hn-basedata-example"
+    }
+  }],
+  "identifier" : [{
+    "system" : "https://example.org/home-nursing/episodes",
+    "value" : "HN0001-20251208"
+  }],
+  "status" : "active",
+  "patient" : {
+    "reference" : "Patient/hn-patient-example"
+  },
+  "managingOrganization" : {
+    "reference" : "Organization/hn-organization-example"
+  },
+  "period" : {
+    "start" : "2025-12-08"
+  }
+}

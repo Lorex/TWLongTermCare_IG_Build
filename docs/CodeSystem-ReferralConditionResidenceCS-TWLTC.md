@@ -1,4 +1,4 @@
-# 轉介單居住狀況代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 轉介單居住狀況代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,15 +8,16 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionResidenceCS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionResidenceCS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-08-25 | *Computable Name*:ReferralConditionResidenceCSTWLTC |
+| *Other Identifiers:*OID:2.25.41808680126746010032435683244941033829 | |
 
  
 用於表述個案的居住狀況 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* [ReferralConditionResidenceVSTWLTC](ValueSet-ReferralConditionResidenceVS-TWLTC.md)
+* [居住狀況值集](ValueSet-ReferralConditionResidenceVS-TWLTC.md)
 
 
 
@@ -27,7 +28,11 @@
   "resourceType" : "CodeSystem",
   "id" : "ReferralConditionResidenceCS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionResidenceCS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.41808680126746010032435683244941033829"
+  }],
+  "version" : "1.1.0",
   "name" : "ReferralConditionResidenceCSTWLTC",
   "title" : "轉介單居住狀況代碼",
   "status" : "active",

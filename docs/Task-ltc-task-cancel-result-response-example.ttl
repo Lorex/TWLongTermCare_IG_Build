@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Task/ltc-task-cancel-result-response-example> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ltc-task-cancel-result-response-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task ltc-task-cancel-result-response-example</b></p><a name=\"ltc-task-cancel-result-response-example\"> </a><a name=\"hcltc-task-cancel-result-response-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCTaskFeeAudit.html\">長照支付審查－申報交易任務</a></p></div><p><b>identifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm</code>/201901</p><p><b>groupIdentifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no</code>/CR001</p><p><b>partOf</b>: <a href=\"Task-ltc-task-feeapply-example.html\">Task 服務記錄申報</a></p><p><b>status</b>: Completed</p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function CancelResultResponse}\">取消交易單處理結果回報</span></p><p><b>authoredOn</b>: 2019-02-13 09:15:00+0800</p><p><b>requester</b>: <a href=\"Organization-ltc-organization-example.html\">Organization 新北市私立安康老人長期照顧中心（養護型）</a></p><p><b>note</b>: </p><blockquote><div><p>來源系統別（source_system）：TranCareCenter</p>\n</div></blockquote><h3>Inputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">所要取消結果回報之交易序號</span></td><td>TranQ00083</td></tr></table><h3>Outputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">批次處理結果</span></td><td>取消交易單處理結果回報完成!</td></tr></table></div>"
+  ] ;
+  fhir:Task.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm" ] ;
+     fhir:Identifier.value [ fhir:value "201901" ]
+  ] ;
+  fhir:Task.groupIdentifier [
+     fhir:Identifier.system [ fhir:value "http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no" ] ;
+     fhir:Identifier.value [ fhir:value "CR001" ]
+  ] ;
+  fhir:Task.partOf [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Task/ltc-task-feeapply-example> ;
+     fhir:Reference.reference [ fhir:value "Task/ltc-task-feeapply-example" ]
+  ] ;
+  fhir:Task.status [ fhir:value "completed"] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function" ] ;
+       fhir:Coding.code [ fhir:value "CancelResultResponse" ] ;
+       fhir:Coding.display [ fhir:value "取消交易單處理結果回報" ]
+     ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2019-02-13T09:15:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/ltc-organization-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/ltc-organization-example" ]
+  ] ;
+  fhir:Task.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "來源系統別（source_system）：TranCareCenter" ]
+  ] ;
+  fhir:Task.input [
+     fhir:index 0 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "所要取消結果回報之交易序號" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "TranQ00083" ]
+  ] ;
+  fhir:Task.output [
+     fhir:index 0 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "批次處理結果" ]
+     ] ;
+     fhir:Task.output.valueString [ fhir:value "取消交易單處理結果回報完成!" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Task/ltc-task-cancel-result-response-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

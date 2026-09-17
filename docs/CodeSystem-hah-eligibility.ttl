@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CodeSystem/hah-eligibility> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hah-eligibility"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem hah-eligibility</b></p><a name=\"hah-eligibility\"> </a><a name=\"hchah-eligibility\"> </a><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/hah-eligibility</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">eligible<a name=\"hah-eligibility-eligible\"> </a></td><td>建議收案</td><td>評估人員建議開始本次在宅急症照護。</td></tr><tr><td style=\"white-space:nowrap\">ineligible<a name=\"hah-eligibility-ineligible\"> </a></td><td>不建議收案</td><td>評估人員不建議開始本次照護，須填寫原因。</td></tr><tr><td style=\"white-space:nowrap\">pending<a name=\"hah-eligibility-pending\"> </a></td><td>待確認</td><td>仍有待取得的資訊或待確認的條件。</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-eligibility"] ;
+  fhir:CodeSystem.version [ fhir:value "1.1.0"] ;
+  fhir:CodeSystem.name [ fhir:value "HAHEligibilityCS"] ;
+  fhir:CodeSystem.title [ fhir:value "在宅急症－收案評估結果代碼"] ;
+  fhir:CodeSystem.status [ fhir:value "draft"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-09-17T17:33:17+08:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "經濟部產業發展署"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "經濟部產業發展署" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.ida.gov.tw/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "評估人員的收案建議；不代表已符合任何特定健保計畫的給付條件。"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "3"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "eligible" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "建議收案" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "評估人員建議開始本次在宅急症照護。" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ineligible" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "不建議收案" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "評估人員不建議開始本次照護，須填寫原因。" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "pending" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "待確認" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "仍有待取得的資訊或待確認的條件。" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CodeSystem/hah-eligibility.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,4 +1,4 @@
-# 長照 SDK－跨月檢核結果（QP_O） - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長照 SDK－跨月檢核結果（QP_O） - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-OperationOutcome-Check | *Version*:1.0.0 |
-| Draft as of 2026-06-25 | *Computable Name*:LTCOperationOutcomeCheck |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTC-OperationOutcome-Check | *Version*:1.1.0 |
+| Draft as of 2026-09-17 | *Computable Name*:LTCOperationOutcomeCheck |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 OperationOutcome Resource，以呈現長照 SDK 跨月金額與月份檢核之錯誤旗標與訊息。 
@@ -18,7 +18,7 @@
 
 * Examples for this Profile: [OperationOutcome/ltc-operationoutcome-check-example](OperationOutcome-ltc-operationoutcome-check-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTC-OperationOutcome-Check)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-LTC-OperationOutcome-Check.json)
 
 ### Formal Views of Profile Content
 
@@ -37,11 +37,11 @@ Other representations of profile: [CSV](StructureDefinition-LTC-OperationOutcome
   "resourceType" : "StructureDefinition",
   "id" : "LTC-OperationOutcome-Check",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTC-OperationOutcome-Check",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCOperationOutcomeCheck",
   "title" : "長照 SDK－跨月檢核結果（QP_O）",
   "status" : "draft",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

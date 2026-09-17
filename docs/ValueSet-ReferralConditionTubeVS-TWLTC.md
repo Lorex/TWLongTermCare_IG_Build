@@ -1,4 +1,4 @@
-# 管路狀況值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 管路狀況值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ReferralConditionTubeVS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ReferralConditionTubeVS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-08-25 | *Computable Name*:ReferralConditionTubeVSTWLTC |
+| *Other Identifiers:*OID:2.25.253197882496686084669009825017125945834 | |
 
  
 個案持有管路的狀況 
@@ -46,7 +47,11 @@
   "resourceType" : "ValueSet",
   "id" : "ReferralConditionTubeVS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/ReferralConditionTubeVS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.253197882496686084669009825017125945834"
+  }],
+  "version" : "1.1.0",
   "name" : "ReferralConditionTubeVSTWLTC",
   "title" : "管路狀況值集",
   "status" : "active",

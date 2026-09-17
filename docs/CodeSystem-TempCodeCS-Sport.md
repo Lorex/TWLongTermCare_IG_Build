@@ -1,4 +1,4 @@
-# 身體活動量測-暫用代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 身體活動量測-暫用代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,15 +8,16 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport | *Version*:1.1.0 |
 | Active as of 2024-05-14 | *Computable Name*:TempCodeCSSport |
+| *Other Identifiers:*OID:2.25.11357887874692034880853540835400218492 | |
 
  
 身體活動量測暫時使用的代碼，目前無官方代碼。本 CodeSystem 繼承自身體活動量測 IG，後續將配合官方代碼更新。 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* [TempCodeVSSport](ValueSet-TempCodeVS-Sport.md)
+* [身體活動量測-暫用代碼值集](ValueSet-TempCodeVS-Sport.md)
 
 
 
@@ -27,7 +28,11 @@
   "resourceType" : "CodeSystem",
   "id" : "TempCodeCS-Sport",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.11357887874692034880853540835400218492"
+  }],
+  "version" : "1.1.0",
   "name" : "TempCodeCSSport",
   "title" : "身體活動量測-暫用代碼",
   "status" : "active",

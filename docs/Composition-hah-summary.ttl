@@ -1,0 +1,254 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Composition/hah-summary> a fhir:Composition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hah-summary"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHCompositionSummary" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHCompositionSummary>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Composition hah-summary</b></p><a name=\"hah-summary\"> </a><a name=\"hchah-summary\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHCompositionSummary.html\">在宅急症－結案與轉銜摘要</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-document discharge-summary}\">結案摘要</span></p><p><b>encounter</b>: <a href=\"Encounter-hah-admission.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><p><b>date</b>: 2026-09-05 12:00:00+0800</p><p><b>author</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><p><b>title</b>: 王測試在宅急症結案摘要</p><p><b>custodian</b>: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></p></div>"
+  ] ;
+  fhir:Composition.status [ fhir:value "final"] ;
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document" ] ;
+       fhir:Coding.code [ fhir:value "discharge-summary" ]
+     ]
+  ] ;
+  fhir:Composition.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:Composition.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-admission> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-admission" ]
+  ] ;
+  fhir:Composition.date [ fhir:value "2026-09-05T12:00:00+08:00"^^xsd:dateTime] ;
+  fhir:Composition.author [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/hah-practitioner> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/hah-practitioner" ]
+  ] ;
+  fhir:Composition.title [ fhir:value "王測試在宅急症結案摘要"] ;
+  fhir:Composition.custodian [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/hah-organization> ;
+     fhir:Reference.reference [ fhir:value "Organization/hah-organization" ]
+  ] ;
+  fhir:Composition.section [
+     fhir:index 0 ;
+     fhir:Composition.section.title [ fhir:value "療程經過" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document" ] ;
+         fhir:Coding.code [ fhir:value "course" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>本次在宅照護完成；包含實地與視訊訪視。</p></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/EpisodeOfCare/hah-episode> ;
+       fhir:Reference.reference [ fhir:value "EpisodeOfCare/hah-episode" ]
+     ], [
+       fhir:index 1 ;
+       fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-admission> ;
+       fhir:Reference.reference [ fhir:value "Encounter/hah-admission" ]
+     ], [
+       fhir:index 2 ;
+       fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-visit> ;
+       fhir:Reference.reference [ fhir:value "Encounter/hah-visit" ]
+     ], [
+       fhir:index 3 ;
+       fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-video-visit> ;
+       fhir:Reference.reference [ fhir:value "Encounter/hah-video-visit" ]
+     ], [
+       fhir:index 4 ;
+       fhir:link <http://ltc-ig.fhir.tw/ClinicalImpression/hah-impression> ;
+       fhir:Reference.reference [ fhir:value "ClinicalImpression/hah-impression" ]
+     ], [
+       fhir:index 5 ;
+       fhir:link <http://ltc-ig.fhir.tw/QuestionnaireResponse/hah-assessment> ;
+       fhir:Reference.reference [ fhir:value "QuestionnaireResponse/hah-assessment" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Composition.section.title [ fhir:value "診斷與問題" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document" ] ;
+         fhir:Coding.code [ fhir:value "problems" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>呼吸道感染，療程結束時已解除。</p></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/Condition/hah-condition> ;
+       fhir:Reference.reference [ fhir:value "Condition/hah-condition" ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:Composition.section.title [ fhir:value "過敏資訊" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document" ] ;
+         fhir:Coding.code [ fhir:value "allergies" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>已記錄青黴素過敏及皮疹反應。</p></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/AllergyIntolerance/hah-allergy> ;
+       fhir:Reference.reference [ fhir:value "AllergyIntolerance/hah-allergy" ]
+     ]
+  ], [
+     fhir:index 3 ;
+     fhir:Composition.section.title [ fhir:value "藥物與給藥" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document" ] ;
+         fhir:Coding.code [ fhir:value "medications" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>示範輸注與取消給藥；不是臨床處方建議。</p></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/MedicationRequest/hah-medication-order> ;
+       fhir:Reference.reference [ fhir:value "MedicationRequest/hah-medication-order" ]
+     ], [
+       fhir:index 1 ;
+       fhir:link <http://ltc-ig.fhir.tw/MedicationAdministration/hah-infusion> ;
+       fhir:Reference.reference [ fhir:value "MedicationAdministration/hah-infusion" ]
+     ], [
+       fhir:index 2 ;
+       fhir:link <http://ltc-ig.fhir.tw/MedicationAdministration/hah-medication-not-done> ;
+       fhir:Reference.reference [ fhir:value "MedicationAdministration/hah-medication-not-done" ]
+     ]
+  ], [
+     fhir:index 4 ;
+     fhir:Composition.section.title [ fhir:value "檢查結果" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document" ] ;
+         fhir:Coding.code [ fhir:value "results" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>附體溫與血糖檢驗。</p></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/Observation/hah-temperature> ;
+       fhir:Reference.reference [ fhir:value "Observation/hah-temperature" ]
+     ], [
+       fhir:index 1 ;
+       fhir:link <http://ltc-ig.fhir.tw/DiagnosticReport/hah-report> ;
+       fhir:Reference.reference [ fhir:value "DiagnosticReport/hah-report" ]
+     ]
+  ], [
+     fhir:index 5 ;
+     fhir:Composition.section.title [ fhir:value "照護計畫與措施" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document" ] ;
+         fhir:Coding.code [ fhir:value "care" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>附照護目標、計畫、衛教、同意及設備。</p></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/CarePlan/hah-plan> ;
+       fhir:Reference.reference [ fhir:value "CarePlan/hah-plan" ]
+     ], [
+       fhir:index 1 ;
+       fhir:link <http://ltc-ig.fhir.tw/Goal/hah-goal> ;
+       fhir:Reference.reference [ fhir:value "Goal/hah-goal" ]
+     ], [
+       fhir:index 2 ;
+       fhir:link <http://ltc-ig.fhir.tw/Procedure/hah-procedure> ;
+       fhir:Reference.reference [ fhir:value "Procedure/hah-procedure" ]
+     ], [
+       fhir:index 3 ;
+       fhir:link <http://ltc-ig.fhir.tw/Consent/hah-consent> ;
+       fhir:Reference.reference [ fhir:value "Consent/hah-consent" ]
+     ], [
+       fhir:index 4 ;
+       fhir:link <http://ltc-ig.fhir.tw/Device/hah-device> ;
+       fhir:Reference.reference [ fhir:value "Device/hah-device" ]
+     ]
+  ], [
+     fhir:index 6 ;
+     fhir:Composition.section.title [ fhir:value "後續照護與交班" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document" ] ;
+         fhir:Coding.code [ fhir:value "follow-up" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>已完成本次會診與檢驗工作；後續回診資訊尚未提供。</p></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/ServiceRequest/hah-consult-request> ;
+       fhir:Reference.reference [ fhir:value "ServiceRequest/hah-consult-request" ]
+     ], [
+       fhir:index 1 ;
+       fhir:link <http://ltc-ig.fhir.tw/ServiceRequest/hah-lab-request> ;
+       fhir:Reference.reference [ fhir:value "ServiceRequest/hah-lab-request" ]
+     ], [
+       fhir:index 2 ;
+       fhir:link <http://ltc-ig.fhir.tw/Task/hah-task> ;
+       fhir:Reference.reference [ fhir:value "Task/hah-task" ]
+     ], [
+       fhir:index 3 ;
+       fhir:link <http://ltc-ig.fhir.tw/Communication/hah-communication> ;
+       fhir:Reference.reference [ fhir:value "Communication/hah-communication" ]
+     ], [
+       fhir:index 4 ;
+       fhir:link <http://ltc-ig.fhir.tw/DocumentReference/hah-attachment> ;
+       fhir:Reference.reference [ fhir:value "DocumentReference/hah-attachment" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Composition/hah-summary.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,4 +1,4 @@
-# 轉介單申請服務種類值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 轉介單申請服務種類值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ReferralCarePlanVS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ReferralCarePlanVS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-08-25 | *Computable Name*:ReferralCarePlanVSTWLTC |
+| *Other Identifiers:*OID:2.25.64751612194387231425492984710444044495 | |
 
  
 轉介單申請服務種類的值集 
@@ -46,7 +47,11 @@
   "resourceType" : "ValueSet",
   "id" : "ReferralCarePlanVS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/ReferralCarePlanVS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.64751612194387231425492984710444044495"
+  }],
+  "version" : "1.1.0",
   "name" : "ReferralCarePlanVSTWLTC",
   "title" : "轉介單申請服務種類值集",
   "status" : "active",

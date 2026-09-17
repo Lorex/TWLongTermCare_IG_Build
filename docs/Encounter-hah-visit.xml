@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="hah-visit"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/HAHVisitEncounter"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Encounter hah-visit</b></p><a name="hah-visit"> </a><a name="hchah-visit"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-HAHVisitEncounter.html">在宅急症－單次訪視</a></p></div><p><b>在宅急症－訪視方式</b>: in-person</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-HH">ActCode: HH</a> (home health)</p><p><b>type</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity visit}">訪視</span></p><p><b>subject</b>: <a href="Patient-hah-patient.html">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>episodeOfCare</b>: <a href="EpisodeOfCare-hah-episode.html">EpisodeOfCare: extension = 完成治療; identifier = https://example.org/hah/episodes#HAH-20260901-001; status = finished; type = 在宅急症照護; period = 2026-09-01 08:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><h3>Participants</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Individual</b></td></tr><tr><td style="display: none">*</td><td><a href="Practitioner-hah-practitioner.html">Practitioner 李示範</a></td></tr></table><p><b>period</b>: 2026-09-01 09:00:00+0800 --&gt; 2026-09-01 10:00:00+0800</p><h3>Locations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Location</b></td></tr><tr><td style="display: none">*</td><td><a href="Location-hah-location.html">Location 王測試居住地</a></td></tr></table><p><b>serviceProvider</b>: <a href="Organization-hah-organization.html">Organization 在宅急症示範醫療機構</a></p><p><b>partOf</b>: <a href="Encounter-hah-admission.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p></div>
+  </text>
+  <extension url="http://ltc-ig.fhir.tw/StructureDefinition/ExtHAHVisitMode">
+    <valueCode value="in-person"/>
+  </extension>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="HH"/>
+  </class>
+  <type>
+    <coding>
+      <system value="http://ltc-ig.fhir.tw/CodeSystem/hah-activity"/>
+      <code value="visit"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/hah-patient"/>
+  </subject>
+  <episodeOfCare>
+    <reference value="EpisodeOfCare/hah-episode"/>
+  </episodeOfCare>
+  <participant>
+    <individual>
+      <reference value="Practitioner/hah-practitioner"/>
+    </individual>
+  </participant>
+  <period>
+    <start value="2026-09-01T09:00:00+08:00"/>
+    <end value="2026-09-01T10:00:00+08:00"/>
+  </period>
+  <location>
+    <location>
+      <reference value="Location/hah-location"/>
+    </location>
+  </location>
+  <serviceProvider>
+    <reference value="Organization/hah-organization"/>
+  </serviceProvider>
+  <partOf>
+    <reference value="Encounter/hah-admission"/>
+  </partOf>
+</Encounter>

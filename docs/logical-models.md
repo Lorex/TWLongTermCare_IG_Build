@@ -1,4 +1,4 @@
-# Logical Models - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# Logical Models - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * **Logical Models**
@@ -9,13 +9,11 @@
 
 本頁面說明台灣長期照顧實作指引（TW LTC IG）中定義的邏輯模型，這些模型提供資料結構的概覽，幫助使用者了解如何準備欄位資料。
 
-#### 邏輯模型概述
+#### 邏輯模型
 
 邏輯模型是 FHIR 中用來描述資料結構的概念模型，它們不直接對應到 FHIR 資源，而是提供一個高層次的資料結構視圖，幫助使用者理解如何組織和準備資料。
 
-#### 可用的邏輯模型
-
-#### 1. 照顧管理評估量表邏輯模型 (LTC-CMS-Model)
+##### 照顧管理評估量表邏輯模型 (LTC-CMS-Model)
 
 [照顧管理評估量表邏輯模型](StructureDefinition-LTCCMSModel.md)
 
@@ -30,7 +28,7 @@
 
 **使用場景**: 適用於長期照顧管理中心進行個案評估時，作為資料準備的參考指南。
 
-#### 2. 轉介單邏輯模型 (LTC-Referral-Model)
+##### 轉介單邏輯模型 (LTC-Referral-Model)
 
 [轉介單邏輯模型](StructureDefinition-LTCRferralModel.md)
 
@@ -53,7 +51,7 @@
 
 **使用場景**: 適用於醫療機構或相關單位向長期照顧管理中心轉介個案時，作為轉介單資料準備的參考指南。
 
-#### 3. 長期照護醫師意見書邏輯模型 (LTC-AA12-Model)
+##### 長期照護醫師意見書邏輯模型 (LTC-AA12-Model)
 
 [長期照護醫師意見書邏輯模型](StructureDefinition-AA12Model.md)
 
@@ -72,7 +70,7 @@
 
 **使用場景**: 適用於醫師對個案進行專業醫療評估後，製作長期照護醫師意見書時，作為資料準備的參考指南。
 
-#### 4. 個案位置監測邏輯模型 (LTC-Location-Model)
+##### 個案位置監測邏輯模型 (LTC-Location-Model)
 
 [個案位置監測邏輯模型](StructureDefinition-LTCLocationModel.md)
 
@@ -88,7 +86,7 @@
 
 **使用場景**: 適用於失智症照護監測中的個案位置追蹤與監測，作為位置資料準備的參考指南。
 
-#### 5. 異常事件警報邏輯模型 (LTC-AdverseEvent-Model)
+##### 異常事件警報邏輯模型 (LTC-AdverseEvent-Model)
 
 [異常事件警報邏輯模型](StructureDefinition-LTCAdverseEventModel.md)
 
@@ -108,6 +106,59 @@
 * **涉及者資訊**: 包含涉及者參考等
 
 **使用場景**: 適用於失智症照護監測中的異常事件警報管理，作為異常事件資料準備的參考指南。
+
+##### 支付審查－服務記錄申報邏輯模型 (LTCFeeApplyModel)
+
+[長照支付審查－服務記錄申報邏輯模型](StructureDefinition-LTCFeeApplyModel.md)
+
+**用途**: 描述服務提供單位向衛生福利部支付審核系統（照管平台）執行「服務記錄申報（FeeApply）」時所傳送之完整資料結構，逐欄保留規格書之中文欄位名稱、英文欄位名稱、型態、長度與必填規則。
+
+**主要組成部分**:
+
+* **申報批次資料 (apply_info)**: 包含支審年月、交易序號、服務記錄筆數、服務紀錄金額、申請個案數
+* **個案服務紀錄 (case_svc_records)**: 包含識別碼、個案身分證字號、服務日期與起訖時段、照顧組合代碼、服務類別、單價、數量、照顧服務員身分證字號
+* **AA00 個管紀錄組**: 包含服務項目、服務對象、服務內容、服務重點、追蹤服務適應與介入情形、服務目標達成情形、整體計畫適切性
+* **C 碼專業服務組**: 包含提供專業服務單位、專業服務復能目標及其達成情形、指導對象、服務內容、指導建議摘要
+* **交通接送組 (BD03／DA01)**: 包含出發地、目的地及其經緯度、里程數、車號、駕駛員、BD03 服務使用類型
+* **申報旗標組**: 包含臨終日照顧、訪視／服務未遇、陪同施打 COVID-19 疫苗、是否申報 AA03／AA09、AA10 申報狀態
+
+**Mapping 目標**: [LTCClaimFeeApply](StructureDefinition-LTCClaimFeeApply.md)
+
+**使用場景**: 適用於服務提供單位或系統商準備支付審查申報電文時，作為欄位齊備性檢查與 FHIR 對應的參考指南。
+
+##### 支付審查－分案審核明細邏輯模型 (LTCFeeAuditDetailModel)
+
+[長照支付審查－分案審核明細邏輯模型](StructureDefinition-LTCFeeAuditDetailModel.md)
+
+**用途**: 描述「(查詢B)分案審核明細查詢」之傳送資料與回覆明細的完整資料結構。
+
+**主要組成部分**:
+
+* **查詢輸入資訊 (app_result_query_info)**: 包含支審年月、交易序號、查詢類別、縣市代碼、核銷案號
+* **分案審核明細表頭**: 包含核銷案號、服務記錄筆數、個案數、申請核銷金額、承辦人員與審核意見、總表版次與版次時間、核定個案數與核定服務記錄數、核定金額、政策鼓勵金額、暫付申請狀態與分案暫付金額、核增／核減金額與原因
+* **各式總表與清冊下載路徑**: 包含暫付總表、總表、清冊、清冊 EXCEL、A 碼清冊、A 碼清冊 EXCEL、申請記錄不通過清冊與其 EXCEL 版
+* **審核通過服務記錄 (approve_records)**、**錯誤服務記錄 (err_records)**、**A 碼加成資料區 (a_svc_records)**
+
+**Mapping 目標**: [LTCClaimResponseFeeAudit](StructureDefinition-LTCClaimResponseFeeAudit.md)
+
+**使用場景**: 適用於服務提供單位解讀支付審核系統回覆之分案審核結果時，作為欄位對照的參考指南。
+
+##### 支付審查－分案審核狀態與交易處理結果邏輯模型 (LTCFeeAuditStatusModel)
+
+[長照支付審查－分案審核狀態與交易處理結果邏輯模型](StructureDefinition-LTCFeeAuditStatusModel.md)
+
+**用途**: 描述「(查詢A)服務單位各分案審核狀態查詢」之回覆明細，以及服務紀錄刪除、申報確認通知、撤回服務記錄、取消交易單處理結果回報等異動類 API 之傳送資料。
+
+**主要組成部分**:
+
+* **查詢輸入資訊**: 包含支審年月、交易序號、查詢類別
+* **縣市案件資訊 (city_info)**: 包含縣市代碼、核銷案號、核銷狀況、總表版次、簽證編號
+* **API 執行結果資料 (webapi_process_info)**: 包含 API Function、來源系統別、交易序號、API 執行狀態、批次處理結果與筆數、分案異常資料、服務紀錄刪除成功／失敗資料
+* **異動類作業傳送資料**: 包含服務紀錄刪除 (ObjDel)、申報確認通知 (appCompletionNotice)、撤回服務記錄 (appCancel)、取消交易單處理結果回報 (CancelResultResponse)
+
+**Mapping 目標**: [LTCTaskFeeAudit](StructureDefinition-LTCTaskFeeAudit.md)
+
+**使用場景**: 適用於追蹤申報交易單處理狀態與各分案核銷進度時，作為欄位對照的參考指南。
 
 #### 邏輯模型與 FHIR Profile 的關係
 
@@ -131,4 +182,13 @@
 * 各縣市轉介單格式可能有所不同，轉介單邏輯模型將於後續版本逐步納入各縣市格式
 * 邏輯模型中的欄位標示為必填 (MS) 的項目，在實際使用時必須提供
 * 建議在實際使用前，先參考對應的 FHIR Profile 了解具體的實作細節
+
+#### 居家護理照護管理系統
+
+[居家護理主題](home-nursing.md) 依 V5.0.16 盤點十二支 API，提供請求模型、二十四種表單模型與 [逐欄 Mapping](home-nursing-mapping.md)。模型保留多次收案、十三類全人評估、照護計畫、足部護理、多筆傷口及查詢參數。
+
+### 在宅急症照護
+
+* [在宅急症照護資料集](StructureDefinition-HAHCareDataset.md)：150 個資料元素，涵蓋收案、訪視、檢驗、給藥及轉銜。
+* [資料元素對照表](hah-mapping.md)與[主題說明](hah.md)。
 

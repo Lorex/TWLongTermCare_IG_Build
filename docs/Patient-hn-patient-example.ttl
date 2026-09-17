@@ -1,0 +1,107 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Patient/hn-patient-example> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hn-patient-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HNPatient" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HNPatient>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient hn-patient-example</b></p><a name=\"hn-patient-example\"> </a><a name=\"hchn-patient-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HNPatient.html\">居家護理－個案</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\">Provider number/HN0001</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 02-23456789</li><li>臺北市中正區測試路1號(home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: Next-of-Kin\">Next-of-Kin:</td><td colspan=\"3\"><ul><li>林淑芬</li><li>ph: 02-23456789</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>Managing Organization: <a href=\"Organization-hn-organization-example.html\">Organization 示範居家護理所</a></li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"參照提供此資源內容的結構化表單。保留原始評估、來源身分及補充說明。\"><a href=\"StructureDefinition-ExtHNSourceForm.html\">居家護理－來源表單</a></td><td colspan=\"3\"><a href=\"QuestionnaireResponse-hn-basedata-example.html\">Response to Questionnaire '-&gt;居家護理－個案基本資料' about '-&gt;陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)'</a></td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNSourceForm" ] ;
+     fhir:Extension.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/QuestionnaireResponse/hn-basedata-example> ;
+       fhir:Reference.reference [ fhir:value "QuestionnaireResponse/hn-basedata-example" ]
+     ]
+  ] ;
+  fhir:Patient.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "NNxxx" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "http://www.moi.gov.tw" ] ;
+     fhir:Identifier.value [ fhir:value "A123456789" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "PRN" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "https://example.org/home-nursing/patients" ] ;
+     fhir:Identifier.value [ fhir:value "HN0001" ]
+  ] ;
+  fhir:Patient.name [
+     fhir:index 0 ;
+     fhir:HumanName.use [ fhir:value "usual" ] ;
+     fhir:HumanName.text [ fhir:value "陳明慧" ]
+  ] ;
+  fhir:Patient.telecom [
+     fhir:index 0 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "02-23456789" ]
+  ] ;
+  fhir:Patient.gender [ fhir:value "male"] ;
+  fhir:Patient.birthDate [ fhir:value "1945-03-15"^^xsd:date] ;
+  fhir:Patient.address [
+     fhir:index 0 ;
+     fhir:Address.use [ fhir:value "home" ] ;
+     fhir:Address.text [ fhir:value "臺北市中正區測試路1號" ] ;
+     fhir:Address.line [
+       fhir:value "測試路1號" ;
+       fhir:index 0
+     ] ;
+     fhir:Address.city [ fhir:value "中正區" ] ;
+     fhir:Address.state [ fhir:value "臺北市" ]
+  ] ;
+  fhir:Patient.contact [
+     fhir:index 0 ;
+     fhir:Patient.contact.relationship [
+       fhir:index 0 ;
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0131" ] ;
+         fhir:Coding.code [ fhir:value "N" ]
+       ] ;
+       fhir:CodeableConcept.text [ fhir:value "配偶" ]
+     ] ;
+     fhir:Patient.contact.name [
+       fhir:HumanName.text [ fhir:value "林淑芬" ]
+     ] ;
+     fhir:Patient.contact.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "phone" ] ;
+       fhir:ContactPoint.value [ fhir:value "02-23456789" ]
+     ]
+  ] ;
+  fhir:Patient.managingOrganization [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/hn-organization-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/hn-organization-example" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Patient/hn-patient-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

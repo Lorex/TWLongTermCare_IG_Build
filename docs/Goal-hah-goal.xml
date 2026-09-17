@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Goal xmlns="http://hl7.org/fhir">
+  <id value="hah-goal"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/HAHGoal"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Goal hah-goal</b></p><a name="hah-goal"> </a><a name="hchah-goal"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-HAHGoal.html">在宅急症－照護目標</a></p></div><p><b>在宅急症－療程關聯</b>: <a href="EpisodeOfCare-hah-episode.html">EpisodeOfCare: extension = 完成治療; identifier = https://example.org/hah/episodes#HAH-20260901-001; status = finished; type = 在宅急症照護; period = 2026-09-01 08:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><p><b>lifecycleStatus</b>: Completed</p><p><b>description</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity care-goal}">本次照護期間能由照顧者協助完成居家量測並回報不適情形</span></p><p><b>subject</b>: <a href="Patient-hah-patient.html">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><h3>Targets</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Due[x]</b></td></tr><tr><td style="display: none">*</td><td>2026-09-05</td></tr></table></div>
+  </text>
+  <extension url="http://ltc-ig.fhir.tw/StructureDefinition/ExtHAHEpisode">
+    <valueReference>
+      <reference value="EpisodeOfCare/hah-episode"/>
+    </valueReference>
+  </extension>
+  <lifecycleStatus value="completed"/>
+  <description>
+    <coding>
+      <system value="http://ltc-ig.fhir.tw/CodeSystem/hah-activity"/>
+      <code value="care-goal"/>
+    </coding>
+    <text value="本次照護期間能由照顧者協助完成居家量測並回報不適情形"/>
+  </description>
+  <subject>
+    <reference value="Patient/hah-patient"/>
+  </subject>
+  <target>
+    <dueDate value="2026-09-05"/>
+  </target>
+</Goal>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="hah-plan"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/HAHCarePlan"/>
+  </meta>
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><p>王測試的在宅急症照護計畫，所屬療程 HAH-20260901-001，期間為 2026 年 9 月 1 日至 9 月 5 日，狀態為已完成。處理呼吸道感染問題，目標為協助完成每日量測紀錄；包含血糖檢驗醫囑。</p></div>
+  </text>
+  <extension url="http://ltc-ig.fhir.tw/StructureDefinition/ExtHAHEpisode">
+    <valueReference>
+      <reference value="EpisodeOfCare/hah-episode"/>
+    </valueReference>
+  </extension>
+  <status value="completed"/>
+  <intent value="plan"/>
+  <category>
+    <coding>
+      <system value="https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw"/>
+      <code value="assess-plan"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/hah-patient"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/hah-admission"/>
+  </encounter>
+  <period>
+    <start value="2026-09-01"/>
+    <end value="2026-09-05"/>
+  </period>
+  <addresses>
+    <reference value="Condition/hah-condition"/>
+  </addresses>
+  <goal>
+    <reference value="Goal/hah-goal"/>
+  </goal>
+  <activity>
+    <reference>
+      <reference value="ServiceRequest/hah-lab-request"/>
+    </reference>
+  </activity>
+</CarePlan>

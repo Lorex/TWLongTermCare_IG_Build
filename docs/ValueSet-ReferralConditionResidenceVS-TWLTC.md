@@ -1,4 +1,4 @@
-# 居住狀況值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 居住狀況值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ReferralConditionResidenceVS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ReferralConditionResidenceVS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-08-25 | *Computable Name*:ReferralConditionResidenceVSTWLTC |
+| *Other Identifiers:*OID:2.25.91399101256539222749831668650894952345 | |
 
  
 個案的居住狀況 
@@ -46,7 +47,11 @@
   "resourceType" : "ValueSet",
   "id" : "ReferralConditionResidenceVS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/ReferralConditionResidenceVS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.91399101256539222749831668650894952345"
+  }],
+  "version" : "1.1.0",
   "name" : "ReferralConditionResidenceVSTWLTC",
   "title" : "居住狀況值集",
   "status" : "active",

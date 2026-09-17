@@ -1,4 +1,4 @@
-# 個案身分別代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 個案身分別代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,15 +8,16 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/PatientIdentityCS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/PatientIdentityCS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-09-02 | *Computable Name*:PatientIdentityCSTWLTC |
+| *Other Identifiers:*OID:2.25.183908346030576353341425982526024496690 | |
 
  
 個案身分別代碼 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* [PatientIdentityVSTWLTC](ValueSet-PatientIdentityVS-TWLTC.md)
+* [個案身分別值集](ValueSet-PatientIdentityVS-TWLTC.md)
 
 
 
@@ -27,7 +28,11 @@
   "resourceType" : "CodeSystem",
   "id" : "PatientIdentityCS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/PatientIdentityCS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.183908346030576353341425982526024496690"
+  }],
+  "version" : "1.1.0",
   "name" : "PatientIdentityCSTWLTC",
   "title" : "個案身分別代碼",
   "status" : "active",

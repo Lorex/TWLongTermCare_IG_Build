@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Goal/hn-goal-example> a fhir:Goal ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hn-goal-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HNGoal" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HNGoal>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Goal hn-goal-example</b></p><a name=\"hn-goal-example\"> </a><a name=\"hchn-goal-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HNGoal.html\">居家護理－照護目標</a></p></div><p><b>居家護理－收案關聯</b>: <a href=\"EpisodeOfCare-hn-episode-example.html\">EpisodeOfCare: extension = -&gt;Response to Questionnaire '-&gt;居家護理－個案基本資料' about '-&gt;陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)'; identifier = https://example.org/home-nursing/episodes#HN0001-20251208; status = active; period = 2025-12-08 --&gt; (ongoing)</a></p><p><b>居家護理－來源表單</b>: <a href=\"QuestionnaireResponse-hn-targets-example.html\">Response to Questionnaire '-&gt;居家護理－照護計畫目標' about '-&gt;陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)'</a></p><p><b>居家護理－主要目標</b>: false</p><p><b>lifecycleStatus</b>: Active</p><p><b>description</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow care-goal}\">降低跌倒風險</span></p><p><b>subject</b>: <a href=\"Patient-hn-patient-example.html\">陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)</a></p><p><b>start</b>: 2025-12-08</p><h3>Targets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Due[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2026-01-08</td></tr></table><p><b>expressedBy</b>: <a href=\"Practitioner-hn-nurse-example.html\">Practitioner 王美玲</a></p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNEpisode" ] ;
+     fhir:Extension.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/EpisodeOfCare/hn-episode-example> ;
+       fhir:Reference.reference [ fhir:value "EpisodeOfCare/hn-episode-example" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNSourceForm" ] ;
+     fhir:Extension.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/QuestionnaireResponse/hn-targets-example> ;
+       fhir:Reference.reference [ fhir:value "QuestionnaireResponse/hn-targets-example" ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNMainTarget" ] ;
+     fhir:Extension.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+  ] ;
+  fhir:Goal.lifecycleStatus [ fhir:value "active"] ;
+  fhir:Goal.description [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow" ] ;
+       fhir:Coding.code [ fhir:value "care-goal" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "降低跌倒風險" ]
+  ] ;
+  fhir:Goal.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hn-patient-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/hn-patient-example" ]
+  ] ;
+  fhir:Goal.startDate [ fhir:value "2025-12-08"^^xsd:date] ;
+  fhir:Goal.target [
+     fhir:index 0 ;
+     fhir:Goal.target.dueDate [ fhir:value "2026-01-08"^^xsd:date ]
+  ] ;
+  fhir:Goal.expressedBy [
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/hn-nurse-example> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/hn-nurse-example" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Goal/hn-goal-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

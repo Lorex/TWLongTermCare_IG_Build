@@ -1,4 +1,4 @@
-# 跌倒紀錄結果值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 跌倒紀錄結果值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/FallHistoryResultVS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/FallHistoryResultVS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-10-20 | *Computable Name*:FallHistoryResultVSTWLTC |
+| *Other Identifiers:*OID:2.25.115369481939195704806136599724148707602 | |
 
  
 紀錄住民跌倒的偵測結果。 
@@ -46,7 +47,11 @@
   "resourceType" : "ValueSet",
   "id" : "FallHistoryResultVS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/FallHistoryResultVS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.115369481939195704806136599724148707602"
+  }],
+  "version" : "1.1.0",
   "name" : "FallHistoryResultVSTWLTC",
   "title" : "跌倒紀錄結果值集",
   "status" : "active",

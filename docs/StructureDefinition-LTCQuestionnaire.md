@@ -1,4 +1,4 @@
-# 長期照顧－問卷 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長期照顧－問卷 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:LTCQuestionnaire |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:LTCQuestionnaire |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Questionnaire Resource，以呈現長期照顧情境中涉及之問卷或量表內容。 
@@ -17,10 +17,10 @@
 **Usages:**
 
 * Refer to this Profile: [長期照顧－問卷回覆](StructureDefinition-LTCQuestionnaireResponse.md), [長期照顧－臨床失智評估量表回覆](StructureDefinition-LTCQuestionnaireResponseCDR.md) and [長期照顧－簡易智能狀態測驗回覆](StructureDefinition-LTCQuestionnaireResponseMMSE.md)
-* Examples for this Profile: [AA12](Questionnaire-ltc-questionnaire-aa12-example.md), [ADLAssessment](Questionnaire-ltc-questionnaire-adl-assessment-example.md), [LTCQuestionnaireCaregiverLoad](Questionnaire-ltc-questionnaire-caregiver-load.md), [LTCQuestionnaireCaregiverSupport](Questionnaire-ltc-questionnaire-caregiver-support.md)... Show 12 more, [LTCQuestionnaireCaregiver](Questionnaire-ltc-questionnaire-caregiver.md), [CDR](Questionnaire-ltc-questionnaire-cdr.md), [LTCQuestionnaireCommunication](Questionnaire-ltc-questionnaire-communication.md), [LTCQuestionnaireIADL](Questionnaire-ltc-questionnaire-iadl.md), [LTCQuestionnaireMemory](Questionnaire-ltc-questionnaire-memory.md), [LTCQuestionnaireMental](Questionnaire-ltc-questionnaire-mental.md), [MMSE](Questionnaire-ltc-questionnaire-mmse.md), [LTCQuestionnaireSociety](Questionnaire-ltc-questionnaire-society.md), [LTCQuestionnaireSOF](Questionnaire-ltc-questionnaire-sof.md), [LTCQuestionnaireSpecialCare](Questionnaire-ltc-questionnaire-special-care.md), [AA01](Questionnaire-questionnaire-aa01-example.md) and [AA02](Questionnaire-questionnaire-aa02-example.md)
+* Examples for this Profile: [HAHIntakeAssessment](Questionnaire-hah-intake-assessment.md), [HNADLsQuestionnaire](Questionnaire-hn-adls.md), [HNBaseDataQuestionnaire](Questionnaire-hn-basedata.md), [HNBodyEvaluationsQuestionnaire](Questionnaire-hn-bodyevaluations.md)... Show 37 more, [HNCarePlanCloseQuestionnaire](Questionnaire-hn-careplanclose.md), [HNCareRecordQuestionnaire](Questionnaire-hn-carerecord.md), [HNCaseCloseQuestionnaire](Questionnaire-hn-caseclose.md), [HNCaseDescQuestionnaire](Questionnaire-hn-casedesc.md), [HNCaseSummaryQuestionnaire](Questionnaire-hn-casesummary.md), [HNDementiasQuestionnaire](Questionnaire-hn-dementias.md), [HNDrugSafetiesQuestionnaire](Questionnaire-hn-drugsafeties.md), [HNEvaluationsQuestionnaire](Questionnaire-hn-evaluations.md), [HNFallRisksQuestionnaire](Questionnaire-hn-fallrisks.md), [HNGeriatricDepressionScalesQuestionnaire](Questionnaire-hn-geriatricdepressionscales.md), [HNHealthyHabitsQuestionnaire](Questionnaire-hn-healthyhabits.md), [HNIADLsQuestionnaire](Questionnaire-hn-iadls.md), [HNMeasuresQuestionnaire](Questionnaire-hn-measures.md), [HNMedicalHistoriesQuestionnaire](Questionnaire-hn-medicalhistories.md), [HNMNASFsQuestionnaire](Questionnaire-hn-mnasfs.md), [HNPainEvaluationsQuestionnaire](Questionnaire-hn-painevaluations.md), [HNPressureInjuriesQuestionnaire](Questionnaire-hn-pressureinjuries.md), [HNSOFsQuestionnaire](Questionnaire-hn-sofs.md), [HNStaffEgyQuestionnaire](Questionnaire-hn-staffegy.md), [HNTargetsQuestionnaire](Questionnaire-hn-targets.md), [HNVitalSignQuestionnaire](Questionnaire-hn-vitalsign.md), [AA12](Questionnaire-ltc-questionnaire-aa12-example.md), [ADLAssessment](Questionnaire-ltc-questionnaire-adl-assessment-example.md), [LTCQuestionnaireCaregiverLoad](Questionnaire-ltc-questionnaire-caregiver-load.md), [LTCQuestionnaireCaregiverSupport](Questionnaire-ltc-questionnaire-caregiver-support.md), [LTCQuestionnaireCaregiver](Questionnaire-ltc-questionnaire-caregiver.md), [CDR](Questionnaire-ltc-questionnaire-cdr.md), [LTCQuestionnaireCommunication](Questionnaire-ltc-questionnaire-communication.md), [LTCQuestionnaireIADL](Questionnaire-ltc-questionnaire-iadl.md), [LTCQuestionnaireMemory](Questionnaire-ltc-questionnaire-memory.md), [LTCQuestionnaireMental](Questionnaire-ltc-questionnaire-mental.md), [MMSE](Questionnaire-ltc-questionnaire-mmse.md), [LTCQuestionnaireSociety](Questionnaire-ltc-questionnaire-society.md), [LTCQuestionnaireSOF](Questionnaire-ltc-questionnaire-sof.md), [LTCQuestionnaireSpecialCare](Questionnaire-ltc-questionnaire-special-care.md), [AA01](Questionnaire-questionnaire-aa01-example.md) and [AA02](Questionnaire-questionnaire-aa02-example.md)
 * CapabilityStatements using this Profile: [臺灣長期照顧實作指引 - 用戶端能力聲明](CapabilityStatement-CapabilityStatementLTCClient.md) and [臺灣長期照顧實作指引 - 伺服端能力聲明](CapabilityStatement-CapabilityStatementLTCServer.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCQuestionnaire)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-LTCQuestionnaire.json)
 
 ### Formal Views of Profile Content
 
@@ -39,11 +39,11 @@ Other representations of profile: [CSV](StructureDefinition-LTCQuestionnaire.csv
   "resourceType" : "StructureDefinition",
   "id" : "LTCQuestionnaire",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCQuestionnaire",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCQuestionnaire",
   "title" : "長期照顧－問卷",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

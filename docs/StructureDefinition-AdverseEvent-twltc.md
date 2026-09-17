@@ -1,4 +1,4 @@
-# 長期照顧－異常事件警報 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長期照顧－異常事件警報 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:LTCAdverseEvent |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:LTCAdverseEvent |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 AdverseEvent Resource，以呈現長照個案異常事件的資料，包括事件類型、嚴重程度、發生時間、位置、通報方式、多段文字描述與關聯案件等資訊。同時適用於失智照顧及 SDK 異常服務通報場景。 
@@ -19,7 +19,7 @@
 * Refer to this Profile: [個案總查詢（CS100 對應版）Case Summary](StructureDefinition-LTC-Composition-CS100.md)
 * Examples for this Profile: [AdverseEvent/ltc-adverse-event-example](AdverseEvent-ltc-adverse-event-example.md), [AdverseEvent/ltc-adverse-event-incident-example](AdverseEvent-ltc-adverse-event-incident-example.md) and [AdverseEvent/ltc-adverseevent-cs100-example](AdverseEvent-ltc-adverseevent-cs100-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/AdverseEvent-twltc)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-AdverseEvent-twltc.json)
 
 ### Formal Views of Profile Content
 
@@ -38,11 +38,11 @@ Other representations of profile: [CSV](StructureDefinition-AdverseEvent-twltc.c
   "resourceType" : "StructureDefinition",
   "id" : "AdverseEvent-twltc",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/AdverseEvent-twltc",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCAdverseEvent",
   "title" : "長期照顧－異常事件警報",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -1,4 +1,4 @@
-# 長期照顧－個案位置監測 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長期照顧－個案位置監測 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Location-twltc | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:LTCLocation |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Location-twltc | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:LTCLocation |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Location Resource，以呈現失智症個案的位置監測資料，包括所在地名稱與經緯度座標資訊。 
@@ -17,9 +17,9 @@
 **Usages:**
 
 * Refer to this Profile: [長期照顧－異常事件警報](StructureDefinition-AdverseEvent-twltc.md)
-* Examples for this Profile: [新北市私立安康老人長期照顧中心（養護型）](Location-ltc-location-example.md)
+* Examples for this Profile: [王測試居住地](Location-hah-location.md) and [新北市私立安康老人長期照顧中心（養護型）](Location-ltc-location-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/Location-twltc)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-Location-twltc.json)
 
 ### Formal Views of Profile Content
 
@@ -38,11 +38,11 @@ Other representations of profile: [CSV](StructureDefinition-Location-twltc.csv),
   "resourceType" : "StructureDefinition",
   "id" : "Location-twltc",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/Location-twltc",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCLocation",
   "title" : "長期照顧－個案位置監測",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

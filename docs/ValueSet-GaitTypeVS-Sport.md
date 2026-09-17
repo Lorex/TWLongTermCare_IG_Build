@@ -1,4 +1,4 @@
-# 身體活動量測-步態分析值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 身體活動量測-步態分析值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/GaitTypeVS-Sport | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/GaitTypeVS-Sport | *Version*:1.1.0 |
 | Active as of 2024-06-04 | *Computable Name*:GaitTypeVSSport |
+| *Other Identifiers:*OID:2.25.87450635089000044283605225525837307585 | |
 
  
 用於描述步態（walking gait）時腳的着地位置和運動模式。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。 
@@ -46,7 +47,11 @@
   "resourceType" : "ValueSet",
   "id" : "GaitTypeVS-Sport",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/GaitTypeVS-Sport",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.87450635089000044283605225525837307585"
+  }],
+  "version" : "1.1.0",
   "name" : "GaitTypeVSSport",
   "title" : "身體活動量測-步態分析值集",
   "status" : "active",

@@ -1,0 +1,67 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/ValueSet/hn-vs-1ffa1d5d3bef> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hn-vs-1ffa1d5d3bef"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet hn-vs-1ffa1d5d3bef</b></p><a name=\"hn-vs-1ffa1d5d3bef\"> </a><a name=\"hchn-vs-1ffa1d5d3bef\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-hn-answer.html\"><code>http://ltc-ig.fhir.tw/CodeSystem/hn-answer</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?1.1.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-cb2a5752b2891\">cb2a5752b2891</a></td><td style=\"color: #cccccc\">可獨立於戶外行走</td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-cf4692690b146\">cf4692690b146</a></td><td style=\"color: #cccccc\">可戶外行走但需人陪伴</td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-c53e6936215d3\">c53e6936215d3</a></td><td style=\"color: #cccccc\">只能於室內獨立行走</td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-c2ad7cbf0207e\">c2ad7cbf0207e</a></td><td style=\"color: #cccccc\">只能於室內行走且需人陪伴</td></tr><tr><td><a href=\"CodeSystem-hn-answer.html#hn-answer-cbbaf53a2800e\">cbbaf53a2800e</a></td><td style=\"color: #cccccc\">無法行走</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "http://ltc-ig.fhir.tw/ValueSet/hn-vs-1ffa1d5d3bef"] ;
+  fhir:ValueSet.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ] ;
+     fhir:Identifier.value [ fhir:value "urn:oid:2.25.145308206149008344165079825682621662683" ]
+  ] ;
+  fhir:ValueSet.version [ fhir:value "1.1.0"] ;
+  fhir:ValueSet.name [ fhir:value "HNAnswerVS1ffa1d5d3bef"] ;
+  fhir:ValueSet.title [ fhir:value "居家護理－行動能力問題選項"] ;
+  fhir:ValueSet.status [ fhir:value "draft"] ;
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-09-17T17:33:17+08:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "經濟部產業發展署"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "經濟部產業發展署" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.ida.gov.tw/" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "限定行動能力問題可填入的 V5.0.16 選項。"] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-answer" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "cb2a5752b2891" ]
+       ], [
+         fhir:index 1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "cf4692690b146" ]
+       ], [
+         fhir:index 2 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "c53e6936215d3" ]
+       ], [
+         fhir:index 3 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "c2ad7cbf0207e" ]
+       ], [
+         fhir:index 4 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "cbbaf53a2800e" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/ValueSet/hn-vs-1ffa1d5d3bef.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

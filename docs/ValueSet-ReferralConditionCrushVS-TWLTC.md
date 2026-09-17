@@ -1,4 +1,4 @@
-# 壓傷狀況值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 壓傷狀況值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ReferralConditionCrushVS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ReferralConditionCrushVS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-08-25 | *Computable Name*:ReferralConditionCrushVSTWLTC |
+| *Other Identifiers:*OID:2.25.124757791910943408406775589187202221698 | |
 
  
 個案壓傷的狀況 
@@ -46,7 +47,11 @@
   "resourceType" : "ValueSet",
   "id" : "ReferralConditionCrushVS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/ReferralConditionCrushVS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.124757791910943408406775589187202221698"
+  }],
+  "version" : "1.1.0",
   "name" : "ReferralConditionCrushVSTWLTC",
   "title" : "壓傷狀況值集",
   "status" : "active",

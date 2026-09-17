@@ -1,4 +1,4 @@
-# 長照 SDK－個案狀態 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長照 SDK－個案狀態 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-status | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:CS_TW_LTC_CaseStatus |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-status | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:CS_TW_LTC_CaseStatus |
+| *Other Identifiers:*OID:2.25.329600686398508123680338960293654731351 | |
 
  
 對應 r1.3：服務中、暫停服務、已結案。使用 FHIR EpisodeOfCare status 對應碼。 
@@ -27,12 +28,16 @@
   "resourceType" : "CodeSystem",
   "id" : "cs-tw-ltc-case-status",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-status",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.329600686398508123680338960293654731351"
+  }],
+  "version" : "1.1.0",
   "name" : "CS_TW_LTC_CaseStatus",
   "title" : "長照 SDK－個案狀態",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

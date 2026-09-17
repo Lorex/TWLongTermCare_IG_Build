@@ -1,4 +1,4 @@
-# 長期照顧－文件組成基礎 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長期照顧－文件組成基礎 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,17 +8,17 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionBase | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:LTCCompositionBase |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionBase | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:LTCCompositionBase |
 
  
 此 Profile 為所有長期照顧 Composition Profile 的共用基礎，定義文件組成之基本結構與共用欄位。 
 
 **Usages:**
 
-* Derived from this Profile: [個案總查詢（CS100 對應版）Case Summary](StructureDefinition-LTC-Composition-CS100.md), [照顧管理評估量表文件架構](StructureDefinition-LTCCompositionCMS.md) and [長期照護管理中心個案服務初篩表/轉介單文件架構](StructureDefinition-LTCCompositionReferral.md)
+* Derived from this Profile: [在宅急症－結案與轉銜摘要](StructureDefinition-HAHCompositionSummary.md), [個案總查詢（CS100 對應版）Case Summary](StructureDefinition-LTC-Composition-CS100.md), [照顧管理評估量表文件架構](StructureDefinition-LTCCompositionCMS.md) and [長期照護管理中心個案服務初篩表/轉介單文件架構](StructureDefinition-LTCCompositionReferral.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCCompositionBase)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-LTCCompositionBase.json)
 
 ### Formal Views of Profile Content
 
@@ -37,11 +37,11 @@ Other representations of profile: [CSV](StructureDefinition-LTCCompositionBase.c
   "resourceType" : "StructureDefinition",
   "id" : "LTCCompositionBase",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionBase",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCCompositionBase",
   "title" : "長期照顧－文件組成基礎",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -84,10 +84,6 @@ Other representations of profile: [CSV](StructureDefinition-LTCCompositionBase.c
   "derivation" : "constraint",
   "differential" : {
     "element" : [{
-      "id" : "Composition",
-      "path" : "Composition"
-    },
-    {
       "id" : "Composition.subject",
       "path" : "Composition.subject",
       "min" : 1

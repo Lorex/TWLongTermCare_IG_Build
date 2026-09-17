@@ -1,4 +1,4 @@
-# 照顧管理評估量表文件打包 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 照顧管理評估量表文件打包 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleCMS | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:LTCBundleCMS |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleCMS | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:LTCBundleCMS |
 
  
 此 Bundle 以衛生福利部長期照顧管理中心照顧管理評估量表為基礎，用以表述照顧管理評估量表的文件打包結構。 
@@ -19,7 +19,7 @@
 * Examples for this Profile: [Bundle/ltc-bundle-cms-example](Bundle-ltc-bundle-cms-example.md)
 * CapabilityStatements using this Profile: [臺灣長期照顧實作指引 - 用戶端能力聲明](CapabilityStatement-CapabilityStatementLTCClient.md) and [臺灣長期照顧實作指引 - 伺服端能力聲明](CapabilityStatement-CapabilityStatementLTCServer.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCBundleCMS)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-LTCBundleCMS.json)
 
 ### Formal Views of Profile Content
 
@@ -38,11 +38,11 @@ Other representations of profile: [CSV](StructureDefinition-LTCBundleCMS.csv), [
   "resourceType" : "StructureDefinition",
   "id" : "LTCBundleCMS",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleCMS",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCBundleCMS",
   "title" : "照顧管理評估量表文件打包",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

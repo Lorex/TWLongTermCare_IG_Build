@@ -1,0 +1,129 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-rtncode> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "cs-tw-ltc-feeaudit-rtncode"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem cs-tw-ltc-feeaudit-rtncode</b></p><a name=\"cs-tw-ltc-feeaudit-rtncode\"> </a><a name=\"hccs-tw-ltc-feeaudit-rtncode\"> </a><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-rtncode</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"cs-tw-ltc-feeaudit-rtncode-0\"> </a></td><td>成功回傳</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"cs-tw-ltc-feeaudit-rtncode-1\"> </a></td><td>Request 輸入參數錯誤</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"cs-tw-ltc-feeaudit-rtncode-2\"> </a></td><td>所屬申報縣市尚未開放支付審查系統</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"cs-tw-ltc-feeaudit-rtncode-3\"> </a></td><td>查無服務提供單位資料</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"cs-tw-ltc-feeaudit-rtncode-4\"> </a></td><td>申報年月錯誤</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"cs-tw-ltc-feeaudit-rtncode-5\"> </a></td><td>查無服務提供單位 hash 資料</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"cs-tw-ltc-feeaudit-rtncode-6\"> </a></td><td>交易序號重複</td></tr><tr><td style=\"white-space:nowrap\">7<a name=\"cs-tw-ltc-feeaudit-rtncode-7\"> </a></td><td>校驗碼檢驗錯誤</td></tr><tr><td style=\"white-space:nowrap\">8<a name=\"cs-tw-ltc-feeaudit-rtncode-8\"> </a></td><td>超出傳輸筆數</td></tr><tr><td style=\"white-space:nowrap\">9<a name=\"cs-tw-ltc-feeaudit-rtncode-9\"> </a></td><td>不允許撤回申請服務紀錄</td></tr><tr><td style=\"white-space:nowrap\">11<a name=\"cs-tw-ltc-feeaudit-rtncode-11\"> </a></td><td>無申請服務紀錄可撤回</td></tr><tr><td style=\"white-space:nowrap\">12<a name=\"cs-tw-ltc-feeaudit-rtncode-12\"> </a></td><td>無效的 IP</td></tr><tr><td style=\"white-space:nowrap\">13<a name=\"cs-tw-ltc-feeaudit-rtncode-13\"> </a></td><td>IP 不在設定範圍內</td></tr><tr><td style=\"white-space:nowrap\">14<a name=\"cs-tw-ltc-feeaudit-rtncode-14\"> </a></td><td>申報費用單位非特約機構</td></tr><tr><td style=\"white-space:nowrap\">20<a name=\"cs-tw-ltc-feeaudit-rtncode-20\"> </a></td><td>無訪問權限</td></tr><tr><td style=\"white-space:nowrap\">25<a name=\"cs-tw-ltc-feeaudit-rtncode-25\"> </a></td><td>執行頻率限制</td></tr><tr><td style=\"white-space:nowrap\">30<a name=\"cs-tw-ltc-feeaudit-rtncode-30\"> </a></td><td>輸入參數錯誤</td></tr><tr><td style=\"white-space:nowrap\">40<a name=\"cs-tw-ltc-feeaudit-rtncode-40\"> </a></td><td>查無資料</td></tr><tr><td style=\"white-space:nowrap\">50<a name=\"cs-tw-ltc-feeaudit-rtncode-50\"> </a></td><td>DB 錯誤</td></tr><tr><td style=\"white-space:nowrap\">90<a name=\"cs-tw-ltc-feeaudit-rtncode-90\"> </a></td><td>發生無法預期錯誤</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-rtncode"] ;
+  fhir:CodeSystem.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ] ;
+     fhir:Identifier.value [ fhir:value "urn:oid:2.25.323019679525679610215400809518030217916" ]
+  ] ;
+  fhir:CodeSystem.version [ fhir:value "1.1.0"] ;
+  fhir:CodeSystem.name [ fhir:value "CS_TW_LTC_FeeAuditRtnCode"] ;
+  fhir:CodeSystem.title [ fhir:value "支付審查－API 回覆結果代碼"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-09-17T17:33:17+08:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "經濟部產業發展署"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "經濟部產業發展署" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.ida.gov.tw/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "此 CodeSystem 定義《衛生福利部 支付審核系統 API 規格說明書（照管平台）》Response 格式中「rtncode－回覆結果代碼」之代碼，用於表示支付審核系統對服務提供單位所送 API 請求之處理結果，包含成功回傳、參數檢核錯誤、權限與流量限制及系統異常等情形。"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "20"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "成功回傳" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Request 輸入參數錯誤" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "所屬申報縣市尚未開放支付審查系統" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "查無服務提供單位資料" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "申報年月錯誤" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "查無服務提供單位 hash 資料" ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "交易序號重複" ]
+  ], [
+     fhir:index 7 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "校驗碼檢驗錯誤" ]
+  ], [
+     fhir:index 8 ;
+     fhir:CodeSystem.concept.code [ fhir:value "8" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "超出傳輸筆數" ]
+  ], [
+     fhir:index 9 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "不允許撤回申請服務紀錄" ]
+  ], [
+     fhir:index 10 ;
+     fhir:CodeSystem.concept.code [ fhir:value "11" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "無申請服務紀錄可撤回" ]
+  ], [
+     fhir:index 11 ;
+     fhir:CodeSystem.concept.code [ fhir:value "12" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "無效的 IP" ]
+  ], [
+     fhir:index 12 ;
+     fhir:CodeSystem.concept.code [ fhir:value "13" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "IP 不在設定範圍內" ]
+  ], [
+     fhir:index 13 ;
+     fhir:CodeSystem.concept.code [ fhir:value "14" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "申報費用單位非特約機構" ]
+  ], [
+     fhir:index 14 ;
+     fhir:CodeSystem.concept.code [ fhir:value "20" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "無訪問權限" ]
+  ], [
+     fhir:index 15 ;
+     fhir:CodeSystem.concept.code [ fhir:value "25" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "執行頻率限制" ]
+  ], [
+     fhir:index 16 ;
+     fhir:CodeSystem.concept.code [ fhir:value "30" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "輸入參數錯誤" ]
+  ], [
+     fhir:index 17 ;
+     fhir:CodeSystem.concept.code [ fhir:value "40" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "查無資料" ]
+  ], [
+     fhir:index 18 ;
+     fhir:CodeSystem.concept.code [ fhir:value "50" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "DB 錯誤" ]
+  ], [
+     fhir:index 19 ;
+     fhir:CodeSystem.concept.code [ fhir:value "90" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "發生無法預期錯誤" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-rtncode.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

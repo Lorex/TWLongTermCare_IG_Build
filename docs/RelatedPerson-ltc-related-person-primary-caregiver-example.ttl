@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,67 +7,77 @@
 
 <http://ltc-ig.fhir.tw/RelatedPerson/ltc-related-person-primary-caregiver-example> a fhir:RelatedPerson ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ltc-related-person-primary-caregiver-example"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson"^^xsd:anyURI ;
-       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson>
-     ] )
-  ] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "extensions" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson ltc-related-person-primary-caregiver-example</b></p><a name=\"ltc-related-person-primary-caregiver-example\"> </a><a name=\"hcltc-related-person-primary-caregiver-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCRelatedPerson.html\">長期照顧－關係人</a></p></div><p><b>是否為主要照顧者</b>: true</p><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"Patient-ltc-patient-cms-chen-ming-hui-example.html\">陳明慧 Female, DoB: 1945-03-15 ( National Person Identifier (TWN): A123456789 (use: official, ))</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode CHILD}\">child</span></p><p><b>name</b>: 陳志強</p><p><b>telecom</b>: ph: 0987654321(Mobile), ph: 02-27031234(Home)</p><p><b>gender</b>: Male</p><p><b>address</b>: 台北市大安區仁愛路三段55號8樓(home)</p></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:extension ( [
-     fhir:url [
-       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/ExtRelatedPersonIsPrimary-TWLTC"^^xsd:anyURI ;
-       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/ExtRelatedPersonIsPrimary-TWLTC>
-     ] ;
-     fhir:value [
-       a fhir:Boolean ;
-       fhir:v true
+  fhir:Resource.id [ fhir:value "ltc-related-person-primary-caregiver-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson>
      ]
-  ] ) ; # 
-  fhir:active [ fhir:v true] ; # 
-  fhir:patient [
-     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-cms-chen-ming-hui-example> ;
-     fhir:reference [ fhir:v "Patient/ltc-patient-cms-chen-ming-hui-example" ]
-  ] ; # 
-  fhir:relationship ( [
-     fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
-       ] ;
-       fhir:code [ fhir:v "CHILD" ] ;
-       fhir:display [ fhir:v "child" ]
-     ] )
-  ] ) ; # 
-  fhir:name ( [
-     fhir:use [ fhir:v "usual" ] ;
-     fhir:text [ fhir:v "陳志強" ] ;
-     fhir:family [ fhir:v "陳" ] ;
-     fhir:given ( [ fhir:v "志強" ] )
-  ] ) ; # 
-  fhir:telecom ( [
-     fhir:system [ fhir:v "phone" ] ;
-     fhir:value [ fhir:v "0987654321" ] ;
-     fhir:use [ fhir:v "mobile" ]
-  ] [
-     fhir:system [ fhir:v "phone" ] ;
-     fhir:value [ fhir:v "02-27031234" ] ;
-     fhir:use [ fhir:v "home" ]
-  ] ) ; # 
-  fhir:gender [ fhir:v "male"] ; # 
-  fhir:address ( [
-     fhir:use [ fhir:v "home" ] ;
-     fhir:text [ fhir:v "台北市大安區仁愛路三段55號8樓" ] ;
-     fhir:line ( [ fhir:v "仁愛路三段55號8樓" ] ) ;
-     fhir:city [ fhir:v "大安區" ] ;
-     fhir:state [ fhir:v "台北市" ] ;
-     fhir:postalCode [ fhir:v "10657" ] ;
-     fhir:country [ fhir:v "TW" ]
-  ] ) . # 
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson ltc-related-person-primary-caregiver-example</b></p><a name=\"ltc-related-person-primary-caregiver-example\"> </a><a name=\"hcltc-related-person-primary-caregiver-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCRelatedPerson.html\">長期照顧－關係人</a></p></div><p><b>是否為主要照顧者</b>: true</p><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"Patient-ltc-patient-cms-chen-ming-hui-example.html\">陳明慧 Female, DoB: 1945-03-15 ( National Person Identifier (TWN): A123456789 (use: official, ))</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode CHILD}\">child</span></p><p><b>name</b>: 陳志強</p><p><b>telecom</b>: ph: 0987654321(Mobile), ph: 02-27031234(Home)</p><p><b>gender</b>: Male</p><p><b>address</b>: 台北市大安區仁愛路三段55號8樓(home)</p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtRelatedPersonIsPrimary-TWLTC" ] ;
+     fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+  ] ;
+  fhir:RelatedPerson.active [ fhir:value "true"^^xsd:boolean] ;
+  fhir:RelatedPerson.patient [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/ltc-patient-cms-chen-ming-hui-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/ltc-patient-cms-chen-ming-hui-example" ]
+  ] ;
+  fhir:RelatedPerson.relationship [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ] ;
+       fhir:Coding.code [ fhir:value "CHILD" ] ;
+       fhir:Coding.display [ fhir:value "child" ]
+     ]
+  ] ;
+  fhir:RelatedPerson.name [
+     fhir:index 0 ;
+     fhir:HumanName.use [ fhir:value "usual" ] ;
+     fhir:HumanName.text [ fhir:value "陳志強" ] ;
+     fhir:HumanName.family [ fhir:value "陳" ] ;
+     fhir:HumanName.given [
+       fhir:value "志強" ;
+       fhir:index 0
+     ]
+  ] ;
+  fhir:RelatedPerson.telecom [
+     fhir:index 0 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "0987654321" ] ;
+     fhir:ContactPoint.use [ fhir:value "mobile" ]
+  ], [
+     fhir:index 1 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "02-27031234" ] ;
+     fhir:ContactPoint.use [ fhir:value "home" ]
+  ] ;
+  fhir:RelatedPerson.gender [ fhir:value "male"] ;
+  fhir:RelatedPerson.address [
+     fhir:index 0 ;
+     fhir:Address.use [ fhir:value "home" ] ;
+     fhir:Address.text [ fhir:value "台北市大安區仁愛路三段55號8樓" ] ;
+     fhir:Address.line [
+       fhir:value "仁愛路三段55號8樓" ;
+       fhir:index 0
+     ] ;
+     fhir:Address.city [ fhir:value "大安區" ] ;
+     fhir:Address.state [ fhir:value "台北市" ] ;
+     fhir:Address.postalCode [ fhir:value "10657" ] ;
+     fhir:Address.country [ fhir:value "TW" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/RelatedPerson/ltc-related-person-primary-caregiver-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

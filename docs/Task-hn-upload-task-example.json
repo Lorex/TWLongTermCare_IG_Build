@@ -1,0 +1,80 @@
+{
+  "resourceType" : "Task",
+  "id" : "hn-upload-task-example",
+  "meta" : {
+    "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/HNAPITask"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task hn-upload-task-example</b></p><a name=\"hn-upload-task-example\"> </a><a name=\"hchn-upload-task-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HNAPITask.html\">居家護理－介接作業</a></p></div><blockquote><p><b>居家護理－共照團隊更新指示</b></p><ul><li>collection: Medicals</li><li>action: preserve</li></ul></blockquote><blockquote><p><b>居家護理－共照團隊更新指示</b></p><ul><li>collection: Relatives</li><li>action: clear</li></ul></blockquote><p><b>status</b>: Received</p><p><b>businessStatus</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow uploaded}\">已上傳，等待排程匯入</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow BaseData}\">個案基本資料</span></p><p><b>authoredOn</b>: 2025-12-08 09:00:00+0800</p><p><b>requester</b>: <a href=\"Organization-hn-organization-example.html\">Organization 示範居家護理所</a></p><h3>Inputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow source-form}\">來源表單</span></td><td><a href=\"QuestionnaireResponse-hn-basedata-example.html\">Response to Questionnaire '-&gt;居家護理－個案基本資料' about '-&gt;陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)'</a></td></tr></table><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow response-code}\">回覆代碼</span></p><p><b>value</b>: 200</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow response-message}\">回覆訊息</span></p><p><b>value</b>: Success.</p></blockquote></div>"
+  },
+  "extension" : [{
+    "extension" : [{
+      "url" : "collection",
+      "valueCode" : "Medicals"
+    },
+    {
+      "url" : "action",
+      "valueCode" : "preserve"
+    }],
+    "url" : "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNCollectionUpdate"
+  },
+  {
+    "extension" : [{
+      "url" : "collection",
+      "valueCode" : "Relatives"
+    },
+    {
+      "url" : "action",
+      "valueCode" : "clear"
+    }],
+    "url" : "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNCollectionUpdate"
+  }],
+  "status" : "received",
+  "businessStatus" : {
+    "coding" : [{
+      "system" : "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow",
+      "code" : "uploaded"
+    }]
+  },
+  "intent" : "order",
+  "code" : {
+    "coding" : [{
+      "system" : "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow",
+      "code" : "BaseData"
+    }]
+  },
+  "authoredOn" : "2025-12-08T09:00:00+08:00",
+  "requester" : {
+    "reference" : "Organization/hn-organization-example"
+  },
+  "input" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow",
+        "code" : "source-form"
+      }]
+    },
+    "valueReference" : {
+      "reference" : "QuestionnaireResponse/hn-basedata-example"
+    }
+  }],
+  "output" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow",
+        "code" : "response-code"
+      }]
+    },
+    "valueInteger" : 200
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow",
+        "code" : "response-message"
+      }]
+    },
+    "valueString" : "Success."
+  }]
+}

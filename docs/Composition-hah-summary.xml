@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="hah-summary"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/HAHCompositionSummary"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Composition hah-summary</b></p><a name="hah-summary"> </a><a name="hchah-summary"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-HAHCompositionSummary.html">在宅急症－結案與轉銜摘要</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-document discharge-summary}">結案摘要</span></p><p><b>encounter</b>: <a href="Encounter-hah-admission.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><p><b>date</b>: 2026-09-05 12:00:00+0800</p><p><b>author</b>: <a href="Practitioner-hah-practitioner.html">Practitioner 李示範</a></p><p><b>title</b>: 王測試在宅急症結案摘要</p><p><b>custodian</b>: <a href="Organization-hah-organization.html">Organization 在宅急症示範醫療機構</a></p></div>
+  </text>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="http://ltc-ig.fhir.tw/CodeSystem/hah-document"/>
+      <code value="discharge-summary"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/hah-patient"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/hah-admission"/>
+  </encounter>
+  <date value="2026-09-05T12:00:00+08:00"/>
+  <author>
+    <reference value="Practitioner/hah-practitioner"/>
+  </author>
+  <title value="王測試在宅急症結案摘要"/>
+  <custodian>
+    <reference value="Organization/hah-organization"/>
+  </custodian>
+  <section>
+    <title value="療程經過"/>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/hah-document"/>
+        <code value="course"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><p>本次在宅照護完成；包含實地與視訊訪視。</p></div>
+    </text>
+    <entry>
+      <reference value="EpisodeOfCare/hah-episode"/>
+    </entry>
+    <entry>
+      <reference value="Encounter/hah-admission"/>
+    </entry>
+    <entry>
+      <reference value="Encounter/hah-visit"/>
+    </entry>
+    <entry>
+      <reference value="Encounter/hah-video-visit"/>
+    </entry>
+    <entry>
+      <reference value="ClinicalImpression/hah-impression"/>
+    </entry>
+    <entry>
+      <reference value="QuestionnaireResponse/hah-assessment"/>
+    </entry>
+  </section>
+  <section>
+    <title value="診斷與問題"/>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/hah-document"/>
+        <code value="problems"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><p>呼吸道感染，療程結束時已解除。</p></div>
+    </text>
+    <entry>
+      <reference value="Condition/hah-condition"/>
+    </entry>
+  </section>
+  <section>
+    <title value="過敏資訊"/>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/hah-document"/>
+        <code value="allergies"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><p>已記錄青黴素過敏及皮疹反應。</p></div>
+    </text>
+    <entry>
+      <reference value="AllergyIntolerance/hah-allergy"/>
+    </entry>
+  </section>
+  <section>
+    <title value="藥物與給藥"/>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/hah-document"/>
+        <code value="medications"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><p>示範輸注與取消給藥；不是臨床處方建議。</p></div>
+    </text>
+    <entry>
+      <reference value="MedicationRequest/hah-medication-order"/>
+    </entry>
+    <entry>
+      <reference value="MedicationAdministration/hah-infusion"/>
+    </entry>
+    <entry>
+      <reference value="MedicationAdministration/hah-medication-not-done"/>
+    </entry>
+  </section>
+  <section>
+    <title value="檢查結果"/>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/hah-document"/>
+        <code value="results"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><p>附體溫與血糖檢驗。</p></div>
+    </text>
+    <entry>
+      <reference value="Observation/hah-temperature"/>
+    </entry>
+    <entry>
+      <reference value="DiagnosticReport/hah-report"/>
+    </entry>
+  </section>
+  <section>
+    <title value="照護計畫與措施"/>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/hah-document"/>
+        <code value="care"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><p>附照護目標、計畫、衛教、同意及設備。</p></div>
+    </text>
+    <entry>
+      <reference value="CarePlan/hah-plan"/>
+    </entry>
+    <entry>
+      <reference value="Goal/hah-goal"/>
+    </entry>
+    <entry>
+      <reference value="Procedure/hah-procedure"/>
+    </entry>
+    <entry>
+      <reference value="Consent/hah-consent"/>
+    </entry>
+    <entry>
+      <reference value="Device/hah-device"/>
+    </entry>
+  </section>
+  <section>
+    <title value="後續照護與交班"/>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/hah-document"/>
+        <code value="follow-up"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><p>已完成本次會診與檢驗工作；後續回診資訊尚未提供。</p></div>
+    </text>
+    <entry>
+      <reference value="ServiceRequest/hah-consult-request"/>
+    </entry>
+    <entry>
+      <reference value="ServiceRequest/hah-lab-request"/>
+    </entry>
+    <entry>
+      <reference value="Task/hah-task"/>
+    </entry>
+    <entry>
+      <reference value="Communication/hah-communication"/>
+    </entry>
+    <entry>
+      <reference value="DocumentReference/hah-attachment"/>
+    </entry>
+  </section>
+</Composition>

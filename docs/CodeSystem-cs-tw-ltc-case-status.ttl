@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,43 +7,55 @@
 
 <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-status> a fhir:CodeSystem ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "cs-tw-ltc-case-status"] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem cs-tw-ltc-case-status</b></p><a name=\"cs-tw-ltc-case-status\"> </a><a name=\"hccs-tw-ltc-case-status\"> </a><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">active<a name=\"cs-tw-ltc-case-status-active\"> </a></td><td>服務中</td></tr><tr><td style=\"white-space:nowrap\">onhold<a name=\"cs-tw-ltc-case-status-onhold\"> </a></td><td>暫停服務</td></tr><tr><td style=\"white-space:nowrap\">finished<a name=\"cs-tw-ltc-case-status-finished\"> </a></td><td>已結案</td></tr></table></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:url [
-     fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-status"^^xsd:anyURI ;
-     fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-status>
-  ] ; # 
-  fhir:version [ fhir:v "1.0.0"] ; # 
-  fhir:name [ fhir:v "CS_TW_LTC_CaseStatus"] ; # 
-  fhir:title [ fhir:v "長照 SDK－個案狀態"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2026-06-25T08:48:04+08:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "經濟部產業發展署"] ; # 
-  fhir:contact ( [
-     fhir:name [ fhir:v "經濟部產業發展署" ] ;
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "https://www.ida.gov.tw/" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "對應 r1.3：服務中、暫停服務、已結案。使用 FHIR EpisodeOfCare status 對應碼。"] ; # 
-  fhir:caseSensitive [ fhir:v true] ; # 
-  fhir:content [ fhir:v "complete"] ; # 
-  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
-  fhir:concept ( [
-     fhir:code [ fhir:v "active" ] ;
-     fhir:display [ fhir:v "服務中" ]
-  ] [
-     fhir:code [ fhir:v "onhold" ] ;
-     fhir:display [ fhir:v "暫停服務" ]
-  ] [
-     fhir:code [ fhir:v "finished" ] ;
-     fhir:display [ fhir:v "已結案" ]
-  ] ) . # 
+  fhir:Resource.id [ fhir:value "cs-tw-ltc-case-status"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem cs-tw-ltc-case-status</b></p><a name=\"cs-tw-ltc-case-status\"> </a><a name=\"hccs-tw-ltc-case-status\"> </a><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">active<a name=\"cs-tw-ltc-case-status-active\"> </a></td><td>服務中</td></tr><tr><td style=\"white-space:nowrap\">onhold<a name=\"cs-tw-ltc-case-status-onhold\"> </a></td><td>暫停服務</td></tr><tr><td style=\"white-space:nowrap\">finished<a name=\"cs-tw-ltc-case-status-finished\"> </a></td><td>已結案</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-status"] ;
+  fhir:CodeSystem.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ] ;
+     fhir:Identifier.value [ fhir:value "urn:oid:2.25.329600686398508123680338960293654731351" ]
+  ] ;
+  fhir:CodeSystem.version [ fhir:value "1.1.0"] ;
+  fhir:CodeSystem.name [ fhir:value "CS_TW_LTC_CaseStatus"] ;
+  fhir:CodeSystem.title [ fhir:value "長照 SDK－個案狀態"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-09-17T17:33:17+08:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "經濟部產業發展署"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "經濟部產業發展署" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.ida.gov.tw/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "對應 r1.3：服務中、暫停服務、已結案。使用 FHIR EpisodeOfCare status 對應碼。"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "3"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "active" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "服務中" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "onhold" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "暫停服務" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "finished" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "已結案" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-case-status.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

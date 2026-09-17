@@ -1,0 +1,110 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Task/hn-upload-task-example> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hn-upload-task-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HNAPITask" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HNAPITask>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task hn-upload-task-example</b></p><a name=\"hn-upload-task-example\"> </a><a name=\"hchn-upload-task-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HNAPITask.html\">居家護理－介接作業</a></p></div><blockquote><p><b>居家護理－共照團隊更新指示</b></p><ul><li>collection: Medicals</li><li>action: preserve</li></ul></blockquote><blockquote><p><b>居家護理－共照團隊更新指示</b></p><ul><li>collection: Relatives</li><li>action: clear</li></ul></blockquote><p><b>status</b>: Received</p><p><b>businessStatus</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow uploaded}\">已上傳，等待排程匯入</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow BaseData}\">個案基本資料</span></p><p><b>authoredOn</b>: 2025-12-08 09:00:00+0800</p><p><b>requester</b>: <a href=\"Organization-hn-organization-example.html\">Organization 示範居家護理所</a></p><h3>Inputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow source-form}\">來源表單</span></td><td><a href=\"QuestionnaireResponse-hn-basedata-example.html\">Response to Questionnaire '-&gt;居家護理－個案基本資料' about '-&gt;陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)'</a></td></tr></table><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow response-code}\">回覆代碼</span></p><p><b>value</b>: 200</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow response-message}\">回覆訊息</span></p><p><b>value</b>: Success.</p></blockquote></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Extension.url [ fhir:value "collection" ] ;
+       fhir:Extension.valueCode [ fhir:value "Medicals" ]
+     ], [
+       fhir:index 1 ;
+       fhir:Extension.url [ fhir:value "action" ] ;
+       fhir:Extension.valueCode [ fhir:value "preserve" ]
+     ] ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNCollectionUpdate" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Extension.url [ fhir:value "collection" ] ;
+       fhir:Extension.valueCode [ fhir:value "Relatives" ]
+     ], [
+       fhir:index 1 ;
+       fhir:Extension.url [ fhir:value "action" ] ;
+       fhir:Extension.valueCode [ fhir:value "clear" ]
+     ] ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNCollectionUpdate" ]
+  ] ;
+  fhir:Task.status [ fhir:value "received"] ;
+  fhir:Task.businessStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow" ] ;
+       fhir:Coding.code [ fhir:value "uploaded" ]
+     ]
+  ] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow" ] ;
+       fhir:Coding.code [ fhir:value "BaseData" ]
+     ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2025-12-08T09:00:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/hn-organization-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/hn-organization-example" ]
+  ] ;
+  fhir:Task.input [
+     fhir:index 0 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow" ] ;
+         fhir:Coding.code [ fhir:value "source-form" ]
+       ]
+     ] ;
+     fhir:Task.input.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/QuestionnaireResponse/hn-basedata-example> ;
+       fhir:Reference.reference [ fhir:value "QuestionnaireResponse/hn-basedata-example" ]
+     ]
+  ] ;
+  fhir:Task.output [
+     fhir:index 0 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow" ] ;
+         fhir:Coding.code [ fhir:value "response-code" ]
+       ]
+     ] ;
+     fhir:Task.output.valueInteger [ fhir:value "200"^^xsd:integer ]
+  ], [
+     fhir:index 1 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow" ] ;
+         fhir:Coding.code [ fhir:value "response-message" ]
+       ]
+     ] ;
+     fhir:Task.output.valueString [ fhir:value "Success." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Task/hn-upload-task-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

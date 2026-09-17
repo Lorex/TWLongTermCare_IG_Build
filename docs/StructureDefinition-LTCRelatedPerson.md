@@ -1,4 +1,4 @@
-# 長期照顧－關係人 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長期照顧－關係人 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:LTCRelatedPerson |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:LTCRelatedPerson |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 RelatedPerson Resource，以呈現住民的關係人，包含家屬、照顧者、法定代理人等與住民有關的人員資料。 
@@ -17,11 +17,11 @@
 **Usages:**
 
 * Use this Profile: [照顧管理評估量表文件打包](StructureDefinition-LTCBundleCMS.md) and [長期照顧管理中心個案服務初篩表/轉介單文件打包](StructureDefinition-LTCBundleReferral.md)
-* Refer to this Profile: [長期照顧－照顧計畫](StructureDefinition-LTCCarePlan.md), [長期照顧－照顧團隊](StructureDefinition-LTCCareTeam.md), [照顧管理評估量表文件架構](StructureDefinition-LTCCompositionCMS.md), [長期照護管理中心個案服務初篩表/轉介單文件架構](StructureDefinition-LTCCompositionReferral.md)... Show 7 more, [長期照顧－病情、問題或診斷](StructureDefinition-LTCCondition.md), [長期照顧－照顧目標](StructureDefinition-LTCGoal.md), [長期照顧－照護活動](StructureDefinition-LTCProcedureCareActivity.md), [長期照顧－問卷回覆](StructureDefinition-LTCQuestionnaireResponse.md), [長期照顧－臨床失智評估量表回覆](StructureDefinition-LTCQuestionnaireResponseCDR.md), [長期照顧－簡易智能狀態測驗回覆](StructureDefinition-LTCQuestionnaireResponseMMSE.md) and [運動處方－運動計畫](StructureDefinition-PASportCarePlan.md)
+* Refer to this Profile: [在宅急症－照護資料集](StructureDefinition-HAHCareDataset.md), [在宅急症－照護團隊](StructureDefinition-HAHCareTeam.md), [在宅急症－照會與交班](StructureDefinition-HAHCommunication.md), [在宅急症－照護同意](StructureDefinition-HAHConsent.md)... Show 12 more, [在宅急症－給藥與輸注](StructureDefinition-HAHMedicationAdministration.md), [長期照顧－照顧計畫](StructureDefinition-LTCCarePlan.md), [長期照顧－照顧團隊](StructureDefinition-LTCCareTeam.md), [照顧管理評估量表文件架構](StructureDefinition-LTCCompositionCMS.md), [長期照護管理中心個案服務初篩表/轉介單文件架構](StructureDefinition-LTCCompositionReferral.md), [長期照顧－病情、問題或診斷](StructureDefinition-LTCCondition.md), [長期照顧－照顧目標](StructureDefinition-LTCGoal.md), [長期照顧－照護活動](StructureDefinition-LTCProcedureCareActivity.md), [長期照顧－問卷回覆](StructureDefinition-LTCQuestionnaireResponse.md), [長期照顧－臨床失智評估量表回覆](StructureDefinition-LTCQuestionnaireResponseCDR.md), [長期照顧－簡易智能狀態測驗回覆](StructureDefinition-LTCQuestionnaireResponseMMSE.md) and [運動處方－運動計畫](StructureDefinition-PASportCarePlan.md)
 * Examples for this Profile: [RelatedPerson/ltc-related-person-primary-caregiver-example](RelatedPerson-ltc-related-person-primary-caregiver-example.md) and [RelatedPerson/ltc-related-person-primary-caregiver-referral-example](RelatedPerson-ltc-related-person-primary-caregiver-referral-example.md)
 * CapabilityStatements using this Profile: [臺灣長期照顧實作指引 - 用戶端能力聲明](CapabilityStatement-CapabilityStatementLTCClient.md) and [臺灣長期照顧實作指引 - 伺服端能力聲明](CapabilityStatement-CapabilityStatementLTCServer.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCRelatedPerson)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-LTCRelatedPerson.json)
 
 ### Formal Views of Profile Content
 
@@ -40,11 +40,11 @@ Other representations of profile: [CSV](StructureDefinition-LTCRelatedPerson.csv
   "resourceType" : "StructureDefinition",
   "id" : "LTCRelatedPerson",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCRelatedPerson",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCRelatedPerson",
   "title" : "長期照顧－關係人",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

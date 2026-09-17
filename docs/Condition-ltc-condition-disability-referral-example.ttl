@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,65 +7,61 @@
 
 <http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-referral-example> a fhir:Condition ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ltc-condition-disability-referral-example"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisability"^^xsd:anyURI ;
-       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisability>
-     ] )
-  ] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition ltc-condition-disability-referral-example</b></p><a name=\"ltc-condition-disability-referral-example\"> </a><a name=\"hcltc-condition-disability-referral-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCConditionDisability.html\">長期照顧－身心障礙手冊持有狀態</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}\">Problem List Item</span></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityCS-TWLTC disability-handbook}\">有身心障礙手冊</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-referral-chen-ming-hui-example.html\">陳明慧 Female, DoB: 1945-03-15 ( National Person Identifier (TWN): A123456789 (use: official, ))</a></p><p><b>onset</b>: 2015-08-20</p><p><b>recorder</b>: <a href=\"PractitionerRole-ltc-practitioner-role-nurse-example.html\">PractitionerRole Registered nurse</a></p></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:clinicalStatus [
-     fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/condition-clinical>
-       ] ;
-       fhir:code [ fhir:v "active" ]
-     ] )
-  ] ; # 
-  fhir:verificationStatus [
-     fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/condition-ver-status"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/condition-ver-status>
-       ] ;
-       fhir:code [ fhir:v "confirmed" ]
-     ] )
-  ] ; # 
-  fhir:category ( [
-     fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/condition-category>
-       ] ;
-       fhir:code [ fhir:v "problem-list-item" ]
-     ] )
-  ] ) ; # 
-  fhir:code [
-     fhir:coding ( [
-       fhir:system [
-         fhir:v "http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityCS-TWLTC"^^xsd:anyURI ;
-         fhir:l <http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityCS-TWLTC>
-       ] ;
-       fhir:code [ fhir:v "disability-handbook" ]
-     ] )
-  ] ; # 
-  fhir:subject [
-     fhir:l <http://ltc-ig.fhir.tw/Patient/ltc-patient-referral-chen-ming-hui-example> ;
-     fhir:reference [ fhir:v "Patient/ltc-patient-referral-chen-ming-hui-example" ]
-  ] ; # 
-  fhir:onset [
-     a fhir:DateTime ;
-     fhir:v "2015-08-20"^^xsd:date
-  ] ; # 
-  fhir:recorder [
-     fhir:l <http://ltc-ig.fhir.tw/PractitionerRole/ltc-practitioner-role-nurse-example> ;
-     fhir:reference [ fhir:v "PractitionerRole/ltc-practitioner-role-nurse-example" ]
-  ] . # 
+  fhir:Resource.id [ fhir:value "ltc-condition-disability-referral-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisability" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCConditionDisability>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition ltc-condition-disability-referral-example</b></p><a name=\"ltc-condition-disability-referral-example\"> </a><a name=\"hcltc-condition-disability-referral-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCConditionDisability.html\">長期照顧－身心障礙手冊持有狀態</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}\">Problem List Item</span></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityCS-TWLTC disability-handbook}\">有身心障礙手冊</span></p><p><b>subject</b>: <a href=\"Patient-ltc-patient-referral-chen-ming-hui-example.html\">陳明慧 Female, DoB: 1945-03-15 ( National Person Identifier (TWN): A123456789 (use: official, ))</a></p><p><b>onset</b>: 2015-08-20</p><p><b>recorder</b>: <a href=\"PractitionerRole-ltc-practitioner-role-nurse-example.html\">PractitionerRole Registered nurse</a></p></div>"
+  ] ;
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ] ;
+       fhir:Coding.code [ fhir:value "active" ]
+     ]
+  ] ;
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ] ;
+       fhir:Coding.code [ fhir:value "confirmed" ]
+     ]
+  ] ;
+  fhir:Condition.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-category" ] ;
+       fhir:Coding.code [ fhir:value "problem-list-item" ]
+     ]
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/ConditionDisabilityCS-TWLTC" ] ;
+       fhir:Coding.code [ fhir:value "disability-handbook" ]
+     ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/ltc-patient-referral-chen-ming-hui-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/ltc-patient-referral-chen-ming-hui-example" ]
+  ] ;
+  fhir:Condition.onsetDateTime [ fhir:value "2015-08-20"^^xsd:date] ;
+  fhir:Condition.recorder [
+     fhir:link <http://ltc-ig.fhir.tw/PractitionerRole/ltc-practitioner-role-nurse-example> ;
+     fhir:Reference.reference [ fhir:value "PractitionerRole/ltc-practitioner-role-nurse-example" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Condition/ltc-condition-disability-referral-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

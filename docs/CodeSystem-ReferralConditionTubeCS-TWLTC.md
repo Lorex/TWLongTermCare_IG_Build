@@ -1,4 +1,4 @@
-# 轉介單管路狀況代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 轉介單管路狀況代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,15 +8,16 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionTubeCS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionTubeCS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-08-25 | *Computable Name*:ReferralConditionTubeCSTWLTC |
+| *Other Identifiers:*OID:2.25.67405370551151571954551718356546714801 | |
 
  
 用於表述轉介單的狀況代碼，包含身心障礙手冊、管路、壓傷、居住狀況、看護、主要問題及需求等。 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* [ReferralConditionTubeVSTWLTC](ValueSet-ReferralConditionTubeVS-TWLTC.md)
+* [管路狀況值集](ValueSet-ReferralConditionTubeVS-TWLTC.md)
 
 
 
@@ -27,7 +28,11 @@
   "resourceType" : "CodeSystem",
   "id" : "ReferralConditionTubeCS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionTubeCS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.67405370551151571954551718356546714801"
+  }],
+  "version" : "1.1.0",
   "name" : "ReferralConditionTubeCSTWLTC",
   "title" : "轉介單管路狀況代碼",
   "status" : "active",

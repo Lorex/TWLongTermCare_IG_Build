@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationOutcome xmlns="http://hl7.org/fhir">
+  <id value="ltc-operationoutcome-feeaudit-example"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/LTCOperationOutcomeFeeAudit"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: OperationOutcome ltc-operationoutcome-feeaudit-example</b></p><a name="ltc-operationoutcome-feeaudit-example"> </a><a name="hcltc-operationoutcome-feeaudit-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-LTCOperationOutcomeFeeAudit.html">長照支付審查－申報檢核結果</a></p></div><p><b>長照 SDK－案件編號（CASENO）</b>: 201907C010163</p><h3>Issues</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Expression</b></td></tr><tr><td style="display: none">*</td><td>Error</td><td>Processing Failure</td><td><span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-error-code E4015}">單位已執行申報確認通知，不在受理新的服務紀錄申報</span></td><td>錯誤服務記錄（err_records）：識別碼（objid）882601914；來源系統別（source_system）TranCareCenter；交易序號（trans_no）00106</td><td>Claim.identifier.where(system='http://ltc-ig.fhir.tw/identifier/feeaudit/objid' and value='882601914')</td></tr></table></div>
+  </text>
+  <extension url="http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-CaseNo">
+    <valueString value="201907C010163"/>
+  </extension>
+  <issue>
+    <severity value="error"/>
+    <code value="processing"/>
+    <details>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-error-code"/>
+        <code value="E4015"/>
+        <display value="單位已執行申報確認通知，不在受理新的服務紀錄申報"/>
+      </coding>
+      <text value="單位已執行申報確認通知，不在受理新的服務紀錄申報"/>
+    </details>
+    <diagnostics value="錯誤服務記錄（err_records）：識別碼（objid）882601914；來源系統別（source_system）TranCareCenter；交易序號（trans_no）00106"/>
+    <expression value="Claim.identifier.where(system='http://ltc-ig.fhir.tw/identifier/feeaudit/objid' and value='882601914')"/>
+  </issue>
+</OperationOutcome>

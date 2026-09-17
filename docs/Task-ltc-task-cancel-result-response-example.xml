@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Task xmlns="http://hl7.org/fhir">
+  <id value="ltc-task-cancel-result-response-example"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Task ltc-task-cancel-result-response-example</b></p><a name="ltc-task-cancel-result-response-example"> </a><a name="hcltc-task-cancel-result-response-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-LTCTaskFeeAudit.html">長照支付審查－申報交易任務</a></p></div><p><b>identifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm</code>/201901</p><p><b>groupIdentifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no</code>/CR001</p><p><b>partOf</b>: <a href="Task-ltc-task-feeapply-example.html">Task 服務記錄申報</a></p><p><b>status</b>: Completed</p><p><b>intent</b>: order</p><p><b>code</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function CancelResultResponse}">取消交易單處理結果回報</span></p><p><b>authoredOn</b>: 2019-02-13 09:15:00+0800</p><p><b>requester</b>: <a href="Organization-ltc-organization-example.html">Organization 新北市私立安康老人長期照顧中心（養護型）</a></p><p><b>note</b>: </p><blockquote><div><p>來源系統別（source_system）：TranCareCenter</p>
+</div></blockquote><h3>Inputs</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:">所要取消結果回報之交易序號</span></td><td>TranQ00083</td></tr></table><h3>Outputs</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:">批次處理結果</span></td><td>取消交易單處理結果回報完成!</td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm"/>
+    <value value="201901"/>
+  </identifier>
+  <groupIdentifier>
+    <system value="http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no"/>
+    <value value="CR001"/>
+  </groupIdentifier>
+  <partOf>
+    <reference value="Task/ltc-task-feeapply-example"/>
+  </partOf>
+  <status value="completed"/>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function"/>
+      <code value="CancelResultResponse"/>
+      <display value="取消交易單處理結果回報"/>
+    </coding>
+  </code>
+  <authoredOn value="2019-02-13T09:15:00+08:00"/>
+  <requester>
+    <reference value="Organization/ltc-organization-example"/>
+  </requester>
+  <note>
+    <text value="來源系統別（source_system）：TranCareCenter"/>
+  </note>
+  <input>
+    <type>
+      <text value="所要取消結果回報之交易序號"/>
+    </type>
+    <valueString value="TranQ00083"/>
+  </input>
+  <output>
+    <type>
+      <text value="批次處理結果"/>
+    </type>
+    <valueString value="取消交易單處理結果回報完成!"/>
+  </output>
+</Task>

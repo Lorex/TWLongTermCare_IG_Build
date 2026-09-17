@@ -1,4 +1,4 @@
-# 長期照顧－任務管理 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長期照顧－任務管理 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,17 +8,18 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCTask | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:LTCTask |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCTask | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:LTCTask |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Task Resource，以呈現長期照顧情境中的轉介確認、照顧計畫狀態更新等任務管理需求。 
 
 **Usages:**
 
+* Derived from this Profile: [居家護理－介接作業](StructureDefinition-HNAPITask.md) and [長照支付審查－申報交易任務](StructureDefinition-LTCTaskFeeAudit.md)
 * Examples for this Profile: [Task/ltc-task-referral-acceptance-example](Task-ltc-task-referral-acceptance-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCTask)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-LTCTask.json)
 
 ### Formal Views of Profile Content
 
@@ -37,11 +38,11 @@ Other representations of profile: [CSV](StructureDefinition-LTCTask.csv), [Excel
   "resourceType" : "StructureDefinition",
   "id" : "LTCTask",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCTask",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCTask",
   "title" : "長期照顧－任務管理",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

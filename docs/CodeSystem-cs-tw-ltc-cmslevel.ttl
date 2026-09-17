@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,64 +7,83 @@
 
 <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel> a fhir:CodeSystem ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "cs-tw-ltc-cmslevel"] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem cs-tw-ltc-cmslevel</b></p><a name=\"cs-tw-ltc-cmslevel\"> </a><a name=\"hccs-tw-ltc-cmslevel\"> </a><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"cs-tw-ltc-cmslevel-1\"> </a></td></tr><tr><td style=\"white-space:nowrap\">1a<a name=\"cs-tw-ltc-cmslevel-1a\"> </a></td></tr><tr><td style=\"white-space:nowrap\">1b<a name=\"cs-tw-ltc-cmslevel-1b\"> </a></td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"cs-tw-ltc-cmslevel-2\"> </a></td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"cs-tw-ltc-cmslevel-3\"> </a></td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"cs-tw-ltc-cmslevel-4\"> </a></td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"cs-tw-ltc-cmslevel-5\"> </a></td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"cs-tw-ltc-cmslevel-6\"> </a></td></tr><tr><td style=\"white-space:nowrap\">7<a name=\"cs-tw-ltc-cmslevel-7\"> </a></td></tr><tr><td style=\"white-space:nowrap\">8<a name=\"cs-tw-ltc-cmslevel-8\"> </a></td></tr></table></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:url [
-     fhir:v "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel"^^xsd:anyURI ;
-     fhir:l <http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel>
-  ] ; # 
-  fhir:version [ fhir:v "1.0.0"] ; # 
-  fhir:name [ fhir:v "CS_TW_LTC_CMSLevel"] ; # 
-  fhir:title [ fhir:v "長照 SDK－CMS 等級"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2026-06-25T08:48:04+08:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "經濟部產業發展署"] ; # 
-  fhir:contact ( [
-     fhir:name [ fhir:v "經濟部產業發展署" ] ;
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "https://www.ida.gov.tw/" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "對應 r2.5：1, 1a, 1b, 2..8。"] ; # 
-  fhir:caseSensitive [ fhir:v true] ; # 
-  fhir:content [ fhir:v "complete"] ; # 
-  fhir:count [ fhir:v "10"^^xsd:nonNegativeInteger] ; # 
-  fhir:concept ( [
-     fhir:code [ fhir:v "1" ] ;
-     fhir:display [ fhir:v "1" ]
-  ] [
-     fhir:code [ fhir:v "1a" ] ;
-     fhir:display [ fhir:v "1a" ]
-  ] [
-     fhir:code [ fhir:v "1b" ] ;
-     fhir:display [ fhir:v "1b" ]
-  ] [
-     fhir:code [ fhir:v "2" ] ;
-     fhir:display [ fhir:v "2" ]
-  ] [
-     fhir:code [ fhir:v "3" ] ;
-     fhir:display [ fhir:v "3" ]
-  ] [
-     fhir:code [ fhir:v "4" ] ;
-     fhir:display [ fhir:v "4" ]
-  ] [
-     fhir:code [ fhir:v "5" ] ;
-     fhir:display [ fhir:v "5" ]
-  ] [
-     fhir:code [ fhir:v "6" ] ;
-     fhir:display [ fhir:v "6" ]
-  ] [
-     fhir:code [ fhir:v "7" ] ;
-     fhir:display [ fhir:v "7" ]
-  ] [
-     fhir:code [ fhir:v "8" ] ;
-     fhir:display [ fhir:v "8" ]
-  ] ) . # 
+  fhir:Resource.id [ fhir:value "cs-tw-ltc-cmslevel"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem cs-tw-ltc-cmslevel</b></p><a name=\"cs-tw-ltc-cmslevel\"> </a><a name=\"hccs-tw-ltc-cmslevel\"> </a><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"cs-tw-ltc-cmslevel-1\"> </a></td></tr><tr><td style=\"white-space:nowrap\">1a<a name=\"cs-tw-ltc-cmslevel-1a\"> </a></td></tr><tr><td style=\"white-space:nowrap\">1b<a name=\"cs-tw-ltc-cmslevel-1b\"> </a></td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"cs-tw-ltc-cmslevel-2\"> </a></td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"cs-tw-ltc-cmslevel-3\"> </a></td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"cs-tw-ltc-cmslevel-4\"> </a></td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"cs-tw-ltc-cmslevel-5\"> </a></td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"cs-tw-ltc-cmslevel-6\"> </a></td></tr><tr><td style=\"white-space:nowrap\">7<a name=\"cs-tw-ltc-cmslevel-7\"> </a></td></tr><tr><td style=\"white-space:nowrap\">8<a name=\"cs-tw-ltc-cmslevel-8\"> </a></td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel"] ;
+  fhir:CodeSystem.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ] ;
+     fhir:Identifier.value [ fhir:value "urn:oid:2.25.75074889836106109751005844669027341181" ]
+  ] ;
+  fhir:CodeSystem.version [ fhir:value "1.1.0"] ;
+  fhir:CodeSystem.name [ fhir:value "CS_TW_LTC_CMSLevel"] ;
+  fhir:CodeSystem.title [ fhir:value "長照 SDK－CMS 等級"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-09-17T17:33:17+08:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "經濟部產業發展署"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "經濟部產業發展署" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.ida.gov.tw/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "對應 r2.5：1, 1a, 1b, 2..8。"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "10"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "1" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1a" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "1a" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1b" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "1b" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "2" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "3" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "4" ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "5" ]
+  ], [
+     fhir:index 7 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "6" ]
+  ], [
+     fhir:index 8 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "7" ]
+  ], [
+     fhir:index 9 ;
+     fhir:CodeSystem.concept.code [ fhir:value "8" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "8" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

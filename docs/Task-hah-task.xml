@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Task xmlns="http://hl7.org/fhir">
+  <id value="hah-task"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/HAHVisitTask"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Task hah-task</b></p><a name="hah-task"> </a><a name="hchah-task"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-HAHVisitTask.html">在宅急症－照護工作</a></p></div><p><b>status</b>: Completed</p><p><b>intent</b>: order</p><p><b>code</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity laboratory}">檢驗</span></p><p><b>focus</b>: <a href="ServiceRequest-hah-lab-request.html">ServiceRequest </a></p><p><b>for</b>: <a href="Patient-hah-patient.html">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>encounter</b>: <a href="Encounter-hah-visit.html">Encounter: extension = in-person; status = finished; class = home health (ActCode#HH); type = 訪視; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-01 10:00:00+0800</a></p><p><b>executionPeriod</b>: 2026-09-01 09:10:00+0800 --&gt; 2026-09-01 09:20:00+0800</p><p><b>authoredOn</b>: 2026-09-01 09:05:00+0800</p><p><b>requester</b>: <a href="Practitioner-hah-practitioner.html">Practitioner 李示範</a></p><p><b>owner</b>: <a href="CareTeam-hah-team.html">CareTeam: status = inactive</a></p><p><b>location</b>: <a href="Location-hah-location.html">Location 王測試居住地</a></p><h3>Restrictions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Period</b></td></tr><tr><td style="display: none">*</td><td>2026-09-01 09:05:00+0800 --&gt; 2026-09-01 10:00:00+0800</td></tr></table><h3>Outputs</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:">檢驗報告</span></td><td><a href="DiagnosticReport-hah-report.html">Diagnostic Report for '' for '-&gt;王測試 Male, DoB: 1945-03-15 ( Provider number)'</a></td></tr></table></div>
+  </text>
+  <status value="completed"/>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="http://ltc-ig.fhir.tw/CodeSystem/hah-activity"/>
+      <code value="laboratory"/>
+    </coding>
+  </code>
+  <focus>
+    <reference value="ServiceRequest/hah-lab-request"/>
+  </focus>
+  <for>
+    <reference value="Patient/hah-patient"/>
+  </for>
+  <encounter>
+    <reference value="Encounter/hah-visit"/>
+  </encounter>
+  <executionPeriod>
+    <start value="2026-09-01T09:10:00+08:00"/>
+    <end value="2026-09-01T09:20:00+08:00"/>
+  </executionPeriod>
+  <authoredOn value="2026-09-01T09:05:00+08:00"/>
+  <requester>
+    <reference value="Practitioner/hah-practitioner"/>
+  </requester>
+  <owner>
+    <reference value="CareTeam/hah-team"/>
+  </owner>
+  <location>
+    <reference value="Location/hah-location"/>
+  </location>
+  <restriction>
+    <period>
+      <start value="2026-09-01T09:05:00+08:00"/>
+      <end value="2026-09-01T10:00:00+08:00"/>
+    </period>
+  </restriction>
+  <output>
+    <type>
+      <text value="檢驗報告"/>
+    </type>
+    <valueReference>
+      <reference value="DiagnosticReport/hah-report"/>
+    </valueReference>
+  </output>
+</Task>

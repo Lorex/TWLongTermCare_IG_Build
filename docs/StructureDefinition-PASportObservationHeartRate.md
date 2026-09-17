@@ -1,4 +1,4 @@
-# 基礎生理量測－心率 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 基礎生理量測－心率 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,17 +8,19 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationHeartRate | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:PASportObservationHeartRate |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationHeartRate | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:PASportObservationHeartRate |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之心率資料。 
 
 **Usages:**
 
-* Examples for this Profile: [Observation/pasport-observation-heart-rate-example](Observation-pasport-observation-heart-rate-example.md)
+* Use this Profile: [居家護理－生命徵象交換集合](StructureDefinition-HNVitalSignsBundle.md)
+* Refer to this Profile: [居家護理－生命徵象](StructureDefinition-HNVitalSigns.md)
+* Examples for this Profile: [Observation/hn-pulse-example](Observation-hn-pulse-example.md) and [Observation/pasport-observation-heart-rate-example](Observation-pasport-observation-heart-rate-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/PASportObservationHeartRate)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-PASportObservationHeartRate.json)
 
 ### Formal Views of Profile Content
 
@@ -37,11 +39,11 @@ Other representations of profile: [CSV](StructureDefinition-PASportObservationHe
   "resourceType" : "StructureDefinition",
   "id" : "PASportObservationHeartRate",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationHeartRate",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "PASportObservationHeartRate",
   "title" : "基礎生理量測－心率",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -89,10 +91,6 @@ Other representations of profile: [CSV](StructureDefinition-PASportObservationHe
   "derivation" : "constraint",
   "differential" : {
     "element" : [{
-      "id" : "Observation",
-      "path" : "Observation"
-    },
-    {
       "id" : "Observation.code",
       "path" : "Observation.code",
       "short" : "心率"

@@ -1,0 +1,25 @@
+{
+  "resourceType" : "OperationOutcome",
+  "id" : "ltc-operationoutcome-feeaudit-objdel-example",
+  "meta" : {
+    "profile" : ["http://ltc-ig.fhir.tw/StructureDefinition/LTCOperationOutcomeFeeAudit"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome ltc-operationoutcome-feeaudit-objdel-example</b></p><a name=\"ltc-operationoutcome-feeaudit-objdel-example\"> </a><a name=\"hcltc-operationoutcome-feeaudit-objdel-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCOperationOutcomeFeeAudit.html\">長照支付審查－申報檢核結果</a></p></div><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>Error</td><td>Not Found</td><td><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-error-code E4032}\">此筆服務紀錄不存在</span></td><td>服務紀錄刪除失敗資料（delete_exception_records）：objid = 123456789、err_code = E4032、err_message = 此筆服務紀錄不存在</td><td>Claim.identifier.where(system='http://ltc-ig.fhir.tw/identifier/feeaudit/objid' and value='123456789')</td></tr></table></div>"
+  },
+  "issue" : [{
+    "severity" : "error",
+    "code" : "not-found",
+    "details" : {
+      "coding" : [{
+        "system" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-error-code",
+        "code" : "E4032",
+        "display" : "此筆服務紀錄不存在"
+      }],
+      "text" : "此筆服務紀錄不存在"
+    },
+    "diagnostics" : "服務紀錄刪除失敗資料（delete_exception_records）：objid = 123456789、err_code = E4032、err_message = 此筆服務紀錄不存在",
+    "expression" : ["Claim.identifier.where(system='http://ltc-ig.fhir.tw/identifier/feeaudit/objid' and value='123456789')"]
+  }]
+}

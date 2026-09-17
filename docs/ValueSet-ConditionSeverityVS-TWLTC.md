@@ -1,4 +1,4 @@
-# 疾病嚴重度擴展值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 疾病嚴重度擴展值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ConditionSeverityVS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ConditionSeverityVS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-08-25 | *Computable Name*:ConditionSeverityVSTWLTC |
+| *Other Identifiers:*OID:2.25.290717288293434558866263121671520644301 | |
 
  
 用以表述疾病嚴重度之擴展值集，包含疾病嚴重度之描述內容。配合身心障礙手冊障礙程度分級，包含輕度、中度、重度、極重度等代碼。 
@@ -46,7 +47,11 @@
   "resourceType" : "ValueSet",
   "id" : "ConditionSeverityVS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/ConditionSeverityVS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.290717288293434558866263121671520644301"
+  }],
+  "version" : "1.1.0",
   "name" : "ConditionSeverityVSTWLTC",
   "title" : "疾病嚴重度擴展值集",
   "status" : "active",

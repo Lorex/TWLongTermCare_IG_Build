@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<EpisodeOfCare xmlns="http://hl7.org/fhir">
+  <id value="hah-transfer-episode"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/HAHEpisodeOfCare"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: EpisodeOfCare hah-transfer-episode</b></p><a name="hah-transfer-episode"> </a><a name="hchah-transfer-episode"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-HAHEpisodeOfCare.html">在宅急症－收案療程</a></p></div><p><b>在宅急症－療程結束原因</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-outcome hospital-transfer}">轉急診或住院</span></p><p><b>identifier</b>: <code>https://example.org/hah/episodes</code>/HAH-20260910-002</p><p><b>status</b>: Finished</p><p><b>type</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity acute-home}">在宅急症照護</span></p><p><b>patient</b>: <a href="Patient-hah-patient.html">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>managingOrganization</b>: <a href="Organization-hah-organization.html">Organization 在宅急症示範醫療機構</a></p><p><b>period</b>: 2026-09-10 08:00:00+0800 --&gt; 2026-09-11 10:00:00+0800</p></div>
+  </text>
+  <extension url="http://ltc-ig.fhir.tw/StructureDefinition/ExtHAHOutcome">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/hah-outcome"/>
+        <code value="hospital-transfer"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <identifier>
+    <system value="https://example.org/hah/episodes"/>
+    <value value="HAH-20260910-002"/>
+  </identifier>
+  <status value="finished"/>
+  <type>
+    <coding>
+      <system value="http://ltc-ig.fhir.tw/CodeSystem/hah-activity"/>
+      <code value="acute-home"/>
+    </coding>
+  </type>
+  <patient>
+    <reference value="Patient/hah-patient"/>
+  </patient>
+  <managingOrganization>
+    <reference value="Organization/hah-organization"/>
+  </managingOrganization>
+  <period>
+    <start value="2026-09-10T08:00:00+08:00"/>
+    <end value="2026-09-11T10:00:00+08:00"/>
+  </period>
+</EpisodeOfCare>

@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/OperationOutcome/ltc-operationoutcome-feeaudit-exception-example> a fhir:OperationOutcome ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ltc-operationoutcome-feeaudit-exception-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCOperationOutcomeFeeAudit" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCOperationOutcomeFeeAudit>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome ltc-operationoutcome-feeaudit-exception-example</b></p><a name=\"ltc-operationoutcome-feeaudit-exception-example\"> </a><a name=\"hcltc-operationoutcome-feeaudit-exception-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCOperationOutcomeFeeAudit.html\">長照支付審查－申報檢核結果</a></p></div><p><b>長照 SDK－案件編號（CASENO）</b>: 201907BA10128</p><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>Error</td><td>Processing Failure</td><td><span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-error-code E4015}\">此筆服務紀錄已經收件不能分案</span></td><td>分案異常資料（exception_records）：objid = 19260121、err_code = E4015、err_message = 此筆服務紀錄已經收件不能分案</td><td>Claim.identifier.where(system='http://ltc-ig.fhir.tw/identifier/feeaudit/objid' and value='19260121')</td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-CaseNo" ] ;
+     fhir:Extension.valueString [ fhir:value "201907BA10128" ]
+  ] ;
+  fhir:OperationOutcome.issue [
+     fhir:index 0 ;
+     fhir:OperationOutcome.issue.severity [ fhir:value "error" ] ;
+     fhir:OperationOutcome.issue.code [ fhir:value "processing" ] ;
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-error-code" ] ;
+         fhir:Coding.code [ fhir:value "E4015" ] ;
+         fhir:Coding.display [ fhir:value "單位已執行申報確認通知，不在受理新的服務紀錄申報" ]
+       ] ;
+       fhir:CodeableConcept.text [ fhir:value "此筆服務紀錄已經收件不能分案" ]
+     ] ;
+     fhir:OperationOutcome.issue.diagnostics [ fhir:value "分案異常資料（exception_records）：objid = 19260121、err_code = E4015、err_message = 此筆服務紀錄已經收件不能分案" ] ;
+     fhir:OperationOutcome.issue.expression [
+       fhir:value "Claim.identifier.where(system='http://ltc-ig.fhir.tw/identifier/feeaudit/objid' and value='19260121')" ;
+       fhir:index 0
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/OperationOutcome/ltc-operationoutcome-feeaudit-exception-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

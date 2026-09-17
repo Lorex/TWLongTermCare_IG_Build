@@ -1,0 +1,144 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Observation/hn-wound-iad-example> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hn-wound-iad-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HNWound" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HNWound>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation hn-wound-iad-example</b></p><a name=\"hn-wound-iad-example\"> </a><a name=\"hchn-wound-iad-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HNWound.html\">居家護理－傷口紀錄</a></p></div><p><b>居家護理－收案關聯</b>: <a href=\"EpisodeOfCare-hn-episode-example.html\">EpisodeOfCare: extension = -&gt;Response to Questionnaire '-&gt;居家護理－個案基本資料' about '-&gt;陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)'; identifier = https://example.org/home-nursing/episodes#HN0001-20251208; status = active; period = 2025-12-08 --&gt; (ongoing)</a></p><p><b>居家護理－來源表單</b>: <a href=\"QuestionnaireResponse-hn-carerecord-wounds-example.html\">Response to Questionnaire '-&gt;居家護理－照護紀錄' about '-&gt;陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)'</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category exam}\">Exam</span></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow wound}\">傷口紀錄</span></p><p><b>subject</b>: <a href=\"Patient-hn-patient-example.html\">陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)</a></p><p><b>effective</b>: 2025-12-08 09:00:00+0800</p><p><b>performer</b>: <a href=\"Practitioner-hn-nurse-example.html\">Practitioner 王美玲</a></p><p><b>bodySite</b>: <span title=\"Codes:\">會陰</span></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow wound-category}\">傷口分類</span></p><p><b>value</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-answer cc7a2787e9f48}\">失禁性皮膚炎</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow length}\">長度</span></p><p><b>value</b>: 1</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow width}\">寬度</span></p><p><b>value</b>: 1</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow depth}\">深度</span></p><p><b>value</b>: 1</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow wound-level}\">傷口等級</span></p><p><b>value</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-answer ccf3d835a3018}\">1A</span></p></blockquote></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNEpisode" ] ;
+     fhir:Extension.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/EpisodeOfCare/hn-episode-example> ;
+       fhir:Reference.reference [ fhir:value "EpisodeOfCare/hn-episode-example" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNSourceForm" ] ;
+     fhir:Extension.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/QuestionnaireResponse/hn-carerecord-wounds-example> ;
+       fhir:Reference.reference [ fhir:value "QuestionnaireResponse/hn-carerecord-wounds-example" ]
+     ]
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ] ;
+       fhir:Coding.code [ fhir:value "exam" ]
+     ]
+  ] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow" ] ;
+       fhir:Coding.code [ fhir:value "wound" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hn-patient-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/hn-patient-example" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2025-12-08T09:00:00+08:00"^^xsd:dateTime] ;
+  fhir:Observation.performer [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/hn-nurse-example> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/hn-nurse-example" ]
+  ] ;
+  fhir:Observation.bodySite [
+     fhir:CodeableConcept.text [ fhir:value "會陰" ]
+  ] ;
+  fhir:Observation.component [
+     fhir:index 0 ;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow" ] ;
+         fhir:Coding.code [ fhir:value "wound-category" ]
+       ]
+     ] ;
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-answer" ] ;
+         fhir:Coding.code [ fhir:value "cc7a2787e9f48" ] ;
+         fhir:Coding.display [ fhir:value "失禁性皮膚炎" ]
+       ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow" ] ;
+         fhir:Coding.code [ fhir:value "length" ]
+       ]
+     ] ;
+     fhir:Observation.component.valueQuantity [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow" ] ;
+         fhir:Coding.code [ fhir:value "width" ]
+       ]
+     ] ;
+     fhir:Observation.component.valueQuantity [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ]
+     ]
+  ], [
+     fhir:index 3 ;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow" ] ;
+         fhir:Coding.code [ fhir:value "depth" ]
+       ]
+     ] ;
+     fhir:Observation.component.valueQuantity [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ]
+     ]
+  ], [
+     fhir:index 4 ;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-workflow" ] ;
+         fhir:Coding.code [ fhir:value "wound-level" ]
+       ]
+     ] ;
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hn-answer" ] ;
+         fhir:Coding.code [ fhir:value "ccf3d835a3018" ] ;
+         fhir:Coding.display [ fhir:value "1A" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Observation/hn-wound-iad-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

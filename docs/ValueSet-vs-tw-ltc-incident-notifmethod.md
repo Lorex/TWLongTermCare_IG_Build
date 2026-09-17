@@ -1,4 +1,4 @@
-# 長照 SDK－異常紀錄－通報方式 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長照 SDK－異常紀錄－通報方式 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-incident-notifmethod | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:VS_TW_LTC_Incident_NotificationMethod |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-incident-notifmethod | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:VS_TW_LTC_Incident_NotificationMethod |
+| *Other Identifiers:*OID:2.25.271292784162725213325348808449085256640 | |
 
  
 此 ValueSet 用於表示長照 SDK 異常紀錄的通報方式。 
@@ -46,12 +47,16 @@
   "resourceType" : "ValueSet",
   "id" : "vs-tw-ltc-incident-notifmethod",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-incident-notifmethod",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.271292784162725213325348808449085256640"
+  }],
+  "version" : "1.1.0",
   "name" : "VS_TW_LTC_Incident_NotificationMethod",
   "title" : "長照 SDK－異常紀錄－通報方式",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

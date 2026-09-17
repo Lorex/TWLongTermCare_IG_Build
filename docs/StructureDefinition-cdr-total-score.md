@@ -1,4 +1,4 @@
-# CDR 總分 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# CDR 總分 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/cdr-total-score | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:CDR_TotalScore |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/cdr-total-score | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:CDR_TotalScore |
 | **Copyright/Legal**: Copyright © 2024 Taiwan Long-Term Care Implementation Guide | |
 
 臨床失智評估量表的總分
@@ -22,7 +22,7 @@
 
 * Examples for this Extension: [QuestionnaireResponse/ltc-questionnaire-response-cdr-complete-example](QuestionnaireResponse-ltc-questionnaire-response-cdr-complete-example.md), [QuestionnaireResponse/ltc-questionnaire-response-cdr-example](QuestionnaireResponse-ltc-questionnaire-response-cdr-example.md) and [QuestionnaireResponse/ltc-questionnaire-response-cdr-moderate-example](QuestionnaireResponse-ltc-questionnaire-response-cdr-moderate-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/cdr-total-score)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-cdr-total-score.json)
 
 ### Formal Views of Extension Content
 
@@ -43,12 +43,12 @@ Other representations of profile: [CSV](StructureDefinition-cdr-total-score.csv)
   "resourceType" : "StructureDefinition",
   "id" : "cdr-total-score",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/cdr-total-score",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "CDR_TotalScore",
   "title" : "CDR 總分",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

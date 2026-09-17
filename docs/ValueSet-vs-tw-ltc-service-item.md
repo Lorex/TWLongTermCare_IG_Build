@@ -1,4 +1,4 @@
-# 臺灣長照服務項目 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 臺灣長照服務項目 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-service-item | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:VS_TW_LTC_ServiceItem |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-service-item | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:VS_TW_LTC_ServiceItem |
+| *Other Identifiers:*OID:2.25.23077688075140443200708783698200494020 | |
 
  
 此 ValueSet 涵蓋臺灣長照 2.0 給付之所有服務項目代碼，適用於長照服務之申請、核定與使用紀錄，包含照顧組合、專業服務、交通接送、喘息服務等項目。 
@@ -18,6 +19,8 @@
 
 * [長照 SDK－照管全量匯出（Claim）](StructureDefinition-LTC-Claim-Export.md)
 * [長照 SDK－服務活動紀錄（SERVICE_A）](StructureDefinition-LTC-Communication-ServiceA.md)
+* [長照支付審查－個案服務紀錄申報](StructureDefinition-LTCClaimFeeApply.md)
+* [長照支付審查－分案審核明細](StructureDefinition-LTCClaimResponseFeeAudit.md)
 * [長期照顧－照護活動](StructureDefinition-LTCProcedureCareActivity.md)
 * [長期照顧－服務請求](StructureDefinition-LTCServiceRequest.md)
 
@@ -49,12 +52,16 @@
   "resourceType" : "ValueSet",
   "id" : "vs-tw-ltc-service-item",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-service-item",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.23077688075140443200708783698200494020"
+  }],
+  "version" : "1.1.0",
   "name" : "VS_TW_LTC_ServiceItem",
   "title" : "臺灣長照服務項目",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

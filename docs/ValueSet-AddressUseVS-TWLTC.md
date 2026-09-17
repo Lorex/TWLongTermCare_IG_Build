@@ -1,4 +1,4 @@
-# 地址用途擴展值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 地址用途擴展值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/AddressUseVS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/AddressUseVS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-08-22 | *Computable Name*:AddressUseVSTWLTC |
+| *Other Identifiers:*OID:2.25.74479291720515125532267282249642267508 | |
 
  
 地址的用途，新增戶籍地與現居地等代碼 
@@ -46,7 +47,11 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "resourceType" : "ValueSet",
   "id" : "AddressUseVS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/AddressUseVS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.74479291720515125532267282249642267508"
+  }],
+  "version" : "1.1.0",
   "name" : "AddressUseVSTWLTC",
   "title" : "地址用途擴展值集",
   "status" : "active",

@@ -1,4 +1,4 @@
-# 長期照顧－異常事件文字描述 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長期照顧－異常事件文字描述 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:ExtTWLTCAdverseEventDescription |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:ExtTWLTCAdverseEventDescription |
 
 記錄異常事件的多段文字描述，包含事件描述、發生過程、後續處理、改善建議等
 
@@ -22,7 +22,7 @@
 * Use this Extension: [長期照顧－異常事件警報](StructureDefinition-AdverseEvent-twltc.md)
 * Examples for this Extension: [AdverseEvent/ltc-adverse-event-incident-example](AdverseEvent-ltc-adverse-event-incident-example.md) and [AdverseEvent/ltc-adverseevent-cs100-example](AdverseEvent-ltc-adverseevent-cs100-example.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-Ext-TW-LTC-AdverseEvent-Description.json)
 
 ### Formal Views of Extension Content
 
@@ -45,11 +45,11 @@ Other representations of profile: [CSV](StructureDefinition-Ext-TW-LTC-AdverseEv
   "resourceType" : "StructureDefinition",
   "id" : "Ext-TW-LTC-AdverseEvent-Description",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-AdverseEvent-Description",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "ExtTWLTCAdverseEventDescription",
   "title" : "長期照顧－異常事件文字描述",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

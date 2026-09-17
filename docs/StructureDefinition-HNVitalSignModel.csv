@@ -1,0 +1,27 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: 居家護理－生命徵象欄位對應"
+"HNVitalSignModel","HNVitalSignModel","","","",0,*,"","","","null {[]} {[]}
+","居家護理－生命徵象邏輯模型","描述居家護理生命徵象的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"HNVitalSignModel.caseID","HNVitalSignModel.caseID","","","",1,1,"","","","string {[]} {[]}
+","個案身分證字號","個案身分證字號","","","","","","","","","",,,,,"",,,,"HNVitalSignModel.caseID",1,1,"","","QuestionnaireResponse.item.where(linkId='CaseID')"
+"HNVitalSignModel.endDate","HNVitalSignModel.endDate","","","",1,1,"","","","date {[]} {[]}
+","收案日期","收案日期","","","","","","","","","",,,,,"",,,,"HNVitalSignModel.endDate",1,1,"","","QuestionnaireResponse.item.where(linkId='EndDate')"
+"HNVitalSignModel.recordDate","HNVitalSignModel.recordDate","","","",1,1,"","","","date {[]} {[]}
+","量測日期","量測日期","","","","","","","","","",,,,,"",,,,"HNVitalSignModel.recordDate",1,1,"","","QuestionnaireResponse.item.where(linkId='RecordDate')"
+"HNVitalSignModel.recordTime","HNVitalSignModel.recordTime","","","",1,1,"","","","time {[]} {[]}
+","量測時間","量測時間","","","","","","","","","",,,,,"",,,,"HNVitalSignModel.recordTime",1,1,"","","QuestionnaireResponse.item.where(linkId='RecordTime')"
+"HNVitalSignModel.temperature","HNVitalSignModel.temperature","","","",1,1,"","","","decimal {[]} {[]}
+","體溫","體溫。攝氏度。原 API 為字串；填入 0 至 999，至小數一位。","","","","","","","","<valueDecimal xmlns=""http://hl7.org/fhir"" value=""0""/>","<valueDecimal xmlns=""http://hl7.org/fhir"" value=""999""/>",,,,,"",,,,"HNVitalSignModel.temperature",1,1,"","","QuestionnaireResponse.item.where(linkId='Temperature')"
+"HNVitalSignModel.pulse","HNVitalSignModel.pulse","","","",1,1,"","","","integer {[]} {[]}
+","脈搏","脈搏。每分鐘次數，0 至 999。","","","","","","","","<valueInteger xmlns=""http://hl7.org/fhir"" value=""0""/>","<valueInteger xmlns=""http://hl7.org/fhir"" value=""999""/>",,,,,"",,,,"HNVitalSignModel.pulse",1,1,"","","QuestionnaireResponse.item.where(linkId='Pulse')"
+"HNVitalSignModel.respiration","HNVitalSignModel.respiration","","","",1,1,"","","","integer {[]} {[]}
+","呼吸","呼吸。每分鐘次數，0 至 999。","","","","","","","","<valueInteger xmlns=""http://hl7.org/fhir"" value=""0""/>","<valueInteger xmlns=""http://hl7.org/fhir"" value=""999""/>",,,,,"",,,,"HNVitalSignModel.respiration",1,1,"","","QuestionnaireResponse.item.where(linkId='Respiration')"
+"HNVitalSignModel.bloodPressure1","HNVitalSignModel.bloodPressure1","","","",1,1,"","","","integer {[]} {[]}
+","收縮壓","收縮壓。mmHg，0 至 999。","","","","","","","","<valueInteger xmlns=""http://hl7.org/fhir"" value=""0""/>","<valueInteger xmlns=""http://hl7.org/fhir"" value=""999""/>",,,,,"",,,,"HNVitalSignModel.bloodPressure1",1,1,"","","QuestionnaireResponse.item.where(linkId='BloodPressure1')"
+"HNVitalSignModel.bloodPressure2","HNVitalSignModel.bloodPressure2","","","",1,1,"","","","integer {[]} {[]}
+","舒張壓","舒張壓。mmHg，0 至 999。","","","","","","","","<valueInteger xmlns=""http://hl7.org/fhir"" value=""0""/>","<valueInteger xmlns=""http://hl7.org/fhir"" value=""999""/>",,,,,"",,,,"HNVitalSignModel.bloodPressure2",1,1,"","","QuestionnaireResponse.item.where(linkId='BloodPressure2')"
+"HNVitalSignModel.bloodGlucose","HNVitalSignModel.bloodGlucose","","","",0,1,"","","","integer {[]} {[]}
+","血糖","血糖。mg/dL，0 至 999。","","","","","","","","<valueInteger xmlns=""http://hl7.org/fhir"" value=""0""/>","<valueInteger xmlns=""http://hl7.org/fhir"" value=""999""/>",,,,,"",,,,"HNVitalSignModel.bloodGlucose",0,1,"","","QuestionnaireResponse.item.where(linkId='BloodGlucose')"
+"HNVitalSignModel.bloodOxygen","HNVitalSignModel.bloodOxygen","","","",0,1,"","","","integer {[]} {[]}
+","血氧","血氧。百分比，0 至 100。","","","","","","","","<valueInteger xmlns=""http://hl7.org/fhir"" value=""0""/>","<valueInteger xmlns=""http://hl7.org/fhir"" value=""100""/>",,,,,"",,,,"HNVitalSignModel.bloodOxygen",0,1,"","","QuestionnaireResponse.item.where(linkId='BloodOxygen')"
+"HNVitalSignModel.createID","HNVitalSignModel.createID","","","",1,1,"","","","string {[]} {[]}
+","照護人員身分證字號","照護人員身分證字號","","","","","","","","","",,,,,"",,,,"HNVitalSignModel.createID",1,1,"","","QuestionnaireResponse.item.where(linkId='CreateID')"

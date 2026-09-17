@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,42 +7,53 @@
 
 <http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionCrushCS-TWLTC> a fhir:CodeSystem ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ReferralConditionCrushCS-TWLTC"] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem ReferralConditionCrushCS-TWLTC</b></p><a name=\"ReferralConditionCrushCS-TWLTC\"> </a><a name=\"hcReferralConditionCrushCS-TWLTC\"> </a><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionCrushCS-TWLTC</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">no-crush<a name=\"ReferralConditionCrushCS-TWLTC-no-crush\"> </a></td><td>無壓傷</td><td>個案無壓傷。</td></tr><tr><td style=\"white-space:nowrap\">crush<a name=\"ReferralConditionCrushCS-TWLTC-crush\"> </a></td><td>壓傷</td><td>個案有壓傷。</td></tr></table></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:url [
-     fhir:v "http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionCrushCS-TWLTC"^^xsd:anyURI ;
-     fhir:l <http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionCrushCS-TWLTC>
-  ] ; # 
-  fhir:version [ fhir:v "1.0.0"] ; # 
-  fhir:name [ fhir:v "ReferralConditionCrushCSTWLTC"] ; # 
-  fhir:title [ fhir:v "轉介單壓傷狀況代碼"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2024-08-25"^^xsd:date] ; # 
-  fhir:publisher [ fhir:v "經濟部產業發展署"] ; # 
-  fhir:contact ( [
-     fhir:name [ fhir:v "經濟部產業發展署" ] ;
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "https://www.ida.gov.tw/" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "用於表述個案的壓傷狀況。"] ; # 
-  fhir:caseSensitive [ fhir:v true] ; # 
-  fhir:content [ fhir:v "complete"] ; # 
-  fhir:count [ fhir:v "2"^^xsd:nonNegativeInteger] ; # 
-  fhir:concept ( [
-     fhir:code [ fhir:v "no-crush" ] ;
-     fhir:display [ fhir:v "無壓傷" ] ;
-     fhir:definition [ fhir:v "個案無壓傷。" ]
-  ] [
-     fhir:code [ fhir:v "crush" ] ;
-     fhir:display [ fhir:v "壓傷" ] ;
-     fhir:definition [ fhir:v "個案有壓傷。" ]
-  ] ) . # 
+  fhir:Resource.id [ fhir:value "ReferralConditionCrushCS-TWLTC"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem ReferralConditionCrushCS-TWLTC</b></p><a name=\"ReferralConditionCrushCS-TWLTC\"> </a><a name=\"hcReferralConditionCrushCS-TWLTC\"> </a><p>This case-sensitive code system <code>http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionCrushCS-TWLTC</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">no-crush<a name=\"ReferralConditionCrushCS-TWLTC-no-crush\"> </a></td><td>無壓傷</td><td>個案無壓傷。</td></tr><tr><td style=\"white-space:nowrap\">crush<a name=\"ReferralConditionCrushCS-TWLTC-crush\"> </a></td><td>壓傷</td><td>個案有壓傷。</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionCrushCS-TWLTC"] ;
+  fhir:CodeSystem.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ] ;
+     fhir:Identifier.value [ fhir:value "urn:oid:2.25.276529238070119313889804260776559609845" ]
+  ] ;
+  fhir:CodeSystem.version [ fhir:value "1.1.0"] ;
+  fhir:CodeSystem.name [ fhir:value "ReferralConditionCrushCSTWLTC"] ;
+  fhir:CodeSystem.title [ fhir:value "轉介單壓傷狀況代碼"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2024-08-25"^^xsd:date] ;
+  fhir:CodeSystem.publisher [ fhir:value "經濟部產業發展署"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "經濟部產業發展署" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.ida.gov.tw/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "用於表述個案的壓傷狀況。"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "2"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "no-crush" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "無壓傷" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "個案無壓傷。" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "crush" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "壓傷" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "個案有壓傷。" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionCrushCS-TWLTC.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

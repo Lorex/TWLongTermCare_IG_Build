@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/DiagnosticReport/hah-report> a fhir:DiagnosticReport ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hah-report"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHDiagnosticReport" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHDiagnosticReport>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport hah-report</b></p><a name=\"hah-report\"> </a><a name=\"hchah-report\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHDiagnosticReport.html\">在宅急症－檢驗報告</a></p></div><h2><span title=\"Codes:\">血糖檢驗報告</span> </h2><table class=\"grid\"><tr><td>Subject</td><td>王測試 Male, DoB: 1945-03-15 ( Provider number)</td></tr><tr><td>Relevant Time</td><td>2026-09-01 09:10:00+0800</td></tr><tr><td>Reported</td><td>2026-09-01 09:20:00+0800</td></tr><tr><td>Performer</td><td> <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td></tr><tr><td><a href=\"Observation-hah-glucose.html\"><span title=\"Codes:{http://loinc.org 2339-0}\">Glucose [Mass/volume] in Blood</span></a></td><td>110 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td><td>Final</td></tr></table></div>"
+  ] ;
+  fhir:DiagnosticReport.basedOn [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/ServiceRequest/hah-lab-request> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/hah-lab-request" ]
+  ] ;
+  fhir:DiagnosticReport.status [ fhir:value "final"] ;
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.text [ fhir:value "血糖檢驗報告" ]
+  ] ;
+  fhir:DiagnosticReport.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:DiagnosticReport.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-visit> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-visit" ]
+  ] ;
+  fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2026-09-01T09:10:00+08:00"^^xsd:dateTime] ;
+  fhir:DiagnosticReport.issued [ fhir:value "2026-09-01T09:20:00+08:00"^^xsd:dateTime] ;
+  fhir:DiagnosticReport.performer [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Organization/hah-organization> ;
+     fhir:Reference.reference [ fhir:value "Organization/hah-organization" ]
+  ] ;
+  fhir:DiagnosticReport.specimen [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Specimen/hah-specimen> ;
+     fhir:Reference.reference [ fhir:value "Specimen/hah-specimen" ]
+  ] ;
+  fhir:DiagnosticReport.result [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Observation/hah-glucose> ;
+     fhir:Reference.reference [ fhir:value "Observation/hah-glucose" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/DiagnosticReport/hah-report.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

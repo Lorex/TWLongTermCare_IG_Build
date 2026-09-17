@@ -1,4 +1,4 @@
-# 身體活動量測-適用運動處方之服務請求代碼值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 身體活動量測-適用運動處方之服務請求代碼值集 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ServiceRequestPAVS-Sport | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/ValueSet/ServiceRequestPAVS-Sport | *Version*:1.1.0 |
 | Active as of 2024-06-04 | *Computable Name*:ServiceRequestPAVSSport |
+| *Other Identifiers:*OID:2.25.108081609301721935419141474874375089116 | |
 
  
 適用運動處方之服務請求代碼。本 ValueSet 繼承自身體活動量測 IG，後續將配合原始 IG 進行更新。 
@@ -46,7 +47,11 @@
   "resourceType" : "ValueSet",
   "id" : "ServiceRequestPAVS-Sport",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/ServiceRequestPAVS-Sport",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.108081609301721935419141474874375089116"
+  }],
+  "version" : "1.1.0",
   "name" : "ServiceRequestPAVSSport",
   "title" : "身體活動量測-適用運動處方之服務請求代碼值集",
   "status" : "active",

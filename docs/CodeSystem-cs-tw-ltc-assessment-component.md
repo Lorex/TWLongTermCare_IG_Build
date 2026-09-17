@@ -1,4 +1,4 @@
-# 長照 SDK－評估核定摘要－欄位碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長照 SDK－評估核定摘要－欄位碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,15 +8,16 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:CS_TW_LTC_AssessmentComponent |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:CS_TW_LTC_AssessmentComponent |
+| *Other Identifiers:*OID:2.25.99584627007454913989616001866454738820 | |
 
  
 此 CodeSystem 定義長照 SDK 評估核定摘要的欄位碼。 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* [VS_TW_LTC_AssessmentComponent](ValueSet-vs-tw-ltc-assessment-component.md)
+* [長照 SDK－評估核定摘要欄位碼](ValueSet-vs-tw-ltc-assessment-component.md)
 
 
 
@@ -27,12 +28,16 @@
   "resourceType" : "CodeSystem",
   "id" : "cs-tw-ltc-assessment-component",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.99584627007454913989616001866454738820"
+  }],
+  "version" : "1.1.0",
   "name" : "CS_TW_LTC_AssessmentComponent",
   "title" : "長照 SDK－評估核定摘要－欄位碼",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -1,0 +1,7 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: 居家護理－接收訊息對應"
+"HNUploadAcknowledgementModel","HNUploadAcknowledgementModel","","","",0,*,"","","","null {[]} {[]}
+","居家護理－上傳接收回覆邏輯模型","描述規範各上傳 API 列出的成功回覆。此回覆表示檔案已接收，尚不表示排程匯入成功。","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"HNUploadAcknowledgementModel.code","HNUploadAcknowledgementModel.code","","","",1,1,"","","","integer {[]} {[]}
+","接收代碼","成功回覆為 200。","","","","","","<valueInteger xmlns=""http://hl7.org/fhir"" value=""200""/>","","","",,,,,"",,,,"HNUploadAcknowledgementModel.code",1,1,"","","Task.output.where(type.coding.code='response-code').valueInteger"
+"HNUploadAcknowledgementModel.message","HNUploadAcknowledgementModel.message","","","",1,1,"","","","string {[]} {[]}
+","接收訊息","成功範例為 Success.，保留收到的文字。","","","","","","","","","",,,,,"",,,,"HNUploadAcknowledgementModel.message",1,1,"","","Task.output.where(type.coding.code='response-message').valueString"

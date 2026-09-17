@@ -1,0 +1,122 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CarePlan/hn-careplan-example> a fhir:CarePlan ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hn-careplan-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HNCarePlan" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HNCarePlan>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>陳明慧的居家護理照護計畫：降低跌倒風險。原措施為每日檢查走道障礙物，已停止並改採個別移位協助措施。照護者應依護理人員指導執行。</p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNEpisode" ] ;
+     fhir:Extension.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/EpisodeOfCare/hn-episode-example> ;
+       fhir:Reference.reference [ fhir:value "EpisodeOfCare/hn-episode-example" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNSourceForm" ] ;
+     fhir:Extension.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/QuestionnaireResponse/hn-targets-example> ;
+       fhir:Reference.reference [ fhir:value "QuestionnaireResponse/hn-targets-example" ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNSourceForm" ] ;
+     fhir:Extension.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/QuestionnaireResponse/hn-measures-example> ;
+       fhir:Reference.reference [ fhir:value "QuestionnaireResponse/hn-measures-example" ]
+     ]
+  ] ;
+  fhir:CarePlan.status [ fhir:value "active"] ;
+  fhir:CarePlan.intent [ fhir:value "plan"] ;
+  fhir:CarePlan.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw" ] ;
+       fhir:Coding.code [ fhir:value "assess-plan" ]
+     ]
+  ] ;
+  fhir:CarePlan.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hn-patient-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/hn-patient-example" ]
+  ] ;
+  fhir:CarePlan.period [
+     fhir:Period.start [ fhir:value "2025-12-08"^^xsd:date ]
+  ] ;
+  fhir:CarePlan.author [
+     fhir:link <http://ltc-ig.fhir.tw/Practitioner/hn-nurse-example> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/hn-nurse-example" ]
+  ] ;
+  fhir:CarePlan.supportingInfo [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/QuestionnaireResponse/hn-casesummary-example> ;
+     fhir:Reference.reference [ fhir:value "QuestionnaireResponse/hn-casesummary-example" ]
+  ] ;
+  fhir:CarePlan.goal [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Goal/hn-goal-example> ;
+     fhir:Reference.reference [ fhir:value "Goal/hn-goal-example" ]
+  ] ;
+  fhir:CarePlan.activity [
+     fhir:index 0 ;
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "date" ] ;
+         fhir:Extension.valueDate [ fhir:value "2025-12-09"^^xsd:date ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "reason" ] ;
+         fhir:Extension.valueString [ fhir:value "改採個別移位協助措施" ]
+       ], [
+         fhir:index 2 ;
+         fhir:Extension.url [ fhir:value "nurse" ] ;
+         fhir:Extension.valueReference [
+           fhir:link <http://ltc-ig.fhir.tw/Practitioner/hn-nurse-example> ;
+           fhir:Reference.reference [ fhir:value "Practitioner/hn-nurse-example" ]
+         ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNMeasureStop" ]
+     ] ;
+     fhir:CarePlan.activity.outcomeReference [
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/QuestionnaireResponse/hn-evaluations-example> ;
+       fhir:Reference.reference [ fhir:value "QuestionnaireResponse/hn-evaluations-example" ]
+     ] ;
+     fhir:CarePlan.activity.detail [
+       fhir:CarePlan.activity.detail.goal [
+         fhir:index 0 ;
+         fhir:link <http://ltc-ig.fhir.tw/Goal/hn-goal-example> ;
+         fhir:Reference.reference [ fhir:value "Goal/hn-goal-example" ]
+       ] ;
+       fhir:CarePlan.activity.detail.status [ fhir:value "stopped" ] ;
+       fhir:CarePlan.activity.detail.scheduledPeriod [
+         fhir:Period.start [ fhir:value "2025-12-08"^^xsd:date ]
+       ] ;
+       fhir:CarePlan.activity.detail.description [ fhir:value "每日檢查走道障礙物" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CarePlan/hn-careplan-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

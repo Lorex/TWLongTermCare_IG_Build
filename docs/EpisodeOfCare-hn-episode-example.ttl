@@ -1,0 +1,54 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/EpisodeOfCare/hn-episode-example> a fhir:EpisodeOfCare ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hn-episode-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HNEpisodeOfCare" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HNEpisodeOfCare>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: EpisodeOfCare hn-episode-example</b></p><a name=\"hn-episode-example\"> </a><a name=\"hchn-episode-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HNEpisodeOfCare.html\">居家護理－收案歷程</a></p></div><p><b>居家護理－來源表單</b>: <a href=\"QuestionnaireResponse-hn-basedata-example.html\">Response to Questionnaire '-&gt;居家護理－個案基本資料' about '-&gt;陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)'</a></p><p><b>identifier</b>: <code>https://example.org/home-nursing/episodes</code>/HN0001-20251208</p><p><b>status</b>: Active</p><p><b>patient</b>: <a href=\"Patient-hn-patient-example.html\">陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)</a></p><p><b>managingOrganization</b>: <a href=\"Organization-hn-organization-example.html\">Organization 示範居家護理所</a></p><p><b>period</b>: 2025-12-08 --&gt; (ongoing)</p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHNSourceForm" ] ;
+     fhir:Extension.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/QuestionnaireResponse/hn-basedata-example> ;
+       fhir:Reference.reference [ fhir:value "QuestionnaireResponse/hn-basedata-example" ]
+     ]
+  ] ;
+  fhir:EpisodeOfCare.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "https://example.org/home-nursing/episodes" ] ;
+     fhir:Identifier.value [ fhir:value "HN0001-20251208" ]
+  ] ;
+  fhir:EpisodeOfCare.status [ fhir:value "active"] ;
+  fhir:EpisodeOfCare.patient [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hn-patient-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/hn-patient-example" ]
+  ] ;
+  fhir:EpisodeOfCare.managingOrganization [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/hn-organization-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/hn-organization-example" ]
+  ] ;
+  fhir:EpisodeOfCare.period [
+     fhir:Period.start [ fhir:value "2025-12-08"^^xsd:date ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/EpisodeOfCare/hn-episode-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

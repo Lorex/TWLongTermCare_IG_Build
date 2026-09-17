@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,67 +7,73 @@
 
 <http://ltc-ig.fhir.tw/Patient/ltc-patient-sdk-example> a fhir:Patient ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ltc-patient-sdk-example"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "http://ltc-ig.fhir.tw/StructureDefinition/LTCPatient"^^xsd:anyURI ;
-       fhir:l <http://ltc-ig.fhir.tw/StructureDefinition/LTCPatient>
-     ] )
-  ] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ltc-patient-sdk-example</b></p><a name=\"ltc-patient-sdk-example\"> </a><a name=\"hcltc-patient-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCPatient.html\">長期照顧－住民基本資料</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">王小明 Male, DoB: 1950-01-01 ( Provider number (use: official, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 0912345678</li><li>台北市中山區中山北路100號(home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: Next-of-Kin\">Next-of-Kin:</td><td colspan=\"3\"><ul><li>王大明</li><li>ph: 0987654321</li></ul></td></tr></table></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:identifier ( [
-     fhir:use [ fhir:v "official" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
-         ] ;
-         fhir:code [ fhir:v "PRN" ]
-       ] )
+  fhir:Resource.id [ fhir:value "ltc-patient-sdk-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCPatient" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCPatient>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ltc-patient-sdk-example</b></p><a name=\"ltc-patient-sdk-example\"> </a><a name=\"hcltc-patient-sdk-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCPatient.html\">長期照顧－住民基本資料</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">王小明 Male, DoB: 1950-01-01 ( Provider number (use: official, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 0912345678</li><li>台北市中山區中山北路100號(home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: Next-of-Kin\">Next-of-Kin:</td><td colspan=\"3\"><ul><li>王大明</li><li>ph: 0987654321</li></ul></td></tr></table></div>"
+  ] ;
+  fhir:Patient.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.use [ fhir:value "official" ] ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "PRN" ]
+       ]
      ] ;
-     fhir:system [
-       fhir:v "https://example.org/mrn"^^xsd:anyURI ;
-       fhir:l <https://example.org/mrn>
+     fhir:Identifier.system [ fhir:value "https://example.org/mrn" ] ;
+     fhir:Identifier.value [ fhir:value "A0001" ]
+  ] ;
+  fhir:Patient.name [
+     fhir:index 0 ;
+     fhir:HumanName.use [ fhir:value "usual" ] ;
+     fhir:HumanName.text [ fhir:value "王小明" ]
+  ] ;
+  fhir:Patient.telecom [
+     fhir:index 0 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "0912345678" ]
+  ] ;
+  fhir:Patient.gender [ fhir:value "male"] ;
+  fhir:Patient.birthDate [ fhir:value "1950-01-01"^^xsd:date] ;
+  fhir:Patient.address [
+     fhir:index 0 ;
+     fhir:Address.use [ fhir:value "home" ] ;
+     fhir:Address.text [ fhir:value "台北市中山區中山北路100號" ]
+  ] ;
+  fhir:Patient.contact [
+     fhir:index 0 ;
+     fhir:Patient.contact.relationship [
+       fhir:index 0 ;
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0131" ] ;
+         fhir:Coding.code [ fhir:value "N" ] ;
+         fhir:Coding.display [ fhir:value "Next-of-Kin" ]
+       ]
      ] ;
-     fhir:value [ fhir:v "A0001" ]
-  ] ) ; # 
-  fhir:name ( [
-     fhir:use [ fhir:v "usual" ] ;
-     fhir:text [ fhir:v "王小明" ]
-  ] ) ; # 
-  fhir:telecom ( [
-     fhir:system [ fhir:v "phone" ] ;
-     fhir:value [ fhir:v "0912345678" ]
-  ] ) ; # 
-  fhir:gender [ fhir:v "male"] ; # 
-  fhir:birthDate [ fhir:v "1950-01-01"^^xsd:date] ; # 
-  fhir:address ( [
-     fhir:use [ fhir:v "home" ] ;
-     fhir:text [ fhir:v "台北市中山區中山北路100號" ]
-  ] ) ; # 
-  fhir:contact ( [
-     fhir:relationship ( [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0131"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0131>
-         ] ;
-         fhir:code [ fhir:v "N" ] ;
-         fhir:display [ fhir:v "Next-of-Kin" ]
-       ] )
-     ] ) ;
-     fhir:name [
-       fhir:text [ fhir:v "王大明" ]
+     fhir:Patient.contact.name [
+       fhir:HumanName.text [ fhir:value "王大明" ]
      ] ;
-     fhir:telecom ( [
-       fhir:system [ fhir:v "phone" ] ;
-       fhir:value [ fhir:v "0987654321" ]
-     ] )
-  ] ) . # 
+     fhir:Patient.contact.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "phone" ] ;
+       fhir:ContactPoint.value [ fhir:value "0987654321" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Patient/ltc-patient-sdk-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

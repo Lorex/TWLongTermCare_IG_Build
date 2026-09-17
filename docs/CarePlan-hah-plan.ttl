@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CarePlan/hah-plan> a fhir:CarePlan ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "hah-plan"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/HAHCarePlan" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/HAHCarePlan>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>王測試的在宅急症照護計畫，所屬療程 HAH-20260901-001，期間為 2026 年 9 月 1 日至 9 月 5 日，狀態為已完成。處理呼吸道感染問題，目標為協助完成每日量測紀錄；包含血糖檢驗醫囑。</p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/ExtHAHEpisode" ] ;
+     fhir:Extension.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/EpisodeOfCare/hah-episode> ;
+       fhir:Reference.reference [ fhir:value "EpisodeOfCare/hah-episode" ]
+     ]
+  ] ;
+  fhir:CarePlan.status [ fhir:value "completed"] ;
+  fhir:CarePlan.intent [ fhir:value "plan"] ;
+  fhir:CarePlan.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw" ] ;
+       fhir:Coding.code [ fhir:value "assess-plan" ]
+     ]
+  ] ;
+  fhir:CarePlan.subject [
+     fhir:link <http://ltc-ig.fhir.tw/Patient/hah-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/hah-patient" ]
+  ] ;
+  fhir:CarePlan.encounter [
+     fhir:link <http://ltc-ig.fhir.tw/Encounter/hah-admission> ;
+     fhir:Reference.reference [ fhir:value "Encounter/hah-admission" ]
+  ] ;
+  fhir:CarePlan.period [
+     fhir:Period.start [ fhir:value "2026-09-01"^^xsd:date ] ;
+     fhir:Period.end [ fhir:value "2026-09-05"^^xsd:date ]
+  ] ;
+  fhir:CarePlan.addresses [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Condition/hah-condition> ;
+     fhir:Reference.reference [ fhir:value "Condition/hah-condition" ]
+  ] ;
+  fhir:CarePlan.goal [
+     fhir:index 0 ;
+     fhir:link <http://ltc-ig.fhir.tw/Goal/hah-goal> ;
+     fhir:Reference.reference [ fhir:value "Goal/hah-goal" ]
+  ] ;
+  fhir:CarePlan.activity [
+     fhir:index 0 ;
+     fhir:CarePlan.activity.reference [
+       fhir:link <http://ltc-ig.fhir.tw/ServiceRequest/hah-lab-request> ;
+       fhir:Reference.reference [ fhir:value "ServiceRequest/hah-lab-request" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/CarePlan/hah-plan.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Goal xmlns="http://hl7.org/fhir">
+  <id value="hn-goal-example"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/HNGoal"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Goal hn-goal-example</b></p><a name="hn-goal-example"> </a><a name="hchn-goal-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-HNGoal.html">居家護理－照護目標</a></p></div><p><b>居家護理－收案關聯</b>: <a href="EpisodeOfCare-hn-episode-example.html">EpisodeOfCare: extension = -&gt;Response to Questionnaire '-&gt;居家護理－個案基本資料' about '-&gt;陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)'; identifier = https://example.org/home-nursing/episodes#HN0001-20251208; status = active; period = 2025-12-08 --&gt; (ongoing)</a></p><p><b>居家護理－來源表單</b>: <a href="QuestionnaireResponse-hn-targets-example.html">Response to Questionnaire '-&gt;居家護理－照護計畫目標' about '-&gt;陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)'</a></p><p><b>居家護理－主要目標</b>: false</p><p><b>lifecycleStatus</b>: Active</p><p><b>description</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow care-goal}">降低跌倒風險</span></p><p><b>subject</b>: <a href="Patient-hn-patient-example.html">陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)</a></p><p><b>start</b>: 2025-12-08</p><h3>Targets</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Due[x]</b></td></tr><tr><td style="display: none">*</td><td>2026-01-08</td></tr></table><p><b>expressedBy</b>: <a href="Practitioner-hn-nurse-example.html">Practitioner 王美玲</a></p></div>
+  </text>
+  <extension url="http://ltc-ig.fhir.tw/StructureDefinition/ExtHNEpisode">
+    <valueReference>
+      <reference value="EpisodeOfCare/hn-episode-example"/>
+    </valueReference>
+  </extension>
+  <extension url="http://ltc-ig.fhir.tw/StructureDefinition/ExtHNSourceForm">
+    <valueReference>
+      <reference value="QuestionnaireResponse/hn-targets-example"/>
+    </valueReference>
+  </extension>
+  <extension url="http://ltc-ig.fhir.tw/StructureDefinition/ExtHNMainTarget">
+    <valueBoolean value="false"/>
+  </extension>
+  <lifecycleStatus value="active"/>
+  <description>
+    <coding>
+      <system value="http://ltc-ig.fhir.tw/CodeSystem/hn-workflow"/>
+      <code value="care-goal"/>
+    </coding>
+    <text value="降低跌倒風險"/>
+  </description>
+  <subject>
+    <reference value="Patient/hn-patient-example"/>
+  </subject>
+  <startDate value="2025-12-08"/>
+  <target>
+    <dueDate value="2026-01-08"/>
+  </target>
+  <expressedBy>
+    <reference value="Practitioner/hn-nurse-example"/>
+  </expressedBy>
+</Goal>

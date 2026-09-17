@@ -1,0 +1,155 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Task/ltc-task-objdel-example> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ltc-task-objdel-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit" ;
+       fhir:index 0 ;
+       fhir:link <http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task ltc-task-objdel-example</b></p><a name=\"ltc-task-objdel-example\"> </a><a name=\"hcltc-task-objdel-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-LTCTaskFeeAudit.html\">長照支付審查－申報交易任務</a></p></div><p><b>identifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm</code>/201901</p><p><b>groupIdentifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no</code>/TranQ00082</p><p><b>status</b>: Completed</p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function ObjDel}\">服務紀錄刪除</span></p><p><b>authoredOn</b>: 2019-02-09 11:20:00+0800</p><p><b>requester</b>: <a href=\"Organization-ltc-organization-example.html\">Organization 新北市私立安康老人長期照顧中心（養護型）</a></p><p><b>note</b>: </p><blockquote><div><p>來源系統別（source_system）：TranCareCenter</p>\n</div></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄識別碼</span></p><p><b>value</b>: 123456789</p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄識別碼</span></p><p><b>value</b>: 234567890</p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄識別碼</span></p><p><b>value</b>: 345678901</p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄識別碼</span></p><p><b>value</b>: 456789012</p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄識別碼</span></p><p><b>value</b>: 987654321</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">批次處理結果</span></p><p><b>value</b>: 服務紀錄刪除完成!</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">批次處理筆數</span></p><p><b>value</b>: 6</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">批次處理成功筆數</span></p><p><b>value</b>: 4</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">批次處理失敗筆數</span></p><p><b>value</b>: 2</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄刪除成功資料</span></p><p><b>value</b>: 123456789</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄刪除成功資料</span></p><p><b>value</b>: 234567890</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄刪除成功資料</span></p><p><b>value</b>: 345678901</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄刪除成功資料</span></p><p><b>value</b>: 456789012</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄刪除失敗資料</span></p><p><b>value</b>: <a href=\"OperationOutcome-ltc-operationoutcome-feeaudit-objdel-example.html\">OperationOutcome</a></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes:\">服務紀錄刪除失敗資料</span></p><p><b>value</b>: <a href=\"OperationOutcome-ltc-operationoutcome-feeaudit-objdel-2-example.html\">OperationOutcome</a></p></blockquote></div>"
+  ] ;
+  fhir:Task.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm" ] ;
+     fhir:Identifier.value [ fhir:value "201901" ]
+  ] ;
+  fhir:Task.groupIdentifier [
+     fhir:Identifier.system [ fhir:value "http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no" ] ;
+     fhir:Identifier.value [ fhir:value "TranQ00082" ]
+  ] ;
+  fhir:Task.status [ fhir:value "completed"] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function" ] ;
+       fhir:Coding.code [ fhir:value "ObjDel" ] ;
+       fhir:Coding.display [ fhir:value "服務紀錄刪除" ]
+     ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2019-02-09T11:20:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <http://ltc-ig.fhir.tw/Organization/ltc-organization-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/ltc-organization-example" ]
+  ] ;
+  fhir:Task.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "來源系統別（source_system）：TranCareCenter" ]
+  ] ;
+  fhir:Task.input [
+     fhir:index 0 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄識別碼" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "123456789" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄識別碼" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "234567890" ]
+  ], [
+     fhir:index 2 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄識別碼" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "345678901" ]
+  ], [
+     fhir:index 3 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄識別碼" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "456789012" ]
+  ], [
+     fhir:index 4 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄識別碼" ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "987654321" ]
+  ] ;
+  fhir:Task.output [
+     fhir:index 0 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "批次處理結果" ]
+     ] ;
+     fhir:Task.output.valueString [ fhir:value "服務紀錄刪除完成!" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "批次處理筆數" ]
+     ] ;
+     fhir:Task.output.valueInteger [ fhir:value "6"^^xsd:integer ]
+  ], [
+     fhir:index 2 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "批次處理成功筆數" ]
+     ] ;
+     fhir:Task.output.valueInteger [ fhir:value "4"^^xsd:integer ]
+  ], [
+     fhir:index 3 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "批次處理失敗筆數" ]
+     ] ;
+     fhir:Task.output.valueInteger [ fhir:value "2"^^xsd:integer ]
+  ], [
+     fhir:index 4 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄刪除成功資料" ]
+     ] ;
+     fhir:Task.output.valueString [ fhir:value "123456789" ]
+  ], [
+     fhir:index 5 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄刪除成功資料" ]
+     ] ;
+     fhir:Task.output.valueString [ fhir:value "234567890" ]
+  ], [
+     fhir:index 6 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄刪除成功資料" ]
+     ] ;
+     fhir:Task.output.valueString [ fhir:value "345678901" ]
+  ], [
+     fhir:index 7 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄刪除成功資料" ]
+     ] ;
+     fhir:Task.output.valueString [ fhir:value "456789012" ]
+  ], [
+     fhir:index 8 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄刪除失敗資料" ]
+     ] ;
+     fhir:Task.output.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/OperationOutcome/ltc-operationoutcome-feeaudit-objdel-example> ;
+       fhir:Reference.reference [ fhir:value "OperationOutcome/ltc-operationoutcome-feeaudit-objdel-example" ]
+     ]
+  ], [
+     fhir:index 9 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.text [ fhir:value "服務紀錄刪除失敗資料" ]
+     ] ;
+     fhir:Task.output.valueReference [
+       fhir:link <http://ltc-ig.fhir.tw/OperationOutcome/ltc-operationoutcome-feeaudit-objdel-2-example> ;
+       fhir:Reference.reference [ fhir:value "OperationOutcome/ltc-operationoutcome-feeaudit-objdel-2-example" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ltc-ig.fhir.tw/Task/ltc-task-objdel-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

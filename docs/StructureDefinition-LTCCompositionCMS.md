@@ -1,4 +1,4 @@
-# 照顧管理評估量表文件架構 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 照顧管理評估量表文件架構 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionCMS | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:LTCCompositionCMS |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionCMS | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:LTCCompositionCMS |
 
  
 此 Composition 以衛生福利部長期照顧管理中心照顧管理評估量表為基礎，用以表述照顧管理評估量表的文件結構。 
@@ -20,7 +20,7 @@
 * Examples for this Profile: [Composition/ltc-composition-cms-example](Composition-ltc-composition-cms-example.md)
 * CapabilityStatements using this Profile: [臺灣長期照顧實作指引 - 用戶端能力聲明](CapabilityStatement-CapabilityStatementLTCClient.md) and [臺灣長期照顧實作指引 - 伺服端能力聲明](CapabilityStatement-CapabilityStatementLTCServer.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCCompositionCMS)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-LTCCompositionCMS.json)
 
 ### Formal Views of Profile Content
 
@@ -39,11 +39,11 @@ Other representations of profile: [CSV](StructureDefinition-LTCCompositionCMS.cs
   "resourceType" : "StructureDefinition",
   "id" : "LTCCompositionCMS",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCCompositionCMS",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCCompositionCMS",
   "title" : "照顧管理評估量表文件架構",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

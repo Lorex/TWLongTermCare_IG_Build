@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Task xmlns="http://hl7.org/fhir">
+  <id value="ltc-task-feeapply-example"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Task ltc-task-feeapply-example</b></p><a name="ltc-task-feeapply-example"> </a><a name="hcltc-task-feeapply-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-LTCTaskFeeAudit.html">長照支付審查－申報交易任務</a></p></div><p><b>identifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm</code>/201901</p><p><b>groupIdentifier</b>: <code>http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no</code>/TranQ00083</p><p><b>status</b>: Completed</p><p><b>businessStatus</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-case-status 1}">待通知收件</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function FeeApply}">服務記錄申報</span></p><p><b>authoredOn</b>: 2019-02-10 09:30:00+0800</p><p><b>requester</b>: <a href="Organization-ltc-organization-example.html">Organization 新北市私立安康老人長期照顧中心（養護型）</a></p><p><b>note</b>: </p><blockquote><div><p>來源系統別（source_system）：TranCareCenter</p>
+</div></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title="Codes:">縣市代碼</span></p><p><b>value</b>: 10020</p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title="Codes:">核銷案號</span></p><p><b>value</b>: 201907BA10128</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes:">批次處理結果</span></p><p><b>value</b>: 分案處理完成!</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes:">批次處理筆數</span></p><p><b>value</b>: 3000</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes:">批次處理成功筆數</span></p><p><b>value</b>: 2999</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes:">批次處理失敗筆數</span></p><p><b>value</b>: 1</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes:">分案異常資料</span></p><p><b>value</b>: <a href="OperationOutcome-ltc-operationoutcome-feeaudit-exception-example.html">OperationOutcome: extension = 201907BA10128</a></p></blockquote></div>
+  </text>
+  <identifier>
+    <system value="http://ltc-ig.fhir.tw/identifier/feeaudit/yyyymm"/>
+    <value value="201901"/>
+  </identifier>
+  <groupIdentifier>
+    <system value="http://ltc-ig.fhir.tw/identifier/feeaudit/trans-no"/>
+    <value value="TranQ00083"/>
+  </groupIdentifier>
+  <status value="completed"/>
+  <businessStatus>
+    <coding>
+      <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-case-status"/>
+      <code value="1"/>
+      <display value="待通知收件"/>
+    </coding>
+  </businessStatus>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-api-function"/>
+      <code value="FeeApply"/>
+      <display value="服務記錄申報"/>
+    </coding>
+  </code>
+  <authoredOn value="2019-02-10T09:30:00+08:00"/>
+  <requester>
+    <reference value="Organization/ltc-organization-example"/>
+  </requester>
+  <note>
+    <text value="來源系統別（source_system）：TranCareCenter"/>
+  </note>
+  <input>
+    <type>
+      <text value="縣市代碼"/>
+    </type>
+    <valueString value="10020"/>
+  </input>
+  <input>
+    <type>
+      <text value="核銷案號"/>
+    </type>
+    <valueString value="201907BA10128"/>
+  </input>
+  <output>
+    <type>
+      <text value="批次處理結果"/>
+    </type>
+    <valueString value="分案處理完成!"/>
+  </output>
+  <output>
+    <type>
+      <text value="批次處理筆數"/>
+    </type>
+    <valueInteger value="3000"/>
+  </output>
+  <output>
+    <type>
+      <text value="批次處理成功筆數"/>
+    </type>
+    <valueInteger value="2999"/>
+  </output>
+  <output>
+    <type>
+      <text value="批次處理失敗筆數"/>
+    </type>
+    <valueInteger value="1"/>
+  </output>
+  <output>
+    <type>
+      <text value="分案異常資料"/>
+    </type>
+    <valueReference>
+      <reference value="OperationOutcome/ltc-operationoutcome-feeaudit-exception-example"/>
+    </valueReference>
+  </output>
+</Task>

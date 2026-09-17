@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="hn-careplan-example"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/HNCarePlan"/>
+  </meta>
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><p>陳明慧的居家護理照護計畫：降低跌倒風險。原措施為每日檢查走道障礙物，已停止並改採個別移位協助措施。照護者應依護理人員指導執行。</p></div>
+  </text>
+  <extension url="http://ltc-ig.fhir.tw/StructureDefinition/ExtHNEpisode">
+    <valueReference>
+      <reference value="EpisodeOfCare/hn-episode-example"/>
+    </valueReference>
+  </extension>
+  <extension url="http://ltc-ig.fhir.tw/StructureDefinition/ExtHNSourceForm">
+    <valueReference>
+      <reference value="QuestionnaireResponse/hn-targets-example"/>
+    </valueReference>
+  </extension>
+  <extension url="http://ltc-ig.fhir.tw/StructureDefinition/ExtHNSourceForm">
+    <valueReference>
+      <reference value="QuestionnaireResponse/hn-measures-example"/>
+    </valueReference>
+  </extension>
+  <status value="active"/>
+  <intent value="plan"/>
+  <category>
+    <coding>
+      <system value="https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw"/>
+      <code value="assess-plan"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/hn-patient-example"/>
+  </subject>
+  <period>
+    <start value="2025-12-08"/>
+  </period>
+  <author>
+    <reference value="Practitioner/hn-nurse-example"/>
+  </author>
+  <supportingInfo>
+    <reference value="QuestionnaireResponse/hn-casesummary-example"/>
+  </supportingInfo>
+  <goal>
+    <reference value="Goal/hn-goal-example"/>
+  </goal>
+  <activity>
+    <extension url="http://ltc-ig.fhir.tw/StructureDefinition/ExtHNMeasureStop">
+      <extension url="date">
+        <valueDate value="2025-12-09"/>
+      </extension>
+      <extension url="reason">
+        <valueString value="改採個別移位協助措施"/>
+      </extension>
+      <extension url="nurse">
+        <valueReference>
+          <reference value="Practitioner/hn-nurse-example"/>
+        </valueReference>
+      </extension>
+    </extension>
+    <outcomeReference>
+      <reference value="QuestionnaireResponse/hn-evaluations-example"/>
+    </outcomeReference>
+    <detail>
+      <goal>
+        <reference value="Goal/hn-goal-example"/>
+      </goal>
+      <status value="stopped"/>
+      <scheduledPeriod>
+        <start value="2025-12-08"/>
+      </scheduledPeriod>
+      <description value="每日檢查走道障礙物"/>
+    </detail>
+  </activity>
+</CarePlan>

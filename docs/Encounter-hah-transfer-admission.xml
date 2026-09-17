@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="hah-transfer-admission"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/HAHAdmissionEncounter"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Encounter hah-transfer-admission</b></p><a name="hah-transfer-admission"> </a><a name="hchah-transfer-admission"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-HAHAdmissionEncounter.html">在宅急症－整段照護</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP">ActCode: IMP</a> (inpatient encounter)</p><p><b>type</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity acute-home}">在宅急症照護</span></p><p><b>subject</b>: <a href="Patient-hah-patient.html">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>episodeOfCare</b>: <a href="EpisodeOfCare-hah-transfer-episode.html">EpisodeOfCare: extension = 轉急診或住院; identifier = https://example.org/hah/episodes#HAH-20260910-002; status = finished; type = 在宅急症照護; period = 2026-09-10 08:00:00+0800 --&gt; 2026-09-11 10:00:00+0800</a></p><h3>Participants</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Individual</b></td></tr><tr><td style="display: none">*</td><td><a href="Practitioner-hah-practitioner.html">Practitioner 李示範</a></td></tr></table><p><b>period</b>: 2026-09-10 08:00:00+0800 --&gt; 2026-09-11 10:00:00+0800</p><h3>Hospitalizations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Destination</b></td><td><b>DischargeDisposition</b></td></tr><tr><td style="display: none">*</td><td><a href="Organization-hah-receiving-hospital.html">Organization 轉院接收示範醫院</a></td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/discharge-disposition other-hcf}">Other healthcare facility</span></td></tr></table><p><b>serviceProvider</b>: <a href="Organization-hah-organization.html">Organization 在宅急症示範醫療機構</a></p></div>
+  </text>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="IMP"/>
+  </class>
+  <type>
+    <coding>
+      <system value="http://ltc-ig.fhir.tw/CodeSystem/hah-activity"/>
+      <code value="acute-home"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/hah-patient"/>
+  </subject>
+  <episodeOfCare>
+    <reference value="EpisodeOfCare/hah-transfer-episode"/>
+  </episodeOfCare>
+  <participant>
+    <individual>
+      <reference value="Practitioner/hah-practitioner"/>
+    </individual>
+  </participant>
+  <period>
+    <start value="2026-09-10T08:00:00+08:00"/>
+    <end value="2026-09-11T10:00:00+08:00"/>
+  </period>
+  <hospitalization>
+    <destination>
+      <reference value="Organization/hah-receiving-hospital"/>
+    </destination>
+    <dischargeDisposition>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition"/>
+        <code value="other-hcf"/>
+      </coding>
+    </dischargeDisposition>
+  </hospitalization>
+  <serviceProvider>
+    <reference value="Organization/hah-organization"/>
+  </serviceProvider>
+</Encounter>

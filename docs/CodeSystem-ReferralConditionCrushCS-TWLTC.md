@@ -1,4 +1,4 @@
-# 轉介單壓傷狀況代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 轉介單壓傷狀況代碼 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,15 +8,16 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionCrushCS-TWLTC | *Version*:1.0.0 |
+| *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionCrushCS-TWLTC | *Version*:1.1.0 |
 | Active as of 2024-08-25 | *Computable Name*:ReferralConditionCrushCSTWLTC |
+| *Other Identifiers:*OID:2.25.276529238070119313889804260776559609845 | |
 
  
 用於表述個案的壓傷狀況。 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* [ReferralConditionCrushVSTWLTC](ValueSet-ReferralConditionCrushVS-TWLTC.md)
+* [壓傷狀況值集](ValueSet-ReferralConditionCrushVS-TWLTC.md)
 
 
 
@@ -27,7 +28,11 @@
   "resourceType" : "CodeSystem",
   "id" : "ReferralConditionCrushCS-TWLTC",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/ReferralConditionCrushCS-TWLTC",
-  "version" : "1.0.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.276529238070119313889804260776559609845"
+  }],
+  "version" : "1.1.0",
   "name" : "ReferralConditionCrushCSTWLTC",
   "title" : "轉介單壓傷狀況代碼",
   "status" : "active",

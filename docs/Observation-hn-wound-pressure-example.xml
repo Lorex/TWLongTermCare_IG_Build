@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="hn-wound-pressure-example"/>
+  <meta>
+    <profile value="http://ltc-ig.fhir.tw/StructureDefinition/HNWound"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation hn-wound-pressure-example</b></p><a name="hn-wound-pressure-example"> </a><a name="hchn-wound-pressure-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-HNWound.html">居家護理－傷口紀錄</a></p></div><p><b>居家護理－收案關聯</b>: <a href="EpisodeOfCare-hn-episode-example.html">EpisodeOfCare: extension = -&gt;Response to Questionnaire '-&gt;居家護理－個案基本資料' about '-&gt;陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)'; identifier = https://example.org/home-nursing/episodes#HN0001-20251208; status = active; period = 2025-12-08 --&gt; (ongoing)</a></p><p><b>居家護理－來源表單</b>: <a href="QuestionnaireResponse-hn-carerecord-wounds-example.html">Response to Questionnaire '-&gt;居家護理－照護紀錄' about '-&gt;陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)'</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category exam}">Exam</span></p><p><b>code</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow wound}">傷口紀錄</span></p><p><b>subject</b>: <a href="Patient-hn-patient-example.html">陳明慧 Male, DoB: 1945-03-15 ( National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code)</a></p><p><b>effective</b>: 2025-12-08 09:00:00+0800</p><p><b>performer</b>: <a href="Practitioner-hn-nurse-example.html">Practitioner 王美玲</a></p><p><b>bodySite</b>: <span title="Codes:">右小腿</span></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow wound-category}">傷口分類</span></p><p><b>value</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-answer c7ead2b329689}">壓傷</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow length}">長度</span></p><p><b>dataAbsentReason</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/data-absent-reason unknown}">Unknown</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow width}">寬度</span></p><p><b>dataAbsentReason</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/data-absent-reason unknown}">Unknown</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow depth}">深度</span></p><p><b>dataAbsentReason</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/data-absent-reason unknown}">Unknown</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-workflow wound-level}">傷口等級</span></p><p><b>value</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hn-answer cecf422c03011}">無法分期</span></p></blockquote></div>
+  </text>
+  <extension url="http://ltc-ig.fhir.tw/StructureDefinition/ExtHNEpisode">
+    <valueReference>
+      <reference value="EpisodeOfCare/hn-episode-example"/>
+    </valueReference>
+  </extension>
+  <extension url="http://ltc-ig.fhir.tw/StructureDefinition/ExtHNSourceForm">
+    <valueReference>
+      <reference value="QuestionnaireResponse/hn-carerecord-wounds-example"/>
+    </valueReference>
+  </extension>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="exam"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://ltc-ig.fhir.tw/CodeSystem/hn-workflow"/>
+      <code value="wound"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/hn-patient-example"/>
+  </subject>
+  <effectiveDateTime value="2025-12-08T09:00:00+08:00"/>
+  <performer>
+    <reference value="Practitioner/hn-nurse-example"/>
+  </performer>
+  <bodySite>
+    <text value="右小腿"/>
+  </bodySite>
+  <component>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/hn-workflow"/>
+        <code value="wound-category"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/hn-answer"/>
+        <code value="c7ead2b329689"/>
+        <display value="壓傷"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/hn-workflow"/>
+        <code value="length"/>
+      </coding>
+    </code>
+    <dataAbsentReason>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
+        <code value="unknown"/>
+      </coding>
+    </dataAbsentReason>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/hn-workflow"/>
+        <code value="width"/>
+      </coding>
+    </code>
+    <dataAbsentReason>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
+        <code value="unknown"/>
+      </coding>
+    </dataAbsentReason>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/hn-workflow"/>
+        <code value="depth"/>
+      </coding>
+    </code>
+    <dataAbsentReason>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
+        <code value="unknown"/>
+      </coding>
+    </dataAbsentReason>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/hn-workflow"/>
+        <code value="wound-level"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ltc-ig.fhir.tw/CodeSystem/hn-answer"/>
+        <code value="cecf422c03011"/>
+        <display value="無法分期"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+</Observation>

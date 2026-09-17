@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Fee Audit - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引(TW LTC IG)</span>
+            <br/>
+            <span style="display:inline-block;">1.1.0 - STU 1.1.0
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">應用說明</a></li>
+  <li><a href="toc.html">目錄</a></li>
+  <li class="dropdown">
+		<a href="#">主題說明<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="fee-audit.html">長照支付審查</a>
+			</li>
+			<li>
+				<a href="home-nursing.html">居家護理照護管理系統</a>
+			</li>
+			<li>
+				<a href="hah.html">在宅急症照護</a>
+			</li>
+		</ul>
+	</li>
+	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="capability-statements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters-and-operation.html">查詢參數及操作定義</a>
+			</li>
+			<li>
+				<a href="logical-models.html">邏輯模型</a>
+			</li>
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles 及 Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+  <li><a href="examples.html">範例</a></li>
+  <li><a href="downloads.html">結構定義與範例檔下載</a></li>
+  <li><a href="security.html">安全性</a></li>
+  <li><a href="validates.html">驗證教學</a></li>
+  <li class="dropdown">
+    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
+      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+    </ul>
+  </li>
+  <li><a href="connectathon-result.html">聯測松結果</a></li>
+  <!-- <li><a href="history.html">版本歷程</a></li> -->
+</ul>      
+
+<style>
+.dropdown-menu li:hover .sub-menu {visibility: visible;}
+.dropdown:hover .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 992px) {
+  table.colsi {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  table.rwd-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  p, a {
+    word-break: break-all;
+  }
+}
+</style>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Fee Audit</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引(TW LTC IG) - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Fee Audit</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#支付審查資料交換" id="markdown-toc-支付審查資料交換">支付審查資料交換</a></li>
+  <li><a href="#作業流程" id="markdown-toc-作業流程">作業流程</a></li>
+  <li><a href="#fhir-資料填寫" id="markdown-toc-fhir-資料填寫">FHIR 資料填寫</a></li>
+  <li><a href="#原-api-欄位對照" id="markdown-toc-原-api-欄位對照">原 API 欄位對照</a></li>
+  <li><a href="#邏輯模型與完整規格" id="markdown-toc-邏輯模型與完整規格">邏輯模型與完整規格</a></li>
+  <li><a href="#術語查詢" id="markdown-toc-術語查詢">術語查詢</a></li>
+  <li><a href="#傳輸設定" id="markdown-toc-傳輸設定">傳輸設定</a></li>
+</ul>
+
+</div>
+
+<h3 id="支付審查資料交換">支付審查資料交換</h3>
+
+<p>本頁說明長照服務提供單位及系統商如何使用 FHIR 傳送申報資料、查詢審核結果，以及辦理刪除或撤回。內容依據《衛生福利部 支付審核系統 API 規格說明書（照管平台）v2.2.1》，使用 FHIR R4.0.1。</p>
+
+<p>初次介接可先看下方的作業流程與填寫說明。要將既有 API 資料轉成 FHIR，可查閱後面的「原 API 欄位對照」；完整欄位、必填條件與範例則見各 Profile 頁面。</p>
+
+<h3 id="作業流程">作業流程</h3>
+
+<h4 id="申報與確認">申報與確認</h4>
+
+<ol>
+  <li><strong>申報服務紀錄（<code class="language-plaintext highlighter-rouge">FeeApply</code>）</strong>：同一支審年月可分次申報，每次交易最多 5,000 筆服務紀錄。每筆紀錄使用唯一識別碼；支審系統沒有該識別碼時新增，已有時更新。</li>
+  <li><strong>刪除誤報資料（<code class="language-plaintext highlighter-rouge">ObjDel</code>）</strong>：列出要刪除的服務紀錄識別碼。刪除成功或失敗的結果由查詢 A 取得。</li>
+  <li><strong>送出申報確認通知（<code class="language-plaintext highlighter-rouge">appCompletionNotice</code>）</strong>：資料確認無誤後，依案件通知縣市承辦人員收件審查。<strong>送出後，該案件不能再申報或刪除服務紀錄。</strong></li>
+</ol>
+
+<p>支審年月使用 6 碼西元年月，例如 <code class="language-plaintext highlighter-rouge">202609</code>。本 IG 的長照 SDK 模組使用民國年月，轉換資料時需區分。</p>
+
+<h4 id="查詢審核結果">查詢審核結果</h4>
+
+<p>先以 <code class="language-plaintext highlighter-rouge">appResultQuery</code> 的查詢 A 取得分案狀態，再依結果決定是否執行查詢 B。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>查詢</th>
+      <th>可取得的資料</th>
+      <th>使用時機與限制</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>查詢 A（<code class="language-plaintext highlighter-rouge">query_type = A</code>）</td>
+      <td>核銷案號、核銷狀況、總表版次、簽證編號，以及交易處理結果、分案異常和刪除結果</td>
+      <td>每次查詢間隔至少 20 分鐘</td>
+    </tr>
+    <tr>
+      <td>查詢 B（<code class="language-plaintext highlighter-rouge">query_type = B</code>）</td>
+      <td>指定核銷案號的核定金額、通過與未通過的服務紀錄、A 碼加成及清冊下載網址</td>
+      <td>先執行查詢 A；只有新核銷案號，或核銷狀況、總表版次有異動時才執行</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>兩種查詢都需提供支審年月、交易序號及查詢類別。查詢 B 另需提供縣市代碼與核銷案號。</p>
+
+<h4 id="撤回與取消結果回報">撤回與取消結果回報</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>操作</th>
+      <th>處理範圍</th>
+      <th>填寫方式與限制</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>撤回服務紀錄（<code class="language-plaintext highlighter-rouge">appCancel</code>）</td>
+      <td>撤回本月由該來源系統申報的服務紀錄</td>
+      <td>未填縣市代碼與核銷案號時，撤回整月資料；有填時，只撤回指定核銷案號。承辦人已收件處理的案件不能撤回</td>
+    </tr>
+    <tr>
+      <td>取消交易單處理結果回報（<code class="language-plaintext highlighter-rouge">CancelResultResponse</code>）</td>
+      <td>取消查詢 A 中某筆交易的處理結果回報</td>
+      <td>填入要取消回報的交易序號</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="fhir-資料填寫">FHIR 資料填寫</h3>
+
+<h4 id="申報資料">申報資料</h4>
+
+<p>一次申報使用一份 <a href="StructureDefinition-LTCBundleFeeApply.html">LTCBundleFeeApply</a>，<code class="language-plaintext highlighter-rouge">Bundle.type</code> 填入 <code class="language-plaintext highlighter-rouge">collection</code>。每筆服務紀錄各建立一筆 <a href="StructureDefinition-LTCClaimFeeApply.html">LTCClaimFeeApply</a>，放入 Bundle；每筆 Claim 只有一筆 <code class="language-plaintext highlighter-rouge">item</code>。</p>
+
+<p>Bundle 也要放入相關的<a href="StructureDefinition-LTCPatient.html">個案 Patient</a> 與<a href="StructureDefinition-Organization-twltc.html">申報單位 Organization</a>，並依服務內容加入<a href="StructureDefinition-LTCPractitioner.html">照顧服務員 Practitioner</a> 和<a href="StructureDefinition-LTCLocationFeeAuditPlace.html">交通接送地點 Location</a>。這些都是放在 <code class="language-plaintext highlighter-rouge">Bundle.entry.resource</code> 的完整資源，Claim 再透過 Reference 參照它們。</p>
+
+<p>例如，同一位個案有三筆服務紀錄，就建立三筆 Claim，讓三筆 Claim 的 <code class="language-plaintext highlighter-rouge">patient</code> 參照同一份 Patient。這次申報的服務紀錄數是三筆，個案數是一人。申報總金額由各筆 <code class="language-plaintext highlighter-rouge">Claim.total</code> 加總，不另設批次統計欄位。</p>
+
+<p>服務內容、交通接送資料等補充資訊填在 <code class="language-plaintext highlighter-rouge">Claim.supportingInfo</code>，依資料類型選擇欄位：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>資料類型</th>
+      <th>填寫欄位</th>
+      <th>填寫方式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>代碼，例如服務項目、服務對象</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
+      <td>填入對應值集的代碼。複選時，每個選項各填一筆 <code class="language-plaintext highlighter-rouge">supportingInfo</code></td>
+    </tr>
+    <tr>
+      <td>文字，例如服務內容、備註</td>
+      <td><code class="language-plaintext highlighter-rouge">valueString</code></td>
+      <td>填入文字內容</td>
+    </tr>
+    <tr>
+      <td>是／否，例如是否申報 AA03</td>
+      <td><code class="language-plaintext highlighter-rouge">valueBoolean</code></td>
+      <td>填入 <code class="language-plaintext highlighter-rouge">true</code> 或 <code class="language-plaintext highlighter-rouge">false</code></td>
+    </tr>
+    <tr>
+      <td>里程數</td>
+      <td><code class="language-plaintext highlighter-rouge">valueQuantity</code></td>
+      <td>填入數值，建議以公里（<code class="language-plaintext highlighter-rouge">km</code>）為單位</td>
+    </tr>
+    <tr>
+      <td>出發地、目的地</td>
+      <td><code class="language-plaintext highlighter-rouge">valueReference</code></td>
+      <td>參照對應的 Location，地點名稱、地址及經緯度填在 Location 中</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>照顧組合代碼請填在 <code class="language-plaintext highlighter-rouge">item.productOrService.coding</code>。目前 Profile 的四條條件檢核依這裡的代碼判斷；只填 <code class="language-plaintext highlighter-rouge">text</code> 不會觸發檢核。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>照顧組合代碼</th>
+      <th>目前條件檢核會檢查的補充資料</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BD03、DA01</td>
+      <td>車號、里程數</td>
+    </tr>
+    <tr>
+      <td>BD03</td>
+      <td>社區式服務交通接送服務使用類型</td>
+    </tr>
+    <tr>
+      <td>AA00</td>
+      <td>服務項目、服務對象、服務內容</td>
+    </tr>
+    <tr>
+      <td>AA03</td>
+      <td>服務項目、提供專業服務單位</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>這四條檢核（<code class="language-plaintext highlighter-rouge">ltc-feeaudit-1</code> 至 <code class="language-plaintext highlighter-rouge">ltc-feeaudit-4</code>）的層級為 <code class="language-plaintext highlighter-rouge">warning</code>，未涵蓋原規格書的所有條件。出發地、目的地及 C 碼專業服務資料等，仍須依原規格書「支付碼必填欄位一覽表」填寫。</p>
+
+<h4 id="交易任務與查詢-a-回覆">交易任務與查詢 A 回覆</h4>
+
+<p>刪除、申報確認、撤回及取消結果回報都使用 <a href="StructureDefinition-LTCTaskFeeAudit.html">LTCTaskFeeAudit</a>。<code class="language-plaintext highlighter-rouge">Task.code</code> 填入操作代碼，<code class="language-plaintext highlighter-rouge">input</code> 填入操作所需資料，<code class="language-plaintext highlighter-rouge">output</code> 記錄處理結果。同次交易的任務使用相同的 <code class="language-plaintext highlighter-rouge">Task.groupIdentifier</code>。</p>
+
+<p>申報確認通知以<strong>一個縣市一筆 Task</strong> 填寫。同一縣市有多個案件時，在該 Task 逐筆填入核銷案號；涉及不同縣市時，分別建立 Task，並共用交易序號。</p>
+
+<p><code class="language-plaintext highlighter-rouge">input</code> 與 <code class="language-plaintext highlighter-rouge">output</code> 的 Slice 以 <code class="language-plaintext highlighter-rouge">type.text</code> 區分。例如縣市代碼的 <code class="language-plaintext highlighter-rouge">type.text</code> 固定填入「縣市代碼」。讀取資料或撰寫 FHIRPath 時，請使用 Profile 指定的文字定位。</p>
+
+<p>查詢 A 的回覆使用 <a href="StructureDefinition-LTCBundleFeeAuditStatus.html">LTCBundleFeeAuditStatus</a>，內含 Task；分案異常或刪除失敗的訊息另以 <a href="StructureDefinition-LTCOperationOutcomeFeeAudit.html">LTCOperationOutcomeFeeAudit</a> 放入 Bundle，並由 Task 的 <code class="language-plaintext highlighter-rouge">output</code> 參照。</p>
+
+<p>Task 有兩種狀態，讀取時需區分：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>欄位</th>
+      <th>表示的狀態</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Task.status</code></td>
+      <td>API 執行進度：待處理 <code class="language-plaintext highlighter-rouge">requested</code>、處理中 <code class="language-plaintext highlighter-rouge">in-progress</code>、失敗 <code class="language-plaintext highlighter-rouge">failed</code>、完成 <code class="language-plaintext highlighter-rouge">completed</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Task.businessStatus</code></td>
+      <td>分案的核銷狀況，使用支付審查定義的 0 至 6 代碼</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="分案審核明細與查詢-b-回覆">分案審核明細與查詢 B 回覆</h4>
+
+<p>查詢 B 的回覆使用 <a href="StructureDefinition-LTCBundleFeeAuditResponse.html">LTCBundleFeeAuditResponse</a>，其中一份 <a href="StructureDefinition-LTCClaimResponseFeeAudit.html">LTCClaimResponseFeeAudit</a> 記錄一個核銷案號的審核結果。該案可能包含多筆申報 Claim。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>審核資料</th>
+      <th>填寫位置</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>分案的申請核銷、核定、政策鼓勵、核增、核減及暫付金額</td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.total</code>，每種金額各填一筆，幣別使用 <code class="language-plaintext highlighter-rouge">TWD</code></td>
+    </tr>
+    <tr>
+      <td>通過的服務紀錄</td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.item</code></td>
+    </tr>
+    <tr>
+      <td>未通過的服務紀錄及錯誤原因</td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.error</code></td>
+    </tr>
+    <tr>
+      <td>審核後另行加計的 A 碼給付</td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.addItem</code></td>
+    </tr>
+    <tr>
+      <td>承辦審核意見</td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.disposition</code></td>
+    </tr>
+    <tr>
+      <td>核增、核減原因</td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.processNote</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>審核結果中的服務紀錄識別資料填在 <a href="StructureDefinition-Ext-TW-LTC-FeeAudit-RecordRef.html">recordRef Extension</a>。比對原申報紀錄時，請讀取這裡的識別碼、來源系統與交易序號；<code class="language-plaintext highlighter-rouge">itemSequence</code> 不能用來存放字串識別碼，也不足以識別跨 Claim 的服務紀錄。</p>
+
+<p>統計筆數、個案數、暫付申請狀態、已處理交易序號及承辦人員填在 <a href="StructureDefinition-Ext-TW-LTC-FeeAudit-AuditSummary.html">auditSummary Extension</a>。<code class="language-plaintext highlighter-rouge">requestor</code> 表示提出申報的服務提供方，審核承辦人員應填在 <code class="language-plaintext highlighter-rouge">auditSummary</code>。</p>
+
+<p>總表與清冊的下載網址填在 <a href="StructureDefinition-Ext-TW-LTC-FeeAudit-DocUrl.html">docUrl Extension</a>，每份文件各填一筆，包含文件類別與網址。</p>
+
+<p>目前 Profile 要求 <code class="language-plaintext highlighter-rouge">ClaimResponse.patient</code> 填入一個 Patient Reference。核銷案號含多位個案時，依 Profile 說明填入代表個案或分案受理的個案；各筆服務紀錄的個案資料仍須回查原申報 Claim，不能只依此欄位判斷整案的個案名單。</p>
+
+<h3 id="原-api-欄位對照">原 API 欄位對照</h3>
+
+<p>以下保留原規格書的欄位名稱，供資料轉換時查閱。方括號表示 Profile 定義的 Slice 名稱，例如 <code class="language-plaintext highlighter-rouge">identifier[objid]</code>；JSON 中仍使用 <code class="language-plaintext highlighter-rouge">identifier</code> 陣列，依 Profile 指定的欄位值區分各個 Slice。</p>
+
+<h4 id="服務紀錄申報">服務紀錄申報</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>原 API 區段</th>
+      <th>規格書欄位</th>
+      <th>FHIR 欄位與填寫方式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FeeApply／apply_info</td>
+      <td>支審年月 <code class="language-plaintext highlighter-rouge">writeoff_yyyymm</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.identifier[yyyymm].value</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／apply_info</td>
+      <td>交易序號 <code class="language-plaintext highlighter-rouge">trans_no</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Bundle.identifier.value</code>；各筆 <code class="language-plaintext highlighter-rouge">Claim.identifier[transNo].value</code> 填入相同序號</td>
+    </tr>
+    <tr>
+      <td>FeeApply／apply_info</td>
+      <td>服務記錄筆數 <code class="language-plaintext highlighter-rouge">records</code>、申請個案數 <code class="language-plaintext highlighter-rouge">cases</code></td>
+      <td>由 <code class="language-plaintext highlighter-rouge">Bundle.entry</code> 中 Claim 的筆數、不重複 <code class="language-plaintext highlighter-rouge">Claim.patient</code> 的數量計算，不另設欄位</td>
+    </tr>
+    <tr>
+      <td>FeeApply／apply_info</td>
+      <td>服務紀錄金額 <code class="language-plaintext highlighter-rouge">amount</code>（本次申報總金額）</td>
+      <td>由 <code class="language-plaintext highlighter-rouge">Bundle.entry</code> 中各 <code class="language-plaintext highlighter-rouge">Claim.total</code> 加總計算，不另設欄位</td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>識別碼 <code class="language-plaintext highlighter-rouge">objid</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.identifier[objid].value</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>個案身分證字號 <code class="language-plaintext highlighter-rouge">idn</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.patient</code> → <code class="language-plaintext highlighter-rouge">Patient.identifier</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>服務日期 <code class="language-plaintext highlighter-rouge">svc_dt</code>、起訖時段 <code class="language-plaintext highlighter-rouge">start_hh</code>／<code class="language-plaintext highlighter-rouge">start_mm</code>／<code class="language-plaintext highlighter-rouge">end_hh</code>／<code class="language-plaintext highlighter-rouge">end_mm</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.item.servicedPeriod.start</code>／<code class="language-plaintext highlighter-rouge">.end</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>照顧組合代碼 <code class="language-plaintext highlighter-rouge">gov_item_cd</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.item.productOrService</code>，在 <code class="language-plaintext highlighter-rouge">coding</code> 填入<a href="CodeSystem-cs-tw-ltc-service-item.html">臺灣長照服務項目代碼</a></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>服務類別 <code class="language-plaintext highlighter-rouge">svc_fee_tp</code>（1 補助、2 自費）</td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.item.category</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>單價 <code class="language-plaintext highlighter-rouge">price</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.item.unitPrice</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>數量 <code class="language-plaintext highlighter-rouge">amount</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.item.quantity</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>本筆服務紀錄的申報金額（單價 × 數量）</td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.total</code>；服務明細小計填在 <code class="language-plaintext highlighter-rouge">Claim.item.net</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>照顧服務員身分證字號 <code class="language-plaintext highlighter-rouge">svc_user_no1</code>～<code class="language-plaintext highlighter-rouge">svc_user_no5</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.careTeam.provider</code> → <code class="language-plaintext highlighter-rouge">Practitioner.identifier</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>服務提供單位（申報單位）</td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.provider</code> → <code class="language-plaintext highlighter-rouge">Organization</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>服務項目 <code class="language-plaintext highlighter-rouge">svc_item</code>（AA00／AA03 必填，可複選）</td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.supportingInfo[svcItem].code</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>服務對象 <code class="language-plaintext highlighter-rouge">svc_people</code>（可複選）</td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.supportingInfo[svcPeople].code</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>服務重點 <code class="language-plaintext highlighter-rouge">svc_point</code>（可複選）</td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.supportingInfo[svcPoint].code</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>服務內容 <code class="language-plaintext highlighter-rouge">svc_content</code>、追蹤服務適應與介入情形 <code class="language-plaintext highlighter-rouge">svc_trace</code>、各項服務目標及整體計畫目標達成情形 <code class="language-plaintext highlighter-rouge">svc_goal</code>、整體計畫的適切性及需求異動 <code class="language-plaintext highlighter-rouge">svc_suitable</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.supportingInfo[svcContent／svcTrace／svcGoal／svcSuitable].valueString</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>專業服務復能目標達成情形 <code class="language-plaintext highlighter-rouge">svcc_goal_type</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.supportingInfo[svccGoalType].code</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>專業服務復能目標 <code class="language-plaintext highlighter-rouge">svcc_goal</code>、指導對象 <code class="language-plaintext highlighter-rouge">svcc_content_target</code>、服務內容 <code class="language-plaintext highlighter-rouge">svcc_content</code>、指導建議摘要 <code class="language-plaintext highlighter-rouge">svcc_suggest</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.supportingInfo[svccGoal／svccContentTarget／svccContent／svccSuggest].valueString</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>提供專業服務單位 <code class="language-plaintext highlighter-rouge">svc_unit</code>（AA03 必填）</td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.supportingInfo[svcUnit].valueString</code>，填入 C 單位的單位代碼</td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>出發地 <code class="language-plaintext highlighter-rouge">addr1</code>、目的地 <code class="language-plaintext highlighter-rouge">addr2</code>（BD03／DA01）</td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.supportingInfo[addrFrom／addrTo].valueReference</code> → <code class="language-plaintext highlighter-rouge">Location</code>（地點名稱／地址填在 <code class="language-plaintext highlighter-rouge">Location.name</code>／<code class="language-plaintext highlighter-rouge">Location.address</code>）</td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>出發地／目的地經緯度 <code class="language-plaintext highlighter-rouge">addrlat1</code>、<code class="language-plaintext highlighter-rouge">addrlng1</code>、<code class="language-plaintext highlighter-rouge">addrlat2</code>、<code class="language-plaintext highlighter-rouge">addrlng2</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Location.position.latitude</code>／<code class="language-plaintext highlighter-rouge">Location.position.longitude</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>車號 <code class="language-plaintext highlighter-rouge">car_no</code>、駕駛員 <code class="language-plaintext highlighter-rouge">driver</code>（BD03／DA01）</td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.supportingInfo[carNo／driver].valueString</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>里程數 <code class="language-plaintext highlighter-rouge">milage</code>（BD03／DA01 必填）</td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.supportingInfo[milage].valueQuantity</code>（建議單位公里 km）</td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>社區式服務交通接送服務使用類型 <code class="language-plaintext highlighter-rouge">bd03_type</code>（BD03 必填）</td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.supportingInfo[bd03Type].code</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>臨終日照顧 <code class="language-plaintext highlighter-rouge">last_svc</code>、訪視／服務未遇 <code class="language-plaintext highlighter-rouge">missed_visit</code>、陪同施打 COVID-19 疫苗 <code class="language-plaintext highlighter-rouge">apply_covid19</code>、是否申報 AA03 <code class="language-plaintext highlighter-rouge">apply_aa03</code>、是否申報 AA09 <code class="language-plaintext highlighter-rouge">apply_aa09</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.supportingInfo[lastSvc／missedVisit／applyCovid19／applyAA03／applyAA09].valueBoolean</code>（Y 對應 <code class="language-plaintext highlighter-rouge">true</code>、N 對應 <code class="language-plaintext highlighter-rouge">false</code>）</td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>AA10 申報狀態 <code class="language-plaintext highlighter-rouge">aa10_status</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.supportingInfo[aa10Status].code</code></td>
+    </tr>
+    <tr>
+      <td>FeeApply／case_svc_records</td>
+      <td>備註 <code class="language-plaintext highlighter-rouge">remark</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Claim.supportingInfo[remark].valueString</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="交易任務與分案狀態">交易任務與分案狀態</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>原 API 區段</th>
+      <th>規格書欄位</th>
+      <th>FHIR 欄位與填寫方式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>共用</td>
+      <td>API Function <code class="language-plaintext highlighter-rouge">function</code>（FeeApply、ObjDel、appCompletionNotice、appCancel、CancelResultResponse）</td>
+      <td><code class="language-plaintext highlighter-rouge">Task.code</code></td>
+    </tr>
+    <tr>
+      <td>共用</td>
+      <td>支審年月 <code class="language-plaintext highlighter-rouge">writeoff_yyyymm</code>、交易序號 <code class="language-plaintext highlighter-rouge">trans_no</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Task.identifier[yyyymm].value</code>、<code class="language-plaintext highlighter-rouge">Task.groupIdentifier.value</code></td>
+    </tr>
+    <tr>
+      <td>查詢 A／webapi_process_info</td>
+      <td>API 執行狀態 <code class="language-plaintext highlighter-rouge">status</code>（0 待處理、1 處理中、3 錯誤、4 處理完成）</td>
+      <td><code class="language-plaintext highlighter-rouge">Task.status</code>（依序對應 <code class="language-plaintext highlighter-rouge">requested</code>、<code class="language-plaintext highlighter-rouge">in-progress</code>、<code class="language-plaintext highlighter-rouge">failed</code>、<code class="language-plaintext highlighter-rouge">completed</code>）</td>
+    </tr>
+    <tr>
+      <td>查詢 A／case_infos</td>
+      <td>核銷狀況 <code class="language-plaintext highlighter-rouge">status</code>（0～6）</td>
+      <td><code class="language-plaintext highlighter-rouge">Task.businessStatus</code></td>
+    </tr>
+    <tr>
+      <td>查詢 A／webapi_process_info</td>
+      <td>批次處理結果 <code class="language-plaintext highlighter-rouge">batch_proc_result</code>、處理筆數 <code class="language-plaintext highlighter-rouge">batch_proc_num</code>、成功筆數 <code class="language-plaintext highlighter-rouge">batch_succ_num</code>、失敗筆數 <code class="language-plaintext highlighter-rouge">batch_err_num</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Task.output[batchProcResult／batchProcNum／batchSuccNum／batchErrNum]</code></td>
+    </tr>
+    <tr>
+      <td>查詢 A／webapi_process_info</td>
+      <td>分案異常資料 <code class="language-plaintext highlighter-rouge">exception_records</code>（<code class="language-plaintext highlighter-rouge">objid</code>、<code class="language-plaintext highlighter-rouge">err_code</code>、<code class="language-plaintext highlighter-rouge">err_message</code>）</td>
+      <td><code class="language-plaintext highlighter-rouge">Task.output[exceptionRecords].valueReference</code> → <code class="language-plaintext highlighter-rouge">OperationOutcome</code></td>
+    </tr>
+    <tr>
+      <td>查詢 A／webapi_process_info</td>
+      <td>服務紀錄刪除成功資料 <code class="language-plaintext highlighter-rouge">delete_records</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Task.output[deleteRecords].valueString</code>（逐筆 <code class="language-plaintext highlighter-rouge">objid</code>）</td>
+    </tr>
+    <tr>
+      <td>查詢 A／webapi_process_info</td>
+      <td>服務紀錄刪除失敗資料 <code class="language-plaintext highlighter-rouge">delete_exception_records</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Task.output[deleteExceptionRecords].valueReference</code> → <code class="language-plaintext highlighter-rouge">OperationOutcome</code></td>
+    </tr>
+    <tr>
+      <td>ObjDel／case_svc_records</td>
+      <td>識別碼 <code class="language-plaintext highlighter-rouge">objid</code>（要刪除者）</td>
+      <td><code class="language-plaintext highlighter-rouge">Task.input[objid].valueString</code></td>
+    </tr>
+    <tr>
+      <td>appCompletionNotice／city_info</td>
+      <td>縣市代碼 <code class="language-plaintext highlighter-rouge">city_cd</code>、案件編號 <code class="language-plaintext highlighter-rouge">case_no</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Task.input[cityCd].valueString</code>、<code class="language-plaintext highlighter-rouge">Task.input[caseNo].valueString</code>。每個縣市分別建立 Task，同次作業共用 <code class="language-plaintext highlighter-rouge">Task.groupIdentifier</code></td>
+    </tr>
+    <tr>
+      <td>appCancel／cancel_info</td>
+      <td>縣市代碼 <code class="language-plaintext highlighter-rouge">city_cd</code>、核銷案號 <code class="language-plaintext highlighter-rouge">case_no</code>（選填）</td>
+      <td><code class="language-plaintext highlighter-rouge">Task.input[cityCd].valueString</code>、<code class="language-plaintext highlighter-rouge">Task.input[caseNo].valueString</code></td>
+    </tr>
+    <tr>
+      <td>CancelResultResponse</td>
+      <td>所要取消結果回報之交易序號 <code class="language-plaintext highlighter-rouge">cancel_trans_no</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Task.input[cancelTransNo].valueString</code>；可另以 <code class="language-plaintext highlighter-rouge">Task.partOf</code> 參照原交易單 Task</td>
+    </tr>
+    <tr>
+      <td>共用</td>
+      <td>檢核錯誤代碼 <code class="language-plaintext highlighter-rouge">err_code</code>、錯誤原因 <code class="language-plaintext highlighter-rouge">err_message</code></td>
+      <td><code class="language-plaintext highlighter-rouge">OperationOutcome.issue.details.coding</code>、<code class="language-plaintext highlighter-rouge">issue.details.text</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="分案審核明細">分案審核明細</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>原 API 區段</th>
+      <th>規格書欄位</th>
+      <th>FHIR 欄位與填寫方式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>查詢 B／回覆明細</td>
+      <td>核銷案號 <code class="language-plaintext highlighter-rouge">case_no</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.identifier[caseNo].value</code></td>
+    </tr>
+    <tr>
+      <td>查詢 B／回覆明細</td>
+      <td>總表版次 <code class="language-plaintext highlighter-rouge">doc_ver</code>、版次時間 <code class="language-plaintext highlighter-rouge">ver_dt</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.identifier[docVer].value</code>、<code class="language-plaintext highlighter-rouge">ClaimResponse.created</code></td>
+    </tr>
+    <tr>
+      <td>查詢 B／回覆明細</td>
+      <td>簽證編號 <code class="language-plaintext highlighter-rouge">acc_num</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.identifier[accNum].value</code></td>
+    </tr>
+    <tr>
+      <td>查詢 B／回覆明細</td>
+      <td>承辦人員 <code class="language-plaintext highlighter-rouge">audit_man</code>、承辦審核意見 <code class="language-plaintext highlighter-rouge">audit_reason</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.extension[auditSummary].extension[auditMan].valueString</code>、<code class="language-plaintext highlighter-rouge">ClaimResponse.disposition</code></td>
+    </tr>
+    <tr>
+      <td>查詢 B／回覆明細</td>
+      <td>服務記錄筆數 <code class="language-plaintext highlighter-rouge">records</code>、個案數 <code class="language-plaintext highlighter-rouge">cases</code>、核定個案數 <code class="language-plaintext highlighter-rouge">approve_case_num</code>、核定服務記錄數 <code class="language-plaintext highlighter-rouge">approve_record_count</code>、分案已處理之單號 <code class="language-plaintext highlighter-rouge">trans_nos</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.extension[auditSummary]</code> 的對應子項目</td>
+    </tr>
+    <tr>
+      <td>查詢 B／回覆明細</td>
+      <td>申請核銷金額 <code class="language-plaintext highlighter-rouge">amount</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.total</code>，<code class="language-plaintext highlighter-rouge">total.category = submitted</code></td>
+    </tr>
+    <tr>
+      <td>查詢 B／回覆明細</td>
+      <td>核定金額 <code class="language-plaintext highlighter-rouge">approve_fee</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.total</code>，<code class="language-plaintext highlighter-rouge">total.category = approveFee</code></td>
+    </tr>
+    <tr>
+      <td>查詢 B／回覆明細</td>
+      <td>政策鼓勵金額 <code class="language-plaintext highlighter-rouge">a_svc_fee</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.total</code>，<code class="language-plaintext highlighter-rouge">total.category = aSvcFee</code></td>
+    </tr>
+    <tr>
+      <td>查詢 B／回覆明細</td>
+      <td>核增金額 <code class="language-plaintext highlighter-rouge">inc_in_acc</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.total</code>，<code class="language-plaintext highlighter-rouge">total.category = incInAcc</code>；核增原因 <code class="language-plaintext highlighter-rouge">inc_in_reason</code> 以 <code class="language-plaintext highlighter-rouge">ClaimResponse.processNote.text</code> 表達</td>
+    </tr>
+    <tr>
+      <td>查詢 B／回覆明細</td>
+      <td>核減金額 <code class="language-plaintext highlighter-rouge">dec_in_acc</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.total</code>，<code class="language-plaintext highlighter-rouge">total.category = decInAcc</code>；核減原因 <code class="language-plaintext highlighter-rouge">dec_in_reason</code> 以 <code class="language-plaintext highlighter-rouge">ClaimResponse.processNote.text</code> 表達</td>
+    </tr>
+    <tr>
+      <td>查詢 B／回覆明細</td>
+      <td>分案暫付金額 <code class="language-plaintext highlighter-rouge">temp_payment_fee</code>、暫付申請狀態 <code class="language-plaintext highlighter-rouge">temp_payment_status</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.total</code>，<code class="language-plaintext highlighter-rouge">total.category = tempPaymentFee</code>；狀態以 <code class="language-plaintext highlighter-rouge">ClaimResponse.extension[auditSummary].extension[tempPaymentStatus].valueString</code> 表達</td>
+    </tr>
+    <tr>
+      <td>查詢 B／approve_records</td>
+      <td>審核通過服務記錄（識別碼 <code class="language-plaintext highlighter-rouge">objid</code>、來源系統別 <code class="language-plaintext highlighter-rouge">source_system</code>、交易序號 <code class="language-plaintext highlighter-rouge">trans_no</code>）</td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.item</code>，識別資料填在 <code class="language-plaintext highlighter-rouge">item.extension[recordRef]</code></td>
+    </tr>
+    <tr>
+      <td>查詢 B／approve_records</td>
+      <td>單價 <code class="language-plaintext highlighter-rouge">price</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.item.adjudication</code>，<code class="language-plaintext highlighter-rouge">category = price</code></td>
+    </tr>
+    <tr>
+      <td>查詢 B／approve_records</td>
+      <td>自付額 <code class="language-plaintext highlighter-rouge">copayment</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.item.adjudication</code>，<code class="language-plaintext highlighter-rouge">category = copayment</code></td>
+    </tr>
+    <tr>
+      <td>查詢 B／a_svc_records</td>
+      <td>A 碼加成資料區（A 碼 <code class="language-plaintext highlighter-rouge">a_gov_item_cd</code>、單價 <code class="language-plaintext highlighter-rouge">price</code>、所加成之 <code class="language-plaintext highlighter-rouge">ref_objid</code>／<code class="language-plaintext highlighter-rouge">ref_source_system</code>）</td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.addItem.productOrService</code>、<code class="language-plaintext highlighter-rouge">addItem.adjudication</code>（<code class="language-plaintext highlighter-rouge">category = price</code>）、<code class="language-plaintext highlighter-rouge">addItem.extension[recordRef]</code></td>
+    </tr>
+    <tr>
+      <td>查詢 B／err_records</td>
+      <td>錯誤服務記錄（識別碼 <code class="language-plaintext highlighter-rouge">objid</code>、來源系統別 <code class="language-plaintext highlighter-rouge">source_system</code>、交易序號 <code class="language-plaintext highlighter-rouge">trans_no</code>、錯誤碼 <code class="language-plaintext highlighter-rouge">err_code</code>、錯誤原因 <code class="language-plaintext highlighter-rouge">err_message</code>）</td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.error.extension[recordRef]</code>、<code class="language-plaintext highlighter-rouge">error.code</code>（綁定支付審查錯誤代碼）、<code class="language-plaintext highlighter-rouge">error.code.text</code></td>
+    </tr>
+    <tr>
+      <td>查詢 B／回覆明細</td>
+      <td>總表／清冊下載路徑 <code class="language-plaintext highlighter-rouge">temp_payment_doc_url</code>、<code class="language-plaintext highlighter-rouge">case_summary_notice_url</code>、<code class="language-plaintext highlighter-rouge">case_svc_list_url</code>、<code class="language-plaintext highlighter-rouge">case_svc_list_excel_url</code>、<code class="language-plaintext highlighter-rouge">case_a_svc_list_url</code>、<code class="language-plaintext highlighter-rouge">case_a_svc_list_excel_url</code>、<code class="language-plaintext highlighter-rouge">case_err_list_url</code>、<code class="language-plaintext highlighter-rouge">case_err_list_excel_url</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.extension[docUrl]</code>（子元素 <code class="language-plaintext highlighter-rouge">docType</code> + <code class="language-plaintext highlighter-rouge">url</code>），逐份文件一筆</td>
+    </tr>
+    <tr>
+      <td>查詢 B／回覆明細</td>
+      <td>縣市代碼 <code class="language-plaintext highlighter-rouge">city_cd</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ClaimResponse.insurer</code> → 受理本分案的縣市主管機關 Organization</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="邏輯模型與完整規格">邏輯模型與完整規格</h3>
+
+<p>邏輯模型保留原 API 的欄位名稱、型態、長度及填寫條件。各模型的「Mappings」頁籤提供 FHIR 欄位對照。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>資料範圍</th>
+      <th>邏輯模型</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>服務紀錄申報</td>
+      <td><a href="StructureDefinition-LTCFeeApplyModel.html">LTCFeeApplyModel</a></td>
+    </tr>
+    <tr>
+      <td>分案狀態、交易結果及各項異動操作</td>
+      <td><a href="StructureDefinition-LTCFeeAuditStatusModel.html">LTCFeeAuditStatusModel</a></td>
+    </tr>
+    <tr>
+      <td>分案審核明細</td>
+      <td><a href="StructureDefinition-LTCFeeAuditDetailModel.html">LTCFeeAuditDetailModel</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>各 Profile 的「Examples」頁籤可查看填寫範例，也可從<a href="examples.html">範例總覽</a>查找。</p>
+
+<h3 id="術語查詢">術語查詢</h3>
+
+<p>CodeSystem 列出代碼定義，ValueSet 列出欄位可使用的代碼範圍。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用途</th>
+      <th>CodeSystem</th>
+      <th>ValueSet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>服務類別</td>
+      <td><a href="CodeSystem-cs-tw-ltc-feeaudit-fee-type.html">代碼定義</a></td>
+      <td><a href="ValueSet-vs-tw-ltc-feeaudit-fee-type.html">值集</a></td>
+    </tr>
+    <tr>
+      <td>服務項目</td>
+      <td><a href="CodeSystem-cs-tw-ltc-feeaudit-svc-item.html">代碼定義</a></td>
+      <td><a href="ValueSet-vs-tw-ltc-feeaudit-svc-item.html">值集</a></td>
+    </tr>
+    <tr>
+      <td>服務對象</td>
+      <td><a href="CodeSystem-cs-tw-ltc-feeaudit-svc-people.html">代碼定義</a></td>
+      <td><a href="ValueSet-vs-tw-ltc-feeaudit-svc-people.html">值集</a></td>
+    </tr>
+    <tr>
+      <td>服務重點</td>
+      <td><a href="CodeSystem-cs-tw-ltc-feeaudit-svc-point.html">代碼定義</a></td>
+      <td><a href="ValueSet-vs-tw-ltc-feeaudit-svc-point.html">值集</a></td>
+    </tr>
+    <tr>
+      <td>專業服務復能目標達成情形</td>
+      <td><a href="CodeSystem-cs-tw-ltc-feeaudit-svcc-goal-type.html">代碼定義</a></td>
+      <td><a href="ValueSet-vs-tw-ltc-feeaudit-svcc-goal-type.html">值集</a></td>
+    </tr>
+    <tr>
+      <td>社區式服務交通接送服務使用類型</td>
+      <td><a href="CodeSystem-cs-tw-ltc-feeaudit-bd03-type.html">代碼定義</a></td>
+      <td><a href="ValueSet-vs-tw-ltc-feeaudit-bd03-type.html">值集</a></td>
+    </tr>
+    <tr>
+      <td>AA10 申報狀態</td>
+      <td><a href="CodeSystem-cs-tw-ltc-feeaudit-aa10-status.html">代碼定義</a></td>
+      <td><a href="ValueSet-vs-tw-ltc-feeaudit-aa10-status.html">值集</a></td>
+    </tr>
+    <tr>
+      <td>服務紀錄補充資訊類別</td>
+      <td><a href="CodeSystem-cs-tw-ltc-feeaudit-supporting-info.html">代碼定義</a></td>
+      <td><a href="ValueSet-vs-tw-ltc-feeaudit-supporting-info.html">值集</a></td>
+    </tr>
+    <tr>
+      <td>核銷狀況</td>
+      <td><a href="CodeSystem-cs-tw-ltc-feeaudit-case-status.html">代碼定義</a></td>
+      <td><a href="ValueSet-vs-tw-ltc-feeaudit-case-status.html">值集</a></td>
+    </tr>
+    <tr>
+      <td>API 執行狀況</td>
+      <td><a href="CodeSystem-cs-tw-ltc-feeaudit-api-status.html">代碼定義</a></td>
+      <td><a href="ValueSet-vs-tw-ltc-feeaudit-api-status.html">值集</a></td>
+    </tr>
+    <tr>
+      <td>API 功能</td>
+      <td><a href="CodeSystem-cs-tw-ltc-feeaudit-api-function.html">代碼定義</a></td>
+      <td><a href="ValueSet-vs-tw-ltc-feeaudit-api-function.html">值集</a></td>
+    </tr>
+    <tr>
+      <td>核定金額類別</td>
+      <td><a href="CodeSystem-cs-tw-ltc-feeaudit-adjudication.html">代碼定義</a></td>
+      <td><a href="ValueSet-vs-tw-ltc-feeaudit-adjudication.html">值集</a></td>
+    </tr>
+    <tr>
+      <td>清冊文件類別</td>
+      <td><a href="CodeSystem-cs-tw-ltc-feeaudit-doc-type.html">代碼定義</a></td>
+      <td><a href="ValueSet-vs-tw-ltc-feeaudit-doc-type.html">值集</a></td>
+    </tr>
+    <tr>
+      <td>錯誤代碼</td>
+      <td><a href="CodeSystem-cs-tw-ltc-feeaudit-error-code.html">代碼定義</a></td>
+      <td><a href="ValueSet-vs-tw-ltc-feeaudit-error-code.html">值集</a></td>
+    </tr>
+    <tr>
+      <td>API 回覆結果代碼</td>
+      <td><a href="CodeSystem-cs-tw-ltc-feeaudit-rtncode.html">代碼定義</a></td>
+      <td><a href="ValueSet-vs-tw-ltc-feeaudit-rtncode.html">值集</a></td>
+    </tr>
+    <tr>
+      <td>縣市代碼</td>
+      <td><a href="CodeSystem-cs-tw-ltc-feeaudit-city.html">代碼定義</a></td>
+      <td><a href="ValueSet-vs-tw-ltc-feeaudit-city.html">值集</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>API 回覆結果代碼、API 執行狀況及縣市代碼這三組術語供原系統資料對照使用，未直接綁定 Profile 欄位。API 執行狀況轉成 <code class="language-plaintext highlighter-rouge">Task.status</code> 的標準代碼；縣市代碼則填入 Organization 的識別碼或 <code class="language-plaintext highlighter-rouge">Task.input[cityCd]</code> 的字串值。</p>
+
+<p>縣市主管機關的 <code class="language-plaintext highlighter-rouge">Organization.identifier.system</code> 使用 <code class="language-plaintext highlighter-rouge">http://ltc-ig.fhir.tw/identifier/feeaudit/city-cd</code>。支付審查的縣市代碼與 TW Core 郵遞區號用途不同，請勿混用。</p>
+
+<p>核定金額類別使用本 IG 的代碼，相關欄位綁定強度為 <code class="language-plaintext highlighter-rouge">extensible</code>。與其他系統交換時，需確認所用代碼的定義與值集要求。</p>
+
+<h3 id="傳輸設定">傳輸設定</h3>
+
+<p>本頁規範申報與審核資料的 FHIR 表達方式。原 API 的傳輸封套與回覆封套不另建 FHIR 資源，其欄位如下：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>封套</th>
+      <th>原 API 欄位</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>傳送</td>
+      <td><code class="language-plaintext highlighter-rouge">unitNo</code>、<code class="language-plaintext highlighter-rouge">requestDt</code>、<code class="language-plaintext highlighter-rouge">sourceSystem</code>、<code class="language-plaintext highlighter-rouge">apdata</code>、<code class="language-plaintext highlighter-rouge">checksum</code></td>
+    </tr>
+    <tr>
+      <td>回覆</td>
+      <td><code class="language-plaintext highlighter-rouge">rtncode</code>、<code class="language-plaintext highlighter-rouge">responseDt</code>、<code class="language-plaintext highlighter-rouge">errmsg</code>、<code class="language-plaintext highlighter-rouge">result</code>、<code class="language-plaintext highlighter-rouge">checksum</code>、<code class="language-plaintext highlighter-rouge">rtnSeq</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>校驗碼計算、Base64 編碼與 IP 白名單設定，請依原 API 規格書辦理。回覆封套的 <code class="language-plaintext highlighter-rouge">rtncode</code> 可查閱 <a href="ValueSet-vs-tw-ltc-feeaudit-rtncode.html">API 回覆結果代碼</a>。</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 17, 2026 17:33+0800">2026-09-17</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

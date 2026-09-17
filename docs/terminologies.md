@@ -1,4 +1,4 @@
-# Terminologies - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# Terminologies - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * **Terminologies**
@@ -52,4 +52,12 @@
 * [轉介單看護狀況代碼](CodeSystem-ReferralConditionCaregiverCS-TWLTC.md)
 * [轉介單管路狀況代碼](CodeSystem-ReferralConditionTubeCS-TWLTC.md)
 * [關係類型擴展代碼](CodeSystem-RelationshipTypeCS-TWLTC.md)
+
+#### 居家護理照護管理系統
+
+居護選項依 V5.0.16 有效內容建立，各欄位使用專屬 ValueSet，重複選項與相同值集共用定義。請參考 [居家護理主題](home-nursing.md)。
+
+### 在宅急症照護
+
+本主題新增服務分類、療程結束原因、訪視方式、摘要章節及評估結論等 5 個 CodeSystems 與 7 個 ValueSets。完整用途及連結請見[在宅急症主題](hah.md)。
 

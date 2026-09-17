@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Home Nursing - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"11"}
+    h3,h4,h5,h6{--heading-prefix:"11"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引(TW LTC IG)</span>
+            <br/>
+            <span style="display:inline-block;">1.1.0 - STU 1.1.0
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">應用說明</a></li>
+  <li><a href="toc.html">目錄</a></li>
+  <li class="dropdown">
+		<a href="#">主題說明<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="fee-audit.html">長照支付審查</a>
+			</li>
+			<li>
+				<a href="home-nursing.html">居家護理照護管理系統</a>
+			</li>
+			<li>
+				<a href="hah.html">在宅急症照護</a>
+			</li>
+		</ul>
+	</li>
+	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="capability-statements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters-and-operation.html">查詢參數及操作定義</a>
+			</li>
+			<li>
+				<a href="logical-models.html">邏輯模型</a>
+			</li>
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles 及 Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+  <li><a href="examples.html">範例</a></li>
+  <li><a href="downloads.html">結構定義與範例檔下載</a></li>
+  <li><a href="security.html">安全性</a></li>
+  <li><a href="validates.html">驗證教學</a></li>
+  <li class="dropdown">
+    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
+      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+    </ul>
+  </li>
+  <li><a href="connectathon-result.html">聯測松結果</a></li>
+  <!-- <li><a href="history.html">版本歷程</a></li> -->
+</ul>      
+
+<style>
+.dropdown-menu li:hover .sub-menu {visibility: visible;}
+.dropdown:hover .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 992px) {
+  table.colsi {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  table.rwd-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  p, a {
+    word-break: break-all;
+  }
+}
+</style>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Home Nursing</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引(TW LTC IG) - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Home Nursing</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="居家護理照護管理系統">居家護理照護管理系統</h3>
+
+<p>本主題依《居家護理－測試區系統介接規範 V5.0.16》（2025 年 12 月 8 日）建立。原 PDF 共 155 頁；以下頁碼採文件內印刷頁碼，PDF 頁碼須加 4。灰底刪除內容不列入有效欄位。</p>
+
+<p>本 IG 提供十二支 API 的請求 Logical Model、二十四種結構化表單、臨床資源 Profile、術語與範例。這些定義是 FHIR 交換設計，原系統仍接收規範中的 JSON。FHIR Resource 不可直接當作原 API 的 <code class="language-plaintext highlighter-rouge">Jsonfile</code> 上傳。</p>
+
+<p><a href="home-nursing-mapping.html">逐欄對應表</a> 列出來源欄位、評估題目、Logical Model 與 QuestionnaireResponse 路徑。表單定義及原生臨床資源均可由 <a href="artifacts.html">規範文件</a> 下載。</p>
+
+<h4 id="api-盤點">API 盤點</h4>
+
+<p>測試區基底網址為 <code class="language-plaintext highlighter-rouge">http://114.34.167.172:49154/HomeNursing/API/hncApi/</code>。十二支 API 均為 <code class="language-plaintext highlighter-rouge">POST</code>，標頭包含 <code class="language-plaintext highlighter-rouge">SecretKey</code> 及 <code class="language-plaintext highlighter-rouge">AGENCY_ID</code>。<code class="language-plaintext highlighter-rouge">SecretKey</code> 屬傳輸憑證，不放入 FHIR Resource、範例或稽核紀錄。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>API</th>
+      <th>用途與相依資料</th>
+      <th>請求 Logical Model</th>
+      <th>印刷頁</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">BaseData</code></td>
+      <td>收案、個案背景、主要照顧者、共照團隊</td>
+      <td><a href="StructureDefinition-HNBaseDataAPIModel.html">基本資料</a></td>
+      <td>1–13</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Evaluation</code></td>
+      <td>同一個案及收案日期下的十三類評估，可各自上傳多個日期</td>
+      <td><a href="StructureDefinition-HNEvaluationAPIModel.html">全人評估</a></td>
+      <td>14–70</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">CaseSummary</code></td>
+      <td>評估後的需求項目與摘要備註</td>
+      <td><a href="StructureDefinition-HNCaseSummaryAPIModel.html">需求摘要</a></td>
+      <td>71–74</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">CarePlan</code></td>
+      <td>需求摘要下的目標、措施及評值紀錄</td>
+      <td><a href="StructureDefinition-HNCarePlanAPIModel.html">照護計畫</a></td>
+      <td>75–80</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">CareRecord</code></td>
+      <td>照護紀錄、資源、服務、事件、生命徵象、多筆傷口與足部護理</td>
+      <td><a href="StructureDefinition-HNCareRecordAPIModel.html">照護紀錄</a></td>
+      <td>81–121</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">CaseDesc</code></td>
+      <td>共照成員的照護時段與文字紀錄</td>
+      <td><a href="StructureDefinition-HNCaseDescAPIModel.html">共照紀錄</a></td>
+      <td>122–125</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">StaffEgy</code></td>
+      <td>工作人員緊急事件，不要求個案識別或收案日期</td>
+      <td><a href="StructureDefinition-HNStaffEgyAPIModel.html">人員緊急事件</a></td>
+      <td>126–129</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">CaseClose</code></td>
+      <td>個案結案日期、人員與原因</td>
+      <td><a href="StructureDefinition-HNCaseCloseAPIModel.html">個案結案</a></td>
+      <td>130–132</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">CarePlanClose</code></td>
+      <td>指定目標的結案日期及結案人員</td>
+      <td><a href="StructureDefinition-HNCarePlanCloseAPIModel.html">計畫結案</a></td>
+      <td>133–135</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">VitalSign</code></td>
+      <td>獨立上傳生命徵象</td>
+      <td><a href="StructureDefinition-HNVitalSignAPIModel.html">生命徵象</a></td>
+      <td>136–138</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">GetLog</code></td>
+      <td>以 <code class="language-plaintext highlighter-rouge">start_date</code> 及選填的 <code class="language-plaintext highlighter-rouge">end_date</code> 查詢處理結果</td>
+      <td><a href="StructureDefinition-HNGetLogAPIModel.html">日期查詢</a></td>
+      <td>139</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">GetLogByTicket</code></td>
+      <td>以八位數字 <code class="language-plaintext highlighter-rouge">ticket</code> 查詢處理結果</td>
+      <td><a href="StructureDefinition-HNGetLogByTicketAPIModel.html">追蹤碼查詢</a></td>
+      <td>139</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>前十支 API 上傳 JSON 檔案。一般使用 <code class="language-plaintext highlighter-rouge">DataList</code> 陣列；<code class="language-plaintext highlighter-rouge">CarePlan.DataList</code> 是包含 <code class="language-plaintext highlighter-rouge">Targets</code>、<code class="language-plaintext highlighter-rouge">Measures</code>、<code class="language-plaintext highlighter-rouge">Evaluations</code> 陣列的物件。每一類計畫資料最多 100 筆。PDF 限制檔案大小為「1000kb 以下」，未定義精確位元組換算；介接端應依來源服務實際限制控制大小。</p>
+
+<p>文件同時標示 <code class="language-plaintext highlighter-rouge">Content Type: application/json</code> 及 <code class="language-plaintext highlighter-rouge">Jsonfile: File</code>，未完整描述檔案包裝方式。本 IG 不自行指定 multipart 邊界或改寫來源協定。</p>
+
+<h4 id="資料流程與識別">資料流程與識別</h4>
+
+<p>先上傳基本資料，再上傳評估、需求摘要及照護計畫。照護紀錄與共照紀錄持續累積，個案結案與照護計畫結案分別更新其狀態。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>識別層次</th>
+      <th>來源比對條件</th>
+      <th>FHIR 表達</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>個案</td>
+      <td><code class="language-plaintext highlighter-rouge">CaseID</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Patient.identifier[idCardNumber]</code></td>
+    </tr>
+    <tr>
+      <td>一次收案</td>
+      <td><code class="language-plaintext highlighter-rouge">AGENCY_ID</code>、<code class="language-plaintext highlighter-rouge">CaseID</code>、<code class="language-plaintext highlighter-rouge">EndDate</code></td>
+      <td><code class="language-plaintext highlighter-rouge">EpisodeOfCare.managingOrganization</code>、<code class="language-plaintext highlighter-rouge">patient</code>、<code class="language-plaintext highlighter-rouge">period.start</code></td>
+    </tr>
+    <tr>
+      <td>需求摘要</td>
+      <td>收案識別、摘要日期、項目及摘要備註</td>
+      <td><code class="language-plaintext highlighter-rouge">HNCaseSummaryResponse</code> 的固定 Slice</td>
+    </tr>
+    <tr>
+      <td>照護目標</td>
+      <td>需求摘要比對條件、目標敘述及適用的建立日期</td>
+      <td><code class="language-plaintext highlighter-rouge">Goal</code> 及 <code class="language-plaintext highlighter-rouge">HNTargetsResponse</code></td>
+    </tr>
+    <tr>
+      <td>照護措施、評值</td>
+      <td>來源表格列出的摘要與目標比對條件</td>
+      <td><code class="language-plaintext highlighter-rouge">CarePlan.activity</code> 及對應的措施／評值表單</td>
+    </tr>
+    <tr>
+      <td>原 API 處理工作</td>
+      <td>API 名稱及來源提供的追蹤碼</td>
+      <td><code class="language-plaintext highlighter-rouge">HNAPITask.code</code>、<code class="language-plaintext highlighter-rouge">identifier</code>；查詢碼置於 <code class="language-plaintext highlighter-rouge">input[ticket]</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="language-plaintext highlighter-rouge">EndDate</code> 的意思是「收案日期」，不可映射為 <code class="language-plaintext highlighter-rouge">EpisodeOfCare.period.end</code>。摘要備註及目標敘述參與來源系統比對，回寫時不得擅自改寫、截短或以近義詞代替。日期與項目相同仍不保證是同一筆目標。</p>
+
+<p><code class="language-plaintext highlighter-rouge">Patient.identifier[member]</code> 是沿用 LTCPatient 的機構識別碼要求。機構應配發穩定識別碼，或依其明確規則建立；不宣稱原 API 有傳送住民代號。不同次收案使用不同 EpisodeOfCare，仍參照同一 Patient。</p>
+
+<h4 id="重用與繼承">重用與繼承</h4>
+
+<p>FHIR 衍生 Profile 只能縮緊父層限制，不能取消父層必填或放寬型態。<a href="https://hl7.org/fhir/R4/profiling.html">FHIR R4 Profiling</a> 說明此規則。本主題保留既有資源的 canonical，另建居護衍生 Profile。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>居護定義</th>
+      <th>重用基礎</th>
+      <th>用途與差異</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-HNPatient.html">HNPatient</a></td>
+      <td>LTCPatient</td>
+      <td>沿用識別、中文姓名、地址及緊急聯絡人，新增來源表單關聯</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-HNEpisodeOfCare.html">HNEpisodeOfCare</a></td>
+      <td>LTCEpisodeOfCareBase</td>
+      <td>區分多次收案及結案，新增識別與來源表單</td>
+    </tr>
+    <tr>
+      <td>二十三種個案表單 Response</td>
+      <td>LTCQuestionnaireResponse</td>
+      <td>繼承問卷、個案及填寫時間，新增固定問卷、Slice、型態與選項繫結</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-HNStaffEgyResponse.html">HNStaffEgyResponse</a></td>
+      <td>FHIR QuestionnaireResponse</td>
+      <td>既有表單主體限 LTCPatient；工作人員改以 Practitioner 為主體，建立者為 Organization</td>
+    </tr>
+    <tr>
+      <td>二十四張 Questionnaire</td>
+      <td>LTCQuestionnaire</td>
+      <td>定義所有表單欄位、題目、重複結構及可選答案</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-HNCarePlan.html">HNCarePlan</a></td>
+      <td>LTCCarePlan</td>
+      <td>串聯目標、措施、評值及停止資訊</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-HNGoal.html">HNGoal</a></td>
+      <td>LTCGoal</td>
+      <td>保留文字敘述，新增主要目標旗標及來源表單</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-HNCommunication.html">HNCommunication</a></td>
+      <td>LTCCommunicationServiceA</td>
+      <td>共照紀錄、提供者及完整來源表單</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-HNVitalSigns.html">HNVitalSigns</a></td>
+      <td>FHIR R4 vitalspanel</td>
+      <td>以 hasMember 重用既有體溫、心率、呼吸、血壓及血氧 Profile；血糖與量測組使用共同來源表單</td>
+    </tr>
+    <tr>
+      <td>血糖</td>
+      <td>直接重用 PASportObservationGlucose</td>
+      <td>沿用 LOINC 2339-0 及 UCUM mg/dL</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-HNWound.html">HNWound</a></td>
+      <td>TW Core Observation-simple</td>
+      <td>既有壓傷 Condition 的語意無法涵蓋其他傷口；每個傷口建立一筆 Observation</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-HNAPITask.html">HNAPITask</a></td>
+      <td>LTCTask</td>
+      <td>十二種作業、查詢輸入、接收訊息及共照名單更新指示</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-HNOperationOutcome.html">HNOperationOutcome</a></td>
+      <td>FHIR OperationOutcome</td>
+      <td>既有 Outcome 為其他來源系統專用，因此另定義居護訊息</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>量測組直接沿用 FHIR R4 vitalspanel，因 LTCObservationVitalSigns 繼承的 TW Core hasMember 限制無法接受現有血壓 Profile。體溫、心率、呼吸、血壓、血氧及血糖均直接重用既有 PASportObservation Profile。</p>
+
+<p>ADL、IADL、認知與衰弱表單共用長照 QuestionnaireResponse 基礎。居護 ADL 有十題，且傳送文字選項；既有 ADL Profile 固定十一題與整數答案，不能直接繼承為這十題。認知表單也不能當成 MMSE 或 CDR 直接交換。此處保留各表單的原始題意，不自行計算或上傳已刪除的總分。</p>
+
+<h4 id="全人評估表單">全人評估表單</h4>
+
+<p>每一個評估陣列元素建立一筆 QuestionnaireResponse。透過 <code class="language-plaintext highlighter-rouge">ExtHNEpisode</code> 參照收案，<code class="language-plaintext highlighter-rouge">Date</code>、<code class="language-plaintext highlighter-rouge">NurseID</code> 保留在結構化表單；<code class="language-plaintext highlighter-rouge">authored</code> 是 FHIR 表單製作時間，不以臆測的時刻補足只有日期的評估資料。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>原 API 陣列</th>
+      <th>問卷及 Profile</th>
+      <th>主要內容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">HealthyHabits</code></td>
+      <td><a href="StructureDefinition-HNHealthyHabitsResponse.html">健康紀錄</a></td>
+      <td>菸酒檳榔狀態及年數、過敏、疫苗</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">MedicalHistories</code></td>
+      <td><a href="StructureDefinition-HNMedicalHistoriesResponse.html">疾病史</a></td>
+      <td>主次診斷、十四類疾病史</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">DrugSafeties</code></td>
+      <td><a href="StructureDefinition-HNDrugSafetiesResponse.html">藥物安全性</a></td>
+      <td>長期用藥、多重用藥、自行購藥及使用中藥物</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">BodyEvaluations</code></td>
+      <td><a href="StructureDefinition-HNBodyEvaluationsResponse.html">身體評估</a></td>
+      <td>意識、視聽力、溝通、進食、排泄、皮膚、肌力、行動及呼吸輔助</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">PressureInjuries</code></td>
+      <td><a href="StructureDefinition-HNPressureInjuriesResponse.html">壓力性損傷危險</a></td>
+      <td>六項危險評估</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">FallRisks</code></td>
+      <td><a href="StructureDefinition-HNFallRisksResponse.html">跌倒危險性</a></td>
+      <td>八項危險因素及多選說明</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ADLs</code></td>
+      <td><a href="StructureDefinition-HNADLsResponse.html">日常生活功能</a></td>
+      <td>十項日常生活活動</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">IADLs</code></td>
+      <td><a href="StructureDefinition-HNIADLsResponse.html">工具性日常生活活動</a></td>
+      <td>八項工具性活動</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Dementias</code></td>
+      <td><a href="StructureDefinition-HNDementiasResponse.html">認知功能</a></td>
+      <td>日期、地點、個人資訊等題目；電話及住址依來源續答規則處理</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">GeriatricDepressionScales</code></td>
+      <td><a href="StructureDefinition-HNGeriatricDepressionScalesResponse.html">情緒問題</a></td>
+      <td>五項情緒問題</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">MNASFs</code></td>
+      <td><a href="StructureDefinition-HNMNASFsResponse.html">簡易營養</a></td>
+      <td>營養評估；BMI 無法取得時使用圍度替代題</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">PainEvaluations</code></td>
+      <td><a href="StructureDefinition-HNPainEvaluationsResponse.html">疼痛</a></td>
+      <td>可言語、無法言語及其他情形，分別保留 Questions 與 QuestionsNot</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">SOFs</code></td>
+      <td><a href="StructureDefinition-HNSOFsResponse.html">衰弱</a></td>
+      <td>體重減輕、下肢功能及活力降低</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>來源要求一般評估表單的題目不得缺少，但答案可以空白。因此 Profile 區分必備 <code class="language-plaintext highlighter-rouge">item</code> 與選填 <code class="language-plaintext highlighter-rouge">answer</code>，不把空白轉成「否」、零分或未知的虛構答案。藥物、認知、情緒、疼痛與衰弱依來源允許的情況省略題目，無法評估時填寫原因。是否須續答仍依來源的條件判斷；型態與 Slice 驗證不能取代所有跨題業務檢查。</p>
+
+<p><code class="language-plaintext highlighter-rouge">IsTemporary</code> 是選填的原始旗標。明確填「是」時，FHIR 狀態使用 <code class="language-plaintext highlighter-rouge">in-progress</code>；明確填「否」時使用 <code class="language-plaintext highlighter-rouge">completed</code> 或 <code class="language-plaintext highlighter-rouge">amended</code>。原欄位未提供時，保留未提供的事實，FHIR 狀態依實際文件狀態設定。</p>
+
+<h4 id="臨床資源對應">臨床資源對應</h4>
+
+<p>FHIR 表單完整保留來源內容。需要以一般 FHIR 查詢交換的核心內容，再表達為原生臨床資源，並以 <code class="language-plaintext highlighter-rouge">ExtHNSourceForm</code> 參照來源表單。表單及臨床資源有共同的收案參照。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>來源欄位</th>
+      <th>FHIR 路徑與處理</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">CaseName</code>、<code class="language-plaintext highlighter-rouge">Sex.Value</code>、<code class="language-plaintext highlighter-rouge">Birthdate</code></td>
+      <td>Patient.name、gender、birthDate；男／女／其他依序為 male／female／other，補述保留於來源表單</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">PhoneNumber</code>、<code class="language-plaintext highlighter-rouge">Address</code></td>
+      <td>Patient.telecom、address；City 為 state，Area 為 city，Lane 為 line</td>
+    </tr>
+    <tr>
+      <td>緊急聯絡人姓名、關係、電話</td>
+      <td>Patient.contact；主要照顧者與共照名單保留於基本資料表單</td>
+    </tr>
+    <tr>
+      <td>教育、婚姻、宗教、職業、經濟、福利、重大事件</td>
+      <td>基本資料表單的各自 Slice；原文字選項不強行等同既有 CMS 或轉介代碼</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">TargetStatement</code>、<code class="language-plaintext highlighter-rouge">TargetStatement2</code></td>
+      <td>Goal.description.text、note；來源完整敘述保留於目標表單</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">TargetCreateDate</code>、<code class="language-plaintext highlighter-rouge">EstimatedDate</code></td>
+      <td>Goal.startDate、target.dueDate</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">IsMainTarget</code></td>
+      <td>ExtHNMainTarget.valueBoolean</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">MeasureContent</code>、<code class="language-plaintext highlighter-rouge">MeasureCreateDate</code></td>
+      <td>CarePlan.activity.detail.description、scheduledPeriod.start</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">MeasureStopDate</code>、<code class="language-plaintext highlighter-rouge">MeasureStopContent</code>、<code class="language-plaintext highlighter-rouge">MeasureStopNurseID</code></td>
+      <td>ExtHNMeasureStop 的 date、reason、nurse；活動狀態設 stopped</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">EvaluationContent</code>、<code class="language-plaintext highlighter-rouge">EvaluationDate</code></td>
+      <td>HNEvaluationsResponse；CarePlan.activity.outcomeReference 參照該表單</td>
+    </tr>
+    <tr>
+      <td>共照 <code class="language-plaintext highlighter-rouge">Statement</code>、<code class="language-plaintext highlighter-rouge">MedicalName</code>、<code class="language-plaintext highlighter-rouge">Title</code></td>
+      <td>Communication.payload.contentString、sender；成員無身分證字號時不得建立假的識別碼</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">CaseClose.Date</code></td>
+      <td>EpisodeOfCare.period.end；處理成功後才更新為 finished，原因及人員保留於結案表單</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">CarePlanClose.CloseDate</code>、<code class="language-plaintext highlighter-rouge">CloseID</code></td>
+      <td>指定目標的 Goal.lifecycleStatus 及來源結案表單；只關閉指定目標，不直接結束其他目標或整個收案</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Temperature</code>、<code class="language-plaintext highlighter-rouge">Pulse</code>、<code class="language-plaintext highlighter-rouge">Respiration</code></td>
+      <td>HNVitalSigns.hasMember 的 temperature、pulse、respiration，分別參照既有量測 Profile</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">BloodPressure1</code>、<code class="language-plaintext highlighter-rouge">BloodPressure2</code>、<code class="language-plaintext highlighter-rouge">BloodOxygen</code></td>
+      <td>血壓沿用 PASportObservationBloodPressure 的 SystolicBP、DiastolicBP component；血氧沿用 PASportObservationPeripheralOxygenSaturation</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">BloodGlucose</code></td>
+      <td>PASportObservationGlucose.valueQuantity；與 HNVitalSigns 共同放入交換 Bundle，參照同一來源表單</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">WoundRecords[]</code></td>
+      <td>每個傷口一筆 HNWound，保留多個部位與各自的尺寸／分期</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">FJM</code></td>
+      <td>CareRecord 表單的巢狀 FJM、Answers、FJMList、FJMVas；每筆操作保留項目、有無反應與觀察</td>
+    </tr>
+    <tr>
+      <td>人員緊急事件</td>
+      <td>HNStaffEgyResponse.subject 參照工作人員；Name、IDNo、Title、事件、通報、處理及檢討分別填入 Slice</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="language-plaintext highlighter-rouge">HNGoal</code> 沿用父層必填的 description.coding。若已有適切標準代碼，應先使用標準代碼；只有無適切概念時才使用本 IG 的 <code class="language-plaintext highlighter-rouge">care-goal</code> 並提供完整 description.text。此本地代碼不宣稱與特定標準概念等價。</p>
+
+<h4 id="生命徵象與傷口">生命徵象與傷口</h4>
+
+<p>原 API 的生命徵象數值多為字串；FHIR 改用 decimal／integer 或 Quantity。體溫採 UCUM <code class="language-plaintext highlighter-rouge">Cel</code>，脈搏與呼吸採 <code class="language-plaintext highlighter-rouge">/min</code>，血壓採 <code class="language-plaintext highlighter-rouge">mm[Hg]</code>，血糖採 <code class="language-plaintext highlighter-rouge">mg/dL</code>，血氧採 <code class="language-plaintext highlighter-rouge">%</code>。獨立 API 使用 <code class="language-plaintext highlighter-rouge">RecordDate</code>／<code class="language-plaintext highlighter-rouge">RecordTime</code>，內嵌生命徵象使用 <code class="language-plaintext highlighter-rouge">Date</code>／<code class="language-plaintext highlighter-rouge">Time</code>。建立 Observation.effectiveDateTime 時使用實際時區，範例採 <code class="language-plaintext highlighter-rouge">+08:00</code>。</p>
+
+<p>原規範未明訂傷口長寬深的單位。本 IG 保留數值，不默認公分。若交換雙方另有明確量測單位，應一併傳送並記錄其依據。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>V5.0.16 傷口分類</th>
+      <th>有效等級</th>
+      <th>特別規則</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>壓傷</td>
+      <td>第一期、第二期、第三期、第四期、無法分期、深層組織壓力性損傷</td>
+      <td>只有無法分期時，長寬深可空白；Observation 以 dataAbsentReason 表達缺值</td>
+    </tr>
+    <tr>
+      <td>失禁性皮膚炎</td>
+      <td>1A、1B、2A、2B</td>
+      <td>不使用舊的 1級／2級／3級</td>
+    </tr>
+    <tr>
+      <td>其他</td>
+      <td>空白</td>
+      <td>必須填寫 Statement；Observation 省略 level component</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>舊版急性／慢性傷口分類、一度至四度、壓傷 1級至4級及不可分級(分類)均已被灰底刪除。<code class="language-plaintext highlighter-rouge">Level</code> 表格仍寫 String(3)，卻新增較長名稱；本 IG 採有效選項，不把新分期截成三字。</p>
+
+<h4 id="空值刪除及處理結果">空值、刪除及處理結果</h4>
+
+<p>FHIR JSON 不傳送空字串、null 物件或空陣列。來源題目有空答案時，保留該 item 並省略 answer。可重複的原始群組以重複 group item 表達；多選欄位以重複 answer 表達。這與 <a href="https://hl7.org/fhir/R4/questionnaireresponse.html">FHIR R4 QuestionnaireResponse</a> 的題目及答案結構一致。</p>
+
+<p><code class="language-plaintext highlighter-rouge">Medicals</code> 與 <code class="language-plaintext highlighter-rouge">Relatives</code> 的更新各自處理：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>原始輸入</th>
+      <th>更新意圖</th>
+      <th>Task.extension[collectionUpdate]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>未填或 null</td>
+      <td>保留既有資料</td>
+      <td>action = preserve</td>
+    </tr>
+    <tr>
+      <td>非空陣列</td>
+      <td>取代指定名單</td>
+      <td>action = replace，內容由來源表單提供</td>
+    </tr>
+    <tr>
+      <td>空陣列</td>
+      <td>清空指定名單</td>
+      <td>action = clear</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>不能只從省略的 QuestionnaireResponse.item 判斷是否清空。因此有更新動作時，必須附帶名單種類與更新指示。此設計描述來源操作，不改變一般 FHIR PUT 的替換語意。</p>
+
+<p><a href="StructureDefinition-HNUploadAcknowledgementModel.html">上傳接收回覆模型</a> 記錄每支上傳 API 的 <code class="language-plaintext highlighter-rouge">{ "code": 200, "message": "Success." }</code> 只代表檔案接收成功，系統另以排程匯入。範例 Task 使用 <code class="language-plaintext highlighter-rouge">received</code> 及 <code class="language-plaintext highlighter-rouge">uploaded</code>。後續確認匯入成功才設為 completed；若處理失敗則記錄失敗訊息。規範沒有列出 GetLog／GetLogByTicket 的回傳 schema、完整錯誤碼或追蹤碼配發欄位，因此本 IG 不虛構這些內容。</p>
+
+<p><code class="language-plaintext highlighter-rouge">GetLog</code> 日期採 <code class="language-plaintext highlighter-rouge">yyyy/MM/dd</code>，不同於其他資料欄位的 <code class="language-plaintext highlighter-rouge">yyyy-MM-dd</code>。未填結束日時，來源採起始日的隔天；本 IG 不推定查詢區間的包含／排除邊界。<code class="language-plaintext highlighter-rouge">ticket</code> 使用字串保留八位數字及前導零。</p>
+
+<p><code class="language-plaintext highlighter-rouge">CarePlan</code> 一份檔案中任何一筆資料錯誤，整份都不匯入。FHIR 端若以 transaction 提交對應資源，也應保持整份操作的原子性；各資源通過 Profile 驗證仍不代表摘要與目標的跨筆比對已成功。</p>
+
+<h4 id="來源文件差異的處理">來源文件差異的處理</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>差異</th>
+      <th>本 IG 的處理</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>灰底仍保留 AssessmentNo、targetNo、measureNo、Record_No、recordNo、RecordNo、EvaluationTime、OpID 等舊文字</td>
+      <td>不建立這些已刪除欄位；來源對照時須查看頁面，不能只依抽出的文字</td>
+    </tr>
+    <tr>
+      <td>Medicals 的 <code class="language-plaintext highlighter-rouge">IdNo</code> 與 JSON 範例 <code class="language-plaintext highlighter-rouge">IDNo</code>；Relatives 的 <code class="language-plaintext highlighter-rouge">Relationship</code> 與範例 <code class="language-plaintext highlighter-rouge">RelationShip</code></td>
+      <td>模型依有效參數表使用 IdNo、Relationship；來源轉接器須處理這項大小寫差異</td>
+    </tr>
+    <tr>
+      <td>參數表把 <code class="language-plaintext highlighter-rouge">Unplanned</code>／<code class="language-plaintext highlighter-rouge">Emergency</code> 寫成 object，JSON 範例使用 array</td>
+      <td>模型依參數表採單一物件；原 API 若實際接受多筆，須先確認服務行為再放寬，不宣稱多筆已受本版模型支援</td>
+    </tr>
+    <tr>
+      <td>FJM.Answers 表格寫 array，但 JSON 範例為含 Values／FJMList／FJMVas 的物件</td>
+      <td>採範例的結構化答案物件；FJMVas 巢狀於 Answers，不攤平到 FJM</td>
+    </tr>
+    <tr>
+      <td>Birthdate 等拒答包裝、疫苗舊欄位及部分親友電話欄位仍出現在刪除區</td>
+      <td>採現行基本日期、電話及健康紀錄疫苗結構</td>
+    </tr>
+    <tr>
+      <td>疫苗 Other 可填「不記得」；事件 Time 有班別選項</td>
+      <td>保留文字或班別，不捏造 Immunization 日期或精確事件時間</td>
+    </tr>
+    <tr>
+      <td>CarePlanClose 的 CloseDate／CloseID 為選填</td>
+      <td>保留選填；未提供結案日期時不自行設定完成日期</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Temperature </code> 在範例帶尾端空白</td>
+      <td>採有效參數表的 Temperature，轉接時不得將空白視為新欄位</td>
+    </tr>
+    <tr>
+      <td>疼痛無法言語分支提供範例，但未完整列出所有答案選項表</td>
+      <td>保留五項題目及文字答案，不以單一範例值建立不完整的 required 值集</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>身障類別重用既有 ConditionDisabilityTypeCSTWLTC 的 01–08 代碼，值集只取居護使用的八類，不複製既有 CodeSystem。其完整名稱由欄位清單對應回原 API。</p>
+
+<p>縣市與鄉鎮市區使用印刷頁 140–151 的名稱表。FHIR Address 採文字，不重建一套與現有臺灣行政區代碼競爭的 CodeSystem；轉接端仍須檢查來源版本允許的縣市與區域配對。</p>
+
+<h4 id="範例與維護">範例與維護</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>情境</th>
+      <th>範例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>收案</td>
+      <td><a href="Patient-hn-patient-example.html">Patient</a>、<a href="EpisodeOfCare-hn-episode-example.html">EpisodeOfCare</a>、<a href="QuestionnaireResponse-hn-basedata-example.html">基本資料表單</a></td>
+    </tr>
+    <tr>
+      <td>評估</td>
+      <td><a href="QuestionnaireResponse-hn-bodyevaluations-example.html">身體評估</a>、<a href="QuestionnaireResponse-hn-adls-example.html">ADL</a>、<a href="QuestionnaireResponse-hn-painevaluations-example.html">疼痛</a>、<a href="QuestionnaireResponse-hn-pain-verbal-example.html">可言語</a>、<a href="QuestionnaireResponse-hn-pain-nonverbal-example.html">無法言語</a></td>
+    </tr>
+    <tr>
+      <td>計畫</td>
+      <td><a href="Bundle-hn-careplan-transaction-example.html">交易 Bundle</a>、<a href="Goal-hn-goal-example.html">Goal</a>、<a href="CarePlan-hn-careplan-example.html">CarePlan</a></td>
+    </tr>
+    <tr>
+      <td>足部護理</td>
+      <td><a href="QuestionnaireResponse-hn-foot-record-example.html">十七組評估與九十二項操作</a></td>
+    </tr>
+    <tr>
+      <td>多筆傷口</td>
+      <td><a href="QuestionnaireResponse-hn-carerecord-wounds-example.html">完整表單</a>、<a href="Observation-hn-wound-pressure-example.html">無法分期壓傷</a>、<a href="Observation-hn-wound-iad-example.html">失禁性皮膚炎</a>、<a href="Observation-hn-wound-other-example.html">其他傷口</a></td>
+    </tr>
+    <tr>
+      <td>生命徵象</td>
+      <td><a href="Bundle-hn-vital-bundle-example.html">交換 Bundle</a>、<a href="Observation-hn-vital-signs-example.html">量測組</a>、<a href="Observation-hn-glucose-example.html">血糖</a></td>
+    </tr>
+    <tr>
+      <td>共照與人員事件</td>
+      <td><a href="Communication-hn-communication-example.html">Communication</a>、<a href="QuestionnaireResponse-hn-staffegy-example.html">人員事件表單</a></td>
+    </tr>
+    <tr>
+      <td>接收及查詢</td>
+      <td><a href="Task-hn-upload-task-example.html">上傳已接收</a>、<a href="Task-hn-getlog-task-example.html">日期查詢</a>、<a href="Task-hn-ticket-task-example.html">追蹤碼查詢</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>每張表單另附一筆 FSH 範例。基本範例示範必備結構，部分評估保留未作答項目，不能當成已完成的臨床評估。</p>
+
+<p>欄位清單維護於 <code class="language-plaintext highlighter-rouge">scripts/home_nursing/schema.json</code>。執行 <code class="language-plaintext highlighter-rouge">python3 scripts/home_nursing/generate.py</code> 產生表單、Logical Model、選項 CS／VS 與逐欄 Mapping。臨床 Profile、Extension 及情境範例另行維護，產生器不覆寫。產生器不呼叫原始居護 API。</p>
+
+<p>驗證時先執行 <code class="language-plaintext highlighter-rouge">sushi .</code>，再執行 <code class="language-plaintext highlighter-rouge">./_genonce.sh</code>，使用 <code class="language-plaintext highlighter-rouge">https://tx.fhir.org</code> 線上術語驗證並檢查 QA。格式、型態、繫結及已定義的 invariant 可由 FHIR 驗證器檢查；跨資源身分比對、所有續答條件、足部護理逐項完整性、名單操作及排程結果仍需介接端依來源規範檢查。</p>
+
+<h2 id="在宅急症照護子主題">在宅急症照護子主題</h2>
+
+<p><a href="hah.html">在宅急症照護</a>擴充急症收案、實地／遠距訪視、檢驗、給藥及結案轉銜。此子主題重用共同的 LTC 定義；具體資料集與逐欄對照請見<a href="StructureDefinition-HAHCareDataset.html">在宅急症 Logical Model</a>及<a href="hah-mapping.html">資料對照表</a>。</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 17, 2026 17:33+0800">2026-09-17</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

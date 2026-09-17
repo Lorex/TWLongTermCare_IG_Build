@@ -1,4 +1,4 @@
-# 長期照顧機構範例 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長期照顧機構範例 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

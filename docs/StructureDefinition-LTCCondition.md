@@ -1,4 +1,4 @@
-# 長期照顧－病情、問題或診斷 - 臺灣長期照顧實作指引(TW LTC IG) v1.0.0
+# 長期照顧－病情、問題或診斷 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,20 +8,20 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCondition | *Version*:1.0.0 |
-| Active as of 2026-06-25 | *Computable Name*:LTCCondition |
+| *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCondition | *Version*:1.1.0 |
+| Active as of 2026-09-17 | *Computable Name*:LTCCondition |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Condition Resource，以呈現長照機構住民的病情、問題或診斷資料。 
 
 **Usages:**
 
-* Derived from this Profile: [長期照顧－身心障礙手冊持有狀態](StructureDefinition-LTCConditionDisability.md), [長期照顧－身心障礙類型](StructureDefinition-LTCConditionDisabilityType.md), [長期照顧－主要問題及需求](StructureDefinition-LTCConditionNeed.md), [長期照顧－主要疾病](StructureDefinition-LTCConditionProblem.md)... Show 2 more, [運動處方－運動史](StructureDefinition-PASportConditionExerciseHistory.md) and [運動處方－病史](StructureDefinition-PASportConditionMedicalHistory.md)
+* Derived from this Profile: [在宅急症－診斷與照護問題](StructureDefinition-HAHCondition.md), [長期照顧－身心障礙手冊持有狀態](StructureDefinition-LTCConditionDisability.md), [長期照顧－身心障礙類型](StructureDefinition-LTCConditionDisabilityType.md), [長期照顧－主要問題及需求](StructureDefinition-LTCConditionNeed.md)... Show 3 more, [長期照顧－主要疾病](StructureDefinition-LTCConditionProblem.md), [運動處方－運動史](StructureDefinition-PASportConditionExerciseHistory.md) and [運動處方－病史](StructureDefinition-PASportConditionMedicalHistory.md)
 * Refer to this Profile: [長期照顧－照顧計畫](StructureDefinition-LTCCarePlan.md) and [長期照顧－服務請求](StructureDefinition-LTCServiceRequest.md)
 * Examples for this Profile: [Condition/ltc-condition-example](Condition-ltc-condition-example.md)
 * CapabilityStatements using this Profile: [臺灣長期照顧實作指引 - 用戶端能力聲明](CapabilityStatement-CapabilityStatementLTCClient.md) and [臺灣長期照顧實作指引 - 伺服端能力聲明](CapabilityStatement-CapabilityStatementLTCServer.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/tw.iii.ltc|current/StructureDefinition/LTCCondition)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-LTCCondition.json)
 
 ### Formal Views of Profile Content
 
@@ -40,11 +40,11 @@ Other representations of profile: [CSV](StructureDefinition-LTCCondition.csv), [
   "resourceType" : "StructureDefinition",
   "id" : "LTCCondition",
   "url" : "http://ltc-ig.fhir.tw/StructureDefinition/LTCCondition",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "LTCCondition",
   "title" : "長期照顧－病情、問題或診斷",
   "status" : "active",
-  "date" : "2026-06-25T08:48:04+08:00",
+  "date" : "2026-09-17T17:33:17+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -92,6 +92,10 @@ Other representations of profile: [CSV](StructureDefinition-LTCCondition.csv), [
   "derivation" : "constraint",
   "differential" : {
     "element" : [{
+      "id" : "Condition",
+      "path" : "Condition"
+    },
+    {
       "id" : "Condition.code",
       "path" : "Condition.code",
       "min" : 1
