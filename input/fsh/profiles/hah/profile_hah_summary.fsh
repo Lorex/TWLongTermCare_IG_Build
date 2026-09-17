@@ -2,7 +2,7 @@ Profile: HAHCompositionSummary
 Parent: LTCCompositionBase
 Id: HAHCompositionSummary
 Title: "在宅急症－結案與轉銜摘要"
-Description: "彙整本次療程與接續照護所需的資訊。每個章節均提供可閱讀文字，資料不足時說明未知或未評估，不得推定為無。"
+Description: "彙整本次療程與接續照護所需的資訊。以療程、問題、過敏、藥物、結果、照護及後續追蹤七個章節提供可閱讀的摘要。"
 * ^status = #draft
 * type from HAHSummaryTypeVS (required)
 * subject only Reference(HAHPatient)

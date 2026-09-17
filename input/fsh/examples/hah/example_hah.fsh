@@ -72,6 +72,17 @@ RuleSet: HAHExampleEncounter
 * serviceProvider = Reference(hah-organization)
 * participant.individual = Reference(hah-practitioner)
 
+Instance: hah-encounter
+InstanceOf: HAHEncounter
+Usage: #example
+Title: "在宅急症共同就診資料範例"
+Description: "示範共同就診 Profile 的必要欄位；整段照護與單次訪視另有子 Profile 範例。"
+* insert HAHExampleEncounter
+* status = #finished
+* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#HH
+* period.start = "2026-09-01T09:00:00+08:00"
+* period.end = "2026-09-01T10:00:00+08:00"
+
 Instance: hah-admission
 InstanceOf: HAHAdmissionEncounter
 Usage: #example

@@ -22,6 +22,7 @@
 | LTC_MANAGEMENT | LTC Management System | 負責接收來自個案管理師的 AA01 照顧計畫擬定與 AA02 服務追蹤等資料，並提供資料管理與上傳功能。 |
 | LTC_CONSUMER | LTC Consumer | 負責向 LTC Repository 查詢 AA01 照顧計畫與 AA02 服務追蹤等資料。 |
 | LTC_REPOSITORY | LTC Repository | 負責提供資料交換與儲存功能，包括 AA01 照顧計畫與 AA02 服務追蹤等資料的交換、儲存與管理。 |
+{: .grid .rwd-table}
 
 ### 通過條件
 
@@ -33,6 +34,7 @@
 |---|---|
 | SC1 | AA01 照顧計畫擬定管理
 | SC2 | AA02 服務紀錄與追蹤管理
+{: .grid .rwd-table}
 
 #### 情境 1：AA01 照顧計畫擬定管理
 
@@ -117,3 +119,4 @@ AA02 問卷包含以下主要內容：
 | LTC-412 | 查詢 AA01 照顧計畫問卷回應 | 照管中心系統 | 個案管理師系統 |
 | LTC-421 | 上傳 AA02 服務追蹤問卷回應 | 個案管理師系統 | 照管中心系統 |
 | LTC-422 | 查詢 AA02 服務追蹤問卷回應 | 照管中心系統 | 個案管理師系統 |
+{: .grid .rwd-table}

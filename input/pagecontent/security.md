@@ -12,6 +12,6 @@
 
 - 系統**建議應該(SHOULD)** 保留各種交易的稽核日誌(audit logs)
 - 系統**建議應該(SHOULD)** 符合[FHIR通訊安全（Communications Security）](http://hl7.org/fhir/R4/security.html#http)要求
-- 對於認證和授權，系統**建議應該(SHOULD)** 支援用於用戶端<-->伺服器互動的[SMART App執行框架（launch framework）](http://www.hl7.org/fhir/smart-app-launch/history.cfml)。注意：FHIR 上的 SMART 規範包括啟用安全決策所需的 OAuth 2.0 範圍。
+- 對於認證和授權，系統**建議應該(SHOULD)** 支援用於用戶端<-->伺服器互動的[SMART App執行框架（launch framework）](http://www.hl7.org/fhir/smart-app-launch/history.cfml)。SMART 以 OAuth 2.0 scope 表達授權的資源與操作範圍。
 - 系統**建議應該(SHOULD)** 依據國家、地方和機構政策實作同意要求。業務夥伴協定(Business Associate Agreements)**建議應該(SHOULD)** 記錄系統相互同意的要求。
-- 系統**可以(MAY)** 透過加密和相關存取控制來保護資料的機密性。所使用的策略和方法不在此規範的範圍內。
+- 系統**可以(MAY)** 透過加密和相關存取控制來保護資料的機密性。

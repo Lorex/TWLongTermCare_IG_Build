@@ -17,6 +17,7 @@
 | LTC_MANAGEMENT | LTC Management System | 負責接收來自 A 單位的照護管理評估量表、長期照顧服務轉介單等資料，並提供資料管理與上傳功能。 |
 | LTC_CONSUMER | LTC Consumer | 負責向 LTC Repository 查詢照護管理評估量表、長期照顧服務轉介單等資料。 |
 | LTC_REPOSITORY | LTC Repository | 負責提供資料交換與儲存功能，包括照護管理評估量表、長期照顧服務轉介單等資料的交換、儲存與管理。 |
+{: .grid .rwd-table}
 
 ### 通過條件
 
@@ -29,6 +30,7 @@
 | SC1 | 照護管理評估量表管理
 | SC2 | 長期照顧服務轉介單管理
 | SC3 | AA12 長期照護醫師意見書管理
+{: .grid .rwd-table}
 
 #### 情境 1：照護管理評估量表管理
 
@@ -55,6 +57,7 @@
 | 量表名稱 | 類型 | 說明 | 備註 |
 |---|---|---|---|
 | CMS | QuestionnaireResponse | Care Management Assessment Scale | 照護管理評估量表
+{: .grid .rwd-table}
 
 #### 資料查詢功能（LTC_CONSUMER 角色）
 
@@ -144,3 +147,4 @@ AA12 長期照護醫師意見書管理情境模擬醫師對個案進行專業醫
 | LTC-322 | 查詢長期照顧服務轉介單 | 長照機構系統 | 照護人員工作站 |
 | LTC-331 | 上傳 AA12 長期照護醫師意見書 | 醫師系統 | 長照機構系統 |
 | LTC-332 | 查詢 AA12 長期照護醫師意見書 | 長照機構系統 | 照護人員工作站 |
+{: .grid .rwd-table}

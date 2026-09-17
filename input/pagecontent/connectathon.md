@@ -78,3 +78,4 @@
 | LTC_MANAGEMENT | LTC Management System | 長照資料維護端，負責長照個案資料的新增、維護與管理。 |
 | LTC_CONSUMER | LTC Consumer | 長照個案資料使用端，負責長照個案資料的查詢與使用。 |
 | LTC_REPOSITORY | LTC Repository | 長照資料交換中心，負責長照個案資料的交換、儲存與管理。 |
+{: .grid .rwd-table}

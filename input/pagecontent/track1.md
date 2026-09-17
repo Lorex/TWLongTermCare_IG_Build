@@ -17,6 +17,7 @@
 | LTC_MANAGEMENT | LTC Management System | 負責上傳生理量測數據、照護活動、用藥紀錄等資料至 LTC Repository。 |
 | LTC_CONSUMER | LTC Consumer | 負責向 LTC Repository 查詢生理量測數據、照護活動、用藥紀錄等資料。 |
 | LTC_REPOSITORY | LTC Repository | 負責提供資料交換與儲存功能，包括生理量測數據、照護活動、用藥紀錄等資料的交換、儲存與管理。 |
+{: .grid .rwd-table}
 
 ### 通過條件
 
@@ -29,6 +30,7 @@
 | SC1 | 生理量測數據管理 
 | SC2 | 照護活動管理
 | SC3 | 用藥紀錄管理 
+{: .grid .rwd-table}
 
 
 #### 情境 1：生理量測數據管理
@@ -66,6 +68,7 @@
 | 心率 | Observation Vital Signs | LoincCode | 8867-4 | /分鐘 | /min |
 | 進食後血糖 | Observation Laboratory Data | LoincCode | 87422-2 | mg/dL | mg/dL |
 | 進食前血糖 | Observation Laboratory Data | LoincCode | 88365-2 | mg/dL | mg/dL |
+{: .grid .rwd-table}
 
 
 #### 資料查詢功能（LTC_CONSUMER 角色）
@@ -110,6 +113,7 @@
 | 移位/移動協助 | Procedure | SNOMED CT | 710803000 | Assistance with mobility |  |
 | 床上移動協助 | Procedure | SNOMED CT | 713138001 | Assistance with mobility in bed |  |
 | 更換尿布 | Procedure | SNOMED CT | 733923007 | Change of diaper |  |
+{: .grid .rwd-table}
 
 其他照護活動項目，可參考 International Classification of Nursing Practice (ICNP) 的照護活動分類，或參考 SNOMED CT 的照護活動相關代碼。參測單位可根據實際需求選擇適當的代碼。
 
@@ -165,5 +169,6 @@
 | LTC-122 | 查詢照護活動 | 日照中心系統 | 家屬行動 App |
 | LTC-131 | 上傳用藥紀錄 | 照護人員工作站 | 日照中心系統 |
 | LTC-132 | 查詢用藥紀錄 | 日照中心系統 | 家屬行動 App |
+{: .grid .rwd-table}
 
 

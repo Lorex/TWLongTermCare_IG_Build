@@ -22,7 +22,8 @@
 
 This IG Contains the following dependencies on other IGs.
 
-{% include dependency-table.xhtml %}
+{% capture dependencies %}{% include dependency-table.xhtml %}{% endcapture %}
+{{ dependencies | replace: '<table border="0"', '<table class="grid rwd-table" border="0"' }}
 
 #### Global Profiles
 

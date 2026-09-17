@@ -4,6 +4,8 @@ Title: "在宅急症－照護活動代碼"
 Description: "本 IG 用於區分在宅急症照護、服務與工作類型的本地代碼。不是健保支付項目或收案資格。"
 * ^status = #draft
 * ^experimental = false
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.226771134342697356085489259848258675935"
 * ^caseSensitive = true
 * ^content = #complete
 * #acute-home "在宅急症照護" "於個案居住地提供的一次急症照護療程。"
@@ -23,6 +25,8 @@ Title: "在宅急症－療程結束原因代碼"
 Description: "區分療程結束的結果。暫停照護應使用 EpisodeOfCare.status=onhold，不以結束原因取代狀態。"
 * ^status = #draft
 * ^experimental = false
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.232613967783434232836732114074399874838"
 * ^caseSensitive = true
 * ^content = #complete
 * #completed-treatment "完成治療" "已完成本次急症治療或病情改善而結束療程。"
@@ -38,6 +42,8 @@ Title: "在宅急症－訪視方式代碼"
 Description: "記錄實際提供診療或評估的方式。單純排程或通知不算完成訪視。"
 * ^status = #draft
 * ^experimental = false
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.305901572975225053840476976811050706474"
 * ^caseSensitive = true
 * ^content = #complete
 * #in-person "實地訪視" "人員到個案照護地點提供服務。"
@@ -50,6 +56,8 @@ Title: "在宅急症－摘要種類與章節代碼"
 Description: "本 IG 的結案與轉銜摘要種類及章節。各欄位使用對應值集。"
 * ^status = #draft
 * ^experimental = false
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.316425093395220320418460769744745327297"
 * ^caseSensitive = true
 * ^content = #complete
 * #discharge-summary "結案摘要" "整理完成或結束本次療程的照護經過。"
@@ -68,6 +76,8 @@ Title: "在宅急症－收案評估結果代碼"
 Description: "評估人員的收案建議；不代表已符合任何特定健保計畫的給付條件。"
 * ^status = #draft
 * ^experimental = false
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[0].value = "urn:oid:2.25.55635949670226470396102935457099983267"
 * ^caseSensitive = true
 * ^content = #complete
 * #eligible "建議收案" "評估人員建議開始本次在宅急症照護。"

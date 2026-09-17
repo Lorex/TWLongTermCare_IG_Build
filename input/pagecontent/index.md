@@ -1,36 +1,18 @@
 ### 重要異動公告
 
-目前版本：**STU 1.1.0**。
-
-#### STU 1.1.0 更新內容（相較於 1.0.0）
-
-本版新增支付審查、居家護理及在宅急症資料交換規範，並整合各主題的流程、欄位對照與範例。新增定義優先重用既有 LTC 與 TW Core Profile；需要不同限制時，再由適用的共同父層衍生。
-
-| 異動項目 | 1.1.0 更新內容 |
-| --- | --- |
-| [長照支付審查](fee-audit.html) | 新增服務紀錄申報、刪除、申報確認、審核結果查詢、撤回及取消結果回報等七支 API 的 FHIR 對應。以 Bundle、Claim、ClaimResponse、Task 等資源表達申報與審核流程，提供相關 Profiles、術語、Extensions 與範例。 |
-| [居家護理照護管理系統](home-nursing.html) | 依介接規範 V5.0.16 新增十二支 API、二十四種表單的交換設計，包含 37 個 Logical Models、35 個 Profiles，以及術語、Extensions 與範例。涵蓋多次收案、全人評估、需求摘要、照護計畫、共照、傷口、生命徵象及處理結果查詢，並提供[逐欄 Mapping](home-nursing-mapping.html)。 |
-| [在宅急症照護](hah.html) | 新增涵蓋 150 個資料元素的 Logical Model、25 個 Profiles、3 個 Extensions、5 個 CodeSystems、7 個 ValueSets、1 份收案評估問卷及 38 個範例。以 EpisodeOfCare 串聯整段照護與單次訪視，支援檢驗、給藥、照會、結案與轉銜，並提供完整結案／轉院文件及[欄位對照](hah-mapping.html)。 |
-| 術語與欄位說明 | 補齊既有術語的 OID 與費用申報 Mapping 連結。精簡欄位填寫說明，將來源欄位對照集中於專用表格，便於實作者確認實際填值與轉換方式。 |
-| 文件與導覽 | 新增「主題說明」選單，整合三個業務主題，並更新 [Logical Models](logical-models.html)、[Profiles 與 Extensions](profiles-and-extensions.html)、[術語](terminologies.html)及[範例](examples.html)索引。同步更新版本資訊與作者／貢獻者資料。 |
-| 建置與驗證 | 建置統一使用 `https://tx.fhir.org` 進行線上術語驗證。移除離線及本地術語驗證模式；術語服務無法連線時停止建置。 |
-
-**升版注意：**本版持續使用 FHIR R4.0.1 與 TW Core IG 1.0.0。新增業務主題是 FHIR 交換設計，不表示原系統 API 已改用 FHIR；介接時請依各主題的 Mapping 轉換資料，並確認採用 Profile 的狀態、必填條件與值集。各主題的收案、就診、計畫及結案狀態應分別處理，不以 Patient.active 代替療程結案。
-
 <div class="bg-warning" markdown="1">
 
-**歷史公告：STU 1.0.0 重大變更（Breaking Changes）**
+**STU 1.1.0 更新內容**
 
-1.0.0 為首個正式試用版（Standard for Trial Use），包含以下與先前版本不相容的異動：
+本版新增支付審查、居家護理及在宅急症資料交換規範，並整合各主題的流程、欄位對照與範例，詳列如下。
 
-1. **Profile 命名統一**：所有 Profile 統一採用 `LTC[ResourceType][Purpose]` 命名規範（如 `LTCCarePlanPayload`、`LTCBundlePayload`），舊名稱（如 `CarePlanTWLTCPlanSDK`、`BundleTWLTCSDKPayload`）不再使用。
-2. **CodeSystem/ValueSet 去除 SDK 後綴**：`CS-TW-LTC-CMSLevel-SDK`、`CS-TW-LTC-CaseStatus-SDK` 等已改為 `CS-TW-LTC-CMSLevel`、`CS-TW-LTC-CaseStatus`。
-3. **Extension 整併**：`Export-PlanId`、`FrequencyLabel-SDK` 已改用 FHIR 原生欄位取代；Incident 系列 Extension 已廢棄，改用 `LTCAdverseEvent` Profile。
-4. **異常事件通報**：原 `Communication`-based Incident Profile 已全面遷移至 `LTCAdverseEvent`，並新增 `AdverseEventDescription`、`AdverseEventNotifMethod`、`AdverseEventAbout` 三個 Extension。
-5. **Common Base Profile 導入**：新增 `LTCCompositionBase`、`LTCObservationAssessmentBase`、`LTCEpisodeOfCareBase` 作為共用基礎 Profile。
-6. **CoverageEligibilityResponse 合併**：SDK 版與 CS100 版合併為單一 `LTCCoverageEligibilityResponse`。
+1. **[長照支付審查](fee-audit.html)**：新增服務紀錄申報、刪除、申報確認、審核結果查詢、撤回及取消結果回報等七支 API 的 FHIR 對應。以 Bundle、Claim、ClaimResponse、Task 等資源表達申報與審核流程，提供相關 Profiles、術語、Extensions 與範例。
+2. **[居家護理照護管理系統](home-nursing.html)**：依中衛居護系統介接規範 V5.0.16 新增 12 支 API、24 種表單的交換設計，包含 37 個 Logical Models、35 個 Profiles，以及術語、Extensions 與範例。涵蓋多次收案、全人評估、需求摘要、照護計畫、共照、傷口、生命徵象及處理結果查詢，並提供[欄位對照](home-nursing-mapping.html)。
+3. **[在宅急症照護](hah.html)**：新增涵蓋 150 個資料元素的 Logical Model、25 個 Profiles、3 個 Extensions、5 個 CodeSystems、7 個 ValueSets、1 份收案評估問卷及 39 個範例。以 EpisodeOfCare 串聯整段照護與單次訪視，支援檢驗、給藥、照會、結案與轉銜，並提供完整結案／轉院文件及[欄位對照表](hah-mapping.html)。
+4. **術語與欄位說明**：補齊既有術語的 OID 與費用申報 Mapping 連結。精簡欄位填寫說明，將來源欄位對照集中於專用表格，便於實作者確認實際填值與轉換方式。
+5. **文件與導覽**：新增「主題說明」選單，整合三個業務主題，並更新 [Logical Models](logical-models.html)、[Profiles 與 Extensions](profiles-and-extensions.html)、[術語](terminologies.html)及[範例](examples.html)索引，以及同步更新版本資訊與作者／貢獻者資料。
 
-實作者請參照新版 Profile 名稱與結構進行調整。
+本版持續使用 FHIR R4.0.1 與 TW Core IG 1.0.0。各主題的 Mapping 說明來源資料與 FHIR 欄位的對應，Profiles 定義交換結構、必填條件與值集。
 
 </div>
 
@@ -246,7 +228,7 @@
 			</tr>
       <tr>
         <td style="vertical-align: middle;">貢獻者</td>
-            <td style="vertical-align: middle;">0.0.1~1.1.0</td>
+            <td style="vertical-align: middle;">0.0.1~0.3.0</td>
         <td style="vertical-align: middle;">李修安（Hsiu-An Lee）</td>
         <td style="vertical-align: middle;">國家衛生研究院 - 癌症研究所<br >（National Health Research Institutes - The National Institute of Cancer Research）</td>
         <td style="vertical-align: middle;">

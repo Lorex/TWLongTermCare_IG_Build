@@ -19,7 +19,7 @@ body{font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !impor
 <div style="clear:both;"></div>
 
 <p><b>Step 2：使用你的病人實例 JSON 檔或者下載範例JSON檔</b></p> 
-<p style="color:red">注意：請確認範例檔之編碼格式為 UTF-8，否則無法驗證。</p>
+<p>範例 JSON 檔使用 UTF-8 編碼。</p>
 <p>以 Patient Profile 的實作為例，如果你的手邊已經有一個依據 TW LTC IG 實作的 JSON 檔，你可以使用你的實例檔案，如果你沒有這樣的檔案，則可以下載如下圖所示的 TW LTC IG的「病人基本資料」範例。如下圖所示，請於 TW LTC IG 網站上，找到範例檔頁面中的「病人基本資料」。</p> 
 <img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-2.jpg" alt="病人基本資料" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
 <div style="clear:both;"></div>
@@ -35,7 +35,7 @@ body{font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !impor
 <div style="clear:both;"></div>
 
 <p>如下圖所示，將 Step 1 下載之 jar 檔，及 Step 2 下載之 JSON 檔，放置於所創之 TW LTC IG 資料夾中。<br/>
-<i>這邊只是為了方便驗證時簡化語法及避免太複雜的說明，而將上述兩個檔案放在相同目錄，使用者/實作者可視情況放在不同的目錄或可連線的網址，但後續語法也要自行做相對應的調整。 </i> </p>  
+<i>以下指令以驗證器與範例檔位於同一目錄為例。存放於其他位置時，將指令中的檔案路徑改為對應位置。 </i> </p>
 <img class="figure-img img-responsive img-rounded center-block" src="validates/1-1-6.jpg" alt="放置於TW LTC IG資料夾" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
 <div style="clear:both;"></div>
 
@@ -92,7 +92,7 @@ body{font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !impor
 <div style="clear:both;"></div>
 
 <p>如下圖所示，將Step 1下載之jar檔，及Step 2下載之JSON檔，放置於所創之TW LTC IG 資料夾中。<br/>
-<i>這邊只是為了方便驗證時簡化語法及避免太複雜的說明，而將上述兩個檔案放在相同目錄，使用者/實作者可視情況放在不同的目錄或可連線的網址，但後續語法也要自行做相對應的調整。</i></p>
+<i>以下指令以驗證器與範例檔位於同一目錄為例。存放於其他位置時，將指令中的檔案路徑改為對應位置。</i></p>
 <img class="figure-img img-responsive img-rounded center-block" src="validates/1-2-6.jpg" alt="TW LTC IG 資料夾" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"/>
 <div style="clear:both;"></div>
 

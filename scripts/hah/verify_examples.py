@@ -135,9 +135,8 @@ def main():
     used = set()
     for file in (ROOT / 'input/fsh/examples/hah').glob('*.fsh'):
         used.update(re.findall(r'^InstanceOf: (\S+)', file.read_text(), re.M))
-    # HAHEncounter 的實例由 HAHAdmissionEncounter／HAHVisitEncounter 示範。
-    assert not profiles - used - {'HAHEncounter'}, f'未提供範例：{profiles - used}'
-    print(f'{len(profiles)} 個 Profiles 均有直接或子 Profile 範例')
+    assert not profiles - used, f'未提供範例：{profiles - used}'
+    print(f'{len(profiles)} 個 Profiles 均有直接範例')
     published_path = ROOT / 'output' / questionnaire_name
     if published_path.exists():
         published = json.loads(published_path.read_text())

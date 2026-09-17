@@ -5,6 +5,7 @@ Title: "在宅急症結案摘要範例"
 Description: "以七個章節整理完成療程的合成資料。"
 * status = #final
 * type = HAHDocumentCS#discharge-summary
+* type.coding[1] = http://loinc.org#18842-5 "Discharge summary"
 * subject = Reference(hah-patient)
 * encounter = Reference(hah-admission)
 * date = "2026-09-05T12:00:00+08:00"
@@ -118,6 +119,7 @@ Title: "在宅急症轉院摘要範例"
 Description: "資訊不足的章節明確標示未提供，不能解讀為無疾病或無用藥。"
 * status = #final
 * type = HAHDocumentCS#transfer-summary
+* type.coding[1] = http://loinc.org#18761-7 "Transfer summary note"
 * subject = Reference(hah-patient)
 * encounter = Reference(hah-transfer-admission)
 * date = "2026-09-11T10:00:00+08:00"

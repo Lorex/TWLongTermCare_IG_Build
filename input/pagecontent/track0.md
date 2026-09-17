@@ -16,6 +16,7 @@ OAuth 為 FHIR R4 建議使用的標準認證機制，依 FHIR R4 6.1.0.4 Authen
 | LTC_MANAGEMENT | LTC Management System | 負責向大會驗證主機取得 Access Token 後，即可向 LTC Repository 進行資料交換。 |
 | LTC_CONSUMER | LTC Consumer | 負責向大會驗證主機取得 Access Token 後，即可向 LTC Repository 進行資料交換。 |
 | LTC_REPOSITORY | LTC Repository | 負責提供資料交換功能，包括長照個案資料的交換、儲存與管理，並具備驗證 Token 有效性的能力。 |
+{: .grid .rwd-table}
 
 ### 檢核項目
 
@@ -32,6 +33,7 @@ OAuth 為 FHIR R4 建議使用的標準認證機制，依 FHIR R4 6.1.0.4 Authen
 | 情境 ID | 說明 
 |---|---|---|---|
 | SC1 | 取得 OAuth2 Token
+{: .grid .rwd-table}
 
 #### 情境 1：取得 OAuth2 Token
 
@@ -76,3 +78,4 @@ two parts as they pass through the user-agent.
 | 交易 ID | 說明 | 發送方 (From) | 接收方 (To) |
 |---|---|---|---|
 | LTC-011 | 取得 OAuth2 Token | 參測單位 | 大會 |
+{: .grid .rwd-table}

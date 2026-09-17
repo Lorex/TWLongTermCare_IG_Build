@@ -215,7 +215,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#邏輯模型-logical-models" id="markdown-toc-邏輯模型-logical-models">邏輯模型 (Logical Models)</a></li>
-  <li><a href="#在宅急症照護" id="markdown-toc-在宅急症照護">在宅急症照護</a></li>
 </ul>
 
 </div>
@@ -382,6 +381,49 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>使用場景</strong>: 適用於追蹤申報交易單處理狀態與各分案核銷進度時，作為欄位對照的參考指南。</p>
 
+<h5 id="section">居家護理照護管理系統邏輯模型</h5>
+
+<p><a href="StructureDefinition-HNBaseDataModel.html">居家護理個案基本資料邏輯模型</a>／<a href="home-nursing.html">居家護理主題與模型清單</a></p>
+
+<p><strong>用途</strong>: 描述居家護理照護管理系統 V5.0.16 的資料結構，涵蓋十二支 API 的請求資料、二十四種表單及上傳接收回覆。</p>
+
+<p><strong>主要組成部分</strong>:</p>
+
+<ul>
+  <li><strong>個案與收案資料</strong>: 包含個案識別、基本資料、聯絡人、收案日期與負責機構</li>
+  <li><strong>全人評估</strong>: 包含十三類評估表單的題目、答案、評估日期與評估人員</li>
+  <li><strong>照護計畫與評值</strong>: 包含需求摘要、照護目標、措施、執行評值與目標結案</li>
+  <li><strong>照護紀錄與共照</strong>: 包含照護活動、共照內容、人員事件、足部護理及多筆傷口紀錄</li>
+  <li><strong>生命徵象</strong>: 包含體溫、脈搏、呼吸、血壓、血糖、血氧及量測時間</li>
+  <li><strong>上傳與查詢</strong>: 包含表單上傳、接收回覆、日期區間與追蹤碼查詢</li>
+</ul>
+
+<p><strong>Mapping 目標</strong>: <a href="home-nursing-mapping.html">居家護理逐欄 Mapping</a>，對應個案、收案療程、問卷回覆、照護計畫、目標、觀察紀錄與處理任務等資源。</p>
+
+<p><strong>使用場景</strong>: 適用於居家護理機構整合收案、評估、照護執行及追蹤資料，作為來源表單與 FHIR 資源轉換的依據。</p>
+
+<h5 id="hahcaredataset">在宅急症照護資料集邏輯模型 (HAHCareDataset)</h5>
+
+<p><a href="StructureDefinition-HAHCareDataset.html">在宅急症照護資料集邏輯模型</a></p>
+
+<p><strong>用途</strong>: 描述在宅急症照護的完整資料結構，以 150 個資料元素串聯收案評估、整段療程、單次訪視、臨床照護及結案轉銜。</p>
+
+<p><strong>主要組成部分</strong>:</p>
+
+<ul>
+  <li><strong>個案與收案評估</strong>: 包含個案識別、聯絡人、適用計畫、居家環境、照顧者支援及收案建議</li>
+  <li><strong>療程與訪視</strong>: 包含收案期間、整段照護、實地或遠距訪視、照護團隊及工作排程</li>
+  <li><strong>診斷與照護計畫</strong>: 包含疾病與照護問題、預期目標、計畫、服務請求及實際處置</li>
+  <li><strong>量測與檢驗</strong>: 包含生命徵象、檢驗結果、檢體、報告及量測設備</li>
+  <li><strong>用藥與同意</strong>: 包含處方、實際給藥、輸注期間、過敏資訊、照護同意及附件</li>
+  <li><strong>照會與轉銜</strong>: 包含會診回覆、交班內容、療程結束原因、接收機構及後續照護摘要</li>
+</ul>
+
+<p><strong>Mapping 目標</strong>: <a href="hah-mapping.html">在宅急症資料元素對照表</a>，對應 Patient、EpisodeOfCare、Encounter、CarePlan、Observation、MedicationAdministration、Composition 等資源。</p>
+
+<p><strong>使用場景</strong>: 適用於在宅急症照護團隊交換同一次療程的臨床資料，以及結案或轉院時提供完整照護摘要。流程與 Profiles 詳見<a href="hah.html">在宅急症主題</a>。</p>
+
+
 <h4 id="邏輯模型與-fhir-profile-的關係">邏輯模型與 FHIR Profile 的關係</h4>
 
 <p>邏輯模型提供高層次的資料結構視圖，而 FHIR Profile 則定義具體的 FHIR 資源結構。兩者相輔相成：</p>
@@ -411,16 +453,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>建議在實際使用前，先參考對應的 FHIR Profile 了解具體的實作細節</li>
 </ul>
 
-<h4 id="居家護理照護管理系統">居家護理照護管理系統</h4>
 
-<p><a href="home-nursing.html">居家護理主題</a> 依 V5.0.16 盤點十二支 API，提供請求模型、二十四種表單模型與 <a href="home-nursing-mapping.html">逐欄 Mapping</a>。模型保留多次收案、十三類全人評估、照護計畫、足部護理、多筆傷口及查詢參數。</p>
-
-<h3 id="在宅急症照護">在宅急症照護</h3>
-
-<ul>
-  <li><a href="StructureDefinition-HAHCareDataset.html">在宅急症照護資料集</a>：150 個資料元素，涵蓋收案、訪視、檢驗、給藥及轉銜。</li>
-  <li><a href="hah-mapping.html">資料元素對照表</a>與<a href="hah.html">主題說明</a>。</li>
-</ul>
 
 
 

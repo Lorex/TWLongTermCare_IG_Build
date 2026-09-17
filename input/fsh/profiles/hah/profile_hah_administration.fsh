@@ -7,7 +7,7 @@ Description: "正式收案個案的身分與聯絡資料。沿用長照個案識
 * generalPractitioner MS
 * generalPractitioner only Reference(LTCPractitioner or LTCPractitionerRole or LTCOrganization)
 * deceased[x] MS
-* active ^short = "個案主檔是否仍使用。[不可直接作為本次療程的結案旗標]"
+* active ^short = "個案主檔是否仍使用"
 
 Profile: HAHEpisodeOfCare
 Parent: LTCEpisodeOfCareBase
@@ -55,6 +55,11 @@ Description: "在宅急症的共同就診資料，包含個案、療程、服務
 * participant.individual only Reference(LTCPractitioner or LTCPractitionerRole)
 * diagnosis.condition only Reference(HAHCondition)
 * location.location only Reference($TWCoreLocation)
+// 指定目前使用的 THO 值集版本，子 Profile 沿用相同綁定。
+* class from http://terminology.hl7.org/ValueSet/v3-ActEncounterCode|3.0.0 (extensible)
+* classHistory.class from http://terminology.hl7.org/ValueSet/v3-ActEncounterCode|3.0.0 (extensible)
+* priority from http://terminology.hl7.org/ValueSet/v3-ActPriority|3.0.0 (example)
+* hospitalization.reAdmission from http://terminology.hl7.org/ValueSet/v2-0092|3.0.0 (example)
 * obeys hah-encounter-finished
 
 Invariant: hah-encounter-finished
@@ -66,7 +71,7 @@ Profile: HAHAdmissionEncounter
 Parent: HAHEncounter
 Id: HAHAdmissionEncounter
 Title: "在宅急症－整段照護"
-Description: "表達本次在宅急症的整段照護，供每次訪視透過 partOf 參照。IMP 表示本資料集的在宅住院照護分類，不代表照護地點在醫院。"
+Description: "表達本次在宅急症的整段照護，供每次訪視透過 partOf 參照。IMP 表示在宅住院照護分類，location 記錄照護地點。"
 * ^status = #draft
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP
 * type 1..1 MS
@@ -80,7 +85,7 @@ Profile: HAHVisitEncounter
 Parent: HAHEncounter
 Id: HAHVisitEncounter
 Title: "在宅急症－單次訪視"
-Description: "每次實地、視訊或電話評估建立一筆訪視，參照整段照護與收案療程。預約或通知不能當成已完成訪視。"
+Description: "每次實地、視訊或電話評估建立一筆訪視，參照整段照護與收案療程。"
 * ^status = #draft
 * type 1..1 MS
 * type = HAHActivityCS#visit
@@ -98,7 +103,7 @@ Profile: HAHCareTeam
 Parent: $TWCoreCareTeam
 Id: HAHCareTeam
 Title: "在宅急症－照護團隊"
-Description: "記錄主責及共照人員、機構、角色與參與期間。既有長照團隊不允許機構成員，因此由共同 TW Core 父層衍生。"
+Description: "記錄主責及共照人員、機構、角色與參與期間。團隊成員包含人員與共照機構。"
 * ^status = #draft
 * status 1..1 MS
 * subject only Reference(HAHPatient)
@@ -114,7 +119,7 @@ Profile: HAHVisitTask
 Parent: Task
 Id: HAHVisitTask
 Title: "在宅急症－照護工作"
-Description: "記錄訪視、送藥等執行工作。因長照任務的 owner 不允許 CareTeam，此處由 FHIR Task 衍生以支援團隊指派。"
+Description: "記錄訪視、送藥等執行工作。owner 記錄負責執行的人員、機構或照護團隊。"
 * ^status = #draft
 * code 1..1 MS
 * code from HAHServiceVS (extensible)
@@ -132,7 +137,7 @@ Description: "記錄訪視、送藥等執行工作。因長照任務的 owner �
 * restriction.period MS
 * restriction.period ^short = "預定執行期限"
 * executionPeriod MS
-* executionPeriod ^short = "實際執行期間。[不得以預定時間代替]"
+* executionPeriod ^short = "實際執行期間。[填入工作開始與結束時間]"
 * output MS
 * obeys hah-task-completed and hah-task-requested-period
 

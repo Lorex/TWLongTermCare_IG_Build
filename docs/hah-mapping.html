@@ -225,7 +225,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <thead>
     <tr>
       <th>模型欄位</th>
-      <th>基數／型態</th>
+      <th>基數</th>
+      <th>型態</th>
       <th>內容</th>
       <th>FHIR 對應</th>
       <th>來源與差異</th>
@@ -234,1050 +235,1200 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">patient</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>個案</td>
       <td><code class="language-plaintext highlighter-rouge">HAHPatient</code></td>
       <td>patient.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">patient.identifier</code></td>
-      <td>1..* <code class="language-plaintext highlighter-rouge">Identifier</code></td>
+      <td>1..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Identifier</code></td>
       <td>個案識別碼</td>
       <td><code class="language-plaintext highlighter-rouge">Patient.identifier</code></td>
       <td>patient.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">patient.name</code></td>
-      <td>1..2 <code class="language-plaintext highlighter-rouge">HumanName</code></td>
+      <td>1..2</td>
+      <td><code class="language-plaintext highlighter-rouge">HumanName</code></td>
       <td>姓名</td>
       <td><code class="language-plaintext highlighter-rouge">Patient.name</code></td>
       <td>patient.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">patient.birthDate</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">date</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">date</code></td>
       <td>出生日期</td>
       <td><code class="language-plaintext highlighter-rouge">Patient.birthDate</code></td>
       <td>patient.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">patient.gender</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">code</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
       <td>性別</td>
       <td><code class="language-plaintext highlighter-rouge">Patient.gender</code></td>
       <td>patient.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">patient.address</code></td>
-      <td>1..2 <code class="language-plaintext highlighter-rouge">Address</code></td>
+      <td>1..2</td>
+      <td><code class="language-plaintext highlighter-rouge">Address</code></td>
       <td>居住地址</td>
       <td><code class="language-plaintext highlighter-rouge">Patient.address</code></td>
       <td>patient.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">patient.telecom</code></td>
-      <td>1..* <code class="language-plaintext highlighter-rouge">ContactPoint</code></td>
+      <td>1..*</td>
+      <td><code class="language-plaintext highlighter-rouge">ContactPoint</code></td>
       <td>聯絡方式</td>
       <td><code class="language-plaintext highlighter-rouge">Patient.telecom</code></td>
       <td>patient.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">patient.contact</code></td>
-      <td>1..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>1..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>緊急聯絡人</td>
       <td><code class="language-plaintext highlighter-rouge">Patient.contact</code></td>
       <td>patient.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">patient.contact.name</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">HumanName</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">HumanName</code></td>
       <td>聯絡人姓名</td>
       <td><code class="language-plaintext highlighter-rouge">Patient.contact.name</code></td>
       <td>patient.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">patient.contact.relationship</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>與個案關係</td>
       <td><code class="language-plaintext highlighter-rouge">Patient.contact.relationship</code></td>
       <td>patient.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">patient.contact.telecom</code></td>
-      <td>1..* <code class="language-plaintext highlighter-rouge">ContactPoint</code></td>
+      <td>1..*</td>
+      <td><code class="language-plaintext highlighter-rouge">ContactPoint</code></td>
       <td>聯絡人電話</td>
       <td><code class="language-plaintext highlighter-rouge">Patient.contact.telecom</code></td>
       <td>patient.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">patient.caregiver</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">Reference(LTCRelatedPerson)</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(LTCRelatedPerson)</code></td>
       <td>主要照顧者</td>
       <td><code class="language-plaintext highlighter-rouge">RelatedPerson.patient</code></td>
       <td>patient.js 的 caregiver；結構化參照為新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">patient.deceased</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">dateTime</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">dateTime</code></td>
       <td>死亡時間</td>
       <td><code class="language-plaintext highlighter-rouge">Patient.deceasedDateTime</code></td>
       <td>新增；不可由結案旗標推定</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">intake</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>收案評估</td>
       <td><code class="language-plaintext highlighter-rouge">HAHAssessmentResponse</code></td>
       <td>新增結構化表單</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">intake.criteria</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
       <td>計畫名稱與版本</td>
       <td><code class="language-plaintext highlighter-rouge">QuestionnaireResponse.item[criteria]</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">intake.homeSafety</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
       <td>環境與設備可行性</td>
       <td><code class="language-plaintext highlighter-rouge">QuestionnaireResponse.item[homeSafety]</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">intake.caregiverSupport</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
       <td>照顧者支援能力</td>
       <td><code class="language-plaintext highlighter-rouge">QuestionnaireResponse.item[caregiverSupport]</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">intake.decision</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Coding</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Coding</code></td>
       <td>收案建議</td>
       <td><code class="language-plaintext highlighter-rouge">QuestionnaireResponse.item[decision]</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">intake.reason</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
       <td>評估原因</td>
       <td><code class="language-plaintext highlighter-rouge">QuestionnaireResponse.item[reason]</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">intake.assessor</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Reference(LTCPractitionerRole or LTCPractitioner)</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(LTCPractitionerRole or LTCPractitioner)</code></td>
       <td>評估人員</td>
       <td><code class="language-plaintext highlighter-rouge">QuestionnaireResponse.author</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">intake.date</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">dateTime</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">dateTime</code></td>
       <td>評估時間</td>
       <td><code class="language-plaintext highlighter-rouge">QuestionnaireResponse.authored</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">episode</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>一次收案療程</td>
       <td><code class="language-plaintext highlighter-rouge">HAHEpisodeOfCare</code></td>
       <td>由 Patient 收案資訊與 Encounter 彙整</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">episode.identifier</code></td>
-      <td>1..* <code class="language-plaintext highlighter-rouge">Identifier</code></td>
+      <td>1..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Identifier</code></td>
       <td>療程識別碼</td>
       <td><code class="language-plaintext highlighter-rouge">EpisodeOfCare.identifier</code></td>
       <td>新增穩定識別</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">episode.status</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">code</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
       <td>療程狀態</td>
       <td><code class="language-plaintext highlighter-rouge">EpisodeOfCare.status</code></td>
       <td>收案、結案狀態轉換</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">episode.period</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Period</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Period</code></td>
       <td>實際照護期間</td>
       <td><code class="language-plaintext highlighter-rouge">EpisodeOfCare.period</code></td>
       <td>收案與結案日期</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">episode.organization</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Reference(LTCOrganization)</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(LTCOrganization)</code></td>
       <td>負責機構</td>
       <td><code class="language-plaintext highlighter-rouge">EpisodeOfCare.managingOrganization</code></td>
       <td>patient.js、encounter.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">episode.diagnosis</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">Reference(HAHCondition)</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(HAHCondition)</code></td>
       <td>收案診斷</td>
       <td><code class="language-plaintext highlighter-rouge">EpisodeOfCare.diagnosis.condition</code></td>
       <td>condition.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">episode.team</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">Reference(HAHCareTeam)</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(HAHCareTeam)</code></td>
       <td>照護團隊</td>
       <td><code class="language-plaintext highlighter-rouge">EpisodeOfCare.team</code></td>
       <td>careTeam.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">episode.referral</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">Reference(HAHServiceRequest)</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(HAHServiceRequest)</code></td>
       <td>收案轉介</td>
       <td><code class="language-plaintext highlighter-rouge">EpisodeOfCare.referralRequest</code></td>
       <td>新增轉介串聯</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">episode.outcome</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>結束原因</td>
       <td><code class="language-plaintext highlighter-rouge">EpisodeOfCare.extension[outcome]</code></td>
       <td>EnrollmentInfo.vue；原因代碼需轉換</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">encounter</code></td>
-      <td>1..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>1..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>整段照護或單次訪視</td>
       <td><code class="language-plaintext highlighter-rouge">HAHEncounter</code></td>
       <td>encounter.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">encounter.identifier</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">Identifier</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Identifier</code></td>
       <td>就診識別碼</td>
       <td><code class="language-plaintext highlighter-rouge">Encounter.identifier</code></td>
       <td>新增交換識別</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">encounter.status</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">code</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
       <td>就診狀態</td>
       <td><code class="language-plaintext highlighter-rouge">Encounter.status</code></td>
       <td>encounter.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">encounter.class</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Coding</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Coding</code></td>
       <td>照護分類</td>
       <td><code class="language-plaintext highlighter-rouge">Encounter.class</code></td>
       <td>IMP、HH；VR 為明確化</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">encounter.period</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Period</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Period</code></td>
       <td>實際服務起訖</td>
       <td><code class="language-plaintext highlighter-rouge">Encounter.period</code></td>
       <td>encounter.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">encounter.parent</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">Reference(HAHAdmissionEncounter)</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(HAHAdmissionEncounter)</code></td>
       <td>所屬整段照護</td>
       <td><code class="language-plaintext highlighter-rouge">Encounter.partOf</code></td>
       <td>新增；單次訪視必填</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">encounter.mode</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">code</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
       <td>訪視方式</td>
       <td><code class="language-plaintext highlighter-rouge">Encounter.extension[mode]</code></td>
       <td>新增；單次訪視必填</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">encounter.participant</code></td>
-      <td>1..* <code class="language-plaintext highlighter-rouge">Reference(LTCPractitioner or LTCPractitionerRole)</code></td>
+      <td>1..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(LTCPractitioner or LTCPractitionerRole)</code></td>
       <td>照護人員</td>
       <td><code class="language-plaintext highlighter-rouge">Encounter.participant.individual</code></td>
       <td>encounter.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">encounter.organization</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Reference(LTCOrganization)</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(LTCOrganization)</code></td>
       <td>服務機構</td>
       <td><code class="language-plaintext highlighter-rouge">Encounter.serviceProvider</code></td>
       <td>encounter.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">encounter.location</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">Reference(Location)</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Location)</code></td>
       <td>照護地點</td>
       <td><code class="language-plaintext highlighter-rouge">Encounter.location.location</code></td>
       <td>task.js 的地點與座標</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">encounter.disposition</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>出院或轉出處置</td>
       <td><code class="language-plaintext highlighter-rouge">Encounter.hospitalization.dischargeDisposition</code></td>
       <td>新增結構化資料</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">encounter.destination</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">Reference(Organization or Location)</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Organization or Location)</code></td>
       <td>接續照護地點</td>
       <td><code class="language-plaintext highlighter-rouge">Encounter.hospitalization.destination</code></td>
       <td>clinicalNote.js 的 transferHospital</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">problem</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>診斷與照護問題</td>
       <td><code class="language-plaintext highlighter-rouge">HAHCondition</code></td>
       <td>condition.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">problem.code</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>診斷或問題</td>
       <td><code class="language-plaintext highlighter-rouge">Condition.code</code></td>
       <td>condition.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">problem.category</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>診斷或問題分類</td>
       <td><code class="language-plaintext highlighter-rouge">Condition.category</code></td>
       <td>condition.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">problem.onset</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">dateTime</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">dateTime</code></td>
       <td>發病時間</td>
       <td><code class="language-plaintext highlighter-rouge">Condition.onsetDateTime</code></td>
       <td>condition.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">problem.clinicalStatus</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>病情狀態</td>
       <td><code class="language-plaintext highlighter-rouge">Condition.clinicalStatus</code></td>
       <td>condition.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">problem.verification</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>確認狀態</td>
       <td><code class="language-plaintext highlighter-rouge">Condition.verificationStatus</code></td>
       <td>condition.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">problem.encounter</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Reference(HAHEncounter)</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(HAHEncounter)</code></td>
       <td>對應就診</td>
       <td><code class="language-plaintext highlighter-rouge">Condition.encounter</code></td>
       <td>condition.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">team</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>團隊成員</td>
       <td><code class="language-plaintext highlighter-rouge">HAHCareTeam</code></td>
       <td>careTeam.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">team.member</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Reference(Practitioner or PractitionerRole or Organization or RelatedPerson)</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Practitioner or PractitionerRole or Organization or RelatedPerson)</code></td>
       <td>人員或機構</td>
       <td><code class="language-plaintext highlighter-rouge">CareTeam.participant.member</code></td>
       <td>careTeam.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">team.role</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>成員角色</td>
       <td><code class="language-plaintext highlighter-rouge">CareTeam.participant.role</code></td>
       <td>careTeam.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">team.period</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">Period</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Period</code></td>
       <td>責任期間</td>
       <td><code class="language-plaintext highlighter-rouge">CareTeam.participant.period</code></td>
       <td>新增期間約定</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">plan</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>照護計畫</td>
       <td><code class="language-plaintext highlighter-rouge">HAHCarePlan</code></td>
       <td>goal.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">plan.status</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">code</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
       <td>計畫狀態</td>
       <td><code class="language-plaintext highlighter-rouge">CarePlan.status</code></td>
       <td>goal.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">plan.period</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">Period</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Period</code></td>
       <td>計畫期間</td>
       <td><code class="language-plaintext highlighter-rouge">CarePlan.period</code></td>
       <td>goal.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">plan.problem</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">Reference(HAHCondition)</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(HAHCondition)</code></td>
       <td>處理的問題</td>
       <td><code class="language-plaintext highlighter-rouge">CarePlan.addresses</code></td>
       <td>需求語意校正</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">plan.goal</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">Reference(HAHGoal)</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(HAHGoal)</code></td>
       <td>預期目標</td>
       <td><code class="language-plaintext highlighter-rouge">CarePlan.goal</code></td>
       <td>goal.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">plan.activity</code></td>
-      <td>1..* <code class="language-plaintext highlighter-rouge">Reference(HAHServiceRequest or HAHMedicationRequest)</code></td>
+      <td>1..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(HAHServiceRequest or HAHMedicationRequest)</code></td>
       <td>預定服務或處方</td>
       <td><code class="language-plaintext highlighter-rouge">CarePlan.activity.reference；也可用 detail</code></td>
       <td>goal.js 的 activity 結構化</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">goal</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>照護目標</td>
       <td><code class="language-plaintext highlighter-rouge">HAHGoal</code></td>
       <td>goal.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">goal.description</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>預期結果</td>
       <td><code class="language-plaintext highlighter-rouge">Goal.description</code></td>
       <td>目標與需求分開</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">goal.status</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">code</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
       <td>目標狀態</td>
       <td><code class="language-plaintext highlighter-rouge">Goal.lifecycleStatus</code></td>
       <td>goal.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">goal.due</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">date</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">date</code></td>
       <td>預期達到日期</td>
       <td><code class="language-plaintext highlighter-rouge">Goal.target.dueDate</code></td>
       <td>goal.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">goal.result</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">Reference(Observation)</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Observation)</code></td>
       <td>評值結果</td>
       <td><code class="language-plaintext highlighter-rouge">Goal.outcomeReference</code></td>
       <td>新增結果串聯</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">request</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>服務請求</td>
       <td><code class="language-plaintext highlighter-rouge">HAHServiceRequest</code></td>
       <td>queryNote.js；檢驗及轉介串聯新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">request.code</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>服務項目</td>
       <td><code class="language-plaintext highlighter-rouge">ServiceRequest.code</code></td>
       <td>原本僅部分文字，新增標準化</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">request.category</code></td>
-      <td>1..* <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..*</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>服務分類</td>
       <td><code class="language-plaintext highlighter-rouge">ServiceRequest.category</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">request.status</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">code</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
       <td>請求狀態</td>
       <td><code class="language-plaintext highlighter-rouge">ServiceRequest.status</code></td>
       <td>queryNote.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">request.intent</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">code</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
       <td>請求意圖</td>
       <td><code class="language-plaintext highlighter-rouge">ServiceRequest.intent</code></td>
       <td>queryNote.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">request.requester</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Reference(Practitioner or PractitionerRole or Organization)</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Practitioner or PractitionerRole or Organization)</code></td>
       <td>開立者</td>
       <td><code class="language-plaintext highlighter-rouge">ServiceRequest.requester</code></td>
       <td>queryNote.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">request.performer</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">Reference(Practitioner or PractitionerRole or Organization)</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Practitioner or PractitionerRole or Organization)</code></td>
       <td>執行對象</td>
       <td><code class="language-plaintext highlighter-rouge">ServiceRequest.performer</code></td>
       <td>queryNote.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">request.occurrence</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">Period</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Period</code></td>
       <td>預定服務期間</td>
       <td><code class="language-plaintext highlighter-rouge">ServiceRequest.occurrencePeriod</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">observation</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>生命徵象與檢驗</td>
       <td><code class="language-plaintext highlighter-rouge">既有量測 Profiles、HAHObservationLab</code></td>
       <td>CreateNursingNote.vue、PatientLabReports.vue</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">observation.code</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>量測或檢驗項目</td>
       <td><code class="language-plaintext highlighter-rouge">Observation.code</code></td>
       <td>體溫、心率、呼吸、血壓、血氧、血糖、CRP、血氣等</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">observation.status</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">code</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
       <td>結果狀態</td>
       <td><code class="language-plaintext highlighter-rouge">Observation.status</code></td>
       <td>Observation 寫入流程</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">observation.time</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">dateTime</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">dateTime</code></td>
       <td>量測或採檢時間</td>
       <td><code class="language-plaintext highlighter-rouge">Observation.effectiveDateTime</code></td>
       <td>既有資料</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">observation.value</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">Quantity</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Quantity</code></td>
       <td>數值與單位</td>
       <td><code class="language-plaintext highlighter-rouge">Observation.valueQuantity</code></td>
       <td>既有數值；須確認 UCUM</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">observation.textValue</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
       <td>文字結果</td>
       <td><code class="language-plaintext highlighter-rouge">Observation.valueString</code></td>
       <td>檢驗頁既有資料</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">observation.absentReason</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>缺值原因</td>
       <td><code class="language-plaintext highlighter-rouge">Observation.dataAbsentReason</code></td>
       <td>新增缺值規則</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">observation.component</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>同次量測組成值</td>
       <td><code class="language-plaintext highlighter-rouge">Observation.component</code></td>
       <td>血壓專用；單項檢驗不使用</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">observation.component.code</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>組成項目</td>
       <td><code class="language-plaintext highlighter-rouge">Observation.component.code</code></td>
       <td>收縮壓或舒張壓</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">observation.component.value</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Quantity</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Quantity</code></td>
       <td>組成數值</td>
       <td><code class="language-plaintext highlighter-rouge">Observation.component.valueQuantity</code></td>
       <td>血壓數值與 mm[Hg]</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">observation.device</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">Reference(HAHDevice)</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(HAHDevice)</code></td>
       <td>量測設備</td>
       <td><code class="language-plaintext highlighter-rouge">Observation.device</code></td>
       <td>Device.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">observation.encounter</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">Reference(HAHEncounter)</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(HAHEncounter)</code></td>
       <td>量測對應就診</td>
       <td><code class="language-plaintext highlighter-rouge">Observation.encounter</code></td>
       <td>修正 focus 作外鍵的用法</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">observation.specimen</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">Reference(Specimen)</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Specimen)</code></td>
       <td>檢體</td>
       <td><code class="language-plaintext highlighter-rouge">Observation.specimen</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">observation.referenceRange</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">Range</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Range</code></td>
       <td>參考區間</td>
       <td><code class="language-plaintext highlighter-rouge">Observation.referenceRange.low/high</code></td>
       <td>PatientLabReports.vue</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">report</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>檢驗報告</td>
       <td><code class="language-plaintext highlighter-rouge">HAHDiagnosticReport</code></td>
       <td>新增報告層</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">report.identifier</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">Identifier</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Identifier</code></td>
       <td>報告識別碼</td>
       <td><code class="language-plaintext highlighter-rouge">DiagnosticReport.identifier</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">report.code</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>報告種類</td>
       <td><code class="language-plaintext highlighter-rouge">DiagnosticReport.code</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">report.status</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">code</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
       <td>報告狀態</td>
       <td><code class="language-plaintext highlighter-rouge">DiagnosticReport.status</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">report.result</code></td>
-      <td>1..* <code class="language-plaintext highlighter-rouge">Reference(HAHObservationLab)</code></td>
+      <td>1..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(HAHObservationLab)</code></td>
       <td>單項結果</td>
       <td><code class="language-plaintext highlighter-rouge">DiagnosticReport.result</code></td>
       <td>連結既有結果</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">report.specimen</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">Reference(Specimen)</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Specimen)</code></td>
       <td>檢體</td>
       <td><code class="language-plaintext highlighter-rouge">DiagnosticReport.specimen</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">report.issued</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">instant</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">instant</code></td>
       <td>報告發布時間</td>
       <td><code class="language-plaintext highlighter-rouge">DiagnosticReport.issued</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">medicationOrder</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>給藥處方</td>
       <td><code class="language-plaintext highlighter-rouge">HAHMedicationRequest</code></td>
       <td>新增；送藥畫面不等於處方</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">medicationOrder.medication</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>藥品</td>
       <td><code class="language-plaintext highlighter-rouge">MedicationRequest.medicationCodeableConcept 或 medicationReference</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">medicationOrder.status</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">code</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
       <td>處方狀態</td>
       <td><code class="language-plaintext highlighter-rouge">MedicationRequest.status</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">medicationOrder.intent</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">code</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
       <td>處方意圖</td>
       <td><code class="language-plaintext highlighter-rouge">MedicationRequest.intent</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">medicationOrder.dosage</code></td>
-      <td>1..* <code class="language-plaintext highlighter-rouge">Dosage</code></td>
+      <td>1..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Dosage</code></td>
       <td>劑量頻率與途徑</td>
       <td><code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">medicationOrder.requester</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Reference(Practitioner or PractitionerRole)</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Practitioner or PractitionerRole)</code></td>
       <td>開立者</td>
       <td><code class="language-plaintext highlighter-rouge">MedicationRequest.requester</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">administration</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>實際給藥</td>
       <td><code class="language-plaintext highlighter-rouge">HAHMedicationAdministration</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">administration.request</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Reference(HAHMedicationRequest)</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(HAHMedicationRequest)</code></td>
       <td>對應處方</td>
       <td><code class="language-plaintext highlighter-rouge">MedicationAdministration.request</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">administration.status</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">code</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
       <td>給藥狀態</td>
       <td><code class="language-plaintext highlighter-rouge">MedicationAdministration.status</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">administration.reason</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>未給藥或停止原因</td>
       <td><code class="language-plaintext highlighter-rouge">MedicationAdministration.statusReason</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">administration.time</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">dateTime</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">dateTime</code></td>
       <td>單次給藥時間</td>
       <td><code class="language-plaintext highlighter-rouge">MedicationAdministration.effectiveDateTime</code></td>
       <td>新增；與期間擇一</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">administration.period</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">Period</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Period</code></td>
       <td>輸注期間</td>
       <td><code class="language-plaintext highlighter-rouge">MedicationAdministration.effectivePeriod</code></td>
       <td>新增；與時間點擇一</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">administration.dose</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">Quantity</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Quantity</code></td>
       <td>給藥劑量</td>
       <td><code class="language-plaintext highlighter-rouge">MedicationAdministration.dosage.dose</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">administration.rate</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">Quantity</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Quantity</code></td>
       <td>給藥速率</td>
       <td><code class="language-plaintext highlighter-rouge">MedicationAdministration.dosage.rateQuantity</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">administration.route</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>給藥途徑</td>
       <td><code class="language-plaintext highlighter-rouge">MedicationAdministration.dosage.route</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">assessment</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>臨床評估</td>
       <td><code class="language-plaintext highlighter-rouge">HAHClinicalImpression</code></td>
       <td>clinicalNote.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">assessment.summary</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
       <td>評估摘要</td>
       <td><code class="language-plaintext highlighter-rouge">ClinicalImpression.summary</code></td>
       <td>原 description、SOAP 文字</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">assessment.assessor</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Reference(Practitioner or PractitionerRole)</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Practitioner or PractitionerRole)</code></td>
       <td>評估人員</td>
       <td><code class="language-plaintext highlighter-rouge">ClinicalImpression.assessor</code></td>
       <td>clinicalNote.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">assessment.time</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">dateTime</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">dateTime</code></td>
       <td>評估時間</td>
       <td><code class="language-plaintext highlighter-rouge">ClinicalImpression.effectiveDateTime</code></td>
       <td>原服務時間</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">assessment.support</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">Reference(Resource)</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Resource)</code></td>
       <td>支持證據</td>
       <td><code class="language-plaintext highlighter-rouge">ClinicalImpression.supportingInfo</code></td>
       <td>Observation、附件等</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">procedure</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>已執行處置</td>
       <td><code class="language-plaintext highlighter-rouge">HAHProcedure</code></td>
       <td>原護理措施文字；結構化新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">procedure.code</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>處置項目</td>
       <td><code class="language-plaintext highlighter-rouge">Procedure.code</code></td>
       <td>原 selectedInterventions</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">procedure.status</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">code</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
       <td>處置狀態</td>
       <td><code class="language-plaintext highlighter-rouge">Procedure.status</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">procedure.period</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">Period</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Period</code></td>
       <td>執行期間</td>
       <td><code class="language-plaintext highlighter-rouge">Procedure.performedPeriod</code></td>
       <td>新增；也可用 performedDateTime</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">procedure.performer</code></td>
-      <td>1..* <code class="language-plaintext highlighter-rouge">Reference(Practitioner or PractitionerRole)</code></td>
+      <td>1..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Practitioner or PractitionerRole)</code></td>
       <td>執行人員</td>
       <td><code class="language-plaintext highlighter-rouge">Procedure.performer.actor</code></td>
       <td>既有人員</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">procedure.outcome</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>處置結果</td>
       <td><code class="language-plaintext highlighter-rouge">Procedure.outcome</code></td>
       <td>原評值文字</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">allergy</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>過敏資訊</td>
       <td><code class="language-plaintext highlighter-rouge">HAHAllergyIntolerance</code></td>
       <td>原 Condition 過敏旗標不足，新增結構</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">allergy.substance</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>物質或過敏狀態</td>
       <td><code class="language-plaintext highlighter-rouge">AllergyIntolerance.code</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">allergy.verification</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>確認狀態</td>
       <td><code class="language-plaintext highlighter-rouge">AllergyIntolerance.verificationStatus</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">allergy.manifestation</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>反應表現</td>
       <td><code class="language-plaintext highlighter-rouge">AllergyIntolerance.reaction.manifestation</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">consent</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>照護同意</td>
       <td><code class="language-plaintext highlighter-rouge">HAHConsent</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">consent.status</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">code</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
       <td>同意狀態</td>
       <td><code class="language-plaintext highlighter-rouge">Consent.status</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">consent.scope</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>同意範圍</td>
       <td><code class="language-plaintext highlighter-rouge">Consent.scope</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">consent.source</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Reference(HAHDocumentReference)</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(HAHDocumentReference)</code></td>
       <td>來源文件</td>
       <td><code class="language-plaintext highlighter-rouge">Consent.sourceReference</code></td>
       <td>新增；也可用 sourceAttachment</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">communication</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>照會與交班</td>
       <td><code class="language-plaintext highlighter-rouge">HAHCommunication</code></td>
       <td>queryNote.js、handover_notification.py</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">communication.category</code></td>
-      <td>1..* <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..*</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>溝通類型</td>
       <td><code class="language-plaintext highlighter-rouge">Communication.category</code></td>
       <td>新增分類</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">communication.sender</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Reference(Practitioner or PractitionerRole or Organization or RelatedPerson)</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Practitioner or PractitionerRole or Organization or RelatedPerson)</code></td>
       <td>發送者</td>
       <td><code class="language-plaintext highlighter-rouge">Communication.sender</code></td>
       <td>queryNote.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">communication.recipient</code></td>
-      <td>1..* <code class="language-plaintext highlighter-rouge">Reference(Resource)</code></td>
+      <td>1..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Resource)</code></td>
       <td>接收者</td>
       <td><code class="language-plaintext highlighter-rouge">Communication.recipient</code></td>
       <td>queryNote.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">communication.sent</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">dateTime</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">dateTime</code></td>
       <td>發送時間</td>
       <td><code class="language-plaintext highlighter-rouge">Communication.sent</code></td>
       <td>queryNote.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">communication.content</code></td>
-      <td>1..* <code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>1..*</td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
       <td>內容</td>
       <td><code class="language-plaintext highlighter-rouge">Communication.payload.contentString</code></td>
       <td>queryNote.js、交班內容</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">communication.request</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">Reference(HAHServiceRequest)</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(HAHServiceRequest)</code></td>
       <td>依據請求</td>
       <td><code class="language-plaintext highlighter-rouge">Communication.basedOn</code></td>
       <td>queryNote.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">task</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>照護工作</td>
       <td><code class="language-plaintext highlighter-rouge">HAHVisitTask</code></td>
       <td>task.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">task.code</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>工作類型</td>
       <td><code class="language-plaintext highlighter-rouge">Task.code</code></td>
       <td>selectedJobs 分類</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">task.status</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">code</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
       <td>工作狀態</td>
       <td><code class="language-plaintext highlighter-rouge">Task.status</code></td>
       <td>task.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">task.owner</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Reference(Practitioner or PractitionerRole or Organization or CareTeam)</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Practitioner or PractitionerRole or Organization or CareTeam)</code></td>
       <td>負責人或團隊</td>
       <td><code class="language-plaintext highlighter-rouge">Task.owner</code></td>
       <td>task.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">task.scheduled</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">Period</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Period</code></td>
       <td>預定執行期限</td>
       <td><code class="language-plaintext highlighter-rouge">Task.restriction.period</code></td>
       <td>修正原 executionPeriod 語意</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">task.actual</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">Period</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Period</code></td>
       <td>實際執行期間</td>
       <td><code class="language-plaintext highlighter-rouge">Task.executionPeriod</code></td>
       <td>新增實際起訖</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">task.location</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">Reference(Location)</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Location)</code></td>
       <td>工作地點</td>
       <td><code class="language-plaintext highlighter-rouge">Task.location</code></td>
       <td>task.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attachment</code></td>
-      <td>0..* <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>照護附件</td>
       <td><code class="language-plaintext highlighter-rouge">HAHDocumentReference</code></td>
       <td>fhirResources.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attachment.type</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>附件種類</td>
       <td><code class="language-plaintext highlighter-rouge">DocumentReference.type</code></td>
       <td>既有附件</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attachment.content</code></td>
-      <td>1..* <code class="language-plaintext highlighter-rouge">Attachment</code></td>
+      <td>1..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Attachment</code></td>
       <td>附件內容或網址</td>
       <td><code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment</code></td>
       <td>fhirResources.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attachment.author</code></td>
-      <td>1..* <code class="language-plaintext highlighter-rouge">Reference(Resource)</code></td>
+      <td>1..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Resource)</code></td>
       <td>作者</td>
       <td><code class="language-plaintext highlighter-rouge">DocumentReference.author</code></td>
       <td>fhirResources.js</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">summary</code></td>
-      <td>0..1 <code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>結案與轉銜摘要</td>
       <td><code class="language-plaintext highlighter-rouge">HAHCompositionSummary、HAHBundleSummary</code></td>
       <td>新增文件交換</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">summary.type</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CodeableConcept</code></td>
       <td>摘要種類</td>
       <td><code class="language-plaintext highlighter-rouge">Composition.type</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">summary.date</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">dateTime</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">dateTime</code></td>
       <td>文件時間</td>
       <td><code class="language-plaintext highlighter-rouge">Composition.date</code></td>
       <td>新增</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">summary.followUp</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
       <td>後續照護與待辦</td>
       <td><code class="language-plaintext highlighter-rouge">Composition.section[followUp].text</code></td>
       <td>原交班與轉送資料</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">summary.documentId</code></td>
-      <td>1..1 <code class="language-plaintext highlighter-rouge">Identifier</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Identifier</code></td>
       <td>文件識別碼</td>
       <td><code class="language-plaintext highlighter-rouge">Bundle.identifier</code></td>
       <td>新增</td>

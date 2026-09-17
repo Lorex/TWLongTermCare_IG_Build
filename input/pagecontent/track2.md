@@ -17,6 +17,7 @@
 | LTC_MANAGEMENT | LTC Management System | 負責接收失智症認知評估結果、個案位置資訊、異常事件警報等資料，並提供資料管理與上傳功能。 |
 | LTC_CONSUMER | LTC Consumer | 負責向 LTC Repository 查詢失智症認知評估結果、個案位置資訊、異常事件警報等資料。 |
 | LTC_REPOSITORY | LTC Repository | 負責提供資料交換與儲存功能，包括失智症認知評估結果、個案位置資訊、異常事件警報等資料的交換、儲存與管理。 |
+{: .grid .rwd-table}
 
 ### 通過條件
 
@@ -29,6 +30,7 @@
 | SC1 | 失智症認知評估管理
 | SC2 | 個案位置監測管理
 | SC3 | 異常事件警報管理
+{: .grid .rwd-table}
 
 #### 情境 1：失智症認知評估管理
 
@@ -56,6 +58,7 @@
 |---|---|---|---|
 | MMSE | QuestionnaireResponse | Mini-Mental State Examination | 簡短智能測驗量表
 | CDR | QuestionnaireResponse | Clinical Dementia Rating | 臨床失智評估量表
+{: .grid .rwd-table}
 
 #### 資料查詢功能（LTC_CONSUMER 角色）
 
@@ -94,6 +97,7 @@
 |---|---|---|---|
 | 所在地名稱 | Location | 個案所在的地點名稱 | 例如：日照中心、家裡、公園等 |
 | 經緯度座標 | Location | GPS 座標資訊 | 十進位度數格式 |
+{: .grid .rwd-table}
 
 #### 資料查詢功能（LTC_CONSUMER 角色）
 
@@ -131,7 +135,7 @@
   - 異常生命徵象
 
 
-**注意：** 上述異常事件類型在 SNOMED CT 中可能沒有完全對應的代碼，參測單位可根據實際需求選擇適當的 SNOMED CT 代碼或使用自定義代碼。
+異常事件類型依事件內容選用 SNOMED CT 代碼；使用自定義代碼時，填入對應的代碼系統。
 
 #### 資料查詢功能（LTC_CONSUMER 角色）
 
@@ -153,3 +157,4 @@
 | LTC-222 | 查詢個案位置資訊 | 日照中心系統 | 家屬行動 App |
 | LTC-231 | 上傳異常事件警報 | 定位監測系統 | 日照中心系統 |
 | LTC-232 | 查詢異常事件警報 | 日照中心系統 | 家屬行動 App |
+{: .grid .rwd-table}

@@ -1,14 +1,11 @@
 本頁列出居家護理 V5.0.16 來源欄位、邏輯模型與 FHIR 表單的逐欄對應。
 
-評估題目以穩定識別碼建模；原始題目文字由對應欄保留。陣列中的各筆物件使用重複 group item；多選答案使用重複 answer。來源的空白或 null 答案以保留 item、省略 answer 表達。
-
-FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明轉回字串及日期格式。
 
 ### 個案基本資料
 
 來源：規範印刷頁 1–13。
 
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `CaseID` | `caseID` | `item.where(linkId='CaseID')` | 1..1 |
 | `EndDate` | `endDate` | `item.where(linkId='EndDate')` | 1..1 |
@@ -94,12 +91,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `Relatives.Tel3.Value` | `relatives.tel3.value` | `item.where(linkId='Relatives').item.where(linkId='Relatives.Tel3').item.where(linkId='Relatives.Tel3.Value')` | 1..1 |
 | `Relatives.Tel3.Remark` | `relatives.tel3.remark` | `item.where(linkId='Relatives').item.where(linkId='Relatives.Tel3').item.where(linkId='Relatives.Tel3.Remark')` | 0..1 |
 | `Relatives.CareRemark` | `relatives.careRemark` | `item.where(linkId='Relatives').item.where(linkId='Relatives.CareRemark')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 健康紀錄評估
 
-來源：規範印刷頁 43–44。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
 | `NurseID` | `nurseID` | `item.where(linkId='NurseID')` | 1..1 |
@@ -124,12 +120,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `Vaccination.MultipleAnswer` | `vaccination.multipleAnswer` | `item.where(linkId='Vaccination').item.where(linkId='Vaccination.MultipleAnswer')` | 0..1 |
 | `Vaccination.Other` | `vaccination.other` | `item.where(linkId='Vaccination').item.where(linkId='Vaccination.Other')` | 0..1 |
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 疾病史評估
 
-來源：規範印刷頁 44–46。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
 | `NurseID` | `nurseID` | `item.where(linkId='NurseID')` | 1..1 |
@@ -179,12 +174,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `MedicalHistoryQuestions[Question='情緒與行為問題(包括憂鬱、焦慮、激躁、急性混亂、瞻妄及失智症等問題)'].Answer` | `medicalHistoryQuestions.q2c808271.answer` | `item.where(linkId='MedicalHistoryQuestions').item.where(linkId='MedicalHistoryQuestions.q2c808271').item.where(linkId='MedicalHistoryQuestions.q2c808271.Answer')` | 1..1 |
 | `MedicalHistoryQuestions[Question='情緒與行為問題(包括憂鬱、焦慮、激躁、急性混亂、瞻妄及失智症等問題)'].Statement` | `medicalHistoryQuestions.q2c808271.statement` | `item.where(linkId='MedicalHistoryQuestions').item.where(linkId='MedicalHistoryQuestions.q2c808271').item.where(linkId='MedicalHistoryQuestions.q2c808271.Statement')` | 0..1 |
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 藥物安全性評估
 
-來源：規範印刷頁 46–47。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
 | `NurseID` | `nurseID` | `item.where(linkId='NurseID')` | 1..1 |
@@ -215,12 +209,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `DrugInUses.Purpose` | `drugInUses.purpose` | `item.where(linkId='DrugInUses').item.where(linkId='DrugInUses.Purpose')` | 1..1 |
 | `DrugInUses.Remark` | `drugInUses.remark` | `item.where(linkId='DrugInUses').item.where(linkId='DrugInUses.Remark')` | 0..1 |
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 身體評估評估
 
-來源：規範印刷頁 48–55。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
 | `NurseID` | `nurseID` | `item.where(linkId='NurseID')` | 1..1 |
@@ -426,12 +419,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `BodyQuestions[Question='氧氣面罩'].MultipleAnswer` | `bodyQuestions.q6772dc09.multipleAnswer` | `item.where(linkId='BodyQuestions').item.where(linkId='BodyQuestions.q6772dc09').item.where(linkId='BodyQuestions.q6772dc09.MultipleAnswer')` | 0..1 |
 | `BodyQuestions[Question='氧氣面罩'].Other` | `bodyQuestions.q6772dc09.other` | `item.where(linkId='BodyQuestions').item.where(linkId='BodyQuestions.q6772dc09').item.where(linkId='BodyQuestions.q6772dc09.Other')` | 0..1 |
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 壓力性損傷危險評估
 
-來源：規範印刷頁 55–56。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
 | `NurseID` | `nurseID` | `item.where(linkId='NurseID')` | 1..1 |
@@ -449,12 +441,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `Questions[Question='摩擦力/剪力']` | `questions.q52107185` | `item.where(linkId='Questions').item.where(linkId='Questions.q52107185')` | 1..1 |
 | `Questions[Question='摩擦力/剪力'].Answer` | `questions.q52107185.answer` | `item.where(linkId='Questions').item.where(linkId='Questions.q52107185').item.where(linkId='Questions.q52107185.Answer')` | 1..1 |
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 跌倒危險性評估
 
-來源：規範印刷頁 57–58。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
 | `NurseID` | `nurseID` | `item.where(linkId='NurseID')` | 1..1 |
@@ -492,12 +483,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `Questions[Question='使用藥物'].Options` | `questions.qe6e35ded.options` | `item.where(linkId='Questions').item.where(linkId='Questions.qe6e35ded').item.where(linkId='Questions.qe6e35ded.Options')` | 0..1 |
 | `Questions[Question='使用藥物'].Other` | `questions.qe6e35ded.other` | `item.where(linkId='Questions').item.where(linkId='Questions.qe6e35ded').item.where(linkId='Questions.qe6e35ded.Other')` | 0..1 |
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 日常生活功能評估
 
-來源：規範印刷頁 59–60。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
 | `NurseID` | `nurseID` | `item.where(linkId='NurseID')` | 1..1 |
@@ -523,12 +513,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `Questions[Question='小便']` | `questions.q13cca4d4` | `item.where(linkId='Questions').item.where(linkId='Questions.q13cca4d4')` | 1..1 |
 | `Questions[Question='小便'].Answer` | `questions.q13cca4d4.answer` | `item.where(linkId='Questions').item.where(linkId='Questions.q13cca4d4').item.where(linkId='Questions.q13cca4d4.Answer')` | 1..1 |
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 工具性日常生活活動功能評估
 
-來源：規範印刷頁 61–62。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
 | `NurseID` | `nurseID` | `item.where(linkId='NurseID')` | 1..1 |
@@ -550,12 +539,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `Questions[Question='服藥']` | `questions.q62f790cc` | `item.where(linkId='Questions').item.where(linkId='Questions.q62f790cc')` | 1..1 |
 | `Questions[Question='服藥'].Answer` | `questions.q62f790cc.answer` | `item.where(linkId='Questions').item.where(linkId='Questions.q62f790cc').item.where(linkId='Questions.q62f790cc.Answer')` | 1..1 |
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 認知功能評估
 
-來源：規範印刷頁 63–64。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
 | `NurseID` | `nurseID` | `item.where(linkId='NurseID')` | 1..1 |
@@ -584,12 +572,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `Questions[Question='從20 減3 開始算，一直減3 減下去。']` | `questions.q295d5a12` | `item.where(linkId='Questions').item.where(linkId='Questions.q295d5a12')` | 0..1 |
 | `Questions[Question='從20 減3 開始算，一直減3 減下去。'].Answer` | `questions.q295d5a12.answer` | `item.where(linkId='Questions').item.where(linkId='Questions.q295d5a12').item.where(linkId='Questions.q295d5a12.Answer')` | 1..1 |
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 情緒問題評估
 
-來源：規範印刷頁 65–66。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
 | `NurseID` | `nurseID` | `item.where(linkId='NurseID')` | 1..1 |
@@ -606,12 +593,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `Questions[Question='您是否感覺活得很沒有價值？']` | `questions.q14debc58` | `item.where(linkId='Questions').item.where(linkId='Questions.q14debc58')` | 0..1 |
 | `Questions[Question='您是否感覺活得很沒有價值？'].Answer` | `questions.q14debc58.answer` | `item.where(linkId='Questions').item.where(linkId='Questions.q14debc58').item.where(linkId='Questions.q14debc58.Answer')` | 1..1 |
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 簡易營養評估
 
-來源：規範印刷頁 66–67。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
 | `NurseID` | `nurseID` | `item.where(linkId='NurseID')` | 1..1 |
@@ -631,12 +617,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `Questions[Question='若BMI 無法取得，用小腿圍或臂中圍代替(公分)']` | `questions.qd38a556c` | `item.where(linkId='Questions').item.where(linkId='Questions.qd38a556c')` | 1..1 |
 | `Questions[Question='若BMI 無法取得，用小腿圍或臂中圍代替(公分)'].Answer` | `questions.qd38a556c.answer` | `item.where(linkId='Questions').item.where(linkId='Questions.qd38a556c').item.where(linkId='Questions.qd38a556c.Answer')` | 1..1 |
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 疼痛評估
 
-來源：規範印刷頁 67–69。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
 | `NurseID` | `nurseID` | `item.where(linkId='NurseID')` | 1..1 |
@@ -665,12 +650,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `QuestionsNot[Question='可安撫程度']` | `questionsNot.q9f3bcfc5` | `item.where(linkId='QuestionsNot').item.where(linkId='QuestionsNot.q9f3bcfc5')` | 0..1 |
 | `QuestionsNot[Question='可安撫程度'].Answer` | `questionsNot.q9f3bcfc5.answer` | `item.where(linkId='QuestionsNot').item.where(linkId='QuestionsNot.q9f3bcfc5').item.where(linkId='QuestionsNot.q9f3bcfc5.Answer')` | 1..1 |
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 衰弱評估
 
-來源：規範印刷頁 69–70。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
 | `NurseID` | `nurseID` | `item.where(linkId='NurseID')` | 1..1 |
@@ -683,12 +667,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `Questions[Question='活力降低']` | `questions.qc604ec89` | `item.where(linkId='Questions').item.where(linkId='Questions.qc604ec89')` | 0..1 |
 | `Questions[Question='活力降低'].Answer` | `questions.qc604ec89.answer` | `item.where(linkId='Questions').item.where(linkId='Questions.qc604ec89').item.where(linkId='Questions.qc604ec89.Answer')` | 1..1 |
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 需求摘要
 
-來源：規範印刷頁 71–74。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `CaseID` | `caseID` | `item.where(linkId='CaseID')` | 1..1 |
 | `EndDate` | `endDate` | `item.where(linkId='EndDate')` | 1..1 |
@@ -698,12 +681,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `Summary.QuestionType` | `summary.questionType` | `item.where(linkId='Summary').item.where(linkId='Summary.QuestionType')` | 1..1 |
 | `Summary.Question` | `summary.question` | `item.where(linkId='Summary').item.where(linkId='Summary.Question')` | 1..1 |
 | `Summary.Answer` | `summary.answer` | `item.where(linkId='Summary').item.where(linkId='Summary.Answer')` | 1..1 |
+{: .grid .rwd-table}
 
 ### 照護計畫目標
 
-來源：規範印刷頁 75–79。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `CaseID` | `caseID` | `item.where(linkId='CaseID')` | 1..1 |
 | `EndDate` | `endDate` | `item.where(linkId='EndDate')` | 1..1 |
@@ -716,12 +698,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `EstimatedDate` | `estimatedDate` | `item.where(linkId='EstimatedDate')` | 1..1 |
 | `IsMainTarget` | `isMainTarget` | `item.where(linkId='IsMainTarget')` | 1..1 |
 | `NurseID` | `nurseID` | `item.where(linkId='NurseID')` | 1..1 |
+{: .grid .rwd-table}
 
 ### 照護計畫措施
 
-來源：規範印刷頁 79。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `CaseID` | `caseID` | `item.where(linkId='CaseID')` | 1..1 |
 | `EndDate` | `endDate` | `item.where(linkId='EndDate')` | 1..1 |
@@ -735,12 +716,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `MeasureStopDate` | `measureStopDate` | `item.where(linkId='MeasureStopDate')` | 0..1 |
 | `MeasureStopContent` | `measureStopContent` | `item.where(linkId='MeasureStopContent')` | 0..1 |
 | `MeasureStopNurseID` | `measureStopNurseID` | `item.where(linkId='MeasureStopNurseID')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 照護計畫評值紀錄
 
-來源：規範印刷頁 79–80。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `CaseID` | `caseID` | `item.where(linkId='CaseID')` | 1..1 |
 | `EndDate` | `endDate` | `item.where(linkId='EndDate')` | 1..1 |
@@ -751,12 +731,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `EvaluationDate` | `evaluationDate` | `item.where(linkId='EvaluationDate')` | 1..1 |
 | `EvaluationContent` | `evaluationContent` | `item.where(linkId='EvaluationContent')` | 1..1 |
 | `NurseID` | `nurseID` | `item.where(linkId='NurseID')` | 1..1 |
+{: .grid .rwd-table}
 
 ### 照護紀錄
 
-來源：規範印刷頁 81–121。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `CaseID` | `caseID` | `item.where(linkId='CaseID')` | 1..1 |
 | `EndDate` | `endDate` | `item.where(linkId='EndDate')` | 1..1 |
@@ -849,12 +828,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `FJM.Statement` | `fJM.statement` | `item.where(linkId='FJM').item.where(linkId='FJM.Statement')` | 1..1 |
 | `Statement` | `statement` | `item.where(linkId='Statement')` | 1..1 |
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 共照紀錄
 
-來源：規範印刷頁 122–125。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `CaseID` | `caseID` | `item.where(linkId='CaseID')` | 1..1 |
 | `EndDate` | `endDate` | `item.where(linkId='EndDate')` | 1..1 |
@@ -866,12 +844,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `Title.Value` | `title.value` | `item.where(linkId='Title').item.where(linkId='Title.Value')` | 1..1 |
 | `Title.Other` | `title.other` | `item.where(linkId='Title').item.where(linkId='Title.Other')` | 0..1 |
 | `Statement` | `statement` | `item.where(linkId='Statement')` | 1..1 |
+{: .grid .rwd-table}
 
 ### 人員緊急事件
 
-來源：規範印刷頁 126–129。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `Title` | `title` | `item.where(linkId='Title')` | 1..1 |
 | `Title.Value` | `title.value` | `item.where(linkId='Title').item.where(linkId='Title.Value')` | 1..1 |
@@ -888,12 +865,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `Process` | `process` | `item.where(linkId='Process')` | 1..1 |
 | `Report` | `report` | `item.where(linkId='Report')` | 1..1 |
 | `CreateID` | `createID` | `item.where(linkId='CreateID')` | 1..1 |
+{: .grid .rwd-table}
 
 ### 個案結案
 
-來源：規範印刷頁 130–132。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `CaseID` | `caseID` | `item.where(linkId='CaseID')` | 1..1 |
 | `EndDate` | `endDate` | `item.where(linkId='EndDate')` | 1..1 |
@@ -902,12 +878,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `Reason` | `reason` | `item.where(linkId='Reason')` | 1..1 |
 | `Reason.Value` | `reason.value` | `item.where(linkId='Reason').item.where(linkId='Reason.Value')` | 1..1 |
 | `Reason.Other` | `reason.other` | `item.where(linkId='Reason').item.where(linkId='Reason.Other')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 照護計畫結案
 
-來源：規範印刷頁 133–135。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `CaseID` | `caseID` | `item.where(linkId='CaseID')` | 1..1 |
 | `EndDate` | `endDate` | `item.where(linkId='EndDate')` | 1..1 |
@@ -918,12 +893,11 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `TargetCreateDate` | `targetCreateDate` | `item.where(linkId='TargetCreateDate')` | 1..1 |
 | `CloseDate` | `closeDate` | `item.where(linkId='CloseDate')` | 0..1 |
 | `CloseID` | `closeID` | `item.where(linkId='CloseID')` | 0..1 |
+{: .grid .rwd-table}
 
 ### 生命徵象
 
-來源：規範印刷頁 136–138。
-
-| 來源欄位／題目 | Logical Model 元素 | FHIR 表單元素 | 必填／重複 |
+| 來源欄位 | Logical Model 元素 | FHIR 表單元素 | 基數 |
 | --- | --- | --- | --- |
 | `CaseID` | `caseID` | `item.where(linkId='CaseID')` | 1..1 |
 | `EndDate` | `endDate` | `item.where(linkId='EndDate')` | 1..1 |
@@ -937,3 +911,4 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `BloodGlucose` | `bloodGlucose` | `item.where(linkId='BloodGlucose')` | 0..1 |
 | `BloodOxygen` | `bloodOxygen` | `item.where(linkId='BloodOxygen')` | 0..1 |
 | `CreateID` | `createID` | `item.where(linkId='CreateID')` | 1..1 |
+{: .grid .rwd-table}

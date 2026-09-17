@@ -263,7 +263,7 @@ for name, title, pages in SCHEMA['apis']:
     elif name == 'GetLogByTicket':lines += ['* ticket 1..1 string "追蹤碼" "填入八位數字，保留前導零。"', '* ticket ^maxLength = 8']
     else:lines.append(f'* dataList 1..* HN{name}Model "上傳資料" "逐筆填入本次上傳的資料。"')
     write(f'input/fsh/profiles/logical-models/home-nursing/logical_api_{name.lower()}.fsh', lines)
-write('input/pagecontent/topics/home-nursing-mapping.md', ['本頁列出居家護理 V5.0.16 來源欄位、邏輯模型與 FHIR 表單的逐欄對應。', '', '評估題目以穩定識別碼建模；原始題目文字由對應欄保留。陣列中的各筆物件使用重複 group item；多選答案使用重複 answer。來源的空白或 null 答案以保留 item、省略 answer 表達。', '', 'FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明轉回字串及日期格式。', ''] + [line for form in FORMS for line in form['_docs'] + ['']])
+write('input/pagecontent/topics/home-nursing-mapping.md', ['本頁列出居家護理 V5.0.16 來源欄位、邏輯模型與 FHIR 表單的逐欄對應。', '', '評估題目以穩定識別碼建模；原始題目文字由對應欄保留。陣列中的各筆物件使用重複 group item；多選答案使用重複 answer。來源的空白或 null 答案以保留 item、省略 answer 表達。', '', 'FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明轉回字串及日期格式。', ''] + [line for form in FORMS for line in form['_docs'] + ['{: .grid .rwd-table}', '']][:-1])
 for path, content in OUTPUT.items():
     dest = ROOT / path
     dest.parent.mkdir(parents=True, exist_ok=True)

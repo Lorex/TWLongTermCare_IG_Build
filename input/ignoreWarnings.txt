@@ -75,3 +75,41 @@ Best Practice Recommendation: In general, all observations should have a perform
 # Validator 提醒目前 TW Core IG 已經更新到 1.0.0，此提示訊息不影響實作與實際代碼驗證。
 The ImplementationGuide uses package tw.gov.mohw.twcore#0.3.2 released on 2024-12-12, but the most recent appropriate version is 1.0.0. This reference is getting old and the more recent version should be considered
 
+# STU 1.1.0 QA：以下六套本地術語仍在草稿階段，範例刻意引用同版術語。
+# 僅排除這些 canonical 在 1.1.0 的草稿狀態提示；保留代碼、值集與 display 驗證。
+Reference to draft CodeSystem http://ltc-ig.fhir.tw/CodeSystem/hn-answer|1.1.0
+Reference to draft CodeSystem http://ltc-ig.fhir.tw/CodeSystem/hn-workflow|1.1.0
+Reference to draft CodeSystem http://ltc-ig.fhir.tw/CodeSystem/hah-activity|1.1.0
+Reference to draft CodeSystem http://ltc-ig.fhir.tw/CodeSystem/hah-document|1.1.0
+Reference to draft CodeSystem http://ltc-ig.fhir.tw/CodeSystem/hah-outcome|1.1.0
+Reference to draft CodeSystem http://ltc-ig.fhir.tw/CodeSystem/hah-eligibility|1.1.0
+
+# 以下 Observation 使用既有 Profile 指定的 SNOMED CT 或本地量測／傷口代碼。
+# R4 observation-codes 為 preferred 綁定，允許其他代碼；未確認等義前不新增 LOINC 對照。
+# 逐一限定完整訊息與代碼，不排除其他欄位、值集或代碼的綁定問題。
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport#BodyAge)
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport#BodyCellMass)
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport#ECW)
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport#ECWRatio)
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport#ICW)
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport#Mineral)
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport#ObesityDegree)
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport#Protein)
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport#SLM)
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport#SMI)
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport#SMM)
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport#VFI)
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://ltc-ig.fhir.tw/CodeSystem/TempCodeCS-Sport#WHR)
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://ltc-ig.fhir.tw/CodeSystem/hn-workflow#wound)
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://snomed.info/sct#165109007)
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://snomed.info/sct#298302000)
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://snomed.info/sct#363837002)
+
+# Consent.policy.uri 是外部政策文件 URI，不是需要收進文件 Bundle 的 Resource Reference。
+# 僅排除此合成政策網址的 Bundle 尋址提示；臨床 sourceReference 仍指向已收錄的附件。
+Can't find 'https://example.org/policies/hah-care-consent' in the bundle (Bundle.entry[29].resource.policy[0].uri)
+
+# 下列 5.3.0 Extension 由 FHIR R4／TW Core 繼承的 snapshot 帶入。
+# 此 IG 仍使用 R4，不刪除上層最大值集或 regex 限制；僅排除指定版本的淘汰提示。
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
+The extension http://hl7.org/fhir/StructureDefinition/regex|5.3.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'

@@ -2,7 +2,7 @@ Profile: HAHAssessmentResponse
 Parent: LTCQuestionnaireResponse
 Id: HAHAssessmentResponse
 Title: "在宅急症－收案評估回覆"
-Description: "記錄評估依據、居家環境、照顧者支援與收案建議。此為本 IG 的交換表單，不宣稱為健保署官方收案表。"
+Description: "記錄評估依據、居家環境、照顧者支援與收案建議。"
 * ^status = #draft
 * questionnaire 1..1 MS
 * questionnaire = "http://ltc-ig.fhir.tw/Questionnaire/hah-intake-assessment|1.1.0"
@@ -54,7 +54,7 @@ Instance: hah-intake-assessment
 InstanceOf: LTCQuestionnaire
 Usage: #definition
 Title: "在宅急症收案評估問卷"
-Description: "本 IG 定義的收案資料交換表單；正式計畫條件須依實際採用的版本評估。"
+Description: "記錄收案評估所依據的計畫名稱與版本、居家環境、照顧者支援、收案建議及原因。"
 * url = "http://ltc-ig.fhir.tw/Questionnaire/hah-intake-assessment"
 * version = "1.1.0"
 * name = "HAHIntakeAssessment"
