@@ -116,9 +116,34 @@
   <li><strong><a href="downloads.html">結構定義與範例檔下載</a></strong>：實作者若不偏好使用 FHIR RESTful API 驗證資料是否遵從 Profiles，可直接下載所需的格式驗證檔，包括 XML、JSON 及 Turtle 三種格式，亦可於此下載完整範例。</li>
   <li><strong><a href="security.html">安全性</a></strong>：主要說明採用 TW LTC IG 網站進行實作時，有關資料存取授權的作法。</li>
   <li><strong><a href="validates.html">驗證教學</a></strong>：如何驗證實作檔是否遵從 TW LTC IG 規範。</li>
-  <li><strong><a href="connectathon.html">
-    2025 專案聯測松</a></strong>：本規範與 2025 專案聯測松的賽道整合資訊。</li>
-  <li><strong><a href="connectathon-result.html">聯測松結果</a></strong>：2025 專案聯測松的驗證結果。</li>
+  <li><strong>專案聯測</strong>：聯測專區依年度提供活動說明與驗證結果。
+    <ul>
+      <li><strong>2025 專案聯測</strong>
+        <ul>
+          <li><a href="2025-connectathon.html">聯測說明</a>：活動說明與賽道整合資訊。</li>
+          <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+          <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+          <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+          <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+          <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+          <li><a href="2025-connectathon-result.html">聯測結果</a>：聯測驗證結果。</li>
+        </ul>
+      </li>
+      <li><strong>2026 專案聯測</strong>
+        <ul>
+          <li><a href="2026-connectathon.html">聯測說明</a>：涵蓋長照跨場域共通資料層建立與查讀、居家護理四大情境資料管理、服務費用申報審核及在宅急症三段臨床流程等業務情境。</li>
+          <li><a href="2026-connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="2026-track0.html">賽道 0：OAuth2 存取認證</a></li>
+          <li><a href="2026-track1.html">賽道 1：長照共通資料交換</a></li>
+          <li><a href="2026-track2.html">賽道 2：居家照護資料交換</a></li>
+          <li><a href="2026-track3.html">賽道 3：長照服務費用支付審核</a></li>
+          <li><a href="2026-track4.html">賽道 4：在宅急症照護資料交換</a></li>
+          <li><a href="2026-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
   <!-- <li><strong><a href="https://twcore.mohw.gov.tw/ig/twcore/history.html">版本異動</a></strong>：若 TW LTC IG 網站的版本有所異動，皆可透過<a href="https://twcore.mohw.gov.tw/ig/twcore/history.html">異動說明頁</a>得以瞭解版本間的異動差異。</li> -->
 </ul>
 </div>
