@@ -41,8 +41,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"12"}
-    h3,h4,h5,h6{--heading-prefix:"12"}</style>
+    <style type="text/css">h2{--heading-prefix:"20"}
+    h3,h4,h5,h6{--heading-prefix:"20"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -122,23 +122,59 @@
   <li><a href="security.html">安全性</a></li>
   <li><a href="validates.html">驗證教學</a></li>
   <li class="dropdown">
-    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <a href="#">專案聯測<b class="caret"></b></a>
     <ul class="dropdown-menu">
-      <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
-      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
-      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
-      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
-      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
-      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+      <li class="dropdown-submenu">
+        <a href="2025-connectathon.html">2025 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2025-connectathon.html">聯測說明</a></li>
+          <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+          <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+          <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+          <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+          <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+          <li><a href="2025-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="2026-connectathon.html">2026 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2026-connectathon.html">聯測說明</a></li>
+          <li><a href="2026-connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="2026-track0.html">共通前置：OAuth2 存取認證</a></li>
+          <li><a href="2026-track1.html">賽道 1：長照共通資料交換</a></li>
+          <li><a href="2026-track2.html">賽道 2：居家照護資料交換</a></li>
+          <li><a href="2026-track3.html">賽道 3：長照服務費用支付審核</a></li>
+          <li><a href="2026-track4.html">賽道 4：在宅急症照護資料交換</a></li>
+          <li><a href="2026-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li><a href="connectathon-result.html">聯測松結果</a></li>
   <!-- <li><a href="history.html">版本歷程</a></li> -->
 </ul>      
 
 <style>
-.dropdown-menu li:hover .sub-menu {visibility: visible;}
-.dropdown:hover .dropdown-menu {display: block;}
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {display: block;}
+.dropdown-submenu {position: relative;}
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  top: 0;
+  left: 100%;
+  margin-top: 0;
+}
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus-within > .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 767px) {
+  .dropdown-submenu > .dropdown-menu {
+    position: static;
+    float: none;
+    margin-left: 15px;
+  }
+}
 
 @media only screen and (max-width: 992px) {
   table.colsi {
@@ -243,21 +279,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <p>本頁列出居家護理 V5.0.16 來源欄位、邏輯模型與 FHIR 表單的逐欄對應。</p>
 
-<p>評估題目以穩定識別碼建模；原始題目文字由對應欄保留。陣列中的各筆物件使用重複 group item；多選答案使用重複 answer。來源的空白或 null 答案以保留 item、省略 answer 表達。</p>
-
-<p>FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明轉回字串及日期格式。</p>
-
 <h3 id="個案基本資料">個案基本資料</h3>
 
 <p>來源：規範印刷頁 1–13。</p>
 
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -770,15 +802,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="健康紀錄評估">健康紀錄評估</h3>
 
-<p>來源：規範印刷頁 43–44。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -925,15 +955,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="疾病史評估">疾病史評估</h3>
 
-<p>來源：規範印刷頁 44–46。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -1230,15 +1258,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="藥物安全性評估">藥物安全性評估</h3>
 
-<p>來源：規範印刷頁 46–47。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -1421,15 +1447,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="身體評估評估">身體評估評估</h3>
 
-<p>來源：規範印刷頁 48–55。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -2662,15 +2686,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="壓力性損傷危險評估">壓力性損傷危險評估</h3>
 
-<p>來源：規範印刷頁 55–56。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -2775,15 +2797,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="跌倒危險性評估">跌倒危險性評估</h3>
 
-<p>來源：規範印刷頁 57–58。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -3008,15 +3028,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="日常生活功能評估">日常生活功能評估</h3>
 
-<p>來源：規範印刷頁 59–60。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -3169,15 +3187,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="工具性日常生活活動功能評估">工具性日常生活活動功能評估</h3>
 
-<p>來源：規範印刷頁 61–62。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -3306,15 +3322,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="認知功能評估">認知功能評估</h3>
 
-<p>來源：規範印刷頁 63–64。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -3485,15 +3499,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="情緒問題評估">情緒問題評估</h3>
 
-<p>來源：規範印刷頁 65–66。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -3592,15 +3604,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="簡易營養評估">簡易營養評估</h3>
 
-<p>來源：規範印刷頁 66–67。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -3717,15 +3727,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="疼痛評估">疼痛評估</h3>
 
-<p>來源：規範印刷頁 67–69。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -3896,15 +3904,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="衰弱評估">衰弱評估</h3>
 
-<p>來源：規範印刷頁 69–70。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -3979,15 +3985,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="需求摘要">需求摘要</h3>
 
-<p>來源：規範印刷頁 71–74。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -4044,15 +4048,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="照護計畫目標">照護計畫目標</h3>
 
-<p>來源：規範印刷頁 75–79。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -4127,15 +4129,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="照護計畫措施">照護計畫措施</h3>
 
-<p>來源：規範印刷頁 79。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -4216,15 +4216,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="照護計畫評值紀錄">照護計畫評值紀錄</h3>
 
-<p>來源：規範印刷頁 79–80。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -4287,15 +4285,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="照護紀錄">照護紀錄</h3>
 
-<p>來源：規範印刷頁 81–121。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -4850,15 +4846,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="共照紀錄">共照紀錄</h3>
 
-<p>來源：規範印刷頁 122–125。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -4927,15 +4921,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="人員緊急事件">人員緊急事件</h3>
 
-<p>來源：規範印刷頁 126–129。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -5034,15 +5026,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="個案結案">個案結案</h3>
 
-<p>來源：規範印刷頁 130–132。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -5093,15 +5083,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="照護計畫結案">照護計畫結案</h3>
 
-<p>來源：規範印刷頁 133–135。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -5164,15 +5152,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="生命徵象">生命徵象</h3>
 
-<p>來源：規範印刷頁 136–138。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>來源欄位／題目</th>
+      <th>來源欄位</th>
       <th>Logical Model 元素</th>
       <th>FHIR 表單元素</th>
-      <th>必填／重複</th>
+      <th>基數</th>
     </tr>
   </thead>
   <tbody>
@@ -5270,7 +5256,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 17, 2026 17:33+0800">2026-09-17</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 29, 2026 04:34+0800">2026-09-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

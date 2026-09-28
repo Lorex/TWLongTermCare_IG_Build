@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hn-vs-b63e1293c409 | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNAnswerVSb63e1293c409 |
+| Draft as of 2026-09-29 | *Computable Name*:HNAnswerVSb63e1293c409 |
 | *Other Identifiers:*OID:2.25.305320348493893048765794526338358558194 | |
 
  
@@ -58,7 +58,7 @@
   "title" : "居家護理－主要醫療決定者關係選項",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

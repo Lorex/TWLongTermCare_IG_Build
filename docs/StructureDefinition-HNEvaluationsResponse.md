@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNEvaluationsResponse | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNEvaluationsResponse |
+| Draft as of 2026-09-29 | *Computable Name*:HNEvaluationsResponse |
 
  
 記錄照護計畫評值紀錄的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-HNEvaluationsRespons
   "name" : "HNEvaluationsResponse",
   "title" : "居家護理－照護計畫評值紀錄表單",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/AA12Model | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:AA12Model |
+| Active as of 2026-09-29 | *Computable Name*:AA12Model |
 
  
 此邏輯模型以衛生福利部 AA12 長期照護醫師意見書為基礎，用以描述醫師意見書的資料結構與欄位準備指引。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-AA12Model.csv), [Exc
   "name" : "AA12Model",
   "title" : "長期照護醫師意見書 (AA12) 邏輯模型",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

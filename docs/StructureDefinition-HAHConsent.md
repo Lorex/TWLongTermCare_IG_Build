@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHConsent | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHConsent |
+| Draft as of 2026-09-29 | *Computable Name*:HAHConsent |
 
  
-記錄照護同意的狀態、範圍、時間及來源文件。此資源不取代可執行的醫囑，也不以一般同意代替 DNR 決定。 
+記錄照護同意的狀態、範圍、時間及來源文件。 
 
 **Usages:**
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHConsent.csv), [Ex
   "name" : "HAHConsent",
   "title" : "在宅急症－照護同意",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHConsent.csv), [Ex
       "value" : "https://www.ida.gov.tw/"
     }]
   }],
-  "description" : "記錄照護同意的狀態、範圍、時間及來源文件。此資源不取代可執行的醫囑，也不以一般同意代替 DNR 決定。",
+  "description" : "記錄照護同意的狀態、範圍、時間及來源文件。",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "workflow",
@@ -186,6 +186,14 @@ Other representations of profile: [CSV](StructureDefinition-HAHConsent.csv), [Ex
       "id" : "Consent.provision.period",
       "path" : "Consent.provision.period",
       "mustSupport" : true
+    },
+    {
+      "id" : "Consent.provision.purpose",
+      "path" : "Consent.provision.purpose",
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "http://terminology.hl7.org/ValueSet/v3-PurposeOfUse|3.1.0"
+      }
     }]
   }
 }

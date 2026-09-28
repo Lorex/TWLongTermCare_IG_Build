@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNStaffEgyModel | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNStaffEgyModel |
+| Draft as of 2026-09-29 | *Computable Name*:HNStaffEgyModel |
 
  
 描述居家護理人員緊急事件的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-HNStaffEgyModel.csv)
   "name" : "HNStaffEgyModel",
   "title" : "居家護理－人員緊急事件邏輯模型",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

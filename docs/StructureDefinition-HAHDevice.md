@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHDevice | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHDevice |
+| Draft as of 2026-09-29 | *Computable Name*:HAHDevice |
 
  
-記錄居家量測設備的識別與類型。一般設備編號使用 identifier；只有正式 UDI 才填入 udiCarrier。 
+記錄居家量測設備的識別與類型。identifier 記錄設備編號，udiCarrier 記錄 UDI。 
 
 **Usages:**
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHDevice.csv), [Exc
   "name" : "HAHDevice",
   "title" : "在宅急症－量測設備",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHDevice.csv), [Exc
       "value" : "https://www.ida.gov.tw/"
     }]
   }],
-  "description" : "記錄居家量測設備的識別與類型。一般設備編號使用 identifier；只有正式 UDI 才填入 udiCarrier。",
+  "description" : "記錄居家量測設備的識別與類型。identifier 記錄設備編號，udiCarrier 記錄 UDI。",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "rim",

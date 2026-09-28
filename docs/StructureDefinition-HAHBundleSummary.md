@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHBundleSummary | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHBundleSummary |
+| Draft as of 2026-09-29 | *Computable Name*:HAHBundleSummary |
 
  
 以文件 Bundle 交換結案或轉銜摘要。第一筆為 Composition，並包含個案、療程、整段照護及所有文件內參照的資源。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHBundleSummary.csv
   "name" : "HAHBundleSummary",
   "title" : "在宅急症－摘要文件 Bundle",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

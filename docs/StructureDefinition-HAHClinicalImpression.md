@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHClinicalImpression | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHClinicalImpression |
+| Draft as of 2026-09-29 | *Computable Name*:HAHClinicalImpression |
 
  
-記錄評估人員對病情的判斷、發現與摘要。生命徵象、檢驗、已執行處置及費用不應只以 JSON 字串塞入 note。 
+記錄評估人員對病情的判斷、發現與摘要。 
 
 **Usages:**
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHClinicalImpressio
   "name" : "HAHClinicalImpression",
   "title" : "在宅急症－臨床評估",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHClinicalImpressio
       "value" : "https://www.ida.gov.tw/"
     }]
   }],
-  "description" : "記錄評估人員對病情的判斷、發現與摘要。生命徵象、檢驗、已執行處置及費用不應只以 JSON 字串塞入 note。",
+  "description" : "記錄評估人員對病情的判斷、發現與摘要。",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "workflow",
@@ -151,7 +151,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHClinicalImpressio
     {
       "id" : "ClinicalImpression.note",
       "path" : "ClinicalImpression.note",
-      "short" : "必要的補充文字。[結構化檢驗、給藥與處置應以支持資料參照]"
+      "short" : "評估補充說明"
     }]
   }
 }

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNEpisodeOfCare | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:HNEpisodeOfCare |
+| Active as of 2026-09-29 | *Computable Name*:HNEpisodeOfCare |
 
  
 以機構、個案與收案日期識別一次居護收案，結案時記錄結束日期及來源表單。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-HNEpisodeOfCare.csv)
   "name" : "HNEpisodeOfCare",
   "title" : "居家護理－收案歷程",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

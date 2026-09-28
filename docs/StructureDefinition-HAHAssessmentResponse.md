@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHAssessmentResponse | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHAssessmentResponse |
+| Draft as of 2026-09-29 | *Computable Name*:HAHAssessmentResponse |
 
  
-記錄評估依據、居家環境、照顧者支援與收案建議。此為本 IG 的交換表單，不宣稱為健保署官方收案表。 
+記錄評估依據、居家環境、照顧者支援與收案建議。 
 
 **Usages:**
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHAssessmentRespons
   "name" : "HAHAssessmentResponse",
   "title" : "在宅急症－收案評估回覆",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHAssessmentRespons
       "value" : "https://www.ida.gov.tw/"
     }]
   }],
-  "description" : "記錄評估依據、居家環境、照顧者支援與收案建議。此為本 IG 的交換表單，不宣稱為健保署官方收案表。",
+  "description" : "記錄評估依據、居家環境、照顧者支援與收案建議。",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "workflow",

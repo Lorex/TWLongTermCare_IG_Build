@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNGoal | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:HNGoal |
+| Active as of 2026-09-29 | *Computable Name*:HNGoal |
 
  
 沿用長照照顧目標，記錄目標敘述、預期達到日期及是否為主要目標。 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-HNGoal.csv), [Excel]
   "name" : "HNGoal",
   "title" : "居家護理－照護目標",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

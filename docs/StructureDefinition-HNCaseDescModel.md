@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNCaseDescModel | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNCaseDescModel |
+| Draft as of 2026-09-29 | *Computable Name*:HNCaseDescModel |
 
  
 描述居家護理共照紀錄的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-HNCaseDescModel.csv)
   "name" : "HNCaseDescModel",
   "title" : "居家護理－共照紀錄邏輯模型",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNCommunication | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:HNCommunication |
+| Active as of 2026-09-29 | *Computable Name*:HNCommunication |
 
  
 記錄共照人員提供的照護紀錄。沿用既有服務活動 Communication，新增收案與來源表單關聯。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-HNCommunication.csv)
   "name" : "HNCommunication",
   "title" : "居家護理－共照紀錄",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

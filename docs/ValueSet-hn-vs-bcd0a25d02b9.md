@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hn-vs-bcd0a25d02b9 | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNAnswerVSbcd0a25d02b9 |
+| Draft as of 2026-09-29 | *Computable Name*:HNAnswerVSbcd0a25d02b9 |
 | *Other Identifiers:*OID:2.25.227030127964254592522523904430611787640 | |
 
  
@@ -58,7 +58,7 @@
   "title" : "居家護理－摩擦力/剪力選項",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

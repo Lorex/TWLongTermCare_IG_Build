@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHPatient | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHPatient |
+| Draft as of 2026-09-29 | *Computable Name*:HAHPatient |
 
  
 正式收案個案的身分與聯絡資料。沿用長照個案識別、地址與緊急聯絡人；收案狀態另記錄於 EpisodeOfCare。 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHPatient.csv), [Ex
   "name" : "HAHPatient",
   "title" : "在宅急症－個案",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -88,7 +88,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHPatient.csv), [Ex
     "element" : [{
       "id" : "Patient.active",
       "path" : "Patient.active",
-      "short" : "個案主檔是否仍使用。[不可直接作為本次療程的結案旗標]"
+      "short" : "個案主檔是否仍使用"
     },
     {
       "id" : "Patient.deceased[x]",

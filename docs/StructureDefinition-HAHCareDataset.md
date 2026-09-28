@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHCareDataset | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHCareDataset |
+| Draft as of 2026-09-29 | *Computable Name*:HAHCareDataset |
 
  
 依在宅急症系統盤點建立的資料交換模型，涵蓋正式收案、訪視、照護、檢驗、給藥與轉銜。新增的臨床結構不代表來源系統已實作；來源差異見專用對照表。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHCareDataset.csv),
   "name" : "HAHCareDataset",
   "title" : "在宅急症－照護資料集",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

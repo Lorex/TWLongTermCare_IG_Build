@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleFeeAuditResponse | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:LTCBundleFeeAuditResponse |
+| Draft as of 2026-09-29 | *Computable Name*:LTCBundleFeeAuditResponse |
 
  
 此 Bundle 以衛生福利部支付審核系統的分案審核明細查詢結果為基礎，用以表述單一核銷案號的審核明細回覆結構。 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCBundleFeeAuditRes
   "name" : "LTCBundleFeeAuditResponse",
   "title" : "長照支付審查－分案審核明細回覆打包",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

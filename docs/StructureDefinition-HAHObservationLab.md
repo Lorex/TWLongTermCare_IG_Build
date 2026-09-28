@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHObservationLab | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHObservationLab |
+| Draft as of 2026-09-29 | *Computable Name*:HAHObservationLab |
 
  
-一筆檢驗項目一筆結果。保留檢體、方法、單位與參考區間；缺少結果時填 dataAbsentReason，不填零值代替。 
+一筆檢驗項目一筆結果。保留檢體、方法、單位與參考區間，缺少結果時以 dataAbsentReason 記錄原因。 
 
 **Usages:**
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHObservationLab.cs
   "name" : "HAHObservationLab",
   "title" : "在宅急症－檢驗結果",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHObservationLab.cs
       "value" : "https://www.ida.gov.tw/"
     }]
   }],
-  "description" : "一筆檢驗項目一筆結果。保留檢體、方法、單位與參考區間；缺少結果時填 dataAbsentReason，不填零值代替。",
+  "description" : "一筆檢驗項目一筆結果。保留檢體、方法、單位與參考區間，缺少結果時以 dataAbsentReason 記錄原因。",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "workflow",

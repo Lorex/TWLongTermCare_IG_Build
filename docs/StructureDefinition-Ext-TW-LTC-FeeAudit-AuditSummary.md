@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-FeeAudit-AuditSummary | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:ExtTWLTCFeeAuditAuditSummary |
+| Active as of 2026-09-29 | *Computable Name*:ExtTWLTCFeeAuditAuditSummary |
 
 此 Extension 用於在長照支付審查之分案審核明細（ClaimResponse）中，結構化承載「(查詢B)分案審核明細查詢」回覆明細之分案層級統計值、暫付申請狀態、分案已處理之單號與承辦人員：服務記錄筆數（records）、個案數（cases）、核定個案數（approve_case_num）、核定服務記錄數（approve_record_count）、暫付申請狀態（temp_payment_status）、分案已處理之單號（trans_nos，多筆）與承辦人員（audit_man）。上述欄位於 FHIR R4 之 ClaimResponse 均無語意相符之標準元素，故以本 Extension 承載。
 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-Ext-TW-LTC-FeeAudit-
   "title" : "長照支付審查－分案審核統計與承辦資訊",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

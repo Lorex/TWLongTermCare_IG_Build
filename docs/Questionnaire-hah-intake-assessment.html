@@ -41,8 +41,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"25.51"}
-    h3,h4,h5,h6{--heading-prefix:"25.51"}</style>
+    <style type="text/css">h2{--heading-prefix:"33.51"}
+    h3,h4,h5,h6{--heading-prefix:"33.51"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -122,23 +122,59 @@
   <li><a href="security.html">安全性</a></li>
   <li><a href="validates.html">驗證教學</a></li>
   <li class="dropdown">
-    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <a href="#">專案聯測<b class="caret"></b></a>
     <ul class="dropdown-menu">
-      <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
-      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
-      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
-      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
-      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
-      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+      <li class="dropdown-submenu">
+        <a href="2025-connectathon.html">2025 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2025-connectathon.html">聯測說明</a></li>
+          <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+          <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+          <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+          <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+          <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+          <li><a href="2025-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="2026-connectathon.html">2026 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2026-connectathon.html">聯測說明</a></li>
+          <li><a href="2026-connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="2026-track0.html">共通前置：OAuth2 存取認證</a></li>
+          <li><a href="2026-track1.html">賽道 1：長照共通資料交換</a></li>
+          <li><a href="2026-track2.html">賽道 2：居家照護資料交換</a></li>
+          <li><a href="2026-track3.html">賽道 3：長照服務費用支付審核</a></li>
+          <li><a href="2026-track4.html">賽道 4：在宅急症照護資料交換</a></li>
+          <li><a href="2026-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li><a href="connectathon-result.html">聯測松結果</a></li>
   <!-- <li><a href="history.html">版本歷程</a></li> -->
 </ul>      
 
 <style>
-.dropdown-menu li:hover .sub-menu {visibility: visible;}
-.dropdown:hover .dropdown-menu {display: block;}
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {display: block;}
+.dropdown-submenu {position: relative;}
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  top: 0;
+  left: 100%;
+  margin-top: 0;
+}
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus-within > .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 767px) {
+  .dropdown-submenu > .dropdown-menu {
+    position: static;
+    float: none;
+    margin-left: 15px;
+  }
+}
 
 @media only screen and (max-width: 992px) {
   table.colsi {
@@ -259,7 +295,7 @@
         
           Active
           
-            as of 2026-09-17
+            as of 2026-09-29
           
         
       </td>
@@ -276,7 +312,7 @@
 
 
 <p>
-<p>本 IG 定義的收案資料交換表單；正式計畫條件須依實際採用的版本評估。</p>
+<p>記錄收案評估所依據的計畫名稱與版本、居家環境、照顧者支援、收案建議及原因。</p>
 
 </p>
 
@@ -293,7 +329,7 @@
   
 
 
-  <div data-fhir="generated"><p class="res-header-id"/><a name="hah-intake-assessment"> </a><a name="hchah-intake-assessment"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-LTCQuestionnaire.html">長期照顧－問卷</a></p></div><table border="1" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="qtree=hah-intake-assessment" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 2px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The linkID for the item">LinkID</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Text for the item">Text</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Minimum and Maximum # of times the item can appear in the instance">Cardinality</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The type of the item">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Additional information about the item">Description &amp; Constraints</a><span style="float: right"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_q_root.gif" alt="." style="background-color: white; background-color: inherit" title="QuestionnaireRoot" class="hierarchy"/> HAHIntakeAssessment</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">本 IG 定義的收案資料交換表單；正式計畫條件須依實際採用的版本評估。</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Questionnaire</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://ltc-ig.fhir.tw/Questionnaire/hah-intake-assessment#1.1.0</td></tr>
+  <div data-fhir="generated"><p class="res-header-id"/><a name="hah-intake-assessment"> </a><a name="hchah-intake-assessment"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-LTCQuestionnaire.html">長期照顧－問卷</a></p></div><table border="1" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="qtree=hah-intake-assessment" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 2px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The linkID for the item">LinkID</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Text for the item">Text</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Minimum and Maximum # of times the item can appear in the instance">Cardinality</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The type of the item">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Additional information about the item">Description &amp; Constraints</a><span style="float: right"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_q_root.gif" alt="." style="background-color: white; background-color: inherit" title="QuestionnaireRoot" class="hierarchy"/> HAHIntakeAssessment</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">記錄收案評估所依據的計畫名稱與版本、居家環境、照顧者支援、收案建議及原因。</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Questionnaire</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://ltc-ig.fhir.tw/Questionnaire/hah-intake-assessment#1.1.0</td></tr>
 <tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" id="item.criteria" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="string" class="hierarchy"/> criteria</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">評估依據的計畫名稱與版本</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-string">string</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Value Set: </td></tr>
 <tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" id="item.home-safety" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="." style="background-color: white; background-color: inherit" title="string" class="hierarchy"/> home-safety</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">居家環境與設備可行性</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-string">string</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Value Set: </td></tr>
 <tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ac" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" id="item.caregiver-support" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="string" class="hierarchy"/> caregiver-support</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">照顧者支援與照護能力</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-string">string</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Value Set: </td></tr>
@@ -324,7 +360,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 17, 2026 17:33+0800">2026-09-17</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 29, 2026 04:34+0800">2026-09-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -7,11 +7,7 @@
 
 本頁為在宅急症的專用來源欄位與 FHIR 對照表。
 
-資料來源為 HaH-frontend-mobile `2838819f` 與 HaH-backend `6fbc1c3f` 的程式盤點。來源以檔案及語意標示；沒有正式傳輸欄位的新增結構明確標示為新增。此表不是既有 API 的 JSON Schema。
-
-邏輯模型 cardinality 描述完整交換資料集；個別資料格式、條件與 Reference 型態仍以各 Profile 為準。Quantity、CodeableConcept、Period 等共用型態使用其 FHIR 子欄位，不另複製。
-
-| 模型欄位 | 基數 | 型態 | 內容 | FHIR 對應 | 來源與差異 |
+| | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `patient` | 1..1 | `BackboneElement` | 個案 | `HAHPatient` | patient.js |
 | `patient.identifier` | 1..* | `Identifier` | 個案識別碼 | `Patient.identifier` | patient.js |
@@ -25,7 +21,7 @@
 | `patient.contact.relationship` | 1..1 | `CodeableConcept` | 與個案關係 | `Patient.contact.relationship` | patient.js |
 | `patient.contact.telecom` | 1..* | `ContactPoint` | 聯絡人電話 | `Patient.contact.telecom` | patient.js |
 | `patient.caregiver` | 0..* | `Reference(LTCRelatedPerson)` | 主要照顧者 | `RelatedPerson.patient` | patient.js 的 caregiver；結構化參照為新增 |
-| `patient.deceased` | 0..1 | `dateTime` | 死亡時間 | `Patient.deceasedDateTime` | 新增；不可由結案旗標推定 |
+| `patient.deceased` | 0..1 | `dateTime` | 死亡時間 | `Patient.deceasedDateTime` | 新增死亡時間 |
 | `intake` | 0..1 | `BackboneElement` | 收案評估 | `HAHAssessmentResponse` | 新增結構化表單 |
 | `intake.criteria` | 1..1 | `string` | 計畫名稱與版本 | `QuestionnaireResponse.item[criteria]` | 新增 |
 | `intake.homeSafety` | 1..1 | `string` | 環境與設備可行性 | `QuestionnaireResponse.item[homeSafety]` | 新增 |
@@ -106,7 +102,7 @@
 | `report.result` | 1..* | `Reference(HAHObservationLab)` | 單項結果 | `DiagnosticReport.result` | 連結既有結果 |
 | `report.specimen` | 0..* | `Reference(Specimen)` | 檢體 | `DiagnosticReport.specimen` | 新增 |
 | `report.issued` | 1..1 | `instant` | 報告發布時間 | `DiagnosticReport.issued` | 新增 |
-| `medicationOrder` | 0..* | `BackboneElement` | 給藥處方 | `HAHMedicationRequest` | 新增；送藥畫面不等於處方 |
+| `medicationOrder` | 0..* | `BackboneElement` | 給藥處方 | `HAHMedicationRequest` | 新增結構化處方 |
 | `medicationOrder.medication` | 1..1 | `CodeableConcept` | 藥品 | `MedicationRequest.medicationCodeableConcept 或 medicationReference` | 新增 |
 | `medicationOrder.status` | 1..1 | `code` | 處方狀態 | `MedicationRequest.status` | 新增 |
 | `medicationOrder.intent` | 1..1 | `code` | 處方意圖 | `MedicationRequest.intent` | 新增 |
@@ -132,7 +128,7 @@
 | `procedure.period` | 0..1 | `Period` | 執行期間 | `Procedure.performedPeriod` | 新增；也可用 performedDateTime |
 | `procedure.performer` | 1..* | `Reference(Practitioner or PractitionerRole)` | 執行人員 | `Procedure.performer.actor` | 既有人員 |
 | `procedure.outcome` | 0..1 | `CodeableConcept` | 處置結果 | `Procedure.outcome` | 原評值文字 |
-| `allergy` | 0..* | `BackboneElement` | 過敏資訊 | `HAHAllergyIntolerance` | 原 Condition 過敏旗標不足，新增結構 |
+| `allergy` | 0..* | `BackboneElement` | 過敏資訊 | `HAHAllergyIntolerance` | 原 Condition 過敏旗標；擴充物質、確認狀態及反應 |
 | `allergy.substance` | 1..1 | `CodeableConcept` | 物質或過敏狀態 | `AllergyIntolerance.code` | 新增 |
 | `allergy.verification` | 1..1 | `CodeableConcept` | 確認狀態 | `AllergyIntolerance.verificationStatus` | 新增 |
 | `allergy.manifestation` | 0..* | `CodeableConcept` | 反應表現 | `AllergyIntolerance.reaction.manifestation` | 新增 |
@@ -163,10 +159,6 @@
 | `summary.date` | 1..1 | `dateTime` | 文件時間 | `Composition.date` | 新增 |
 | `summary.followUp` | 1..1 | `string` | 後續照護與待辦 | `Composition.section[followUp].text` | 原交班與轉送資料 |
 | `summary.documentId` | 1..1 | `Identifier` | 文件識別碼 | `Bundle.identifier` | 新增 |
-
-費用、值班津貼、跨區里程、補助審核、地圖排序、視訊房間 token、通知已讀與帳號資料屬行政或系統功能，本版不納入臨床資料集。送藥工作使用 Task；調劑紀錄可引用 TW Core MedicationDispense，但配送完成不代表完成給藥。
-
-部份來源欄位只有自由文字，無法可靠取得處方劑量、過敏物質、採檢時間或給藥期間時，須補蒐集資料；不得由文字猜測後宣稱已符合 Profile。DNR 意願、設備治療設定與風險量表依實際規範交換；本版不制定 DNR 醫囑格式或 NEWS 算法。
 
 [返回在宅急症主題](hah.md)。
 

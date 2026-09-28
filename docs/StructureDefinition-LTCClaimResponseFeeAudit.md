@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCClaimResponseFeeAudit | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:LTCClaimResponseFeeAudit |
+| Draft as of 2026-09-29 | *Computable Name*:LTCClaimResponseFeeAudit |
 
  
 此 ClaimResponse 以衛生福利部支付審核系統的分案審核明細查詢結果為基礎，用以表述一個核銷案號的審核結果。 
@@ -45,7 +45,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCClaimResponseFeeA
   "name" : "LTCClaimResponseFeeAudit",
   "title" : "長照支付審查－分案審核明細",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

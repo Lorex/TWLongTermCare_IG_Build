@@ -41,8 +41,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"25"}
-    h3,h4,h5,h6{--heading-prefix:"25.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"33"}
+    h3,h4,h5,h6{--heading-prefix:"33.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -122,23 +122,59 @@
   <li><a href="security.html">安全性</a></li>
   <li><a href="validates.html">驗證教學</a></li>
   <li class="dropdown">
-    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <a href="#">專案聯測<b class="caret"></b></a>
     <ul class="dropdown-menu">
-      <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
-      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
-      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
-      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
-      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
-      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+      <li class="dropdown-submenu">
+        <a href="2025-connectathon.html">2025 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2025-connectathon.html">聯測說明</a></li>
+          <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+          <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+          <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+          <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+          <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+          <li><a href="2025-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="2026-connectathon.html">2026 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2026-connectathon.html">聯測說明</a></li>
+          <li><a href="2026-connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="2026-track0.html">共通前置：OAuth2 存取認證</a></li>
+          <li><a href="2026-track1.html">賽道 1：長照共通資料交換</a></li>
+          <li><a href="2026-track2.html">賽道 2：居家照護資料交換</a></li>
+          <li><a href="2026-track3.html">賽道 3：長照服務費用支付審核</a></li>
+          <li><a href="2026-track4.html">賽道 4：在宅急症照護資料交換</a></li>
+          <li><a href="2026-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li><a href="connectathon-result.html">聯測松結果</a></li>
   <!-- <li><a href="history.html">版本歷程</a></li> -->
 </ul>      
 
 <style>
-.dropdown-menu li:hover .sub-menu {visibility: visible;}
-.dropdown:hover .dropdown-menu {display: block;}
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {display: block;}
+.dropdown-submenu {position: relative;}
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  top: 0;
+  left: 100%;
+  margin-top: 0;
+}
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus-within > .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 767px) {
+  .dropdown-submenu > .dropdown-menu {
+    position: static;
+    float: none;
+    margin-left: 15px;
+  }
+}
 
 @media only screen and (max-width: 992px) {
   table.colsi {
@@ -717,7 +753,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="Questionnaire/hah-intake-assessment">在宅急症收案評估問卷</a>
             </td>
             <td>
-<p>本 IG 定義的收案資料交換表單；正式計畫條件須依實際採用的版本評估。</p>
+<p>記錄收案評估所依據的計畫名稱與版本、居家環境、照顧者支援、收案建議及原因。</p>
 </td>
          </tr>
          <tr>
@@ -997,7 +1033,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/HAHVisitEncounter">在宅急症－單次訪視</a>
             </td>
             <td>
-<p>每次實地、視訊或電話評估建立一筆訪視，參照整段照護與收案療程。預約或通知不能當成已完成訪視。</p>
+<p>每次實地、視訊或電話評估建立一筆訪視，參照整段照護與收案療程。</p>
 </td>
          </tr>
          <tr>
@@ -1033,7 +1069,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/HAHAssessmentResponse">在宅急症－收案評估回覆</a>
             </td>
             <td>
-<p>記錄評估依據、居家環境、照顧者支援與收案建議。此為本 IG 的交換表單，不宣稱為健保署官方收案表。</p>
+<p>記錄評估依據、居家環境、照顧者支援與收案建議。</p>
 </td>
          </tr>
          <tr>
@@ -1042,7 +1078,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/HAHAdmissionEncounter">在宅急症－整段照護</a>
             </td>
             <td>
-<p>表達本次在宅急症的整段照護，供每次訪視透過 partOf 參照。IMP 表示本資料集的在宅住院照護分類，不代表照護地點在醫院。</p>
+<p>表達本次在宅急症的整段照護，供每次訪視透過 partOf 參照。IMP 表示在宅住院照護分類，location 記錄照護地點。</p>
 </td>
          </tr>
          <tr>
@@ -1051,7 +1087,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/HAHServiceRequest">在宅急症－服務請求</a>
             </td>
             <td>
-<p>沿用長照服務請求，表達照會、檢驗、處置或轉介。項目應使用適切標準代碼，無適切概念時才使用本地分類並補充文字。</p>
+<p>沿用長照服務請求，表達照會、檢驗、處置或轉介。項目應使用標準代碼，無適合的 code 時才使用本地分類並補充文字。</p>
 </td>
          </tr>
          <tr>
@@ -1069,7 +1105,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/HAHObservationLab">在宅急症－檢驗結果</a>
             </td>
             <td>
-<p>一筆檢驗項目一筆結果。保留檢體、方法、單位與參考區間；缺少結果時填 dataAbsentReason，不填零值代替。</p>
+<p>一筆檢驗項目一筆結果。保留檢體、方法、單位與參考區間，缺少結果時以 dataAbsentReason 記錄原因。</p>
 </td>
          </tr>
          <tr>
@@ -1078,7 +1114,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/HAHCommunication">在宅急症－照會與交班</a>
             </td>
             <td>
-<p>沿用服務活動紀錄，交換照會回覆、交班與衛教內容。接收訊息不代表已完成待辦工作。</p>
+<p>沿用服務活動紀錄，交換照會回覆、交班與衛教內容。</p>
 </td>
          </tr>
          <tr>
@@ -1087,7 +1123,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/HAHConsent">在宅急症－照護同意</a>
             </td>
             <td>
-<p>記錄照護同意的狀態、範圍、時間及來源文件。此資源不取代可執行的醫囑，也不以一般同意代替 DNR 決定。</p>
+<p>記錄照護同意的狀態、範圍、時間及來源文件。</p>
 </td>
          </tr>
          <tr>
@@ -1096,7 +1132,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/HAHCareTeam">在宅急症－照護團隊</a>
             </td>
             <td>
-<p>記錄主責及共照人員、機構、角色與參與期間。既有長照團隊不允許機構成員，因此由共同 TW Core 父層衍生。</p>
+<p>記錄主責及共照人員、機構、角色與參與期間。團隊成員包含人員與共照機構。</p>
 </td>
          </tr>
          <tr>
@@ -1105,7 +1141,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/HAHVisitTask">在宅急症－照護工作</a>
             </td>
             <td>
-<p>記錄訪視、送藥等執行工作。因長照任務的 owner 不允許 CareTeam，此處由 FHIR Task 衍生以支援團隊指派。</p>
+<p>記錄訪視、送藥等執行工作。owner 記錄負責執行的人員、機構或照護團隊。</p>
 </td>
          </tr>
          <tr>
@@ -1114,7 +1150,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/HAHGoal">在宅急症－照護目標</a>
             </td>
             <td>
-<p>記錄個案預期達到的結果、期限及評值。照護問題應另記錄於 Condition，不以目標取代問題。</p>
+<p>記錄個案預期達到的結果、期限及評值。照護問題記錄於 Condition。</p>
 </td>
          </tr>
          <tr>
@@ -1141,7 +1177,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/HAHCompositionSummary">在宅急症－結案與轉銜摘要</a>
             </td>
             <td>
-<p>彙整本次療程與接續照護所需的資訊。每個章節均提供可閱讀文字，資料不足時說明未知或未評估，不得推定為無。</p>
+<p>彙整本次療程與接續照護所需的資訊。以療程、問題、過敏、藥物、結果、照護及後續追蹤七個章節提供可閱讀的摘要。</p>
 </td>
          </tr>
          <tr>
@@ -1150,7 +1186,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/HAHMedicationAdministration">在宅急症－給藥與輸注</a>
             </td>
             <td>
-<p>記錄實際給藥時間點或輸注期間。既有長照給藥強制 effectiveDateTime，因此由 FHIR 父層衍生以支援 effectivePeriod 及未給藥。</p>
+<p>記錄實際給藥時間點或輸注期間。effectiveDateTime 記錄單次給藥時間，effectivePeriod 記錄持續輸注期間。</p>
 </td>
          </tr>
          <tr>
@@ -1168,7 +1204,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/HAHClinicalImpression">在宅急症－臨床評估</a>
             </td>
             <td>
-<p>記錄評估人員對病情的判斷、發現與摘要。生命徵象、檢驗、已執行處置及費用不應只以 JSON 字串塞入 note。</p>
+<p>記錄評估人員對病情的判斷、發現與摘要。</p>
 </td>
          </tr>
          <tr>
@@ -1177,7 +1213,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/HAHProcedure">在宅急症－處置紀錄</a>
             </td>
             <td>
-<p>沿用長照照護活動，記錄抽痰、傷口照護或管路更換等實際處置。給藥事件使用 MedicationAdministration。</p>
+<p>沿用長照照護活動，記錄抽痰、傷口照護或管路更換等實際處置。</p>
 </td>
          </tr>
          <tr>
@@ -1195,7 +1231,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/HAHAllergyIntolerance">在宅急症－過敏資訊</a>
             </td>
             <td>
-<p>記錄過敏物質、確認狀態及反應。無紀錄不能推定無過敏；未評估與已確認無過敏應分開表達。</p>
+<p>記錄過敏物質、確認狀態及反應。</p>
 </td>
          </tr>
          <tr>
@@ -1204,7 +1240,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/HAHDevice">在宅急症－量測設備</a>
             </td>
             <td>
-<p>記錄居家量測設備的識別與類型。一般設備編號使用 identifier；只有正式 UDI 才填入 udiCarrier。</p>
+<p>記錄居家量測設備的識別與類型。identifier 記錄設備編號，udiCarrier 記錄 UDI。</p>
 </td>
          </tr>
          <tr>
@@ -5083,6 +5119,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Encounter-hah-encounter.html" title="Encounter/hah-encounter">在宅急症共同就診資料範例</a>
+            </td>
+            <td>
+<p>示範共同就診 Profile 的必要欄位；整段照護與單次訪視另有子 Profile 範例。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="DocumentReference-hah-attachment.html"
                   title="DocumentReference/hah-attachment">在宅急症同意文件附件範例</a>
             </td>
@@ -7342,7 +7386,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 17, 2026 17:33+0800">2026-09-17</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 29, 2026 04:34+0800">2026-09-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

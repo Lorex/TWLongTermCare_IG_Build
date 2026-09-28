@@ -9,7 +9,8 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/hah-eligibility | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHEligibilityCS |
+| Draft as of 2026-09-29 | *Computable Name*:HAHEligibilityCS |
+| *Other Identifiers:*OID:2.25.55635949670226470396102935457099983267 | |
 
  
 評估人員的收案建議；不代表已符合任何特定健保計畫的給付條件。 
@@ -27,12 +28,16 @@
   "resourceType" : "CodeSystem",
   "id" : "hah-eligibility",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/hah-eligibility",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.55635949670226470396102935457099983267"
+  }],
   "version" : "1.1.0",
   "name" : "HAHEligibilityCS",
   "title" : "在宅急症－收案評估結果代碼",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hn-vs-38762eb1c742 | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNAnswerVS38762eb1c742 |
+| Draft as of 2026-09-29 | *Computable Name*:HNAnswerVS38762eb1c742 |
 | *Other Identifiers:*OID:2.25.96562761045375509397463580250518048188 | |
 
  
@@ -58,7 +58,7 @@
   "title" : "居家護理－使用資源多選選項",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

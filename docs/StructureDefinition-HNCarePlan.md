@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNCarePlan | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:HNCarePlan |
+| Active as of 2026-09-29 | *Computable Name*:HNCarePlan |
 
  
 沿用長照照顧計畫，串聯需求摘要、目標、措施與評值表單。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-HNCarePlan.csv), [Ex
   "name" : "HNCarePlan",
   "title" : "居家護理－照護計畫",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

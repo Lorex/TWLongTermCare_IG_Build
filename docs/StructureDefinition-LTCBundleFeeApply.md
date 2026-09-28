@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleFeeApply | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:LTCBundleFeeApply |
+| Draft as of 2026-09-29 | *Computable Name*:LTCBundleFeeApply |
 
  
 此 Bundle 以衛生福利部支付審核系統的服務記錄申報資料為基礎，用以表述一次申報交易的資料打包結構。 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCBundleFeeApply.cs
   "name" : "LTCBundleFeeApply",
   "title" : "長照支付審查－服務記錄申報文件打包",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hn-vs-6380f9a50deb | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNAnswerVS6380f9a50deb |
+| Draft as of 2026-09-29 | *Computable Name*:HNAnswerVS6380f9a50deb |
 | *Other Identifiers:*OID:2.25.141332771717088300457490805109149739150 | |
 
  
@@ -58,7 +58,7 @@
   "title" : "居家護理－睜眼選項",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

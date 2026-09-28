@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNOperationOutcome | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:HNOperationOutcome |
+| Active as of 2026-09-29 | *Computable Name*:HNOperationOutcome |
 
  
 表達接收或處理訊息。原規範未列出 GetLog 回覆結構及完整錯誤碼，因此不自訂假定的錯誤碼表。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-HNOperationOutcome.c
   "name" : "HNOperationOutcome",
   "title" : "居家護理－介接訊息",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

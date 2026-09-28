@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCObservationAssessmentBase | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:LTCObservationAssessmentBase |
+| Active as of 2026-09-29 | *Computable Name*:LTCObservationAssessmentBase |
 
  
 此 Profile 為評估核定摘要 Observation 的共用基礎 Profile，定義評估結果之基本結構與共用欄位。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCObservationAssess
   "name" : "LTCObservationAssessmentBase",
   "title" : "長期照顧－評估核定摘要基礎",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

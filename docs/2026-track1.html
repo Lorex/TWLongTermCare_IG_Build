@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>2026 Track 1 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引(TW LTC IG)</span>
+            <br/>
+            <span style="display:inline-block;">1.1.0 - STU 1.1.0
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">應用說明</a></li>
+  <li><a href="toc.html">目錄</a></li>
+  <li class="dropdown">
+		<a href="#">主題說明<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="fee-audit.html">長照支付審查</a>
+			</li>
+			<li>
+				<a href="home-nursing.html">居家護理照護管理系統</a>
+			</li>
+			<li>
+				<a href="hah.html">在宅急症照護</a>
+			</li>
+		</ul>
+	</li>
+	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="capability-statements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters-and-operation.html">查詢參數及操作定義</a>
+			</li>
+			<li>
+				<a href="logical-models.html">邏輯模型</a>
+			</li>
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles 及 Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+  <li><a href="examples.html">範例</a></li>
+  <li><a href="downloads.html">結構定義與範例檔下載</a></li>
+  <li><a href="security.html">安全性</a></li>
+  <li><a href="validates.html">驗證教學</a></li>
+  <li class="dropdown">
+    <a href="#">專案聯測<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li class="dropdown-submenu">
+        <a href="2025-connectathon.html">2025 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2025-connectathon.html">聯測說明</a></li>
+          <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+          <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+          <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+          <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+          <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+          <li><a href="2025-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="2026-connectathon.html">2026 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2026-connectathon.html">聯測說明</a></li>
+          <li><a href="2026-connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="2026-track0.html">共通前置：OAuth2 存取認證</a></li>
+          <li><a href="2026-track1.html">賽道 1：長照共通資料交換</a></li>
+          <li><a href="2026-track2.html">賽道 2：居家照護資料交換</a></li>
+          <li><a href="2026-track3.html">賽道 3：長照服務費用支付審核</a></li>
+          <li><a href="2026-track4.html">賽道 4：在宅急症照護資料交換</a></li>
+          <li><a href="2026-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <!-- <li><a href="history.html">版本歷程</a></li> -->
+</ul>      
+
+<style>
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {display: block;}
+.dropdown-submenu {position: relative;}
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  top: 0;
+  left: 100%;
+  margin-top: 0;
+}
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus-within > .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 767px) {
+  .dropdown-submenu > .dropdown-menu {
+    position: static;
+    float: none;
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  table.colsi {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  table.rwd-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  p, a {
+    word-break: break-all;
+  }
+}
+</style>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>2026 Track 1</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引(TW LTC IG) - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>2026 Track 1</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#賽道-1長照共通資料交換" id="markdown-toc-賽道-1長照共通資料交換">賽道 1：長照共通資料交換</a>    <ul>
+      <li><a href="#說明" id="markdown-toc-說明">說明</a></li>
+      <li><a href="#檢核項目" id="markdown-toc-檢核項目">檢核項目</a></li>
+      <li><a href="#各系統角色於本賽道之作用" id="markdown-toc-各系統角色於本賽道之作用">各系統角色於本賽道之作用</a></li>
+      <li><a href="#通過條件" id="markdown-toc-通過條件">通過條件</a></li>
+      <li><a href="#情境-scenarios" id="markdown-toc-情境-scenarios">情境 (Scenarios)</a></li>
+      <li><a href="#交易-transactions" id="markdown-toc-交易-transactions">交易 (Transactions)</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h2 id="賽道-1長照共通資料交換">賽道 1：長照共通資料交換</h2>
+
+<h3 id="說明">說明</h3>
+
+<p>長照共通資料交換為跨居家照護、住宿機構、日間照護與在宅醫療共用的基礎資料層，涵蓋病人基本資料、機構基本資料、生理量測、用藥紀錄、健康問題、照護目標、照護計畫、服務請求與照護執行紀錄。參測單位透過標準建立、查詢與單筆讀取機制，驗證長照共通核心資源之新增、交換與呈現能力。</p>
+
+<h3 id="檢核項目">檢核項目</h3>
+
+<ul>
+  <li>參測單位應依所選角色實作病人基本資料建立或查讀（情境 1，必測）</li>
+  <li>參測單位應依所選角色實作機構基本資料建立或查讀（情境 2，必測）</li>
+  <li>參測單位應依所選角色實作生理量測上傳或查讀（情境 3，必測）</li>
+  <li>參測單位應依所選角色實作用藥紀錄上傳或查讀（情境 4，必測）</li>
+  <li>參測單位可依產品支援能力與所選角色選測健康問題、照護目標、照護計畫、服務請求或照護執行紀錄之建立或查讀（情境 5 至情境 9，選測）</li>
+</ul>
+
+<h3 id="各系統角色於本賽道之作用">各系統角色於本賽道之作用</h3>
+
+<table class="grid rwd-table">
+  <thead>
+    <tr>
+      <th>Keyword</th>
+      <th>名稱</th>
+      <th>說明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LTC_CONSUMER</td>
+      <td>LTC Consumer</td>
+      <td>長照資料查詢端，負責向 LTC Repository 發起條件查詢與單筆讀取請求，並正確解析與呈現指定欄位內容。</td>
+    </tr>
+    <tr>
+      <td>LTC_MANAGEMENT</td>
+      <td>LTC Creator</td>
+      <td>長照資料建立端，負責向 LTC Repository 發起單筆新增請求（POST），建立符合 Profile 規範之長照共通資源。</td>
+    </tr>
+    <tr>
+      <td>LTC_REPOSITORY</td>
+      <td>LTC Repository</td>
+      <td>長照資料儲存端，負責儲存與維護長照共通資源，接收並處理新增、查詢與單筆讀取請求，回傳標準格式之回應。</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="通過條件">通過條件</h3>
+
+<ul>
+  <li>參測單位必須完成情境 1（SC1 病人基本資料）、情境 2（SC2 機構基本資料）、情境 3（SC3 生理量測）與情境 4（SC4 用藥紀錄）四個必測情境。情境 5 至情境 9（SC5–SC9）為選測項目，參測單位可依產品支援能力自由加選。</li>
+  <li>參測單位依所選之 LTC_MANAGEMENT、LTC_CONSUMER 或 LTC_REPOSITORY 角色完成所測情境之交易項目與欄位核對，由配對系統共同完成情境流程。</li>
+  <li>報名 LTC_MANAGEMENT 角色者完成所測情境之 POST 建立並取得實際 ID。</li>
+  <li>報名 LTC_CONSUMER 角色者完成所測情境之條件查詢與單筆讀取，確認資源 ID 與 Creator 當次建立的 ID 相同，並核對指定欄位與上傳內容一致。</li>
+  <li>報名 LTC_REPOSITORY 角色者支援所測情境之 POST 建立、條件查詢與單筆讀取。</li>
+  <li>每個情境皆可獨立使用大會指定之測試資料與識別碼，必要參照由大會事前備妥，受測主要資源由 Creator 當次建立。</li>
+</ul>
+
+<h3 id="情境-scenarios">情境 (Scenarios)</h3>
+
+<table class="grid rwd-table">
+  <thead>
+    <tr>
+      <th>情境 ID</th>
+      <th>說明</th>
+      <th>測試類別</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SC1</td>
+      <td>病人基本資料</td>
+      <td>必測</td>
+    </tr>
+    <tr>
+      <td>SC2</td>
+      <td>機構基本資料</td>
+      <td>必測</td>
+    </tr>
+    <tr>
+      <td>SC3</td>
+      <td>生理量測</td>
+      <td>必測</td>
+    </tr>
+    <tr>
+      <td>SC4</td>
+      <td>用藥紀錄</td>
+      <td>必測</td>
+    </tr>
+    <tr>
+      <td>SC5</td>
+      <td>健康問題</td>
+      <td>選測</td>
+    </tr>
+    <tr>
+      <td>SC6</td>
+      <td>照護目標</td>
+      <td>選測</td>
+    </tr>
+    <tr>
+      <td>SC7</td>
+      <td>照護計畫</td>
+      <td>選測</td>
+    </tr>
+    <tr>
+      <td>SC8</td>
+      <td>服務請求</td>
+      <td>選測</td>
+    </tr>
+    <tr>
+      <td>SC9</td>
+      <td>照護執行紀錄</td>
+      <td>選測</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a id="sc1"></a></p>
+
+<h4 id="情境-1病人基本資料">情境 1：病人基本資料</h4>
+
+<p>病人基本資料情境模擬各類長照與醫療系統建立與查詢個案基本資料的流程。維護端上傳個案基本資料，查詢端透過個案識別碼檢索個案主檔，確認個案身分，並取得姓名、出生日期、聯絡方式與緊急聯絡人資料。</p>
+
+<p>本情境使用 Patient 資源，遵循 <a href="StructureDefinition-LTCPatient.html">LTCPatient</a> Profile 規範。大會提供固定合成案例、JSON 範本與指派之本輪唯一識別碼，必要參照已由大會事前備妥。</p>
+
+<h4 id="資料儲存管理功能ltc_repository-角色">資料儲存、管理功能（LTC_REPOSITORY 角色）</h4>
+
+<ul>
+  <li>儲存並維護符合 LTCPatient 規範之個案資料。</li>
+  <li>支援以 POST 方式建立個案資料，成功時回傳 HTTP 201 Created 並於 Location 標頭回傳實際資源 ID。</li>
+  <li>支援以 GET 方式條件查詢個案資料，成功時回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>支援以 GET 方式單筆讀取個案資料，成功時回傳 HTTP 200 OK 與單筆 Patient 資源。</li>
+</ul>
+
+<h4 id="資料上傳功能ltc_management-角色">資料上傳功能（LTC_MANAGEMENT 角色）</h4>
+
+<p><a id="ltc-111"></a></p>
+
+<p><strong>LTC-111：建立病人基本資料</strong></p>
+
+<ul>
+  <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/Patient</code>，符合 <a href="StructureDefinition-LTCPatient.html">LTCPatient</a> Profile。</li>
+  <li>伺服器建立成功回傳 HTTP 201 Created，由 Location 標頭取得伺服器實際資源 ID 供配對端。</li>
+  <li>依大會合成案例填寫以下欄位內容：
+    <ul>
+      <li>機構身分識別碼 <code class="language-plaintext highlighter-rouge">identifier[member]</code>，其中 <code class="language-plaintext highlighter-rouge">use</code> 為 <code class="language-plaintext highlighter-rouge">official</code>，代碼系統 <code class="language-plaintext highlighter-rouge">type.coding.system</code> 為 <code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/v2-0203</code>，代碼 <code class="language-plaintext highlighter-rouge">type.coding.code</code> 為 <code class="language-plaintext highlighter-rouge">PRN</code>，<code class="language-plaintext highlighter-rouge">system</code> 為機構網址，<code class="language-plaintext highlighter-rouge">value</code> 填入大會指派之本輪唯一識別碼。</li>
+      <li>個案姓名（<code class="language-plaintext highlighter-rouge">name</code>），中文姓名填入 <code class="language-plaintext highlighter-rouge">use = usual</code> 與 <code class="language-plaintext highlighter-rouge">text</code>，英文姓名填入 <code class="language-plaintext highlighter-rouge">use = official</code> 與 <code class="language-plaintext highlighter-rouge">text</code>，依測試案例填寫。</li>
+      <li>出生日期（<code class="language-plaintext highlighter-rouge">birthDate</code>，格式為 YYYY-MM-DD）。</li>
+      <li>聯絡電話（<code class="language-plaintext highlighter-rouge">telecom.value</code>）。</li>
+      <li>居住地址（<code class="language-plaintext highlighter-rouge">address</code>，填入 <code class="language-plaintext highlighter-rouge">use = home</code> 與完整地址 <code class="language-plaintext highlighter-rouge">text</code>）。</li>
+      <li>緊急聯絡人（<code class="language-plaintext highlighter-rouge">contact</code>），包含關係（<code class="language-plaintext highlighter-rouge">relationship</code>）、姓名（<code class="language-plaintext highlighter-rouge">name.text</code>）與聯絡電話（<code class="language-plaintext highlighter-rouge">telecom.value</code>）。</li>
+      <li>所屬機構參照（<code class="language-plaintext highlighter-rouge">managingOrganization</code>，填入大會預載之機構 ID）。</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="資料查詢功能ltc_consumer-角色">資料查詢功能（LTC_CONSUMER 角色）</h4>
+
+<p><a id="ltc-112"></a></p>
+
+<p><strong>LTC-112：病人基本資料查詢與讀取</strong></p>
+
+<ul>
+  <li>第一步條件查詢：發送 <code class="language-plaintext highlighter-rouge">GET [base]/Patient?identifier={system}|{value}</code>，使用大會指派之本輪唯一識別碼查詢，伺服器回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>第二步單筆讀取：自查詢清單中選取 LTC-111 當次建立之個案 ID，發送 <code class="language-plaintext highlighter-rouge">GET [base]/Patient/{id}</code>，伺服器回傳 HTTP 200 OK 與單筆 Patient 資源。</li>
+  <li>核對指定欄位內容：
+    <ul>
+      <li>機構身分識別碼 <code class="language-plaintext highlighter-rouge">identifier[member].system</code> 與 <code class="language-plaintext highlighter-rouge">identifier[member].value</code> 比對測試案例，其 <code class="language-plaintext highlighter-rouge">identifier[member].type.coding.code</code> 為 <code class="language-plaintext highlighter-rouge">PRN</code>。</li>
+      <li>個案姓名（<code class="language-plaintext highlighter-rouge">name</code>）。</li>
+      <li>出生日期（<code class="language-plaintext highlighter-rouge">birthDate</code>）。</li>
+      <li>聯絡電話（<code class="language-plaintext highlighter-rouge">telecom</code>）。</li>
+      <li>居住地址（<code class="language-plaintext highlighter-rouge">address</code>）。</li>
+      <li>緊急聯絡人（<code class="language-plaintext highlighter-rouge">contact</code>）之姓名、關係與電話。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a id="sc2"></a></p>
+
+<h4 id="情境-2機構基本資料">情境 2：機構基本資料</h4>
+
+<p>機構基本資料情境模擬系統建立與查詢長照服務機構、醫院或診所之組織資訊的流程。維護端上傳機構基本資料，查詢端依機構代碼檢索機構主檔，取得機構名稱、類別、地址與聯絡管道。</p>
+
+<p>本情境使用 Organization 資源，遵循 <a href="StructureDefinition-Organization-twltc.html">LTCOrganization</a> Profile 規範。大會提供長照機構與醫療院所測資及指派之本輪唯一代碼。</p>
+
+<h4 id="資料儲存管理功能ltc_repository-角色-1">資料儲存、管理功能（LTC_REPOSITORY 角色）</h4>
+
+<ul>
+  <li>儲存並維護符合 LTCOrganization 規範之機構資料。</li>
+  <li>支援以 POST 方式建立機構資料，成功時回傳 HTTP 201 Created 並於 Location 標頭回傳實際資源 ID。</li>
+  <li>支援以 GET 方式條件查詢機構資料，成功時回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>支援以 GET 方式單筆讀取機構資料，成功時回傳 HTTP 200 OK 與單筆 Organization 資源。</li>
+</ul>
+
+<h4 id="資料上傳功能ltc_management-角色-1">資料上傳功能（LTC_MANAGEMENT 角色）</h4>
+
+<p><a id="ltc-121"></a></p>
+
+<p><strong>LTC-121：建立機構基本資料</strong></p>
+
+<ul>
+  <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/Organization</code>，符合 <a href="StructureDefinition-Organization-twltc.html">LTCOrganization</a> Profile。</li>
+  <li>伺服器建立成功回傳 HTTP 201 Created，由 Location 標頭取得伺服器實際資源 ID 供配對端。</li>
+  <li>依大會測資填寫以下欄位內容：
+    <ul>
+      <li>機構代碼（<code class="language-plaintext highlighter-rouge">identifier.system</code> 填入大會指定的識別碼系統，<code class="language-plaintext highlighter-rouge">identifier.value</code> 填入本輪唯一機構代碼）。</li>
+      <li>使用狀態（<code class="language-plaintext highlighter-rouge">active</code>，設為 <code class="language-plaintext highlighter-rouge">true</code>）。</li>
+      <li>機構類型（<code class="language-plaintext highlighter-rouge">type</code>，填入機構類型代碼）。</li>
+      <li>機構名稱（<code class="language-plaintext highlighter-rouge">name</code>）。</li>
+      <li>聯絡電話（<code class="language-plaintext highlighter-rouge">telecom.value</code>）。</li>
+      <li>機構地址（<code class="language-plaintext highlighter-rouge">address.text</code>）。</li>
+      <li>聯絡人資訊（<code class="language-plaintext highlighter-rouge">contact</code>，包含聯絡人姓名與聯絡電話）。</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="資料查詢功能ltc_consumer-角色-1">資料查詢功能（LTC_CONSUMER 角色）</h4>
+
+<p><a id="ltc-122"></a></p>
+
+<p><strong>LTC-122：機構基本資料查詢與讀取</strong></p>
+
+<ul>
+  <li>第一步條件查詢：發送 <code class="language-plaintext highlighter-rouge">GET [base]/Organization?identifier={system}|{value}</code>，使用大會指派之本輪唯一代碼查詢，伺服器回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>第二步單筆讀取：自查詢清單中選取 LTC-121 當次建立之機構 ID，發送 <code class="language-plaintext highlighter-rouge">GET [base]/Organization/{id}</code>，伺服器回傳 HTTP 200 OK 與單筆 Organization 資源。</li>
+  <li>核對指定欄位內容：
+    <ul>
+      <li>機構代碼（<code class="language-plaintext highlighter-rouge">identifier</code>）。</li>
+      <li>使用狀態（<code class="language-plaintext highlighter-rouge">active</code>）。</li>
+      <li>機構類型（<code class="language-plaintext highlighter-rouge">type</code>）。</li>
+      <li>機構名稱（<code class="language-plaintext highlighter-rouge">name</code>）。</li>
+      <li>聯絡電話（<code class="language-plaintext highlighter-rouge">telecom</code>）。</li>
+      <li>機構地址（<code class="language-plaintext highlighter-rouge">address</code>）。</li>
+      <li>聯絡人資訊（<code class="language-plaintext highlighter-rouge">contact</code>，按測資內容）。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a id="sc3"></a></p>
+
+<h4 id="情境-3生理量測">情境 3：生理量測</h4>
+
+<p>生理量測情境模擬各照護場域上傳與查閱個案日常生理指標數據的流程。維護端上傳血壓量測紀錄，查詢端依個案識別碼與檢驗代碼查詢近期量測紀錄，掌握生命徵象變化。</p>
+
+<p>本情境使用 Observation 資源，遵循 <a href="StructureDefinition-LTCObservationVitalSigns.html">LTCObservationVitalSigns</a> Profile 規範。大會事前預載必要個案與醫事人員參照。</p>
+
+<h4 id="資料儲存管理功能ltc_repository-角色-2">資料儲存、管理功能（LTC_REPOSITORY 角色）</h4>
+
+<ul>
+  <li>儲存並維護符合 LTCObservationVitalSigns 規範之生理量測資料。</li>
+  <li>支援以 POST 方式建立生理量測資料，成功時回傳 HTTP 201 Created 並於 Location 標頭回傳實際資源 ID。</li>
+  <li>支援以 GET 方式條件查詢生理量測資料，成功時回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>支援以 GET 方式單筆讀取生理量測資料，成功時回傳 HTTP 200 OK 與單筆 Observation 資源。</li>
+</ul>
+
+<h4 id="資料上傳功能ltc_management-角色-2">資料上傳功能（LTC_MANAGEMENT 角色）</h4>
+
+<p><a id="ltc-131"></a></p>
+
+<p><strong>LTC-131：上傳生理量測</strong></p>
+
+<ul>
+  <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/Observation</code>，符合 <a href="StructureDefinition-LTCObservationVitalSigns.html">LTCObservationVitalSigns</a> Profile。</li>
+  <li>伺服器建立成功回傳 HTTP 201 Created，由 Location 標頭取得伺服器實際資源 ID 供配對端。</li>
+  <li>填寫單筆血壓量測紀錄，內容包含：
+    <ul>
+      <li>量測狀態（<code class="language-plaintext highlighter-rouge">status</code>，填入 <code class="language-plaintext highlighter-rouge">final</code>）。</li>
+      <li>分類代碼（<code class="language-plaintext highlighter-rouge">category</code>，代碼系統 <code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/observation-category</code>，代碼 <code class="language-plaintext highlighter-rouge">vital-signs</code>）。</li>
+      <li>檢驗項目代碼（<code class="language-plaintext highlighter-rouge">code</code>，LOINC 代碼 <code class="language-plaintext highlighter-rouge">85354-9</code>，名稱 Blood pressure panel with all children optional）。</li>
+      <li>個案參照（<code class="language-plaintext highlighter-rouge">subject</code>，填入大會預載之 Patient ID）。</li>
+      <li>量測時間（<code class="language-plaintext highlighter-rouge">effectiveDateTime</code>，包含時區之日期時間）。</li>
+      <li>量測人員參照（<code class="language-plaintext highlighter-rouge">performer</code>，填入大會預載之醫事人員 ID）。</li>
+      <li>量測組件（<code class="language-plaintext highlighter-rouge">component</code>），包含收縮壓與舒張壓兩項：
+        <ul>
+          <li>收縮壓組件代碼為 LOINC <code class="language-plaintext highlighter-rouge">8480-6</code>，數值填入 <code class="language-plaintext highlighter-rouge">component.valueQuantity.value</code>，單位系統為 <code class="language-plaintext highlighter-rouge">http://unitsofmeasure.org</code>，單位代碼為 <code class="language-plaintext highlighter-rouge">mm[Hg]</code>。</li>
+          <li>舒張壓組件代碼為 LOINC <code class="language-plaintext highlighter-rouge">8462-4</code>，數值填入 <code class="language-plaintext highlighter-rouge">component.valueQuantity.value</code>，單位系統為 <code class="language-plaintext highlighter-rouge">http://unitsofmeasure.org</code>，單位代碼為 <code class="language-plaintext highlighter-rouge">mm[Hg]</code>。</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="資料查詢功能ltc_consumer-角色-2">資料查詢功能（LTC_CONSUMER 角色）</h4>
+
+<p><a id="ltc-132"></a></p>
+
+<p><strong>LTC-132：生理量測查詢與讀取</strong></p>
+
+<ul>
+  <li>第一步條件查詢：發送 <code class="language-plaintext highlighter-rouge">GET [base]/Observation?subject=Patient/{id}&amp;code=http://loinc.org|85354-9</code>，伺服器回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>第二步單筆讀取：自查詢清單中選取 LTC-131 當次建立之量測 ID，發送 <code class="language-plaintext highlighter-rouge">GET [base]/Observation/{id}</code>，伺服器回傳 HTTP 200 OK 與單筆 Observation 資源。</li>
+  <li>核對指定欄位內容：
+    <ul>
+      <li>狀態（<code class="language-plaintext highlighter-rouge">status</code>）。</li>
+      <li>分類（<code class="language-plaintext highlighter-rouge">category</code>）。</li>
+      <li>檢驗項目代碼（<code class="language-plaintext highlighter-rouge">code</code>）。</li>
+      <li>個案參照（<code class="language-plaintext highlighter-rouge">subject</code>）。</li>
+      <li>量測時間（<code class="language-plaintext highlighter-rouge">effectiveDateTime</code>）。</li>
+      <li>量測組件（<code class="language-plaintext highlighter-rouge">component</code>）：收縮壓代碼 <code class="language-plaintext highlighter-rouge">8480-6</code> 與舒張壓代碼 <code class="language-plaintext highlighter-rouge">8462-4</code>。</li>
+      <li>組件數值與單位：<code class="language-plaintext highlighter-rouge">component.valueQuantity.value</code> 數值與 UCUM 單位代碼 <code class="language-plaintext highlighter-rouge">mm[Hg]</code>。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a id="sc4"></a></p>
+
+<h4 id="情境-4用藥紀錄">情境 4：用藥紀錄</h4>
+
+<p>用藥紀錄情境模擬照護團隊登錄與查閱個案實際用藥執行情形的流程。維護端上傳單筆給藥紀錄，查詢端依個案識別碼查詢給藥紀錄，掌握用藥品項、劑量與給藥時間。</p>
+
+<p>本情境使用 MedicationAdministration 資源，遵循 <a href="StructureDefinition-LTCMedicationAdministration.html">LTCMedicationAdministration</a> Profile 規範。大會事前預載必要個案與醫事人員參照。</p>
+
+<h4 id="資料儲存管理功能ltc_repository-角色-3">資料儲存、管理功能（LTC_REPOSITORY 角色）</h4>
+
+<ul>
+  <li>儲存並維護符合 LTCMedicationAdministration 規範之用藥紀錄。</li>
+  <li>支援以 POST 方式建立用藥紀錄，成功時回傳 HTTP 201 Created 並於 Location 標頭回傳實際資源 ID。</li>
+  <li>支援以 GET 方式條件查詢用藥紀錄，成功時回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>支援以 GET 方式單筆讀取用藥紀錄，成功時回傳 HTTP 200 OK 與單筆 MedicationAdministration 資源。</li>
+</ul>
+
+<h4 id="資料上傳功能ltc_management-角色-3">資料上傳功能（LTC_MANAGEMENT 角色）</h4>
+
+<p><a id="ltc-141"></a></p>
+
+<p><strong>LTC-141：上傳用藥紀錄</strong></p>
+
+<ul>
+  <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/MedicationAdministration</code>，符合 <a href="StructureDefinition-LTCMedicationAdministration.html">LTCMedicationAdministration</a> Profile。</li>
+  <li>伺服器建立成功回傳 HTTP 201 Created，由 Location 標頭取得伺服器實際資源 ID 供配對端。</li>
+  <li>依大會合成測資填寫以下欄位內容：
+    <ul>
+      <li>用藥狀態（<code class="language-plaintext highlighter-rouge">status</code>，填入 <code class="language-plaintext highlighter-rouge">completed</code>）。</li>
+      <li>藥品品項代碼與名稱（<code class="language-plaintext highlighter-rouge">medicationCodeableConcept</code>，填入大會測資之藥品代碼、代碼系統與名稱）。</li>
+      <li>個案參照（<code class="language-plaintext highlighter-rouge">subject</code>，填入大會預載之 Patient ID）。</li>
+      <li>給藥時間（<code class="language-plaintext highlighter-rouge">effectiveDateTime</code>，包含時區之日期時間）。</li>
+      <li>給藥途徑（<code class="language-plaintext highlighter-rouge">dosage.route</code>，填入給藥途徑代碼與文字）。</li>
+      <li>給藥劑量（<code class="language-plaintext highlighter-rouge">dosage.dose</code>，填入劑量數值與單位）。</li>
+      <li>給藥人員參照識別碼（<code class="language-plaintext highlighter-rouge">performer.actor</code>，填入大會預載之醫事人員 ID）。</li>
+      <li>附註說明（<code class="language-plaintext highlighter-rouge">note</code>，按測資內容）。</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="資料查詢功能ltc_consumer-角色-3">資料查詢功能（LTC_CONSUMER 角色）</h4>
+
+<p><a id="ltc-142"></a></p>
+
+<p><strong>LTC-142：用藥紀錄查詢與讀取</strong></p>
+
+<ul>
+  <li>第一步條件查詢：發送 <code class="language-plaintext highlighter-rouge">GET [base]/MedicationAdministration?subject=Patient/{id}</code>，伺服器回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>第二步單筆讀取：自查詢清單中選取 LTC-141 當次建立之紀錄 ID，發送 <code class="language-plaintext highlighter-rouge">GET [base]/MedicationAdministration/{id}</code>，伺服器回傳 HTTP 200 OK 與單筆 MedicationAdministration 資源。</li>
+  <li>核對指定欄位內容：
+    <ul>
+      <li>用藥狀態（<code class="language-plaintext highlighter-rouge">status</code>）。</li>
+      <li>個案參照（<code class="language-plaintext highlighter-rouge">subject</code>）。</li>
+      <li>藥品品項代碼與名稱（<code class="language-plaintext highlighter-rouge">medicationCodeableConcept</code>，直接包含藥品代碼與名稱）。</li>
+      <li>給藥時間（<code class="language-plaintext highlighter-rouge">effectiveDateTime</code>）。</li>
+      <li>給藥途徑（<code class="language-plaintext highlighter-rouge">dosage.route</code>）。</li>
+      <li>給藥劑量數值與單位（<code class="language-plaintext highlighter-rouge">dosage.dose</code>）。</li>
+      <li>給藥人員參照識別碼（<code class="language-plaintext highlighter-rouge">performer.actor</code>）。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a id="sc5"></a></p>
+
+<h4 id="情境-5健康問題">情境 5：健康問題</h4>
+
+<p>健康問題情境模擬照護團隊建立與查閱個案目前確診疾病或慢性健康問題的流程。維護端上傳健康問題資料，查詢端依個案識別碼查詢健康問題清單，以高血壓等常見健康問題展示紀錄內容。</p>
+
+<p>本情境使用 Condition 資源，遵循 <a href="StructureDefinition-LTCCondition.html">LTCCondition</a> Profile 規範。大會事前預載必要個案與醫事人員參照。</p>
+
+<h4 id="資料儲存管理功能ltc_repository-角色-4">資料儲存、管理功能（LTC_REPOSITORY 角色）</h4>
+
+<ul>
+  <li>儲存並維護符合 LTCCondition 規範之健康問題資料。</li>
+  <li>支援以 POST 方式建立健康問題資料，成功時回傳 HTTP 201 Created 並於 Location 標頭回傳實際資源 ID。</li>
+  <li>支援以 GET 方式條件查詢健康問題資料，成功時回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>支援以 GET 方式單筆讀取健康問題資料，成功時回傳 HTTP 200 OK 與單筆 Condition 資源。</li>
+</ul>
+
+<h4 id="資料上傳功能ltc_management-角色-4">資料上傳功能（LTC_MANAGEMENT 角色）</h4>
+
+<p><a id="ltc-151"></a></p>
+
+<p><strong>LTC-151：建立健康問題</strong></p>
+
+<ul>
+  <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/Condition</code>，符合 <a href="StructureDefinition-LTCCondition.html">LTCCondition</a> Profile。</li>
+  <li>伺服器建立成功回傳 HTTP 201 Created，由 Location 標頭取得伺服器實際資源 ID 供配對端。</li>
+  <li>依大會合成測資填寫以下欄位內容：
+    <ul>
+      <li>臨床狀態（<code class="language-plaintext highlighter-rouge">clinicalStatus</code>，代碼系統 <code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/condition-clinical</code>，代碼 <code class="language-plaintext highlighter-rouge">active</code>）。</li>
+      <li>驗證狀態（<code class="language-plaintext highlighter-rouge">verificationStatus</code>，代碼系統 <code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/condition-ver-status</code>，代碼 <code class="language-plaintext highlighter-rouge">confirmed</code>）。</li>
+      <li>問題分類（<code class="language-plaintext highlighter-rouge">category</code>，填入分類代碼）。</li>
+      <li>問題代碼與文字描述（<code class="language-plaintext highlighter-rouge">code</code>，填入疾病診斷代碼與名稱，例如高血壓）。</li>
+      <li>個案參照（<code class="language-plaintext highlighter-rouge">subject</code>，填入大會預載之 Patient ID）。</li>
+      <li>發生時間（<code class="language-plaintext highlighter-rouge">onset[x]</code>，例如 <code class="language-plaintext highlighter-rouge">onsetDateTime</code>）。</li>
+      <li>記錄人員參照（<code class="language-plaintext highlighter-rouge">recorder</code>，填入大會預載之醫事人員 ID）。</li>
+      <li>備註說明（<code class="language-plaintext highlighter-rouge">note</code>，按測資內容）。</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="資料查詢功能ltc_consumer-角色-4">資料查詢功能（LTC_CONSUMER 角色）</h4>
+
+<p><a id="ltc-152"></a></p>
+
+<p><strong>LTC-152：健康問題查詢與讀取</strong></p>
+
+<ul>
+  <li>第一步條件查詢：發送 <code class="language-plaintext highlighter-rouge">GET [base]/Condition?subject=Patient/{id}</code>，伺服器回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>第二步單筆讀取：自查詢清單中選取 LTC-151 當次建立之問題 ID，發送 <code class="language-plaintext highlighter-rouge">GET [base]/Condition/{id}</code>，伺服器回傳 HTTP 200 OK 與單筆 Condition 資源。</li>
+  <li>核對指定欄位內容：
+    <ul>
+      <li>個案參照（<code class="language-plaintext highlighter-rouge">subject</code>）。</li>
+      <li>問題代碼與文字描述（<code class="language-plaintext highlighter-rouge">code</code>）。</li>
+      <li>臨床狀態（<code class="language-plaintext highlighter-rouge">clinicalStatus</code>）。</li>
+      <li>驗證狀態（<code class="language-plaintext highlighter-rouge">verificationStatus</code>）。</li>
+      <li>發生時間（<code class="language-plaintext highlighter-rouge">onset[x]</code>）。</li>
+      <li>備註說明（<code class="language-plaintext highlighter-rouge">note</code>，按測資內容）。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a id="sc6"></a></p>
+
+<h4 id="情境-6照護目標">情境 6：照護目標</h4>
+
+<p>照護目標情境模擬照護團隊建立與查閱個案照護目標與預期成果的流程。維護端上傳照護目標項目，查詢端依個案識別碼查詢目標項目，呈現目標描述、執行進度與目標期限。</p>
+
+<p>本情境使用 Goal 資源，遵循 <a href="StructureDefinition-LTCGoal.html">LTCGoal</a> Profile 規範。大會事前預載必要個案與醫事人員參照。</p>
+
+<h4 id="資料儲存管理功能ltc_repository-角色-5">資料儲存、管理功能（LTC_REPOSITORY 角色）</h4>
+
+<ul>
+  <li>儲存並維護符合 LTCGoal 規範之照護目標資料。</li>
+  <li>支援以 POST 方式建立照護目標資料，成功時回傳 HTTP 201 Created 並於 Location 標頭回傳實際資源 ID。</li>
+  <li>支援以 GET 方式條件查詢照護目標資料，成功時回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>支援以 GET 方式單筆讀取照護目標資料，成功時回傳 HTTP 200 OK 與單筆 Goal 資源。</li>
+</ul>
+
+<h4 id="資料上傳功能ltc_management-角色-5">資料上傳功能（LTC_MANAGEMENT 角色）</h4>
+
+<p><a id="ltc-161"></a></p>
+
+<p><strong>LTC-161：建立照護目標</strong></p>
+
+<ul>
+  <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/Goal</code>，符合 <a href="StructureDefinition-LTCGoal.html">LTCGoal</a> Profile。</li>
+  <li>伺服器建立成功回傳 HTTP 201 Created，由 Location 標頭取得伺服器實際資源 ID 供配對端。</li>
+  <li>依大會合成測資填寫以下欄位內容：
+    <ul>
+      <li>生命週期狀態（<code class="language-plaintext highlighter-rouge">lifecycleStatus</code>，填入 <code class="language-plaintext highlighter-rouge">active</code>）。</li>
+      <li>目標描述（<code class="language-plaintext highlighter-rouge">description.coding</code> 與 <code class="language-plaintext highlighter-rouge">description.text</code>，填入目標項目代碼與描述文字）。</li>
+      <li>個案參照（<code class="language-plaintext highlighter-rouge">subject</code>，填入大會預載之 Patient ID）。</li>
+      <li>起始日期（<code class="language-plaintext highlighter-rouge">startDate</code>）。</li>
+      <li>目標指標（<code class="language-plaintext highlighter-rouge">target.measure</code>）與預期成果（<code class="language-plaintext highlighter-rouge">target.detailString</code>），依大會測試案例填寫。</li>
+      <li>目標期限（<code class="language-plaintext highlighter-rouge">target.dueDate</code>）。</li>
+      <li>提出者參照（<code class="language-plaintext highlighter-rouge">expressedBy</code>，填入大會預載之醫事人員 ID）。</li>
+      <li>附註說明（<code class="language-plaintext highlighter-rouge">note</code>，按測資內容）。</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="資料查詢功能ltc_consumer-角色-5">資料查詢功能（LTC_CONSUMER 角色）</h4>
+
+<p><a id="ltc-162"></a></p>
+
+<p><strong>LTC-162：照護目標查詢與讀取</strong></p>
+
+<ul>
+  <li>第一步條件查詢：發送 <code class="language-plaintext highlighter-rouge">GET [base]/Goal?subject=Patient/{id}</code>，伺服器回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>第二步單筆讀取：自查詢清單中選取 LTC-161 當次建立之目標 ID，發送 <code class="language-plaintext highlighter-rouge">GET [base]/Goal/{id}</code>，伺服器回傳 HTTP 200 OK 與單筆 Goal 資源。</li>
+  <li>核對指定欄位內容：
+    <ul>
+      <li>個案參照（<code class="language-plaintext highlighter-rouge">subject</code>）。</li>
+      <li>生命週期狀態（<code class="language-plaintext highlighter-rouge">lifecycleStatus</code>）。</li>
+      <li>目標描述代碼與文字（<code class="language-plaintext highlighter-rouge">description.coding</code> 與 <code class="language-plaintext highlighter-rouge">description.text</code>）。</li>
+      <li>起始日期（<code class="language-plaintext highlighter-rouge">startDate</code>）。</li>
+      <li>目標指標（<code class="language-plaintext highlighter-rouge">target.measure</code>）與預期成果（<code class="language-plaintext highlighter-rouge">target.detailString</code>），依大會測試案例填寫。</li>
+      <li>目標期限（<code class="language-plaintext highlighter-rouge">target.dueDate</code>）。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a id="sc7"></a></p>
+
+<h4 id="情境-7照護計畫">情境 7：照護計畫</h4>
+
+<p>照護計畫情境模擬跨專業團隊建立與查閱個案整體照護方針與活動規劃的流程。維護端上傳照護計畫，查詢端依個案識別碼查詢照護計畫，讀取計畫類別、執行期程與內嵌活動描述。</p>
+
+<p>本情境使用 CarePlan 資源，遵循 <a href="StructureDefinition-LTCCarePlan.html">LTCCarePlan</a> Profile 規範。大會事前預載必要個案與關聯參照。</p>
+
+<h4 id="資料儲存管理功能ltc_repository-角色-6">資料儲存、管理功能（LTC_REPOSITORY 角色）</h4>
+
+<ul>
+  <li>儲存並維護符合 LTCCarePlan 規範之照護計畫資料。</li>
+  <li>支援以 POST 方式建立照護計畫資料，成功時回傳 HTTP 201 Created 並於 Location 標頭回傳實際資源 ID。</li>
+  <li>支援以 GET 方式條件查詢照護計畫資料，成功時回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>支援以 GET 方式單筆讀取照護計畫資料，成功時回傳 HTTP 200 OK 與單筆 CarePlan 資源。</li>
+</ul>
+
+<h4 id="資料上傳功能ltc_management-角色-6">資料上傳功能（LTC_MANAGEMENT 角色）</h4>
+
+<p><a id="ltc-171"></a></p>
+
+<p><strong>LTC-171：建立照護計畫</strong></p>
+
+<ul>
+  <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/CarePlan</code>，符合 <a href="StructureDefinition-LTCCarePlan.html">LTCCarePlan</a> Profile。</li>
+  <li>伺服器建立成功回傳 HTTP 201 Created，由 Location 標頭取得伺服器實際資源 ID 供配對端。</li>
+  <li>依大會合成測資填寫以下欄位內容：
+    <ul>
+      <li>計畫狀態（<code class="language-plaintext highlighter-rouge">status</code>，填入 <code class="language-plaintext highlighter-rouge">active</code>）。</li>
+      <li>計畫意圖（<code class="language-plaintext highlighter-rouge">intent</code>，填入 <code class="language-plaintext highlighter-rouge">plan</code> 或 <code class="language-plaintext highlighter-rouge">order</code>）。</li>
+      <li>計畫類別（<code class="language-plaintext highlighter-rouge">category</code>）。</li>
+      <li>個案參照（<code class="language-plaintext highlighter-rouge">subject</code>，填入大會預載之 Patient ID）。</li>
+      <li>執行期程（<code class="language-plaintext highlighter-rouge">period.start</code> 與 <code class="language-plaintext highlighter-rouge">period.end</code>）。</li>
+      <li>計畫提出者（<code class="language-plaintext highlighter-rouge">author</code>，填入大會預載之醫事人員或機構 ID）。</li>
+      <li>活動明細（<code class="language-plaintext highlighter-rouge">activity.detail.status</code>、<code class="language-plaintext highlighter-rouge">activity.detail.code</code>、<code class="language-plaintext highlighter-rouge">activity.detail.description</code>）。</li>
+      <li>關聯問題與目標參照識別碼（<code class="language-plaintext highlighter-rouge">addresses</code>、<code class="language-plaintext highlighter-rouge">goal</code>，填入大會預載之 Condition 與 Goal ID）。</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="資料查詢功能ltc_consumer-角色-6">資料查詢功能（LTC_CONSUMER 角色）</h4>
+
+<p><a id="ltc-172"></a></p>
+
+<p><strong>LTC-172：照護計畫查詢與讀取</strong></p>
+
+<ul>
+  <li>第一步條件查詢：發送 <code class="language-plaintext highlighter-rouge">GET [base]/CarePlan?subject=Patient/{id}</code>，伺服器回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>第二步單筆讀取：自查詢清單中選取 LTC-171 當次建立之計畫 ID，發送 <code class="language-plaintext highlighter-rouge">GET [base]/CarePlan/{id}</code>，伺服器回傳 HTTP 200 OK 與單筆 CarePlan 資源。</li>
+  <li>核對指定欄位內容：
+    <ul>
+      <li>個案參照（<code class="language-plaintext highlighter-rouge">subject</code>）。</li>
+      <li>計畫狀態（<code class="language-plaintext highlighter-rouge">status</code>）。</li>
+      <li>計畫意圖（<code class="language-plaintext highlighter-rouge">intent</code>）。</li>
+      <li>計畫類別（<code class="language-plaintext highlighter-rouge">category</code>）。</li>
+      <li>執行期程（<code class="language-plaintext highlighter-rouge">period</code>）。</li>
+      <li>活動明細（<code class="language-plaintext highlighter-rouge">activity.detail.status</code>、<code class="language-plaintext highlighter-rouge">activity.detail.code</code>、<code class="language-plaintext highlighter-rouge">activity.detail.description</code>）。</li>
+      <li>關聯問題與目標參照識別碼（<code class="language-plaintext highlighter-rouge">addresses</code>、<code class="language-plaintext highlighter-rouge">goal</code>）。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a id="sc8"></a></p>
+
+<h4 id="情境-8服務請求">情境 8：服務請求</h4>
+
+<p>服務請求情境模擬長照服務項目之開立與查閱流程。維護端上傳服務請求資料，查詢端依個案識別碼查詢照護服務請求，掌握服務項目、預計執行時間與開立單位。</p>
+
+<p>本情境使用 ServiceRequest 資源，遵循 <a href="StructureDefinition-LTCServiceRequest.html">LTCServiceRequest</a> Profile 規範。大會事前預載必要個案與醫事人員參照。</p>
+
+<h4 id="資料儲存管理功能ltc_repository-角色-7">資料儲存、管理功能（LTC_REPOSITORY 角色）</h4>
+
+<ul>
+  <li>儲存並維護符合 LTCServiceRequest 規範之服務請求資料。</li>
+  <li>支援以 POST 方式建立服務請求資料，成功時回傳 HTTP 201 Created 並於 Location 標頭回傳實際資源 ID。</li>
+  <li>支援以 GET 方式條件查詢服務請求資料，成功時回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>支援以 GET 方式單筆讀取服務請求資料，成功時回傳 HTTP 200 OK 與單筆 ServiceRequest 資源。</li>
+</ul>
+
+<h4 id="資料上傳功能ltc_management-角色-7">資料上傳功能（LTC_MANAGEMENT 角色）</h4>
+
+<p><a id="ltc-181"></a></p>
+
+<p><strong>LTC-181：建立服務請求</strong></p>
+
+<ul>
+  <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/ServiceRequest</code>，符合 <a href="StructureDefinition-LTCServiceRequest.html">LTCServiceRequest</a> Profile。</li>
+  <li>伺服器建立成功回傳 HTTP 201 Created，由 Location 標頭取得伺服器實際資源 ID 供配對端。</li>
+  <li>依大會合成測資填寫以下欄位內容：
+    <ul>
+      <li>請求狀態（<code class="language-plaintext highlighter-rouge">status</code>，填入 <code class="language-plaintext highlighter-rouge">active</code>）。</li>
+      <li>請求意圖（<code class="language-plaintext highlighter-rouge">intent</code>，填入 <code class="language-plaintext highlighter-rouge">order</code>）。</li>
+      <li>服務類別（<code class="language-plaintext highlighter-rouge">category</code>）。</li>
+      <li>服務項目代碼（<code class="language-plaintext highlighter-rouge">code</code>，填寫臺灣長照服務項目代碼，<code class="language-plaintext highlighter-rouge">code.coding[ltcServiceItem].system</code> 為 <code class="language-plaintext highlighter-rouge">http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item</code>，代碼如 <code class="language-plaintext highlighter-rouge">BA07</code> 等）。</li>
+      <li>個案參照（<code class="language-plaintext highlighter-rouge">subject</code>，填入大會預載之 Patient ID）。</li>
+      <li>預計執行時間（<code class="language-plaintext highlighter-rouge">occurrence[x]</code>，例如 <code class="language-plaintext highlighter-rouge">occurrenceDateTime</code>）。</li>
+      <li>開立時間（<code class="language-plaintext highlighter-rouge">authoredOn</code>，包含時區之日期時間）。</li>
+      <li>請求者參照識別碼（<code class="language-plaintext highlighter-rouge">requester</code>，填入大會預載之人員或機構 ID）。</li>
+      <li>執行者參照識別碼（<code class="language-plaintext highlighter-rouge">performer</code>，填入大會預載之人員或機構 ID）。</li>
+      <li>備註說明（<code class="language-plaintext highlighter-rouge">note</code>，按測資內容）。</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="資料查詢功能ltc_consumer-角色-7">資料查詢功能（LTC_CONSUMER 角色）</h4>
+
+<p><a id="ltc-182"></a></p>
+
+<p><strong>LTC-182：服務請求查詢與讀取</strong></p>
+
+<ul>
+  <li>第一步條件查詢：發送 <code class="language-plaintext highlighter-rouge">GET [base]/ServiceRequest?patient=Patient/{id}</code>，伺服器回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>第二步單筆讀取：自查詢清單中選取 LTC-181 當次建立之請求 ID，發送 <code class="language-plaintext highlighter-rouge">GET [base]/ServiceRequest/{id}</code>，伺服器回傳 HTTP 200 OK 與單筆 ServiceRequest 資源。</li>
+  <li>核對指定欄位內容：
+    <ul>
+      <li>個案參照（<code class="language-plaintext highlighter-rouge">subject</code>）。</li>
+      <li>請求狀態（<code class="language-plaintext highlighter-rouge">status</code>）。</li>
+      <li>請求意圖（<code class="language-plaintext highlighter-rouge">intent</code>）。</li>
+      <li>服務項目代碼（<code class="language-plaintext highlighter-rouge">code</code>）。</li>
+      <li>預計執行時間（<code class="language-plaintext highlighter-rouge">occurrence[x]</code>）。</li>
+      <li>開立時間（<code class="language-plaintext highlighter-rouge">authoredOn</code>）。</li>
+      <li>請求者參照識別碼（<code class="language-plaintext highlighter-rouge">requester</code>）。</li>
+      <li>執行者參照識別碼（<code class="language-plaintext highlighter-rouge">performer</code>）。</li>
+      <li>備註說明（<code class="language-plaintext highlighter-rouge">note</code>）。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a id="sc9"></a></p>
+
+<h4 id="情境-9照護執行紀錄">情境 9：照護執行紀錄</h4>
+
+<p>照護執行紀錄情境模擬照護人員登錄實際完成之照護活動處置紀錄，以及查詢端查閱處置紀錄的流程。維護端上傳已完成之照護處置紀錄，查詢端依個案識別碼查詢處置紀錄，確認單次已完成之照護項目與執行時間。</p>
+
+<p>本情境使用 Procedure 資源，遵循 <a href="StructureDefinition-LTCProcedureCareActivity.html">LTCProcedureCareActivity</a> Profile 規範。大會事前預載必要個案與醫事人員參照。</p>
+
+<h4 id="資料儲存管理功能ltc_repository-角色-8">資料儲存、管理功能（LTC_REPOSITORY 角色）</h4>
+
+<ul>
+  <li>儲存並維護符合 LTCProcedureCareActivity 規範之照護活動處置紀錄。</li>
+  <li>支援以 POST 方式建立照護執行紀錄，成功時回傳 HTTP 201 Created 並於 Location 標頭回傳實際資源 ID。</li>
+  <li>支援以 GET 方式條件查詢照護執行紀錄，成功時回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>支援以 GET 方式單筆讀取照護執行紀錄，成功時回傳 HTTP 200 OK 與單筆 Procedure 資源。</li>
+</ul>
+
+<h4 id="資料上傳功能ltc_management-角色-8">資料上傳功能（LTC_MANAGEMENT 角色）</h4>
+
+<p><a id="ltc-191"></a></p>
+
+<p><strong>LTC-191：上傳照護執行紀錄</strong></p>
+
+<ul>
+  <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/Procedure</code>，符合 <a href="StructureDefinition-LTCProcedureCareActivity.html">LTCProcedureCareActivity</a> Profile。</li>
+  <li>伺服器建立成功回傳 HTTP 201 Created，由 Location 標頭取得伺服器實際資源 ID 供配對端。</li>
+  <li>依大會合成測資填寫以下欄位內容：
+    <ul>
+      <li>執行狀態（<code class="language-plaintext highlighter-rouge">status</code>，填入 <code class="language-plaintext highlighter-rouge">completed</code>）。</li>
+      <li>照護活動代碼與名稱（<code class="language-plaintext highlighter-rouge">code</code>，填寫臺灣長照服務項目代碼，<code class="language-plaintext highlighter-rouge">code.coding[ltcServiceItem].system</code> 為 <code class="language-plaintext highlighter-rouge">http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-service-item</code>，代碼如 <code class="language-plaintext highlighter-rouge">BA07</code>，名稱為協助沐浴及洗頭）。</li>
+      <li>個案參照（<code class="language-plaintext highlighter-rouge">subject</code>，填入大會預載之 Patient ID）。</li>
+      <li>執行時間（<code class="language-plaintext highlighter-rouge">performed[x]</code>，例如 <code class="language-plaintext highlighter-rouge">performedDateTime</code>）。</li>
+      <li>執行人員參照識別碼（<code class="language-plaintext highlighter-rouge">performer.actor</code>，填入大會預載之醫事人員或照服員 ID）。</li>
+      <li>處置結果（<code class="language-plaintext highlighter-rouge">outcome</code>，按測資內容）。</li>
+      <li>附註說明（<code class="language-plaintext highlighter-rouge">note</code>，按測資內容）。</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="資料查詢功能ltc_consumer-角色-8">資料查詢功能（LTC_CONSUMER 角色）</h4>
+
+<p><a id="ltc-192"></a></p>
+
+<p><strong>LTC-192：照護執行紀錄查詢與讀取</strong></p>
+
+<ul>
+  <li>第一步條件查詢：發送 <code class="language-plaintext highlighter-rouge">GET [base]/Procedure?subject=Patient/{id}</code>，伺服器回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>第二步單筆讀取：自查詢清單中選取 LTC-191 當次建立之紀錄 ID，發送 <code class="language-plaintext highlighter-rouge">GET [base]/Procedure/{id}</code>，伺服器回傳 HTTP 200 OK 與單筆 Procedure 資源。</li>
+  <li>核對指定欄位內容：
+    <ul>
+      <li>個案參照（<code class="language-plaintext highlighter-rouge">subject</code>）。</li>
+      <li>執行狀態（<code class="language-plaintext highlighter-rouge">status</code>）。</li>
+      <li>照護活動代碼與名稱（<code class="language-plaintext highlighter-rouge">code</code>）。</li>
+      <li>執行時間（<code class="language-plaintext highlighter-rouge">performed[x]</code>）。</li>
+      <li>執行人員參照識別碼（<code class="language-plaintext highlighter-rouge">performer.actor</code>）。</li>
+      <li>處置結果或備註（<code class="language-plaintext highlighter-rouge">outcome</code>、<code class="language-plaintext highlighter-rouge">note</code>，按測資內容）。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="交易-transactions">交易 (Transactions)</h3>
+
+<table class="grid rwd-table">
+  <thead>
+    <tr>
+      <th>交易 ID</th>
+      <th>說明</th>
+      <th>發送方 (From)</th>
+      <th>接收方 (To)</th>
+      <th>類別</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LTC-111</td>
+      <td>建立病人基本資料</td>
+      <td>長照資料維護端 (LTC_MANAGEMENT)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>必測</td>
+    </tr>
+    <tr>
+      <td>LTC-112</td>
+      <td>病人基本資料查詢與讀取</td>
+      <td>長照資料查詢端 (LTC_CONSUMER)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>必測</td>
+    </tr>
+    <tr>
+      <td>LTC-121</td>
+      <td>建立機構基本資料</td>
+      <td>長照資料維護端 (LTC_MANAGEMENT)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>必測</td>
+    </tr>
+    <tr>
+      <td>LTC-122</td>
+      <td>機構基本資料查詢與讀取</td>
+      <td>長照資料查詢端 (LTC_CONSUMER)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>必測</td>
+    </tr>
+    <tr>
+      <td>LTC-131</td>
+      <td>上傳生理量測</td>
+      <td>長照資料維護端 (LTC_MANAGEMENT)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>必測</td>
+    </tr>
+    <tr>
+      <td>LTC-132</td>
+      <td>生理量測查詢與讀取</td>
+      <td>長照資料查詢端 (LTC_CONSUMER)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>必測</td>
+    </tr>
+    <tr>
+      <td>LTC-141</td>
+      <td>上傳用藥紀錄</td>
+      <td>長照資料維護端 (LTC_MANAGEMENT)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>必測</td>
+    </tr>
+    <tr>
+      <td>LTC-142</td>
+      <td>用藥紀錄查詢與讀取</td>
+      <td>長照資料查詢端 (LTC_CONSUMER)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>必測</td>
+    </tr>
+    <tr>
+      <td>LTC-151</td>
+      <td>建立健康問題</td>
+      <td>長照資料維護端 (LTC_MANAGEMENT)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>選測</td>
+    </tr>
+    <tr>
+      <td>LTC-152</td>
+      <td>健康問題查詢與讀取</td>
+      <td>長照資料查詢端 (LTC_CONSUMER)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>選測</td>
+    </tr>
+    <tr>
+      <td>LTC-161</td>
+      <td>建立照護目標</td>
+      <td>長照資料維護端 (LTC_MANAGEMENT)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>選測</td>
+    </tr>
+    <tr>
+      <td>LTC-162</td>
+      <td>照護目標查詢與讀取</td>
+      <td>長照資料查詢端 (LTC_CONSUMER)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>選測</td>
+    </tr>
+    <tr>
+      <td>LTC-171</td>
+      <td>建立照護計畫</td>
+      <td>長照資料維護端 (LTC_MANAGEMENT)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>選測</td>
+    </tr>
+    <tr>
+      <td>LTC-172</td>
+      <td>照護計畫查詢與讀取</td>
+      <td>長照資料查詢端 (LTC_CONSUMER)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>選測</td>
+    </tr>
+    <tr>
+      <td>LTC-181</td>
+      <td>建立服務請求</td>
+      <td>長照資料維護端 (LTC_MANAGEMENT)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>選測</td>
+    </tr>
+    <tr>
+      <td>LTC-182</td>
+      <td>服務請求查詢與讀取</td>
+      <td>長照資料查詢端 (LTC_CONSUMER)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>選測</td>
+    </tr>
+    <tr>
+      <td>LTC-191</td>
+      <td>上傳照護執行紀錄</td>
+      <td>長照資料維護端 (LTC_MANAGEMENT)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>選測</td>
+    </tr>
+    <tr>
+      <td>LTC-192</td>
+      <td>照護執行紀錄查詢與讀取</td>
+      <td>長照資料查詢端 (LTC_CONSUMER)</td>
+      <td>長照資料儲存端 (LTC_REPOSITORY)</td>
+      <td>選測</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 29, 2026 04:34+0800">2026-09-29</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

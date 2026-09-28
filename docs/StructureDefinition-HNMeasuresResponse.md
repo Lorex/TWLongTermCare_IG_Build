@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNMeasuresResponse | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNMeasuresResponse |
+| Draft as of 2026-09-29 | *Computable Name*:HNMeasuresResponse |
 
  
 記錄照護計畫措施的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-HNMeasuresResponse.c
   "name" : "HNMeasuresResponse",
   "title" : "居家護理－照護計畫措施表單",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

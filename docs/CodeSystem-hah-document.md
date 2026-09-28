@@ -9,7 +9,8 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/hah-document | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHDocumentCS |
+| Draft as of 2026-09-29 | *Computable Name*:HAHDocumentCS |
+| *Other Identifiers:*OID:2.25.316425093395220320418460769744745327297 | |
 
  
 本 IG 的結案與轉銜摘要種類及章節。各欄位使用對應值集。 
@@ -28,12 +29,16 @@
   "resourceType" : "CodeSystem",
   "id" : "hah-document",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.316425093395220320418460769744745327297"
+  }],
   "version" : "1.1.0",
   "name" : "HAHDocumentCS",
   "title" : "在宅急症－摘要種類與章節代碼",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

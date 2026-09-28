@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/PASportObservationIntracellularWater | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:PASportObservationIntracellularWater |
+| Active as of 2026-09-29 | *Computable Name*:PASportObservationIntracellularWater |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現身體組成分析儀中涉及之細胞內水分資料。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-PASportObservationIn
   "name" : "PASportObservationIntracellularWater",
   "title" : "身體組成分析儀－細胞內水分",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

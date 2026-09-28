@@ -41,8 +41,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"10"}
-    h3,h4,h5,h6{--heading-prefix:"10"}</style>
+    <style type="text/css">h2{--heading-prefix:"18"}
+    h3,h4,h5,h6{--heading-prefix:"18"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -122,23 +122,59 @@
   <li><a href="security.html">安全性</a></li>
   <li><a href="validates.html">驗證教學</a></li>
   <li class="dropdown">
-    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <a href="#">專案聯測<b class="caret"></b></a>
     <ul class="dropdown-menu">
-      <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
-      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
-      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
-      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
-      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
-      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+      <li class="dropdown-submenu">
+        <a href="2025-connectathon.html">2025 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2025-connectathon.html">聯測說明</a></li>
+          <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+          <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+          <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+          <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+          <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+          <li><a href="2025-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="2026-connectathon.html">2026 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2026-connectathon.html">聯測說明</a></li>
+          <li><a href="2026-connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="2026-track0.html">共通前置：OAuth2 存取認證</a></li>
+          <li><a href="2026-track1.html">賽道 1：長照共通資料交換</a></li>
+          <li><a href="2026-track2.html">賽道 2：居家照護資料交換</a></li>
+          <li><a href="2026-track3.html">賽道 3：長照服務費用支付審核</a></li>
+          <li><a href="2026-track4.html">賽道 4：在宅急症照護資料交換</a></li>
+          <li><a href="2026-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li><a href="connectathon-result.html">聯測松結果</a></li>
   <!-- <li><a href="history.html">版本歷程</a></li> -->
 </ul>      
 
 <style>
-.dropdown-menu li:hover .sub-menu {visibility: visible;}
-.dropdown:hover .dropdown-menu {display: block;}
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {display: block;}
+.dropdown-submenu {position: relative;}
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  top: 0;
+  left: 100%;
+  margin-top: 0;
+}
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus-within > .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 767px) {
+  .dropdown-submenu > .dropdown-menu {
+    position: static;
+    float: none;
+    margin-left: 15px;
+  }
+}
 
 @media only screen and (max-width: 992px) {
   table.colsi {
@@ -217,11 +253,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <p>本頁為在宅急症的專用來源欄位與 FHIR 對照表。</p>
 
-<p>資料來源為 HaH-frontend-mobile <code class="language-plaintext highlighter-rouge">2838819f</code> 與 HaH-backend <code class="language-plaintext highlighter-rouge">6fbc1c3f</code> 的程式盤點。來源以檔案及語意標示；沒有正式傳輸欄位的新增結構明確標示為新增。此表不是既有 API 的 JSON Schema。</p>
-
-<p>邏輯模型 cardinality 描述完整交換資料集；個別資料格式、條件與 Reference 型態仍以各 Profile 為準。Quantity、CodeableConcept、Period 等共用型態使用其 FHIR 子欄位，不另複製。</p>
-
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
       <th>模型欄位</th>
@@ -335,7 +367,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">dateTime</code></td>
       <td>死亡時間</td>
       <td><code class="language-plaintext highlighter-rouge">Patient.deceasedDateTime</code></td>
-      <td>新增；不可由結案旗標推定</td>
+      <td>新增死亡時間</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">intake</code></td>
@@ -983,7 +1015,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>給藥處方</td>
       <td><code class="language-plaintext highlighter-rouge">HAHMedicationRequest</code></td>
-      <td>新增；送藥畫面不等於處方</td>
+      <td>新增結構化處方</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">medicationOrder.medication</code></td>
@@ -1191,7 +1223,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">BackboneElement</code></td>
       <td>過敏資訊</td>
       <td><code class="language-plaintext highlighter-rouge">HAHAllergyIntolerance</code></td>
-      <td>原 Condition 過敏旗標不足，新增結構</td>
+      <td>原 Condition 過敏旗標；擴充物質、確認狀態及反應</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">allergy.substance</code></td>
@@ -1436,10 +1468,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>費用、值班津貼、跨區里程、補助審核、地圖排序、視訊房間 token、通知已讀與帳號資料屬行政或系統功能，本版不納入臨床資料集。送藥工作使用 Task；調劑紀錄可引用 TW Core MedicationDispense，但配送完成不代表完成給藥。</p>
-
-<p>部份來源欄位只有自由文字，無法可靠取得處方劑量、過敏物質、採檢時間或給藥期間時，須補蒐集資料；不得由文字猜測後宣稱已符合 Profile。DNR 意願、設備治療設定與風險量表依實際規範交換；本版不制定 DNR 醫囑格式或 NEWS 算法。</p>
-
 <p><a href="hah.html">返回在宅急症主題</a>。</p>
 
 
@@ -1461,7 +1489,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 17, 2026 17:33+0800">2026-09-17</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 29, 2026 04:34+0800">2026-09-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

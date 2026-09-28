@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHEncounter | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHEncounter |
+| Draft as of 2026-09-29 | *Computable Name*:HAHEncounter |
 
  
 在宅急症的共同就診資料，包含個案、療程、服務機構與實際照護期間。 
@@ -18,6 +18,7 @@
 
 * Derived from this Profile: [在宅急症－整段照護](StructureDefinition-HAHAdmissionEncounter.md) and [在宅急症－單次訪視](StructureDefinition-HAHVisitEncounter.md)
 * Refer to this Profile: [在宅急症－過敏資訊](StructureDefinition-HAHAllergyIntolerance.md), [在宅急症－照護資料集](StructureDefinition-HAHCareDataset.md), [在宅急症－照護計畫](StructureDefinition-HAHCarePlan.md), [在宅急症－臨床評估](StructureDefinition-HAHClinicalImpression.md)... Show 11 more, [在宅急症－照會與交班](StructureDefinition-HAHCommunication.md), [在宅急症－結案與轉銜摘要](StructureDefinition-HAHCompositionSummary.md), [在宅急症－診斷與照護問題](StructureDefinition-HAHCondition.md), [在宅急症－檢驗報告](StructureDefinition-HAHDiagnosticReport.md), [在宅急症－照護附件](StructureDefinition-HAHDocumentReference.md), [在宅急症－給藥與輸注](StructureDefinition-HAHMedicationAdministration.md), [在宅急症－給藥處方](StructureDefinition-HAHMedicationRequest.md), [在宅急症－檢驗結果](StructureDefinition-HAHObservationLab.md), [在宅急症－處置紀錄](StructureDefinition-HAHProcedure.md), [在宅急症－服務請求](StructureDefinition-HAHServiceRequest.md) and [在宅急症－照護工作](StructureDefinition-HAHVisitTask.md)
+* Examples for this Profile: [Encounter/hah-encounter](Encounter-hah-encounter.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/tw.iii.ltc|current/StructureDefinition/StructureDefinition-HAHEncounter.json)
 
@@ -42,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHEncounter.csv), [
   "name" : "HAHEncounter",
   "title" : "在宅急症－就診基礎",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -89,6 +90,30 @@ Other representations of profile: [CSV](StructureDefinition-HAHEncounter.csv), [
         "expression" : "status = 'finished' implies period.end.exists()",
         "source" : "http://ltc-ig.fhir.tw/StructureDefinition/HAHEncounter"
       }]
+    },
+    {
+      "id" : "Encounter.class",
+      "path" : "Encounter.class",
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode|3.0.0"
+      }
+    },
+    {
+      "id" : "Encounter.classHistory.class",
+      "path" : "Encounter.classHistory.class",
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode|3.0.0"
+      }
+    },
+    {
+      "id" : "Encounter.priority",
+      "path" : "Encounter.priority",
+      "binding" : {
+        "strength" : "example",
+        "valueSet" : "http://terminology.hl7.org/ValueSet/v3-ActPriority|3.0.0"
+      }
     },
     {
       "id" : "Encounter.subject",
@@ -143,6 +168,14 @@ Other representations of profile: [CSV](StructureDefinition-HAHEncounter.csv), [
         "code" : "Reference",
         "targetProfile" : ["http://ltc-ig.fhir.tw/StructureDefinition/HAHCondition"]
       }]
+    },
+    {
+      "id" : "Encounter.hospitalization.reAdmission",
+      "path" : "Encounter.hospitalization.reAdmission",
+      "binding" : {
+        "strength" : "example",
+        "valueSet" : "http://terminology.hl7.org/ValueSet/v2-0092|3.0.0"
+      }
     },
     {
       "id" : "Encounter.serviceProvider",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHEpisodeOfCare | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHEpisodeOfCare |
+| Draft as of 2026-09-29 | *Computable Name*:HAHEpisodeOfCare |
 
  
 每次收案建立一筆療程，記錄負責機構、期間、診斷與團隊。再次收案建立新的療程，仍參照同一個案。 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHEpisodeOfCare.csv
   "name" : "HAHEpisodeOfCare",
   "title" : "在宅急症－收案療程",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

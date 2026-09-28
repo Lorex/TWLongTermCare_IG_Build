@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHCompositionSummary | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHCompositionSummary |
+| Draft as of 2026-09-29 | *Computable Name*:HAHCompositionSummary |
 
  
-彙整本次療程與接續照護所需的資訊。每個章節均提供可閱讀文字，資料不足時說明未知或未評估，不得推定為無。 
+彙整本次療程與接續照護所需的資訊。以療程、問題、過敏、藥物、結果、照護及後續追蹤七個章節提供可閱讀的摘要。 
 
 **Usages:**
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHCompositionSummar
   "name" : "HAHCompositionSummary",
   "title" : "在宅急症－結案與轉銜摘要",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHCompositionSummar
       "value" : "https://www.ida.gov.tw/"
     }]
   }],
-  "description" : "彙整本次療程與接續照護所需的資訊。每個章節均提供可閱讀文字，資料不足時說明未知或未評估，不得推定為無。",
+  "description" : "彙整本次療程與接續照護所需的資訊。以療程、問題、過敏、藥物、結果、照護及後續追蹤七個章節提供可閱讀的摘要。",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "workflow",

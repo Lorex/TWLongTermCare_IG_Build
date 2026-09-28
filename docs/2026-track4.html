@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>2026 Track 4 - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"11"}
+    h3,h4,h5,h6{--heading-prefix:"11"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引(TW LTC IG)</span>
+            <br/>
+            <span style="display:inline-block;">1.1.0 - STU 1.1.0
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">應用說明</a></li>
+  <li><a href="toc.html">目錄</a></li>
+  <li class="dropdown">
+		<a href="#">主題說明<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="fee-audit.html">長照支付審查</a>
+			</li>
+			<li>
+				<a href="home-nursing.html">居家護理照護管理系統</a>
+			</li>
+			<li>
+				<a href="hah.html">在宅急症照護</a>
+			</li>
+		</ul>
+	</li>
+	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="capability-statements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters-and-operation.html">查詢參數及操作定義</a>
+			</li>
+			<li>
+				<a href="logical-models.html">邏輯模型</a>
+			</li>
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles 及 Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+  <li><a href="examples.html">範例</a></li>
+  <li><a href="downloads.html">結構定義與範例檔下載</a></li>
+  <li><a href="security.html">安全性</a></li>
+  <li><a href="validates.html">驗證教學</a></li>
+  <li class="dropdown">
+    <a href="#">專案聯測<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li class="dropdown-submenu">
+        <a href="2025-connectathon.html">2025 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2025-connectathon.html">聯測說明</a></li>
+          <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+          <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+          <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+          <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+          <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+          <li><a href="2025-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="2026-connectathon.html">2026 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2026-connectathon.html">聯測說明</a></li>
+          <li><a href="2026-connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="2026-track0.html">共通前置：OAuth2 存取認證</a></li>
+          <li><a href="2026-track1.html">賽道 1：長照共通資料交換</a></li>
+          <li><a href="2026-track2.html">賽道 2：居家照護資料交換</a></li>
+          <li><a href="2026-track3.html">賽道 3：長照服務費用支付審核</a></li>
+          <li><a href="2026-track4.html">賽道 4：在宅急症照護資料交換</a></li>
+          <li><a href="2026-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <!-- <li><a href="history.html">版本歷程</a></li> -->
+</ul>      
+
+<style>
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {display: block;}
+.dropdown-submenu {position: relative;}
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  top: 0;
+  left: 100%;
+  margin-top: 0;
+}
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus-within > .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 767px) {
+  .dropdown-submenu > .dropdown-menu {
+    position: static;
+    float: none;
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  table.colsi {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  table.rwd-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  p, a {
+    word-break: break-all;
+  }
+}
+</style>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>2026 Track 4</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引(TW LTC IG) - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>2026 Track 4</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#賽道-4在宅急症照護資料交換" id="markdown-toc-賽道-4在宅急症照護資料交換">賽道 4：在宅急症照護資料交換</a>    <ul>
+      <li><a href="#說明" id="markdown-toc-說明">說明</a></li>
+      <li><a href="#檢核項目" id="markdown-toc-檢核項目">檢核項目</a></li>
+      <li><a href="#各系統角色於本賽道之作用" id="markdown-toc-各系統角色於本賽道之作用">各系統角色於本賽道之作用</a></li>
+      <li><a href="#通過條件" id="markdown-toc-通過條件">通過條件</a></li>
+      <li><a href="#情境-scenarios" id="markdown-toc-情境-scenarios">情境 (Scenarios)</a></li>
+      <li><a href="#交易-transactions" id="markdown-toc-交易-transactions">交易 (Transactions)</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h2 id="賽道-4在宅急症照護資料交換">賽道 4：在宅急症照護資料交換</h2>
+
+<h3 id="說明">說明</h3>
+
+<p>在宅急症照護資料交換依據<a href="https://www.nhi.gov.tw/ch/cp-15112-18d97-3660-1.html">全民健康保險在宅急症照護試辦計畫</a>之「住院替代服務」（Hospital-at-Home, HAH）模式，聚焦於急症感染個案之跨系統資訊整合與資料流轉。臨床流程涵蓋初次訪視與收案、持續訪視與急症治療，以及後續照護安排與交班三階段。醫療端與長照端透過標準單一資源之建立、條件查詢與單筆讀取機制，驗證在宅急症跨專業協同與轉銜之資訊互通能力。相關在宅行政與臨床資源可參考<a href="hah.html">在宅專題說明</a>。</p>
+
+<h3 id="檢核項目">檢核項目</h3>
+
+<ul>
+  <li>參測單位依所選角色實作初次訪視與收案之資料建立或查讀（情境 1，必測）</li>
+  <li>參測單位依所選角色與臨床職責實作持續訪視與急症治療之資料建立或查讀（情境 2，包含本次訪視與生理量測必測，並自處方給藥或在宅處置中擇一完成，檢驗為選測）</li>
+  <li>參測單位依所選角色實作後續照護安排與交班之資料建立或查讀（情境 3，包含照護計畫與照護交班必測，訪視工作指派為選測）</li>
+</ul>
+
+<h3 id="各系統角色於本賽道之作用">各系統角色於本賽道之作用</h3>
+
+<table class="grid rwd-table">
+  <thead>
+    <tr>
+      <th>Keyword</th>
+      <th>名稱</th>
+      <th>說明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LTC_MANAGEMENT</td>
+      <td>LTC Creator</td>
+      <td>在宅照護資料建立端，負責在各項在宅急症業務流程中發起單筆 FHIR 資源建立請求（POST），產出符合 HAH Profile 規範之收案、就診、診斷、評估、量測、處方、給藥、處置、計畫、任務與交班資源。</td>
+    </tr>
+    <tr>
+      <td>LTC_CONSUMER</td>
+      <td>LTC Consumer</td>
+      <td>接續與協同照護端，負責向儲存端發起條件查詢（Search）與單筆讀取（Read）請求，檢索並核對指定個案之各階段臨床資料、訪視歷程與跨資源引用關聯。</td>
+    </tr>
+    <tr>
+      <td>LTC_REPOSITORY</td>
+      <td>LTC Repository</td>
+      <td>在宅急症資料儲存端，負責接收來自 Creator 之 POST 請求，執行結構與條件驗證，回傳 HTTP 201 Created 與 Location 標頭，並支援 Consumer 進行條件查詢（HTTP 200 OK 與 searchset Bundle）及單筆讀取。</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="通過條件">通過條件</h3>
+
+<ul>
+  <li>參測單位依報名角色與臨床職責配對共同完成流程，大會逐交易與逐 Resource 記錄實作能力。</li>
+  <li>必測項目：
+    <ul>
+      <li>情境 1（SC1 初次訪視與收案）：必須完成 LTC-411 至 LTC-414，確立收案療程、整段照護脈絡與初次實地到宅訪視紀錄。</li>
+      <li>情境 2（SC2 持續訪視與治療）：必須完成 LTC-421 與 LTC-422（新訪視與生理量測），並自「LTC-423 與 LTC-424（處方與給藥紀錄）」或「LTC-427 與 LTC-428（在宅處置紀錄）」中至少擇一組完成。</li>
+      <li>情境 3（SC3 後續照護安排與交班）：必須完成 LTC-431 與 LTC-432（後續照護計畫）以及 LTC-435 與 LTC-436（照護交班紀錄）。</li>
+    </ul>
+  </li>
+  <li>選測項目：
+    <ul>
+      <li>LTC-415 與 LTC-416（初訪評估與急症診斷）：適用具備結構化醫師評估與診斷紀錄之系統。</li>
+      <li>LTC-425 與 LTC-426（床側檢驗結果與報告）：適用配備即時檢驗儀器介接或檢驗資訊模組之系統。</li>
+      <li>LTC-433 與 LTC-434（指派與查讀下一次訪視工作）：適用具備跨專業行動派案與工作排程管理之系統。</li>
+    </ul>
+  </li>
+  <li>操作順序：初訪完成並決定收案後，先上傳療程與整段照護，再上傳記載實際初訪時間的訪視紀錄。</li>
+  <li>大會事前備妥 Patient、Organization、Practitioner、PractitionerRole 等基本資料及參照清單，本次測試主要受測資源由配對端新建。Creator 完成所選建立交易，Consumer 完成對應查詢與讀取，Repository 支援兩端操作。建立端每次請求送出單一 Resource JSON，由 Location 標頭取得伺服器實際資源 ID。查詢端以指定參數發起 Search 取得 searchset Bundle，再以本輪實際 ID 發起 Read 單筆資源，核對指定欄位與跨資源參照。</li>
+</ul>
+
+<h3 id="情境-scenarios">情境 (Scenarios)</h3>
+
+<table class="grid rwd-table">
+  <thead>
+    <tr>
+      <th>情境 ID</th>
+      <th>說明</th>
+      <th>測試類別</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SC1</td>
+      <td>初次訪視與收案</td>
+      <td>必測</td>
+    </tr>
+    <tr>
+      <td>SC2</td>
+      <td>持續訪視與治療</td>
+      <td>必測</td>
+    </tr>
+    <tr>
+      <td>SC3</td>
+      <td>後續照護安排與交班</td>
+      <td>必測</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a id="sc1"></a></p>
+
+<h4 id="情境-1初次訪視與收案">情境 1：初次訪視與收案</h4>
+
+<p>初次訪視與收案情境模擬個案出現急症狀況後，在宅醫療團隊前往個案家中進行初次訪視與評估。經醫師臨床判斷符合在宅急症收案標準並取得同意後，系統正式建立收案療程與在宅住院整段照護就診脈絡，接續上傳記載實際到離時間之初訪紀錄，以及醫師之初訪臨床評估與急症診斷。</p>
+
+<p>本情境使用 EpisodeOfCare、Encounter、Condition 與 ClinicalImpression 資源，遵循 <a href="StructureDefinition-HAHEpisodeOfCare.html">HAHEpisodeOfCare</a>、<a href="StructureDefinition-HAHAdmissionEncounter.html">HAHAdmissionEncounter</a>、<a href="StructureDefinition-HAHVisitEncounter.html">HAHVisitEncounter</a>、<a href="StructureDefinition-HAHCondition.html">HAHCondition</a> 及 <a href="StructureDefinition-HAHClinicalImpression.html">HAHClinicalImpression</a> Profile 規範。大會事前預載符合 <a href="StructureDefinition-HAHPatient.html">HAHPatient</a>、<a href="StructureDefinition-Organization-twltc.html">LTCOrganization</a>、<a href="StructureDefinition-LTCPractitioner.html">LTCPractitioner</a> 與 <a href="StructureDefinition-LTCPractitionerRole.html">LTCPractitionerRole</a> 之基本資料與參照清單。</p>
+
+<h4 id="資料儲存管理功能ltc_repository-角色">資料儲存、管理功能（LTC_REPOSITORY 角色）</h4>
+
+<ul>
+  <li>能夠接收來自在宅醫療端之收案療程、整段照護、訪視、診斷與臨床評估資源，遵循 FHIR R4 格式儲存並提供查詢。</li>
+  <li>支援以 POST 方式建立單筆資源，成功時回傳 HTTP 201 Created 並於 Location 標頭回傳實際資源 ID。</li>
+  <li>支援以 GET 方式條件查詢資料，成功時回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>支援以 GET 方式單筆讀取資料，成功時回傳 HTTP 200 OK 與單筆資源。</li>
+</ul>
+
+<h4 id="資料建立與查讀功能">資料建立與查讀功能</h4>
+
+<p><a id="ltc-411"></a></p>
+
+<p><strong>LTC-411：建立收案與整段照護（LTC_MANAGEMENT 角色）</strong></p>
+
+<ul>
+  <li>初訪完成並決定收案後，建立端依序發送兩筆 POST 請求建立行政基礎架構：
+    <ol>
+      <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/EpisodeOfCare</code>，遵循 <a href="StructureDefinition-HAHEpisodeOfCare.html">HAHEpisodeOfCare</a> Profile。填寫 <code class="language-plaintext highlighter-rouge">status</code>（active）、<code class="language-plaintext highlighter-rouge">type</code>（代碼 acute-home，系統為 <code class="language-plaintext highlighter-rouge">http://ltc-ig.fhir.tw/CodeSystem/hah-activity</code>）、<code class="language-plaintext highlighter-rouge">patient</code>（參照預載 HAHPatient）、<code class="language-plaintext highlighter-rouge">managingOrganization</code>（參照預載 LTCOrganization）、療程識別碼 <code class="language-plaintext highlighter-rouge">identifier.system</code> 與 <code class="language-plaintext highlighter-rouge">identifier.value</code>，以及收案開始時間 <code class="language-plaintext highlighter-rouge">period.start</code>。伺服器建立成功回傳 HTTP 201 Created，由 Location 標頭取得實際 EpisodeOfCare ID。</li>
+      <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/Encounter</code>，遵循 <a href="StructureDefinition-HAHAdmissionEncounter.html">HAHAdmissionEncounter</a> Profile。填寫 <code class="language-plaintext highlighter-rouge">status</code>（in-progress）、<code class="language-plaintext highlighter-rouge">class</code>（系統 <code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/v3-ActCode</code>，代碼 <code class="language-plaintext highlighter-rouge">IMP</code>）、<code class="language-plaintext highlighter-rouge">type</code>（代碼 acute-home）、<code class="language-plaintext highlighter-rouge">subject</code>（參照相同 HAHPatient）、<code class="language-plaintext highlighter-rouge">serviceProvider</code>（服務機構）、<code class="language-plaintext highlighter-rouge">participant.individual</code>（醫事人員）、實際照護開始時間 <code class="language-plaintext highlighter-rouge">period.start</code>，且 <code class="language-plaintext highlighter-rouge">episodeOfCare</code> 參照上一步取得之實際 EpisodeOfCare ID。伺服器建立成功回傳 HTTP 201 Created，由 Location 標頭取得實際 AdmissionEncounter ID。</li>
+    </ol>
+  </li>
+</ul>
+
+<p><a id="ltc-412"></a></p>
+
+<p><strong>LTC-412：查詢與讀取收案與整段照護（LTC_CONSUMER 角色）</strong></p>
+
+<ul>
+  <li>查詢端檢索確認個案收案身分與在宅急症整段住院脈絡：
+    <ol>
+      <li>條件查詢療程：發送 <code class="language-plaintext highlighter-rouge">GET [base]/EpisodeOfCare?patient=Patient/{id}</code>，伺服器回傳 HTTP 200 OK 與 searchset Bundle。</li>
+      <li>單筆讀取療程：選取 LTC-411 當次建立之 EpisodeOfCare ID，發送 <code class="language-plaintext highlighter-rouge">GET [base]/EpisodeOfCare/{id}</code>，核對個案、管理機構、<code class="language-plaintext highlighter-rouge">status</code>（active）、<code class="language-plaintext highlighter-rouge">type</code>（acute-home）與 <code class="language-plaintext highlighter-rouge">period.start</code>。</li>
+      <li>條件查詢整段照護：發送 <code class="language-plaintext highlighter-rouge">GET [base]/Encounter?subject=Patient/{id}&amp;class=IMP</code>，伺服器回傳 HTTP 200 OK 與 searchset Bundle。</li>
+      <li>單筆讀取整段照護：選取 LTC-411 當次建立之 AdmissionEncounter ID，發送 <code class="language-plaintext highlighter-rouge">GET [base]/Encounter/{id}</code>，核對 <code class="language-plaintext highlighter-rouge">status</code>（in-progress）、<code class="language-plaintext highlighter-rouge">class</code>（IMP）、<code class="language-plaintext highlighter-rouge">subject</code>、<code class="language-plaintext highlighter-rouge">serviceProvider</code>、<code class="language-plaintext highlighter-rouge">participant</code>、<code class="language-plaintext highlighter-rouge">period.start</code>，並確認 <code class="language-plaintext highlighter-rouge">episodeOfCare</code> 參照與當次 EpisodeOfCare ID 一致。</li>
+    </ol>
+  </li>
+</ul>
+
+<p><a id="ltc-413"></a></p>
+
+<p><strong>LTC-413：建立初次訪視紀錄（LTC_MANAGEMENT 角色）</strong></p>
+
+<ul>
+  <li>建立端上傳醫師實地到宅初訪之就診歷程：
+    <ul>
+      <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/Encounter</code>，遵循 <a href="StructureDefinition-HAHVisitEncounter.html">HAHVisitEncounter</a> Profile。</li>
+      <li><code class="language-plaintext highlighter-rouge">status</code> 填入 <code class="language-plaintext highlighter-rouge">finished</code>。</li>
+      <li><code class="language-plaintext highlighter-rouge">class</code> 填入 <code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/v3-ActCode#HH</code>。</li>
+      <li><code class="language-plaintext highlighter-rouge">type</code> 填入 <code class="language-plaintext highlighter-rouge">http://ltc-ig.fhir.tw/CodeSystem/hah-activity#visit</code>。</li>
+      <li><code class="language-plaintext highlighter-rouge">extension[mode]</code> 填入 <code class="language-plaintext highlighter-rouge">in-person</code>。</li>
+      <li><code class="language-plaintext highlighter-rouge">subject</code> 參照個案 HAHPatient。</li>
+      <li><code class="language-plaintext highlighter-rouge">serviceProvider</code> 參照服務機構。</li>
+      <li><code class="language-plaintext highlighter-rouge">participant.individual</code> 參照主責醫師。</li>
+      <li><code class="language-plaintext highlighter-rouge">period.start</code> 與 <code class="language-plaintext highlighter-rouge">period.end</code> 填入初次到宅之實際起訖時間。</li>
+      <li><code class="language-plaintext highlighter-rouge">episodeOfCare</code> 指向 LTC-411 建立之實際 EpisodeOfCare ID。</li>
+      <li><code class="language-plaintext highlighter-rouge">partOf</code> 指向 LTC-411 建立之實際 AdmissionEncounter ID。</li>
+      <li>伺服器建立成功回傳 HTTP 201 Created，由 Location 標頭取得實際初訪 Encounter ID。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a id="ltc-414"></a></p>
+
+<p><strong>LTC-414：查詢與讀取初次訪視紀錄（LTC_CONSUMER 角色）</strong></p>
+
+<ul>
+  <li>查詢端核對初次到宅就診細節與人員時間：
+    <ul>
+      <li>第一步條件查詢：發送 <code class="language-plaintext highlighter-rouge">GET [base]/Encounter?subject=Patient/{id}&amp;part-of=Encounter/{admission_id}</code> 檢索訪視清單，伺服器回傳 HTTP 200 OK 與 searchset Bundle。</li>
+      <li>第二步單筆讀取：選取 LTC-413 當次建立之 Visit Encounter ID，發送 <code class="language-plaintext highlighter-rouge">GET [base]/Encounter/{id}</code>，伺服器回傳 HTTP 200 OK 與單筆 Encounter 資源。</li>
+      <li>核對 <code class="language-plaintext highlighter-rouge">status</code>（finished）、訪視起訖時間（<code class="language-plaintext highlighter-rouge">period.start</code>、<code class="language-plaintext highlighter-rouge">period.end</code>）、主責醫師（<code class="language-plaintext highlighter-rouge">participant</code>）、服務機構（<code class="language-plaintext highlighter-rouge">serviceProvider</code>）、訪視方式（<code class="language-plaintext highlighter-rouge">class</code> 為 HH、<code class="language-plaintext highlighter-rouge">mode</code> 為 in-person）以及 <code class="language-plaintext highlighter-rouge">episodeOfCare</code> 與 <code class="language-plaintext highlighter-rouge">partOf</code> 關聯。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a id="ltc-415"></a></p>
+
+<p><strong>LTC-415：上傳初訪評估與診斷（LTC_MANAGEMENT 角色）</strong></p>
+
+<ul>
+  <li>建立端上傳到宅醫師判斷之急症診斷與整體臨床評估：
+    <ol>
+      <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/Condition</code>，遵循 <a href="StructureDefinition-HAHCondition.html">HAHCondition</a> Profile。填入 <code class="language-plaintext highlighter-rouge">subject</code>、<code class="language-plaintext highlighter-rouge">clinicalStatus</code>、<code class="language-plaintext highlighter-rouge">verificationStatus</code>、<code class="language-plaintext highlighter-rouge">category</code>、診斷代碼（如肺炎代碼）、<code class="language-plaintext highlighter-rouge">recordedDate</code>，且 <code class="language-plaintext highlighter-rouge">encounter</code> 指向 LTC-413 建立之初訪 Encounter ID。伺服器建立成功回傳 HTTP 201 Created 並取得實際 Condition ID。</li>
+      <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/ClinicalImpression</code>，遵循 <a href="StructureDefinition-HAHClinicalImpression.html">HAHClinicalImpression</a> Profile。填入 <code class="language-plaintext highlighter-rouge">subject</code>、<code class="language-plaintext highlighter-rouge">status</code>（completed）、<code class="language-plaintext highlighter-rouge">assessor</code>（指向醫師）、<code class="language-plaintext highlighter-rouge">effectiveDateTime</code> 或 <code class="language-plaintext highlighter-rouge">effectivePeriod</code>、<code class="language-plaintext highlighter-rouge">date</code>、<code class="language-plaintext highlighter-rouge">summary</code>（評估文字摘要），且 <code class="language-plaintext highlighter-rouge">encounter</code> 指向 LTC-413 初訪 Encounter ID，<code class="language-plaintext highlighter-rouge">problem</code> 指向上一步建立之 Condition ID。伺服器建立成功回傳 HTTP 201 Created 並取得實際 ClinicalImpression ID。</li>
+    </ol>
+  </li>
+</ul>
+
+<p><a id="ltc-416"></a></p>
+
+<p><strong>LTC-416：查詢與讀取初訪評估與診斷（LTC_CONSUMER 角色）</strong></p>
+
+<ul>
+  <li>查詢端查讀初次評估與急症問題：
+    <ol>
+      <li>條件查詢診斷：發送 <code class="language-plaintext highlighter-rouge">GET [base]/Condition?subject=Patient/{id}</code>，自清單選取目標診斷發送 <code class="language-plaintext highlighter-rouge">GET [base]/Condition/{id}</code>。核對診斷代碼、<code class="language-plaintext highlighter-rouge">clinicalStatus</code>、<code class="language-plaintext highlighter-rouge">verificationStatus</code>、<code class="language-plaintext highlighter-rouge">recordedDate</code> 與初訪 <code class="language-plaintext highlighter-rouge">encounter</code> 參照。</li>
+      <li>條件查詢臨床評估：發送 <code class="language-plaintext highlighter-rouge">GET [base]/ClinicalImpression?subject=Patient/{id}</code>，自清單選取目標評估發送 <code class="language-plaintext highlighter-rouge">GET [base]/ClinicalImpression/{id}</code>。核對評估狀態（completed）、評估人員（<code class="language-plaintext highlighter-rouge">assessor</code>）、評估時間、文字摘要（<code class="language-plaintext highlighter-rouge">summary</code>），並確認 <code class="language-plaintext highlighter-rouge">encounter</code> 指向初訪紀錄，且 <code class="language-plaintext highlighter-rouge">problem</code> 正確指向當次建立之 Condition ID。</li>
+    </ol>
+  </li>
+</ul>
+
+<p><a id="sc2"></a></p>
+
+<h4 id="情境-2持續訪視與治療">情境 2：持續訪視與治療</h4>
+
+<p>持續訪視與治療情境模擬收案後之急性期照護進程。醫師與護理人員依排程或病情需要分次到宅訪視，每次到宅均視為獨立之單次訪視，統一掛載於同一整段照護之下。本情境涵蓋本次訪視與生命徵象量測、抗生素或輸液之處方開立與給藥執行、床側檢驗採檢與報告回傳，以及在宅醫療處置。</p>
+
+<p>本情境使用 Encounter、Observation、MedicationRequest、MedicationAdministration、DiagnosticReport 及 Procedure 資源，遵循 <a href="StructureDefinition-HAHVisitEncounter.html">HAHVisitEncounter</a>、<a href="StructureDefinition-LTCObservationVitalSigns.html">LTCObservationVitalSigns</a>、<a href="StructureDefinition-HAHMedicationRequest.html">HAHMedicationRequest</a>、<a href="StructureDefinition-HAHMedicationAdministration.html">HAHMedicationAdministration</a>、<a href="StructureDefinition-HAHObservationLab.html">HAHObservationLab</a>、<a href="StructureDefinition-HAHDiagnosticReport.html">HAHDiagnosticReport</a> 及 <a href="StructureDefinition-HAHProcedure.html">HAHProcedure</a> Profile 規範。</p>
+
+<h4 id="資料儲存管理功能ltc_repository-角色-1">資料儲存、管理功能（LTC_REPOSITORY 角色）</h4>
+
+<ul>
+  <li>能夠接收來自在宅醫療端之單次訪視、生理量測、處方、給藥、檢驗、處置等資源，遵循 FHIR R4 格式儲存並提供查詢。</li>
+  <li>支援以 POST 方式建立單筆資源，成功時回傳 HTTP 201 Created 並於 Location 標頭回傳實際資源 ID。</li>
+  <li>支援以 GET 方式條件查詢資料，成功時回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>支援以 GET 方式單筆讀取資料，成功時回傳 HTTP 200 OK 與單筆資源。</li>
+</ul>
+
+<h4 id="資料建立與查讀功能-1">資料建立與查讀功能</h4>
+
+<p><a id="ltc-421"></a></p>
+
+<p><strong>LTC-421：建立本次訪視與生理量測（LTC_MANAGEMENT 角色）</strong></p>
+
+<ul>
+  <li>醫護人員再次到宅訪視，建立獨立就診並記錄現場量測之生命徵象：
+    <ol>
+      <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/Encounter</code>，遵循 <a href="StructureDefinition-HAHVisitEncounter.html">HAHVisitEncounter</a> Profile。建立新一筆訪視紀錄，<code class="language-plaintext highlighter-rouge">partOf</code> 指向同一 AdmissionEncounter ID，<code class="language-plaintext highlighter-rouge">episodeOfCare</code> 指向同一 EpisodeOfCare ID，<code class="language-plaintext highlighter-rouge">status</code> 填入 <code class="language-plaintext highlighter-rouge">finished</code>，<code class="language-plaintext highlighter-rouge">class</code> 為 <code class="language-plaintext highlighter-rouge">HH</code>，<code class="language-plaintext highlighter-rouge">type</code> 為 <code class="language-plaintext highlighter-rouge">visit</code>，<code class="language-plaintext highlighter-rouge">extension[mode]</code> 為 <code class="language-plaintext highlighter-rouge">in-person</code>，填寫 <code class="language-plaintext highlighter-rouge">subject</code>、<code class="language-plaintext highlighter-rouge">serviceProvider</code>、<code class="language-plaintext highlighter-rouge">participant.individual</code> 及 <code class="language-plaintext highlighter-rouge">period.start</code>、<code class="language-plaintext highlighter-rouge">period.end</code>。伺服器建立成功回傳 HTTP 201 Created 並取得本次訪視 Encounter ID。</li>
+      <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/Observation</code>，遵循 <a href="StructureDefinition-LTCObservationVitalSigns.html">LTCObservationVitalSigns</a> Profile。<code class="language-plaintext highlighter-rouge">status</code> 填入 <code class="language-plaintext highlighter-rouge">final</code>，<code class="language-plaintext highlighter-rouge">category</code> 為 <code class="language-plaintext highlighter-rouge">vital-signs</code>，代碼填入 LOINC 體溫代碼 <code class="language-plaintext highlighter-rouge">8310-5</code>，填入 <code class="language-plaintext highlighter-rouge">effectiveDateTime</code>、量測數值與 UCUM 計量單位（system 為 <code class="language-plaintext highlighter-rouge">http://unitsofmeasure.org</code>，code 為 <code class="language-plaintext highlighter-rouge">Cel</code>），<code class="language-plaintext highlighter-rouge">subject</code> 指向個案，且 <code class="language-plaintext highlighter-rouge">encounter</code> 指向本筆新建立之訪視 Encounter ID。伺服器建立成功回傳 HTTP 201 Created 並取得 Observation ID。</li>
+    </ol>
+  </li>
+</ul>
+
+<p><a id="ltc-422"></a></p>
+
+<p><strong>LTC-422：查詢與讀取本次訪視與生理量測（LTC_CONSUMER 角色）</strong></p>
+
+<ul>
+  <li>查詢端查讀本次訪視內容與體溫等生命徵象數據：
+    <ol>
+      <li>條件查詢訪視：發送 <code class="language-plaintext highlighter-rouge">GET [base]/Encounter?subject=Patient/{id}&amp;part-of=Encounter/{admission_id}</code>，自清單選取 LTC-421 當次建立之訪視 ID 發送 <code class="language-plaintext highlighter-rouge">GET [base]/Encounter/{id}</code>。核對本次到訪起訖時間、醫事人員、機構、訪視方式以及所屬整段照護關聯。</li>
+      <li>條件查詢生理量測：發送 <code class="language-plaintext highlighter-rouge">GET [base]/Observation?subject=Patient/{id}&amp;code=http://loinc.org|8310-5</code>，自清單選取 LTC-421 當次建立之 Observation ID 發送 <code class="language-plaintext highlighter-rouge">GET [base]/Observation/{id}</code>。核對量測時間、體溫數值、計量單位（Cel）與本次訪視參照關聯。</li>
+    </ol>
+  </li>
+</ul>
+
+<p><a id="ltc-423"></a></p>
+
+<p><strong>LTC-423：上傳處方與給藥紀錄（LTC_MANAGEMENT 角色）</strong></p>
+
+<ul>
+  <li>記錄醫師開立之處方與護理人員執行之在宅給藥或靜脈輸注（可由不同醫事資訊系統配對協同完成）：
+    <ol>
+      <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/MedicationRequest</code>，遵循 <a href="StructureDefinition-HAHMedicationRequest.html">HAHMedicationRequest</a> Profile。填入處方狀態（<code class="language-plaintext highlighter-rouge">status = active</code>）、意圖（<code class="language-plaintext highlighter-rouge">intent = order</code>）、藥品品項、用法途徑、劑量、<code class="language-plaintext highlighter-rouge">subject</code>、<code class="language-plaintext highlighter-rouge">authoredOn</code>、<code class="language-plaintext highlighter-rouge">requester</code>（開立醫師）及 <code class="language-plaintext highlighter-rouge">dosageInstruction.text</code>，<code class="language-plaintext highlighter-rouge">encounter</code> 指向開立時之訪視 Encounter ID（可為先前醫師訪視或本次訪視）。伺服器建立成功回傳 HTTP 201 Created 並取得實際 MedicationRequest ID。</li>
+      <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/MedicationAdministration</code>，遵循 <a href="StructureDefinition-HAHMedicationAdministration.html">HAHMedicationAdministration</a> Profile。<code class="language-plaintext highlighter-rouge">status</code> 填入 <code class="language-plaintext highlighter-rouge">completed</code>，<code class="language-plaintext highlighter-rouge">request</code> 指向上一步建立之 MedicationRequest ID，<code class="language-plaintext highlighter-rouge">context</code> 指向執行給藥之實際護理訪視 Encounter ID，<code class="language-plaintext highlighter-rouge">performer.actor</code> 指向執行護理人員，填寫 <code class="language-plaintext highlighter-rouge">subject</code>、藥品品項及 <code class="language-plaintext highlighter-rouge">dosage.route</code>。依測資擇一填寫：單次給藥（填寫 <code class="language-plaintext highlighter-rouge">effectiveDateTime</code> 與 <code class="language-plaintext highlighter-rouge">dosage.dose</code>）或點滴持續輸注（填寫 <code class="language-plaintext highlighter-rouge">effectivePeriod</code> 與 <code class="language-plaintext highlighter-rouge">dosage.rateQuantity</code>）。伺服器建立成功回傳 HTTP 201 Created 並取得實際 MedicationAdministration ID。</li>
+    </ol>
+  </li>
+</ul>
+
+<p><a id="ltc-424"></a></p>
+
+<p><strong>LTC-424：查詢與讀取處方與給藥紀錄（LTC_CONSUMER 角色）</strong></p>
+
+<ul>
+  <li>查詢端查讀急症藥品醫囑與實際給藥執行明細：
+    <ol>
+      <li>條件查詢處方：發送 <code class="language-plaintext highlighter-rouge">GET [base]/MedicationRequest?subject=Patient/{id}</code>，自清單選取 LTC-423 當次建立之處方 ID 發送 <code class="language-plaintext highlighter-rouge">GET [base]/MedicationRequest/{id}</code>。核對處方狀態、藥品、用法用量、開立時間、開立醫師與訪視參照。</li>
+      <li>條件查詢給藥紀錄：發送 <code class="language-plaintext highlighter-rouge">GET [base]/MedicationAdministration?subject=Patient/{id}</code>，自清單選取 LTC-423 當次建立之給藥 ID 發送 <code class="language-plaintext highlighter-rouge">GET [base]/MedicationAdministration/{id}</code>。核對藥品品項、執行時間或輸注期間、途徑、劑量或流速、執行護理師（<code class="language-plaintext highlighter-rouge">performer.actor</code>），並確認 <code class="language-plaintext highlighter-rouge">request</code> 指向當次處方，且各自關聯至對應之訪視就診。</li>
+    </ol>
+  </li>
+</ul>
+
+<p><a id="ltc-425"></a></p>
+
+<p><strong>LTC-425：上傳檢驗結果與報告（LTC_MANAGEMENT 角色）</strong></p>
+
+<ul>
+  <li>建立端上傳到宅採檢或床側檢驗數值與整合檢驗報告：
+    <ol>
+      <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/Observation</code>，遵循 <a href="StructureDefinition-HAHObservationLab.html">HAHObservationLab</a> Profile。填寫 <code class="language-plaintext highlighter-rouge">status</code>（final）、<code class="language-plaintext highlighter-rouge">category</code>（laboratory）、<code class="language-plaintext highlighter-rouge">code</code>、<code class="language-plaintext highlighter-rouge">effectiveDateTime</code> 及一項檢驗數值。<code class="language-plaintext highlighter-rouge">valueQuantity</code> 填入數值、單位、UCUM 系統 <code class="language-plaintext highlighter-rouge">http://unitsofmeasure.org</code> 及單位代碼，<code class="language-plaintext highlighter-rouge">subject</code> 指向個案，<code class="language-plaintext highlighter-rouge">encounter</code> 指向當次訪視 Encounter ID。伺服器建立成功回傳 HTTP 201 Created 並取得實際 Observation ID。</li>
+      <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/DiagnosticReport</code>，遵循 <a href="StructureDefinition-HAHDiagnosticReport.html">HAHDiagnosticReport</a> Profile。填入報告狀態（<code class="language-plaintext highlighter-rouge">status = final</code>）、報告項目代碼、<code class="language-plaintext highlighter-rouge">effectiveDateTime</code>、<code class="language-plaintext highlighter-rouge">issued</code>、報告人員（<code class="language-plaintext highlighter-rouge">performer</code>），<code class="language-plaintext highlighter-rouge">subject</code> 指向個案，<code class="language-plaintext highlighter-rouge">encounter</code> 指向當次訪視，且 <code class="language-plaintext highlighter-rouge">result</code> 參照上一步建立之 HAHObservationLab ID。伺服器建立成功回傳 HTTP 201 Created 並取得實際 DiagnosticReport ID。</li>
+    </ol>
+  </li>
+</ul>
+
+<p><a id="ltc-426"></a></p>
+
+<p><strong>LTC-426：查詢與讀取檢驗結果與報告（LTC_CONSUMER 角色）</strong></p>
+
+<ul>
+  <li>查詢端查讀床側或送檢之檢驗數據與報告結論：
+    <ol>
+      <li>條件查詢檢驗報告：發送 <code class="language-plaintext highlighter-rouge">GET [base]/DiagnosticReport?subject=Patient/{id}</code>，自清單選取 LTC-425 當次建立之報告 ID 發送 <code class="language-plaintext highlighter-rouge">GET [base]/DiagnosticReport/{id}</code>。核對報告項目名稱、簽發時間、報告人員與訪視關聯。</li>
+      <li>條件查詢與讀取檢驗結果：發送 <code class="language-plaintext highlighter-rouge">GET [base]/Observation?subject=Patient/{id}</code>，自清單選取 LTC-425 當次建立之檢驗 ID 發送 <code class="language-plaintext highlighter-rouge">GET [base]/Observation/{id}</code>。核對檢驗項目名稱、數值、單位，並確認 DiagnosticReport.result 準確連結至該筆 Observation。</li>
+    </ol>
+  </li>
+</ul>
+
+<p><a id="ltc-427"></a></p>
+
+<p><strong>LTC-427：上傳在宅處置紀錄（LTC_MANAGEMENT 角色）</strong></p>
+
+<ul>
+  <li>記錄到宅執行之醫療處置技術（如呼吸道抽痰處置）：
+    <ul>
+      <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/Procedure</code>，遵循 <a href="StructureDefinition-HAHProcedure.html">HAHProcedure</a> Profile。</li>
+      <li><code class="language-plaintext highlighter-rouge">status</code> 填入 <code class="language-plaintext highlighter-rouge">completed</code>。</li>
+      <li>處置代碼採用大會指定案例（如抽痰處置）。</li>
+      <li><code class="language-plaintext highlighter-rouge">subject</code> 指向個案。</li>
+      <li><code class="language-plaintext highlighter-rouge">encounter</code> 指向當次訪視 Encounter ID。</li>
+      <li><code class="language-plaintext highlighter-rouge">performedDateTime</code> 或 <code class="language-plaintext highlighter-rouge">performedPeriod</code> 填入處置時間。</li>
+      <li><code class="language-plaintext highlighter-rouge">performer.actor</code> 指向執行處置之醫事人員。</li>
+      <li>伺服器建立成功回傳 HTTP 201 Created 並取得 Procedure ID。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a id="ltc-428"></a></p>
+
+<p><strong>LTC-428：查詢與讀取在宅處置紀錄（LTC_CONSUMER 角色）</strong></p>
+
+<ul>
+  <li>查詢端查讀在宅醫療處置項目與執行歷程：
+    <ul>
+      <li>第一步條件查詢：發送 <code class="language-plaintext highlighter-rouge">GET [base]/Procedure?subject=Patient/{id}</code>，伺服器回傳 HTTP 200 OK 與 searchset Bundle。</li>
+      <li>第二步單筆讀取：選取 LTC-427 當次建立之 Procedure ID，發送 <code class="language-plaintext highlighter-rouge">GET [base]/Procedure/{id}</code>，伺服器回傳 HTTP 200 OK 與單筆 Procedure 資源。</li>
+      <li>核對處置項目名稱、執行時間、執行醫事人員（<code class="language-plaintext highlighter-rouge">performer.actor</code>）以及所屬訪視 Encounter 參照。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a id="sc3"></a></p>
+
+<h4 id="情境-3後續照護安排與交班">情境 3：後續照護安排與交班</h4>
+
+<p>後續照護安排與交班情境模擬當次訪視完成時，醫護人員為個案安排後續照護作為。系統建立接續照護計畫並記錄下次回訪時程與行動項目，指派下一位醫護人員之到宅訪視工作任務，並建立照護交班紀錄，傳遞目前病況、已完成治療項目以及下次訪視之臨床注意事項。</p>
+
+<p>本情境使用 CarePlan、Task 及 Communication 資源，遵循 <a href="StructureDefinition-HAHCarePlan.html">HAHCarePlan</a>、<a href="StructureDefinition-HAHVisitTask.html">HAHVisitTask</a> 及 <a href="StructureDefinition-HAHCommunication.html">HAHCommunication</a> Profile 規範。若案例需關聯照護目標，可直接參照大會預載之 <a href="StructureDefinition-HAHGoal.html">HAHGoal</a>。</p>
+
+<h4 id="資料儲存管理功能ltc_repository-角色-2">資料儲存、管理功能（LTC_REPOSITORY 角色）</h4>
+
+<ul>
+  <li>能夠接收來自在宅醫療端之照護計畫、工作任務與交班紀錄，遵循 FHIR R4 格式儲存並提供查詢。</li>
+  <li>支援以 POST 方式建立單筆資源，成功時回傳 HTTP 201 Created 並於 Location 標頭回傳實際資源 ID。</li>
+  <li>支援以 GET 方式條件查詢資料，成功時回傳 HTTP 200 OK 與 searchset Bundle。</li>
+  <li>支援以 GET 方式單筆讀取資料，成功時回傳 HTTP 200 OK 與單筆資源。</li>
+</ul>
+
+<h4 id="資料建立與查讀功能-2">資料建立與查讀功能</h4>
+
+<p><a id="ltc-431"></a></p>
+
+<p><strong>LTC-431：建立後續照護計畫（LTC_MANAGEMENT 角色）</strong></p>
+
+<ul>
+  <li>醫護人員擬定下一階段在宅照護方針與活動安排：
+    <ul>
+      <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/CarePlan</code>，遵循 <a href="StructureDefinition-HAHCarePlan.html">HAHCarePlan</a> Profile。</li>
+      <li><code class="language-plaintext highlighter-rouge">status</code> 填入 <code class="language-plaintext highlighter-rouge">active</code>，<code class="language-plaintext highlighter-rouge">intent</code> 填入 <code class="language-plaintext highlighter-rouge">plan</code>，填入個案 <code class="language-plaintext highlighter-rouge">subject</code>、計畫類別 <code class="language-plaintext highlighter-rouge">category</code> 與執行期間 <code class="language-plaintext highlighter-rouge">period</code>。</li>
+      <li><code class="language-plaintext highlighter-rouge">extension[episode]</code> 參照本次建立之 HAHEpisodeOfCare ID。</li>
+      <li><code class="language-plaintext highlighter-rouge">encounter</code> 指向擬定計畫之當次訪視 Encounter ID。</li>
+      <li><code class="language-plaintext highlighter-rouge">activity.detail</code> 至少包含一筆活動明細，填寫 <code class="language-plaintext highlighter-rouge">status</code>、<code class="language-plaintext highlighter-rouge">description</code>（描述下次來訪事項）、<code class="language-plaintext highlighter-rouge">scheduledPeriod</code>（預定下次到訪時間）以及 <code class="language-plaintext highlighter-rouge">performer</code>（預定執行人員）。</li>
+      <li>若案例需關聯照護目標，可直接參照大會預載之 HAHGoal。</li>
+      <li>伺服器建立成功回傳 HTTP 201 Created 並取得實際 CarePlan ID。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a id="ltc-432"></a></p>
+
+<p><strong>LTC-432：查詢與讀取照護計畫（LTC_CONSUMER 角色）</strong></p>
+
+<ul>
+  <li>查詢端查讀後續照護目標方針與下次訪視排程：
+    <ul>
+      <li>第一步條件查詢：發送 <code class="language-plaintext highlighter-rouge">GET [base]/CarePlan?subject=Patient/{id}</code>，伺服器回傳 HTTP 200 OK 與 searchset Bundle。</li>
+      <li>第二步單筆讀取：選取 LTC-431 當次建立之 CarePlan ID，發送 <code class="language-plaintext highlighter-rouge">GET [base]/CarePlan/{id}</code>，伺服器回傳 HTTP 200 OK 與單筆 CarePlan 資源。</li>
+      <li>核對計畫期間、類別、療程關聯（<code class="language-plaintext highlighter-rouge">extension[episode]</code>）、訪視關聯（<code class="language-plaintext highlighter-rouge">encounter</code>），以及 <code class="language-plaintext highlighter-rouge">activity.detail</code> 內記錄之下次到訪預定時間（<code class="language-plaintext highlighter-rouge">scheduledPeriod</code>）、預定事項（<code class="language-plaintext highlighter-rouge">description</code>）與負責人員（<code class="language-plaintext highlighter-rouge">performer</code>）。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a id="ltc-433"></a></p>
+
+<p><strong>LTC-433：指派下一次訪視工作（LTC_MANAGEMENT 角色）</strong></p>
+
+<ul>
+  <li>建立具體任務指派，明確派案何時由何人到宅服務：
+    <ul>
+      <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/Task</code>，遵循 <a href="StructureDefinition-HAHVisitTask.html">HAHVisitTask</a> Profile。</li>
+      <li><code class="language-plaintext highlighter-rouge">status</code> 填入 <code class="language-plaintext highlighter-rouge">requested</code>，<code class="language-plaintext highlighter-rouge">intent</code> 填入 <code class="language-plaintext highlighter-rouge">order</code>。</li>
+      <li><code class="language-plaintext highlighter-rouge">code</code> 使用 <code class="language-plaintext highlighter-rouge">http://ltc-ig.fhir.tw/CodeSystem/hah-activity</code> 之 <code class="language-plaintext highlighter-rouge">visit</code> 代碼。</li>
+      <li><code class="language-plaintext highlighter-rouge">for</code> 指向個案 HAHPatient。</li>
+      <li><code class="language-plaintext highlighter-rouge">authoredOn</code> 填入開立時間。</li>
+      <li><code class="language-plaintext highlighter-rouge">requester</code> 指向派工者（當次訪視人員）。</li>
+      <li><code class="language-plaintext highlighter-rouge">owner</code> 指向預定到宅之執行人員或照護團隊。</li>
+      <li><code class="language-plaintext highlighter-rouge">encounter</code> 指向安排此工作之當次訪視 Encounter ID。</li>
+      <li><code class="language-plaintext highlighter-rouge">focus</code> 指向 LTC-431 建立之 CarePlan ID。</li>
+      <li><code class="language-plaintext highlighter-rouge">restriction.period</code> 填入預定執行之未來時間區間。</li>
+      <li>伺服器建立成功回傳 HTTP 201 Created 並取得實際 Task ID。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a id="ltc-434"></a></p>
+
+<p><strong>LTC-434：查詢與讀取待執行訪視工作（LTC_CONSUMER 角色）</strong></p>
+
+<ul>
+  <li>接案醫護人員檢索指定個案待執行之訪視任務，核對負責人員或團隊：
+    <ul>
+      <li>第一步條件查詢：發送 <code class="language-plaintext highlighter-rouge">GET [base]/Task?patient=Patient/{id}&amp;status=requested</code> 檢索工作清單，伺服器回傳 HTTP 200 OK 與 searchset Bundle。</li>
+      <li>第二步單筆讀取：選取 LTC-433 當次建立之 Task ID，發送 <code class="language-plaintext highlighter-rouge">GET [base]/Task/{id}</code>，伺服器回傳 HTTP 200 OK 與單筆 Task 資源。</li>
+      <li>核對指派對象（<code class="language-plaintext highlighter-rouge">owner</code>）、指派者（<code class="language-plaintext highlighter-rouge">requester</code>）、預定到宅執行時間（<code class="language-plaintext highlighter-rouge">restriction.period</code>）、當次訪視關聯（<code class="language-plaintext highlighter-rouge">encounter</code>），並確認 <code class="language-plaintext highlighter-rouge">focus</code> 正確參照至前述照護計畫。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a id="ltc-435"></a></p>
+
+<p><strong>LTC-435：建立照護交班紀錄（LTC_MANAGEMENT 角色）</strong></p>
+
+<ul>
+  <li>本次訪視人員向下一班或協同醫護人員傳達結構化交班資訊：
+    <ul>
+      <li>發送 <code class="language-plaintext highlighter-rouge">POST [base]/Communication</code>，遵循 <a href="StructureDefinition-HAHCommunication.html">HAHCommunication</a> Profile。</li>
+      <li><code class="language-plaintext highlighter-rouge">status</code> 填入 <code class="language-plaintext highlighter-rouge">completed</code>。</li>
+      <li><code class="language-plaintext highlighter-rouge">category</code> 填入交班代碼（system 為 <code class="language-plaintext highlighter-rouge">http://ltc-ig.fhir.tw/CodeSystem/hah-activity</code>，code 為 <code class="language-plaintext highlighter-rouge">handover</code>）。</li>
+      <li><code class="language-plaintext highlighter-rouge">subject</code> 指向個案 HAHPatient。</li>
+      <li><code class="language-plaintext highlighter-rouge">sender</code> 指向本次交班人員。</li>
+      <li><code class="language-plaintext highlighter-rouge">recipient</code> 指向接收交班人員或團隊。</li>
+      <li><code class="language-plaintext highlighter-rouge">sent</code> 填入交班發送時間。</li>
+      <li><code class="language-plaintext highlighter-rouge">encounter</code> 指向當次訪視 Encounter ID。</li>
+      <li><code class="language-plaintext highlighter-rouge">basedOn</code> 指向 LTC-431 建立之 CarePlan ID。</li>
+      <li><code class="language-plaintext highlighter-rouge">payload.contentString</code> 填入交班摘要文字（包含目前病況摘要、本次已完成治療、下次訪視注意事項）。</li>
+      <li>伺服器建立成功回傳 HTTP 201 Created 並取得實際 Communication ID。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a id="ltc-436"></a></p>
+
+<p><strong>LTC-436：查詢與讀取照護交班紀錄（LTC_CONSUMER 角色）</strong></p>
+
+<ul>
+  <li>接班或協同醫護人員讀取個案之最新交班事項：
+    <ul>
+      <li>第一步條件查詢：發送 <code class="language-plaintext highlighter-rouge">GET [base]/Communication?subject=Patient/{id}&amp;category=handover</code> 檢索交班紀錄，伺服器回傳 HTTP 200 OK 與 searchset Bundle。</li>
+      <li>第二步單筆讀取：選取 LTC-435 當次建立之 Communication ID，發送 <code class="language-plaintext highlighter-rouge">GET [base]/Communication/{id}</code>，伺服器回傳 HTTP 200 OK 與單筆 Communication 資源。</li>
+      <li>核對發送者（<code class="language-plaintext highlighter-rouge">sender</code>）、接收者（<code class="language-plaintext highlighter-rouge">recipient</code>）、交班時間（<code class="language-plaintext highlighter-rouge">sent</code>）、交班文字內容（<code class="language-plaintext highlighter-rouge">payload.contentString</code>）、當次訪視關聯（<code class="language-plaintext highlighter-rouge">encounter</code>）與計畫關聯（<code class="language-plaintext highlighter-rouge">basedOn</code>）。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="交易-transactions">交易 (Transactions)</h3>
+
+<table class="grid rwd-table">
+  <thead>
+    <tr>
+      <th>交易 ID</th>
+      <th>說明</th>
+      <th>發送方 (From)</th>
+      <th>接收方 (To)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LTC-411</td>
+      <td>建立收案與整段照護</td>
+      <td>在宅醫療端 (LTC_MANAGEMENT)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-412</td>
+      <td>查詢與讀取收案與整段照護</td>
+      <td>接續照護端 (LTC_CONSUMER)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-413</td>
+      <td>建立初次訪視紀錄</td>
+      <td>在宅醫療端 (LTC_MANAGEMENT)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-414</td>
+      <td>查詢與讀取初次訪視紀錄</td>
+      <td>接續照護端 (LTC_CONSUMER)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-415</td>
+      <td>上傳初訪評估與診斷</td>
+      <td>在宅醫療端 (LTC_MANAGEMENT)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-416</td>
+      <td>查詢與讀取初訪評估與診斷</td>
+      <td>接續照護端 (LTC_CONSUMER)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-421</td>
+      <td>建立本次訪視與生理量測</td>
+      <td>在宅醫療端 (LTC_MANAGEMENT)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-422</td>
+      <td>查詢與讀取本次訪視與生理量測</td>
+      <td>接續照護端 (LTC_CONSUMER)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-423</td>
+      <td>上傳處方與給藥紀錄</td>
+      <td>在宅醫療端 (LTC_MANAGEMENT)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-424</td>
+      <td>查詢與讀取處方與給藥紀錄</td>
+      <td>接續照護端 (LTC_CONSUMER)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-425</td>
+      <td>上傳檢驗結果與報告</td>
+      <td>在宅醫療端 (LTC_MANAGEMENT)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-426</td>
+      <td>查詢與讀取檢驗結果與報告</td>
+      <td>接續照護端 (LTC_CONSUMER)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-427</td>
+      <td>上傳在宅處置紀錄</td>
+      <td>在宅醫療端 (LTC_MANAGEMENT)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-428</td>
+      <td>查詢與讀取在宅處置紀錄</td>
+      <td>接續照護端 (LTC_CONSUMER)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-431</td>
+      <td>建立後續照護計畫</td>
+      <td>在宅醫療端 (LTC_MANAGEMENT)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-432</td>
+      <td>查詢與讀取照護計畫</td>
+      <td>接續照護端 (LTC_CONSUMER)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-433</td>
+      <td>指派下一次訪視工作</td>
+      <td>在宅醫療端 (LTC_MANAGEMENT)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-434</td>
+      <td>查詢與讀取待執行訪視工作</td>
+      <td>接續照護端 (LTC_CONSUMER)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-435</td>
+      <td>建立照護交班紀錄</td>
+      <td>在宅醫療端 (LTC_MANAGEMENT)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+    <tr>
+      <td>LTC-436</td>
+      <td>查詢與讀取照護交班紀錄</td>
+      <td>接續照護端 (LTC_CONSUMER)</td>
+      <td>長照資料交換中心 (LTC_REPOSITORY)</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 29, 2026 04:34+0800">2026-09-29</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

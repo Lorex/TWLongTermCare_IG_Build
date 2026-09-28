@@ -9,7 +9,8 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hah-visit-mode | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHVisitModeVS |
+| Draft as of 2026-09-29 | *Computable Name*:HAHVisitModeVS |
+| *Other Identifiers:*OID:2.25.152225732669398293522312336365626517006 | |
 
  
 實地、視訊或電話評估。 
@@ -47,12 +48,16 @@
   "resourceType" : "ValueSet",
   "id" : "hah-visit-mode",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/hah-visit-mode",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.152225732669398293522312336365626517006"
+  }],
   "version" : "1.1.0",
   "name" : "HAHVisitModeVS",
   "title" : "在宅急症－訪視方式值集",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

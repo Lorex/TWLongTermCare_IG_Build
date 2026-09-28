@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-type | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:CS_TW_LTC_AssessmentType |
+| Active as of 2026-09-29 | *Computable Name*:CS_TW_LTC_AssessmentType |
 | *Other Identifiers:*OID:2.25.66954549705417428801000181231177345055 | |
 
  
@@ -37,7 +37,7 @@
   "title" : "長照 SDK－評估類型",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

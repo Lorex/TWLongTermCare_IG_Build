@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNGetLogAPIModel | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNGetLogAPIModel |
+| Draft as of 2026-09-29 | *Computable Name*:HNGetLogAPIModel |
 
  
 描述依日期查詢處理結果 API 的請求資料。來源為 V5.0.16 印刷頁 139，所有 API 採 POST。SecretKey 僅用於傳輸驗證，不存入 FHIR。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-HNGetLogAPIModel.csv
   "name" : "HNGetLogAPIModel",
   "title" : "居家護理－依日期查詢處理結果 API 邏輯模型",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -10,7 +10,7 @@ Profile: [在宅急症－結案與轉銜摘要](StructureDefinition-HAHCompositi
 
 **status**: Final
 
-**type**: 轉銜摘要
+**type**: Transfer summary note
 
 **encounter**: [Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-10 08:00:00+0800 --> 2026-09-11 10:00:00+0800](Encounter-hah-transfer-admission.md)
 
@@ -38,6 +38,11 @@ Profile: [在宅急症－結案與轉銜摘要](StructureDefinition-HAHCompositi
     "coding" : [{
       "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
       "code" : "transfer-summary"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18761-7",
+      "display" : "Transfer summary note"
     }]
   },
   "subject" : {

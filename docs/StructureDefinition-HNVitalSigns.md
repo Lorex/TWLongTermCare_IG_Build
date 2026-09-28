@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNVitalSigns | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:HNVitalSigns |
+| Active as of 2026-09-29 | *Computable Name*:HNVitalSigns |
 
  
 沿用 FHIR R4 生命徵象量測組，以 hasMember 連結既有體溫、心率、呼吸、血壓與血氧 Profile；血糖以既有血糖 Profile 與共同來源表單串聯。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-HNVitalSigns.csv), [
   "name" : "HNVitalSigns",
   "title" : "居家護理－生命徵象",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

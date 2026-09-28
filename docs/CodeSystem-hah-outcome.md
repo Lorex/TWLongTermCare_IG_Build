@@ -9,7 +9,8 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/hah-outcome | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHOutcomeCS |
+| Draft as of 2026-09-29 | *Computable Name*:HAHOutcomeCS |
+| *Other Identifiers:*OID:2.25.232613967783434232836732114074399874838 | |
 
  
 區分療程結束的結果。暫停照護應使用 EpisodeOfCare.status=onhold，不以結束原因取代狀態。 
@@ -27,12 +28,16 @@
   "resourceType" : "CodeSystem",
   "id" : "hah-outcome",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/hah-outcome",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.232613967783434232836732114074399874838"
+  }],
   "version" : "1.1.0",
   "name" : "HAHOutcomeCS",
   "title" : "在宅急症－療程結束原因代碼",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

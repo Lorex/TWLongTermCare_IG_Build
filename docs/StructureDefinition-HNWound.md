@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNWound | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:HNWound |
+| Active as of 2026-09-29 | *Computable Name*:HNWound |
 
  
 每個傷口建立一筆紀錄。沿用 TW Core 簡易觀察，因既有壓傷 Condition 不適用失禁性皮膚炎及其他傷口。原規範未明訂尺寸單位，不從來源數字推定單位。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-HNWound.csv), [Excel
   "name" : "HNWound",
   "title" : "居家護理－傷口紀錄",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

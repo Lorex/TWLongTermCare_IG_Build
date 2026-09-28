@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/ExtHNCollectionUpdate | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:ExtHNCollectionUpdate |
+| Active as of 2026-09-29 | *Computable Name*:ExtHNCollectionUpdate |
 
 記錄來源要求保留、取代或清空共照名單。接收端先讀取指示，再更新指定名單。
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-ExtHNCollectionUpdat
   "name" : "ExtHNCollectionUpdate",
   "title" : "居家護理－共照團隊更新指示",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

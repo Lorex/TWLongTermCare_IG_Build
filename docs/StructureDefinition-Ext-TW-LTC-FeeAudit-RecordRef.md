@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-FeeAudit-RecordRef | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:ExtTWLTCFeeAuditRecordRef |
+| Active as of 2026-09-29 | *Computable Name*:ExtTWLTCFeeAuditRecordRef |
 
 此 Extension 用於在長照支付審查之分案審核明細（ClaimResponse）中，結構化承載每一筆服務記錄的識別資訊：服務記錄識別碼（objid／ref_objid，長度 20）、來源系統別（source_system／ref_source_system，長度 20）與申報交易序號（trans_no，長度 10）。適用於審核通過服務記錄（ClaimResponse.item）、錯誤服務記錄（ClaimResponse.error）與 A 碼加成資料區（ClaimResponse.addItem，此時承載所加成之審核通過服務記錄之 ref_objid 與 ref_source_system）。因 ClaimResponse 之各 itemSequence 元素於 FHIR R4 為 positiveInt 且語意上僅能指向單一 Claim 內之項目序號，無法承載跨 Claim 之字串識別碼，故以本 Extension 表達。
 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-Ext-TW-LTC-FeeAudit-
   "title" : "長照支付審查－服務記錄識別資訊",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

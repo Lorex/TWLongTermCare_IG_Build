@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"25.285"}
-    h3,h4,h5,h6{--heading-prefix:"25.285"}</style>
+    <style type="text/css">h2{--heading-prefix:"33.285"}
+    h3,h4,h5,h6{--heading-prefix:"33.285"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -124,23 +124,59 @@
   <li><a href="security.html">安全性</a></li>
   <li><a href="validates.html">驗證教學</a></li>
   <li class="dropdown">
-    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <a href="#">專案聯測<b class="caret"></b></a>
     <ul class="dropdown-menu">
-      <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
-      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
-      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
-      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
-      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
-      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+      <li class="dropdown-submenu">
+        <a href="2025-connectathon.html">2025 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2025-connectathon.html">聯測說明</a></li>
+          <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+          <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+          <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+          <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+          <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+          <li><a href="2025-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="2026-connectathon.html">2026 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2026-connectathon.html">聯測說明</a></li>
+          <li><a href="2026-connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="2026-track0.html">共通前置：OAuth2 存取認證</a></li>
+          <li><a href="2026-track1.html">賽道 1：長照共通資料交換</a></li>
+          <li><a href="2026-track2.html">賽道 2：居家照護資料交換</a></li>
+          <li><a href="2026-track3.html">賽道 3：長照服務費用支付審核</a></li>
+          <li><a href="2026-track4.html">賽道 4：在宅急症照護資料交換</a></li>
+          <li><a href="2026-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li><a href="connectathon-result.html">聯測松結果</a></li>
   <!-- <li><a href="history.html">版本歷程</a></li> -->
 </ul>      
 
 <style>
-.dropdown-menu li:hover .sub-menu {visibility: visible;}
-.dropdown:hover .dropdown-menu {display: block;}
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {display: block;}
+.dropdown-submenu {position: relative;}
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  top: 0;
+  left: 100%;
+  margin-top: 0;
+}
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus-within > .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 767px) {
+  .dropdown-submenu > .dropdown-menu {
+    position: static;
+    float: none;
+    margin-left: 15px;
+  }
+}
 
 @media only screen and (max-width: 992px) {
   table.colsi {
@@ -246,7 +282,7 @@
         
           Draft
           
-            as of 2026-09-17
+            as of 2026-09-29
           
         
       </td>
@@ -278,12 +314,17 @@
      fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet hah-section&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;hah-section\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hchah-section\&quot;&gt; &lt;/a&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;CodeSystem-hah-document.html\&quot;&gt;&lt;code&gt;http://ltc-ig.fhir.tw/CodeSystem/hah-document&lt;/code&gt;&lt;/a&gt;&lt;span title=\&quot;Version is not explicitly stated, which means it is fixed to the version provided in this specification\&quot;&gt; version ?1.1.0&lt;/span&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-hah-document.html#hah-document-course\&quot;&gt;course&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;color: #cccccc\&quot;&gt;照護經過&lt;/td&gt;&lt;td&gt;收案原因、療程、訪視與評估摘要。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-hah-document.html#hah-document-problems\&quot;&gt;problems&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;color: #cccccc\&quot;&gt;診斷與問題&lt;/td&gt;&lt;td&gt;本次診斷與仍需處理的問題。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-hah-document.html#hah-document-allergies\&quot;&gt;allergies&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;color: #cccccc\&quot;&gt;過敏資訊&lt;/td&gt;&lt;td&gt;已知過敏、已確認無過敏或資料缺少的情況。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-hah-document.html#hah-document-medications\&quot;&gt;medications&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;color: #cccccc\&quot;&gt;用藥&lt;/td&gt;&lt;td&gt;處方、實際給藥與接續用藥資訊。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-hah-document.html#hah-document-results\&quot;&gt;results&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;color: #cccccc\&quot;&gt;檢驗與量測&lt;/td&gt;&lt;td&gt;與交接有關的檢驗與生命徵象。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-hah-document.html#hah-document-care\&quot;&gt;care&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;color: #cccccc\&quot;&gt;照護與處置&lt;/td&gt;&lt;td&gt;照護計畫、目標、管路及已執行處置。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-hah-document.html#hah-document-follow-up\&quot;&gt;follow-up&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;color: #cccccc\&quot;&gt;後續照護&lt;/td&gt;&lt;td&gt;未完成事項、轉介與聯絡窗口。&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;
   ] ;
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://ltc-ig.fhir.tw/ValueSet/hah-section&quot;] ;
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.identifier">fhir:ValueSet.identifier</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:Identifier.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;urn:ietf:rfc:3986&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;urn:oid:2.25.49198556594078108193176131594821916395&quot; ]
+  ] ;
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">fhir:ValueSet.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1.1.0&quot;] ;
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">fhir:ValueSet.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;HAHSectionVS&quot;] ;
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">fhir:ValueSet.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;在宅急症－摘要章節值集&quot;] ;
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">fhir:ValueSet.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;draft&quot;] ;
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.experimental">fhir:ValueSet.experimental</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean] ;
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">fhir:ValueSet.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2026-09-17T17:33:17+08:00&quot;^^xsd:dateTime] ;
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">fhir:ValueSet.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2026-09-29T04:34:44+08:00&quot;^^xsd:dateTime] ;
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">fhir:ValueSet.publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;經濟部產業發展署&quot;] ;
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">fhir:ValueSet.contact</a> [
      <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
@@ -355,7 +396,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 17, 2026 17:33+0800">2026-09-17</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 29, 2026 04:34+0800">2026-09-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

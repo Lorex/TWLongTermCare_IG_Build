@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCTaskFeeAudit | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:LTCTaskFeeAudit |
+| Draft as of 2026-09-29 | *Computable Name*:LTCTaskFeeAudit |
 
  
 此 Task 以衛生福利部支付審核系統的申報交易資料為基礎，用以表述申報確認、服務紀錄刪除、撤回與取消結果回報等任務及處理狀態。 
@@ -45,7 +45,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCTaskFeeAudit.csv)
   "name" : "LTCTaskFeeAudit",
   "title" : "長照支付審查－申報交易任務",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

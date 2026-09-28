@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNUploadAcknowledgementModel | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNUploadAcknowledgementModel |
+| Draft as of 2026-09-29 | *Computable Name*:HNUploadAcknowledgementModel |
 
  
 描述規範各上傳 API 列出的成功回覆。此回覆表示檔案已接收，尚不表示排程匯入成功。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-HNUploadAcknowledgem
   "name" : "HNUploadAcknowledgementModel",
   "title" : "居家護理－上傳接收回覆邏輯模型",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

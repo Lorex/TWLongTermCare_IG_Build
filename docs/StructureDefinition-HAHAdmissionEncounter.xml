@@ -21,7 +21,7 @@
   <name value="HAHAdmissionEncounter"/>
   <title value="在宅急症－整段照護"/>
   <status value="draft"/>
-  <date value="2026-09-17T17:33:17+08:00"/>
+  <date value="2026-09-29T04:34:44+08:00"/>
   <publisher value="經濟部產業發展署"/>
   <contact>
     <name value="經濟部產業發展署"/>
@@ -30,7 +30,7 @@
       <value value="https://www.ida.gov.tw/"/>
     </telecom>
   </contact>
-  <description value="表達本次在宅急症的整段照護，供每次訪視透過 partOf 參照。IMP 表示本資料集的在宅住院照護分類，不代表照護地點在醫院。"/>
+  <description value="表達本次在宅急症的整段照護，供每次訪視透過 partOf 參照。IMP 表示在宅住院照護分類，location 記錄照護地點。"/>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="workflow"/>
@@ -1049,12 +1049,8 @@
       <isModifier value="false"/>
       <isSummary value="true"/>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="EncounterClass"/>
-        </extension>
         <strength value="extensible"/>
-        <description value="就醫的分類；應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。"/>
-        <valueSet value="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode"/>
+        <valueSet value="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode|3.0.0"/>
       </binding>
       <mapping>
         <identity value="w5"/>
@@ -1231,12 +1227,8 @@
       <isModifier value="false"/>
       <isSummary value="false"/>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="EncounterClass"/>
-        </extension>
         <strength value="extensible"/>
-        <description value="就醫類別；應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。"/>
-        <valueSet value="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode"/>
+        <valueSet value="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode|3.0.0"/>
       </binding>
       <mapping>
         <identity value="rim"/>
@@ -2496,12 +2488,8 @@
       <isModifier value="false"/>
       <isSummary value="false"/>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="Priority"/>
-        </extension>
         <strength value="example"/>
-        <description value="表明就醫的迫切性；可參考所綁定值集，但此值集只是針對這個欄位的一個可能值的範例，不預期也不鼓勵使用者一定要使用此值集的代碼。"/>
-        <valueSet value="http://terminology.hl7.org/ValueSet/v3-ActPriority"/>
+        <valueSet value="http://terminology.hl7.org/ValueSet/v3-ActPriority|3.0.0"/>
       </binding>
       <mapping>
         <identity value="w5"/>
@@ -3834,12 +3822,8 @@
       <isModifier value="false"/>
       <isSummary value="false"/>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ReAdmissionType"/>
-        </extension>
         <strength value="example"/>
-        <description value="這次住院就醫的再入院原因；可參考所綁定值集，但此值集只是針對這個欄位的一個可能值的範例，不預期也不鼓勵使用者一定要使用此值集的代碼。"/>
-        <valueSet value="http://terminology.hl7.org/ValueSet/v2-0092"/>
+        <valueSet value="http://terminology.hl7.org/ValueSet/v2-0092|3.0.0"/>
       </binding>
       <mapping>
         <identity value="v2"/>

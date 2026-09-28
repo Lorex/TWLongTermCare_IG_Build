@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hn-vs-15ba9c15ead1 | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNAnswerVS15ba9c15ead1 |
+| Draft as of 2026-09-29 | *Computable Name*:HNAnswerVS15ba9c15ead1 |
 | *Other Identifiers:*OID:2.25.196437414705180533755439020932526401878 | |
 
  
@@ -58,7 +58,7 @@
   "title" : "居家護理－備食選項",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

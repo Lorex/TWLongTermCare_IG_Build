@@ -77,7 +77,7 @@ These define forms used by systems conforming to this implementation guide to ca
 
 | | |
 | :--- | :--- |
-| [在宅急症收案評估問卷](Questionnaire-hah-intake-assessment.md) | 本 IG 定義的收案資料交換表單；正式計畫條件須依實際採用的版本評估。 |
+| [在宅急症收案評估問卷](Questionnaire-hah-intake-assessment.md) | 記錄收案評估所依據的計畫名稱與版本、居家環境、照顧者支援、收案建議及原因。 |
 | [居家護理－人員緊急事件問卷](Questionnaire-hn-staffegy.md) | V5.0.16 人員緊急事件的問題結構與輸入型態。 |
 | [居家護理－個案基本資料問卷](Questionnaire-hn-basedata.md) | V5.0.16 個案基本資料的問題結構與輸入型態。 |
 | [居家護理－個案結案問卷](Questionnaire-hn-caseclose.md) | V5.0.16 個案結案的問題結構與輸入型態。 |
@@ -115,30 +115,30 @@ These define constraints on FHIR resources for systems conforming to this implem
 | [IADL 問卷回覆](StructureDefinition-LTCQuestionnaireResponseIADL.md) | 此 Profile 定義 FHIR 的 QuestionnaireResponse Resource，以呈現工具性日常活動功能問卷 (IADLs) 的回覆資料。 |
 | [個案總查詢（CS100 對應版）Case Summary](StructureDefinition-LTC-Composition-CS100.md) | 本文件為『個案總查詢（Case Summary）』之 CS100 專用版本， 其內容與章節配置對應衛生福利部照顧服務管理資訊平臺功能 《CS100 個案總查詢》之查詢結果欄位與區塊。 |
 | [在宅急症－個案](StructureDefinition-HAHPatient.md) | 正式收案個案的身分與聯絡資料。沿用長照個案識別、地址與緊急聯絡人；收案狀態另記錄於 EpisodeOfCare。 |
-| [在宅急症－單次訪視](StructureDefinition-HAHVisitEncounter.md) | 每次實地、視訊或電話評估建立一筆訪視，參照整段照護與收案療程。預約或通知不能當成已完成訪視。 |
+| [在宅急症－單次訪視](StructureDefinition-HAHVisitEncounter.md) | 每次實地、視訊或電話評估建立一筆訪視，參照整段照護與收案療程。 |
 | [在宅急症－就診基礎](StructureDefinition-HAHEncounter.md) | 在宅急症的共同就診資料，包含個案、療程、服務機構與實際照護期間。 |
 | [在宅急症－摘要文件 Bundle](StructureDefinition-HAHBundleSummary.md) | 以文件 Bundle 交換結案或轉銜摘要。第一筆為 Composition，並包含個案、療程、整段照護及所有文件內參照的資源。 |
 | [在宅急症－收案療程](StructureDefinition-HAHEpisodeOfCare.md) | 每次收案建立一筆療程，記錄負責機構、期間、診斷與團隊。再次收案建立新的療程，仍參照同一個案。 |
-| [在宅急症－收案評估回覆](StructureDefinition-HAHAssessmentResponse.md) | 記錄評估依據、居家環境、照顧者支援與收案建議。此為本 IG 的交換表單，不宣稱為健保署官方收案表。 |
-| [在宅急症－整段照護](StructureDefinition-HAHAdmissionEncounter.md) | 表達本次在宅急症的整段照護，供每次訪視透過 partOf 參照。IMP 表示本資料集的在宅住院照護分類，不代表照護地點在醫院。 |
-| [在宅急症－服務請求](StructureDefinition-HAHServiceRequest.md) | 沿用長照服務請求，表達照會、檢驗、處置或轉介。項目應使用適切標準代碼，無適切概念時才使用本地分類並補充文字。 |
+| [在宅急症－收案評估回覆](StructureDefinition-HAHAssessmentResponse.md) | 記錄評估依據、居家環境、照顧者支援與收案建議。 |
+| [在宅急症－整段照護](StructureDefinition-HAHAdmissionEncounter.md) | 表達本次在宅急症的整段照護，供每次訪視透過 partOf 參照。IMP 表示在宅住院照護分類，location 記錄照護地點。 |
+| [在宅急症－服務請求](StructureDefinition-HAHServiceRequest.md) | 沿用長照服務請求，表達照會、檢驗、處置或轉介。項目應使用標準代碼，無適合的 code 時才使用本地分類並補充文字。 |
 | [在宅急症－檢驗報告](StructureDefinition-HAHDiagnosticReport.md) | 以一份報告串聯醫囑、檢體與檢驗結果，可附原始報告檔案。 |
-| [在宅急症－檢驗結果](StructureDefinition-HAHObservationLab.md) | 一筆檢驗項目一筆結果。保留檢體、方法、單位與參考區間；缺少結果時填 dataAbsentReason，不填零值代替。 |
-| [在宅急症－照會與交班](StructureDefinition-HAHCommunication.md) | 沿用服務活動紀錄，交換照會回覆、交班與衛教內容。接收訊息不代表已完成待辦工作。 |
-| [在宅急症－照護同意](StructureDefinition-HAHConsent.md) | 記錄照護同意的狀態、範圍、時間及來源文件。此資源不取代可執行的醫囑，也不以一般同意代替 DNR 決定。 |
-| [在宅急症－照護團隊](StructureDefinition-HAHCareTeam.md) | 記錄主責及共照人員、機構、角色與參與期間。既有長照團隊不允許機構成員，因此由共同 TW Core 父層衍生。 |
-| [在宅急症－照護工作](StructureDefinition-HAHVisitTask.md) | 記錄訪視、送藥等執行工作。因長照任務的 owner 不允許 CareTeam，此處由 FHIR Task 衍生以支援團隊指派。 |
-| [在宅急症－照護目標](StructureDefinition-HAHGoal.md) | 記錄個案預期達到的結果、期限及評值。照護問題應另記錄於 Condition，不以目標取代問題。 |
+| [在宅急症－檢驗結果](StructureDefinition-HAHObservationLab.md) | 一筆檢驗項目一筆結果。保留檢體、方法、單位與參考區間，缺少結果時以 dataAbsentReason 記錄原因。 |
+| [在宅急症－照會與交班](StructureDefinition-HAHCommunication.md) | 沿用服務活動紀錄，交換照會回覆、交班與衛教內容。 |
+| [在宅急症－照護同意](StructureDefinition-HAHConsent.md) | 記錄照護同意的狀態、範圍、時間及來源文件。 |
+| [在宅急症－照護團隊](StructureDefinition-HAHCareTeam.md) | 記錄主責及共照人員、機構、角色與參與期間。團隊成員包含人員與共照機構。 |
+| [在宅急症－照護工作](StructureDefinition-HAHVisitTask.md) | 記錄訪視、送藥等執行工作。owner 記錄負責執行的人員、機構或照護團隊。 |
+| [在宅急症－照護目標](StructureDefinition-HAHGoal.md) | 記錄個案預期達到的結果、期限及評值。照護問題記錄於 Condition。 |
 | [在宅急症－照護計畫](StructureDefinition-HAHCarePlan.md) | 沿用長照照顧計畫，串聯本次療程的病情、目標、服務請求及給藥處方。實際執行結果另以臨床資源記錄。 |
 | [在宅急症－照護附件](StructureDefinition-HAHDocumentReference.md) | 記錄照片、同意文件、報告或其他照護附件的索引、作者與就診脈絡。 |
-| [在宅急症－結案與轉銜摘要](StructureDefinition-HAHCompositionSummary.md) | 彙整本次療程與接續照護所需的資訊。每個章節均提供可閱讀文字，資料不足時說明未知或未評估，不得推定為無。 |
-| [在宅急症－給藥與輸注](StructureDefinition-HAHMedicationAdministration.md) | 記錄實際給藥時間點或輸注期間。既有長照給藥強制 effectiveDateTime，因此由 FHIR 父層衍生以支援 effectivePeriod 及未給藥。 |
+| [在宅急症－結案與轉銜摘要](StructureDefinition-HAHCompositionSummary.md) | 彙整本次療程與接續照護所需的資訊。以療程、問題、過敏、藥物、結果、照護及後續追蹤七個章節提供可閱讀的摘要。 |
+| [在宅急症－給藥與輸注](StructureDefinition-HAHMedicationAdministration.md) | 記錄實際給藥時間點或輸注期間。effectiveDateTime 記錄單次給藥時間，effectivePeriod 記錄持續輸注期間。 |
 | [在宅急症－給藥處方](StructureDefinition-HAHMedicationRequest.md) | 記錄藥品、用法、劑量、途徑、頻率與處方狀態。實際是否給藥由給藥紀錄表達。 |
-| [在宅急症－臨床評估](StructureDefinition-HAHClinicalImpression.md) | 記錄評估人員對病情的判斷、發現與摘要。生命徵象、檢驗、已執行處置及費用不應只以 JSON 字串塞入 note。 |
-| [在宅急症－處置紀錄](StructureDefinition-HAHProcedure.md) | 沿用長照照護活動，記錄抽痰、傷口照護或管路更換等實際處置。給藥事件使用 MedicationAdministration。 |
+| [在宅急症－臨床評估](StructureDefinition-HAHClinicalImpression.md) | 記錄評估人員對病情的判斷、發現與摘要。 |
+| [在宅急症－處置紀錄](StructureDefinition-HAHProcedure.md) | 沿用長照照護活動，記錄抽痰、傷口照護或管路更換等實際處置。 |
 | [在宅急症－診斷與照護問題](StructureDefinition-HAHCondition.md) | 記錄本次急症、共病或照護問題。主次診斷的角色與順位記錄在 Encounter 或 EpisodeOfCare 的 diagnosis。 |
-| [在宅急症－過敏資訊](StructureDefinition-HAHAllergyIntolerance.md) | 記錄過敏物質、確認狀態及反應。無紀錄不能推定無過敏；未評估與已確認無過敏應分開表達。 |
-| [在宅急症－量測設備](StructureDefinition-HAHDevice.md) | 記錄居家量測設備的識別與類型。一般設備編號使用 identifier；只有正式 UDI 才填入 udiCarrier。 |
+| [在宅急症－過敏資訊](StructureDefinition-HAHAllergyIntolerance.md) | 記錄過敏物質、確認狀態及反應。 |
+| [在宅急症－量測設備](StructureDefinition-HAHDevice.md) | 記錄居家量測設備的識別與類型。identifier 記錄設備編號，udiCarrier 記錄 UDI。 |
 | [基礎生理量測－呼吸速率](StructureDefinition-PASportObservationRespiratoryRate.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之呼吸速率資料。 |
 | [基礎生理量測－安靜心率](StructureDefinition-PASportObservationRestingHeartRate.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之安靜心率資料。 |
 | [基礎生理量測－平均心率](StructureDefinition-PASportObservationMeanHeartRate.md) | 此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現基礎生理量測中涉及之平均心率資料。 |
@@ -605,6 +605,7 @@ These are example instances that show what data produced and consumed by systems
 | [呼吸速率測量範例](Observation-pasport-observation-respiratory-rate-example.md) | 一個呼吸速率測量的範例，展示如何使用 PASportObservationRespiratoryRate Profile 來記錄呼吸速率資料 |
 | [問卷回覆範例](QuestionnaireResponse-ltc-questionnaire-response-example.md) | 一個問卷回覆的範例，展示如何使用 LTCQuestionnaireResponse Profile 來記錄問卷回覆 |
 | [在宅急症個案範例](Patient-hah-patient.md) | 合成個案，供本主題所有臨床範例參照。 |
+| [在宅急症共同就診資料範例](Encounter-hah-encounter.md) | 示範共同就診 Profile 的必要欄位；整段照護與單次訪視另有子 Profile 範例。 |
 | [在宅急症同意文件附件範例](DocumentReference-hah-attachment.md) | 以內嵌文字示範附件交換，內容為合成資料。 |
 | [在宅急症完成療程範例](EpisodeOfCare-hah-episode.md) | 本次合成療程完成治療後結案。 |
 | [在宅急症實地訪視範例](Encounter-hah-visit.md) | 實地訪視，參照同一收案與整段照護。 |

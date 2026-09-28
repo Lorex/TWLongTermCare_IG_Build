@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-supporting-info | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:CS_TW_LTC_FeeAuditSupportingInfo |
+| Active as of 2026-09-29 | *Computable Name*:CS_TW_LTC_FeeAuditSupportingInfo |
 | *Other Identifiers:*OID:2.25.241334038473382339597409760065494505023 | |
 
  
@@ -37,7 +37,7 @@
   "title" : "支付審查－服務紀錄補充資訊類別",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

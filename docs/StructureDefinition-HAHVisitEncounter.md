@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHVisitEncounter | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHVisitEncounter |
+| Draft as of 2026-09-29 | *Computable Name*:HAHVisitEncounter |
 
  
-每次實地、視訊或電話評估建立一筆訪視，參照整段照護與收案療程。預約或通知不能當成已完成訪視。 
+每次實地、視訊或電話評估建立一筆訪視，參照整段照護與收案療程。 
 
 **Usages:**
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHVisitEncounter.cs
   "name" : "HAHVisitEncounter",
   "title" : "在宅急症－單次訪視",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -50,7 +50,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHVisitEncounter.cs
       "value" : "https://www.ida.gov.tw/"
     }]
   }],
-  "description" : "每次實地、視訊或電話評估建立一筆訪視，參照整段照護與收案療程。預約或通知不能當成已完成訪視。",
+  "description" : "每次實地、視訊或電話評估建立一筆訪視，參照整段照護與收案療程。",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "workflow",

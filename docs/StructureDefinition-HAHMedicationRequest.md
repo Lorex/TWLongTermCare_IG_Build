@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHMedicationRequest | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHMedicationRequest |
+| Draft as of 2026-09-29 | *Computable Name*:HAHMedicationRequest |
 
  
 記錄藥品、用法、劑量、途徑、頻率與處方狀態。實際是否給藥由給藥紀錄表達。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHMedicationRequest
   "name" : "HAHMedicationRequest",
   "title" : "在宅急症－給藥處方",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -162,6 +162,22 @@ Other representations of profile: [CSV](StructureDefinition-HAHMedicationRequest
       "id" : "MedicationRequest.dosageInstruction.doseAndRate",
       "path" : "MedicationRequest.dosageInstruction.doseAndRate",
       "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.substitution.allowed[x]",
+      "path" : "MedicationRequest.substitution.allowed[x]",
+      "binding" : {
+        "strength" : "example",
+        "valueSet" : "http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode|3.0.0"
+      }
+    },
+    {
+      "id" : "MedicationRequest.substitution.reason",
+      "path" : "MedicationRequest.substitution.reason",
+      "binding" : {
+        "strength" : "example",
+        "valueSet" : "http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason|3.0.0"
+      }
     }]
   }
 }

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hn-vs-5f4a5d3ebea4 | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNAnswerVS5f4a5d3ebea4 |
+| Draft as of 2026-09-29 | *Computable Name*:HNAnswerVS5f4a5d3ebea4 |
 | *Other Identifiers:*OID:2.25.280521813996784078034457876298858362659 | |
 
  
@@ -58,7 +58,7 @@
   "title" : "居家護理－神經精神問題選項",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

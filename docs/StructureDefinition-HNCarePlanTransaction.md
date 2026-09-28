@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNCarePlanTransaction | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:HNCarePlanTransaction |
+| Active as of 2026-09-29 | *Computable Name*:HNCarePlanTransaction |
 
  
 以 FHIR transaction 一次提交目標、措施、評值及其臨床資源。任一 entry 失敗時不得僅儲存部分資料。原 API 的檔案仍須依其格式另外轉換。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-HNCarePlanTransactio
   "name" : "HNCarePlanTransaction",
   "title" : "居家護理－照護計畫交易",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

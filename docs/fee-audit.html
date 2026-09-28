@@ -41,8 +41,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"8"}
-    h3,h4,h5,h6{--heading-prefix:"8"}</style>
+    <style type="text/css">h2{--heading-prefix:"16"}
+    h3,h4,h5,h6{--heading-prefix:"16"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -122,23 +122,59 @@
   <li><a href="security.html">安全性</a></li>
   <li><a href="validates.html">驗證教學</a></li>
   <li class="dropdown">
-    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <a href="#">專案聯測<b class="caret"></b></a>
     <ul class="dropdown-menu">
-      <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
-      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
-      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
-      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
-      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
-      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+      <li class="dropdown-submenu">
+        <a href="2025-connectathon.html">2025 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2025-connectathon.html">聯測說明</a></li>
+          <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+          <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+          <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+          <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+          <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+          <li><a href="2025-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="2026-connectathon.html">2026 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2026-connectathon.html">聯測說明</a></li>
+          <li><a href="2026-connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="2026-track0.html">共通前置：OAuth2 存取認證</a></li>
+          <li><a href="2026-track1.html">賽道 1：長照共通資料交換</a></li>
+          <li><a href="2026-track2.html">賽道 2：居家照護資料交換</a></li>
+          <li><a href="2026-track3.html">賽道 3：長照服務費用支付審核</a></li>
+          <li><a href="2026-track4.html">賽道 4：在宅急症照護資料交換</a></li>
+          <li><a href="2026-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li><a href="connectathon-result.html">聯測松結果</a></li>
   <!-- <li><a href="history.html">版本歷程</a></li> -->
 </ul>      
 
 <style>
-.dropdown-menu li:hover .sub-menu {visibility: visible;}
-.dropdown:hover .dropdown-menu {display: block;}
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {display: block;}
+.dropdown-submenu {position: relative;}
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  top: 0;
+  left: 100%;
+  margin-top: 0;
+}
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus-within > .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 767px) {
+  .dropdown-submenu > .dropdown-menu {
+    position: static;
+    float: none;
+    margin-left: 15px;
+  }
+}
 
 @media only screen and (max-width: 992px) {
   table.colsi {
@@ -227,18 +263,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="支付審查資料交換">支付審查資料交換</h3>
 
-<p>本頁說明長照服務提供單位及系統商如何使用 FHIR 傳送申報資料、查詢審核結果，以及辦理刪除或撤回。內容依據《衛生福利部 支付審核系統 API 規格說明書（照管平台）v2.2.1》，使用 FHIR R4.0.1。</p>
+<p>本頁說明長照服務提供單位及系統商如何使用 FHIR 傳送申報資料、查詢審核結果，以及辦理刪除或撤回。內容依據《衛生福利部 支付審核系統 API 規格說明書（照管平台）v2.2.1》說明文件，並繼承自 FHIR R4.0.1 及 TW Core IG 規範。</p>
 
-<p>初次介接可先看下方的作業流程與填寫說明。要將既有 API 資料轉成 FHIR，可查閱後面的「原 API 欄位對照」；完整欄位、必填條件與範例則見各 Profile 頁面。</p>
+<p>初次介接可先看下方的作業流程與填寫說明。要將既有 API 資料轉成 FHIR，可查閱後面的「原 API 欄位對照」，完整欄位、必填條件與範例詳見各 Profile 頁面。</p>
 
 <h3 id="作業流程">作業流程</h3>
 
 <h4 id="申報與確認">申報與確認</h4>
 
 <ol>
-  <li><strong>申報服務紀錄（<code class="language-plaintext highlighter-rouge">FeeApply</code>）</strong>：同一支審年月可分次申報，每次交易最多 5,000 筆服務紀錄。每筆紀錄使用唯一識別碼；支審系統沒有該識別碼時新增，已有時更新。</li>
+  <li><strong>申報服務紀錄（<code class="language-plaintext highlighter-rouge">FeeApply</code>）</strong>：同一支審年月可分次申報，每次交易最多 5,000 筆服務紀錄。每筆紀錄使用唯一識別碼，支審系統沒有該識別碼時新增，已有時更新。</li>
   <li><strong>刪除誤報資料（<code class="language-plaintext highlighter-rouge">ObjDel</code>）</strong>：列出要刪除的服務紀錄識別碼。刪除成功或失敗的結果由查詢 A 取得。</li>
-  <li><strong>送出申報確認通知（<code class="language-plaintext highlighter-rouge">appCompletionNotice</code>）</strong>：資料確認無誤後，依案件通知縣市承辦人員收件審查。<strong>送出後，該案件不能再申報或刪除服務紀錄。</strong></li>
+  <li><strong>送出申報確認通知（<code class="language-plaintext highlighter-rouge">appCompletionNotice</code>）</strong>：資料確認無誤後，依案件通知縣市承辦人員收件審查。<strong>送出後，案件進入審查階段，服務紀錄鎖定。</strong></li>
 </ol>
 
 <p>支審年月使用 6 碼西元年月，例如 <code class="language-plaintext highlighter-rouge">202609</code>。本 IG 的長照 SDK 模組使用民國年月，轉換資料時需區分。</p>
@@ -247,7 +283,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>先以 <code class="language-plaintext highlighter-rouge">appResultQuery</code> 的查詢 A 取得分案狀態，再依結果決定是否執行查詢 B。</p>
 
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
       <th>查詢</th>
@@ -259,12 +295,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>查詢 A（<code class="language-plaintext highlighter-rouge">query_type = A</code>）</td>
       <td>核銷案號、核銷狀況、總表版次、簽證編號，以及交易處理結果、分案異常和刪除結果</td>
-      <td>每次查詢間隔至少 20 分鐘</td>
+      <td>每次查詢間隔至少 20 分鐘。</td>
     </tr>
     <tr>
       <td>查詢 B（<code class="language-plaintext highlighter-rouge">query_type = B</code>）</td>
       <td>指定核銷案號的核定金額、通過與未通過的服務紀錄、A 碼加成及清冊下載網址</td>
-      <td>先執行查詢 A；只有新核銷案號，或核銷狀況、總表版次有異動時才執行</td>
+      <td>先執行查詢 A，只有新核銷案號，或核銷狀況、總表版次有異動時才執行。</td>
     </tr>
   </tbody>
 </table>
@@ -273,7 +309,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="撤回與取消結果回報">撤回與取消結果回報</h4>
 
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
       <th>操作</th>
@@ -285,12 +321,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>撤回服務紀錄（<code class="language-plaintext highlighter-rouge">appCancel</code>）</td>
       <td>撤回本月由該來源系統申報的服務紀錄</td>
-      <td>未填縣市代碼與核銷案號時，撤回整月資料；有填時，只撤回指定核銷案號。承辦人已收件處理的案件不能撤回</td>
+      <td>未填縣市代碼與核銷案號時，撤回整月資料。有填時，只撤回指定核銷案號。撤回適用於承辦人收件處理前的案件。</td>
     </tr>
     <tr>
       <td>取消交易單處理結果回報（<code class="language-plaintext highlighter-rouge">CancelResultResponse</code>）</td>
       <td>取消查詢 A 中某筆交易的處理結果回報</td>
-      <td>填入要取消回報的交易序號</td>
+      <td>填入要取消回報的交易序號。</td>
     </tr>
   </tbody>
 </table>
@@ -299,15 +335,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="申報資料">申報資料</h4>
 
-<p>一次申報使用一份 <a href="StructureDefinition-LTCBundleFeeApply.html">LTCBundleFeeApply</a>，<code class="language-plaintext highlighter-rouge">Bundle.type</code> 填入 <code class="language-plaintext highlighter-rouge">collection</code>。每筆服務紀錄各建立一筆 <a href="StructureDefinition-LTCClaimFeeApply.html">LTCClaimFeeApply</a>，放入 Bundle；每筆 Claim 只有一筆 <code class="language-plaintext highlighter-rouge">item</code>。</p>
+<p>一次申報使用一份 <a href="StructureDefinition-LTCBundleFeeApply.html">LTCBundleFeeApply</a>，<code class="language-plaintext highlighter-rouge">Bundle.type</code> 填入 <code class="language-plaintext highlighter-rouge">collection</code>。每筆服務紀錄各建立一筆 <a href="StructureDefinition-LTCClaimFeeApply.html">LTCClaimFeeApply</a>，放入 Bundle，每筆 Claim 只能有一筆 <code class="language-plaintext highlighter-rouge">item</code>。</p>
 
 <p>Bundle 也要放入相關的<a href="StructureDefinition-LTCPatient.html">個案 Patient</a> 與<a href="StructureDefinition-Organization-twltc.html">申報單位 Organization</a>，並依服務內容加入<a href="StructureDefinition-LTCPractitioner.html">照顧服務員 Practitioner</a> 和<a href="StructureDefinition-LTCLocationFeeAuditPlace.html">交通接送地點 Location</a>。這些都是放在 <code class="language-plaintext highlighter-rouge">Bundle.entry.resource</code> 的完整資源，Claim 再透過 Reference 參照它們。</p>
 
 <p>例如，同一位個案有三筆服務紀錄，就建立三筆 Claim，讓三筆 Claim 的 <code class="language-plaintext highlighter-rouge">patient</code> 參照同一份 Patient。這次申報的服務紀錄數是三筆，個案數是一人。申報總金額由各筆 <code class="language-plaintext highlighter-rouge">Claim.total</code> 加總，不另設批次統計欄位。</p>
 
-<p>服務內容、交通接送資料等補充資訊填在 <code class="language-plaintext highlighter-rouge">Claim.supportingInfo</code>，依資料類型選擇欄位：</p>
+<p>服務內容、交通接送資料等補充資訊填在 <code class="language-plaintext highlighter-rouge">Claim.supportingInfo</code>，依資料類型選擇欄位，以下是範例：</p>
 
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
       <th>資料類型</th>
@@ -344,9 +380,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>照顧組合代碼請填在 <code class="language-plaintext highlighter-rouge">item.productOrService.coding</code>。目前 Profile 的四條條件檢核依這裡的代碼判斷；只填 <code class="language-plaintext highlighter-rouge">text</code> 不會觸發檢核。</p>
+<p>照顧組合代碼請填在 <code class="language-plaintext highlighter-rouge">item.productOrService.coding</code>。目前 Profile 的條件檢核依這裡的代碼判斷，若只填 <code class="language-plaintext highlighter-rouge">text</code> 則不會觸發檢核。</p>
 
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
       <th>照顧組合代碼</th>
@@ -373,21 +409,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>這四條檢核（<code class="language-plaintext highlighter-rouge">ltc-feeaudit-1</code> 至 <code class="language-plaintext highlighter-rouge">ltc-feeaudit-4</code>）的層級為 <code class="language-plaintext highlighter-rouge">warning</code>，未涵蓋原規格書的所有條件。出發地、目的地及 C 碼專業服務資料等，仍須依原規格書「支付碼必填欄位一覽表」填寫。</p>
-
 <h4 id="交易任務與查詢-a-回覆">交易任務與查詢 A 回覆</h4>
 
 <p>刪除、申報確認、撤回及取消結果回報都使用 <a href="StructureDefinition-LTCTaskFeeAudit.html">LTCTaskFeeAudit</a>。<code class="language-plaintext highlighter-rouge">Task.code</code> 填入操作代碼，<code class="language-plaintext highlighter-rouge">input</code> 填入操作所需資料，<code class="language-plaintext highlighter-rouge">output</code> 記錄處理結果。同次交易的任務使用相同的 <code class="language-plaintext highlighter-rouge">Task.groupIdentifier</code>。</p>
 
-<p>申報確認通知以<strong>一個縣市一筆 Task</strong> 填寫。同一縣市有多個案件時，在該 Task 逐筆填入核銷案號；涉及不同縣市時，分別建立 Task，並共用交易序號。</p>
+<p>申報確認通知以<strong>一個縣市一筆 Task</strong> 填寫。同一縣市有多個案件時，在該 Task 逐筆填入核銷案號。涉及不同縣市時，分別建立 Task，並共用交易序號。</p>
 
-<p><code class="language-plaintext highlighter-rouge">input</code> 與 <code class="language-plaintext highlighter-rouge">output</code> 的 Slice 以 <code class="language-plaintext highlighter-rouge">type.text</code> 區分。例如縣市代碼的 <code class="language-plaintext highlighter-rouge">type.text</code> 固定填入「縣市代碼」。讀取資料或撰寫 FHIRPath 時，請使用 Profile 指定的文字定位。</p>
+<p><code class="language-plaintext highlighter-rouge">input</code> 與 <code class="language-plaintext highlighter-rouge">output</code> 的 Slice 以 <code class="language-plaintext highlighter-rouge">type.text</code> 區分。例如縣市代碼的 <code class="language-plaintext highlighter-rouge">type.text</code> 固定填入「縣市代碼」。</p>
 
-<p>查詢 A 的回覆使用 <a href="StructureDefinition-LTCBundleFeeAuditStatus.html">LTCBundleFeeAuditStatus</a>，內含 Task；分案異常或刪除失敗的訊息另以 <a href="StructureDefinition-LTCOperationOutcomeFeeAudit.html">LTCOperationOutcomeFeeAudit</a> 放入 Bundle，並由 Task 的 <code class="language-plaintext highlighter-rouge">output</code> 參照。</p>
+<p>查詢 A 的回覆使用 <a href="StructureDefinition-LTCBundleFeeAuditStatus.html">LTCBundleFeeAuditStatus</a>，內含 Task。分案異常或刪除失敗的訊息另以 <a href="StructureDefinition-LTCOperationOutcomeFeeAudit.html">LTCOperationOutcomeFeeAudit</a> 放入 Bundle，並由 Task 的 <code class="language-plaintext highlighter-rouge">output</code> 參照。</p>
 
 <p>Task 有兩種狀態，讀取時需區分：</p>
 
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
       <th>欄位</th>
@@ -410,7 +444,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>查詢 B 的回覆使用 <a href="StructureDefinition-LTCBundleFeeAuditResponse.html">LTCBundleFeeAuditResponse</a>，其中一份 <a href="StructureDefinition-LTCClaimResponseFeeAudit.html">LTCClaimResponseFeeAudit</a> 記錄一個核銷案號的審核結果。該案可能包含多筆申報 Claim。</p>
 
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
       <th>審核資料</th>
@@ -445,13 +479,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>審核結果中的服務紀錄識別資料填在 <a href="StructureDefinition-Ext-TW-LTC-FeeAudit-RecordRef.html">recordRef Extension</a>。比對原申報紀錄時，請讀取這裡的識別碼、來源系統與交易序號；<code class="language-plaintext highlighter-rouge">itemSequence</code> 不能用來存放字串識別碼，也不足以識別跨 Claim 的服務紀錄。</p>
+<p>審核結果中的服務紀錄識別資料填在 <a href="StructureDefinition-Ext-TW-LTC-FeeAudit-RecordRef.html">recordRef Extension</a>。比對原申報紀錄時，請讀取這裡的識別碼、來源系統與交易序號。</p>
 
 <p>統計筆數、個案數、暫付申請狀態、已處理交易序號及承辦人員填在 <a href="StructureDefinition-Ext-TW-LTC-FeeAudit-AuditSummary.html">auditSummary Extension</a>。<code class="language-plaintext highlighter-rouge">requestor</code> 表示提出申報的服務提供方，審核承辦人員應填在 <code class="language-plaintext highlighter-rouge">auditSummary</code>。</p>
 
 <p>總表與清冊的下載網址填在 <a href="StructureDefinition-Ext-TW-LTC-FeeAudit-DocUrl.html">docUrl Extension</a>，每份文件各填一筆，包含文件類別與網址。</p>
 
-<p>目前 Profile 要求 <code class="language-plaintext highlighter-rouge">ClaimResponse.patient</code> 填入一個 Patient Reference。核銷案號含多位個案時，依 Profile 說明填入代表個案或分案受理的個案；各筆服務紀錄的個案資料仍須回查原申報 Claim，不能只依此欄位判斷整案的個案名單。</p>
+<p>目前 Profile 要求 <code class="language-plaintext highlighter-rouge">ClaimResponse.patient</code> 填入一個 Patient Reference。核銷案號含多位個案時，依 Profile 說明填入代表個案或分案受理的個案。</p>
 
 <h3 id="原-api-欄位對照">原 API 欄位對照</h3>
 
@@ -459,7 +493,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="服務紀錄申報">服務紀錄申報</h4>
 
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
       <th>原 API 區段</th>
@@ -618,7 +652,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="交易任務與分案狀態">交易任務與分案狀態</h4>
 
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
       <th>原 API 區段</th>
@@ -697,7 +731,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="分案審核明細">分案審核明細</h4>
 
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
       <th>原 API 區段</th>
@@ -803,7 +837,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>邏輯模型保留原 API 的欄位名稱、型態、長度及填寫條件。各模型的「Mappings」頁籤提供 FHIR 欄位對照。</p>
 
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
       <th>資料範圍</th>
@@ -832,7 +866,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>CodeSystem 列出代碼定義，ValueSet 列出欄位可使用的代碼範圍。</p>
 
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
       <th>用途</th>
@@ -924,36 +958,36 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>API 回覆結果代碼、API 執行狀況及縣市代碼這三組術語供原系統資料對照使用，未直接綁定 Profile 欄位。API 執行狀況轉成 <code class="language-plaintext highlighter-rouge">Task.status</code> 的標準代碼；縣市代碼則填入 Organization 的識別碼或 <code class="language-plaintext highlighter-rouge">Task.input[cityCd]</code> 的字串值。</p>
+<p>API 回覆結果代碼、API 執行狀況及縣市代碼這三組術語用於原系統資料對照。API 執行狀況轉成 <code class="language-plaintext highlighter-rouge">Task.status</code> 的標準代碼，縣市代碼則填入 Organization 的識別碼或 <code class="language-plaintext highlighter-rouge">Task.input[cityCd]</code> 的字串值。</p>
 
-<p>縣市主管機關的 <code class="language-plaintext highlighter-rouge">Organization.identifier.system</code> 使用 <code class="language-plaintext highlighter-rouge">http://ltc-ig.fhir.tw/identifier/feeaudit/city-cd</code>。支付審查的縣市代碼與 TW Core 郵遞區號用途不同，請勿混用。</p>
+<p>縣市主管機關的 <code class="language-plaintext highlighter-rouge">Organization.identifier.system</code> 使用 <code class="language-plaintext highlighter-rouge">http://ltc-ig.fhir.tw/identifier/feeaudit/city-cd</code>。此識別碼表示辦理支付審查的縣市主管機關；TW Core 郵遞區號用於地址。</p>
 
 <p>核定金額類別使用本 IG 的代碼，相關欄位綁定強度為 <code class="language-plaintext highlighter-rouge">extensible</code>。與其他系統交換時，需確認所用代碼的定義與值集要求。</p>
 
 <h3 id="傳輸設定">傳輸設定</h3>
 
-<p>本頁規範申報與審核資料的 FHIR 表達方式。原 API 的傳輸封套與回覆封套不另建 FHIR 資源，其欄位如下：</p>
+<p>本頁規範申報與審核資料的 FHIR 表達方式。原 API 的傳輸內容與回傳內容不另建 FHIR 資源，其欄位如下：</p>
 
-<table>
+<table class="grid rwd-table">
   <thead>
     <tr>
-      <th>封套</th>
+      <th>分類</th>
       <th>原 API 欄位</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>傳送</td>
+      <td>呼叫</td>
       <td><code class="language-plaintext highlighter-rouge">unitNo</code>、<code class="language-plaintext highlighter-rouge">requestDt</code>、<code class="language-plaintext highlighter-rouge">sourceSystem</code>、<code class="language-plaintext highlighter-rouge">apdata</code>、<code class="language-plaintext highlighter-rouge">checksum</code></td>
     </tr>
     <tr>
-      <td>回覆</td>
+      <td>回傳</td>
       <td><code class="language-plaintext highlighter-rouge">rtncode</code>、<code class="language-plaintext highlighter-rouge">responseDt</code>、<code class="language-plaintext highlighter-rouge">errmsg</code>、<code class="language-plaintext highlighter-rouge">result</code>、<code class="language-plaintext highlighter-rouge">checksum</code>、<code class="language-plaintext highlighter-rouge">rtnSeq</code></td>
     </tr>
   </tbody>
 </table>
 
-<p>校驗碼計算、Base64 編碼與 IP 白名單設定，請依原 API 規格書辦理。回覆封套的 <code class="language-plaintext highlighter-rouge">rtncode</code> 可查閱 <a href="ValueSet-vs-tw-ltc-feeaudit-rtncode.html">API 回覆結果代碼</a>。</p>
+<p>回傳的 <code class="language-plaintext highlighter-rouge">rtncode</code> 可查閱 <a href="ValueSet-vs-tw-ltc-feeaudit-rtncode.html">API 回覆結果代碼</a>。</p>
 
 
 
@@ -974,7 +1008,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 17, 2026 17:33+0800">2026-09-17</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 29, 2026 04:34+0800">2026-09-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

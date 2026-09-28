@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/Questionnaire/hah-intake-assessment | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:HAHIntakeAssessment |
+| Active as of 2026-09-29 | *Computable Name*:HAHIntakeAssessment |
 
  
-本 IG 定義的收案資料交換表單；正式計畫條件須依實際採用的版本評估。 
+記錄收案評估所依據的計畫名稱與版本、居家環境、照顧者支援、收案建議及原因。 
 
 
 
@@ -32,7 +32,7 @@
   "status" : "active",
   "experimental" : false,
   "subjectType" : ["Patient"],
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -41,7 +41,7 @@
       "value" : "https://www.ida.gov.tw/"
     }]
   }],
-  "description" : "本 IG 定義的收案資料交換表單；正式計畫條件須依實際採用的版本評估。",
+  "description" : "記錄收案評估所依據的計畫名稱與版本、居家環境、照顧者支援、收案建議及原因。",
   "item" : [{
     "linkId" : "criteria",
     "text" : "評估依據的計畫名稱與版本",

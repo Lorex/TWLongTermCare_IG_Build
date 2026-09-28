@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCServiceRequest | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:LTCServiceRequest |
+| Active as of 2026-09-29 | *Computable Name*:LTCServiceRequest |
 
  
 此 Profile 說明本 IG 如何進一步定義 FHIR 的 ServiceRequest Resource，以呈現長期照顧情境中的轉介申請及服務請求需求。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCServiceRequest.cs
   "name" : "LTCServiceRequest",
   "title" : "長期照顧－服務請求",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

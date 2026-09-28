@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>2026 Connectathon - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣長期照顧實作指引(TW LTC IG)</span>
+            <br/>
+            <span style="display:inline-block;">1.1.0 - STU 1.1.0
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">應用說明</a></li>
+  <li><a href="toc.html">目錄</a></li>
+  <li class="dropdown">
+		<a href="#">主題說明<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="fee-audit.html">長照支付審查</a>
+			</li>
+			<li>
+				<a href="home-nursing.html">居家護理照護管理系統</a>
+			</li>
+			<li>
+				<a href="hah.html">在宅急症照護</a>
+			</li>
+		</ul>
+	</li>
+	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="capability-statements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters-and-operation.html">查詢參數及操作定義</a>
+			</li>
+			<li>
+				<a href="logical-models.html">邏輯模型</a>
+			</li>
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles 及 Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+  <li><a href="examples.html">範例</a></li>
+  <li><a href="downloads.html">結構定義與範例檔下載</a></li>
+  <li><a href="security.html">安全性</a></li>
+  <li><a href="validates.html">驗證教學</a></li>
+  <li class="dropdown">
+    <a href="#">專案聯測<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li class="dropdown-submenu">
+        <a href="2025-connectathon.html">2025 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2025-connectathon.html">聯測說明</a></li>
+          <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+          <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+          <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+          <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+          <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+          <li><a href="2025-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="2026-connectathon.html">2026 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2026-connectathon.html">聯測說明</a></li>
+          <li><a href="2026-connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="2026-track0.html">共通前置：OAuth2 存取認證</a></li>
+          <li><a href="2026-track1.html">賽道 1：長照共通資料交換</a></li>
+          <li><a href="2026-track2.html">賽道 2：居家照護資料交換</a></li>
+          <li><a href="2026-track3.html">賽道 3：長照服務費用支付審核</a></li>
+          <li><a href="2026-track4.html">賽道 4：在宅急症照護資料交換</a></li>
+          <li><a href="2026-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <!-- <li><a href="history.html">版本歷程</a></li> -->
+</ul>      
+
+<style>
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {display: block;}
+.dropdown-submenu {position: relative;}
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  top: 0;
+  left: 100%;
+  margin-top: 0;
+}
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus-within > .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 767px) {
+  .dropdown-submenu > .dropdown-menu {
+    position: static;
+    float: none;
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  table.colsi {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  table.rwd-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  p, a {
+    word-break: break-all;
+  }
+}
+</style>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>2026 Connectathon</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">臺灣長期照顧實作指引(TW LTC IG) - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://ltc-ig.fhir.tw/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>2026 Connectathon</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#活動資訊-event-information" id="markdown-toc-活動資訊-event-information">活動資訊 (Event Information)</a></li>
+  <li><a href="#活動簡介-introduction" id="markdown-toc-活動簡介-introduction">活動簡介 (Introduction)</a></li>
+  <li><a href="#運作機制說明-operation-mechanism" id="markdown-toc-運作機制說明-operation-mechanism">運作機制說明 (Operation Mechanism)</a></li>
+  <li><a href="#賽道-tracks" id="markdown-toc-賽道-tracks">賽道 (Tracks)</a></li>
+  <li><a href="#參與單位與角色-participants--roles" id="markdown-toc-參與單位與角色-participants--roles">參與單位與角色 (Participants &amp; Roles)</a></li>
+  <li><a href="#涉及系統-system-affected" id="markdown-toc-涉及系統-system-affected">涉及系統 (System Affected)</a></li>
+  <li><a href="#系統角色-system-actors" id="markdown-toc-系統角色-system-actors">系統角色 (System Actors)</a></li>
+</ul>
+
+</div>
+<h3 id="活動資訊-event-information">活動資訊 (Event Information)</h3>
+
+<p><strong>活動名稱：</strong> 2026 臺灣長期照顧 FHIR 專案聯測松 (2026 TW Long-Term Care FHIR Projectathon)</p>
+
+<p><strong>時間：</strong> 2026/10/29 (四) 下午 至 2026/10/30 (五) 全日，共 1.5 天（10/29 13:30–16:30、10/30 10:00–16:30）</p>
+
+<p><strong>地點：</strong> 民生科技服務大樓 2 樓 Living Lab+ (臺北市松山區民生東路四段 133 號) <a href="https://maps.app.goo.gl/R37aZsmm3FT8zCXh8">地圖連結</a></p>
+
+<p><strong>報名資訊：</strong> 本活動免費報名，名額 25 名，報名截止時間為 2026/10/23 18:00，詳情請參閱 <a href="https://ievents.iii.org.tw/EventS.aspx?t=0&amp;id=3493">活動資訊與報名</a>。</p>
+
+<p><strong>進行模式：</strong></p>
+<ul>
+  <li>聯測共辦理 1.5 日，參測單位依產品功能選擇賽道與角色，並依各賽道規定完成必測與選測項目。</li>
+  <li>各賽道列有操作步驟、檢核項目與通過條件，參測單位依報名角色與配對系統共同完成驗收。</li>
+  <li>大會事前公布賽道檢核內容、測試資料與測試環境，並提供標準 FHIR 伺服器供連線演練。</li>
+  <li>參測單位可於會前完成系統實作與預演，測試過程中如有問題可即時回報進行釐清。</li>
+  <li>聯測配置督察員檢核廠商產品是否符合規範，完成聯測後將成果公告於活動網站。</li>
+</ul>
+
+<p><strong>系列相關活動：</strong></p>
+<ul>
+  <li>FHIR 實戰工作坊：2026/09/29 (二) 10:00–16:30，民生科技服務大樓 102 會議室。</li>
+  <li>科技照護戰情平台研討會：2026/10/29 (四) 10:00–16:30，民生科技服務大樓 101 會議室。</li>
+</ul>
+
+<h3 id="活動簡介-introduction">活動簡介 (Introduction)</h3>
+
+<p>隨著臺灣邁入超高齡社會，長期照顧服務之數位轉型與跨域資料整合成為關鍵課題。為建立全國一致之長照資料交換標準，2026 年度專案聯測聚焦於長照共通基礎資料層與實務核心業務情境。</p>
+
+<p>本次專案聯測以 FHIR R4 標準為基礎，驗證五大主題：</p>
+<ol>
+  <li><strong>OAuth2 存取認證</strong>：提供安全的存取授權機制，作為各系統進行資料交換之共通前置基礎。</li>
+  <li><strong>長照共通資料交換</strong>：建立跨居家照護、住宿機構、日間照護與在宅醫療共用之資料層，涵蓋病人基本資料、機構基本資料、生理量測、用藥紀錄、健康問題、照護目標、照護計畫、服務請求與照護執行紀錄等核心資源之標準建立、查詢與讀取。</li>
+  <li><strong>居家照護資料交換</strong>：檢驗居家護理場域之個案基本資料、全人評估（健康紀錄評估）、照護計畫與共照記錄等四大情境之標準化新增與查讀。</li>
+  <li><strong>長照服務費用支付審核</strong>：檢驗特約服務單位送出單筆長照費用申報，以及取得大會模擬審核結果之流程。</li>
+  <li><strong>在宅急症照護資料交換</strong>：檢驗在宅急症「初次訪視與收案」、「持續訪視與急症治療」以及「後續照護安排與交班」三段臨床流程，涵蓋收案療程、實地訪視、急症評估與診斷、生理量測、處方與給藥、檢驗、處置、照護計畫、工作任務指派及交班紀錄之標準化建立與查讀。</li>
+</ol>
+
+<h3 id="運作機制說明-operation-mechanism">運作機制說明 (Operation Mechanism)</h3>
+
+<p>聯測（Connectathon）為醫資標準化推動之重要驗證環節，確保參測單位之系統符合標準規範並具備跨系統資料互通能力。專案聯測（Projectathon）針對特定業務情境邀集產業界、政府公法人、長照機構與醫療院所共同參與，加速標準化落地應用。</p>
+
+<p>本活動包含以下階段：</p>
+<ul>
+  <li><strong>聯測籌備小組</strong>：制定賽道規格、編製標準測資與環境、規劃驗收標準並公告參測指引。</li>
+  <li><strong>會前準備與預演</strong>：大會提前公告測試規範並開放測試主機，提供線上諮詢協助參測廠商完成系統介接預演。</li>
+  <li><strong>聯測現場執行</strong>：參測單位於現場 1.5 日內與大會端點或配對系統進行真實連線與資料交換測試，完成指定檢核項目。</li>
+  <li><strong>成果登錄公告</strong>：通過聯測檢核之產品與系統角色，於活動網站公開登錄。</li>
+</ul>
+
+<h3 id="賽道-tracks">賽道 (Tracks)</h3>
+
+<p>各賽道之情境、角色、交易與詳細操作步驟請參閱：</p>
+
+<ul>
+  <li><a href="2026-connectathon-table.html">賽道情境、角色與交易列表</a></li>
+  <li><a href="2026-track0.html">賽道 0：OAuth2 存取認證</a></li>
+  <li><a href="2026-track1.html">賽道 1：長照共通資料交換</a></li>
+  <li><a href="2026-track2.html">賽道 2：居家照護資料交換</a></li>
+  <li><a href="2026-track3.html">賽道 3：長照服務費用支付審核</a></li>
+  <li><a href="2026-track4.html">賽道 4：在宅急症照護資料交換</a></li>
+</ul>
+
+<p>各賽道核心摘要：</p>
+
+<ul>
+  <li><strong>Track 0：OAuth2 存取認證</strong>
+    <ul>
+      <li>驗證系統取得與使用 OAuth2 Bearer Token 之標準流程。</li>
+      <li>本賽道為共通前置賽道，參測系統取得有效 Token 後即可向 LTC Repository 存取受保護資源。</li>
+    </ul>
+  </li>
+  <li><strong>Track 1：長照共通資料交換</strong>
+    <ul>
+      <li>驗證跨場域共用資料層之單一資源建立、查詢與讀取能力。</li>
+      <li>包含病人基本資料（SC1）、機構基本資料（SC2）、生理量測（SC3）與用藥紀錄（SC4）四項必測，以及健康問題（SC5）、照護目標（SC6）、照護計畫（SC7）、服務請求（SC8）與照護執行紀錄（SC9）等選測項目，共 9 個情境。</li>
+    </ul>
+  </li>
+  <li><strong>Track 2：居家照護資料交換</strong>
+    <ul>
+      <li>驗證居家護理場域之個案基本資料管理（必測）、全人評估管理（選測）、照護計畫管理（選測）與共照記錄管理（選測）之建立（POST）與查讀（Query / Retrieve），共 4 個情境。</li>
+    </ul>
+  </li>
+  <li><strong>Track 3：長照服務費用支付審核</strong>
+    <ul>
+      <li>驗證長照特約服務單位送出單筆 BA07 服務費用申報，並銜接大會模擬審核服務查詢與取得審核結果。</li>
+    </ul>
+  </li>
+  <li><strong>Track 4：在宅急症照護資料交換</strong>
+    <ul>
+      <li>驗證在宅急症初次訪視與收案（SC1）、持續訪視與治療（SC2）以及後續照護安排與交班（SC3）三段臨床流程之建立（POST）與查讀（Search / Read），共 3 個情境、20 筆交易。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="參與單位與角色-participants--roles">參與單位與角色 (Participants &amp; Roles)</h3>
+
+<ul>
+  <li><strong>醫療服務提供者</strong>：醫院、診所與在宅醫療團隊，其醫療資訊系統參與在宅急症訪視紀錄產生與跨域轉銜。</li>
+  <li><strong>長期照顧服務機構</strong>：日間照護中心、居家護理所、居家服務機構、住宿型機構及 A 單位個管中心，參與長照共通資料建立與查讀、居家照護資料管理與費用申報。</li>
+  <li><strong>科技與資訊服務商</strong>：長照系統廠商、生理量測設備商、照護 App 開發商與費用申報軟體商，實作標準 FHIR API 介接。</li>
+</ul>
+
+<h3 id="涉及系統-system-affected">涉及系統 (System Affected)</h3>
+
+<ul>
+  <li><strong>長照個管與照護系統</strong>：負責查詢個案共通資料、登錄照護紀錄、填寫居護各項表單與銜接接續計畫。</li>
+  <li><strong>長照機構管理系統</strong>：負責維護機構資料、管理居護個案基本資料、全人評估、照護計畫與共照記錄，並辦理服務費用申報。</li>
+  <li><strong>在宅醫療資訊系統</strong>：負責建立在宅急症訪視與臨床紀錄，並供應接續照護計畫。</li>
+  <li><strong>長照資料交換中心</strong>：儲存與管理各項標準 FHIR 資源，提供查詢與資料供應服務。</li>
+  <li><strong>費用支付審核模擬服務</strong>：接收服務申報資料並依規則產出審核結果。</li>
+</ul>
+
+<h3 id="系統角色-system-actors">系統角色 (System Actors)</h3>
+
+<table class="grid rwd-table">
+  <thead>
+    <tr>
+      <th>Keyword</th>
+      <th>名稱</th>
+      <th>說明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LTC_CONSUMER</td>
+      <td>LTC Consumer</td>
+      <td>長照資料查詢端，負責發起條件查詢與單筆讀取請求，解析並呈現指定欄位。</td>
+    </tr>
+    <tr>
+      <td>LTC_MANAGEMENT</td>
+      <td>LTC Management System</td>
+      <td>長照資料維護端，負責在長照共通資料交換與各業務賽道中發起單筆新增請求（POST）。</td>
+    </tr>
+    <tr>
+      <td>LTC_REPOSITORY</td>
+      <td>LTC Repository</td>
+      <td>長照資料儲存端，負責提供標準資料交換與儲存服務，處理查詢、讀取與新增請求。</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 29, 2026 04:34+0800">2026-09-29</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hn-vs-bff7df80c996 | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNAnswerVSbff7df80c996 |
+| Draft as of 2026-09-29 | *Computable Name*:HNAnswerVSbff7df80c996 |
 | *Other Identifiers:*OID:2.25.329638873075854850597334598353324186886 | |
 
  
@@ -58,7 +58,7 @@
   "title" : "居家護理－近三個月體重變化選項",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNCaseSummaryModel | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNCaseSummaryModel |
+| Draft as of 2026-09-29 | *Computable Name*:HNCaseSummaryModel |
 
  
 描述居家護理需求摘要的資料需求。依 V5.0.16 有效欄位建立，來源欄位對應另列於 Mapping。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-HNCaseSummaryModel.c
   "name" : "HNCaseSummaryModel",
   "title" : "居家護理－需求摘要邏輯模型",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hn-vs-d9301962abbf | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNAnswerVSd9301962abbf |
+| Draft as of 2026-09-29 | *Computable Name*:HNAnswerVSd9301962abbf |
 | *Other Identifiers:*OID:2.25.306676706602285137562304321073983045858 | |
 
  
@@ -58,7 +58,7 @@
   "title" : "居家護理－溝通-影響日常活動選項",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

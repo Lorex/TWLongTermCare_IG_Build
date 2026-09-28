@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNVitalSignsBundle | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:HNVitalSignsBundle |
+| Active as of 2026-09-29 | *Computable Name*:HNVitalSignsBundle |
 
  
 彙集同一次量測的生命徵象與血糖。量測組的 hasMember 限生命徵象 Profile，故以 Bundle 串聯既有血糖 Profile。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-HNVitalSignsBundle.c
   "name" : "HNVitalSignsBundle",
   "title" : "居家護理－生命徵象交換集合",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

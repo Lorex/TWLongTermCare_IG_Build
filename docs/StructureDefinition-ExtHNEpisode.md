@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/ExtHNEpisode | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:ExtHNEpisode |
+| Active as of 2026-09-29 | *Computable Name*:ExtHNEpisode |
 
 參照此次收案的 EpisodeOfCare。以機構、個案身分證字號及收案日期區分不同次收案。
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-ExtHNEpisode.csv), [
   "name" : "ExtHNEpisode",
   "title" : "居家護理－收案關聯",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

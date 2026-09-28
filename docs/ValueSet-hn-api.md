@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hn-api | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:HNAPIVS |
+| Active as of 2026-09-29 | *Computable Name*:HNAPIVS |
 | *Other Identifiers:*OID:2.25.327029042831774211468818290978451932487 | |
 
  
@@ -56,7 +56,7 @@
   "title" : "居家護理－API 作業值集",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCLocationFeeAuditPlace | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:LTCLocationFeeAuditPlace |
+| Draft as of 2026-09-29 | *Computable Name*:LTCLocationFeeAuditPlace |
 
  
 此 Location 以衛生福利部支付審核系統的交通接送資料為基礎，用以表述個案接送的出發地、目的地及經緯度。 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCLocationFeeAuditP
   "name" : "LTCLocationFeeAuditPlace",
   "title" : "長照支付審查－交通接送起訖地",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -8,39 +8,21 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ImplementationGuide/tw.iii.ltc | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:TaiwanLongTermCareImplementationGuide |
+| Active as of 2026-09-29 | *Computable Name*:TaiwanLongTermCareImplementationGuide |
 
 ### 重要異動公告
 
-目前版本：**STU 1.1.0**。
+**STU 1.1.0 更新內容**
 
-#### STU 1.1.0 更新內容（相較於 1.0.0）
+本版新增支付審查、居家護理及在宅急症資料交換規範，並整合各主題的流程、欄位對照與範例，詳列如下。
 
-本版新增支付審查、居家護理及在宅急症資料交換規範，並整合各主題的流程、欄位對照與範例。新增定義優先重用既有 LTC 與 TW Core Profile；需要不同限制時，再由適用的共同父層衍生。
+1. **[長照支付審查](fee-audit.md)**：新增服務紀錄申報、刪除、申報確認、審核結果查詢、撤回及取消結果回報等七支 API 的 FHIR 對應。以 Bundle、Claim、ClaimResponse、Task 等資源表達申報與審核流程，提供相關 Profiles、術語、Extensions 與範例。
+1. **[居家護理照護管理系統](home-nursing.md)**：依中衛居護系統介接規範 V5.0.16 新增 12 支 API、24 種表單的交換設計，包含 37 個 Logical Models、35 個 Profiles，以及術語、Extensions 與範例。涵蓋多次收案、全人評估、需求摘要、照護計畫、共照、傷口、生命徵象及處理結果查詢，並提供[欄位對照](home-nursing-mapping.md)。
+1. **[在宅急症照護](hah.md)**：新增涵蓋 150 個資料元素的 Logical Model、25 個 Profiles、3 個 Extensions、5 個 CodeSystems、7 個 ValueSets、1 份收案評估問卷及 39 個範例。以 EpisodeOfCare 串聯整段照護與單次訪視，支援檢驗、給藥、照會、結案與轉銜，並提供完整結案／轉院文件及[欄位對照表](hah-mapping.md)。
+1. **術語與欄位說明**：補齊既有術語的 OID 與費用申報 Mapping 連結。精簡欄位填寫說明，將來源欄位對照集中於專用表格，便於實作者確認實際填值與轉換方式。
+1. **文件與導覽**：新增「主題說明」選單，整合三個業務主題，並更新[Logical Models](logical-models.md)、[Profiles 與 Extensions](profiles-and-extensions.md)、[術語](terminologies.md)及[範例](examples.md)索引，以及同步更新版本資訊與作者／貢獻者資料。
 
-| | |
-| :--- | :--- |
-| [長照支付審查](fee-audit.md) | 新增服務紀錄申報、刪除、申報確認、審核結果查詢、撤回及取消結果回報等七支 API 的 FHIR 對應。以 Bundle、Claim、ClaimResponse、Task 等資源表達申報與審核流程，提供相關 Profiles、術語、Extensions 與範例。 |
-| [居家護理照護管理系統](home-nursing.md) | 依介接規範 V5.0.16 新增十二支 API、二十四種表單的交換設計，包含 37 個 Logical Models、35 個 Profiles，以及術語、Extensions 與範例。涵蓋多次收案、全人評估、需求摘要、照護計畫、共照、傷口、生命徵象及處理結果查詢，並提供[逐欄 Mapping](home-nursing-mapping.md)。 |
-| [在宅急症照護](hah.md) | 新增涵蓋 150 個資料元素的 Logical Model、25 個 Profiles、3 個 Extensions、5 個 CodeSystems、7 個 ValueSets、1 份收案評估問卷及 38 個範例。以 EpisodeOfCare 串聯整段照護與單次訪視，支援檢驗、給藥、照會、結案與轉銜，並提供完整結案／轉院文件及[欄位對照](hah-mapping.md)。 |
-| 術語與欄位說明 | 補齊既有術語的 OID 與費用申報 Mapping 連結。精簡欄位填寫說明，將來源欄位對照集中於專用表格，便於實作者確認實際填值與轉換方式。 |
-| 文件與導覽 | 新增「主題說明」選單，整合三個業務主題，並更新[Logical Models](logical-models.md)、[Profiles 與 Extensions](profiles-and-extensions.md)、[術語](terminologies.md)及[範例](examples.md)索引。同步更新版本資訊與作者／貢獻者資料。 |
-| 建置與驗證 | 建置統一使用`https://tx.fhir.org`進行線上術語驗證。移除離線及本地術語驗證模式；術語服務無法連線時停止建置。 |
-
-**升版注意：**本版持續使用 FHIR R4.0.1 與 TW Core IG 1.0.0。新增業務主題是 FHIR 交換設計，不表示原系統 API 已改用 FHIR；介接時請依各主題的 Mapping 轉換資料，並確認採用 Profile 的狀態、必填條件與值集。各主題的收案、就診、計畫及結案狀態應分別處理，不以 Patient.active 代替療程結案。
-
-**歷史公告：STU 1.0.0 重大變更（Breaking Changes）**
-
-1.0.0 為首個正式試用版（Standard for Trial Use），包含以下與先前版本不相容的異動：
-
-1. **Profile 命名統一**：所有 Profile 統一採用`LTC[ResourceType][Purpose]`命名規範（如`LTCCarePlanPayload`、`LTCBundlePayload`），舊名稱（如`CarePlanTWLTCPlanSDK`、`BundleTWLTCSDKPayload`）不再使用。
-1. **CodeSystem/ValueSet 去除 SDK 後綴**：`CS-TW-LTC-CMSLevel-SDK`、`CS-TW-LTC-CaseStatus-SDK`等已改為`CS-TW-LTC-CMSLevel`、`CS-TW-LTC-CaseStatus`。
-1. **Extension 整併**：`Export-PlanId`、`FrequencyLabel-SDK`已改用 FHIR 原生欄位取代；Incident 系列 Extension 已廢棄，改用`LTCAdverseEvent`Profile。
-1. **異常事件通報**：原`Communication`-based Incident Profile 已全面遷移至`LTCAdverseEvent`，並新增`AdverseEventDescription`、`AdverseEventNotifMethod`、`AdverseEventAbout`三個 Extension。
-1. **Common Base Profile 導入**：新增`LTCCompositionBase`、`LTCObservationAssessmentBase`、`LTCEpisodeOfCareBase`作為共用基礎 Profile。
-1. **CoverageEligibilityResponse 合併**：SDK 版與 CS100 版合併為單一`LTCCoverageEligibilityResponse`。
-
-實作者請參照新版 Profile 名稱與結構進行調整。
+本版持續使用 FHIR R4.0.1 與 TW Core IG 1.0.0。各主題的 Mapping 說明來源資料與 FHIR 欄位的對應，Profiles 定義交換結構、必填條件與值集。
 
 ### 介紹
 
@@ -122,8 +104,28 @@ TW LTC IG 中所有Profiles的FMM等級如下：
 * **[結構定義與範例檔下載](downloads.md)**：實作者若不偏好使用 FHIR RESTful API 驗證資料是否遵從 Profiles，可直接下載所需的格式驗證檔，包括 XML、JSON 及 Turtle 三種格式，亦可於此下載完整範例。
 * **[安全性](security.md)**：主要說明採用 TW LTC IG 網站進行實作時，有關資料存取授權的作法。
 * **[驗證教學](validates.md)**：如何驗證實作檔是否遵從 TW LTC IG 規範。
-* **[ 2025 專案聯測松](connectathon.md)**：本規範與 2025 專案聯測松的賽道整合資訊。
-* **[聯測松結果](connectathon-result.md)**：2025 專案聯測松的驗證結果。
+* **專案聯測**：聯測專區依年度提供活動說明與驗證結果。 
+* **2025 專案聯測** 
+* [聯測說明](2025-connectathon.md)：活動說明與賽道整合資訊。
+* [賽道情境、角色與交易列表](connectathon-table.md)
+* [賽道 0：OAuth2 存取認證](track0.md)
+* [賽道 1：日間照護服務資料交換](track1.md)
+* [賽道 2：失智症評估與監測](track2.md)
+* [賽道 3：機構間轉銜服務](track3.md)
+* [賽道 4：長照 2.0 服務計畫與紀錄](track4.md)
+* [聯測結果](2025-connectathon-result.md)：聯測驗證結果。
+ 
+* **2026 專案聯測** 
+* [聯測說明](2026-connectathon.md)：涵蓋長照跨場域共通資料層建立與查讀、居家護理四大情境資料管理、服務費用申報審核及在宅急症三段臨床流程等業務情境。
+* [賽道情境、角色與交易列表](2026-connectathon-table.md)
+* [賽道 0：OAuth2 存取認證](2026-track0.md)
+* [賽道 1：長照共通資料交換](2026-track1.md)
+* [賽道 2：居家照護資料交換](2026-track2.md)
+* [賽道 3：長照服務費用支付審核](2026-track3.md)
+* [賽道 4：在宅急症照護資料交換](2026-track4.md)
+* [聯測結果](2026-connectathon-result.md)
+ 
+ 
 
 #### Profiles 之類別劃分
 
@@ -150,7 +152,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
 | 貢獻者 | 0.0.1~1.1.0 | 黃薰慧（Hsun-Hui Huang） | 財團法人資訊工業策進會 - 數位轉型研究院（Institute for Information Industry - Digital Transformation Research Institute） | [beatrice@iii.org.tw](mailto:beatrice@iii.org.tw) | |
 | 貢獻者 | 0.3.0~1.1.0 | 張鈞亮 (Chun-Liang Chang) | 財團法人資訊工業策進會 - 數位轉型研究院（Institute for Information Industry - Digital Transformation Research Institute） | [liangglchang@iii.org.tw](mailto:liangglchang@iii.org.tw) | |
 | 貢獻者 | 0.3.0~1.1.0 | 崔智萱 (Nicole Tsui) | 財團法人資訊工業策進會 - 數位轉型研究院（Institute for Information Industry - Digital Transformation Research Institute） | [nicolechtsui@iii.org.tw](mailto:nicolechtsui@iii.org.tw) | |
-| 貢獻者 | 0.0.1~1.1.0 | 李修安（Hsiu-An Lee） | 國家衛生研究院 - 癌症研究所（National Health Research Institutes - The National Institute of Cancer Research） | [billy72325@gmail.com](mailto:billy72325@gmail.com) | |
+| 貢獻者 | 0.0.1~0.3.0 | 李修安（Hsiu-An Lee） | 國家衛生研究院 - 癌症研究所（National Health Research Institutes - The National Institute of Cancer Research） | [billy72325@gmail.com](mailto:billy72325@gmail.com) | |
 
 
 
@@ -165,7 +167,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
   "name" : "TaiwanLongTermCareImplementationGuide",
   "title" : "臺灣長期照顧實作指引(TW LTC IG)",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -185,7 +187,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.3.0"
+    "version" : "7.4.0"
   },
   {
     "id" : "hl7ext",
@@ -1331,6 +1333,22 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Encounter-hah-encounter.html"
+      }],
+      "reference" : {
+        "reference" : "Encounter/hah-encounter"
+      },
+      "name" : "在宅急症共同就診資料範例",
+      "description" : "示範共同就診 Profile 的必要欄位；整段照護與單次訪視另有子 Profile 範例。",
+      "exampleCanonical" : "http://ltc-ig.fhir.tw/StructureDefinition/HAHEncounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
       },
       {
@@ -1421,7 +1439,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
         "reference" : "Questionnaire/hah-intake-assessment"
       },
       "name" : "在宅急症收案評估問卷",
-      "description" : "本 IG 定義的收案資料交換表單；正式計畫條件須依實際採用的版本評估。",
+      "description" : "記錄收案評估所依據的計畫名稱與版本、居家環境、照顧者支援、收案建議及原因。",
       "exampleBoolean" : false
     },
     {
@@ -1933,7 +1951,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
         "reference" : "StructureDefinition/HAHVisitEncounter"
       },
       "name" : "在宅急症－單次訪視",
-      "description" : "每次實地、視訊或電話評估建立一筆訪視，參照整段照護與收案療程。預約或通知不能當成已完成訪視。",
+      "description" : "每次實地、視訊或電話評估建立一筆訪視，參照整段照護與收案療程。",
       "exampleBoolean" : false
     },
     {
@@ -2045,7 +2063,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
         "reference" : "StructureDefinition/HAHAssessmentResponse"
       },
       "name" : "在宅急症－收案評估回覆",
-      "description" : "記錄評估依據、居家環境、照顧者支援與收案建議。此為本 IG 的交換表單，不宣稱為健保署官方收案表。",
+      "description" : "記錄評估依據、居家環境、照顧者支援與收案建議。",
       "exampleBoolean" : false
     },
     {
@@ -2093,7 +2111,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
         "reference" : "StructureDefinition/HAHAdmissionEncounter"
       },
       "name" : "在宅急症－整段照護",
-      "description" : "表達本次在宅急症的整段照護，供每次訪視透過 partOf 參照。IMP 表示本資料集的在宅住院照護分類，不代表照護地點在醫院。",
+      "description" : "表達本次在宅急症的整段照護，供每次訪視透過 partOf 參照。IMP 表示在宅住院照護分類，location 記錄照護地點。",
       "exampleBoolean" : false
     },
     {
@@ -2109,7 +2127,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
         "reference" : "StructureDefinition/HAHServiceRequest"
       },
       "name" : "在宅急症－服務請求",
-      "description" : "沿用長照服務請求，表達照會、檢驗、處置或轉介。項目應使用適切標準代碼，無適切概念時才使用本地分類並補充文字。",
+      "description" : "沿用長照服務請求，表達照會、檢驗、處置或轉介。項目應使用標準代碼，無適合的 code 時才使用本地分類並補充文字。",
       "exampleBoolean" : false
     },
     {
@@ -2157,7 +2175,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
         "reference" : "StructureDefinition/HAHObservationLab"
       },
       "name" : "在宅急症－檢驗結果",
-      "description" : "一筆檢驗項目一筆結果。保留檢體、方法、單位與參考區間；缺少結果時填 dataAbsentReason，不填零值代替。",
+      "description" : "一筆檢驗項目一筆結果。保留檢體、方法、單位與參考區間，缺少結果時以 dataAbsentReason 記錄原因。",
       "exampleBoolean" : false
     },
     {
@@ -2189,7 +2207,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
         "reference" : "StructureDefinition/HAHCommunication"
       },
       "name" : "在宅急症－照會與交班",
-      "description" : "沿用服務活動紀錄，交換照會回覆、交班與衛教內容。接收訊息不代表已完成待辦工作。",
+      "description" : "沿用服務活動紀錄，交換照會回覆、交班與衛教內容。",
       "exampleBoolean" : false
     },
     {
@@ -2205,7 +2223,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
         "reference" : "StructureDefinition/HAHConsent"
       },
       "name" : "在宅急症－照護同意",
-      "description" : "記錄照護同意的狀態、範圍、時間及來源文件。此資源不取代可執行的醫囑，也不以一般同意代替 DNR 決定。",
+      "description" : "記錄照護同意的狀態、範圍、時間及來源文件。",
       "exampleBoolean" : false
     },
     {
@@ -2221,7 +2239,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
         "reference" : "StructureDefinition/HAHCareTeam"
       },
       "name" : "在宅急症－照護團隊",
-      "description" : "記錄主責及共照人員、機構、角色與參與期間。既有長照團隊不允許機構成員，因此由共同 TW Core 父層衍生。",
+      "description" : "記錄主責及共照人員、機構、角色與參與期間。團隊成員包含人員與共照機構。",
       "exampleBoolean" : false
     },
     {
@@ -2237,7 +2255,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
         "reference" : "StructureDefinition/HAHVisitTask"
       },
       "name" : "在宅急症－照護工作",
-      "description" : "記錄訪視、送藥等執行工作。因長照任務的 owner 不允許 CareTeam，此處由 FHIR Task 衍生以支援團隊指派。",
+      "description" : "記錄訪視、送藥等執行工作。owner 記錄負責執行的人員、機構或照護團隊。",
       "exampleBoolean" : false
     },
     {
@@ -2269,7 +2287,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
         "reference" : "StructureDefinition/HAHGoal"
       },
       "name" : "在宅急症－照護目標",
-      "description" : "記錄個案預期達到的結果、期限及評值。照護問題應另記錄於 Condition，不以目標取代問題。",
+      "description" : "記錄個案預期達到的結果、期限及評值。照護問題記錄於 Condition。",
       "exampleBoolean" : false
     },
     {
@@ -2397,7 +2415,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
         "reference" : "StructureDefinition/HAHCompositionSummary"
       },
       "name" : "在宅急症－結案與轉銜摘要",
-      "description" : "彙整本次療程與接續照護所需的資訊。每個章節均提供可閱讀文字，資料不足時說明未知或未評估，不得推定為無。",
+      "description" : "彙整本次療程與接續照護所需的資訊。以療程、問題、過敏、藥物、結果、照護及後續追蹤七個章節提供可閱讀的摘要。",
       "exampleBoolean" : false
     },
     {
@@ -2413,7 +2431,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
         "reference" : "StructureDefinition/HAHMedicationAdministration"
       },
       "name" : "在宅急症－給藥與輸注",
-      "description" : "記錄實際給藥時間點或輸注期間。既有長照給藥強制 effectiveDateTime，因此由 FHIR 父層衍生以支援 effectivePeriod 及未給藥。",
+      "description" : "記錄實際給藥時間點或輸注期間。effectiveDateTime 記錄單次給藥時間，effectivePeriod 記錄持續輸注期間。",
       "exampleBoolean" : false
     },
     {
@@ -2445,7 +2463,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
         "reference" : "StructureDefinition/HAHClinicalImpression"
       },
       "name" : "在宅急症－臨床評估",
-      "description" : "記錄評估人員對病情的判斷、發現與摘要。生命徵象、檢驗、已執行處置及費用不應只以 JSON 字串塞入 note。",
+      "description" : "記錄評估人員對病情的判斷、發現與摘要。",
       "exampleBoolean" : false
     },
     {
@@ -2461,7 +2479,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
         "reference" : "StructureDefinition/HAHProcedure"
       },
       "name" : "在宅急症－處置紀錄",
-      "description" : "沿用長照照護活動，記錄抽痰、傷口照護或管路更換等實際處置。給藥事件使用 MedicationAdministration。",
+      "description" : "沿用長照照護活動，記錄抽痰、傷口照護或管路更換等實際處置。",
       "exampleBoolean" : false
     },
     {
@@ -2541,7 +2559,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
         "reference" : "StructureDefinition/HAHAllergyIntolerance"
       },
       "name" : "在宅急症－過敏資訊",
-      "description" : "記錄過敏物質、確認狀態及反應。無紀錄不能推定無過敏；未評估與已確認無過敏應分開表達。",
+      "description" : "記錄過敏物質、確認狀態及反應。",
       "exampleBoolean" : false
     },
     {
@@ -2557,7 +2575,7 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
         "reference" : "StructureDefinition/HAHDevice"
       },
       "name" : "在宅急症－量測設備",
-      "description" : "記錄居家量測設備的識別與類型。一般設備編號使用 identifier；只有正式 UDI 才填入 udiCarrier。",
+      "description" : "記錄居家量測設備的識別與類型。identifier 記錄設備編號，udiCarrier 記錄 UDI。",
       "exampleBoolean" : false
     },
     {
@@ -13356,28 +13374,100 @@ Extensions 亦依相同類別劃分，詳見 [FHIR Profiles 及 Extensions](prof
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "2025-connectathon.html"
+        }],
+        "nameUrl" : "2025-connectathon.html",
+        "title" : "2025 Connectathon",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "2025-connectathon-result.html"
+        }],
+        "nameUrl" : "2025-connectathon-result.html",
+        "title" : "2025 Connectathon Result",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "2026-connectathon.html"
+        }],
+        "nameUrl" : "2026-connectathon.html",
+        "title" : "2026 Connectathon",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "2026-connectathon-result.html"
+        }],
+        "nameUrl" : "2026-connectathon-result.html",
+        "title" : "2026 Connectathon Result",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "2026-connectathon-table.html"
+        }],
+        "nameUrl" : "2026-connectathon-table.html",
+        "title" : "2026 Connectathon Table",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "2026-track0.html"
+        }],
+        "nameUrl" : "2026-track0.html",
+        "title" : "2026 Track 0",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "2026-track1.html"
+        }],
+        "nameUrl" : "2026-track1.html",
+        "title" : "2026 Track 1",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "2026-track2.html"
+        }],
+        "nameUrl" : "2026-track2.html",
+        "title" : "2026 Track 2",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "2026-track3.html"
+        }],
+        "nameUrl" : "2026-track3.html",
+        "title" : "2026 Track 3",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "2026-track4.html"
+        }],
+        "nameUrl" : "2026-track4.html",
+        "title" : "2026 Track 4",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "capability-statements.html"
         }],
         "nameUrl" : "capability-statements.html",
         "title" : "Capability Statements",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "connectathon.html"
-        }],
-        "nameUrl" : "connectathon.html",
-        "title" : "Connectathon",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "connectathon-result.html"
-        }],
-        "nameUrl" : "connectathon-result.html",
-        "title" : "Connectathon Result",
         "generation" : "markdown"
       },
       {

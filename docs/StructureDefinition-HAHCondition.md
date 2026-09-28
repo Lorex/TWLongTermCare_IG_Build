@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHCondition | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHCondition |
+| Draft as of 2026-09-29 | *Computable Name*:HAHCondition |
 
  
 記錄本次急症、共病或照護問題。主次診斷的角色與順位記錄在 Encounter 或 EpisodeOfCare 的 diagnosis。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHCondition.csv), [
   "name" : "HAHCondition",
   "title" : "在宅急症－診斷與照護問題",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

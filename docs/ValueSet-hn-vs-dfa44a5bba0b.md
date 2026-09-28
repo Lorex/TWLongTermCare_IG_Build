@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hn-vs-dfa44a5bba0b | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNAnswerVSdfa44a5bba0b |
+| Draft as of 2026-09-29 | *Computable Name*:HNAnswerVSdfa44a5bba0b |
 | *Other Identifiers:*OID:2.25.296343778493273049505421623570078288854 | |
 
  
@@ -58,7 +58,7 @@
   "title" : "居家護理－操作項目與流程選項",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

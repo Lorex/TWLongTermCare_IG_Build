@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCFeeAuditDetailModel | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:LTCFeeAuditDetailModel |
+| Draft as of 2026-09-29 | *Computable Name*:LTCFeeAuditDetailModel |
 
  
 此邏輯模型以《衛生福利部 支付審核系統 API 規格說明書（照管平台）v2.2.1》「五、(查詢B)分案審核明細查詢」為基礎，用以描述分案審核明細查詢之傳送資料與回覆明細的資料結構與欄位準備指引。需先執行（查詢A）取得案件之核銷案號、核銷狀況與總表版次，當為新核銷案號或核銷狀況、總表版次有異動時，才執行（查詢B）取得該案件之明細資料。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCFeeAuditDetailMod
   "title" : "長照支付審查－分案審核明細邏輯模型",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

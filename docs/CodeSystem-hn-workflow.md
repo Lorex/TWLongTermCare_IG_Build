@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/hn-workflow | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNWorkflowCS |
+| Draft as of 2026-09-29 | *Computable Name*:HNWorkflowCS |
 | *Other Identifiers:*OID:2.25.233044287078495270027959925539980032688 | |
 
  
@@ -39,7 +39,7 @@
   "title" : "居家護理－介接作業代碼",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

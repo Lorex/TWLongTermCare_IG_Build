@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNIADLsResponse | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNIADLsResponse |
+| Draft as of 2026-09-29 | *Computable Name*:HNIADLsResponse |
 
  
 記錄工具性日常生活活動功能評估的結構化內容。以各 Slice 填入資料，保留未作答與多筆紀錄。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-HNIADLsResponse.csv)
   "name" : "HNIADLsResponse",
   "title" : "居家護理－工具性日常生活活動功能評估表單",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

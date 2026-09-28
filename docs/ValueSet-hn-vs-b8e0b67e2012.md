@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hn-vs-b8e0b67e2012 | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNAnswerVSb8e0b67e2012 |
+| Draft as of 2026-09-29 | *Computable Name*:HNAnswerVSb8e0b67e2012 |
 | *Other Identifiers:*OID:2.25.281476430614408685765165825566103943477 | |
 
  
@@ -58,7 +58,7 @@
   "title" : "居家護理－身體質量指數(BMI)=體重(公斤)/身高(公尺)2選項",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

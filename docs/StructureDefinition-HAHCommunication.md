@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHCommunication | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHCommunication |
+| Draft as of 2026-09-29 | *Computable Name*:HAHCommunication |
 
  
-沿用服務活動紀錄，交換照會回覆、交班與衛教內容。接收訊息不代表已完成待辦工作。 
+沿用服務活動紀錄，交換照會回覆、交班與衛教內容。 
 
 **Usages:**
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHCommunication.csv
   "name" : "HAHCommunication",
   "title" : "在宅急症－照會與交班",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHCommunication.csv
       "value" : "https://www.ida.gov.tw/"
     }]
   }],
-  "description" : "沿用服務活動紀錄，交換照會回覆、交班與衛教內容。接收訊息不代表已完成待辦工作。",
+  "description" : "沿用服務活動紀錄，交換照會回覆、交班與衛教內容。",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "workflow",

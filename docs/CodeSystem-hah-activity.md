@@ -9,7 +9,8 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/hah-activity | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHActivityCS |
+| Draft as of 2026-09-29 | *Computable Name*:HAHActivityCS |
+| *Other Identifiers:*OID:2.25.226771134342697356085489259848258675935 | |
 
  
 本 IG 用於區分在宅急症照護、服務與工作類型的本地代碼。不是健保支付項目或收案資格。 
@@ -28,12 +29,16 @@
   "resourceType" : "CodeSystem",
   "id" : "hah-activity",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/hah-activity",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.226771134342697356085489259848258675935"
+  }],
   "version" : "1.1.0",
   "name" : "HAHActivityCS",
   "title" : "在宅急症－照護活動代碼",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

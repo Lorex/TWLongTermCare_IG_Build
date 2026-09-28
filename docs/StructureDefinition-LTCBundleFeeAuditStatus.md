@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleFeeAuditStatus | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:LTCBundleFeeAuditStatus |
+| Draft as of 2026-09-29 | *Computable Name*:LTCBundleFeeAuditStatus |
 
  
 此 Bundle 以衛生福利部支付審核系統的服務單位各分案審核狀態查詢結果為基礎，用以表述申報交易與分案審核狀態的回覆結構。 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCBundleFeeAuditSta
   "name" : "LTCBundleFeeAuditStatus",
   "title" : "長照支付審查－分案審核狀態回覆打包",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

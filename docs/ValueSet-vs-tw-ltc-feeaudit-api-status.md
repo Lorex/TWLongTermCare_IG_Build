@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-feeaudit-api-status | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:VS_TW_LTC_FeeAuditApiStatus |
+| Active as of 2026-09-29 | *Computable Name*:VS_TW_LTC_FeeAuditApiStatus |
 | *Other Identifiers:*OID:2.25.252555818192652412548456054341878418513 | |
 
  
@@ -56,7 +56,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "title" : "支付審查－API 執行狀況",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

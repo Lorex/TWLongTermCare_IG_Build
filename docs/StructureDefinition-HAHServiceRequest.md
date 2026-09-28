@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHServiceRequest | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHServiceRequest |
+| Draft as of 2026-09-29 | *Computable Name*:HAHServiceRequest |
 
  
-沿用長照服務請求，表達照會、檢驗、處置或轉介。項目應使用適切標準代碼，無適切概念時才使用本地分類並補充文字。 
+沿用長照服務請求，表達照會、檢驗、處置或轉介。項目應使用標準代碼，無適合的 code 時才使用本地分類並補充文字。 
 
 **Usages:**
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHServiceRequest.cs
   "name" : "HAHServiceRequest",
   "title" : "在宅急症－服務請求",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHServiceRequest.cs
       "value" : "https://www.ida.gov.tw/"
     }]
   }],
-  "description" : "沿用長照服務請求，表達照會、檢驗、處置或轉介。項目應使用適切標準代碼，無適切概念時才使用本地分類並補充文字。",
+  "description" : "沿用長照服務請求，表達照會、檢驗、處置或轉介。項目應使用標準代碼，無適合的 code 時才使用本地分類並補充文字。",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "workflow",

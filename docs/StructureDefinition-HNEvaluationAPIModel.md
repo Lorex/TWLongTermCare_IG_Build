@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNEvaluationAPIModel | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNEvaluationAPIModel |
+| Draft as of 2026-09-29 | *Computable Name*:HNEvaluationAPIModel |
 
  
 描述全人評估 API 的請求資料。來源為 V5.0.16 印刷頁 14–70，所有 API 採 POST。SecretKey 僅用於傳輸驗證，不存入 FHIR。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-HNEvaluationAPIModel
   "name" : "HNEvaluationAPIModel",
   "title" : "居家護理－全人評估 API 邏輯模型",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

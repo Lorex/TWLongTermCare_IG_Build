@@ -41,8 +41,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"25.563"}
-    h3,h4,h5,h6{--heading-prefix:"25.563"}</style>
+    <style type="text/css">h2{--heading-prefix:"33.564"}
+    h3,h4,h5,h6{--heading-prefix:"33.564"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -122,23 +122,59 @@
   <li><a href="security.html">安全性</a></li>
   <li><a href="validates.html">驗證教學</a></li>
   <li class="dropdown">
-    <a href="connectathon.html">2025 專案聯測松<b class="caret"></b></a>
+    <a href="#">專案聯測<b class="caret"></b></a>
     <ul class="dropdown-menu">
-      <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
-      <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
-      <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
-      <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
-      <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
-      <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+      <li class="dropdown-submenu">
+        <a href="2025-connectathon.html">2025 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2025-connectathon.html">聯測說明</a></li>
+          <li><a href="connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="track0.html">賽道 0：OAuth2 存取認證</a></li>
+          <li><a href="track1.html">賽道 1：日間照護服務資料交換</a></li>
+          <li><a href="track2.html">賽道 2：失智症評估與監測</a></li>
+          <li><a href="track3.html">賽道 3：機構間轉銜服務</a></li>
+          <li><a href="track4.html">賽道 4：長照 2.0 服務計畫與紀錄</a></li>
+          <li><a href="2025-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="2026-connectathon.html">2026 專案聯測<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="2026-connectathon.html">聯測說明</a></li>
+          <li><a href="2026-connectathon-table.html">賽道情境、角色與交易列表</a></li>
+          <li><a href="2026-track0.html">共通前置：OAuth2 存取認證</a></li>
+          <li><a href="2026-track1.html">賽道 1：長照共通資料交換</a></li>
+          <li><a href="2026-track2.html">賽道 2：居家照護資料交換</a></li>
+          <li><a href="2026-track3.html">賽道 3：長照服務費用支付審核</a></li>
+          <li><a href="2026-track4.html">賽道 4：在宅急症照護資料交換</a></li>
+          <li><a href="2026-connectathon-result.html">聯測結果</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li><a href="connectathon-result.html">聯測松結果</a></li>
   <!-- <li><a href="history.html">版本歷程</a></li> -->
 </ul>      
 
 <style>
-.dropdown-menu li:hover .sub-menu {visibility: visible;}
-.dropdown:hover .dropdown-menu {display: block;}
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {display: block;}
+.dropdown-submenu {position: relative;}
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  top: 0;
+  left: 100%;
+  margin-top: 0;
+}
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus-within > .dropdown-menu {display: block;}
+
+@media only screen and (max-width: 767px) {
+  .dropdown-submenu > .dropdown-menu {
+    position: static;
+    float: none;
+    margin-left: 15px;
+  }
+}
 
 @media only screen and (max-width: 992px) {
   table.colsi {
@@ -246,7 +282,7 @@
 
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><a name="hah-video-visit"> </a><a name="hchah-video-visit"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-HAHVisitEncounter.html">在宅急症－單次訪視</a></p></div><p><b>在宅急症－訪視方式</b>: video</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-VR">ActCode: VR</a> (virtual)</p><p><b>type</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity visit}">訪視</span></p><p><b>subject</b>: <a href="Patient-hah-patient.html">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>episodeOfCare</b>: <a href="EpisodeOfCare-hah-episode.html">EpisodeOfCare: extension = 完成治療; identifier = https://example.org/hah/episodes#HAH-20260901-001; status = finished; type = 在宅急症照護; period = 2026-09-01 08:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><h3>Participants</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Individual</b></td></tr><tr><td style="display: none">*</td><td><a href="Practitioner-hah-practitioner.html">Practitioner 李示範</a></td></tr></table><p><b>period</b>: 2026-09-02 09:00:00+0800 --&gt; 2026-09-02 09:15:00+0800</p><p><b>serviceProvider</b>: <a href="Organization-hah-organization.html">Organization 在宅急症示範醫療機構</a></p><p><b>partOf</b>: <a href="Encounter-hah-admission.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><a name="hah-video-visit"> </a><a name="hchah-video-visit"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-HAHVisitEncounter.html">在宅急症－單次訪視</a></p></div><p><b>在宅急症－訪視方式</b>: video</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.4.0/CodeSystem-v3-ActCode.html#v3-ActCode-VR">ActCode: VR</a> (virtual)</p><p><b>type</b>: <span title="Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-activity visit}">訪視</span></p><p><b>subject</b>: <a href="Patient-hah-patient.html">王測試 Male, DoB: 1945-03-15 ( Provider number)</a></p><p><b>episodeOfCare</b>: <a href="EpisodeOfCare-hah-episode.html">EpisodeOfCare: extension = 完成治療; identifier = https://example.org/hah/episodes#HAH-20260901-001; status = finished; type = 在宅急症照護; period = 2026-09-01 08:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><h3>Participants</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Individual</b></td></tr><tr><td style="display: none">*</td><td><a href="Practitioner-hah-practitioner.html">Practitioner 李示範</a></td></tr></table><p><b>period</b>: 2026-09-02 09:00:00+0800 --&gt; 2026-09-02 09:15:00+0800</p><p><b>serviceProvider</b>: <a href="Organization-hah-organization.html">Organization 在宅急症示範醫療機構</a></p><p><b>partOf</b>: <a href="Encounter-hah-admission.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p></div>
 
   
 
@@ -271,7 +307,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 17, 2026 17:33+0800">2026-09-17</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 29, 2026 04:34+0800">2026-09-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

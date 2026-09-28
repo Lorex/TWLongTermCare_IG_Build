@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/ExtHAHOutcome | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:ExtHAHOutcome |
+| Draft as of 2026-09-29 | *Computable Name*:ExtHAHOutcome |
 
 療程結束時填入原因。其他原因應另填文字說明。
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-ExtHAHOutcome.csv), 
   "name" : "ExtHAHOutcome",
   "title" : "在宅急症－療程結束原因",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

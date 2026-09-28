@@ -9,7 +9,8 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hah-summary-type | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHSummaryTypeVS |
+| Draft as of 2026-09-29 | *Computable Name*:HAHSummaryTypeVS |
+| *Other Identifiers:*OID:2.25.156926275152463021880980015986415659964 | |
 
  
 結案或轉銜摘要。 
@@ -47,12 +48,16 @@
   "resourceType" : "ValueSet",
   "id" : "hah-summary-type",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/hah-summary-type",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.156926275152463021880980015986415659964"
+  }],
   "version" : "1.1.0",
   "name" : "HAHSummaryTypeVS",
   "title" : "在宅急症－摘要種類值集",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

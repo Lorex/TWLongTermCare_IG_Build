@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/Questionnaire/ltc-questionnaire-cdr | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:CDR |
+| Active as of 2026-09-29 | *Computable Name*:CDR |
 | *Other Identifiers:*http://ltc-ig.fhir.tw/questionnaire-id#CDR-001 (use: official, ) | |
 
  
@@ -37,7 +37,7 @@ Clinical Dementia Rating scale [CDR] - 臨床失智評估量表
   "title" : "臨床失智評估量表",
   "status" : "active",
   "subjectType" : ["Patient"],
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

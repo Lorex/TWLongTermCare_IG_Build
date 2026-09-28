@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hn-vs-fe3736bbd09e | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNAnswerVSfe3736bbd09e |
+| Draft as of 2026-09-29 | *Computable Name*:HNAnswerVSfe3736bbd09e |
 | *Other Identifiers:*OID:2.25.55990846781425582329559045849522907852 | |
 
  
@@ -58,7 +58,7 @@
   "title" : "居家護理－重大事件項目多選選項",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

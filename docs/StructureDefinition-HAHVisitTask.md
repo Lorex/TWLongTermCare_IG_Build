@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHVisitTask | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHVisitTask |
+| Draft as of 2026-09-29 | *Computable Name*:HAHVisitTask |
 
  
-記錄訪視、送藥等執行工作。因長照任務的 owner 不允許 CareTeam，此處由 FHIR Task 衍生以支援團隊指派。 
+記錄訪視、送藥等執行工作。owner 記錄負責執行的人員、機構或照護團隊。 
 
 **Usages:**
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHVisitTask.csv), [
   "name" : "HAHVisitTask",
   "title" : "在宅急症－照護工作",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHVisitTask.csv), [
       "value" : "https://www.ida.gov.tw/"
     }]
   }],
-  "description" : "記錄訪視、送藥等執行工作。因長照任務的 owner 不允許 CareTeam，此處由 FHIR Task 衍生以支援團隊指派。",
+  "description" : "記錄訪視、送藥等執行工作。owner 記錄負責執行的人員、機構或照護團隊。",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "workflow",
@@ -140,7 +140,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHVisitTask.csv), [
     {
       "id" : "Task.executionPeriod",
       "path" : "Task.executionPeriod",
-      "short" : "實際執行期間。[不得以預定時間代替]",
+      "short" : "實際執行期間。[填入工作開始與結束時間]",
       "mustSupport" : true
     },
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHCarePlan | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHCarePlan |
+| Draft as of 2026-09-29 | *Computable Name*:HAHCarePlan |
 
  
 沿用長照照顧計畫，串聯本次療程的病情、目標、服務請求及給藥處方。實際執行結果另以臨床資源記錄。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHCarePlan.csv), [E
   "name" : "HAHCarePlan",
   "title" : "在宅急症－照護計畫",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-FeeAudit-DocUrl | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:ExtTWLTCFeeAuditDocUrl |
+| Active as of 2026-09-29 | *Computable Name*:ExtTWLTCFeeAuditDocUrl |
 
 此 Extension 用於表示長照支付審查「(查詢B)分案審核明細查詢」回覆明細中各式總表與清冊檔案的下載路徑，包含暫付總表（temp_payment_doc_url）、總表（case_summary_notice_url）、清冊（case_svc_list_url）、清冊 EXCEL（case_svc_list_excel_url）、A 碼清冊（case_a_svc_list_url）、A 碼清冊 EXCEL（case_a_svc_list_excel_url）、申請記錄不通過清冊（case_err_list_url）及申請記錄不通過 EXCEL 清冊（case_err_list_excel_url）。每一份文件以一個本 Extension 實例表達，並以子元素 docType 標示文件類別、url 標示下載路徑。
 
@@ -50,7 +50,7 @@ Other representations of profile: [CSV](StructureDefinition-Ext-TW-LTC-FeeAudit-
   "title" : "長照支付審查－清冊文件下載路徑",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

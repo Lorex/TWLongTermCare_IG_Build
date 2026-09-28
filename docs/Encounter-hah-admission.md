@@ -10,7 +10,7 @@ Profile: [在宅急症－整段照護](StructureDefinition-HAHAdmissionEncounter
 
 **status**: Finished
 
-**class**: [ActCode: IMP](http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP) (inpatient encounter)
+**class**: [ActCode: IMP](http://terminology.hl7.org/7.4.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP) (inpatient encounter)
 
 **type**: 在宅急症照護
 

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCBundleCMS | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:LTCBundleCMS |
+| Active as of 2026-09-29 | *Computable Name*:LTCBundleCMS |
 
  
 此 Bundle 以衛生福利部長期照顧管理中心照顧管理評估量表為基礎，用以表述照顧管理評估量表的文件打包結構。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCBundleCMS.csv), [
   "name" : "LTCBundleCMS",
   "title" : "照顧管理評估量表文件打包",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

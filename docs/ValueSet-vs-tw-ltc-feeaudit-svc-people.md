@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-feeaudit-svc-people | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:VS_TW_LTC_FeeAuditSvcPeople |
+| Active as of 2026-09-29 | *Computable Name*:VS_TW_LTC_FeeAuditSvcPeople |
 | *Other Identifiers:*OID:2.25.263477615735264541356733820075645660500 | |
 
  
@@ -56,7 +56,7 @@
   "title" : "支付審查－服務對象",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

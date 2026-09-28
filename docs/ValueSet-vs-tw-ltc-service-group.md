@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-service-group | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:VS_TW_LTC_ServiceGroup |
+| Active as of 2026-09-29 | *Computable Name*:VS_TW_LTC_ServiceGroup |
 | *Other Identifiers:*OID:2.25.82732741697765837293825498696659376305 | |
 
  
@@ -56,7 +56,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "title" : "長照 SDK－服務別（核定）",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

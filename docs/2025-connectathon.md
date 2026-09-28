@@ -1,9 +1,9 @@
-# Connectathon - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
+# 2025 Connectathon - 臺灣長期照顧實作指引(TW LTC IG) v1.1.0
 
 * [**Table of Contents**](toc.md)
-* **Connectathon**
+* **2025 Connectathon**
 
-## Connectathon
+## 2025 Connectathon
 
 ### 活動資訊 (Event Information)
 
@@ -51,6 +51,14 @@
 
 ### 賽道 (Tracks)
 
+各賽道的情境、角色、交易與操作步驟請參閱：
+
+* [賽道情境、角色與交易列表](connectathon-table.md)
+* [賽道 0：OAuth2 存取認證](track0.md)
+* [賽道 1：日間照護服務資料交換](track1.md)
+* [賽道 2：失智症評估與監測](track2.md)
+* [賽道 3：機構間轉銜服務](track3.md)
+* [賽道 4：長照 2.0 服務計畫與紀錄](track4.md)
 * **Track 0：OAuth2 存取認證** 
 * 與大會的 OAuth 動態 Token 驗證機制整合，確保所有資料交換的安全性。
 * 本賽道為【必測】賽道，參測單位必須先通過本賽道並取得 Token，才能參與其他賽道。

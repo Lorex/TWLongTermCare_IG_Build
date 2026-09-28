@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hn-vs-9bf58092b1d4 | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNAnswerVS9bf58092b1d4 |
+| Draft as of 2026-09-29 | *Computable Name*:HNAnswerVS9bf58092b1d4 |
 | *Other Identifiers:*OID:2.25.305529965453742755188022896283239708532 | |
 
  
@@ -58,7 +58,7 @@
   "title" : "居家護理－主要職業選項",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

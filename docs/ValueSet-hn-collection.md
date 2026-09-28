@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hn-collection | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:HNCollectionVS |
+| Active as of 2026-09-29 | *Computable Name*:HNCollectionVS |
 | *Other Identifiers:*OID:2.25.303919743223251822680213880309982753488 | |
 
  
@@ -56,7 +56,7 @@
   "title" : "居家護理－共照名單種類",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

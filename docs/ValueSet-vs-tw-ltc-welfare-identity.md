@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-welfare-identity | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:VS_TW_LTC_WelfareIdentity |
+| Active as of 2026-09-29 | *Computable Name*:VS_TW_LTC_WelfareIdentity |
 | *Other Identifiers:*OID:2.25.141347013463811167724069218213597407064 | |
 
  
@@ -56,7 +56,7 @@
   "title" : "長照 SDK－長照福利身分",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

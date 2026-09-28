@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HNAPITask | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:HNAPITask |
+| Active as of 2026-09-29 | *Computable Name*:HNAPITask |
 
  
 記錄上傳及查詢工作。上傳成功僅表示已接收；須依後續處理結果另行更新任務狀態。 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-HNAPITask.csv), [Exc
   "name" : "HNAPITask",
   "title" : "居家護理－介接作業",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

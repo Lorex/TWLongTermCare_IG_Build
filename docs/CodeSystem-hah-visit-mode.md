@@ -9,7 +9,8 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/hah-visit-mode | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHVisitModeCS |
+| Draft as of 2026-09-29 | *Computable Name*:HAHVisitModeCS |
+| *Other Identifiers:*OID:2.25.305901572975225053840476976811050706474 | |
 
  
 記錄實際提供診療或評估的方式。單純排程或通知不算完成訪視。 
@@ -27,12 +28,16 @@
   "resourceType" : "CodeSystem",
   "id" : "hah-visit-mode",
   "url" : "http://ltc-ig.fhir.tw/CodeSystem/hah-visit-mode",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.305901572975225053840476976811050706474"
+  }],
   "version" : "1.1.0",
   "name" : "HAHVisitModeCS",
   "title" : "在宅急症－訪視方式代碼",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

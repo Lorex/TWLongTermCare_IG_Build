@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/HAHGoal | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHGoal |
+| Draft as of 2026-09-29 | *Computable Name*:HAHGoal |
 
  
-記錄個案預期達到的結果、期限及評值。照護問題應另記錄於 Condition，不以目標取代問題。 
+記錄個案預期達到的結果、期限及評值。照護問題記錄於 Condition。 
 
 **Usages:**
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHGoal.csv), [Excel
   "name" : "HAHGoal",
   "title" : "在宅急症－照護目標",
   "status" : "draft",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHGoal.csv), [Excel
       "value" : "https://www.ida.gov.tw/"
     }]
   }],
-  "description" : "記錄個案預期達到的結果、期限及評值。照護問題應另記錄於 Condition，不以目標取代問題。",
+  "description" : "記錄個案預期達到的結果、期限及評值。照護問題記錄於 Condition。",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "v2",
@@ -106,7 +106,7 @@ Other representations of profile: [CSV](StructureDefinition-HAHGoal.csv), [Excel
     {
       "id" : "Goal.description.coding",
       "path" : "Goal.description.coding",
-      "short" : "照護目標代碼。[優先使用既有值集；無適切概念時填入個別照護目標代碼並以 text 說明]"
+      "short" : "照護目標代碼。[優先使用既有值集，無適合的 code 時填入個別照護目標代碼並以 text 說明]"
     },
     {
       "id" : "Goal.description.text",

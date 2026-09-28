@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/Ext-TW-LTC-Export-EvaId | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:ExtTWLTCExportEvaId |
+| Active as of 2026-09-29 | *Computable Name*:ExtTWLTCExportEvaId |
 
 此 Extension 用於表示長照 SDK 的評估案號（EVA_ID），適用於 Claim 或 CarePlan 資源。
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-Ext-TW-LTC-Export-Ev
   "name" : "ExtTWLTCExportEvaId",
   "title" : "長照 SDK－評估案號（EVA_ID）",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-feeaudit-case-status | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:VS_TW_LTC_FeeAuditCaseStatus |
+| Active as of 2026-09-29 | *Computable Name*:VS_TW_LTC_FeeAuditCaseStatus |
 | *Other Identifiers:*OID:2.25.29256331818245997122471542520517452484 | |
 
  
@@ -56,7 +56,7 @@
   "title" : "支付審查－核銷狀況",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

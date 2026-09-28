@@ -9,7 +9,8 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hah-outcome | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHOutcomeVS |
+| Draft as of 2026-09-29 | *Computable Name*:HAHOutcomeVS |
+| *Other Identifiers:*OID:2.25.307378170705276067089204306155682263161 | |
 
  
 本次療程已結束時填寫的原因。 
@@ -47,12 +48,16 @@
   "resourceType" : "ValueSet",
   "id" : "hah-outcome",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/hah-outcome",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.307378170705276067089204306155682263161"
+  }],
   "version" : "1.1.0",
   "name" : "HAHOutcomeVS",
   "title" : "在宅急症－療程結束原因值集",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

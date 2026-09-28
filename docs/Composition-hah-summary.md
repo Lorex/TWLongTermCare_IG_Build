@@ -10,7 +10,7 @@ Profile: [在宅急症－結案與轉銜摘要](StructureDefinition-HAHCompositi
 
 **status**: Final
 
-**type**: 結案摘要
+**type**: Discharge summary
 
 **encounter**: [Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-01 09:00:00+0800 --> 2026-09-05 12:00:00+0800](Encounter-hah-admission.md)
 
@@ -38,6 +38,11 @@ Profile: [在宅急症－結案與轉銜摘要](StructureDefinition-HAHCompositi
     "coding" : [{
       "system" : "http://ltc-ig.fhir.tw/CodeSystem/hah-document",
       "code" : "discharge-summary"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18842-5",
+      "display" : "Discharge summary"
     }]
   },
   "subject" : {

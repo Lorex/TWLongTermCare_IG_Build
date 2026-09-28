@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hn-vs-0a65df60cccf | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HNAnswerVS0a65df60cccf |
+| Draft as of 2026-09-29 | *Computable Name*:HNAnswerVS0a65df60cccf |
 | *Other Identifiers:*OID:2.25.325336354892396014835711230814890522188 | |
 
  
@@ -58,7 +58,7 @@
   "title" : "居家護理－項目分類選項",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

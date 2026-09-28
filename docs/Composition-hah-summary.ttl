@@ -1,4 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -17,7 +18,7 @@
   ] ;
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ] ;
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Composition hah-summary</b></p><a name=\"hah-summary\"> </a><a name=\"hchah-summary\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHCompositionSummary.html\">在宅急症－結案與轉銜摘要</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-document discharge-summary}\">結案摘要</span></p><p><b>encounter</b>: <a href=\"Encounter-hah-admission.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><p><b>date</b>: 2026-09-05 12:00:00+0800</p><p><b>author</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><p><b>title</b>: 王測試在宅急症結案摘要</p><p><b>custodian</b>: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Composition hah-summary</b></p><a name=\"hah-summary\"> </a><a name=\"hchah-summary\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HAHCompositionSummary.html\">在宅急症－結案與轉銜摘要</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://ltc-ig.fhir.tw/CodeSystem/hah-document discharge-summary}, {http://loinc.org 18842-5}\">Discharge summary</span></p><p><b>encounter</b>: <a href=\"Encounter-hah-admission.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); type = 在宅急症照護; period = 2026-09-01 09:00:00+0800 --&gt; 2026-09-05 12:00:00+0800</a></p><p><b>date</b>: 2026-09-05 12:00:00+0800</p><p><b>author</b>: <a href=\"Practitioner-hah-practitioner.html\">Practitioner 李示範</a></p><p><b>title</b>: 王測試在宅急症結案摘要</p><p><b>custodian</b>: <a href=\"Organization-hah-organization.html\">Organization 在宅急症示範醫療機構</a></p></div>"
   ] ;
   fhir:Composition.status [ fhir:value "final"] ;
   fhir:Composition.type [
@@ -25,6 +26,12 @@
        fhir:index 0 ;
        fhir:Coding.system [ fhir:value "http://ltc-ig.fhir.tw/CodeSystem/hah-document" ] ;
        fhir:Coding.code [ fhir:value "discharge-summary" ]
+     ], [
+       fhir:index 1 ;
+       a loinc:18842-5 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "18842-5" ] ;
+       fhir:Coding.display [ fhir:value "Discharge summary" ]
      ]
   ] ;
   fhir:Composition.subject [

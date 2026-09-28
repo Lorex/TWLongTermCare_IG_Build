@@ -9,7 +9,8 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hah-communication | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHCommunicationVS |
+| Draft as of 2026-09-29 | *Computable Name*:HAHCommunicationVS |
+| *Other Identifiers:*OID:2.25.112052472932450985590316396611346414886 | |
 
  
 區分照會、交班與衛教內容。 
@@ -46,12 +47,16 @@
   "resourceType" : "ValueSet",
   "id" : "hah-communication",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/hah-communication",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.112052472932450985590316396611346414886"
+  }],
   "version" : "1.1.0",
   "name" : "HAHCommunicationVS",
   "title" : "在宅急症－溝通類型值集",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

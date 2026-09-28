@@ -9,7 +9,8 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/ValueSet/hah-eligibility | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:HAHEligibilityVS |
+| Draft as of 2026-09-29 | *Computable Name*:HAHEligibilityVS |
+| *Other Identifiers:*OID:2.25.223528564905236041200467052628275373209 | |
 
  
 本次收案評估的建議結果。 
@@ -48,12 +49,16 @@
   "resourceType" : "ValueSet",
   "id" : "hah-eligibility",
   "url" : "http://ltc-ig.fhir.tw/ValueSet/hah-eligibility",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.25.223528564905236041200467052628275373209"
+  }],
   "version" : "1.1.0",
   "name" : "HAHEligibilityVS",
   "title" : "在宅急症－收案評估結果值集",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

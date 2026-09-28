@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCFeeApplyModel | *Version*:1.1.0 |
-| Draft as of 2026-09-17 | *Computable Name*:LTCFeeApplyModel |
+| Draft as of 2026-09-29 | *Computable Name*:LTCFeeApplyModel |
 
  
 此邏輯模型以衛生福利部「支付審核系統 API 規格說明書（照管平台）v2.2.1」之「服務記錄申報 (FeeApply)」傳送資料為基礎，完整描述服務提供單位向支付審核系統申報個案服務紀錄時所需的資料結構與欄位準備指引。每個交易序號每次申報最多 5000 筆個案服務紀錄；每筆服務記錄具唯一的識別碼 (objid)，識別碼不存在時新增服務紀錄，已存在時更新服務紀錄。欄位之必填規則除傳送資料表所標示者外，另依規格書「表1: 支付碼必填欄位一覽表」隨照顧組合代碼 (govItemCd) 而異，屬條件必填，故於本模型中一律以 0..1 表示並於定義中說明條件。 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCFeeApplyModel.csv
   "title" : "長照支付審查－服務記錄申報邏輯模型",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

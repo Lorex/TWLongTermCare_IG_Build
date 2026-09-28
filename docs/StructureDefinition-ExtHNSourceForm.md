@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/ExtHNSourceForm | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:ExtHNSourceForm |
+| Active as of 2026-09-29 | *Computable Name*:ExtHNSourceForm |
 
 參照提供此資源內容的結構化表單。保留原始評估、來源身分及補充說明。
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-ExtHNSourceForm.csv)
   "name" : "ExtHNSourceForm",
   "title" : "居家護理－來源表單",
   "status" : "active",
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/StructureDefinition/LTCCDRAssessmentModel | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:LTCCDRAssessmentModel |
+| Active as of 2026-09-29 | *Computable Name*:LTCCDRAssessmentModel |
 | **Copyright/Legal**: Copyright © 2024 Taiwan Long-Term Care Implementation Guide | |
 
  
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-LTCCDRAssessmentMode
   "title" : "臨床失智評估量表評估",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

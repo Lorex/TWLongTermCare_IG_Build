@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-feeaudit-error-code | *Version*:1.1.0 |
-| Active as of 2026-09-17 | *Computable Name*:CS_TW_LTC_FeeAuditErrorCode |
+| Active as of 2026-09-29 | *Computable Name*:CS_TW_LTC_FeeAuditErrorCode |
 | *Other Identifiers:*OID:2.25.154081174417565057576308580299251643194 | |
 
  
@@ -37,7 +37,7 @@
   "title" : "支付審查－錯誤代碼",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-17T17:33:17+08:00",
+  "date" : "2026-09-29T04:34:44+08:00",
   "publisher" : "經濟部產業發展署",
   "contact" : [{
     "name" : "經濟部產業發展署",

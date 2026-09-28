@@ -12,7 +12,7 @@ Profile: [在宅急症－單次訪視](StructureDefinition-HAHVisitEncounter.md)
 
 **status**: Finished
 
-**class**: [ActCode: HH](http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-HH) (home health)
+**class**: [ActCode: HH](http://terminology.hl7.org/7.4.0/CodeSystem-v3-ActCode.html#v3-ActCode-HH) (home health)
 
 **type**: 訪視
 

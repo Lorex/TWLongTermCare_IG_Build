@@ -7,10 +7,6 @@
 
 本頁列出居家護理 V5.0.16 來源欄位、邏輯模型與 FHIR 表單的逐欄對應。
 
-評估題目以穩定識別碼建模；原始題目文字由對應欄保留。陣列中的各筆物件使用重複 group item；多選答案使用重複 answer。來源的空白或 null 答案以保留 item、省略 answer 表達。
-
-FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明轉回字串及日期格式。
-
 ### 個案基本資料
 
 來源：規範印刷頁 1–13。
@@ -104,8 +100,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 
 ### 健康紀錄評估
 
-來源：規範印刷頁 43–44。
-
 | | | | |
 | :--- | :--- | :--- | :--- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
@@ -133,8 +127,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
 
 ### 疾病史評估
-
-來源：規範印刷頁 44–46。
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -189,8 +181,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 
 ### 藥物安全性評估
 
-來源：規範印刷頁 46–47。
-
 | | | | |
 | :--- | :--- | :--- | :--- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
@@ -224,8 +214,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
 
 ### 身體評估評估
-
-來源：規範印刷頁 48–55。
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -436,8 +424,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 
 ### 壓力性損傷危險評估
 
-來源：規範印刷頁 55–56。
-
 | | | | |
 | :--- | :--- | :--- | :--- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
@@ -458,8 +444,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
 
 ### 跌倒危險性評估
-
-來源：規範印刷頁 57–58。
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -502,8 +486,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 
 ### 日常生活功能評估
 
-來源：規範印刷頁 59–60。
-
 | | | | |
 | :--- | :--- | :--- | :--- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
@@ -533,8 +515,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 
 ### 工具性日常生活活動功能評估
 
-來源：規範印刷頁 61–62。
-
 | | | | |
 | :--- | :--- | :--- | :--- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
@@ -559,8 +539,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
 
 ### 認知功能評估
-
-來源：規範印刷頁 63–64。
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -594,8 +572,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 
 ### 情緒問題評估
 
-來源：規範印刷頁 65–66。
-
 | | | | |
 | :--- | :--- | :--- | :--- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
@@ -615,8 +591,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
 
 ### 簡易營養評估
-
-來源：規範印刷頁 66–67。
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -640,8 +614,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `IsTemporary` | `isTemporary` | `item.where(linkId='IsTemporary')` | 0..1 |
 
 ### 疼痛評估
-
-來源：規範印刷頁 67–69。
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -675,8 +647,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 
 ### 衰弱評估
 
-來源：規範印刷頁 69–70。
-
 | | | | |
 | :--- | :--- | :--- | :--- |
 | `Date` | `date` | `item.where(linkId='Date')` | 1..1 |
@@ -693,8 +663,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 
 ### 需求摘要
 
-來源：規範印刷頁 71–74。
-
 | | | | |
 | :--- | :--- | :--- | :--- |
 | `CaseID` | `caseID` | `item.where(linkId='CaseID')` | 1..1 |
@@ -707,8 +675,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `Summary.Answer` | `summary.answer` | `item.where(linkId='Summary').item.where(linkId='Summary.Answer')` | 1..1 |
 
 ### 照護計畫目標
-
-來源：規範印刷頁 75–79。
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -725,8 +691,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `NurseID` | `nurseID` | `item.where(linkId='NurseID')` | 1..1 |
 
 ### 照護計畫措施
-
-來源：規範印刷頁 79。
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -745,8 +709,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 
 ### 照護計畫評值紀錄
 
-來源：規範印刷頁 79–80。
-
 | | | | |
 | :--- | :--- | :--- | :--- |
 | `CaseID` | `caseID` | `item.where(linkId='CaseID')` | 1..1 |
@@ -760,8 +722,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `NurseID` | `nurseID` | `item.where(linkId='NurseID')` | 1..1 |
 
 ### 照護紀錄
-
-來源：規範印刷頁 81–121。
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -859,8 +819,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 
 ### 共照紀錄
 
-來源：規範印刷頁 122–125。
-
 | | | | |
 | :--- | :--- | :--- | :--- |
 | `CaseID` | `caseID` | `item.where(linkId='CaseID')` | 1..1 |
@@ -875,8 +833,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `Statement` | `statement` | `item.where(linkId='Statement')` | 1..1 |
 
 ### 人員緊急事件
-
-來源：規範印刷頁 126–129。
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -898,8 +854,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 
 ### 個案結案
 
-來源：規範印刷頁 130–132。
-
 | | | | |
 | :--- | :--- | :--- | :--- |
 | `CaseID` | `caseID` | `item.where(linkId='CaseID')` | 1..1 |
@@ -911,8 +865,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `Reason.Other` | `reason.other` | `item.where(linkId='Reason').item.where(linkId='Reason.Other')` | 0..1 |
 
 ### 照護計畫結案
-
-來源：規範印刷頁 133–135。
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -927,8 +879,6 @@ FHIR 表單使用數值及 date/time 型態。回寫原 API 時依主題說明�
 | `CloseID` | `closeID` | `item.where(linkId='CloseID')` | 0..1 |
 
 ### 生命徵象
-
-來源：規範印刷頁 136–138。
 
 | | | | |
 | :--- | :--- | :--- | :--- |
