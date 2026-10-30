@@ -262,8 +262,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ol>
   <li><strong>共用資料元素</strong>：跨所有業務端共同引用的基礎資料，包括個案、關係人、服務人員、機構與問卷架構。</li>
   <li><strong>醫院端</strong>：醫事機構產出的診斷與病情、失智與認知評估及醫師專業意見資料。</li>
-  <li><strong>臨床端（長照機構／照護現場）</strong>：長照機構日常照護紀錄、照護狀況、安全監測、照護規劃與運動復能資料。</li>
-  <li><strong>行政與申報端（照顧協調／核定申報）</strong>：照顧管理中心評估收案文件、照顧管理流程，以及長照 SDK 系統介接與申報資料。</li>
+  <li><strong>臨床端（長照機構／照護現場）</strong>：長照機構日常照護紀錄、照護狀況、安全監測、照護規劃、運動復能、居家護理與在宅急症資料。</li>
+  <li><strong>行政與申報端（照顧協調／核定申報）</strong>：照顧管理中心評估收案文件、照顧管理流程、長照 SDK 系統介接與申報，以及長照支付審查資料。</li>
 </ol>
 
 <h3 id="resources-之-profiles">Resources 之 Profiles</h3>
@@ -274,13 +274,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>跨醫院端、臨床端、行政與申報端共同引用的基礎資料。</p>
 
 <ul>
-  <li><a href="StructureDefinition-LTCPatient.html">住民基本資料（LTC Patient）</a></li>
-  <li><a href="StructureDefinition-LTCRelatedPerson.html">關係人（LTC RelatedPerson）</a></li>
-  <li><a href="StructureDefinition-LTCPractitioner.html">照顧服務提供者（LTC Practitioner）</a></li>
-  <li><a href="StructureDefinition-LTCPractitionerRole.html">服務人員角色（LTC PractitionerRole）</a></li>
-  <li><a href="StructureDefinition-Organization-twltc.html">機構（LTC Organization）</a></li>
-  <li><a href="StructureDefinition-LTCQuestionnaire.html">問卷（LTC Questionnaire）</a></li>
-  <li><a href="StructureDefinition-LTCQuestionnaireResponse.html">問卷回覆（LTC QuestionnaireResponse）</a></li>
+  <li><a href="StructureDefinition-LTCPatient.html">長期照顧－住民基本資料（LTCPatient）</a></li>
+  <li><a href="StructureDefinition-LTCRelatedPerson.html">長期照顧－關係人（LTCRelatedPerson）</a></li>
+  <li><a href="StructureDefinition-LTCPractitioner.html">長期照顧－照顧服務提供者（LTCPractitioner）</a></li>
+  <li><a href="StructureDefinition-LTCPractitionerRole.html">長期照顧－服務人員角色（LTCPractitionerRole）</a></li>
+  <li><a href="StructureDefinition-Organization-twltc.html">長期照顧－機構（Organization-twltc）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaire.html">長期照顧－問卷（LTCQuestionnaire）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaireResponse.html">長期照顧－問卷回覆（LTCQuestionnaireResponse）</a></li>
 </ul>
 
 <h4 id="二醫院端">二、醫院端</h4>
@@ -290,161 +290,231 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h5 id="診斷與病情">診斷與病情</h5>
 
 <ul>
-  <li><a href="StructureDefinition-LTCCondition.html">病情、問題或診斷（LTC Condition）</a></li>
-  <li><a href="StructureDefinition-LTCConditionProblem.html">主要疾病（LTC Condition Problem）</a></li>
-  <li><a href="StructureDefinition-LTCConditionNeed.html">主要問題及需求（LTC Condition Need）</a></li>
+  <li><a href="StructureDefinition-LTCCondition.html">長期照顧－病情、問題或診斷（LTCCondition）</a></li>
+  <li><a href="StructureDefinition-LTCConditionProblem.html">長期照顧－主要疾病（LTCConditionProblem）</a></li>
+  <li><a href="StructureDefinition-LTCConditionNeed.html">長期照顧－主要問題及需求（LTCConditionNeed）</a></li>
 </ul>
 
 <h5 id="失智與認知評估">失智與認知評估</h5>
 
 <ul>
-  <li><a href="StructureDefinition-LTCQuestionnaireResponseMMSE.html">簡易智能狀態測驗回覆（LTC QuestionnaireResponse MMSE）</a></li>
-  <li><a href="StructureDefinition-LTCQuestionnaireResponseCDR.html">臨床失智評估量表回覆（LTC QuestionnaireResponse CDR）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaireResponseMMSE.html">長期照顧－簡易智能狀態測驗回覆（LTCQuestionnaireResponseMMSE）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaireResponseCDR.html">長期照顧－臨床失智評估量表回覆（LTCQuestionnaireResponseCDR）</a></li>
 </ul>
 
 <h5 id="醫師專業意見">醫師專業意見</h5>
 
 <ul>
-  <li><a href="StructureDefinition-LTCQuestionnaireResponseAA12.html">長期照護醫師意見書問卷回覆（LTC QuestionnaireResponse AA12）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaireResponseAA12.html">長期照護醫師意見書問卷回覆 (AA12)（LTCQuestionnaireResponseAA12）</a></li>
 </ul>
 
 <h4 id="三臨床端長照機構照護現場">三、臨床端（長照機構／照護現場）</h4>
 
-<p>長照機構照護現場之日常照護、安全監測、照護規劃與運動復能資料。</p>
+<p>長照機構照護現場之日常照護、安全監測、照護規劃、運動復能，以及居家護理與在宅急症資料。</p>
 
 <h5 id="日常照護紀錄">日常照護紀錄</h5>
 
 <ul>
-  <li><a href="StructureDefinition-LTCObservationVitalSigns.html">生命體徵（LTC Observation Vital Signs）</a></li>
-  <li><a href="StructureDefinition-LTCObservationVitalSignsPanel.html">一組生命徵象檢驗檢查（LTC Observation Vital Signs Panel）</a></li>
-  <li><a href="StructureDefinition-LTCMedicationAdministration.html">用藥資料（LTC Medication Administration）</a></li>
-  <li><a href="StructureDefinition-LTCProcedureCareActivity.html">照護活動（LTC Procedure Care Activity）</a></li>
+  <li><a href="StructureDefinition-LTCObservationVitalSigns.html">長期照顧－生命體徵（LTCObservationVitalSigns）</a></li>
+  <li><a href="StructureDefinition-LTCObservationVitalSignsPanel.html">長期照顧－一組生命徵象檢驗檢查（LTCObservationVitalSignsPanel）</a></li>
+  <li><a href="StructureDefinition-LTCMedicationAdministration.html">長期照顧－用藥資料（LTCMedicationAdministration）</a></li>
+  <li><a href="StructureDefinition-LTCProcedureCareActivity.html">長期照顧－照護活動（LTCProcedureCareActivity）</a></li>
 </ul>
 
 <h5 id="照護狀況紀錄">照護狀況紀錄</h5>
 
 <ul>
-  <li><a href="StructureDefinition-LTCConditionCrush.html">壓傷狀況（LTC Condition Crush）</a></li>
-  <li><a href="StructureDefinition-LTCConditionTube.html">管路裝設狀況（LTC Condition Tube）</a></li>
-  <li><a href="StructureDefinition-LTCConditionResidence.html">居住狀況（LTC Condition Residence）</a></li>
-  <li><a href="StructureDefinition-LTCConditionCaregiver.html">看護狀況（LTC Condition Caregiver）</a></li>
-  <li><a href="StructureDefinition-LTCConditionDisability.html">身心障礙手冊持有狀態（LTC Condition Disability）</a></li>
-  <li><a href="StructureDefinition-LTCConditionDisabilityType.html">身心障礙類型（LTC Condition Disability Type）</a></li>
+  <li><a href="StructureDefinition-LTCConditionCrush.html">長期照顧－壓傷狀況（LTCConditionCrush）</a></li>
+  <li><a href="StructureDefinition-LTCConditionTube.html">長期照顧－管路裝設狀況（LTCConditionTube）</a></li>
+  <li><a href="StructureDefinition-LTCConditionResidence.html">長期照顧－居住狀況（LTCConditionResidence）</a></li>
+  <li><a href="StructureDefinition-LTCConditionCaregiver.html">長期照顧－看護狀況（LTCConditionCaregiver）</a></li>
+  <li><a href="StructureDefinition-LTCConditionDisability.html">長期照顧－身心障礙手冊持有狀態（LTCConditionDisability）</a></li>
+  <li><a href="StructureDefinition-LTCConditionDisabilityType.html">長期照顧－身心障礙類型（LTCConditionDisabilityType）</a></li>
 </ul>
 
 <h5 id="安全監測">安全監測</h5>
 
 <ul>
-  <li><a href="StructureDefinition-Location-twltc.html">個案位置監測（LTC Location）</a></li>
-  <li><a href="StructureDefinition-AdverseEvent-twltc.html">異常事件警報（LTC AdverseEvent）</a></li>
-  <li><a href="StructureDefinition-LTCObservationFallingHistory.html">跌倒紀錄（LTC Observation Falling History）</a></li>
+  <li><a href="StructureDefinition-Location-twltc.html">長期照顧－個案位置監測（Location-twltc）</a></li>
+  <li><a href="StructureDefinition-AdverseEvent-twltc.html">長期照顧－異常事件警報（AdverseEvent-twltc）</a></li>
+  <li><a href="StructureDefinition-LTCObservationFallingHistory.html">安全防護－跌倒紀錄（LTCObservationFallingHistory）</a></li>
 </ul>
 
 <h5 id="照護規劃">照護規劃</h5>
 
 <ul>
-  <li><a href="StructureDefinition-LTCCareTeam.html">照顧團隊（LTC CareTeam）</a></li>
-  <li><a href="StructureDefinition-LTCGoal.html">照顧目標（LTC Goal）</a></li>
-  <li><a href="StructureDefinition-LTCCarePlan.html">照顧計畫（LTC CarePlan）</a></li>
+  <li><a href="StructureDefinition-LTCCareTeam.html">長期照顧－照顧團隊（LTCCareTeam）</a></li>
+  <li><a href="StructureDefinition-LTCGoal.html">長期照顧－照顧目標（LTCGoal）</a></li>
+  <li><a href="StructureDefinition-LTCCarePlan.html">長期照顧－照顧計畫（LTCCarePlan）</a></li>
 </ul>
 
 <h5 id="運動處方">運動處方</h5>
 
 <ul>
-  <li><a href="StructureDefinition-PASportServiceRequest.html">服務請求（PA Sport ServiceRequest）</a></li>
-  <li><a href="StructureDefinition-PASportConditionMedicalHistory.html">病史（PA Sport Condition Medical History）</a></li>
-  <li><a href="StructureDefinition-PASportConditionExerciseHistory.html">運動史（PA Sport Condition Exercise History）</a></li>
-  <li><a href="StructureDefinition-PASportCarePlan.html">運動計畫（PA Sport CarePlan）</a></li>
-  <li><a href="StructureDefinition-PASportGoal.html">運動目標（PA Sport Goal）</a></li>
+  <li><a href="StructureDefinition-PASportServiceRequest.html">運動處方－服務請求（PASportServiceRequest）</a></li>
+  <li><a href="StructureDefinition-PASportConditionMedicalHistory.html">運動處方－病史（PASportConditionMedicalHistory）</a></li>
+  <li><a href="StructureDefinition-PASportConditionExerciseHistory.html">運動處方－運動史（PASportConditionExerciseHistory）</a></li>
+  <li><a href="StructureDefinition-PASportCarePlan.html">運動處方－運動計畫（PASportCarePlan）</a></li>
+  <li><a href="StructureDefinition-PASportGoal.html">運動處方－運動目標（PASportGoal）</a></li>
 </ul>
 
 <h5 id="基礎生理量測">基礎生理量測</h5>
 
 <ul>
-  <li><a href="StructureDefinition-PASportObservationHeight.html">身高（PA Sport Observation Height）</a></li>
-  <li><a href="StructureDefinition-PASportObservationWeight.html">體重（PA Sport Observation Weight）</a></li>
-  <li><a href="StructureDefinition-PASportObservationWaist.html">腰圍（PA Sport Observation Waist）</a></li>
-  <li><a href="StructureDefinition-PASportObservationBloodPressure.html">血壓（PA Sport Observation Blood Pressure）</a></li>
-  <li><a href="StructureDefinition-PASportObservationPeripheralOxygenSaturation.html">脈搏血氧飽和度（PA Sport Observation Pulse Oximetry）</a></li>
-  <li><a href="StructureDefinition-PASportObservationGlucose.html">血糖（PA Sport Observation Blood Glucose）</a></li>
-  <li><a href="StructureDefinition-PASportObservationHeartRate.html">心率（PA Sport Observation Heart Rate）</a></li>
-  <li><a href="StructureDefinition-PASportObservationRestingHeartRate.html">安靜心率（PA Sport Observation Resting Heart Rate）</a></li>
-  <li><a href="StructureDefinition-PASportObservationMeanHeartRate.html">平均心率（PA Sport Observation Average Heart Rate）</a></li>
-  <li><a href="StructureDefinition-PASportObservationHeartRateVariability.html">心率變異性（PA Sport Observation Heart Rate Variability）</a></li>
-  <li><a href="StructureDefinition-PASportObservationBodyTemperature.html">體溫（PA Sport Observation Body Temperature）</a></li>
-  <li><a href="StructureDefinition-PASportObservationRespiratoryRate.html">呼吸速率（PA Sport Observation Respiratory Rate）</a></li>
+  <li><a href="StructureDefinition-PASportObservationHeight.html">基礎生理量測－身高（PASportObservationHeight）</a></li>
+  <li><a href="StructureDefinition-PASportObservationWeight.html">基礎生理量測－體重（PASportObservationWeight）</a></li>
+  <li><a href="StructureDefinition-PASportObservationWaist.html">基礎生理量測－腰圍（PASportObservationWaist）</a></li>
+  <li><a href="StructureDefinition-PASportObservationBloodPressure.html">基礎生理量測－血壓（PASportObservationBloodPressure）</a></li>
+  <li><a href="StructureDefinition-PASportObservationPeripheralOxygenSaturation.html">基礎生理量測－脈搏血氧飽和度（PASportObservationPeripheralOxygenSaturation）</a></li>
+  <li><a href="StructureDefinition-PASportObservationGlucose.html">基礎生理量測－血糖（PASportObservationGlucose）</a></li>
+  <li><a href="StructureDefinition-PASportObservationHeartRate.html">基礎生理量測－心率（PASportObservationHeartRate）</a></li>
+  <li><a href="StructureDefinition-PASportObservationRestingHeartRate.html">基礎生理量測－安靜心率（PASportObservationRestingHeartRate）</a></li>
+  <li><a href="StructureDefinition-PASportObservationMeanHeartRate.html">基礎生理量測－平均心率（PASportObservationMeanHeartRate）</a></li>
+  <li><a href="StructureDefinition-PASportObservationHeartRateVariability.html">基礎生理量測－心率變異性（PASportObservationHeartRateVariability）</a></li>
+  <li><a href="StructureDefinition-PASportObservationBodyTemperature.html">基礎生理量測－體溫（PASportObservationBodyTemperature）</a></li>
+  <li><a href="StructureDefinition-PASportObservationRespiratoryRate.html">基礎生理量測－呼吸速率（PASportObservationRespiratoryRate）</a></li>
 </ul>
 
 <h5 id="身體組成分析儀">身體組成分析儀</h5>
 
 <ul>
-  <li><a href="StructureDefinition-PASportObservationTotalBodyWater.html">身體總水分（PA Sport Observation Total Body Water）</a></li>
-  <li><a href="StructureDefinition-PASportObservationIntracellularWater.html">細胞內水分（PA Sport Observation Intracellular Water）</a></li>
-  <li><a href="StructureDefinition-PASportObservationExtracellularWater.html">細胞外水分（PA Sport Observation Extracellular Water）</a></li>
-  <li><a href="StructureDefinition-PASportObservationProtein.html">蛋白質重（PA Sport Observation Protein）</a></li>
-  <li><a href="StructureDefinition-PASportObservationMineral.html">礦物質重（PA Sport Observation Mineral）</a></li>
-  <li><a href="StructureDefinition-PASportObservationBodyFatMass.html">體脂肪重（PA Sport Observation Body Fat Mass）</a></li>
-  <li><a href="StructureDefinition-PASportObservationSkeletalMuscleMass.html">骨骼肌重（PA Sport Observation Skeletal Muscle Mass）</a></li>
-  <li><a href="StructureDefinition-PASportObservationSkeletalMuscleMassIndex.html">肌肉質量指數（PA Sport Observation Skeletal Muscle Mass Index）</a></li>
-  <li><a href="StructureDefinition-PASportObservationBodyMassIndex.html">身體質量指數（PA Sport Observation Body Mass Index）</a></li>
-  <li><a href="StructureDefinition-PASportObservationBodyFatPercentage.html">體脂率（PA Sport Observation Body Fat Percentage）</a></li>
-  <li><a href="StructureDefinition-PASportObservationBasalMetabolicRate.html">基礎代謝率（PA Sport Observation Basal Metabolic Rate）</a></li>
-  <li><a href="StructureDefinition-PASportObservationFatFreeMass.html">去脂體重（PA Sport Observation Fat Free Mass）</a></li>
-  <li><a href="StructureDefinition-PASportObservationVisceralFatIndex.html">內臟脂肪指數（PA Sport Observation Visceral Fat Index）</a></li>
-  <li><a href="StructureDefinition-PASportObservationVisceralFatArea.html">內臟脂肪面積（PA Sport Observation Visceral Fat Area）</a></li>
-  <li><a href="StructureDefinition-PASportObservationWaistHipRate.html">腰臀圍比（PA Sport Observation Waist-Hip Ratio）</a></li>
-  <li><a href="StructureDefinition-PASportObservationObesityDegree.html">肥胖度（PA Sport Observation Obesity Degree）</a></li>
-  <li><a href="StructureDefinition-PASportObservationBodyAge.html">體內年齡（PA Sport Observation Body Age）</a></li>
-  <li><a href="StructureDefinition-PASportObservationSoftLeanMass.html">肌肉量（PA Sport Observation Soft Lean Mass）</a></li>
-  <li><a href="StructureDefinition-PASportObservationCellMass.html">細胞量（PA Sport Observation Cell Mass）</a></li>
-  <li><a href="StructureDefinition-PASportObservationBodyBoneMass.html">推定骨量（PA Sport Observation Body Bone Mass）</a></li>
-  <li><a href="StructureDefinition-PASportObservationExtracellularWaterRatio.html">水腫指數（PA Sport Observation Extracellular Water Ratio）</a></li>
+  <li><a href="StructureDefinition-PASportObservationTotalBodyWater.html">身體組成分析儀－身體總水分（PASportObservationTotalBodyWater）</a></li>
+  <li><a href="StructureDefinition-PASportObservationIntracellularWater.html">身體組成分析儀－細胞內水分（PASportObservationIntracellularWater）</a></li>
+  <li><a href="StructureDefinition-PASportObservationExtracellularWater.html">身體組成分析儀－細胞外水分（PASportObservationExtracellularWater）</a></li>
+  <li><a href="StructureDefinition-PASportObservationProtein.html">身體組成分析儀－蛋白質重（PASportObservationProtein）</a></li>
+  <li><a href="StructureDefinition-PASportObservationMineral.html">身體組成分析儀－礦物質重（PASportObservationMineral）</a></li>
+  <li><a href="StructureDefinition-PASportObservationBodyFatMass.html">身體組成分析儀－體脂肪重（PASportObservationBodyFatMass）</a></li>
+  <li><a href="StructureDefinition-PASportObservationSkeletalMuscleMass.html">身體組成分析儀－骨骼肌重（PASportObservationSkeletalMuscleMass）</a></li>
+  <li><a href="StructureDefinition-PASportObservationSkeletalMuscleMassIndex.html">身體組成分析儀－肌肉質量指數（PASportObservationSkeletalMuscleMassIndex）</a></li>
+  <li><a href="StructureDefinition-PASportObservationBodyMassIndex.html">身體組成分析儀－身體質量指數（PASportObservationBodyMassIndex）</a></li>
+  <li><a href="StructureDefinition-PASportObservationBodyFatPercentage.html">身體組成分析儀－體脂率（PASportObservationBodyFatPercentage）</a></li>
+  <li><a href="StructureDefinition-PASportObservationBasalMetabolicRate.html">身體組成分析儀－基礎代謝率（PASportObservationBasalMetabolicRate）</a></li>
+  <li><a href="StructureDefinition-PASportObservationFatFreeMass.html">身體組成分析儀－去脂體重（PASportObservationFatFreeMass）</a></li>
+  <li><a href="StructureDefinition-PASportObservationVisceralFatIndex.html">身體組成分析儀－內臟脂肪指數（PASportObservationVisceralFatIndex）</a></li>
+  <li><a href="StructureDefinition-PASportObservationVisceralFatArea.html">身體組成分析儀－內臟脂肪面積（PASportObservationVisceralFatArea）</a></li>
+  <li><a href="StructureDefinition-PASportObservationWaistHipRate.html">身體組成分析儀－腰臀圍比（PASportObservationWaistHipRate）</a></li>
+  <li><a href="StructureDefinition-PASportObservationObesityDegree.html">身體組成分析儀－肥胖度（PASportObservationObesityDegree）</a></li>
+  <li><a href="StructureDefinition-PASportObservationBodyAge.html">身體組成分析儀－體內年齡（PASportObservationBodyAge）</a></li>
+  <li><a href="StructureDefinition-PASportObservationSoftLeanMass.html">身體組成分析儀－肌肉量（PASportObservationSoftLeanMass）</a></li>
+  <li><a href="StructureDefinition-PASportObservationCellMass.html">身體組成分析儀－細胞量（PASportObservationCellMass）</a></li>
+  <li><a href="StructureDefinition-PASportObservationBodyBoneMass.html">身體組成分析儀－推定骨量（PASportObservationBodyBoneMass）</a></li>
+  <li><a href="StructureDefinition-PASportObservationExtracellularWaterRatio.html">身體組成分析儀－水腫指數（PASportObservationExtracellularWaterRatio）</a></li>
 </ul>
 
 <h5 id="穿戴裝置">穿戴裝置</h5>
 
 <ul>
-  <li><a href="StructureDefinition-PASportObservationGaitCycle.html">步態週期（PA Sport Observation Gait Cycle）</a></li>
-  <li><a href="StructureDefinition-PASportObservationGaitType.html">步態分析（PA Sport Observation Gait Type）</a></li>
+  <li><a href="StructureDefinition-PASportObservationGaitCycle.html">穿戴裝置－步態週期（PASportObservationGaitCycle）</a></li>
+  <li><a href="StructureDefinition-PASportObservationGaitType.html">穿戴裝置－步態分析（PASportObservationGaitType）</a></li>
 </ul>
 
 <h5 id="運動項目">運動項目</h5>
 
 <ul>
-  <li><a href="StructureDefinition-PASportObservationTreadmill.html">跑步機（PA Sport Observation Treadmill）</a></li>
-  <li><a href="StructureDefinition-PASportObservationWeightTraining.html">重量訓練（PA Sport Observation Weight Training）</a></li>
+  <li><a href="StructureDefinition-PASportObservationTreadmill.html">運動項目－跑步機（PASportObservationTreadmill）</a></li>
+  <li><a href="StructureDefinition-PASportObservationWeightTraining.html">運動項目－重量訓練（PASportObservationWeightTraining）</a></li>
+</ul>
+
+<h5 id="居家護理照護管理系統">居家護理照護管理系統</h5>
+
+<ul>
+  <li><a href="StructureDefinition-HNADLsResponse.html">居家護理－日常生活功能評估表單（HNADLsResponse）</a></li>
+  <li><a href="StructureDefinition-HNAPITask.html">居家護理－介接作業（HNAPITask）</a></li>
+  <li><a href="StructureDefinition-HNBaseDataResponse.html">居家護理－個案基本資料表單（HNBaseDataResponse）</a></li>
+  <li><a href="StructureDefinition-HNBodyEvaluationsResponse.html">居家護理－身體評估評估表單（HNBodyEvaluationsResponse）</a></li>
+  <li><a href="StructureDefinition-HNCarePlan.html">居家護理－照護計畫（HNCarePlan）</a></li>
+  <li><a href="StructureDefinition-HNCarePlanCloseResponse.html">居家護理－照護計畫結案表單（HNCarePlanCloseResponse）</a></li>
+  <li><a href="StructureDefinition-HNCarePlanTransaction.html">居家護理－照護計畫交易（HNCarePlanTransaction）</a></li>
+  <li><a href="StructureDefinition-HNCareRecordResponse.html">居家護理－照護紀錄表單（HNCareRecordResponse）</a></li>
+  <li><a href="StructureDefinition-HNCaseCloseResponse.html">居家護理－個案結案表單（HNCaseCloseResponse）</a></li>
+  <li><a href="StructureDefinition-HNCaseDescResponse.html">居家護理－共照紀錄表單（HNCaseDescResponse）</a></li>
+  <li><a href="StructureDefinition-HNCaseSummaryResponse.html">居家護理－需求摘要表單（HNCaseSummaryResponse）</a></li>
+  <li><a href="StructureDefinition-HNCommunication.html">居家護理－共照紀錄（HNCommunication）</a></li>
+  <li><a href="StructureDefinition-HNDementiasResponse.html">居家護理－認知功能評估表單（HNDementiasResponse）</a></li>
+  <li><a href="StructureDefinition-HNDrugSafetiesResponse.html">居家護理－藥物安全性評估表單（HNDrugSafetiesResponse）</a></li>
+  <li><a href="StructureDefinition-HNEpisodeOfCare.html">居家護理－收案歷程（HNEpisodeOfCare）</a></li>
+  <li><a href="StructureDefinition-HNEvaluationsResponse.html">居家護理－照護計畫評值紀錄表單（HNEvaluationsResponse）</a></li>
+  <li><a href="StructureDefinition-HNFallRisksResponse.html">居家護理－跌倒危險性評估表單（HNFallRisksResponse）</a></li>
+  <li><a href="StructureDefinition-HNGeriatricDepressionScalesResponse.html">居家護理－情緒問題評估表單（HNGeriatricDepressionScalesResponse）</a></li>
+  <li><a href="StructureDefinition-HNGoal.html">居家護理－照護目標（HNGoal）</a></li>
+  <li><a href="StructureDefinition-HNHealthyHabitsResponse.html">居家護理－健康紀錄評估表單（HNHealthyHabitsResponse）</a></li>
+  <li><a href="StructureDefinition-HNIADLsResponse.html">居家護理－工具性日常生活活動功能評估表單（HNIADLsResponse）</a></li>
+  <li><a href="StructureDefinition-HNMNASFsResponse.html">居家護理－簡易營養評估表單（HNMNASFsResponse）</a></li>
+  <li><a href="StructureDefinition-HNMeasuresResponse.html">居家護理－照護計畫措施表單（HNMeasuresResponse）</a></li>
+  <li><a href="StructureDefinition-HNMedicalHistoriesResponse.html">居家護理－疾病史評估表單（HNMedicalHistoriesResponse）</a></li>
+  <li><a href="StructureDefinition-HNOperationOutcome.html">居家護理－介接訊息（HNOperationOutcome）</a></li>
+  <li><a href="StructureDefinition-HNPainEvaluationsResponse.html">居家護理－疼痛評估表單（HNPainEvaluationsResponse）</a></li>
+  <li><a href="StructureDefinition-HNPatient.html">居家護理－個案（HNPatient）</a></li>
+  <li><a href="StructureDefinition-HNPressureInjuriesResponse.html">居家護理－壓力性損傷危險評估表單（HNPressureInjuriesResponse）</a></li>
+  <li><a href="StructureDefinition-HNSOFsResponse.html">居家護理－衰弱評估表單（HNSOFsResponse）</a></li>
+  <li><a href="StructureDefinition-HNStaffEgyResponse.html">居家護理－人員緊急事件表單（HNStaffEgyResponse）</a></li>
+  <li><a href="StructureDefinition-HNTargetsResponse.html">居家護理－照護計畫目標表單（HNTargetsResponse）</a></li>
+  <li><a href="StructureDefinition-HNVitalSignResponse.html">居家護理－生命徵象表單（HNVitalSignResponse）</a></li>
+  <li><a href="StructureDefinition-HNVitalSigns.html">居家護理－生命徵象（HNVitalSigns）</a></li>
+  <li><a href="StructureDefinition-HNVitalSignsBundle.html">居家護理－生命徵象交換集合（HNVitalSignsBundle）</a></li>
+  <li><a href="StructureDefinition-HNWound.html">居家護理－傷口紀錄（HNWound）</a></li>
+</ul>
+
+<h5 id="在宅急症照護">在宅急症照護</h5>
+
+<ul>
+  <li><a href="StructureDefinition-HAHAdmissionEncounter.html">在宅急症－整段照護（HAHAdmissionEncounter）</a></li>
+  <li><a href="StructureDefinition-HAHAllergyIntolerance.html">在宅急症－過敏資訊（HAHAllergyIntolerance）</a></li>
+  <li><a href="StructureDefinition-HAHAssessmentResponse.html">在宅急症－收案評估回覆（HAHAssessmentResponse）</a></li>
+  <li><a href="StructureDefinition-HAHBundleSummary.html">在宅急症－摘要文件 Bundle（HAHBundleSummary）</a></li>
+  <li><a href="StructureDefinition-HAHCarePlan.html">在宅急症－照護計畫（HAHCarePlan）</a></li>
+  <li><a href="StructureDefinition-HAHCareTeam.html">在宅急症－照護團隊（HAHCareTeam）</a></li>
+  <li><a href="StructureDefinition-HAHClinicalImpression.html">在宅急症－臨床評估（HAHClinicalImpression）</a></li>
+  <li><a href="StructureDefinition-HAHCommunication.html">在宅急症－照會與交班（HAHCommunication）</a></li>
+  <li><a href="StructureDefinition-HAHCompositionSummary.html">在宅急症－結案與轉銜摘要（HAHCompositionSummary）</a></li>
+  <li><a href="StructureDefinition-HAHCondition.html">在宅急症－診斷與照護問題（HAHCondition）</a></li>
+  <li><a href="StructureDefinition-HAHConsent.html">在宅急症－照護同意（HAHConsent）</a></li>
+  <li><a href="StructureDefinition-HAHDevice.html">在宅急症－量測設備（HAHDevice）</a></li>
+  <li><a href="StructureDefinition-HAHDiagnosticReport.html">在宅急症－檢驗報告（HAHDiagnosticReport）</a></li>
+  <li><a href="StructureDefinition-HAHDocumentReference.html">在宅急症－照護附件（HAHDocumentReference）</a></li>
+  <li><a href="StructureDefinition-HAHEncounter.html">在宅急症－就診基礎（HAHEncounter）</a></li>
+  <li><a href="StructureDefinition-HAHEpisodeOfCare.html">在宅急症－收案療程（HAHEpisodeOfCare）</a></li>
+  <li><a href="StructureDefinition-HAHGoal.html">在宅急症－照護目標（HAHGoal）</a></li>
+  <li><a href="StructureDefinition-HAHMedicationAdministration.html">在宅急症－給藥與輸注（HAHMedicationAdministration）</a></li>
+  <li><a href="StructureDefinition-HAHMedicationRequest.html">在宅急症－給藥處方（HAHMedicationRequest）</a></li>
+  <li><a href="StructureDefinition-HAHObservationLab.html">在宅急症－檢驗結果（HAHObservationLab）</a></li>
+  <li><a href="StructureDefinition-HAHPatient.html">在宅急症－個案（HAHPatient）</a></li>
+  <li><a href="StructureDefinition-HAHProcedure.html">在宅急症－處置紀錄（HAHProcedure）</a></li>
+  <li><a href="StructureDefinition-HAHServiceRequest.html">在宅急症－服務請求（HAHServiceRequest）</a></li>
+  <li><a href="StructureDefinition-HAHVisitEncounter.html">在宅急症－單次訪視（HAHVisitEncounter）</a></li>
+  <li><a href="StructureDefinition-HAHVisitTask.html">在宅急症－照護工作（HAHVisitTask）</a></li>
 </ul>
 
 <h4 id="四行政與申報端照顧協調核定申報">四、行政與申報端（照顧協調／核定申報）</h4>
 
-<p>照顧管理中心評估收案、照顧管理流程與長照 SDK 系統介接申報資料。</p>
+<p>照顧管理中心評估收案、照顧管理流程、長照 SDK 系統介接申報與長照支付審查資料。</p>
 
 <h5 id="個案服務初篩表轉介單">個案服務初篩表／轉介單</h5>
 
 <p>由醫院或社區單位發起、照顧管理中心收案之跨端文件。</p>
 
 <ul>
-  <li><a href="StructureDefinition-LTCBundleReferral.html">長期照護管理中心個案服務初篩表/轉介單文件打包（LTC Bundle Referral）</a></li>
-  <li><a href="StructureDefinition-LTCCompositionReferral.html">長期照護管理中心個案服務初篩表/轉介單文件架構（LTC Composition Referral）</a></li>
-  <li><a href="StructureDefinition-LTCPatientReferral.html">個案基本資料（LTC Patient Referral）</a></li>
-  <li><a href="StructureDefinition-LTCCarePlanReferral.html">服務種類（LTC CarePlan Referral）</a></li>
-  <li><a href="StructureDefinition-LTCQuestionnaireResponseReferralCaregiver.html">照顧者問卷回覆（LTC QuestionnaireResponse Referral Caregiver）</a></li>
-  <li><a href="StructureDefinition-LTCQuestionnaireResponseReferralSOF.html">衰弱評估問卷回覆（LTC QuestionnaireResponse Referral SOF）</a></li>
+  <li><a href="StructureDefinition-LTCBundleReferral.html">長期照顧管理中心個案服務初篩表/轉介單文件打包（LTCBundleReferral）</a></li>
+  <li><a href="StructureDefinition-LTCCompositionReferral.html">長期照護管理中心個案服務初篩表/轉介單文件架構（LTCCompositionReferral）</a></li>
+  <li><a href="StructureDefinition-LTCPatientReferral.html">轉介單－個案基本資料（LTCPatientReferral）</a></li>
+  <li><a href="StructureDefinition-LTCCarePlanReferral.html">轉介單－服務種類（LTCCarePlanReferral）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaireResponseReferralCaregiver.html">轉介單－照顧者問卷回覆（LTCQuestionnaireResponseReferralCaregiver）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaireResponseReferralSOF.html">轉介單－衰弱評估問卷回覆（LTCQuestionnaireResponseReferralSOF）</a></li>
 </ul>
 
 <h5 id="照顧管理評估量表cms-量表">照顧管理評估量表（CMS 量表）</h5>
 
 <ul>
-  <li><a href="StructureDefinition-LTCBundleCMS.html">照顧管理評估量表文件打包（LTC Bundle CMS）</a></li>
-  <li><a href="StructureDefinition-LTCCompositionCMS.html">照顧管理評估量表文件架構（LTC Composition CMS）</a></li>
-  <li><a href="StructureDefinition-LTCPatientCMS.html">個案基本資料（LTC Patient CMS）</a></li>
-  <li><a href="StructureDefinition-LTCQuestionnaireResponseCMSCaregiverSupport.html">主要照顧者工作與支持（LTC QuestionnaireResponse CMS Caregiver Support）</a></li>
-  <li><a href="StructureDefinition-LTCQuestionnaireResponseCMSCaregiverLoad.html">主要照顧者負荷問卷回覆（LTC QuestionnaireResponse CMS Caregiver Load）</a></li>
-  <li><a href="StructureDefinition-LTCQuestionnaireResponseCMSCommunication.html">個案溝通能力問卷回覆（LTC QuestionnaireResponse CMS Communication）</a></li>
-  <li><a href="StructureDefinition-LTCQuestionnaireResponseCMSMemory.html">個案短期記憶力問卷回覆（LTC QuestionnaireResponse CMS Memory）</a></li>
-  <li><a href="StructureDefinition-LTCQuestionnaireResponseCMSSociety.html">居家環境與社會參與（LTC QuestionnaireResponse CMS Society）</a></li>
-  <li><a href="StructureDefinition-LTCQuestionnaireResponseCMSMental.html">情緒及行為型態問卷回覆（LTC QuestionnaireResponse CMS Mental）</a></li>
-  <li><a href="StructureDefinition-LTCQuestionnaireResponseCMSSpecialCare.html">特殊複雜照護需要問卷回覆（LTC QuestionnaireResponse CMS Special Care）</a></li>
+  <li><a href="StructureDefinition-LTCBundleCMS.html">照顧管理評估量表文件打包（LTCBundleCMS）</a></li>
+  <li><a href="StructureDefinition-LTCCompositionCMS.html">照顧管理評估量表文件架構（LTCCompositionCMS）</a></li>
+  <li><a href="StructureDefinition-LTCPatientCMS.html">照顧管理評估量表－個案基本資料（LTCPatientCMS）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaireResponseCMSCaregiverSupport.html">照顧管理評估量表－主要照顧者工作與支持（LTCQuestionnaireResponseCMSCaregiverSupport）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaireResponseCMSCaregiverLoad.html">照顧管理評估量表－主要照顧者負荷問卷回覆（LTCQuestionnaireResponseCMSCaregiverLoad）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaireResponseCMSCommunication.html">照顧管理評估量表－個案溝通能力問卷回覆（LTCQuestionnaireResponseCMSCommunication）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaireResponseCMSMemory.html">照顧管理評估量表－個案短期記憶力問卷回覆（LTCQuestionnaireResponseCMSMemory）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaireResponseCMSSociety.html">照顧管理評估量表－居家環境與社會參與問卷回覆（LTCQuestionnaireResponseCMSSociety）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaireResponseCMSMental.html">照顧管理評估量表－情緒及行為型態問卷回覆（LTCQuestionnaireResponseCMSMental）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaireResponseCMSSpecialCare.html">照顧管理評估量表－特殊複雜照護需要問卷回覆（LTCQuestionnaireResponseCMSSpecialCare）</a></li>
 </ul>
 
 <h5 id="共用評估量表">共用評估量表</h5>
@@ -452,17 +522,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>以下量表同時被照顧管理評估量表（CMS）與個案服務初篩表／轉介單引用。</p>
 
 <ul>
-  <li><a href="StructureDefinition-LTCQuestionnaireResponseADL.html">日常生活能力問卷回覆（LTC QuestionnaireResponse ADL）</a></li>
-  <li><a href="StructureDefinition-LTCQuestionnaireResponseIADL.html">工具性日常活動功能問卷回覆（LTC QuestionnaireResponse IADL）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaireResponseADL.html">ADL 問卷回覆（LTCQuestionnaireResponseADL）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaireResponseIADL.html">IADL 問卷回覆（LTCQuestionnaireResponseIADL）</a></li>
 </ul>
 
 <h5 id="照顧管理流程aa01aa02">照顧管理流程（AA01／AA02）</h5>
 
 <ul>
-  <li><a href="StructureDefinition-LTCQuestionnaireResponseAA01.html">AA01 照顧計畫擬訂與服務連結問卷回覆（LTC QuestionnaireResponse AA01）</a></li>
-  <li><a href="StructureDefinition-LTCQuestionnaireResponseAA02.html">AA02 照顧管理追蹤問卷回覆（LTC QuestionnaireResponse AA02）</a></li>
-  <li><a href="StructureDefinition-LTCServiceRequest.html">服務請求（LTC ServiceRequest）</a></li>
-  <li><a href="StructureDefinition-LTCTask.html">任務管理（LTC Task）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaireResponseAA01.html">長期照顧－AA01照顧計畫擬訂與服務連結問卷回應（LTCQuestionnaireResponseAA01）</a></li>
+  <li><a href="StructureDefinition-LTCQuestionnaireResponseAA02.html">長期照顧－AA02照顧管理追蹤問卷回覆（LTCQuestionnaireResponseAA02）</a></li>
+  <li><a href="StructureDefinition-LTCServiceRequest.html">長期照顧－服務請求（LTCServiceRequest）</a></li>
+  <li><a href="StructureDefinition-LTCTask.html">長期照顧－任務管理（LTCTask）</a></li>
 </ul>
 
 <h5 id="文件與案件共用基礎">文件與案件共用基礎</h5>
@@ -470,37 +540,50 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>供各情境特化 Profile 繼承之共用基礎（Common Base）Profile。</p>
 
 <ul>
-  <li><a href="StructureDefinition-LTCCompositionBase.html">文件組成基礎（LTC Composition Base）</a></li>
-  <li><a href="StructureDefinition-LTCEpisodeOfCareBase.html">案件管理基礎（LTC EpisodeOfCare Base）</a></li>
-  <li><a href="StructureDefinition-LTCObservationAssessmentBase.html">評估核定摘要基礎（LTC Observation Assessment Base）</a></li>
+  <li><a href="StructureDefinition-LTCCompositionBase.html">長期照顧－文件組成基礎（LTCCompositionBase）</a></li>
+  <li><a href="StructureDefinition-LTCEpisodeOfCareBase.html">長期照顧－案件管理基礎（LTCEpisodeOfCareBase）</a></li>
+  <li><a href="StructureDefinition-LTCObservationAssessmentBase.html">長期照顧－評估核定摘要基礎（LTCObservationAssessmentBase）</a></li>
 </ul>
 
 <h5 id="個案總查詢cs100">個案總查詢（CS100）</h5>
 
 <ul>
-  <li><a href="StructureDefinition-LTC-Composition-CS100.html">個案總查詢文件架構（LTC Composition CS100）</a></li>
-  <li><a href="StructureDefinition-LTC-CarePlan-CS100.html">照顧計畫（LTC CarePlan CS100）</a></li>
-  <li><a href="StructureDefinition-LTC-EpisodeOfCare-CS100.html">長照案件（LTC EpisodeOfCare CS100）</a></li>
-  <li><a href="StructureDefinition-LTC-Observation-Assessment-CS100.html">評估核定摘要（LTC Observation Assessment CS100）</a></li>
+  <li><a href="StructureDefinition-LTC-Composition-CS100.html">個案總查詢（CS100 對應版）Case Summary（LTC-Composition-CS100）</a></li>
+  <li><a href="StructureDefinition-LTC-CarePlan-CS100.html">長照 SDK－照顧計畫（CS100）（LTC-CarePlan-CS100）</a></li>
+  <li><a href="StructureDefinition-LTC-EpisodeOfCare-CS100.html">長照案件（CS100 專用版）（LTC-EpisodeOfCare-CS100）</a></li>
+  <li><a href="StructureDefinition-LTC-Observation-Assessment-CS100.html">長照 SDK－評估核定摘要（Observation）（LTC-Observation-Assessment-CS100）</a></li>
 </ul>
 
 <h5 id="長照-sdk-回傳包">長照 SDK 回傳包</h5>
 
 <ul>
-  <li><a href="StructureDefinition-LTC-Bundle-Payload.html">回傳包（4合1）（LTC Bundle Payload）</a></li>
-  <li><a href="StructureDefinition-LTC-CarePlan-Payload.html">照顧計畫（不含輔具）（LTC CarePlan Payload）</a></li>
-  <li><a href="StructureDefinition-LTC-EpisodeOfCare-Payload.html">長照案件（LTC EpisodeOfCare Payload）</a></li>
-  <li><a href="StructureDefinition-LTC-Observation-Assessment-Payload.html">評估核定摘要（LTC Observation Assessment Payload）</a></li>
+  <li><a href="StructureDefinition-LTC-Bundle-Payload.html">長照 SDK－回傳包（4合1）（LTC-Bundle-Payload）</a></li>
+  <li><a href="StructureDefinition-LTC-CarePlan-Payload.html">長照 SDK－照顧計畫（不含輔具）（LTC-CarePlan-Payload）</a></li>
+  <li><a href="StructureDefinition-LTC-EpisodeOfCare-Payload.html">長照 SDK－長照案件（LTC-EpisodeOfCare-Payload）</a></li>
+  <li><a href="StructureDefinition-LTC-Observation-Assessment-Payload.html">長照 SDK－評估核定摘要（LTC-Observation-Assessment-Payload）</a></li>
 </ul>
 
 <h5 id="申報匯出與檢核">申報匯出與檢核</h5>
 
 <ul>
-  <li><a href="StructureDefinition-LTC-Claim-Export.html">照管全量匯出（LTC Claim Export）</a></li>
-  <li><a href="StructureDefinition-LTC-ClaimResponse-Export.html">照管全量匯出（LTC ClaimResponse Export）</a></li>
-  <li><a href="StructureDefinition-LTC-CoverageEligibilityResponse.html">核定額度（LTC CoverageEligibilityResponse）</a></li>
-  <li><a href="StructureDefinition-LTC-Communication-ServiceA.html">服務活動紀錄 SERVICE_A（LTC Communication ServiceA）</a></li>
-  <li><a href="StructureDefinition-LTC-OperationOutcome-Check.html">跨月檢核結果 QP_O（LTC OperationOutcome Check）</a></li>
+  <li><a href="StructureDefinition-LTC-Claim-Export.html">長照 SDK－照管全量匯出（Claim）（LTC-Claim-Export）</a></li>
+  <li><a href="StructureDefinition-LTC-ClaimResponse-Export.html">長照 SDK－照管全量匯出（ClaimResponse）（LTC-ClaimResponse-Export）</a></li>
+  <li><a href="StructureDefinition-LTC-CoverageEligibilityResponse.html">長照－核定額度（CoverageEligibilityResponse）（LTC-CoverageEligibilityResponse）</a></li>
+  <li><a href="StructureDefinition-LTC-Communication-ServiceA.html">長照 SDK－服務活動紀錄（SERVICE_A）（LTC-Communication-ServiceA）</a></li>
+  <li><a href="StructureDefinition-LTC-OperationOutcome-Check.html">長照 SDK－跨月檢核結果（QP_O）（LTC-OperationOutcome-Check）</a></li>
+</ul>
+
+<h5 id="長照支付審查">長照支付審查</h5>
+
+<ul>
+  <li><a href="StructureDefinition-LTCBundleFeeApply.html">長照支付審查－服務記錄申報文件打包（LTCBundleFeeApply）</a></li>
+  <li><a href="StructureDefinition-LTCBundleFeeAuditResponse.html">長照支付審查－分案審核明細回覆打包（LTCBundleFeeAuditResponse）</a></li>
+  <li><a href="StructureDefinition-LTCBundleFeeAuditStatus.html">長照支付審查－分案審核狀態回覆打包（LTCBundleFeeAuditStatus）</a></li>
+  <li><a href="StructureDefinition-LTCClaimFeeApply.html">長照支付審查－個案服務紀錄申報（LTCClaimFeeApply）</a></li>
+  <li><a href="StructureDefinition-LTCClaimResponseFeeAudit.html">長照支付審查－分案審核明細（LTCClaimResponseFeeAudit）</a></li>
+  <li><a href="StructureDefinition-LTCLocationFeeAuditPlace.html">長照支付審查－交通接送起訖地（LTCLocationFeeAuditPlace）</a></li>
+  <li><a href="StructureDefinition-LTCOperationOutcomeFeeAudit.html">長照支付審查－申報檢核結果（LTCOperationOutcomeFeeAudit）</a></li>
+  <li><a href="StructureDefinition-LTCTaskFeeAudit.html">長照支付審查－申報交易任務（LTCTaskFeeAudit）</a></li>
 </ul>
 
 <h3 id="extensions">Extensions</h3>
@@ -509,46 +592,64 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h4 id="共用資料元素">共用資料元素</h4>
 
 <ul>
-  <li><a href="StructureDefinition-ExtPatientEducationStatus-TWLTC.html">病患教育程度（Patient Education Status）</a></li>
-  <li><a href="StructureDefinition-ExtPatientIdentity-TWLTC.html">病患身分別（Patient Identity）</a></li>
-  <li><a href="StructureDefinition-ExtPatientEconomyStatus-TWLTC.html">病患經濟狀況（Patient Economy Status）</a></li>
-  <li><a href="StructureDefinition-ExtRelatedPersonIsPrimary-TWLTC.html">關係人是否為主要照顧者（Related Person Is Primary）</a></li>
+  <li><a href="StructureDefinition-ExtPatientEducationStatus-TWLTC.html">長照機構住民教育程度（ExtPatientEducationStatus-TWLTC）</a></li>
+  <li><a href="StructureDefinition-ExtPatientIdentity-TWLTC.html">個案身分別（ExtPatientIdentity-TWLTC）</a></li>
+  <li><a href="StructureDefinition-ExtPatientEconomyStatus-TWLTC.html">長照機構住民經濟狀況（ExtPatientEconomyStatus-TWLTC）</a></li>
+  <li><a href="StructureDefinition-ExtRelatedPersonIsPrimary-TWLTC.html">是否為主要照顧者（ExtRelatedPersonIsPrimary-TWLTC）</a></li>
 </ul>
 
 <h4 id="醫院端認知評估">醫院端（認知評估）</h4>
 
 <ul>
-  <li><a href="StructureDefinition-mmse-total-score.html">MMSE 總分（MMSE Total Score）</a></li>
-  <li><a href="StructureDefinition-cdr-total-score.html">CDR 總分（CDR Total Score）</a></li>
+  <li><a href="StructureDefinition-mmse-total-score.html">MMSE 總分（mmse-total-score）</a></li>
+  <li><a href="StructureDefinition-cdr-total-score.html">CDR 總分（cdr-total-score）</a></li>
 </ul>
 
 <h4 id="臨床端異常事件">臨床端（異常事件）</h4>
 
 <ul>
-  <li><a href="StructureDefinition-Ext-TW-LTC-AdverseEvent-Description.html">異常事件文字描述（AdverseEvent Description）</a></li>
-  <li><a href="StructureDefinition-Ext-TW-LTC-AdverseEvent-NotifMethod.html">異常事件通報方式（AdverseEvent Notification Method）</a></li>
-  <li><a href="StructureDefinition-Ext-TW-LTC-AdverseEvent-About.html">異常事件關聯案件（AdverseEvent About）</a></li>
+  <li><a href="StructureDefinition-Ext-TW-LTC-AdverseEvent-Description.html">長期照顧－異常事件文字描述（Ext-TW-LTC-AdverseEvent-Description）</a></li>
+  <li><a href="StructureDefinition-Ext-TW-LTC-AdverseEvent-NotifMethod.html">長期照顧－異常事件通報方式（Ext-TW-LTC-AdverseEvent-NotifMethod）</a></li>
+  <li><a href="StructureDefinition-Ext-TW-LTC-AdverseEvent-About.html">長期照顧－異常事件關聯案件（Ext-TW-LTC-AdverseEvent-About）</a></li>
 </ul>
 
 <h4 id="行政與申報端長照-sdk">行政與申報端（長照 SDK）</h4>
 
 <ul>
-  <li><a href="StructureDefinition-Ext-TW-LTC-Case-Source.html">案件申請來源（Case Source）</a></li>
-  <li><a href="StructureDefinition-Ext-TW-LTC-Export-CaseNo.html">案件編號 CASENO（Export CaseNo）</a></li>
-  <li><a href="StructureDefinition-Ext-TW-LTC-Export-EvaId.html">評估案號 EVA_ID（Export EvaId）</a></li>
-  <li><a href="StructureDefinition-Ext-TW-LTC-Export-YYYMM-ROC.html">民國年月 YYYMM（Export YYYMM ROC）</a></li>
-  <li><a href="StructureDefinition-Ext-TW-LTC-Export-Unit.html">單位資訊 PIA/PIB/CENTER/MAN_*（Export Unit）</a></li>
-  <li><a href="StructureDefinition-Ext-TW-LTC-Export-Error.html">錯誤訊息（Export Error）</a></li>
-  <li><a href="StructureDefinition-Ext-TW-LTC-UnitPrice.html">單價（Unit Price）</a></li>
+  <li><a href="StructureDefinition-Ext-TW-LTC-Case-Source.html">長照 SDK－案件－申請來源（Ext-TW-LTC-Case-Source）</a></li>
+  <li><a href="StructureDefinition-Ext-TW-LTC-Export-CaseNo.html">長照 SDK－案件編號（CASENO）（Ext-TW-LTC-Export-CaseNo）</a></li>
+  <li><a href="StructureDefinition-Ext-TW-LTC-Export-EvaId.html">長照 SDK－評估案號（EVA_ID）（Ext-TW-LTC-Export-EvaId）</a></li>
+  <li><a href="StructureDefinition-Ext-TW-LTC-Export-YYYMM-ROC.html">長照 SDK－民國年月（YYYMM）（Ext-TW-LTC-Export-YYYMM-ROC）</a></li>
+  <li><a href="StructureDefinition-Ext-TW-LTC-Export-Unit.html">長照 SDK－單位資訊（PIA/PIB/CENTER/MAN_*）（Ext-TW-LTC-Export-Unit）</a></li>
+  <li><a href="StructureDefinition-Ext-TW-LTC-Export-Error.html">長照 SDK－錯誤訊息（Ext-TW-LTC-Export-Error）</a></li>
+  <li><a href="StructureDefinition-Ext-TW-LTC-UnitPrice.html">單價（Ext-TW-LTC-UnitPrice）</a></li>
 </ul>
 
-<h4 id="居家護理照護管理系統">居家護理照護管理系統</h4>
+<h4 id="居家護理照護管理系統-1">居家護理照護管理系統</h4>
 
-<p>居護 Profile 沿用長照個案、收案、照護計畫、目標、問卷回覆與任務，並補充來源表單、收案關聯及措施停止資訊。請參考 <a href="home-nursing.html">居家護理主題</a>。</p>
+<ul>
+  <li><a href="StructureDefinition-ExtHNCollectionUpdate.html">居家護理－共照團隊更新指示（ExtHNCollectionUpdate）</a></li>
+  <li><a href="StructureDefinition-ExtHNEpisode.html">居家護理－收案關聯（ExtHNEpisode）</a></li>
+  <li><a href="StructureDefinition-ExtHNMainTarget.html">居家護理－主要目標（ExtHNMainTarget）</a></li>
+  <li><a href="StructureDefinition-ExtHNMeasureStop.html">居家護理－措施停止資訊（ExtHNMeasureStop）</a></li>
+  <li><a href="StructureDefinition-ExtHNSourceForm.html">居家護理－來源表單（ExtHNSourceForm）</a></li>
+</ul>
 
-<h4 id="在宅急症照護">在宅急症照護</h4>
+<h4 id="在宅急症照護-1">在宅急症照護</h4>
 
-<p>在宅急症子主題優先重用既有 LTC 與 TW Core 定義，新增的臨床限制、繼承理由與三個 Extension 請見<a href="hah.html">在宅急症主題</a>。</p>
+<ul>
+  <li><a href="StructureDefinition-ExtHAHEpisode.html">在宅急症－療程關聯（ExtHAHEpisode）</a></li>
+  <li><a href="StructureDefinition-ExtHAHOutcome.html">在宅急症－療程結束原因（ExtHAHOutcome）</a></li>
+  <li><a href="StructureDefinition-ExtHAHVisitMode.html">在宅急症－訪視方式（ExtHAHVisitMode）</a></li>
+</ul>
+
+<h4 id="長照支付審查-1">長照支付審查</h4>
+
+<ul>
+  <li><a href="StructureDefinition-Ext-TW-LTC-FeeAudit-AuditSummary.html">長照支付審查－分案審核統計與承辦資訊（Ext-TW-LTC-FeeAudit-AuditSummary）</a></li>
+  <li><a href="StructureDefinition-Ext-TW-LTC-FeeAudit-DocUrl.html">長照支付審查－清冊文件下載路徑（Ext-TW-LTC-FeeAudit-DocUrl）</a></li>
+  <li><a href="StructureDefinition-Ext-TW-LTC-FeeAudit-RecordRef.html">長照支付審查－服務記錄識別資訊（Ext-TW-LTC-FeeAudit-RecordRef）</a></li>
+</ul>
 
 
 
@@ -569,7 +670,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 29, 2026 04:34+0800">2026-09-29</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ida.gov.tw/">經濟部產業發展署</a>.  Package tw.iii.ltc#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 30, 2026 10:17+0800">2026-10-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
